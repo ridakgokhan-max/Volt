@@ -20,8 +20,8 @@ Rendered 2687/2771, time remaining: 23s
 Rendered 2688/2771, time remaining: 23s
 Rendered 2689/2771, time remaining: 23s
 Rendered 2689/2771, time remaining: 23s
-Rendered 2690/2771, time remaining: 23s
-Rendered 2690/2771, time remaining: 23s
+Rendered 2690/2771, time remaining: 22s
+Rendered 2690/2771, time remaining: 22s
 Rendered 2691/2771, time remaining: 22s
 Rendered 2692/2771, time remaining: 22s
 Rendered 2692/2771, time remaining: 22s
@@ -29,7 +29,7 @@ Rendered 2693/2771, time remaining: 22s
 Rendered 2694/2771, time remaining: 21s
 Rendered 2694/2771, time remaining: 21s
 Rendered 2695/2771, time remaining: 21s
-Rendered 2696/2771, time remaining: 21s
+Rendered 2695/2771, time remaining: 21s
 Rendered 2696/2771, time remaining: 21s
 Rendered 2697/2771, time remaining: 21s
 Rendered 2697/2771, time remaining: 21s
@@ -49,7 +49,7 @@ Rendered 2706/2771, time remaining: 18s
 Rendered 2706/2771, time remaining: 18s
 Rendered 2707/2771, time remaining: 18s
 Rendered 2707/2771, time remaining: 18s
-Rendered 2708/2771, time remaining: 18s
+Rendered 2708/2771, time remaining: 17s
 Rendered 2709/2771, time remaining: 17s
 Rendered 2709/2771, time remaining: 17s
 Rendered 2710/2771, time remaining: 17s
@@ -80,7 +80,7 @@ Rendered 2725/2771, time remaining: 13s
 Rendered 2726/2771, time remaining: 12s
 Rendered 2726/2771, time remaining: 12s
 Rendered 2727/2771, time remaining: 12s
-Rendered 2728/2771, time remaining: 12s
+Rendered 2727/2771, time remaining: 12s
 Rendered 2728/2771, time remaining: 12s
 Rendered 2729/2771, time remaining: 12s
 Rendered 2729/2771, time remaining: 12s
@@ -96,7 +96,7 @@ Rendered 2735/2771, time remaining: 10s
 Rendered 2736/2771, time remaining: 10s
 Rendered 2736/2771, time remaining: 10s
 Rendered 2737/2771, time remaining: 9s
-Rendered 2738/2771, time remaining: 9s
+Rendered 2737/2771, time remaining: 9s
 Rendered 2738/2771, time remaining: 9s
 Rendered 2739/2771, time remaining: 9s
 Rendered 2739/2771, time remaining: 9s
@@ -104,7 +104,7 @@ Rendered 2740/2771, time remaining: 8s
 Rendered 2741/2771, time remaining: 8s
 Rendered 2741/2771, time remaining: 8s
 Rendered 2742/2771, time remaining: 8s
-Rendered 2743/2771, time remaining: 8s
+Rendered 2742/2771, time remaining: 8s
 Rendered 2743/2771, time remaining: 8s
 Rendered 2744/2771, time remaining: 7s
 Rendered 2744/2771, time remaining: 7s
@@ -123,7 +123,7 @@ Rendered 2752/2771, time remaining: 5s
 Rendered 2753/2771, time remaining: 5s
 Rendered 2753/2771, time remaining: 5s
 Rendered 2754/2771, time remaining: 4s
-Rendered 2755/2771, time remaining: 4s
+Rendered 2754/2771, time remaining: 4s
 Rendered 2755/2771, time remaining: 4s
 Rendered 2756/2771, time remaining: 4s
 Rendered 2756/2771, time remaining: 4s
@@ -131,7 +131,7 @@ Rendered 2757/2771, time remaining: 4s
 Rendered 2758/2771, time remaining: 3s
 Rendered 2758/2771, time remaining: 3s
 Rendered 2759/2771, time remaining: 3s
-Rendered 2760/2771, time remaining: 3s
+Rendered 2759/2771, time remaining: 3s
 Rendered 2760/2771, time remaining: 3s
 Rendered 2761/2771, time remaining: 2s
 Rendered 2761/2771, time remaining: 2s
@@ -159,5 +159,5 @@ Encoded 2206/2771
 Encoded 2212/2771
 Encoded 2217/2771
 Encoded 2771/2771
-[34m+                    out/kuantum.mp4[39m [90m34 MB[39m
+[34m○                    out/kuantum.mp4[39m [90m34 MB[39m
 durum: success
