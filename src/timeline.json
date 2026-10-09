@@ -3,811 +3,811 @@
   {
    "id": "hook",
    "text": "Bilgisayarın her şeyi sadece iki sayıyla düşündüğünü biliyor muydun? Sıfır ve bir.",
-   "audio": null,
-   "duration": 5.917,
+   "audio": "audio/hook.mp3",
+   "duration": 7.41,
    "words": [
     {
      "text": "Bilgisayarın",
-     "start": 0.0,
-     "end": 0.806
+     "start": 0.098,
+     "end": 1.06
     },
     {
      "text": "her",
-     "start": 0.806,
-     "end": 1.093
+     "start": 1.06,
+     "end": 1.324
     },
     {
      "text": "şeyi",
-     "start": 1.093,
-     "end": 1.439
+     "start": 1.324,
+     "end": 1.576
     },
     {
      "text": "sadece",
-     "start": 1.439,
-     "end": 1.899
+     "start": 1.576,
+     "end": 2.129
     },
     {
      "text": "iki",
-     "start": 1.899,
-     "end": 2.187
+     "start": 2.129,
+     "end": 2.382
     },
     {
      "text": "sayıyla",
-     "start": 2.187,
-     "end": 2.705
+     "start": 2.382,
+     "end": 2.754
     },
     {
      "text": "düşündüğünü",
-     "start": 2.705,
-     "end": 3.453
+     "start": 2.754,
+     "end": 3.247
     },
     {
      "text": "biliyor",
-     "start": 3.453,
-     "end": 3.971
+     "start": 3.247,
+     "end": 3.62
     },
     {
-     "text": "muydun?",
-     "start": 3.971,
-     "end": 4.488
+     "text": "muydun",
+     "start": 3.62,
+     "end": 3.992
     },
     {
      "text": "Sıfır",
-     "start": 4.488,
-     "end": 4.891
+     "start": 5.084,
+     "end": 5.493
     },
     {
      "text": "ve",
-     "start": 4.891,
-     "end": 5.121
+     "start": 5.493,
+     "end": 5.637
     },
     {
-     "text": "bir.",
-     "start": 5.121,
-     "end": 5.467
+     "text": "bir",
+     "start": 5.649,
+     "end": 5.865
     }
    ]
   },
   {
    "id": "bits",
    "text": "Klasik bilgisayarlar her bilgiyi bit adı verilen bu küçük anahtarlarla işler. Ya kapalı, ya açık.",
-   "audio": null,
-   "duration": 6.917,
+   "audio": "audio/bits.mp3",
+   "duration": 8.538,
    "words": [
     {
      "text": "Klasik",
-     "start": 0.0,
-     "end": 0.458
+     "start": 0.098,
+     "end": 0.615
     },
     {
      "text": "bilgisayarlar",
-     "start": 0.458,
-     "end": 1.316
+     "start": 0.627,
+     "end": 1.432
     },
     {
      "text": "her",
-     "start": 1.316,
-     "end": 1.602
+     "start": 1.432,
+     "end": 1.685
     },
     {
      "text": "bilgiyi",
-     "start": 1.602,
-     "end": 2.117
+     "start": 1.685,
+     "end": 2.069
     },
     {
      "text": "bit",
-     "start": 2.117,
-     "end": 2.404
+     "start": 2.081,
+     "end": 2.237
     },
     {
      "text": "adı",
-     "start": 2.404,
-     "end": 2.69
+     "start": 2.237,
+     "end": 2.43
     },
     {
      "text": "verilen",
-     "start": 2.69,
-     "end": 3.205
+     "start": 2.43,
+     "end": 2.874
     },
     {
      "text": "bu",
-     "start": 3.205,
-     "end": 3.434
+     "start": 2.887,
+     "end": 3.019
     },
     {
      "text": "küçük",
-     "start": 3.434,
-     "end": 3.834
+     "start": 3.019,
+     "end": 3.331
     },
     {
      "text": "anahtarlarla",
-     "start": 3.834,
-     "end": 4.635
+     "start": 3.331,
+     "end": 4.064
     },
     {
-     "text": "işler.",
-     "start": 4.635,
-     "end": 5.093
+     "text": "işler",
+     "start": 4.064,
+     "end": 4.497
     },
     {
      "text": "Ya",
-     "start": 5.093,
-     "end": 5.322
+     "start": 5.601,
+     "end": 5.817
     },
     {
-     "text": "kapalı,",
-     "start": 5.322,
-     "end": 5.837
+     "text": "kapalı",
+     "start": 5.889,
+     "end": 6.382
     },
     {
      "text": "ya",
-     "start": 5.837,
-     "end": 6.066
+     "start": 6.514,
+     "end": 6.671
     },
     {
-     "text": "açık.",
-     "start": 6.066,
-     "end": 6.467
+     "text": "açık",
+     "start": 6.671,
+     "end": 7.007
     }
    ]
   },
   {
    "id": "qubit",
    "text": "Ama kuantum bilgisayarlar bambaşka bir dil konuşur. Onların birimine kübit denir.",
-   "audio": null,
-   "duration": 5.85,
+   "audio": "audio/qubit.mp3",
+   "duration": 7.602,
    "words": [
     {
      "text": "Ama",
-     "start": 0.0,
-     "end": 0.29
+     "start": 0.098,
+     "end": 0.338
     },
     {
      "text": "kuantum",
-     "start": 0.29,
-     "end": 0.813
+     "start": 0.543,
+     "end": 1.036
     },
     {
      "text": "bilgisayarlar",
-     "start": 0.813,
-     "end": 1.684
+     "start": 1.048,
+     "end": 1.829
     },
     {
      "text": "bambaşka",
-     "start": 1.684,
-     "end": 2.265
+     "start": 1.829,
+     "end": 2.358
     },
     {
      "text": "bir",
-     "start": 2.265,
-     "end": 2.555
+     "start": 2.358,
+     "end": 2.538
     },
     {
      "text": "dil",
-     "start": 2.555,
-     "end": 2.845
+     "start": 2.538,
+     "end": 2.694
     },
     {
-     "text": "konuşur.",
-     "start": 2.845,
-     "end": 3.426
+     "text": "konuşur",
+     "start": 2.694,
+     "end": 3.187
     },
     {
      "text": "Onların",
-     "start": 3.426,
-     "end": 3.948
+     "start": 4.327,
+     "end": 4.988
     },
     {
      "text": "birimine",
-     "start": 3.948,
-     "end": 4.529
+     "start": 5.0,
+     "end": 5.385
     },
     {
      "text": "kübit",
-     "start": 4.529,
-     "end": 4.935
+     "start": 5.385,
+     "end": 5.697
     },
     {
-     "text": "denir.",
-     "start": 4.935,
-     "end": 5.4
+     "text": "denir",
+     "start": 5.697,
+     "end": 6.034
     }
    ]
   },
   {
    "id": "coin",
    "text": "Kübit, belirli koşullarda sıfır ve birin süperpozisyonunda bulunabilir. Havada dönen bir para gibi düşün.",
-   "audio": null,
-   "duration": 7.45,
+   "audio": "audio/coin.mp3",
+   "duration": 8.61,
    "words": [
     {
-     "text": "Kübit,",
-     "start": 0.0,
-     "end": 0.467
+     "text": "Kübit",
+     "start": 0.098,
+     "end": 0.507
     },
     {
      "text": "belirli",
-     "start": 0.467,
-     "end": 0.992
+     "start": 0.711,
+     "end": 1.12
     },
     {
      "text": "koşullarda",
-     "start": 0.992,
-     "end": 1.692
+     "start": 1.12,
+     "end": 1.769
     },
     {
      "text": "sıfır",
-     "start": 1.692,
-     "end": 2.1
+     "start": 1.769,
+     "end": 2.105
     },
     {
      "text": "ve",
-     "start": 2.1,
-     "end": 2.333
+     "start": 2.105,
+     "end": 2.237
     },
     {
      "text": "birin",
-     "start": 2.333,
-     "end": 2.742
+     "start": 2.237,
+     "end": 2.502
     },
     {
      "text": "süperpozisyonunda",
-     "start": 2.742,
-     "end": 3.85
+     "start": 2.502,
+     "end": 3.487
     },
     {
-     "text": "bulunabilir.",
-     "start": 3.85,
-     "end": 4.667
+     "text": "bulunabilir",
+     "start": 3.487,
+     "end": 4.088
     },
     {
      "text": "Havada",
-     "start": 4.667,
-     "end": 5.133
+     "start": 5.204,
+     "end": 5.685
     },
     {
      "text": "dönen",
-     "start": 5.133,
-     "end": 5.542
+     "start": 5.685,
+     "end": 6.022
     },
     {
      "text": "bir",
-     "start": 5.542,
-     "end": 5.833
+     "start": 6.034,
+     "end": 6.166
     },
     {
      "text": "para",
-     "start": 5.833,
-     "end": 6.183
+     "start": 6.166,
+     "end": 6.418
     },
     {
      "text": "gibi",
-     "start": 6.183,
-     "end": 6.533
+     "start": 6.418,
+     "end": 6.635
     },
     {
-     "text": "düşün.",
-     "start": 6.533,
-     "end": 7.0
+     "text": "düşün",
+     "start": 6.635,
+     "end": 7.067
     }
    ]
   },
   {
    "id": "maze",
    "text": "Bu özellik, bazı karmaşık problemlerin çözümünde büyük bir avantaj sağlayabilir.",
-   "audio": null,
-   "duration": 5.783,
+   "audio": "audio/maze.mp3",
+   "duration": 6.594,
    "words": [
     {
      "text": "Bu",
-     "start": 0.0,
-     "end": 0.234
+     "start": 0.098,
+     "end": 0.266
     },
     {
-     "text": "özellik,",
-     "start": 0.234,
-     "end": 0.821
+     "text": "özellik",
+     "start": 0.531,
+     "end": 1.084
     },
     {
      "text": "bazı",
-     "start": 0.821,
-     "end": 1.172
+     "start": 1.288,
+     "end": 1.673
     },
     {
      "text": "karmaşık",
-     "start": 1.172,
-     "end": 1.758
+     "start": 1.673,
+     "end": 2.153
     },
     {
      "text": "problemlerin",
-     "start": 1.758,
-     "end": 2.579
+     "start": 2.153,
+     "end": 2.862
     },
     {
      "text": "çözümünde",
-     "start": 2.579,
-     "end": 3.223
+     "start": 2.862,
+     "end": 3.391
     },
     {
      "text": "büyük",
-     "start": 3.223,
-     "end": 3.634
+     "start": 3.403,
+     "end": 3.668
     },
     {
      "text": "bir",
-     "start": 3.634,
-     "end": 3.927
+     "start": 3.668,
+     "end": 3.836
     },
     {
      "text": "avantaj",
-     "start": 3.927,
-     "end": 4.454
+     "start": 3.836,
+     "end": 4.305
     },
     {
-     "text": "sağlayabilir.",
-     "start": 4.454,
-     "end": 5.333
+     "text": "sağlayabilir",
+     "start": 4.305,
+     "end": 5.026
     }
    ]
   },
   {
    "id": "uses",
    "text": "Peki neden bu kadar önemli? İlaç geliştirmeden yeni malzemelerin keşfine, kimyasal tepkimelerin simülasyonundan optimizasyon problemlerine kadar...",
-   "audio": null,
-   "duration": 10.25,
+   "audio": "audio/uses.mp3",
+   "duration": 11.01,
    "words": [
     {
      "text": "Peki",
-     "start": 0.0,
-     "end": 0.359
+     "start": 0.098,
+     "end": 0.387
     },
     {
      "text": "neden",
-     "start": 0.359,
-     "end": 0.777
+     "start": 0.411,
+     "end": 0.759
     },
     {
      "text": "bu",
-     "start": 0.777,
-     "end": 1.016
+     "start": 0.759,
+     "end": 0.891
     },
     {
      "text": "kadar",
-     "start": 1.016,
-     "end": 1.434
+     "start": 0.891,
+     "end": 1.216
     },
     {
-     "text": "önemli?",
-     "start": 1.434,
-     "end": 1.972
+     "text": "önemli",
+     "start": 1.216,
+     "end": 1.637
     },
     {
      "text": "İlaç",
-     "start": 1.972,
-     "end": 2.33
+     "start": 2.704,
+     "end": 3.209
     },
     {
      "text": "geliştirmeden",
-     "start": 2.33,
-     "end": 3.227
+     "start": 3.233,
+     "end": 3.954
     },
     {
      "text": "yeni",
-     "start": 3.227,
-     "end": 3.585
+     "start": 3.954,
+     "end": 4.207
     },
     {
      "text": "malzemelerin",
-     "start": 3.585,
-     "end": 4.422
+     "start": 4.207,
+     "end": 4.856
     },
     {
-     "text": "keşfine,",
-     "start": 4.422,
-     "end": 5.02
+     "text": "keşfine",
+     "start": 4.856,
+     "end": 5.409
     },
     {
      "text": "kimyasal",
-     "start": 5.02,
-     "end": 5.617
+     "start": 5.577,
+     "end": 6.19
     },
     {
      "text": "tepkimelerin",
-     "start": 5.617,
-     "end": 6.454
+     "start": 6.19,
+     "end": 6.791
     },
     {
      "text": "simülasyonundan",
-     "start": 6.454,
-     "end": 7.47
+     "start": 6.791,
+     "end": 7.668
     },
     {
      "text": "optimizasyon",
-     "start": 7.47,
-     "end": 8.306
+     "start": 7.668,
+     "end": 8.413
     },
     {
      "text": "problemlerine",
-     "start": 8.306,
-     "end": 9.202
+     "start": 8.425,
+     "end": 9.075
     },
     {
-     "text": "kadar...",
-     "start": 9.202,
-     "end": 9.8
+     "text": "kadar",
+     "start": 9.075,
+     "end": 9.447
     }
    ]
   },
   {
    "id": "revolution",
    "text": "pek çok alanda devrim yaratma potansiyeli taşıyor.",
-   "audio": null,
-   "duration": 3.783,
+   "audio": "audio/revolution.mp3",
+   "duration": 4.554,
    "words": [
     {
      "text": "pek",
-     "start": 0.0,
-     "end": 0.287
+     "start": 0.098,
+     "end": 0.266
     },
     {
      "text": "çok",
-     "start": 0.287,
-     "end": 0.575
+     "start": 0.471,
+     "end": 0.675
     },
     {
      "text": "alanda",
-     "start": 0.575,
-     "end": 1.034
+     "start": 0.675,
+     "end": 1.072
     },
     {
      "text": "devrim",
-     "start": 1.034,
-     "end": 1.494
+     "start": 1.072,
+     "end": 1.456
     },
     {
      "text": "yaratma",
-     "start": 1.494,
-     "end": 2.011
+     "start": 1.456,
+     "end": 1.853
     },
     {
      "text": "potansiyeli",
-     "start": 2.011,
-     "end": 2.759
+     "start": 1.853,
+     "end": 2.466
     },
     {
-     "text": "taşıyor.",
-     "start": 2.759,
-     "end": 3.333
+     "text": "taşıyor",
+     "start": 2.466,
+     "end": 2.959
     }
    ]
   },
   {
    "id": "caution",
    "text": "Ama dikkat! Kuantum bilgisayarlar her işi daha hızlı yapmaz. Ve bu teknoloji hâlâ gelişim aşamasında.",
-   "audio": null,
-   "duration": 7.183,
+   "audio": "audio/caution.mp3",
+   "duration": 9.906,
    "words": [
     {
      "text": "Ama",
-     "start": 0.0,
-     "end": 0.288
+     "start": 0.098,
+     "end": 0.435
     },
     {
-     "text": "dikkat!",
-     "start": 0.288,
-     "end": 0.806
+     "text": "dikkat",
+     "start": 0.459,
+     "end": 0.927
     },
     {
      "text": "Kuantum",
-     "start": 0.806,
-     "end": 1.324
+     "start": 1.971,
+     "end": 2.572
     },
     {
      "text": "bilgisayarlar",
-     "start": 1.324,
-     "end": 2.187
+     "start": 2.584,
+     "end": 3.401
     },
     {
      "text": "her",
-     "start": 2.187,
-     "end": 2.475
+     "start": 3.413,
+     "end": 3.606
     },
     {
      "text": "işi",
-     "start": 2.475,
-     "end": 2.762
+     "start": 3.606,
+     "end": 3.786
     },
     {
      "text": "daha",
-     "start": 2.762,
-     "end": 3.108
+     "start": 3.786,
+     "end": 4.014
     },
     {
      "text": "hızlı",
-     "start": 3.108,
-     "end": 3.511
+     "start": 4.014,
+     "end": 4.327
     },
     {
-     "text": "yapmaz.",
-     "start": 3.511,
-     "end": 4.028
+     "text": "yapmaz",
+     "start": 4.327,
+     "end": 4.832
     },
     {
      "text": "Ve",
-     "start": 4.028,
-     "end": 4.259
+     "start": 5.901,
+     "end": 6.082
     },
     {
      "text": "bu",
-     "start": 4.259,
-     "end": 4.489
+     "start": 6.118,
+     "end": 6.274
     },
     {
      "text": "teknoloji",
-     "start": 4.489,
-     "end": 5.122
+     "start": 6.274,
+     "end": 6.839
     },
     {
      "text": "hâlâ",
-     "start": 5.122,
-     "end": 5.467
+     "start": 6.839,
+     "end": 7.224
     },
     {
      "text": "gelişim",
-     "start": 5.467,
-     "end": 5.985
+     "start": 7.236,
+     "end": 7.644
     },
     {
-     "text": "aşamasında.",
-     "start": 5.985,
-     "end": 6.733
+     "text": "aşamasında",
+     "start": 7.644,
+     "end": 8.305
     }
    ]
   },
   {
    "id": "together",
    "text": "Gelecekte yapay zekâ ve klasik bilgisayarlarla birlikte çalışarak bilimsel araştırmaları hızlandırabilirler.",
-   "audio": null,
-   "duration": 7.65,
+   "audio": "audio/together.mp3",
+   "duration": 7.698,
    "words": [
     {
      "text": "Gelecekte",
-     "start": 0.0,
-     "end": 0.66
+     "start": 0.098,
+     "end": 0.891
     },
     {
      "text": "yapay",
-     "start": 0.66,
-     "end": 1.08
+     "start": 0.891,
+     "end": 1.204
     },
     {
      "text": "zekâ",
-     "start": 1.08,
-     "end": 1.44
+     "start": 1.204,
+     "end": 1.552
     },
     {
      "text": "ve",
-     "start": 1.44,
-     "end": 1.68
+     "start": 1.552,
+     "end": 1.673
     },
     {
      "text": "klasik",
-     "start": 1.68,
-     "end": 2.16
+     "start": 1.673,
+     "end": 2.105
     },
     {
      "text": "bilgisayarlarla",
-     "start": 2.16,
-     "end": 3.18
+     "start": 2.105,
+     "end": 3.019
     },
     {
      "text": "birlikte",
-     "start": 3.18,
-     "end": 3.78
+     "start": 3.019,
+     "end": 3.451
     },
     {
      "text": "çalışarak",
-     "start": 3.78,
-     "end": 4.44
+     "start": 3.451,
+     "end": 4.016
     },
     {
      "text": "bilimsel",
-     "start": 4.44,
-     "end": 5.04
+     "start": 4.04,
+     "end": 4.449
     },
     {
      "text": "araştırmaları",
-     "start": 5.04,
-     "end": 5.94
+     "start": 4.449,
+     "end": 5.098
     },
     {
-     "text": "hızlandırabilirler.",
-     "start": 5.94,
-     "end": 7.2
+     "text": "hızlandırabilirler",
+     "start": 5.098,
+     "end": 6.12
     }
    ]
   },
   {
    "id": "lock",
    "text": "Üstelik güçlü kuantum bilgisayarlar, bugün kullanılan bazı şifreleme yöntemlerinin güvenliğini de etkileyebilir.",
-   "audio": null,
-   "duration": 7.917,
+   "audio": "audio/lock.mp3",
+   "duration": 7.962,
    "words": [
     {
      "text": "Üstelik",
-     "start": 0.0,
-     "end": 0.538
+     "start": 0.098,
+     "end": 0.747
     },
     {
      "text": "güçlü",
-     "start": 0.538,
-     "end": 0.956
+     "start": 0.747,
+     "end": 1.108
     },
     {
      "text": "kuantum",
-     "start": 0.956,
-     "end": 1.493
+     "start": 1.108,
+     "end": 1.588
     },
     {
-     "text": "bilgisayarlar,",
-     "start": 1.493,
-     "end": 2.449
+     "text": "bilgisayarlar",
+     "start": 1.588,
+     "end": 2.382
     },
     {
      "text": "bugün",
-     "start": 2.449,
-     "end": 2.867
+     "start": 2.598,
+     "end": 2.923
     },
     {
      "text": "kullanılan",
-     "start": 2.867,
-     "end": 3.584
+     "start": 2.935,
+     "end": 3.512
     },
     {
      "text": "bazı",
-     "start": 3.584,
-     "end": 3.942
+     "start": 3.512,
+     "end": 3.848
     },
     {
      "text": "şifreleme",
-     "start": 3.942,
-     "end": 4.599
+     "start": 3.848,
+     "end": 4.365
     },
     {
      "text": "yöntemlerinin",
-     "start": 4.599,
-     "end": 5.495
+     "start": 4.365,
+     "end": 4.954
     },
     {
      "text": "güvenliğini",
-     "start": 5.495,
-     "end": 6.272
+     "start": 4.954,
+     "end": 5.471
     },
     {
      "text": "de",
-     "start": 6.272,
-     "end": 6.511
+     "start": 5.471,
+     "end": 5.591
     },
     {
-     "text": "etkileyebilir.",
-     "start": 6.511,
-     "end": 7.467
+     "text": "etkileyebilir",
+     "start": 5.591,
+     "end": 6.384
     }
    ]
   },
   {
    "id": "sky",
    "text": "Belki de geleceğin en büyük devrimi, bilgisayarların daha hızlı çalışması değil...",
-   "audio": null,
-   "duration": 5.917,
+   "audio": "audio/sky.mp3",
+   "duration": 6.282,
    "words": [
     {
      "text": "Belki",
-     "start": 0.0,
-     "end": 0.407
+     "start": 0.098,
+     "end": 0.615
     },
     {
      "text": "de",
-     "start": 0.407,
-     "end": 0.64
+     "start": 0.663,
+     "end": 0.783
     },
     {
      "text": "geleceğin",
-     "start": 0.64,
-     "end": 1.279
+     "start": 0.783,
+     "end": 1.312
     },
     {
      "text": "en",
-     "start": 1.279,
-     "end": 1.512
+     "start": 1.348,
+     "end": 1.54
     },
     {
      "text": "büyük",
-     "start": 1.512,
-     "end": 1.919
+     "start": 1.552,
+     "end": 1.769
     },
     {
-     "text": "devrimi,",
-     "start": 1.919,
-     "end": 2.501
+     "text": "devrimi",
+     "start": 1.769,
+     "end": 2.274
     },
     {
      "text": "bilgisayarların",
-     "start": 2.501,
-     "end": 3.489
+     "start": 2.454,
+     "end": 3.307
     },
     {
      "text": "daha",
-     "start": 3.489,
-     "end": 3.838
+     "start": 3.307,
+     "end": 3.536
     },
     {
      "text": "hızlı",
-     "start": 3.838,
-     "end": 4.245
+     "start": 3.536,
+     "end": 3.836
     },
     {
      "text": "çalışması",
-     "start": 4.245,
-     "end": 4.885
+     "start": 3.836,
+     "end": 4.389
     },
     {
-     "text": "değil...",
-     "start": 4.885,
-     "end": 5.467
+     "text": "değil",
+     "start": 4.389,
+     "end": 4.713
     }
    ]
   },
   {
    "id": "portal",
    "text": "problemleri çözmek için bambaşka bir fiziksel dünyadan yararlanması olacak.",
-   "audio": null,
-   "duration": 5.45,
+   "audio": "audio/portal.mp3",
+   "duration": 5.994,
    "words": [
     {
      "text": "problemleri",
-     "start": 0.0,
-     "end": 0.765
+     "start": 0.098,
+     "end": 0.783
     },
     {
      "text": "çözmek",
-     "start": 0.765,
-     "end": 1.235
+     "start": 0.783,
+     "end": 1.192
     },
     {
      "text": "için",
-     "start": 1.235,
-     "end": 1.588
+     "start": 1.192,
+     "end": 1.468
     },
     {
      "text": "bambaşka",
-     "start": 1.588,
-     "end": 2.176
+     "start": 1.48,
+     "end": 2.081
     },
     {
      "text": "bir",
-     "start": 2.176,
-     "end": 2.471
+     "start": 2.081,
+     "end": 2.262
     },
     {
      "text": "fiziksel",
-     "start": 2.471,
-     "end": 3.059
+     "start": 2.262,
+     "end": 2.802
     },
     {
      "text": "dünyadan",
-     "start": 3.059,
-     "end": 3.647
+     "start": 2.802,
+     "end": 3.307
     },
     {
      "text": "yararlanması",
-     "start": 3.647,
-     "end": 4.471
+     "start": 3.307,
+     "end": 3.992
     },
     {
-     "text": "olacak.",
-     "start": 4.471,
-     "end": 5.0
+     "text": "olacak",
+     "start": 3.992,
+     "end": 4.497
     }
    ]
   }
