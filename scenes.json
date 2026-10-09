@@ -1,0 +1,18 @@
+{
+  "voice": "tr-TR-AhmetNeural",
+  "rate": "+4%",
+  "scenes": [
+    { "id": "hook", "text": "Bilgisayarın her şeyi sadece iki sayıyla düşündüğünü biliyor muydun? Sıfır ve bir." },
+    { "id": "bits", "text": "Klasik bilgisayarlar her bilgiyi bit adı verilen bu küçük anahtarlarla işler. Ya kapalı, ya açık." },
+    { "id": "qubit", "text": "Ama kuantum bilgisayarlar bambaşka bir dil konuşur. Onların birimine kübit denir." },
+    { "id": "coin", "text": "Kübit, belirli koşullarda sıfır ve birin süperpozisyonunda bulunabilir. Havada dönen bir para gibi düşün." },
+    { "id": "maze", "text": "Bu özellik, bazı karmaşık problemlerin çözümünde büyük bir avantaj sağlayabilir." },
+    { "id": "uses", "text": "Peki neden bu kadar önemli? İlaç geliştirmeden yeni malzemelerin keşfine, kimyasal tepkimelerin simülasyonundan optimizasyon problemlerine kadar..." },
+    { "id": "revolution", "text": "pek çok alanda devrim yaratma potansiyeli taşıyor." },
+    { "id": "caution", "text": "Ama dikkat! Kuantum bilgisayarlar her işi daha hızlı yapmaz. Ve bu teknoloji hâlâ gelişim aşamasında." },
+    { "id": "together", "text": "Gelecekte yapay zekâ ve klasik bilgisayarlarla birlikte çalışarak bilimsel araştırmaları hızlandırabilirler." },
+    { "id": "lock", "text": "Üstelik güçlü kuantum bilgisayarlar, bugün kullanılan bazı şifreleme yöntemlerinin güvenliğini de etkileyebilir." },
+    { "id": "sky", "text": "Belki de geleceğin en büyük devrimi, bilgisayarların daha hızlı çalışması değil..." },
+    { "id": "portal", "text": "problemleri çözmek için bambaşka bir fiziksel dünyadan yararlanması olacak." }
+  ]
+}
