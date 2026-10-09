@@ -1,23 +1,18 @@
 [transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
 [transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
   deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
-Fetching 13 files:  23%|██▎       | 3/13 [00:00<00:00, 27.67it/s]Fetching 13 files:  85%|████████▍ | 11/13 [00:10<00:02,  1.00s/it]Fetching 13 files:  92%|█████████▏| 12/13 [00:11<00:00,  1.01it/s]Fetching 13 files:  92%|█████████▏| 12/13 [00:29<00:00,  1.01it/s]Fetching 13 files: 100%|██████████| 13/13 [00:47<00:00,  6.34s/it]Fetching 13 files: 100%|██████████| 13/13 [00:47<00:00,  3.66s/it]
 Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
-Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
-Loading weights:  70%|██████▉   | 137/196 [00:00<00:00, 1369.57it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 1396.33it/s]
-Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  4.34it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00,  8.98it/s]Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  3.95it/s]CLIPFeatureExtractor appears to have been deprecated in transformers. Using CLIPImageProcessor instead.
-Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  5.40it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 19712.34it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00, 29.21it/s]CLIPFeatureExtractor appears to have been deprecated in transformers. Using CLIPImageProcessor instead.
+Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 25.66it/s]
 You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
 No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
 The config attributes {'skip_prk_steps': True} were passed to LCMScheduler, but are not expected and will be ignored. Please verify your scheduler_config.json configuration file.
-model yüklendi 59.2 sn
-01-nehir 228.5 sn
-02-firtina 227.7 sn
-[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
-[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
-The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['vintage , calm']
-03-saatci 214.1 sn
-04-sehir 217.1 sn
+model yüklendi 25.9 sn
+01-nehir 227.5 sn
+02-firtina 195.2 sn
+03-saatci 194.2 sn
+04-sehir 194.2 sn
 {
  "cpu": 2,
  "size": [
@@ -27,25 +22,25 @@ The following part of your input was truncated because CLIP can only handle sequ
  "images": [
   {
    "name": "01-nehir",
-   "sec": 228.5
+   "sec": 227.5
   },
   {
    "name": "02-firtina",
-   "sec": 227.7
+   "sec": 195.2
   },
   {
    "name": "03-saatci",
-   "sec": 214.1
+   "sec": 194.2
   },
   {
    "name": "04-sehir",
-   "sec": 217.1
+   "sec": 194.2
   }
  ],
- "load_sec": 59.2,
- "total_sec": 946.6
+ "load_sec": 25.9,
+ "total_sec": 837.1
 }
                total        used        free      shared  buff/cache   available
-Mem:           7.8Gi       1.0Gi       5.9Gi        32Mi       1.2Gi       6.7Gi
-Swap:          3.0Gi        96Mi       2.9Gi
+Mem:           7.8Gi       1.0Gi       5.7Gi        37Mi       1.4Gi       6.8Gi
+Swap:          3.0Gi        77Mi       2.9Gi
 durum: success
