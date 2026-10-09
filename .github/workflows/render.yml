@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "src/**"
-      - "scripts/**"
+      - "scripts/tts.py"
       - "scenes.json"
       - "public/**"
       - "package.json"

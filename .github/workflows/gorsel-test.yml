@@ -1,0 +1,49 @@
+name: Görsel modeli testi
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/image_test.py"
+      - ".github/workflows/gorsel-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Yer aç
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          df -h / | tail -1
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-sdxl-lightning-v1
+      - name: Paketleri kur
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q diffusers transformers accelerate safetensors peft
+      - name: Görselleri üret
+        run: |
+          mkdir -p out/gorsel-test
+          set -o pipefail
+          python scripts/image_test.py 2>&1 | grep -v Warning | tail -n 80 | tee out/gorsel-test/log.txt
+          free -h | tee -a out/gorsel-test/log.txt
+      - name: Sonucu depoya kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          echo "durum: ${{ job.status }}" >> out/gorsel-test/log.txt
+          git add out/gorsel-test
+          git commit -m "Görsel testi sonucu [skip ci]" || echo "Değişiklik yok"
+          git pull --rebase -q && git push
