@@ -1,0 +1,27 @@
+{
+ "cpu": 2,
+ "size": [
+  576,
+  1024
+ ],
+ "images": [
+  {
+   "name": "01-nehir",
+   "sec": 228.5
+  },
+  {
+   "name": "02-firtina",
+   "sec": 227.7
+  },
+  {
+   "name": "03-saatci",
+   "sec": 214.1
+  },
+  {
+   "name": "04-sehir",
+   "sec": 217.1
+  }
+ ],
+ "load_sec": 59.2,
+ "total_sec": 946.6
+}
