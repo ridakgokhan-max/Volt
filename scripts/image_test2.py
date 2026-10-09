@@ -12,17 +12,16 @@ os.makedirs(OUT, exist_ok=True)
 torch.set_num_threads(os.cpu_count() or 4)
 
 STYLE = (
-    "hand-drawn storybook illustration on aged stained parchment paper, thin black ink outlines, "
-    "soft muted watercolor shading, desaturated sepia and grey-blue palette, old book illustration, "
-    "simple clean shapes, vintage, calm"
+    "2d cartoon illustration, hand drawn, bold clean black ink outlines, flat muted colors with soft simple shading, "
+    "simple shapes, storybook comic style, sepia and grey-blue palette, aged paper"
 )
-NEG = "photo, photorealistic, 3d render, text, letters, watermark, signature, blurry, neon, vivid saturated colors"
+NEG = "photo, photorealistic, realistic, photograph, 3d render, detailed skin texture, text, letters, watermark, signature, blurry"
 
 TESTS = [
     ("01-nehir", "a wide calm river winding between soft hills, a small empty wooden rowing boat near the shore, distant trees, no people"),
-    ("02-firtina", "a dark stormy sea with large curling waves, swirling brown storm clouds, rain, dramatic mood, no people"),
-    ("03-saatci", "an old bearded clockmaker with round glasses and a brown apron sitting at a wooden workbench full of clocks and gears, cartoon character, expressive face, warm candle light"),
-    ("04-sehir", "a modern city skyline seen from a riverside park with a single tree and a bench, minimal line art, morning light, no people"),
+    ("02-firtina", "a stormy sea with big curling cartoon waves, swirling brown storm clouds, rain, no people"),
+    ("03-saatci", "a cartoon old bearded clockmaker with round glasses and a brown apron, big expressive eyes, exaggerated simple features, sitting at a wooden workbench with clocks and gears"),
+    ("04-sehir", "a cartoon city skyline seen from a riverside park with a single tree and a bench, morning, no people"),
 ]
 
 W, H = 576, 1024
