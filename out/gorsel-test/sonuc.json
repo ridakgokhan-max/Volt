@@ -1,27 +1,27 @@
 {
  "cpu": 4,
  "size": [
-  768,
-  1344
+  640,
+  1136
  ],
  "images": [
   {
    "name": "01-nehir",
-   "sec": 601.8
+   "sec": 185.4
   },
   {
    "name": "02-firtina",
-   "sec": 598.8
+   "sec": 180.4
   },
   {
    "name": "03-saatci",
-   "sec": 598.6
+   "sec": 170.7
   },
   {
    "name": "04-sehir",
-   "sec": 597.8
+   "sec": 170.0
   }
  ],
  "load_sec": 57.7,
- "total_sec": 2454.8
+ "total_sec": 764.1
 }
