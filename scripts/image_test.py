@@ -24,18 +24,18 @@ TESTS = [
     ("04-sehir", "a modern city skyline seen from a riverside park with a single tree and a bench, minimal line art, morning light, no people"),
 ]
 
-W, H = 768, 1344  # 9:16'ya yakın SDXL çözünürlüğü
+W, H = 640, 1136  # 9:16, daha hızlı
 log = {"cpu": os.cpu_count(), "size": [W, H], "images": []}
 
 t0 = time.time()
 pipe = StableDiffusionXLPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.bfloat16, variant="fp16", use_safetensors=True
+    "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float32, variant="fp16", use_safetensors=True
 )
 pipe.load_lora_weights(hf_hub_download("ByteDance/SDXL-Lightning", "sdxl_lightning_4step_lora.safetensors"))
 pipe.fuse_lora()
 pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing")
 pipe.set_progress_bar_config(disable=True)
-pipe.enable_attention_slicing()
+# attention slicing kapalı (hız için)
 log["load_sec"] = round(time.time() - t0, 1)
 print("model yüklendi", log["load_sec"], "sn", flush=True)
 
