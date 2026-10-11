@@ -33,7 +33,11 @@ jobs:
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
           pip install -q diffusers transformers accelerate safetensors peft
       - name: Görselleri üret
+        continue-on-error: true
+        timeout-minutes: 70
         run: |
+          lscpu | grep -E "Model name|^CPU\(s\)|Flags" | sed 's/Flags:.*\(avx512_bf16\|amx_bf16\).*/bf16 destekli/' > out/gorsel-test/cpu.txt || true
+          free -h >> out/gorsel-test/cpu.txt
           mkdir -p out/gorsel-test
           set -o pipefail
           python scripts/image_test.py 2>&1 | grep -v Warning | tail -n 80 | tee out/gorsel-test/log.txt
