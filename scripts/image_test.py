@@ -12,16 +12,15 @@ os.makedirs(OUT, exist_ok=True)
 torch.set_num_threads(os.cpu_count() or 4)
 
 STYLE = (
-    "hand-drawn storybook illustration on aged stained parchment paper, thin black ink outlines, "
-    "soft muted watercolor shading, desaturated sepia and grey-blue palette, old book illustration, "
-    "simple clean shapes, vintage, calm"
+    "2d cartoon illustration, hand drawn, bold clean black ink outlines, flat muted colors with soft simple shading, "
+    "simple shapes, storybook comic style, sepia and grey-blue palette, aged paper"
 )
-NEG = "photo, photorealistic, 3d render, text, letters, watermark, signature, blurry, neon, vivid saturated colors"
+NEG = "photo, photorealistic, realistic, 3d render, text, watermark"
 
 TESTS = [
     ("01-nehir", "a wide calm river winding between soft hills, a small empty wooden rowing boat near the shore, distant trees, no people"),
     ("02-firtina", "a dark stormy sea with large curling waves, swirling brown storm clouds, rain, dramatic mood, no people"),
-    ("03-saatci", "an old bearded clockmaker with round glasses and a brown apron sitting at a wooden workbench full of clocks and gears, cartoon character, expressive face, warm candle light"),
+    ("03-saatci", "a cartoon old bearded clockmaker with big expressive eyes and exaggerated simple features, with round glasses and a brown apron sitting at a wooden workbench full of clocks and gears, cartoon character, expressive face, warm candle light"),
     ("04-sehir", "a modern city skyline seen from a riverside park with a single tree and a bench, minimal line art, morning light, no people"),
 ]
 
@@ -30,12 +29,13 @@ log = {"cpu": os.cpu_count(), "size": [W, H], "images": []}
 
 t0 = time.time()
 pipe = StableDiffusionXLPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.bfloat16, variant="fp16", use_safetensors=True
+    "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float32, variant="fp16", use_safetensors=True
 )
 pipe.load_lora_weights(hf_hub_download("ByteDance/SDXL-Lightning", "sdxl_lightning_4step_lora.safetensors"))
 pipe.fuse_lora()
 pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing")
 pipe.set_progress_bar_config(disable=True)
+pipe.enable_attention_slicing()
 log["load_sec"] = round(time.time() - t0, 1)
 print("model yüklendi", log["load_sec"], "sn", flush=True)
 
