@@ -40,12 +40,14 @@ jobs:
           pip install -q faster-whisper
       - name: Yazıya dök
         run: |
+          mkdir -p bilim/_log
           set -o pipefail
-          python scripts/transkript.py "${{ github.event.inputs.konu }}" 2>&1 | tee /tmp/transkript.log
+          python scripts/transkript.py "${{ github.event.inputs.konu }}" 2>&1 | tee bilim/_log/transkript.log
       - name: Sonucu depoya kaydet
+        if: always()
         run: |
           git config user.name "volt-render-bot"
           git config user.email "volt-render-bot@users.noreply.github.com"
-          git add bilim/*/kelimeler.json
+          git add bilim/*/kelimeler.json bilim/_log/transkript.log || true
           git commit -m "Ses yazıya döküldü [skip ci]" || echo "Değişiklik yok"
           git pull --rebase && git push
