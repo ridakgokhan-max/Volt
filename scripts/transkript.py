@@ -36,8 +36,14 @@ def main():
     model = WhisperModel(MODEL, device="cpu", compute_type="int8")
     for d in dirs:
         ses = sorted(glob.glob(os.path.join(d, "ses.*")))[0]
+        # PyAV sürüm uyumsuzluklarından kaçınmak için sesi ffmpeg ile çözüp diziyle veriyoruz
+        import subprocess
+        import numpy as np
+        raw = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", ses, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                             capture_output=True, check=True).stdout
+        audio = np.frombuffer(raw, np.float32)
         segs, info = model.transcribe(
-            ses, language="tr", word_timestamps=True, beam_size=5,
+            audio, language="tr", word_timestamps=True, beam_size=5,
             initial_prompt=PROMPT, condition_on_previous_text=False,
             vad_filter=False,
         )
