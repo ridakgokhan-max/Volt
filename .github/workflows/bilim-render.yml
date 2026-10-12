@@ -1,0 +1,65 @@
+name: Bilim - videoyu üret
+
+# Kurgu (ses temizleme, boşluk silme, efekt+müzik) + Remotion render
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/bilim/**"
+      - "bilim/*/kurgu.json"
+      - "bilim/*/sesler.py"
+  workflow_dispatch:
+    inputs:
+      konu:
+        description: "bilim/ altındaki klasör adı (src/bilim/aktif.ts ile aynı)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bilim-render
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Araçları kur
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q numpy
+          npm install --no-audit --no-fund
+      - name: Konuyu belirle
+        id: konu
+        run: |
+          K="${{ github.event.inputs.konu }}"
+          if [ -z "$K" ]; then K=$(grep -oP 'data/\K[^.]+(?=\.json)' src/bilim/aktif.ts); fi
+          echo "konu=$K" >> $GITHUB_OUTPUT
+          mkdir -p out/bilim
+      - name: Kurgu (ses, altyazı zamanı, efekt, müzik)
+        run: |
+          set -o pipefail
+          python scripts/bilim_kurgu.py "${{ steps.konu.outputs.konu }}" 2>&1 | tee out/bilim/log.txt
+      - name: Videoyu üret
+        run: |
+          set -o pipefail
+          npx remotion render src/index.ts Bilim "out/bilim/${{ steps.konu.outputs.konu }}.mp4" --log=info 2>&1 | grep -v -E "^Rendered|^Encoded" | tail -n 80 | tee -a out/bilim/log.txt
+      - name: Sonucu depoya kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          echo "durum: ${{ job.status }}" >> out/bilim/log.txt
+          git add out/bilim public/bilim src/bilim/data || true
+          git commit -m "Bilim videosu üretildi [skip ci]" || echo "Değişiklik yok"
+          git pull --rebase && git push

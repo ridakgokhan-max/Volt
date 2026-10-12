@@ -1,0 +1,25 @@
+{
+ "baslik": "Telefon parmak izini nasıl tanır?",
+ "not": "Kesimler orijinal kayıt saniyesiyle. Sonda takılan ilk deneme (48.78-51.76) atıldı, temiz ikinci deneme kullanıldı.",
+ "kesimler": [[48.78, 51.70]],
+ "kelime_sil": [102, 103, 104, 105],
+ "kelime_ekle": [
+  {"w": "parmak", "start": 51.76, "end": 52.03},
+  {"w": "izinin", "start": 52.03, "end": 52.42},
+  {"w": "haritasını", "start": 52.81, "end": 53.15},
+  {"w": "hatırlıyor.", "start": 53.15, "end": 53.64}
+ ],
+ "duzelt": {"0": "Telefonun,", "46": "telefon", "52": "Bir", "101": "değil,", "63": "konumu,", "77": "şifreleyip,"},
+ "vurgu": [1, 4, 12, 14, 17, 19, 21, 26, 35, 40, 41, 49, 50, 54, 57, 69, 77, 79, 92, 95, 96, 104],
+ "sahneler": [
+  {"id": "giris", "bg": "gece", "ilk": 0},
+  {"id": "foto", "bg": "parsomen", "ilk": 7, "vur": [14]},
+  {"id": "yakin", "bg": "sicak", "ilk": 15},
+  {"id": "sensor", "bg": "plan", "ilk": 24},
+  {"id": "noktalar", "bg": "tahta", "ilk": 45},
+  {"id": "harita", "bg": "gece", "ilk": 59},
+  {"id": "kasa", "bg": "devre", "ilk": 71, "vur": [77]},
+  {"id": "kontrol", "bg": "yesil", "ilk": 84, "vur": [96]},
+  {"id": "son", "bg": "parsomen", "ilk": 97}
+ ]
+}

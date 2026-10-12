@@ -10,6 +10,8 @@ on:
       - "public/**"
       - "package.json"
       - ".github/workflows/render.yml"
+      - "!src/bilim/**"
+      - "!public/bilim/**"
   workflow_dispatch:
 
 permissions:

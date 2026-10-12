@@ -1,0 +1,869 @@
+{
+ "konu": "parmak-izi",
+ "baslik": "Telefon parmak izini nasıl tanır?",
+ "audio": "bilim/parmak-izi/mix.m4a",
+ "sure": 47.013,
+ "kelimeler": [
+  {
+   "w": "Telefonun,",
+   "s": 0.12,
+   "e": 0.606,
+   "vurgu": false
+  },
+  {
+   "w": "milyonlarca",
+   "s": 0.606,
+   "e": 1.186,
+   "vurgu": true
+  },
+  {
+   "w": "parmak",
+   "s": 1.186,
+   "e": 1.566,
+   "vurgu": false
+  },
+  {
+   "w": "arasından",
+   "s": 1.566,
+   "e": 1.925,
+   "vurgu": false
+  },
+  {
+   "w": "seninkini",
+   "s": 1.925,
+   "e": 2.466,
+   "vurgu": true
+  },
+  {
+   "w": "nasıl",
+   "s": 2.466,
+   "e": 2.726,
+   "vurgu": false
+  },
+  {
+   "w": "tanıyor?",
+   "s": 2.726,
+   "e": 3.146,
+   "vurgu": false
+  },
+  {
+   "w": "İşin",
+   "s": 3.278,
+   "e": 3.798,
+   "vurgu": false
+  },
+  {
+   "w": "ilginç",
+   "s": 3.798,
+   "e": 4.118,
+   "vurgu": false
+  },
+  {
+   "w": "yanı,",
+   "s": 4.118,
+   "e": 4.438,
+   "vurgu": false
+  },
+  {
+   "w": "parmak",
+   "s": 4.458,
+   "e": 5.04,
+   "vurgu": false
+  },
+  {
+   "w": "izinin",
+   "s": 5.04,
+   "e": 5.26,
+   "vurgu": false
+  },
+  {
+   "w": "fotoğrafını",
+   "s": 5.26,
+   "e": 5.86,
+   "vurgu": true
+  },
+  {
+   "w": "hiç",
+   "s": 5.86,
+   "e": 6.0,
+   "vurgu": false
+  },
+  {
+   "w": "saklamıyor.",
+   "s": 6.0,
+   "e": 6.54,
+   "vurgu": true
+  },
+  {
+   "w": "Parmağın",
+   "s": 6.656,
+   "e": 7.363,
+   "vurgu": false
+  },
+  {
+   "w": "ucunda",
+   "s": 7.363,
+   "e": 7.643,
+   "vurgu": false
+  },
+  {
+   "w": "çıkıntılar",
+   "s": 7.643,
+   "e": 8.512,
+   "vurgu": true
+  },
+  {
+   "w": "ve",
+   "s": 8.512,
+   "e": 8.672,
+   "vurgu": false
+  },
+  {
+   "w": "oluklar",
+   "s": 8.672,
+   "e": 9.092,
+   "vurgu": true
+  },
+  {
+   "w": "var.",
+   "s": 9.092,
+   "e": 9.252,
+   "vurgu": false
+  },
+  {
+   "w": "Sensör",
+   "s": 9.393,
+   "e": 10.097,
+   "vurgu": true
+  },
+  {
+   "w": "bunları",
+   "s": 10.097,
+   "e": 10.257,
+   "vurgu": false
+  },
+  {
+   "w": "okuyor.",
+   "s": 10.257,
+   "e": 10.697,
+   "vurgu": false
+  },
+  {
+   "w": "Bazı",
+   "s": 10.881,
+   "e": 11.44,
+   "vurgu": false
+  },
+  {
+   "w": "telefonlar",
+   "s": 11.44,
+   "e": 12.04,
+   "vurgu": false
+  },
+  {
+   "w": "ışıkla",
+   "s": 12.04,
+   "e": 12.532,
+   "vurgu": true
+  },
+  {
+   "w": "fotoğrafını",
+   "s": 12.532,
+   "e": 13.032,
+   "vurgu": false
+  },
+  {
+   "w": "çekiyor.",
+   "s": 13.032,
+   "e": 13.352,
+   "vurgu": false
+  },
+  {
+   "w": "Bazıları",
+   "s": 13.471,
+   "e": 14.142,
+   "vurgu": false
+  },
+  {
+   "w": "çıkıntılarla",
+   "s": 14.142,
+   "e": 14.782,
+   "vurgu": false
+  },
+  {
+   "w": "oluklar",
+   "s": 14.782,
+   "e": 15.162,
+   "vurgu": false
+  },
+  {
+   "w": "arasındaki",
+   "s": 15.162,
+   "e": 15.522,
+   "vurgu": false
+  },
+  {
+   "w": "çok",
+   "s": 15.522,
+   "e": 15.762,
+   "vurgu": false
+  },
+  {
+   "w": "küçük",
+   "s": 15.762,
+   "e": 16.042,
+   "vurgu": false
+  },
+  {
+   "w": "elektrik",
+   "s": 16.042,
+   "e": 16.422,
+   "vurgu": true
+  },
+  {
+   "w": "farkını",
+   "s": 16.422,
+   "e": 16.842,
+   "vurgu": false
+  },
+  {
+   "w": "ölçüyor.",
+   "s": 16.842,
+   "e": 17.242,
+   "vurgu": false
+  },
+  {
+   "w": "Bazıları",
+   "s": 17.408,
+   "e": 18.118,
+   "vurgu": false
+  },
+  {
+   "w": "da",
+   "s": 18.118,
+   "e": 18.198,
+   "vurgu": false
+  },
+  {
+   "w": "ses",
+   "s": 18.198,
+   "e": 18.398,
+   "vurgu": true
+  },
+  {
+   "w": "dalgası",
+   "s": 18.398,
+   "e": 18.878,
+   "vurgu": true
+  },
+  {
+   "w": "gönderip",
+   "s": 18.878,
+   "e": 19.318,
+   "vurgu": false
+  },
+  {
+   "w": "yankısını",
+   "s": 19.318,
+   "e": 19.778,
+   "vurgu": false
+  },
+  {
+   "w": "dinliyor.",
+   "s": 19.778,
+   "e": 20.098,
+   "vurgu": false
+  },
+  {
+   "w": "Sonra",
+   "s": 20.209,
+   "e": 20.654,
+   "vurgu": false
+  },
+  {
+   "w": "telefon",
+   "s": 20.654,
+   "e": 21.134,
+   "vurgu": false
+  },
+  {
+   "w": "bu",
+   "s": 21.134,
+   "e": 21.214,
+   "vurgu": false
+  },
+  {
+   "w": "görüntüdeki",
+   "s": 21.214,
+   "e": 21.754,
+   "vurgu": false
+  },
+  {
+   "w": "özel",
+   "s": 21.754,
+   "e": 22.134,
+   "vurgu": true
+  },
+  {
+   "w": "noktaları",
+   "s": 22.134,
+   "e": 22.534,
+   "vurgu": true
+  },
+  {
+   "w": "buluyor.",
+   "s": 22.534,
+   "e": 22.914,
+   "vurgu": false
+  },
+  {
+   "w": "Bir",
+   "s": 23.034,
+   "e": 23.223,
+   "vurgu": false
+  },
+  {
+   "w": "çizginin",
+   "s": 23.223,
+   "e": 23.683,
+   "vurgu": false
+  },
+  {
+   "w": "bittiği",
+   "s": 23.683,
+   "e": 24.043,
+   "vurgu": true
+  },
+  {
+   "w": "yer,",
+   "s": 24.043,
+   "e": 24.283,
+   "vurgu": false
+  },
+  {
+   "w": "ikiye",
+   "s": 24.374,
+   "e": 24.812,
+   "vurgu": false
+  },
+  {
+   "w": "ayrıldığı",
+   "s": 24.812,
+   "e": 25.392,
+   "vurgu": true
+  },
+  {
+   "w": "yer.",
+   "s": 25.392,
+   "e": 25.592,
+   "vurgu": false
+  },
+  {
+   "w": "Bu",
+   "s": 25.592,
+   "e": 25.86,
+   "vurgu": false
+  },
+  {
+   "w": "noktaların",
+   "s": 25.86,
+   "e": 26.36,
+   "vurgu": false
+  },
+  {
+   "w": "birbirine",
+   "s": 26.36,
+   "e": 26.78,
+   "vurgu": false
+  },
+  {
+   "w": "göre",
+   "s": 26.78,
+   "e": 26.9,
+   "vurgu": false
+  },
+  {
+   "w": "konumu,",
+   "s": 26.9,
+   "e": 27.28,
+   "vurgu": false
+  },
+  {
+   "w": "sadece",
+   "s": 27.28,
+   "e": 27.881,
+   "vurgu": false
+  },
+  {
+   "w": "senin",
+   "s": 27.881,
+   "e": 28.181,
+   "vurgu": false
+  },
+  {
+   "w": "parmağına",
+   "s": 28.181,
+   "e": 28.781,
+   "vurgu": false
+  },
+  {
+   "w": "ait",
+   "s": 28.781,
+   "e": 29.041,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 29.041,
+   "e": 29.201,
+   "vurgu": false
+  },
+  {
+   "w": "harita",
+   "s": 29.201,
+   "e": 29.521,
+   "vurgu": true
+  },
+  {
+   "w": "oluşturuyor.",
+   "s": 29.521,
+   "e": 29.941,
+   "vurgu": false
+  },
+  {
+   "w": "Telefon",
+   "s": 29.961,
+   "e": 30.592,
+   "vurgu": false
+  },
+  {
+   "w": "bu",
+   "s": 30.592,
+   "e": 30.752,
+   "vurgu": false
+  },
+  {
+   "w": "haritanın",
+   "s": 30.752,
+   "e": 31.192,
+   "vurgu": false
+  },
+  {
+   "w": "matematiksel",
+   "s": 31.192,
+   "e": 31.712,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 31.712,
+   "e": 31.892,
+   "vurgu": false
+  },
+  {
+   "w": "özetini",
+   "s": 31.892,
+   "e": 32.332,
+   "vurgu": false
+  },
+  {
+   "w": "şifreleyip,",
+   "s": 32.332,
+   "e": 33.052,
+   "vurgu": true
+  },
+  {
+   "w": "işlemcinin",
+   "s": 33.052,
+   "e": 33.637,
+   "vurgu": false
+  },
+  {
+   "w": "korunan",
+   "s": 33.637,
+   "e": 34.097,
+   "vurgu": true
+  },
+  {
+   "w": "ayrı",
+   "s": 34.097,
+   "e": 34.437,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 34.437,
+   "e": 34.517,
+   "vurgu": false
+  },
+  {
+   "w": "bölümünde",
+   "s": 34.517,
+   "e": 34.977,
+   "vurgu": false
+  },
+  {
+   "w": "saklıyor.",
+   "s": 34.977,
+   "e": 35.417,
+   "vurgu": false
+  },
+  {
+   "w": "Kilidi",
+   "s": 35.594,
+   "e": 36.182,
+   "vurgu": false
+  },
+  {
+   "w": "her",
+   "s": 36.182,
+   "e": 36.302,
+   "vurgu": false
+  },
+  {
+   "w": "açtığında",
+   "s": 36.302,
+   "e": 36.862,
+   "vurgu": false
+  },
+  {
+   "w": "yeni",
+   "s": 36.862,
+   "e": 37.368,
+   "vurgu": false
+  },
+  {
+   "w": "okunan",
+   "s": 37.368,
+   "e": 37.808,
+   "vurgu": false
+  },
+  {
+   "w": "izi",
+   "s": 37.808,
+   "e": 38.328,
+   "vurgu": false
+  },
+  {
+   "w": "bu",
+   "s": 38.328,
+   "e": 38.578,
+   "vurgu": false
+  },
+  {
+   "w": "özetle",
+   "s": 38.578,
+   "e": 38.998,
+   "vurgu": false
+  },
+  {
+   "w": "karşılaştırıyor.",
+   "s": 38.998,
+   "e": 39.718,
+   "vurgu": true
+  },
+  {
+   "w": "Yeterince",
+   "s": 39.752,
+   "e": 40.413,
+   "vurgu": false
+  },
+  {
+   "w": "benziyorsa",
+   "s": 40.413,
+   "e": 40.953,
+   "vurgu": false
+  },
+  {
+   "w": "kilit",
+   "s": 40.953,
+   "e": 41.453,
+   "vurgu": true
+  },
+  {
+   "w": "açılıyor.",
+   "s": 41.453,
+   "e": 41.813,
+   "vurgu": true
+  },
+  {
+   "w": "Yani",
+   "s": 41.969,
+   "e": 42.533,
+   "vurgu": false
+  },
+  {
+   "w": "telefonun",
+   "s": 42.533,
+   "e": 43.418,
+   "vurgu": false
+  },
+  {
+   "w": "parmak",
+   "s": 43.418,
+   "e": 43.798,
+   "vurgu": false
+  },
+  {
+   "w": "izini",
+   "s": 43.798,
+   "e": 44.018,
+   "vurgu": false
+  },
+  {
+   "w": "değil,",
+   "s": 44.018,
+   "e": 44.278,
+   "vurgu": false
+  },
+  {
+   "w": "parmak",
+   "s": 44.647,
+   "e": 44.917,
+   "vurgu": false
+  },
+  {
+   "w": "izinin",
+   "s": 44.917,
+   "e": 45.307,
+   "vurgu": false
+  },
+  {
+   "w": "haritasını",
+   "s": 45.53,
+   "e": 45.87,
+   "vurgu": true
+  },
+  {
+   "w": "hatırlıyor.",
+   "s": 45.87,
+   "e": 46.36,
+   "vurgu": false
+  }
+ ],
+ "satirlar": [
+  [
+   0,
+   1
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   5,
+   6
+  ],
+  [
+   7,
+   9
+  ],
+  [
+   10,
+   12
+  ],
+  [
+   13,
+   14
+  ],
+  [
+   15,
+   17
+  ],
+  [
+   18,
+   20
+  ],
+  [
+   21,
+   23
+  ],
+  [
+   24,
+   26
+  ],
+  [
+   27,
+   28
+  ],
+  [
+   29,
+   30
+  ],
+  [
+   31,
+   32
+  ],
+  [
+   33,
+   35
+  ],
+  [
+   36,
+   37
+  ],
+  [
+   38,
+   41
+  ],
+  [
+   42,
+   44
+  ],
+  [
+   45,
+   47
+  ],
+  [
+   48,
+   49
+  ],
+  [
+   50,
+   51
+  ],
+  [
+   52,
+   53
+  ],
+  [
+   54,
+   55
+  ],
+  [
+   56,
+   58
+  ],
+  [
+   59,
+   61
+  ],
+  [
+   62,
+   63
+  ],
+  [
+   64,
+   66
+  ],
+  [
+   67,
+   70
+  ],
+  [
+   71,
+   73
+  ],
+  [
+   74,
+   77
+  ],
+  [
+   78,
+   80
+  ],
+  [
+   81,
+   83
+  ],
+  [
+   84,
+   86
+  ],
+  [
+   87,
+   92
+  ],
+  [
+   93,
+   94
+  ],
+  [
+   95,
+   96
+  ],
+  [
+   97,
+   99
+  ],
+  [
+   100,
+   101
+  ],
+  [
+   102,
+   105
+  ]
+ ],
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "gece",
+   "bas": 0.0,
+   "son": 3.058,
+   "ev": {}
+  },
+  {
+   "id": "foto",
+   "bg": "parsomen",
+   "bas": 3.058,
+   "son": 6.436,
+   "ev": {
+    "vur0": 2.942
+   }
+  },
+  {
+   "id": "yakin",
+   "bg": "sicak",
+   "bas": 6.436,
+   "son": 10.661,
+   "ev": {}
+  },
+  {
+   "id": "sensor",
+   "bg": "plan",
+   "bas": 10.661,
+   "son": 19.989,
+   "ev": {}
+  },
+  {
+   "id": "noktalar",
+   "bg": "tahta",
+   "bas": 19.989,
+   "son": 25.372,
+   "ev": {}
+  },
+  {
+   "id": "harita",
+   "bg": "gece",
+   "bas": 25.372,
+   "son": 29.741,
+   "ev": {}
+  },
+  {
+   "id": "kasa",
+   "bg": "devre",
+   "bas": 29.741,
+   "son": 35.374,
+   "ev": {
+    "vur0": 2.591
+   }
+  },
+  {
+   "id": "kontrol",
+   "bg": "yesil",
+   "bas": 35.374,
+   "son": 41.749,
+   "ev": {
+    "vur0": 6.079
+   }
+  },
+  {
+   "id": "son",
+   "bg": "parsomen",
+   "bas": 41.749,
+   "son": 47.013,
+   "ev": {}
+  }
+ ]
+}
