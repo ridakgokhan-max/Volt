@@ -1,15 +1,16 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Traceback (most recent call last):
-  File "/home/runner/work/Volt/Volt/scripts/transkript.py", line 57, in <module>
-    main()
-  File "/home/runner/work/Volt/Volt/scripts/transkript.py", line 39, in main
-    segs, info = model.transcribe(
-                 ^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/transcribe.py", line 876, in transcribe
-    audio = decode_audio(audio, sampling_rate=sampling_rate)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/audio.py", line 46, in decode_audio
-    with av.open(input_file, mode="r", metadata_errors="ignore") as container:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "av/container/core.py", line 479, in av.container.core.open
-TypeError: open() got an unexpected keyword argument 'metadata_errors'
+[  0.00-  3.58] Telefonu milyonlarca parmak arasından seninkini nasıl tanıyor?
+[  3.76-  7.10] İşin ilginç yanı, parmak izinin fotoğrafını hiç saklamıyor.
+[  7.46- 10.48] Parmağın ucunda çıkıntılar ve oluklar var.
+[ 10.74- 12.00] Sensör bunları okuyor.
+[ 12.20- 14.56] Bazı telefonlar ışıkla fotoğrafını çekiyor.
+[ 14.74- 18.46] Bazıları çıkıntılarla oluklar arasındaki çok küçük elektrik farkını ölçüyor.
+[ 18.86- 21.60] Bazıları da ses dalgası gönderip yankısını dinliyor.
+[ 22.36- 24.72] Sonra telefonu bu görüntüdeki özel noktaları buluyor.
+[ 24.84- 27.92] Bu çizginin bittiği yer, ikiye ayrıldığı yer.
+[ 27.92- 32.80] Bu noktaların birbirine göre konumu sadece senin parmağına ait bir harita oluşturuyor.
+[ 33.60- 38.94] Telefon bu haritanın matematiksel bir özetini şifreleyip işlemcinin korunan ayrı bir bölümünde saklıyor.
+[ 39.40- 43.64] Kilidi her açtığında yeni okunan izi bu özetle karşılaştırıyor.
+[ 43.76- 45.92] Yeterince benziyorsa kilit açılıyor.
+[ 46.64- 50.64] Yani telefonun parmak izini değil parmak izinin haritasını hatırlıyor.
+parmak-izi tamam: 106 kelime
