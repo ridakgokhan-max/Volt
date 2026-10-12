@@ -29,10 +29,10 @@ def get(url):
 def kenney(slug):
     page = f"https://kenney.nl/assets/{slug}"
     html = get(page).decode("utf-8", "ignore")
-    m = re.search(r'href="([^"]+\.zip)"', html)
+    m = re.search(r"""((?:https?://kenney\.nl)?/media/pages/assets/[^"'\s<>]+?\.zip)""", html) or re.search(r"""(https?://[^"'\s<>]+?\.zip)""", html)
     if not m:
-        raise RuntimeError("zip bağlantısı yok")
-    url = m.group(1)
+        raise RuntimeError(f"zip bağlantısı yok (sayfa {len(html)} bayt, başı: {html[:120]!r})")
+    url = m.group(1).replace("&amp;", "&")
     if url.startswith("/"):
         url = "https://kenney.nl" + url
     lic = "CC0" if re.search(r"CC0|Creative Commons Zero|public domain", html, re.I) else "BİLİNMİYOR"
