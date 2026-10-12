@@ -24,7 +24,6 @@ KAT = [
     ("para", r"coin|chip|dice|handle"),
     ("ziplama", r"jump|bounce|drop|pluck|maximize|minimize|open|close"),
     ("muzik", r"jingle|music|loop|win|lose|success"),
-    ("ses_insan", r"voice|male|female"),
 ]
 
 
@@ -50,7 +49,7 @@ def main():
         meta = json.load(open(kj, encoding="utf-8"))
         d = os.path.dirname(kj)
         for f in sorted(os.listdir(d)):
-            if not f.lower().endswith(AUDIO):
+            if not f.lower().endswith(AUDIO) or f.lower().startswith("preview"):
                 continue
             p = os.path.join(d, f)
             rel = os.path.relpath(p, ROOT)

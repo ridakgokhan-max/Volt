@@ -304,3 +304,117 @@ def music(dur, bpm=100, full_from=4.0, outro_at=None):
 
 def norm(x, peak=0.8):
     return x / (np.max(np.abs(x)) + 1e-9) * peak
+
+
+# ---------- CC0 ses kütüphanesi (sesler/katalog.json) ----------
+import json as _json
+import os as _os
+import subprocess as _sp
+
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+_KAT = None
+_CACHE = {}
+_lib_rng = np.random.default_rng(11)
+
+# Videolarda kullandığımız efekt adları -> kütüphanedeki ses adları (önek). Birden çok aday varsa her seferinde biri seçilir.
+EFEKT = {
+    "tik": ["click_", "select_", "tick_"],
+    "fare": ["mouseclick", "click"],
+    "anahtar": ["switch", "toggle_"],
+    "pop": ["pluck_", "drop_"],
+    "bip_iyi": ["confirmation_"],
+    "bip_hata": ["error_", "glitch_"],
+    "bong": ["bong_"],
+    "kagit": ["bookFlip", "bookPlace"],
+    "kart": ["card-slide-", "card-place-", "card-shove-"],
+    "kitap_ac": ["bookOpen"],
+    "kapi_ac": ["doorOpen"],
+    "kapi_kapa": ["doorClose"],
+    "kilit": ["metalLatch", "metalClick"],
+    "darbe_hafif": ["impactSoft_medium", "impactGeneric_light"],
+    "darbe": ["impactPunch_medium", "impactSoft_heavy"],
+    "darbe_agir": ["impactPunch_heavy", "impactPlate_heavy"],
+    "metal": ["impactMetal_medium", "impactMetal_light"],
+    "metal_agir": ["impactMetal_heavy", "impactBell_heavy"],
+    "cam": ["impactGlass_light", "impactGlass_medium"],
+    "tahta": ["impactWood_medium", "impactPlank_medium"],
+    "zil": ["impactBell_heavy"],
+    "adim": ["footstep_concrete", "footstep_wood"],
+    "lazer": ["laserSmall_", "laserRetro_"],
+    "lazer_buyuk": ["laserLarge_"],
+    "patlama": ["explosionCrunch_", "lowFrequency_explosion"],
+    "motor": ["engineCircular_", "spaceEngineSmall_"],
+    "bilgisayar": ["computerNoise_"],
+    "kalkan": ["forceField_"],
+    "guc": ["powerUp", "phaserUp"],
+    "dusus": ["phaserDown", "highDown", "lowDown"],
+    "yukselis": ["highUp", "zapThreeToneUp", "phaserUp"],
+    "zap": ["zap", "zapTwoTone"],
+    "dijital": ["twoTone", "threeTone", "pepSound"],
+    "para": ["handleCoins", "chips-collide-", "chip-lay-"],
+    "zar": ["dice-throw-", "dice-shake-"],
+    "bicak": ["knifeSlice", "drawKnife"],
+    "kumas": ["cloth", "clothBelt"],
+    "cizik": ["scratch_"],
+    "kaydir": ["scroll_"],
+    "jingle_basari": ["jingles_PIZZI", "jingles_STEEL"],
+    "jingle_retro": ["jingles_NES"],
+    "jingle_vurgu": ["jingles_HIT"],
+}
+
+
+def katalog():
+    global _KAT
+    if _KAT is None:
+        p = _os.path.join(_ROOT, "sesler", "katalog.json")
+        _KAT = _json.load(open(p, encoding="utf-8"))["sesler"] if _os.path.exists(p) else []
+    return _KAT
+
+
+def _yukle(rel):
+    if rel not in _CACHE:
+        raw = _sp.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", _os.path.join(_ROOT, rel), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+                      capture_output=True, check=True).stdout
+        x = np.frombuffer(raw, np.float32).astype(np.float64)
+        nz = np.nonzero(np.abs(x) > 0.01)[0]  # baştaki sessizliği kırp
+        if len(nz):
+            x = x[max(0, nz[0] - int(0.003 * SR)):]
+        _CACHE[rel] = x / (np.max(np.abs(x)) + 1e-9)
+    return _CACHE[rel]
+
+
+def ornek(onekler, perde=1.0, secim=None):
+    """Kütüphaneden ses: onekler = ses adı önek(ler)i. perde = ± yarım ton rastgele kayma.
+    Bulunamazsa None döner."""
+    if isinstance(onekler, str):
+        onekler = [onekler]
+    adaylar = [s for s in katalog() if any(s["ad"].startswith(o) for o in onekler)]
+    if not adaylar:
+        return None
+    s = adaylar[secim % len(adaylar)] if secim is not None else adaylar[_lib_rng.integers(len(adaylar))]
+    x = _yukle(s["dosya"])
+    if perde:
+        oran = 2 ** (_lib_rng.uniform(-perde, perde) / 12)
+        n = int(len(x) / oran)
+        x = np.interp(np.arange(n) * oran, np.arange(len(x)), x)
+    return x * _lib_rng.uniform(0.85, 1.0)
+
+
+def efekt(ad, yedek=None, perde=1.0):
+    """EFEKT sözlüğündeki addan ses; kütüphanede yoksa yedek (sentez) fonksiyonu kullanılır."""
+    x = ornek(EFEKT.get(ad, [ad]), perde=perde)
+    if x is None and yedek is not None:
+        return yedek()
+    if x is None:
+        return np.zeros(int(0.1 * SR))
+    return x
+
+
+def katman(*sesler, kazanc=None):
+    """Birden çok sesi üst üste bindirir (profesyonel 'layering')."""
+    sesler = [s for s in sesler if s is not None]
+    n = max(len(s) for s in sesler)
+    out = np.zeros(n)
+    for i, s in enumerate(sesler):
+        out[: len(s)] += s * (kazanc[i] if kazanc else 1.0)
+    return out

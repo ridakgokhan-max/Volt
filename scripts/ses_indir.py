@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "sesler")
 KENNEY = [
     "interface-sounds", "impact-sounds", "digital-audio", "sci-fi-sounds", "ui-audio",
-    "rpg-audio", "casino-audio", "music-jingles", "foley-sounds", "voiceover-pack",
+    "rpg-audio", "casino-audio", "music-jingles",
 ]
 AUDIO = (".ogg", ".wav", ".mp3", ".flac")
 UA = {"User-Agent": "Mozilla/5.0 (volt-ses-indirici)"}
