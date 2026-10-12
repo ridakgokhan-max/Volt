@@ -1,11 +1,24 @@
-kenney/interface-sounds: ATLANDI (zip bağlantısı yok)
-kenney/impact-sounds: ATLANDI (zip bağlantısı yok)
-kenney/digital-audio: ATLANDI (zip bağlantısı yok)
-kenney/sci-fi-sounds: ATLANDI (zip bağlantısı yok)
-kenney/ui-audio: ATLANDI (zip bağlantısı yok)
-kenney/rpg-audio: ATLANDI (zip bağlantısı yok)
-kenney/casino-audio: ATLANDI (zip bağlantısı yok)
-kenney/music-jingles: ATLANDI (zip bağlantısı yok)
+kenney/interface-sounds: 100 ses
+kenney/impact-sounds: 130 ses
+kenney/digital-audio: 63 ses
+kenney/sci-fi-sounds: 73 ses
+kenney/ui-audio: 52 ses
+kenney/rpg-audio: 52 ses
+kenney/casino-audio: 55 ses
+kenney/music-jingles: 86 ses
 kenney/foley-sounds: ATLANDI (HTTP Error 404: Not Found)
-kenney/voiceover-pack: ATLANDI (zip bağlantısı yok)
-katalog: 0 ses, 0 kategori
+kenney/voiceover-pack: 95 ses
+katalog: 662 ses, 13 kategori
+  bip: 17
+  darbe: 162
+  diger: 48
+  dijital: 34
+  kagit: 37
+  kapi: 15
+  lazer: 83
+  metal: 9
+  muzik: 71
+  para: 33
+  ses_insan: 48
+  tik: 72
+  ziplama: 33
