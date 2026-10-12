@@ -27,7 +27,7 @@ const Giris: S = ({ t, w }) => {
         const s = mine ? lerp(0.16, 0.42, pick) : 0.16;
         return (
           <g key={i} opacity={mine ? 1 : swirl * (1 - pick * 0.7)}>
-            <Fingerprint cx={tx} cy={ty} s={s * swirl + (mine ? 0 : 0)} color={mine && pick > 0 ? ACC : "#cfe6ff"} sw={mine ? 10 : 12} />
+            <Fingerprint cx={tx} cy={ty} s={s * swirl + (mine ? 0 : 0)} color={mine && pick > 0 ? ACC : "#cfe6ff"} sw={mine ? 10 : 8} />
           </g>
         );
       })}
@@ -46,7 +46,7 @@ const Giris: S = ({ t, w }) => {
 
 // 2 — Parmak izinin fotoğrafını saklamıyor
 const Foto: S = ({ t, w }) => {
-  const k = sp(t, w(12) - 0.3);
+  const k = sp(t, 0.1);
   const x = ap(t, w(13), 0.5);
   const stamp = sp(t, w(14), 9);
   return (
@@ -89,15 +89,15 @@ const Yakin: S = ({ t, w }) => {
       {/* kesit */}
       <g opacity={zoom}>
         <rect x={60} y={430} width={960} height={620} rx={40} fill="#fff4ea" stroke={INK} strokeWidth={8} />
-        <Txt x={540} y={510} text="parmak ucunun kesiti" size={40} weight={700} color="#8a5a3c" />
+        <Txt x={540} y={490} text="parmak ucunun kesiti" size={40} weight={700} color="#8a5a3c" />
         <path d={d} fill="#f1b08a" stroke={INK} strokeWidth={8} strokeLinejoin="round" />
-        <g transform={`translate(${245} ${wave(245) - 95}) scale(${c1})`}>
-          <Arrow x0={0} y0={-50} x1={0} y1={60} color={INK} />
-          <Tag x={0} y={-95} text="ÇIKINTI" size={42} k={1} />
+        <g transform={`translate(382 ${wave(382) - 20}) scale(${c1})`}>
+          <Arrow x0={0} y0={-80} x1={0} y1={-12} color={INK} />
+          <Tag x={0} y={-120} text="ÇIKINTI" size={42} k={1} />
         </g>
-        <g transform={`translate(${440} ${wave(440) + 0}) scale(${c2})`}>
-          <Tag x={0} y={-180} text="OLUK" size={42} k={1} bg="#9fd3ff" />
-          <Arrow x0={0} y0={-140} x1={0} y1={-25} color={INK} />
+        <g transform={`translate(577 ${wave(577) - 20}) scale(${c2})`}>
+          <Arrow x0={60} y0={-190} x1={4} y1={-14} color={INK} />
+          <Tag x={110} y={-228} text="OLUK" size={42} k={1} bg="#9fd3ff" />
         </g>
       </g>
       {/* sensör */}
@@ -112,7 +112,7 @@ const Yakin: S = ({ t, w }) => {
 
 // 4 — Üç sensör türü
 const Card: React.FC<{ y: number; k: number; title: string; sub: string; t: number; kind: 0 | 1 | 2; act: number }> = ({ y, k, title, sub, t, kind, act }) => (
-  <g transform={`translate(${lerp(1300, 540, ez(k))} ${y})`}>
+  <g transform={`translate(${lerp(1700, 540, ez(k))} ${y})`} opacity={k > 0.01 ? 1 : 0}>
     <rect x={-470} y={-120} width={940} height={240} rx={30} fill="#0f3a66" stroke={act > 0 ? ACC : "#cfe6ff"} strokeWidth={act > 0 ? 9 : 5} />
     <g transform="translate(-330 0)">
       <rect x={-110} y={-20} width={220} height={60} rx={10} fill="#5d7fa3" stroke="#cfe6ff" strokeWidth={4} />
@@ -159,7 +159,7 @@ const Noktalar: S = ({ t, w }) => {
   const flash = ap(t, w(49), 0.3);
   const e1 = sp(t, w(54) - 0.1);
   const e2 = sp(t, w(57) - 0.1);
-  const S0 = 1.45;
+  const S0 = 1.05;
   const CX = 540;
   const CY = 760;
   return (
@@ -177,16 +177,16 @@ const Noktalar: S = ({ t, w }) => {
           </g>
         );
       })}
-      <Tag x={290} y={400} text="BİTİŞ" size={48} k={e1} />
-      <Tag x={790} y={400} text="ÇATALLANMA" size={48} k={e2} bg="#7fe0ff" />
-      <Txt x={540} y={1150} text="özel noktalar" size={44} color={CHALK} o={flash * (1 - e1)} weight={700} />
+      <Tag x={250} y={380} text="BİTİŞ" size={44} k={e1} />
+      <Tag x={740} y={380} text="ÇATALLANMA" size={44} k={e2} bg="#7fe0ff" />
+      <Txt x={540} y={1180} text="özel noktalar" size={48} color={ACC} o={flash * (1 - e1)} weight={900} />
     </g>
   );
 };
 
 // 6 — Noktalar haritaya dönüşür
 const Harita: S = ({ t, w }) => {
-  const S0 = 1.45;
+  const S0 = 1.05;
   const CX = 540;
   const CY = 760;
   const fpo = 0.9 - 0.75 * ap(t, w(60), 1.2);
@@ -207,8 +207,8 @@ const Harita: S = ({ t, w }) => {
       {P.map(([x, y], i) => (
         <circle key={i} cx={x} cy={y} r={13 + 5 * Math.sin(t * 5 + i)} fill="#fff8dc" stroke={ACC} strokeWidth={4} />
       ))}
-      <Tag x={540} y={400} text="SADECE SENİN" size={52} k={sp(t, w(65))} />
-      <Tag x={540} y={1150} text="HARİTA" size={64} k={sp(t, w(69))} bg="#7fe0ff" />
+      <Tag x={540} y={360} text="SADECE SENİN" size={50} k={sp(t, w(65))} />
+      <Tag x={540} y={1170} text="HARİTA" size={60} k={sp(t, w(69))} bg="#7fe0ff" />
     </g>
   );
 };
@@ -229,11 +229,11 @@ const Kasa: S = ({ t, w }) => {
   return (
     <g>
       {/* harita küçülüp özete dönüşür */}
-      <g transform={`translate(540 560) scale(${lerp(0.55, 0.12, shrink)})`} opacity={1 - hashK}>
+      <g transform={`translate(540 560) scale(${lerp(0.8, 0.15, shrink)})`} opacity={1 - hashK}>
         {MAP_EDGES.map(([a, b], i) => {
           const pa = MINUTIAE[MAP_IDX[a]];
           const pb = MINUTIAE[MAP_IDX[b]];
-          return <line key={i} x1={pa[0] * 1.45} y1={pa[1] * 1.45} x2={pb[0] * 1.45} y2={pb[1] * 1.45} stroke={ACC} strokeWidth={12} />;
+          return <line key={i} x1={pa[0] * 1.05} y1={pa[1] * 1.05} x2={pb[0] * 1.05} y2={pb[1] * 1.05} stroke={ACC} strokeWidth={12} />;
         })}
       </g>
       <g transform={`translate(${hx} ${hy}) scale(${hs})`} opacity={hashK}>
@@ -318,9 +318,9 @@ const Kontrol: S = ({ t, w }) => {
 
 // 9 — Parmak izini değil, haritasını hatırlar
 const Son: S = ({ t, w }) => {
-  const a = sp(t, w(99) - 0.2);
+  const a = sp(t, 0.1);
   const x = ap(t, w(101), 0.45);
-  const b = sp(t, w(104) - 0.15);
+  const b = sp(t, 0.45);
   const circ = ap(t, w(104), 0.6);
   const fin = sp(t, w(105) + 0.2);
   return (
@@ -330,7 +330,7 @@ const Son: S = ({ t, w }) => {
         <Fingerprint cx={0} cy={-10} s={0.55} color={INK} sw={10} />
       </g>
       <Cross cx={290} cy={700} r={200} k={x} sw={20} />
-      <Txt x={290} y={1020} text="parmak izi" size={46} o={a} />
+      <Txt x={290} y={1030} text="parmak izi" size={46} o={a} />
       <g transform={`translate(790 700) scale(${b})`}>
         <rect x={-210} y={-250} width={420} height={500} rx={24} fill="#fbf7ee" stroke={INK} strokeWidth={8} />
         {MAP_EDGES.map(([i0, i1], i) => {
@@ -340,9 +340,9 @@ const Son: S = ({ t, w }) => {
         })}
         {MAP_IDX.map((m, i) => <circle key={i} cx={MINUTIAE[m][0] * 0.8} cy={MINUTIAE[m][1] * 0.8 - 10} r={11} fill={ACC} stroke={INK} strokeWidth={3} />)}
       </g>
-      <circle cx={790} cy={700} r={290} fill="none" stroke={GREEN} strokeWidth={14} pathLength={1} strokeDasharray={`${circ} 1`} transform="rotate(-90 790 700)" />
-      <Txt x={790} y={1020} text="haritası" size={46} o={b} color="#2f8f52" />
-      <Tag x={540} y={420} text="HARİTASINI HATIRLAR" size={54} k={fin} />
+      {circ > 0.01 ? <rect x={560} y={430} width={460} height={540} rx={36} fill="none" stroke={GREEN} strokeWidth={14} pathLength={1} strokeDasharray={`${circ} 1`} /> : null}
+      <Txt x={790} y={1030} text="haritası" size={46} o={b} color="#2f8f52" />
+      <Tag x={540} y={1140} text="HARİTASINI HATIRLAR" size={50} k={fin} />
     </g>
   );
 };
@@ -350,3 +350,33 @@ const Son: S = ({ t, w }) => {
 export const SAHNE: Record<string, S> = {
   giris: Giris, foto: Foto, yakin: Yakin, sensor: Sensor, noktalar: Noktalar, harita: Harita, kasa: Kasa, kontrol: Kontrol, son: Son,
 };
+
+// Kapak: yarısı parmak izi, yarısı harita
+export const KAPAK: React.FC = () => {
+  const S0 = 1.12;
+  const CX = 540;
+  const CY = 1160;
+  const P = MAP_IDX.map((i) => [CX + MINUTIAE[i][0] * S0, CY + MINUTIAE[i][1] * S0]);
+  return (
+    <g>
+      <defs>
+        <clipPath id="solYari"><rect x={0} y={0} width={CX} height={1920} /></clipPath>
+        <clipPath id="sagYari"><rect x={CX} y={0} width={540} height={1920} /></clipPath>
+      </defs>
+      <Glow cx={CX} cy={CY} r={560} id="kg" color={ACC} o={0.3} />
+      <g clipPath="url(#solYari)">
+        <Fingerprint cx={CX} cy={CY} s={S0} color={CHALK} sw={7} />
+      </g>
+      <g clipPath="url(#sagYari)">
+        <Fingerprint cx={CX} cy={CY} s={S0} color={CHALK} sw={7} o={0.18} />
+        {MAP_EDGES.map(([a, b], i) => (
+          <line key={i} x1={P[a][0]} y1={P[a][1]} x2={P[b][0]} y2={P[b][1]} stroke={ACC} strokeWidth={7} strokeLinecap="round" />
+        ))}
+        {P.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={15} fill="#fff8dc" stroke={ACC} strokeWidth={5} />)}
+      </g>
+      <line x1={CX} y1={CY - 400} x2={CX} y2={CY + 400} stroke={ACC} strokeWidth={5} strokeDasharray="18 14" />
+      
+    </g>
+  );
+};
+export const KAPAK_YAZI = { ust: "Telefonun parmak izini", buyuk: "SAKLAMIYOR!", alt: "Peki neyi saklıyor?" };

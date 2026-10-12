@@ -5,7 +5,7 @@ import { loadFont } from "@remotion/google-fonts/Nunito";
 import { data, SAHNE } from "./aktif";
 import { ACC, ap, Bg, BgKind, cl, ez, FPS, H, INK, sp, W } from "./kit";
 
-const { fontFamily } = loadFont();
+const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
 export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number> };
@@ -41,7 +41,7 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number }> = ({ sc, idx
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>
         <Bg kind={sc.bg} t={t + idx * 3} seed={3 + (idx % 5)} />
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0, color: ink }}>
-          {Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} /> : null}
+          <g transform="translate(0 40)">{Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} /> : null}</g>
         </svg>
       </AbsoluteFill>
     </AbsoluteFill>
@@ -64,7 +64,7 @@ const Altyazi: React.FC = () => {
   const words = K.slice(a, b + 1);
   return (
     <div style={{
-      position: "absolute", top: 1235, left: 60, right: 120, display: "flex", flexWrap: "wrap", justifyContent: "center",
+      position: "absolute", top: 1300, left: 60, right: 120, display: "flex", flexWrap: "wrap", justifyContent: "center",
       alignContent: "flex-start", rowGap: 6, transform: `translateY(${(1 - inK) * 40}px)`, opacity: cl(inK * 1.4),
     }}>
       {words.map((k, j) => {

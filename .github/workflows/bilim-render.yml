@@ -54,6 +54,14 @@ jobs:
         run: |
           set -o pipefail
           npx remotion render src/index.ts Bilim "out/bilim/${{ steps.konu.outputs.konu }}.mp4" --log=info 2>&1 | grep -v -E "^Rendered|^Encoded" | tail -n 80 | tee -a out/bilim/log.txt
+      - name: Kapak ve kontrol kareleri
+        if: always()
+        run: |
+          K="${{ steps.konu.outputs.konu }}"
+          npx remotion still src/index.ts BilimKapak "out/bilim/$K-kapak.png" --log=error || true
+          if [ -f "out/bilim/$K.mp4" ]; then
+            ffmpeg -y -loglevel error -i "out/bilim/$K.mp4" -vf "fps=1/2,scale=216:384,tile=6x4" -frames:v 1 "out/bilim/$K-kareler.jpg" || true
+          fi
       - name: Sonucu depoya kaydet
         if: always()
         run: |

@@ -285,7 +285,7 @@ export const Cross: React.FC<{ cx: number; cy: number; r?: number; k?: number; c
 export const Tag: React.FC<{ x: number; y: number; text: string; k?: number; size?: number; bg?: string; color?: string; rot?: number }> = ({
   x, y, text, k = 1, size = 52, bg = ACC, color = INK, rot = 0,
 }) => {
-  const w = text.length * size * 0.58 + 50;
+  const w = text.length * size * 0.7 + 56;
   const h = size * 1.45;
   return (
     <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${k})`} opacity={cl(k * 1.5)}>
