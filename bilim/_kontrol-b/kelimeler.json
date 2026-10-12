@@ -1,0 +1,25 @@
+{
+ "model": "large-v3",
+ "sure": 1.05,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 0.86,
+   "text": "Parmak izinin...",
+   "kelimeler": [
+    {
+     "w": "Parmak",
+     "start": 0.0,
+     "end": 0.48,
+     "p": 0.856
+    },
+    {
+     "w": "izinin...",
+     "start": 0.48,
+     "end": 0.86,
+     "p": 0.752
+    }
+   ]
+  }
+ ]
+}

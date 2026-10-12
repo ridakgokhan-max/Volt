@@ -1,0 +1,61 @@
+{
+ "model": "large-v3",
+ "sure": 4.45,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 4.24,
+   "text": "Yani, telefonun parmak izini değil, parmak izinin haritasını...",
+   "kelimeler": [
+    {
+     "w": "Yani,",
+     "start": 0.0,
+     "end": 0.66,
+     "p": 0.943
+    },
+    {
+     "w": "telefonun",
+     "start": 0.66,
+     "end": 1.52,
+     "p": 0.989
+    },
+    {
+     "w": "parmak",
+     "start": 1.52,
+     "end": 1.92,
+     "p": 0.997
+    },
+    {
+     "w": "izini",
+     "start": 1.92,
+     "end": 2.14,
+     "p": 0.994
+    },
+    {
+     "w": "değil,",
+     "start": 2.14,
+     "end": 2.38,
+     "p": 0.998
+    },
+    {
+     "w": "parmak",
+     "start": 2.52,
+     "end": 3.26,
+     "p": 1.0
+    },
+    {
+     "w": "izinin",
+     "start": 3.26,
+     "end": 3.52,
+     "p": 1.0
+    },
+    {
+     "w": "haritasını...",
+     "start": 3.52,
+     "end": 4.24,
+     "p": 0.834
+    }
+   ]
+  }
+ ]
+}

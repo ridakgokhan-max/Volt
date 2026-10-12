@@ -1,16 +1,8 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[  0.00-  3.58] Telefonu milyonlarca parmak arasından seninkini nasıl tanıyor?
-[  3.76-  7.10] İşin ilginç yanı, parmak izinin fotoğrafını hiç saklamıyor.
-[  7.46- 10.48] Parmağın ucunda çıkıntılar ve oluklar var.
-[ 10.74- 12.00] Sensör bunları okuyor.
-[ 12.20- 14.56] Bazı telefonlar ışıkla fotoğrafını çekiyor.
-[ 14.74- 18.46] Bazıları çıkıntılarla oluklar arasındaki çok küçük elektrik farkını ölçüyor.
-[ 18.86- 21.60] Bazıları da ses dalgası gönderip yankısını dinliyor.
-[ 22.36- 24.72] Sonra telefonu bu görüntüdeki özel noktaları buluyor.
-[ 24.84- 27.92] Bu çizginin bittiği yer, ikiye ayrıldığı yer.
-[ 27.92- 32.80] Bu noktaların birbirine göre konumu sadece senin parmağına ait bir harita oluşturuyor.
-[ 33.60- 38.94] Telefon bu haritanın matematiksel bir özetini şifreleyip işlemcinin korunan ayrı bir bölümünde saklıyor.
-[ 39.40- 43.64] Kilidi her açtığında yeni okunan izi bu özetle karşılaştırıyor.
-[ 43.76- 45.92] Yeterince benziyorsa kilit açılıyor.
-[ 46.64- 50.64] Yani telefonun parmak izini değil parmak izinin haritasını hatırlıyor.
-parmak-izi tamam: 106 kelime
+[  0.00-  4.24] Yani, telefonun parmak izini değil, parmak izinin haritasını...
+_kontrol-a tamam: 8 kelime
+[  0.00-  0.86] Parmak izinin...
+_kontrol-b tamam: 2 kelime
+[  0.00-  0.90] Haritasını hatırlıyor.
+_kontrol-c tamam: 2 kelime
+[  0.00-  1.92] Parmak izinin haritasını...
+_kontrol-d tamam: 3 kelime
