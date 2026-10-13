@@ -16,6 +16,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bilim_ses as B  # noqa: E402
+import ses_temizle  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = B.SR
@@ -48,7 +49,13 @@ def main(konu):
     ses = sorted(glob.glob(os.path.join(D, "ses.*")))[0]
     K = json.load(open(os.path.join(D, "kurgu.json"), encoding="utf-8"))
     T = json.load(open(os.path.join(D, "kelimeler.json"), encoding="utf-8"))
-    x = decode(ses)
+    # kayıt önce temizlenir (EQ, kapı, 's' yumuşatma, sıkıştırma); yapay zekâ seslendirmesi zaten temiz
+    if K.get("temizle", not os.path.exists(os.path.join(D, "metin.txt"))):
+        ses_temiz = f"/tmp/temiz_{konu}.wav"
+        ses_temizle.temizle(ses, ses_temiz)
+        x = decode(ses_temiz)
+    else:
+        x = decode(ses)
     total = len(x) / SR
 
     # --- kelimeler ---
@@ -62,15 +69,31 @@ def main(konu):
     words = [w for i, w in enumerate(uniq) if i not in set(K.get("kelime_sil", []))]
     words += K.get("kelime_ekle", [])
     words.sort(key=lambda w: w["start"])
-    # yapay zekâ seslendirmesinde metin bilinir: kelime sayısı tutuyorsa yazımı metinden al
+    # metin.txt varsa (okunan metin) yazım metinden alınır: transkript metinle hizalanır,
+    # kelime sayıları tutmayan yerlerde zamanlar birleştirilir ya da bölünür
     mt = os.path.join(D, "metin.txt")
     if os.path.exists(mt):
+        import difflib
         toks = open(mt, encoding="utf-8").read().split()
-        if len(toks) == len(words):
-            for w, tok in zip(words, toks):
-                w["w"] = tok
-        else:
-            print(f"uyarı: metin {len(toks)} kelime, transkript {len(words)} kelime; yazım düzeltilmedi")
+        key = lambda z: z.replace("İ", "i").replace("I", "ı").lower().strip(".,:;!?\"'…").replace("â", "a").replace("'", "")
+        sm = difflib.SequenceMatcher(a=[key(w["w"]) for w in words], b=[key(t) for t in toks], autojunk=False)
+        out_w = []
+        for op, a0, a1, b0, b1 in sm.get_opcodes():
+            src, dst = words[a0:a1], toks[b0:b1]
+            if op == "equal" or (op == "replace" and len(src) == len(dst)):
+                for w, tok in zip(src, dst):
+                    out_w.append({"w": tok, "start": w["start"], "end": w["end"]})
+            elif op == "replace" or op == "insert":
+                if src:
+                    st, en = src[0]["start"], src[-1]["end"]
+                else:
+                    st = out_w[-1]["end"] if out_w else 0.0
+                    en = st + 0.25 * len(dst)
+                for k, tok in enumerate(dst):
+                    out_w.append({"w": tok, "start": st + (en - st) * k / len(dst), "end": st + (en - st) * (k + 1) / len(dst)})
+            # "delete": metinde olmayan konuşma (kekeleme vb.) altyazıya girmez
+        print(f"metinle hizalandı: transkript {len(words)} -> metin {len(out_w)} kelime")
+        words = out_w
     for i, txt in K.get("duzelt", {}).items():
         words[int(i)]["w"] = txt
     vurgu = set(v for v in K.get("vurgu", []) if isinstance(v, int))
@@ -253,7 +276,7 @@ def main(konu):
     save(f"{tmp}/voice.wav", B.norm(voice, 0.9))
     save(f"{tmp}/sfx.wav", B.norm(sfx, 0.8))
     save(f"{tmp}/music.wav", B.norm(mus, 0.8))
-    fc = ("[0:a]highpass=f=80,acompressor=threshold=-20dB:ratio=3:attack=5:release=120,loudnorm=I=-16:TP=-2:LRA=9,"
+    fc = ("[0:a]loudnorm=I=-16:TP=-2:LRA=9,"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
           "[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.30[m];"
           "[m][vk]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=400[md];"
