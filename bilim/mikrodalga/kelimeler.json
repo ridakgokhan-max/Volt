@@ -1,0 +1,800 @@
+{
+ "model": "large-v3",
+ "sure": 50.048,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 2.8,
+   "text": "Mikro dalga neden tabağı değil de yemeği ısıtıyor?",
+   "kelimeler": [
+    {
+     "w": "Mikro",
+     "start": 0.0,
+     "end": 0.62,
+     "p": 0.55
+    },
+    {
+     "w": "dalga",
+     "start": 0.62,
+     "end": 1.02,
+     "p": 0.997
+    },
+    {
+     "w": "neden",
+     "start": 1.02,
+     "end": 1.26,
+     "p": 0.999
+    },
+    {
+     "w": "tabağı",
+     "start": 1.26,
+     "end": 1.8,
+     "p": 0.935
+    },
+    {
+     "w": "değil",
+     "start": 1.8,
+     "end": 2.02,
+     "p": 0.891
+    },
+    {
+     "w": "de",
+     "start": 2.02,
+     "end": 2.18,
+     "p": 0.998
+    },
+    {
+     "w": "yemeği",
+     "start": 2.18,
+     "end": 2.48,
+     "p": 0.991
+    },
+    {
+     "w": "ısıtıyor?",
+     "start": 2.48,
+     "end": 2.8,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 3.12,
+   "end": 4.74,
+   "text": "Cevap, yemeğin içindeki suda.",
+   "kelimeler": [
+    {
+     "w": "Cevap,",
+     "start": 3.12,
+     "end": 3.76,
+     "p": 0.999
+    },
+    {
+     "w": "yemeğin",
+     "start": 3.76,
+     "end": 4.08,
+     "p": 1.0
+    },
+    {
+     "w": "içindeki",
+     "start": 4.08,
+     "end": 4.48,
+     "p": 1.0
+    },
+    {
+     "w": "suda.",
+     "start": 4.48,
+     "end": 4.74,
+     "p": 0.996
+    }
+   ]
+  },
+  {
+   "start": 4.98,
+   "end": 7.9,
+   "text": "Mikro dalganın içinde magnetron denen bir parça var.",
+   "kelimeler": [
+    {
+     "w": "Mikro",
+     "start": 4.98,
+     "end": 5.62,
+     "p": 0.999
+    },
+    {
+     "w": "dalganın",
+     "start": 5.62,
+     "end": 6.02,
+     "p": 0.998
+    },
+    {
+     "w": "içinde",
+     "start": 6.02,
+     "end": 6.22,
+     "p": 1.0
+    },
+    {
+     "w": "magnetron",
+     "start": 6.22,
+     "end": 7.0,
+     "p": 0.997
+    },
+    {
+     "w": "denen",
+     "start": 7.0,
+     "end": 7.2,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 7.2,
+     "end": 7.38,
+     "p": 1.0
+    },
+    {
+     "w": "parça",
+     "start": 7.38,
+     "end": 7.8,
+     "p": 1.0
+    },
+    {
+     "w": "var.",
+     "start": 7.8,
+     "end": 7.9,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 8.24,
+   "end": 12.98,
+   "text": "Saniyede yaklaşık 2,5 milyar kez titreşen, görünmez dalgalar üretiyor.",
+   "kelimeler": [
+    {
+     "w": "Saniyede",
+     "start": 8.24,
+     "end": 8.88,
+     "p": 0.998
+    },
+    {
+     "w": "yaklaşık",
+     "start": 8.88,
+     "end": 9.36,
+     "p": 1.0
+    },
+    {
+     "w": "2",
+     "start": 9.36,
+     "end": 9.48,
+     "p": 0.857
+    },
+    {
+     "w": ",5",
+     "start": 9.48,
+     "end": 9.84,
+     "p": 0.932
+    },
+    {
+     "w": "milyar",
+     "start": 9.84,
+     "end": 10.2,
+     "p": 0.999
+    },
+    {
+     "w": "kez",
+     "start": 10.2,
+     "end": 10.4,
+     "p": 0.983
+    },
+    {
+     "w": "titreşen,",
+     "start": 10.4,
+     "end": 11.48,
+     "p": 0.998
+    },
+    {
+     "w": "görünmez",
+     "start": 11.6,
+     "end": 12.26,
+     "p": 0.993
+    },
+    {
+     "w": "dalgalar",
+     "start": 12.26,
+     "end": 12.7,
+     "p": 0.998
+    },
+    {
+     "w": "üretiyor.",
+     "start": 12.7,
+     "end": 12.98,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 13.78,
+   "end": 17.02,
+   "text": "Su molekülünün bir ucu hafif artı, diğer ucu hafif eksi yüklü.",
+   "kelimeler": [
+    {
+     "w": "Su",
+     "start": 13.5,
+     "end": 13.82,
+     "p": 1.0
+    },
+    {
+     "w": "molekülünün",
+     "start": 13.82,
+     "end": 14.36,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 14.36,
+     "end": 14.52,
+     "p": 1.0
+    },
+    {
+     "w": "ucu",
+     "start": 14.52,
+     "end": 14.8,
+     "p": 0.997
+    },
+    {
+     "w": "hafif",
+     "start": 14.8,
+     "end": 15.14,
+     "p": 0.999
+    },
+    {
+     "w": "artı,",
+     "start": 15.14,
+     "end": 15.56,
+     "p": 0.998
+    },
+    {
+     "w": "diğer",
+     "start": 15.56,
+     "end": 15.86,
+     "p": 0.998
+    },
+    {
+     "w": "ucu",
+     "start": 15.86,
+     "end": 16.18,
+     "p": 1.0
+    },
+    {
+     "w": "hafif",
+     "start": 16.18,
+     "end": 16.5,
+     "p": 1.0
+    },
+    {
+     "w": "eksi",
+     "start": 16.5,
+     "end": 16.72,
+     "p": 0.983
+    },
+    {
+     "w": "yüklü.",
+     "start": 16.72,
+     "end": 17.02,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 17.38,
+   "end": 21.48,
+   "text": "Dalga her yön değiştirdiğinde su molekülleri de onunla birlikte dönmeye çalışıyor.",
+   "kelimeler": [
+    {
+     "w": "Dalga",
+     "start": 17.38,
+     "end": 18.02,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 18.02,
+     "end": 18.12,
+     "p": 1.0
+    },
+    {
+     "w": "yön",
+     "start": 18.12,
+     "end": 18.38,
+     "p": 1.0
+    },
+    {
+     "w": "değiştirdiğinde",
+     "start": 18.38,
+     "end": 19.1,
+     "p": 1.0
+    },
+    {
+     "w": "su",
+     "start": 19.1,
+     "end": 19.34,
+     "p": 0.936
+    },
+    {
+     "w": "molekülleri",
+     "start": 19.34,
+     "end": 19.98,
+     "p": 0.999
+    },
+    {
+     "w": "de",
+     "start": 19.98,
+     "end": 20.02,
+     "p": 1.0
+    },
+    {
+     "w": "onunla",
+     "start": 20.02,
+     "end": 20.34,
+     "p": 1.0
+    },
+    {
+     "w": "birlikte",
+     "start": 20.34,
+     "end": 20.58,
+     "p": 1.0
+    },
+    {
+     "w": "dönmeye",
+     "start": 20.58,
+     "end": 21.06,
+     "p": 1.0
+    },
+    {
+     "w": "çalışıyor.",
+     "start": 21.06,
+     "end": 21.48,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 22.06,
+   "end": 26.44,
+   "text": "Milyarlarca molekül sürekli dönüp birbirine çarpıyor ve bu hareket ısıya dönüşüyor.",
+   "kelimeler": [
+    {
+     "w": "Milyarlarca",
+     "start": 22.06,
+     "end": 22.7,
+     "p": 0.999
+    },
+    {
+     "w": "molekül",
+     "start": 22.7,
+     "end": 23.2,
+     "p": 1.0
+    },
+    {
+     "w": "sürekli",
+     "start": 23.2,
+     "end": 23.68,
+     "p": 1.0
+    },
+    {
+     "w": "dönüp",
+     "start": 23.68,
+     "end": 23.94,
+     "p": 1.0
+    },
+    {
+     "w": "birbirine",
+     "start": 23.94,
+     "end": 24.3,
+     "p": 0.984
+    },
+    {
+     "w": "çarpıyor",
+     "start": 24.3,
+     "end": 24.72,
+     "p": 0.997
+    },
+    {
+     "w": "ve",
+     "start": 24.72,
+     "end": 24.88,
+     "p": 1.0
+    },
+    {
+     "w": "bu",
+     "start": 24.88,
+     "end": 25.34,
+     "p": 1.0
+    },
+    {
+     "w": "hareket",
+     "start": 25.34,
+     "end": 25.76,
+     "p": 1.0
+    },
+    {
+     "w": "ısıya",
+     "start": 25.76,
+     "end": 26.06,
+     "p": 0.994
+    },
+    {
+     "w": "dönüşüyor.",
+     "start": 26.06,
+     "end": 26.44,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 26.64,
+   "end": 29.66,
+   "text": "Cam ve porselen tabakları neredeyse hiç su yok.",
+   "kelimeler": [
+    {
+     "w": "Cam",
+     "start": 26.64,
+     "end": 27.14,
+     "p": 0.942
+    },
+    {
+     "w": "ve",
+     "start": 27.14,
+     "end": 27.24,
+     "p": 1.0
+    },
+    {
+     "w": "porselen",
+     "start": 27.24,
+     "end": 27.74,
+     "p": 0.996
+    },
+    {
+     "w": "tabakları",
+     "start": 27.74,
+     "end": 28.18,
+     "p": 0.796
+    },
+    {
+     "w": "neredeyse",
+     "start": 28.18,
+     "end": 28.76,
+     "p": 0.964
+    },
+    {
+     "w": "hiç",
+     "start": 28.76,
+     "end": 29.24,
+     "p": 0.996
+    },
+    {
+     "w": "su",
+     "start": 29.24,
+     "end": 29.48,
+     "p": 1.0
+    },
+    {
+     "w": "yok.",
+     "start": 29.48,
+     "end": 29.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 31.8,
+   "text": "Bu yüzden dalgalar onları pek ısıtmıyor.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 30.0,
+     "end": 30.08,
+     "p": 0.978
+    },
+    {
+     "w": "yüzden",
+     "start": 30.08,
+     "end": 30.24,
+     "p": 1.0
+    },
+    {
+     "w": "dalgalar",
+     "start": 30.24,
+     "end": 30.86,
+     "p": 0.997
+    },
+    {
+     "w": "onları",
+     "start": 30.86,
+     "end": 31.08,
+     "p": 1.0
+    },
+    {
+     "w": "pek",
+     "start": 31.08,
+     "end": 31.4,
+     "p": 1.0
+    },
+    {
+     "w": "ısıtmıyor.",
+     "start": 31.4,
+     "end": 31.8,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.02,
+   "end": 35.32,
+   "text": "Tabak ısınıyorsa ısıyı çoğu zaman sıcak yemekten olur.",
+   "kelimeler": [
+    {
+     "w": "Tabak",
+     "start": 32.02,
+     "end": 32.62,
+     "p": 0.997
+    },
+    {
+     "w": "ısınıyorsa",
+     "start": 32.62,
+     "end": 33.06,
+     "p": 0.995
+    },
+    {
+     "w": "ısıyı",
+     "start": 33.06,
+     "end": 33.8,
+     "p": 0.896
+    },
+    {
+     "w": "çoğu",
+     "start": 33.8,
+     "end": 34.02,
+     "p": 0.99
+    },
+    {
+     "w": "zaman",
+     "start": 34.02,
+     "end": 34.3,
+     "p": 1.0
+    },
+    {
+     "w": "sıcak",
+     "start": 34.3,
+     "end": 34.84,
+     "p": 1.0
+    },
+    {
+     "w": "yemekten",
+     "start": 34.84,
+     "end": 35.2,
+     "p": 0.998
+    },
+    {
+     "w": "olur.",
+     "start": 35.2,
+     "end": 35.32,
+     "p": 0.938
+    }
+   ]
+  },
+  {
+   "start": 36.14,
+   "end": 38.74,
+   "text": "Bu dalgalar yemeği sadece birkaç santim içine işliyor.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 35.9,
+     "end": 36.2,
+     "p": 1.0
+    },
+    {
+     "w": "dalgalar",
+     "start": 36.2,
+     "end": 36.76,
+     "p": 1.0
+    },
+    {
+     "w": "yemeği",
+     "start": 36.76,
+     "end": 37.06,
+     "p": 0.957
+    },
+    {
+     "w": "sadece",
+     "start": 37.06,
+     "end": 37.28,
+     "p": 1.0
+    },
+    {
+     "w": "birkaç",
+     "start": 37.28,
+     "end": 37.8,
+     "p": 0.997
+    },
+    {
+     "w": "santim",
+     "start": 37.8,
+     "end": 38.22,
+     "p": 0.997
+    },
+    {
+     "w": "içine",
+     "start": 38.22,
+     "end": 38.46,
+     "p": 0.999
+    },
+    {
+     "w": "işliyor.",
+     "start": 38.46,
+     "end": 38.74,
+     "p": 0.996
+    }
+   ]
+  },
+  {
+   "start": 39.2,
+   "end": 42.2,
+   "text": "Ortası ise dışarıdan gelen ısıyla yavaş yavaş ısınıyor.",
+   "kelimeler": [
+    {
+     "w": "Ortası",
+     "start": 39.2,
+     "end": 39.8,
+     "p": 1.0
+    },
+    {
+     "w": "ise",
+     "start": 39.8,
+     "end": 40.02,
+     "p": 1.0
+    },
+    {
+     "w": "dışarıdan",
+     "start": 40.02,
+     "end": 40.6,
+     "p": 1.0
+    },
+    {
+     "w": "gelen",
+     "start": 40.6,
+     "end": 40.88,
+     "p": 1.0
+    },
+    {
+     "w": "ısıyla",
+     "start": 40.88,
+     "end": 41.2,
+     "p": 0.857
+    },
+    {
+     "w": "yavaş",
+     "start": 41.2,
+     "end": 41.56,
+     "p": 1.0
+    },
+    {
+     "w": "yavaş",
+     "start": 41.56,
+     "end": 41.8,
+     "p": 1.0
+    },
+    {
+     "w": "ısınıyor.",
+     "start": 41.8,
+     "end": 42.2,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 42.56,
+   "end": 44.66,
+   "text": "Ortası soğuk kalan yemeğin sırrı da bu.",
+   "kelimeler": [
+    {
+     "w": "Ortası",
+     "start": 42.56,
+     "end": 43.16,
+     "p": 1.0
+    },
+    {
+     "w": "soğuk",
+     "start": 43.16,
+     "end": 43.46,
+     "p": 1.0
+    },
+    {
+     "w": "kalan",
+     "start": 43.46,
+     "end": 43.76,
+     "p": 1.0
+    },
+    {
+     "w": "yemeğin",
+     "start": 43.76,
+     "end": 44.06,
+     "p": 0.999
+    },
+    {
+     "w": "sırrı",
+     "start": 44.06,
+     "end": 44.48,
+     "p": 0.996
+    },
+    {
+     "w": "da",
+     "start": 44.48,
+     "end": 44.48,
+     "p": 1.0
+    },
+    {
+     "w": "bu.",
+     "start": 44.48,
+     "end": 44.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 45.42,
+   "end": 49.2,
+   "text": "Kısacası mikrodalga yemeği değil, yemeğin içindeki suyu ısıtıyor.",
+   "kelimeler": [
+    {
+     "w": "Kısacası",
+     "start": 45.42,
+     "end": 46.02,
+     "p": 1.0
+    },
+    {
+     "w": "mikrodalga",
+     "start": 46.02,
+     "end": 46.62,
+     "p": 0.992
+    },
+    {
+     "w": "yemeği",
+     "start": 46.62,
+     "end": 47.24,
+     "p": 0.999
+    },
+    {
+     "w": "değil,",
+     "start": 47.24,
+     "end": 47.46,
+     "p": 1.0
+    },
+    {
+     "w": "yemeğin",
+     "start": 47.56,
+     "end": 48.18,
+     "p": 1.0
+    },
+    {
+     "w": "içindeki",
+     "start": 48.18,
+     "end": 48.54,
+     "p": 1.0
+    },
+    {
+     "w": "suyu",
+     "start": 48.54,
+     "end": 48.84,
+     "p": 0.999
+    },
+    {
+     "w": "ısıtıyor.",
+     "start": 48.84,
+     "end": 49.2,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}
