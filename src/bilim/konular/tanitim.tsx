@@ -128,8 +128,8 @@ const Soru2: S = ({ t, ws }) => {
 // ---------- 3 — Gökyüzü sorusu ----------
 const Soru3: S = ({ t, ws }) => {
   const tm = ws("mavidir");
-  const ray = ap(t, 0.2, 0.6);
-  const sc = ap(t, tm - 0.4, 0.5);
+  const ray = ap(t, 0.0, 0.3);
+  const sc = ap(t, Math.min(0.35, tm - 0.4), 0.3);
   const cols = [RED, "#ff9d2e", ACC, GREEN, BLUE, "#6a4bd8"];
   return (
     <g>
@@ -138,7 +138,8 @@ const Soru3: S = ({ t, ws }) => {
         const a = (i / 10) * Math.PI * 2 + t * 0.5;
         return <line key={i} x1={180 + Math.cos(a) * 110} y1={430 + Math.sin(a) * 110} x2={180 + Math.cos(a) * 150} y2={430 + Math.sin(a) * 150} stroke="#ffb21a" strokeWidth={8} strokeLinecap="round" />;
       })}
-      <line x1={260} y1={500} x2={lerp(260, 560, ray)} y2={lerp(500, 760, ray)} stroke="#fff" strokeWidth={16} strokeLinecap="round" />
+      <line x1={260} y1={500} x2={lerp(260, 560, ray)} y2={lerp(500, 760, ray)} stroke={INK} strokeWidth={24} strokeLinecap="round" />
+      <line x1={260} y1={500} x2={lerp(260, 560, ray)} y2={lerp(500, 760, ray)} stroke="#fff8c0" strokeWidth={14} strokeLinecap="round" />
       {ray >= 1
         ? cols.map((c, i) => <line key={i} x1={560} y1={760} x2={560 + Math.cos(0.7 + i * 0.05) * 380} y2={760 + Math.sin(0.7 + i * 0.05) * 380} stroke={c} strokeWidth={10} opacity={0.9} />)
         : null}
@@ -147,10 +148,10 @@ const Soru3: S = ({ t, ws }) => {
         ? Array.from({ length: 12 }).map((_, i) => {
           const a = (i / 12) * Math.PI * 2;
           const r = 60 + ((t * 220 + i * 20) % 260);
-          return <Arrow key={i} x0={560 + Math.cos(a) * r} y0={760 + Math.sin(a) * r} x1={560 + Math.cos(a) * (r + 40)} y1={760 + Math.sin(a) * (r + 40)} color={BLUE} sw={7} k={sc} />;
+          return <Arrow key={i} x0={560 + Math.cos(a) * r} y0={760 + Math.sin(a) * r} x1={560 + Math.cos(a) * (r + 50)} y1={760 + Math.sin(a) * (r + 50)} color="#1546b8" sw={10} k={sc} />;
         })
         : null}
-      <Tag x={760} y={420} text="MAVİ?" size={60} k={sp(t, tm)} bg={CYAN} />
+      <Tag x={760} y={420} text="MAVİ?" size={60} k={sp(t, Math.min(0.5, tm))} bg={CYAN} />
       <Kisi x={860} y={900} s={0.7} mood="surprised" arms="point" t={t} flip />
     </g>
   );
