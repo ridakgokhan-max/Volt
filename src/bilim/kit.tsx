@@ -142,8 +142,8 @@ const Circuit: React.FC<{ t: number }> = ({ t }) => {
 // ---------- çöp adam (Volt Stick'in renk alabilen hali) ----------
 type Mood = "happy" | "neutral" | "surprised" | "worried" | "serious";
 type Arms = "down" | "up" | "point" | "stop" | "chin" | "thumb";
-export const Kisi: React.FC<{ x: number; y: number; s?: number; mood?: Mood; arms?: Arms; t: number; flip?: boolean; color?: string; o?: number }> = ({
-  x, y, s = 1, mood = "neutral", arms = "down", t, flip = false, color = INK, o = 1,
+export const Kisi: React.FC<{ x: number; y: number; s?: number; mood?: Mood; arms?: Arms; t: number; flip?: boolean; color?: string; o?: number; walk?: number }> = ({
+  x, y, s = 1, mood = "neutral", arms = "down", t, flip = false, color = INK, o = 1, walk = 0,
 }) => {
   const f = t * FPS;
   const breathe = Math.sin(f / 14) * 3;
@@ -165,12 +165,33 @@ export const Kisi: React.FC<{ x: number; y: number; s?: number; mood?: Mood; arm
     chin: ["M 0 70 L -45 160", "M 0 70 L 50 100 L 18 40"],
     thumb: ["M 0 70 L -45 160", "M 0 70 L 75 75 L 75 30"],
   };
+  // yürüme: bacaklar ve kollar zıt yönde sallanır, gövde hafif zıplar
+  const ph = t * walk * 9;
+  const sw = walk > 0 ? Math.sin(ph) * 0.55 : 0;
+  const bob = walk > 0 ? -Math.abs(Math.cos(ph)) * 8 : 0;
+  const leg = (a: number) => {
+    const kx = Math.sin(a) * 55;
+    const fx = Math.sin(a) * 110;
+    const lift = a < 0 ? 0 : -Math.max(0, Math.sin(ph * 1)) * 0;
+    return `M 0 190 L ${kx} ${245 + lift} L ${fx} ${300 + Math.min(0, -Math.cos(a) * 0) - (Math.abs(a) > 0.3 && a > 0 ? 6 : 0)}`;
+  };
+  const arm = (a: number) => `M 0 70 L ${Math.sin(a) * 75} ${70 + Math.cos(a) * 85}`;
   return (
-    <g opacity={o} transform={`translate(${x} ${y + breathe}) scale(${flip ? -s : s} ${s})`} stroke={color} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" fill="none">
+    <g opacity={o} transform={`translate(${x} ${y + breathe + bob}) scale(${flip ? -s : s} ${s})`} stroke={color} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" fill="none">
       <line x1={0} y1={44} x2={0} y2={190} />
-      <line x1={0} y1={190} x2={-38} y2={300} />
-      <line x1={0} y1={190} x2={38} y2={300} />
-      {armPaths[arms].map((d, i) => <path key={i} d={d} />)}
+      {walk > 0 ? (
+        <>
+          <path d={leg(sw)} />
+          <path d={leg(-sw)} />
+          {arms === "down" ? <><path d={arm(-sw)} /><path d={arm(sw)} /></> : armPaths[arms].map((d, i) => <path key={i} d={d} />)}
+        </>
+      ) : (
+        <>
+          <line x1={0} y1={190} x2={-38} y2={300} />
+          <line x1={0} y1={190} x2={38} y2={300} />
+          {armPaths[arms].map((d, i) => <path key={i} d={d} />)}
+        </>
+      )}
       <circle cx={0} cy={0} r={46} fill={color === INK ? "#f6eedd" : "#ffffff22"} />
       <ellipse cx={-15} cy={-4} rx={5} ry={eyeH} fill={color} stroke="none" />
       <ellipse cx={15} cy={-4} rx={5} ry={eyeH} fill={color} stroke="none" />

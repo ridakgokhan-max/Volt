@@ -62,9 +62,18 @@ def main(konu):
     words = [w for i, w in enumerate(uniq) if i not in set(K.get("kelime_sil", []))]
     words += K.get("kelime_ekle", [])
     words.sort(key=lambda w: w["start"])
+    # yapay zekâ seslendirmesinde metin bilinir: kelime sayısı tutuyorsa yazımı metinden al
+    mt = os.path.join(D, "metin.txt")
+    if os.path.exists(mt):
+        toks = open(mt, encoding="utf-8").read().split()
+        if len(toks) == len(words):
+            for w, tok in zip(words, toks):
+                w["w"] = tok
+        else:
+            print(f"uyarı: metin {len(toks)} kelime, transkript {len(words)} kelime; yazım düzeltilmedi")
     for i, txt in K.get("duzelt", {}).items():
         words[int(i)]["w"] = txt
-    vurgu = set(K.get("vurgu", []))
+    vurgu = set(v for v in K.get("vurgu", []) if isinstance(v, int))
 
     # --- konuşma parçaları (sessizlikler ve kesimler dışı) ---
     sil = silences(ses)
@@ -168,17 +177,41 @@ def main(konu):
         if st <= b:
             sat.append([st, b])
 
+    # kelimeyi metinle bul: ara("daire") -> ilk geçen kelimenin indeksi (sonra=saniye sınırı)
+    def norm(x):
+        return x.lower().replace("İ", "i").replace("I", "ı").strip(".,!?:;\"'…")
+
+    def ara(txt, sonra=0.0, n=0):
+        q = norm(txt)
+        c = 0
+        for i, k in enumerate(kel):
+            if k["s"] >= sonra - 0.3 and norm(k["w"]).startswith(q):
+                if c == n:
+                    return i
+                c += 1
+        raise KeyError(f"kelime bulunamadı: {txt}")
+
+    def idx(v, sonra=0.0):
+        return v if isinstance(v, int) else ara(v, sonra)
+
     # --- sahneler ---
     sc = []
     for j, s in enumerate(K["sahneler"]):
-        bas = 0.0 if j == 0 else round(kel[s["ilk"]]["s"] - 0.22, 3)
+        bas = 0.0 if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
         ev = {f"vur{n}": 0 for n in range(len(s.get("vur", [])))}
-        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", [])})
+        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire")})
     for j, s in enumerate(sc):
         s["son"] = sc[j + 1]["bas"] if j + 1 < len(sc) else round(sure, 3)
         for n, wi in enumerate(s.pop("_vur")):
+            wi = idx(wi, s["bas"])
             s["ev"][f"vur{n}"] = round(kel[wi]["s"] - s["bas"], 3)
 
+    for v in K.get("vurgu", []):
+        if isinstance(v, str):
+            try:
+                kel[ara(v)]["vurgu"] = True
+            except KeyError:
+                print("uyarı: vurgu kelimesi yok:", v)
     data = {"konu": konu, "baslik": K["baslik"], "audio": f"bilim/{konu}/mix.m4a", "sure": round(sure, 3),
             "kelimeler": kel, "satirlar": sat, "sahneler": sc}
     os.makedirs(os.path.join(ROOT, "src", "bilim", "data"), exist_ok=True)
@@ -195,7 +228,11 @@ def main(konu):
     for i, s in enumerate(sc):
         if i > 0:
             B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), 0.55)
-    mod.cues(B, sfx, wt, starts, sure)
+    import inspect
+    if "ara" in inspect.signature(mod.cues).parameters:
+        mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
+    else:
+        mod.cues(B, sfx, wt, starts, sure)
     mus = B.music(sure, full_from=sc[1]["bas"] if len(sc) > 1 else 3.0, outro_at=max(sure - 2.6, 5))
 
     pub = os.path.join(ROOT, "public", "bilim", konu)

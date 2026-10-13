@@ -1,0 +1,18 @@
+{
+ "baslik": "",
+ "not": "Sistem demosu: yapay zekâ seslendirmesi (Piper), her sahne bir yeteneği gösterir.",
+ "kesimler": [],
+ "vurgu": ["demo", "yürüyebiliyor", "tebeşirle", "daire", "kaydırma", "yakınlaşma", "parazit", "zıplıyor", "sallanıyor", "yörüngede", "grafikler", "üç", "sarsılıyor", "odaklanıyor", "vurgulanıyor", "büyüyüp", "renk", "müzik", "takip"],
+ "sahneler": [
+  {"id": "acilis", "bg": "gece", "ilk": 0},
+  {"id": "karakter", "bg": "parsomen", "ilk": "önce", "gecis": "kaydir"},
+  {"id": "cizim", "bg": "tahta", "ilk": "her", "gecis": "daire"},
+  {"id": "gecisler", "bg": "plan", "ilk": "sahneler", "gecis": "glitch"},
+  {"id": "fizik", "bg": "sicak", "ilk": "nesneler", "gecis": "zoom"},
+  {"id": "grafik", "bg": "yesil", "ilk": "sayılar", "gecis": "perde"},
+  {"id": "derinlik", "bg": "gece", "ilk": "katmanlı", "gecis": "flas"},
+  {"id": "kamera", "bg": "devre", "ilk": "önemli", "gecis": "glitch", "vur": ["sarsılıyor"]},
+  {"id": "yazi", "bg": "parsomen", "ilk": "okuduğum", "gecis": "kaydir"},
+  {"id": "kapanis", "bg": "gece", "ilk": "hepsinin", "gecis": "zoom"}
+ ]
+}

@@ -1,0 +1,866 @@
+{
+ "konu": "demo",
+ "baslik": "",
+ "audio": "bilim/demo/mix.m4a",
+ "sure": 51.525,
+ "kelimeler": [
+  {
+   "w": "Bu",
+   "s": 0.12,
+   "e": 0.2,
+   "vurgu": false
+  },
+  {
+   "w": "video",
+   "s": 0.2,
+   "e": 0.58,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 0.58,
+   "e": 0.78,
+   "vurgu": false
+  },
+  {
+   "w": "demo.",
+   "s": 0.78,
+   "e": 1.12,
+   "vurgu": true
+  },
+  {
+   "w": "Volt",
+   "s": 1.3,
+   "e": 1.66,
+   "vurgu": false
+  },
+  {
+   "w": "sisteminin",
+   "s": 1.66,
+   "e": 2.28,
+   "vurgu": false
+  },
+  {
+   "w": "neler",
+   "s": 2.28,
+   "e": 2.66,
+   "vurgu": false
+  },
+  {
+   "w": "yapabildiğini",
+   "s": 2.66,
+   "e": 3.36,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 3.36,
+   "e": 3.54,
+   "vurgu": false
+  },
+  {
+   "w": "dakikada",
+   "s": 3.54,
+   "e": 4.02,
+   "vurgu": false
+  },
+  {
+   "w": "göstereceğim.",
+   "s": 4.02,
+   "e": 4.7,
+   "vurgu": false
+  },
+  {
+   "w": "Önce",
+   "s": 4.88,
+   "e": 5.28,
+   "vurgu": false
+  },
+  {
+   "w": "karakterimiz.",
+   "s": 5.28,
+   "e": 6.0,
+   "vurgu": false
+  },
+  {
+   "w": "Yürüyebiliyor,",
+   "s": 6.265,
+   "e": 7.177,
+   "vurgu": true
+  },
+  {
+   "w": "el",
+   "s": 7.277,
+   "e": 7.517,
+   "vurgu": false
+  },
+  {
+   "w": "sallayabiliyor",
+   "s": 7.517,
+   "e": 8.337,
+   "vurgu": false
+  },
+  {
+   "w": "ve",
+   "s": 8.337,
+   "e": 8.617,
+   "vurgu": false
+  },
+  {
+   "w": "duygularını",
+   "s": 8.617,
+   "e": 9.197,
+   "vurgu": false
+  },
+  {
+   "w": "yüzüyle",
+   "s": 9.197,
+   "e": 9.617,
+   "vurgu": false
+  },
+  {
+   "w": "anlatabiliyor.",
+   "s": 9.617,
+   "e": 10.397,
+   "vurgu": false
+  },
+  {
+   "w": "Her",
+   "s": 10.617,
+   "e": 10.917,
+   "vurgu": false
+  },
+  {
+   "w": "çizim,",
+   "s": 10.917,
+   "e": 11.377,
+   "vurgu": false
+  },
+  {
+   "w": "tebeşirle",
+   "s": 11.377,
+   "e": 11.957,
+   "vurgu": true
+  },
+  {
+   "w": "tahtaya",
+   "s": 11.957,
+   "e": 12.437,
+   "vurgu": false
+  },
+  {
+   "w": "çiziliyormuş",
+   "s": 12.437,
+   "e": 13.017,
+   "vurgu": false
+  },
+  {
+   "w": "gibi",
+   "s": 13.017,
+   "e": 13.317,
+   "vurgu": false
+  },
+  {
+   "w": "adım",
+   "s": 13.317,
+   "e": 13.717,
+   "vurgu": false
+  },
+  {
+   "w": "adım",
+   "s": 13.717,
+   "e": 13.997,
+   "vurgu": false
+  },
+  {
+   "w": "ortaya",
+   "s": 13.997,
+   "e": 14.397,
+   "vurgu": false
+  },
+  {
+   "w": "çıkabiliyor.",
+   "s": 14.397,
+   "e": 14.957,
+   "vurgu": false
+  },
+  {
+   "w": "Sahneler",
+   "s": 15.237,
+   "e": 15.817,
+   "vurgu": false
+  },
+  {
+   "w": "arasında",
+   "s": 15.817,
+   "e": 16.417,
+   "vurgu": false
+  },
+  {
+   "w": "farklı",
+   "s": 16.417,
+   "e": 16.777,
+   "vurgu": false
+  },
+  {
+   "w": "geçişler",
+   "s": 16.777,
+   "e": 17.377,
+   "vurgu": false
+  },
+  {
+   "w": "var:",
+   "s": 17.377,
+   "e": 17.617,
+   "vurgu": false
+  },
+  {
+   "w": "daire,",
+   "s": 17.697,
+   "e": 18.017,
+   "vurgu": true
+  },
+  {
+   "w": "kaydırma,",
+   "s": 18.137,
+   "e": 18.597,
+   "vurgu": true
+  },
+  {
+   "w": "yakınlaşma",
+   "s": 18.677,
+   "e": 19.417,
+   "vurgu": true
+  },
+  {
+   "w": "ve",
+   "s": 19.417,
+   "e": 19.537,
+   "vurgu": false
+  },
+  {
+   "w": "parazit",
+   "s": 19.537,
+   "e": 20.117,
+   "vurgu": true
+  },
+  {
+   "w": "efekti.",
+   "s": 20.117,
+   "e": 20.557,
+   "vurgu": false
+  },
+  {
+   "w": "Nesneler",
+   "s": 20.677,
+   "e": 21.336,
+   "vurgu": false
+  },
+  {
+   "w": "fizik",
+   "s": 21.336,
+   "e": 21.716,
+   "vurgu": false
+  },
+  {
+   "w": "kurallarına",
+   "s": 21.716,
+   "e": 22.236,
+   "vurgu": false
+  },
+  {
+   "w": "göre",
+   "s": 22.236,
+   "e": 22.436,
+   "vurgu": false
+  },
+  {
+   "w": "hareket",
+   "s": 22.436,
+   "e": 22.976,
+   "vurgu": false
+  },
+  {
+   "w": "ediyor:",
+   "s": 22.976,
+   "e": 23.216,
+   "vurgu": false
+  },
+  {
+   "w": "zıplıyor,",
+   "s": 23.516,
+   "e": 24.036,
+   "vurgu": true
+  },
+  {
+   "w": "sallanıyor",
+   "s": 24.236,
+   "e": 24.836,
+   "vurgu": true
+  },
+  {
+   "w": "ve",
+   "s": 24.836,
+   "e": 25.076,
+   "vurgu": false
+  },
+  {
+   "w": "yörüngede",
+   "s": 25.076,
+   "e": 25.476,
+   "vurgu": true
+  },
+  {
+   "w": "dönüyor.",
+   "s": 25.476,
+   "e": 25.876,
+   "vurgu": false
+  },
+  {
+   "w": "Sayılar",
+   "s": 25.876,
+   "e": 26.616,
+   "vurgu": false
+  },
+  {
+   "w": "ve",
+   "s": 26.616,
+   "e": 26.796,
+   "vurgu": false
+  },
+  {
+   "w": "grafikler",
+   "s": 26.796,
+   "e": 27.396,
+   "vurgu": true
+  },
+  {
+   "w": "canlanıyor,",
+   "s": 27.396,
+   "e": 28.056,
+   "vurgu": false
+  },
+  {
+   "w": "böylece",
+   "s": 28.116,
+   "e": 28.716,
+   "vurgu": false
+  },
+  {
+   "w": "veriler",
+   "s": 28.716,
+   "e": 29.076,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 29.076,
+   "e": 29.236,
+   "vurgu": false
+  },
+  {
+   "w": "bakışta",
+   "s": 29.236,
+   "e": 29.716,
+   "vurgu": false
+  },
+  {
+   "w": "anlaşılıyor.",
+   "s": 29.716,
+   "e": 30.376,
+   "vurgu": false
+  },
+  {
+   "w": "Katmanlı",
+   "s": 30.556,
+   "e": 31.176,
+   "vurgu": false
+  },
+  {
+   "w": "arka",
+   "s": 31.176,
+   "e": 31.536,
+   "vurgu": false
+  },
+  {
+   "w": "planlarla",
+   "s": 31.536,
+   "e": 32.116,
+   "vurgu": false
+  },
+  {
+   "w": "derinlik",
+   "s": 32.116,
+   "e": 32.536,
+   "vurgu": false
+  },
+  {
+   "w": "hissi",
+   "s": 32.536,
+   "e": 32.876,
+   "vurgu": false
+  },
+  {
+   "w": "ve",
+   "s": 32.876,
+   "e": 32.956,
+   "vurgu": false
+  },
+  {
+   "w": "üç",
+   "s": 32.936,
+   "e": 33.116,
+   "vurgu": true
+  },
+  {
+   "w": "boyutlu",
+   "s": 33.116,
+   "e": 33.616,
+   "vurgu": false
+  },
+  {
+   "w": "görünüm",
+   "s": 33.616,
+   "e": 34.056,
+   "vurgu": false
+  },
+  {
+   "w": "de",
+   "s": 34.056,
+   "e": 34.136,
+   "vurgu": false
+  },
+  {
+   "w": "mümkün.",
+   "s": 34.116,
+   "e": 34.616,
+   "vurgu": false
+  },
+  {
+   "w": "Önemli",
+   "s": 34.656,
+   "e": 35.096,
+   "vurgu": false
+  },
+  {
+   "w": "anlarda",
+   "s": 35.096,
+   "e": 35.556,
+   "vurgu": false
+  },
+  {
+   "w": "kamera",
+   "s": 35.556,
+   "e": 35.876,
+   "vurgu": false
+  },
+  {
+   "w": "sarsılıyor,",
+   "s": 35.876,
+   "e": 36.736,
+   "vurgu": true
+  },
+  {
+   "w": "yakınlaşıyor",
+   "s": 36.776,
+   "e": 37.536,
+   "vurgu": false
+  },
+  {
+   "w": "ya",
+   "s": 37.536,
+   "e": 37.756,
+   "vurgu": false
+  },
+  {
+   "w": "da",
+   "s": 37.756,
+   "e": 37.856,
+   "vurgu": false
+  },
+  {
+   "w": "ışık",
+   "s": 37.856,
+   "e": 38.216,
+   "vurgu": false
+  },
+  {
+   "w": "tek",
+   "s": 38.216,
+   "e": 38.336,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 38.336,
+   "e": 38.576,
+   "vurgu": false
+  },
+  {
+   "w": "noktaya",
+   "s": 38.576,
+   "e": 39.036,
+   "vurgu": false
+  },
+  {
+   "w": "odaklanıyor.",
+   "s": 39.036,
+   "e": 39.676,
+   "vurgu": true
+  },
+  {
+   "w": "Okuduğum",
+   "s": 39.916,
+   "e": 40.628,
+   "vurgu": false
+  },
+  {
+   "w": "her",
+   "s": 40.628,
+   "e": 40.768,
+   "vurgu": false
+  },
+  {
+   "w": "kelime",
+   "s": 40.768,
+   "e": 41.188,
+   "vurgu": false
+  },
+  {
+   "w": "altyazıda",
+   "s": 41.188,
+   "e": 41.728,
+   "vurgu": false
+  },
+  {
+   "w": "vurgulanıyor,",
+   "s": 41.728,
+   "e": 42.448,
+   "vurgu": true
+  },
+  {
+   "w": "önemli",
+   "s": 42.548,
+   "e": 43.008,
+   "vurgu": false
+  },
+  {
+   "w": "kelimeler",
+   "s": 43.008,
+   "e": 43.628,
+   "vurgu": false
+  },
+  {
+   "w": "büyüyüp",
+   "s": 43.628,
+   "e": 43.868,
+   "vurgu": true
+  },
+  {
+   "w": "renk",
+   "s": 43.868,
+   "e": 44.428,
+   "vurgu": true
+  },
+  {
+   "w": "değiştiriyor.",
+   "s": 44.428,
+   "e": 44.988,
+   "vurgu": false
+  },
+  {
+   "w": "Hepsinin",
+   "s": 45.208,
+   "e": 45.774,
+   "vurgu": false
+  },
+  {
+   "w": "altında",
+   "s": 45.774,
+   "e": 46.274,
+   "vurgu": false
+  },
+  {
+   "w": "müzik",
+   "s": 46.274,
+   "e": 46.714,
+   "vurgu": true
+  },
+  {
+   "w": "ve",
+   "s": 46.714,
+   "e": 46.914,
+   "vurgu": false
+  },
+  {
+   "w": "yüzlerce",
+   "s": 46.914,
+   "e": 47.494,
+   "vurgu": false
+  },
+  {
+   "w": "ses",
+   "s": 47.494,
+   "e": 47.674,
+   "vurgu": false
+  },
+  {
+   "w": "efekti",
+   "s": 47.674,
+   "e": 48.254,
+   "vurgu": false
+  },
+  {
+   "w": "var.",
+   "s": 48.254,
+   "e": 48.414,
+   "vurgu": false
+  },
+  {
+   "w": "Beğendiysen",
+   "s": 48.614,
+   "e": 49.414,
+   "vurgu": false
+  },
+  {
+   "w": "takip",
+   "s": 49.414,
+   "e": 49.874,
+   "vurgu": true
+  },
+  {
+   "w": "etmeyi",
+   "s": 49.874,
+   "e": 50.234,
+   "vurgu": false
+  },
+  {
+   "w": "unutma!",
+   "s": 50.234,
+   "e": 50.614,
+   "vurgu": false
+  }
+ ],
+ "satirlar": [
+  [
+   0,
+   3
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   7,
+   10
+  ],
+  [
+   11,
+   12
+  ],
+  [
+   13,
+   13
+  ],
+  [
+   14,
+   15
+  ],
+  [
+   16,
+   19
+  ],
+  [
+   20,
+   22
+  ],
+  [
+   23,
+   24
+  ],
+  [
+   25,
+   29
+  ],
+  [
+   30,
+   32
+  ],
+  [
+   33,
+   35
+  ],
+  [
+   36,
+   37
+  ],
+  [
+   38,
+   40
+  ],
+  [
+   41,
+   43
+  ],
+  [
+   44,
+   47
+  ],
+  [
+   48,
+   51
+  ],
+  [
+   52,
+   55
+  ],
+  [
+   56,
+   58
+  ],
+  [
+   59,
+   60
+  ],
+  [
+   61,
+   63
+  ],
+  [
+   64,
+   68
+  ],
+  [
+   69,
+   71
+  ],
+  [
+   72,
+   75
+  ],
+  [
+   76,
+   78
+  ],
+  [
+   79,
+   83
+  ],
+  [
+   84,
+   88
+  ],
+  [
+   89,
+   91
+  ],
+  [
+   92,
+   93
+  ],
+  [
+   94,
+   95
+  ],
+  [
+   96,
+   98
+  ],
+  [
+   99,
+   101
+  ],
+  [
+   102,
+   103
+  ],
+  [
+   104,
+   105
+  ]
+ ],
+ "sahneler": [
+  {
+   "id": "acilis",
+   "bg": "gece",
+   "bas": 0.0,
+   "son": 4.66,
+   "ev": {},
+   "gecis": "daire"
+  },
+  {
+   "id": "karakter",
+   "bg": "parsomen",
+   "bas": 4.66,
+   "son": 10.397,
+   "ev": {},
+   "gecis": "kaydir"
+  },
+  {
+   "id": "cizim",
+   "bg": "tahta",
+   "bas": 10.397,
+   "son": 15.017,
+   "ev": {},
+   "gecis": "daire"
+  },
+  {
+   "id": "gecisler",
+   "bg": "plan",
+   "bas": 15.017,
+   "son": 20.457,
+   "ev": {},
+   "gecis": "glitch"
+  },
+  {
+   "id": "fizik",
+   "bg": "sicak",
+   "bas": 20.457,
+   "son": 25.656,
+   "ev": {},
+   "gecis": "zoom"
+  },
+  {
+   "id": "grafik",
+   "bg": "yesil",
+   "bas": 25.656,
+   "son": 30.336,
+   "ev": {},
+   "gecis": "perde"
+  },
+  {
+   "id": "derinlik",
+   "bg": "gece",
+   "bas": 30.336,
+   "son": 34.436,
+   "ev": {},
+   "gecis": "flas"
+  },
+  {
+   "id": "kamera",
+   "bg": "devre",
+   "bas": 34.436,
+   "son": 39.696,
+   "ev": {
+    "vur0": 1.44
+   },
+   "gecis": "glitch"
+  },
+  {
+   "id": "yazi",
+   "bg": "parsomen",
+   "bas": 39.696,
+   "son": 44.988,
+   "ev": {},
+   "gecis": "kaydir"
+  },
+  {
+   "id": "kapanis",
+   "bg": "gece",
+   "bas": 44.988,
+   "son": 51.525,
+   "ev": {},
+   "gecis": "zoom"
+  }
+ ]
+}
