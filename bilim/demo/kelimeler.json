@@ -1,0 +1,719 @@
+{
+ "model": "large-v3",
+ "sure": 50.77,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 4.58,
+   "text": "Bu video bir demo. Volt sisteminin neler yapabildiğini bir dakikada göstereceğim.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 0.0,
+     "end": 0.08,
+     "p": 0.996
+    },
+    {
+     "w": "video",
+     "start": 0.08,
+     "end": 0.46,
+     "p": 0.997
+    },
+    {
+     "w": "bir",
+     "start": 0.46,
+     "end": 0.66,
+     "p": 0.998
+    },
+    {
+     "w": "demo.",
+     "start": 0.66,
+     "end": 1.0,
+     "p": 1.0
+    },
+    {
+     "w": "Volt",
+     "start": 1.18,
+     "end": 1.54,
+     "p": 0.324
+    },
+    {
+     "w": "sisteminin",
+     "start": 1.54,
+     "end": 2.16,
+     "p": 0.991
+    },
+    {
+     "w": "neler",
+     "start": 2.16,
+     "end": 2.54,
+     "p": 1.0
+    },
+    {
+     "w": "yapabildiğini",
+     "start": 2.54,
+     "end": 3.24,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 3.24,
+     "end": 3.42,
+     "p": 0.966
+    },
+    {
+     "w": "dakikada",
+     "start": 3.42,
+     "end": 3.9,
+     "p": 1.0
+    },
+    {
+     "w": "göstereceğim.",
+     "start": 3.9,
+     "end": 4.58,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 4.76,
+   "end": 10.16,
+   "text": "Önce karakterimiz. Yürüyebiliyor, el sallayabiliyor ve duygularını yüzüyle anlatabiliyor.",
+   "kelimeler": [
+    {
+     "w": "Önce",
+     "start": 4.76,
+     "end": 5.16,
+     "p": 1.0
+    },
+    {
+     "w": "karakterimiz.",
+     "start": 5.16,
+     "end": 5.88,
+     "p": 1.0
+    },
+    {
+     "w": "Yürüyebiliyor,",
+     "start": 6.18,
+     "end": 6.94,
+     "p": 1.0
+    },
+    {
+     "w": "el",
+     "start": 7.04,
+     "end": 7.28,
+     "p": 1.0
+    },
+    {
+     "w": "sallayabiliyor",
+     "start": 7.28,
+     "end": 8.1,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 8.1,
+     "end": 8.38,
+     "p": 1.0
+    },
+    {
+     "w": "duygularını",
+     "start": 8.38,
+     "end": 8.96,
+     "p": 1.0
+    },
+    {
+     "w": "yüzüyle",
+     "start": 8.96,
+     "end": 9.38,
+     "p": 1.0
+    },
+    {
+     "w": "anlatabiliyor.",
+     "start": 9.38,
+     "end": 10.16,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.38,
+   "end": 14.72,
+   "text": "Her çizim tebeşirle tahtaya çiziliyormuş gibi adım adım ortaya çıkabiliyor.",
+   "kelimeler": [
+    {
+     "w": "Her",
+     "start": 10.38,
+     "end": 10.68,
+     "p": 1.0
+    },
+    {
+     "w": "çizim",
+     "start": 10.68,
+     "end": 11.14,
+     "p": 0.998
+    },
+    {
+     "w": "tebeşirle",
+     "start": 11.14,
+     "end": 11.72,
+     "p": 0.968
+    },
+    {
+     "w": "tahtaya",
+     "start": 11.72,
+     "end": 12.2,
+     "p": 1.0
+    },
+    {
+     "w": "çiziliyormuş",
+     "start": 12.2,
+     "end": 12.78,
+     "p": 0.999
+    },
+    {
+     "w": "gibi",
+     "start": 12.78,
+     "end": 13.08,
+     "p": 1.0
+    },
+    {
+     "w": "adım",
+     "start": 13.08,
+     "end": 13.48,
+     "p": 1.0
+    },
+    {
+     "w": "adım",
+     "start": 13.48,
+     "end": 13.76,
+     "p": 1.0
+    },
+    {
+     "w": "ortaya",
+     "start": 13.76,
+     "end": 14.16,
+     "p": 1.0
+    },
+    {
+     "w": "çıkabiliyor.",
+     "start": 14.16,
+     "end": 14.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 15.0,
+   "end": 20.32,
+   "text": "Sahneler arasında farklı geçişler var, daire, kaydıma, yakınlaşma ve parazit efekti.",
+   "kelimeler": [
+    {
+     "w": "Sahneler",
+     "start": 15.0,
+     "end": 15.58,
+     "p": 0.989
+    },
+    {
+     "w": "arasında",
+     "start": 15.58,
+     "end": 16.18,
+     "p": 1.0
+    },
+    {
+     "w": "farklı",
+     "start": 16.18,
+     "end": 16.54,
+     "p": 0.999
+    },
+    {
+     "w": "geçişler",
+     "start": 16.54,
+     "end": 17.14,
+     "p": 1.0
+    },
+    {
+     "w": "var,",
+     "start": 17.14,
+     "end": 17.38,
+     "p": 1.0
+    },
+    {
+     "w": "daire,",
+     "start": 17.46,
+     "end": 17.78,
+     "p": 1.0
+    },
+    {
+     "w": "kaydıma,",
+     "start": 17.9,
+     "end": 18.36,
+     "p": 0.922
+    },
+    {
+     "w": "yakınlaşma",
+     "start": 18.44,
+     "end": 19.18,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 19.18,
+     "end": 19.3,
+     "p": 1.0
+    },
+    {
+     "w": "parazit",
+     "start": 19.3,
+     "end": 19.88,
+     "p": 0.999
+    },
+    {
+     "w": "efekti.",
+     "start": 19.88,
+     "end": 20.32,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 20.44,
+   "end": 25.72,
+   "text": "Mesneler fizik kurallarına göre hareket ediyor, zıplıyor, sallanıyor ve yörüngede dönüyor.",
+   "kelimeler": [
+    {
+     "w": "Mesneler",
+     "start": 20.44,
+     "end": 21.18,
+     "p": 0.857
+    },
+    {
+     "w": "fizik",
+     "start": 21.18,
+     "end": 21.56,
+     "p": 1.0
+    },
+    {
+     "w": "kurallarına",
+     "start": 21.56,
+     "end": 22.08,
+     "p": 1.0
+    },
+    {
+     "w": "göre",
+     "start": 22.08,
+     "end": 22.28,
+     "p": 1.0
+    },
+    {
+     "w": "hareket",
+     "start": 22.28,
+     "end": 22.82,
+     "p": 1.0
+    },
+    {
+     "w": "ediyor,",
+     "start": 22.82,
+     "end": 23.06,
+     "p": 1.0
+    },
+    {
+     "w": "zıplıyor,",
+     "start": 23.36,
+     "end": 23.88,
+     "p": 0.992
+    },
+    {
+     "w": "sallanıyor",
+     "start": 24.08,
+     "end": 24.68,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 24.68,
+     "end": 24.92,
+     "p": 1.0
+    },
+    {
+     "w": "yörüngede",
+     "start": 24.92,
+     "end": 25.32,
+     "p": 0.995
+    },
+    {
+     "w": "dönüyor.",
+     "start": 25.32,
+     "end": 25.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.72,
+   "end": 30.22,
+   "text": "Sayılar ve grafikler canlanıyor. Böylece veriler bir bakışta anlaşılıyor.",
+   "kelimeler": [
+    {
+     "w": "Sayılar",
+     "start": 25.72,
+     "end": 26.46,
+     "p": 0.947
+    },
+    {
+     "w": "ve",
+     "start": 26.46,
+     "end": 26.64,
+     "p": 0.997
+    },
+    {
+     "w": "grafikler",
+     "start": 26.64,
+     "end": 27.24,
+     "p": 0.996
+    },
+    {
+     "w": "canlanıyor.",
+     "start": 27.24,
+     "end": 27.9,
+     "p": 0.997
+    },
+    {
+     "w": "Böylece",
+     "start": 27.96,
+     "end": 28.56,
+     "p": 0.998
+    },
+    {
+     "w": "veriler",
+     "start": 28.56,
+     "end": 28.92,
+     "p": 0.996
+    },
+    {
+     "w": "bir",
+     "start": 28.92,
+     "end": 29.08,
+     "p": 0.996
+    },
+    {
+     "w": "bakışta",
+     "start": 29.08,
+     "end": 29.56,
+     "p": 0.998
+    },
+    {
+     "w": "anlaşılıyor.",
+     "start": 29.56,
+     "end": 30.22,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 30.4,
+   "end": 34.46,
+   "text": "Katmanla arka planlarla derinlik hissi ve 3 boyutlu görünüm de mümkün.",
+   "kelimeler": [
+    {
+     "w": "Katmanla",
+     "start": 30.4,
+     "end": 31.02,
+     "p": 0.957
+    },
+    {
+     "w": "arka",
+     "start": 31.02,
+     "end": 31.38,
+     "p": 0.949
+    },
+    {
+     "w": "planlarla",
+     "start": 31.38,
+     "end": 31.96,
+     "p": 0.997
+    },
+    {
+     "w": "derinlik",
+     "start": 31.96,
+     "end": 32.38,
+     "p": 0.989
+    },
+    {
+     "w": "hissi",
+     "start": 32.38,
+     "end": 32.72,
+     "p": 0.901
+    },
+    {
+     "w": "ve",
+     "start": 32.72,
+     "end": 32.78,
+     "p": 0.998
+    },
+    {
+     "w": "3",
+     "start": 32.78,
+     "end": 32.96,
+     "p": 0.491
+    },
+    {
+     "w": "boyutlu",
+     "start": 32.96,
+     "end": 33.46,
+     "p": 0.997
+    },
+    {
+     "w": "görünüm",
+     "start": 33.46,
+     "end": 33.9,
+     "p": 0.993
+    },
+    {
+     "w": "de",
+     "start": 33.9,
+     "end": 33.96,
+     "p": 0.943
+    },
+    {
+     "w": "mümkün.",
+     "start": 33.96,
+     "end": 34.46,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 34.5,
+   "end": 39.52,
+   "text": "Önemli anlarda kamera sarsılıyor, yakınlaşıyor ya da ışık tek bir noktaya odaklanıyor.",
+   "kelimeler": [
+    {
+     "w": "Önemli",
+     "start": 34.5,
+     "end": 34.94,
+     "p": 1.0
+    },
+    {
+     "w": "anlarda",
+     "start": 34.94,
+     "end": 35.4,
+     "p": 0.999
+    },
+    {
+     "w": "kamera",
+     "start": 35.4,
+     "end": 35.72,
+     "p": 0.999
+    },
+    {
+     "w": "sarsılıyor,",
+     "start": 35.72,
+     "end": 36.58,
+     "p": 0.999
+    },
+    {
+     "w": "yakınlaşıyor",
+     "start": 36.62,
+     "end": 37.38,
+     "p": 0.999
+    },
+    {
+     "w": "ya",
+     "start": 37.38,
+     "end": 37.6,
+     "p": 0.975
+    },
+    {
+     "w": "da",
+     "start": 37.6,
+     "end": 37.7,
+     "p": 1.0
+    },
+    {
+     "w": "ışık",
+     "start": 37.7,
+     "end": 38.06,
+     "p": 0.998
+    },
+    {
+     "w": "tek",
+     "start": 38.06,
+     "end": 38.18,
+     "p": 0.997
+    },
+    {
+     "w": "bir",
+     "start": 38.18,
+     "end": 38.42,
+     "p": 0.999
+    },
+    {
+     "w": "noktaya",
+     "start": 38.42,
+     "end": 38.88,
+     "p": 1.0
+    },
+    {
+     "w": "odaklanıyor.",
+     "start": 38.88,
+     "end": 39.52,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 39.76,
+   "end": 44.84,
+   "text": "Okuduğum her kelime altyazıda vurgulanıyor. Önemli kelimeler büyük renk değiştiriyor.",
+   "kelimeler": [
+    {
+     "w": "Okuduğum",
+     "start": 39.76,
+     "end": 40.48,
+     "p": 0.899
+    },
+    {
+     "w": "her",
+     "start": 40.48,
+     "end": 40.62,
+     "p": 0.999
+    },
+    {
+     "w": "kelime",
+     "start": 40.62,
+     "end": 41.04,
+     "p": 1.0
+    },
+    {
+     "w": "altyazıda",
+     "start": 41.04,
+     "end": 41.58,
+     "p": 0.927
+    },
+    {
+     "w": "vurgulanıyor.",
+     "start": 41.58,
+     "end": 42.3,
+     "p": 0.996
+    },
+    {
+     "w": "Önemli",
+     "start": 42.4,
+     "end": 42.86,
+     "p": 1.0
+    },
+    {
+     "w": "kelimeler",
+     "start": 42.86,
+     "end": 43.48,
+     "p": 1.0
+    },
+    {
+     "w": "büyük",
+     "start": 43.48,
+     "end": 43.72,
+     "p": 0.748
+    },
+    {
+     "w": "renk",
+     "start": 43.72,
+     "end": 44.28,
+     "p": 0.984
+    },
+    {
+     "w": "değiştiriyor.",
+     "start": 44.28,
+     "end": 44.84,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 45.06,
+   "end": 48.26,
+   "text": "Hepsinin altında müzik ve yüzlerce ses efekti var.",
+   "kelimeler": [
+    {
+     "w": "Hepsinin",
+     "start": 45.06,
+     "end": 45.62,
+     "p": 1.0
+    },
+    {
+     "w": "altında",
+     "start": 45.62,
+     "end": 46.12,
+     "p": 1.0
+    },
+    {
+     "w": "müzik",
+     "start": 46.12,
+     "end": 46.56,
+     "p": 0.999
+    },
+    {
+     "w": "ve",
+     "start": 46.56,
+     "end": 46.76,
+     "p": 1.0
+    },
+    {
+     "w": "yüzlerce",
+     "start": 46.76,
+     "end": 47.34,
+     "p": 1.0
+    },
+    {
+     "w": "ses",
+     "start": 47.34,
+     "end": 47.52,
+     "p": 1.0
+    },
+    {
+     "w": "efekti",
+     "start": 47.52,
+     "end": 48.1,
+     "p": 0.999
+    },
+    {
+     "w": "var.",
+     "start": 48.1,
+     "end": 48.26,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 48.46,
+   "end": 50.46,
+   "text": "Beğendiysen takip etmeyi unutma.",
+   "kelimeler": [
+    {
+     "w": "Beğendiysen",
+     "start": 48.46,
+     "end": 49.26,
+     "p": 1.0
+    },
+    {
+     "w": "takip",
+     "start": 49.26,
+     "end": 49.72,
+     "p": 1.0
+    },
+    {
+     "w": "etmeyi",
+     "start": 49.72,
+     "end": 50.08,
+     "p": 1.0
+    },
+    {
+     "w": "unutma.",
+     "start": 50.08,
+     "end": 50.46,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}

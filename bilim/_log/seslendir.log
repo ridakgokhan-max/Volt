@@ -1,30 +1,15 @@
-[0;93m2026-10-13 08:12:36.121457258 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-Traceback (most recent call last):
-  File "/home/runner/work/Volt/Volt/scripts/seslendir.py", line 45, in <module>
-    main(k, v, r)
-  File "/home/runner/work/Volt/Volt/scripts/seslendir.py", line 29, in main
-    voice = PiperVoice.load(model(name))
-                            ^^^^^^^^^^^
-  File "/home/runner/work/Volt/Volt/scripts/seslendir.py", line 20, in model
-    urllib.request.urlretrieve(url, dst)
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 240, in urlretrieve
-    with contextlib.closing(urlopen(url, data)) as fp:
-                            ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
-    return opener.open(url, data, timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 521, in open
-    response = meth(req, response)
-               ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 630, in http_response
-    response = self.parent.error(
-               ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 559, in error
-    return self._call_chain(*args)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
-    result = func(*args)
-             ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+[0;93m2026-10-13 08:16:30.541006497 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+demo seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/demo/ses.wav
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[  0.00-  4.58] Bu video bir demo. Volt sisteminin neler yapabildiğini bir dakikada göstereceğim.
+[  4.76- 10.16] Önce karakterimiz. Yürüyebiliyor, el sallayabiliyor ve duygularını yüzüyle anlatabiliyor.
+[ 10.38- 14.72] Her çizim tebeşirle tahtaya çiziliyormuş gibi adım adım ortaya çıkabiliyor.
+[ 15.00- 20.32] Sahneler arasında farklı geçişler var, daire, kaydıma, yakınlaşma ve parazit efekti.
+[ 20.44- 25.72] Mesneler fizik kurallarına göre hareket ediyor, zıplıyor, sallanıyor ve yörüngede dönüyor.
+[ 25.72- 30.22] Sayılar ve grafikler canlanıyor. Böylece veriler bir bakışta anlaşılıyor.
+[ 30.40- 34.46] Katmanla arka planlarla derinlik hissi ve 3 boyutlu görünüm de mümkün.
+[ 34.50- 39.52] Önemli anlarda kamera sarsılıyor, yakınlaşıyor ya da ışık tek bir noktaya odaklanıyor.
+[ 39.76- 44.84] Okuduğum her kelime altyazıda vurgulanıyor. Önemli kelimeler büyük renk değiştiriyor.
+[ 45.06- 48.26] Hepsinin altında müzik ve yüzlerce ses efekti var.
+[ 48.46- 50.46] Beğendiysen takip etmeyi unutma.
+demo tamam: 106 kelime
