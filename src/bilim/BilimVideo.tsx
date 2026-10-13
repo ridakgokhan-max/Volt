@@ -1,6 +1,6 @@
 // Bir Dakikada Bilim — ana kompozisyon: ses, sahneler, geçişler, vurgulu altyazı
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
 import { data, SAHNE } from "./aktif";
 import { ACC, ap, Bg, BgKind, cl, ez, FPS, H, INK, sp, W } from "./kit";
@@ -9,7 +9,7 @@ const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
 export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas";
-export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis };
+export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string };
 /** w(i): i. kelimenin sahneye göre saniyesi; ws("kelime", n): sahne başından sonra o kelimenin n. geçişi */
 export type SceneProps = { t: number; d: number; ev: Record<string, number>; w: (i: number) => number; ws: (txt: string, n?: number) => number };
 
@@ -75,6 +75,11 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number }> = ({ sc, idx
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>
         <Bg kind={sc.bg} t={t + idx * 3} seed={3 + (idx % 5)} />
+        {sc.gorsel ? (
+          <Img src={staticFile(`bilim/${(data as { konu: string }).konu}/${sc.gorsel}.jpg`)}
+            style={{ position: "absolute", inset: 0, width: W, height: H, objectFit: "cover",
+              transform: `scale(${1.04 + 0.1 * cl(t / Math.max(d, 0.1))}) translate(${(idx % 2 ? -1 : 1) * 14 * cl(t / Math.max(d, 0.1))}px, ${-10 * cl(t / Math.max(d, 0.1))}px)` }} />
+        ) : null}
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0, color: ink }}>
           <g transform="translate(0 40)">{Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} ws={(txt: string, n = 0) => findWord(sc.bas, txt, n) - sc.bas} /> : null}</g>
         </svg>

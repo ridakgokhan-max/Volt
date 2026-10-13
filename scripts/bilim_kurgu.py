@@ -205,10 +205,11 @@ def main(konu):
         return x.replace("İ", "i").replace("I", "ı").lower().strip(".,!?:;\"'…")
 
     def ara(txt, sonra=0.0, n=0):
-        q = norm(txt)
+        tam = txt.startswith("=")  # "=ama": tam eşleşme
+        q = norm(txt.lstrip("="))
         c = 0
         for i, k in enumerate(kel):
-            if k["s"] >= sonra - 0.3 and norm(k["w"]).startswith(q):
+            if k["s"] >= sonra - 0.3 and (norm(k["w"]) == q if tam else norm(k["w"]).startswith(q)):
                 if c == n:
                     return i
                 c += 1
@@ -222,7 +223,7 @@ def main(konu):
     for j, s in enumerate(K["sahneler"]):
         bas = 0.0 if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
         ev = {f"vur{n}": 0 for n in range(len(s.get("vur", [])))}
-        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire")})
+        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **({"gorsel": s["gorsel"]} if s.get("gorsel") else {})})
     for j, s in enumerate(sc):
         s["son"] = sc[j + 1]["bas"] if j + 1 < len(sc) else round(sure, 3)
         for n, wi in enumerate(s.pop("_vur")):

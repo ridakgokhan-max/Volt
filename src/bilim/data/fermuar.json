@@ -1,0 +1,910 @@
+{
+ "konu": "fermuar",
+ "baslik": "Fermuarın hüzünlü hikâyesi",
+ "audio": "bilim/fermuar/mix.m4a",
+ "sure": 48.709,
+ "kelimeler": [
+  {
+   "w": "Her",
+   "s": 0.12,
+   "e": 0.2,
+   "vurgu": false
+  },
+  {
+   "w": "gün",
+   "s": 0.173,
+   "e": 0.413,
+   "vurgu": false
+  },
+  {
+   "w": "kullanıyorsun",
+   "s": 0.413,
+   "e": 0.933,
+   "vurgu": false
+  },
+  {
+   "w": "ama",
+   "s": 0.933,
+   "e": 1.313,
+   "vurgu": false
+  },
+  {
+   "w": "fermuarın",
+   "s": 1.313,
+   "e": 1.893,
+   "vurgu": false
+  },
+  {
+   "w": "hikâyesi",
+   "s": 1.893,
+   "e": 2.293,
+   "vurgu": false
+  },
+  {
+   "w": "biraz",
+   "s": 2.293,
+   "e": 2.453,
+   "vurgu": false
+  },
+  {
+   "w": "hüzünlü.",
+   "s": 2.453,
+   "e": 2.893,
+   "vurgu": true
+  },
+  {
+   "w": "İlk",
+   "s": 2.973,
+   "e": 3.34,
+   "vurgu": false
+  },
+  {
+   "w": "fermuar",
+   "s": 3.34,
+   "e": 3.7,
+   "vurgu": false
+  },
+  {
+   "w": "1893'te",
+   "s": 3.7,
+   "e": 4.74,
+   "vurgu": true
+  },
+  {
+   "w": "Whitcomb",
+   "s": 4.74,
+   "e": 5.0,
+   "vurgu": true
+  },
+  {
+   "w": "Judson",
+   "s": 5.0,
+   "e": 5.4,
+   "vurgu": true
+  },
+  {
+   "w": "adlı",
+   "s": 5.4,
+   "e": 6.084,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 6.084,
+   "e": 6.224,
+   "vurgu": false
+  },
+  {
+   "w": "mucit",
+   "s": 6.224,
+   "e": 6.384,
+   "vurgu": false
+  },
+  {
+   "w": "tarafından",
+   "s": 6.384,
+   "e": 6.884,
+   "vurgu": false
+  },
+  {
+   "w": "patentlendi.",
+   "s": 6.884,
+   "e": 7.544,
+   "vurgu": false
+  },
+  {
+   "w": "Amacı",
+   "s": 7.664,
+   "e": 8.084,
+   "vurgu": false
+  },
+  {
+   "w": "basitti:",
+   "s": 8.084,
+   "e": 8.464,
+   "vurgu": false
+  },
+  {
+   "w": "ayakkabı",
+   "s": 8.644,
+   "e": 9.19,
+   "vurgu": true
+  },
+  {
+   "w": "bağcıklarıyla",
+   "s": 9.19,
+   "e": 9.69,
+   "vurgu": false
+  },
+  {
+   "w": "uğraşmamak.",
+   "s": 9.69,
+   "e": 10.328,
+   "vurgu": false
+  },
+  {
+   "w": "Ama",
+   "s": 10.328,
+   "e": 10.743,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 10.743,
+   "e": 10.883,
+   "vurgu": false
+  },
+  {
+   "w": "sorun",
+   "s": 10.883,
+   "e": 11.203,
+   "vurgu": false
+  },
+  {
+   "w": "vardı.",
+   "s": 11.203,
+   "e": 11.443,
+   "vurgu": false
+  },
+  {
+   "w": "Bu",
+   "s": 11.583,
+   "e": 11.803,
+   "vurgu": false
+  },
+  {
+   "w": "ilk",
+   "s": 11.803,
+   "e": 12.003,
+   "vurgu": false
+  },
+  {
+   "w": "model",
+   "s": 12.003,
+   "e": 12.263,
+   "vurgu": false
+  },
+  {
+   "w": "sık",
+   "s": 12.263,
+   "e": 12.603,
+   "vurgu": false
+  },
+  {
+   "w": "sık",
+   "s": 12.603,
+   "e": 12.763,
+   "vurgu": false
+  },
+  {
+   "w": "kendi",
+   "s": 12.763,
+   "e": 13.023,
+   "vurgu": false
+  },
+  {
+   "w": "kendine",
+   "s": 13.023,
+   "e": 13.423,
+   "vurgu": false
+  },
+  {
+   "w": "açılıyordu.",
+   "s": 13.423,
+   "e": 13.803,
+   "vurgu": true
+  },
+  {
+   "w": "Düşünsene,",
+   "s": 13.898,
+   "e": 14.52,
+   "vurgu": false
+  },
+  {
+   "w": "yürürken",
+   "s": 14.52,
+   "e": 14.98,
+   "vurgu": false
+  },
+  {
+   "w": "ayakkabın",
+   "s": 14.98,
+   "e": 15.64,
+   "vurgu": false
+  },
+  {
+   "w": "açılıveriyor.",
+   "s": 15.64,
+   "e": 16.18,
+   "vurgu": true
+  },
+  {
+   "w": "İnsanlar",
+   "s": 16.295,
+   "e": 17.046,
+   "vurgu": false
+  },
+  {
+   "w": "haklı",
+   "s": 17.046,
+   "e": 17.366,
+   "vurgu": false
+  },
+  {
+   "w": "olarak",
+   "s": 17.366,
+   "e": 17.506,
+   "vurgu": false
+  },
+  {
+   "w": "pek",
+   "s": 17.506,
+   "e": 17.886,
+   "vurgu": false
+  },
+  {
+   "w": "yüz",
+   "s": 17.886,
+   "e": 17.986,
+   "vurgu": false
+  },
+  {
+   "w": "vermedi.",
+   "s": 17.986,
+   "e": 18.426,
+   "vurgu": false
+  },
+  {
+   "w": "Yaklaşık",
+   "s": 18.591,
+   "e": 19.261,
+   "vurgu": false
+  },
+  {
+   "w": "yirmi",
+   "s": 19.261,
+   "e": 19.441,
+   "vurgu": true
+  },
+  {
+   "w": "yıl",
+   "s": 19.441,
+   "e": 19.661,
+   "vurgu": false
+  },
+  {
+   "w": "sonra,",
+   "s": 19.661,
+   "e": 19.861,
+   "vurgu": false
+  },
+  {
+   "w": "1913'te",
+   "s": 20.021,
+   "e": 20.941,
+   "vurgu": true
+  },
+  {
+   "w": "İsveçli",
+   "s": 20.941,
+   "e": 21.261,
+   "vurgu": false
+  },
+  {
+   "w": "mühendis",
+   "s": 21.261,
+   "e": 21.681,
+   "vurgu": false
+  },
+  {
+   "w": "Gideon",
+   "s": 21.681,
+   "e": 22.121,
+   "vurgu": false
+  },
+  {
+   "w": "Sundback",
+   "s": 22.121,
+   "e": 22.601,
+   "vurgu": true
+  },
+  {
+   "w": "tasarımı",
+   "s": 22.601,
+   "e": 23.118,
+   "vurgu": false
+  },
+  {
+   "w": "baştan",
+   "s": 23.118,
+   "e": 23.498,
+   "vurgu": false
+  },
+  {
+   "w": "yaptı.",
+   "s": 23.498,
+   "e": 23.838,
+   "vurgu": false
+  },
+  {
+   "w": "Kancalar",
+   "s": 23.898,
+   "e": 24.545,
+   "vurgu": false
+  },
+  {
+   "w": "yerine",
+   "s": 24.545,
+   "e": 24.945,
+   "vurgu": false
+  },
+  {
+   "w": "iç",
+   "s": 24.945,
+   "e": 25.085,
+   "vurgu": false
+  },
+  {
+   "w": "içe",
+   "s": 25.085,
+   "e": 25.245,
+   "vurgu": false
+  },
+  {
+   "w": "geçen",
+   "s": 25.245,
+   "e": 25.565,
+   "vurgu": false
+  },
+  {
+   "w": "minik",
+   "s": 25.565,
+   "e": 25.885,
+   "vurgu": false
+  },
+  {
+   "w": "dişler",
+   "s": 25.885,
+   "e": 26.145,
+   "vurgu": true
+  },
+  {
+   "w": "kullandı.",
+   "s": 26.145,
+   "e": 26.645,
+   "vurgu": false
+  },
+  {
+   "w": "Sürgü",
+   "s": 26.772,
+   "e": 27.349,
+   "vurgu": false
+  },
+  {
+   "w": "yukarı",
+   "s": 27.349,
+   "e": 27.629,
+   "vurgu": false
+  },
+  {
+   "w": "çıktıkça",
+   "s": 27.629,
+   "e": 28.169,
+   "vurgu": false
+  },
+  {
+   "w": "her",
+   "s": 28.169,
+   "e": 28.389,
+   "vurgu": false
+  },
+  {
+   "w": "diş",
+   "s": 28.389,
+   "e": 28.729,
+   "vurgu": false
+  },
+  {
+   "w": "karşısındakinin",
+   "s": 28.729,
+   "e": 29.449,
+   "vurgu": false
+  },
+  {
+   "w": "içine",
+   "s": 29.449,
+   "e": 29.769,
+   "vurgu": false
+  },
+  {
+   "w": "oturuyor",
+   "s": 29.769,
+   "e": 30.309,
+   "vurgu": false
+  },
+  {
+   "w": "ve",
+   "s": 30.309,
+   "e": 30.449,
+   "vurgu": false
+  },
+  {
+   "w": "kilitleniyor.",
+   "s": 30.449,
+   "e": 31.374,
+   "vurgu": true
+  },
+  {
+   "w": "Bugün",
+   "s": 31.514,
+   "e": 31.812,
+   "vurgu": false
+  },
+  {
+   "w": "kullandığın",
+   "s": 31.812,
+   "e": 32.392,
+   "vurgu": false
+  },
+  {
+   "w": "fermuar",
+   "s": 32.392,
+   "e": 32.852,
+   "vurgu": false
+  },
+  {
+   "w": "hâlâ",
+   "s": 32.852,
+   "e": 33.312,
+   "vurgu": true
+  },
+  {
+   "w": "bu",
+   "s": 33.312,
+   "e": 33.472,
+   "vurgu": false
+  },
+  {
+   "w": "fikir.",
+   "s": 33.472,
+   "e": 33.832,
+   "vurgu": false
+  },
+  {
+   "w": "Adı",
+   "s": 33.947,
+   "e": 34.417,
+   "vurgu": false
+  },
+  {
+   "w": "da",
+   "s": 34.417,
+   "e": 34.497,
+   "vurgu": false
+  },
+  {
+   "w": "sonradan",
+   "s": 34.467,
+   "e": 34.917,
+   "vurgu": false
+  },
+  {
+   "w": "geldi.",
+   "s": 34.917,
+   "e": 35.117,
+   "vurgu": false
+  },
+  {
+   "w": "1920'lerde",
+   "s": 35.257,
+   "e": 36.097,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 36.097,
+   "e": 36.257,
+   "vurgu": false
+  },
+  {
+   "w": "lastik",
+   "s": 36.257,
+   "e": 36.637,
+   "vurgu": false
+  },
+  {
+   "w": "çizme",
+   "s": 36.637,
+   "e": 36.857,
+   "vurgu": false
+  },
+  {
+   "w": "markası,",
+   "s": 36.857,
+   "e": 37.357,
+   "vurgu": false
+  },
+  {
+   "w": "kapanırken",
+   "s": 37.357,
+   "e": 38.105,
+   "vurgu": false
+  },
+  {
+   "w": "çıkardığı",
+   "s": 38.105,
+   "e": 38.645,
+   "vurgu": false
+  },
+  {
+   "w": "sesten",
+   "s": 38.645,
+   "e": 39.005,
+   "vurgu": false
+  },
+  {
+   "w": "esinlenip",
+   "s": 39.005,
+   "e": 39.605,
+   "vurgu": false
+  },
+  {
+   "w": "ürününe",
+   "s": 39.605,
+   "e": 40.124,
+   "vurgu": false
+  },
+  {
+   "w": "\"zipper\"",
+   "s": 40.124,
+   "e": 40.662,
+   "vurgu": true
+  },
+  {
+   "w": "dedi.",
+   "s": 40.662,
+   "e": 41.062,
+   "vurgu": false
+  },
+  {
+   "w": "\"Zip\"",
+   "s": 41.342,
+   "e": 41.717,
+   "vurgu": true
+  },
+  {
+   "w": "sesi",
+   "s": 41.717,
+   "e": 41.857,
+   "vurgu": false
+  },
+  {
+   "w": "yani.",
+   "s": 41.857,
+   "e": 42.157,
+   "vurgu": false
+  },
+  {
+   "w": "Yarın",
+   "s": 42.407,
+   "e": 43.048,
+   "vurgu": false
+  },
+  {
+   "w": "çekmecende",
+   "s": 43.048,
+   "e": 43.468,
+   "vurgu": false
+  },
+  {
+   "w": "duran",
+   "s": 43.468,
+   "e": 43.748,
+   "vurgu": false
+  },
+  {
+   "w": "eski",
+   "s": 43.748,
+   "e": 44.008,
+   "vurgu": false
+  },
+  {
+   "w": "telefonu",
+   "s": 44.008,
+   "e": 44.428,
+   "vurgu": false
+  },
+  {
+   "w": "bedava",
+   "s": 44.428,
+   "e": 44.728,
+   "vurgu": true
+  },
+  {
+   "w": "bir",
+   "s": 44.728,
+   "e": 44.848,
+   "vurgu": false
+  },
+  {
+   "w": "güvenlik",
+   "s": 44.848,
+   "e": 45.248,
+   "vurgu": false
+  },
+  {
+   "w": "kamerasına",
+   "s": 45.248,
+   "e": 45.648,
+   "vurgu": false
+  },
+  {
+   "w": "çeviriyoruz.",
+   "s": 45.648,
+   "e": 46.088,
+   "vurgu": false
+  },
+  {
+   "w": "Telefonu",
+   "s": 46.308,
+   "e": 46.964,
+   "vurgu": false
+  },
+  {
+   "w": "şimdiden",
+   "s": 46.964,
+   "e": 47.264,
+   "vurgu": false
+  },
+  {
+   "w": "bulmaya",
+   "s": 47.264,
+   "e": 47.584,
+   "vurgu": false
+  },
+  {
+   "w": "başla.",
+   "s": 47.584,
+   "e": 47.904,
+   "vurgu": false
+  }
+ ],
+ "satirlar": [
+  [
+   0,
+   2
+  ],
+  [
+   3,
+   5
+  ],
+  [
+   6,
+   7
+  ],
+  [
+   8,
+   11
+  ],
+  [
+   12,
+   17
+  ],
+  [
+   18,
+   20
+  ],
+  [
+   21,
+   22
+  ],
+  [
+   23,
+   26
+  ],
+  [
+   27,
+   32
+  ],
+  [
+   33,
+   34
+  ],
+  [
+   35,
+   38
+  ],
+  [
+   39,
+   41
+  ],
+  [
+   42,
+   44
+  ],
+  [
+   45,
+   46
+  ],
+  [
+   47,
+   48
+  ],
+  [
+   49,
+   51
+  ],
+  [
+   52,
+   54
+  ],
+  [
+   55,
+   56
+  ],
+  [
+   57,
+   58
+  ],
+  [
+   59,
+   62
+  ],
+  [
+   63,
+   64
+  ],
+  [
+   65,
+   67
+  ],
+  [
+   68,
+   70
+  ],
+  [
+   71,
+   74
+  ],
+  [
+   75,
+   77
+  ],
+  [
+   78,
+   80
+  ],
+  [
+   81,
+   84
+  ],
+  [
+   85,
+   87
+  ],
+  [
+   88,
+   89
+  ],
+  [
+   90,
+   91
+  ],
+  [
+   92,
+   94
+  ],
+  [
+   95,
+   96
+  ],
+  [
+   97,
+   99
+  ],
+  [
+   100,
+   102
+  ],
+  [
+   103,
+   105
+  ],
+  [
+   106,
+   109
+  ],
+  [
+   110,
+   111
+  ],
+  [
+   112,
+   113
+  ]
+ ],
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "parsomen",
+   "bas": 0.0,
+   "son": 2.753,
+   "ev": {},
+   "gecis": "daire"
+  },
+  {
+   "id": "judson",
+   "bg": "parsomen",
+   "bas": 2.753,
+   "son": 10.108,
+   "ev": {},
+   "gecis": "flas",
+   "gorsel": "atolye"
+  },
+  {
+   "id": "sorun",
+   "bg": "sicak",
+   "bas": 10.108,
+   "son": 18.371,
+   "ev": {
+    "vur0": 5.532
+   },
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sundback",
+   "bg": "plan",
+   "bas": 18.371,
+   "son": 26.552,
+   "ev": {},
+   "gecis": "perde"
+  },
+  {
+   "id": "mekanizma",
+   "bg": "gece",
+   "bas": 26.552,
+   "son": 33.727,
+   "ev": {
+    "vur0": 3.897
+   },
+   "gecis": "zoom"
+  },
+  {
+   "id": "isim",
+   "bg": "parsomen",
+   "bas": 33.727,
+   "son": 42.187,
+   "ev": {},
+   "gecis": "daire",
+   "gorsel": "cizme"
+  },
+  {
+   "id": "yarin",
+   "bg": "sicak",
+   "bas": 42.187,
+   "son": 48.709,
+   "ev": {},
+   "gecis": "kaydir"
+  }
+ ]
+}

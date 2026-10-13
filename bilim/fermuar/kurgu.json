@@ -1,0 +1,15 @@
+{
+ "baslik": "Fermuarın hüzünlü hikâyesi",
+ "temizle": true,
+ "kesimler": [],
+ "vurgu": ["hüzünlü.", "1893'te", "Whitcomb", "Judson", "ayakkabı", "açılıyordu.", "açılıveriyor.", "yirmi", "1913'te", "Sundback", "dişler", "kilitleniyor.", "hâlâ", "\"zipper\"", "\"Zip\"", "bedava"],
+ "sahneler": [
+  {"id": "giris", "bg": "parsomen", "ilk": 0},
+  {"id": "judson", "bg": "parsomen", "ilk": "ilk", "gecis": "flas", "gorsel": "atolye"},
+  {"id": "sorun", "bg": "sicak", "ilk": "=ama", "gecis": "kaydir", "vur": ["açılıveriyor"]},
+  {"id": "sundback", "bg": "plan", "ilk": "yaklaşık", "gecis": "perde"},
+  {"id": "mekanizma", "bg": "gece", "ilk": "sürgü", "gecis": "zoom", "vur": ["kilitleniyor"]},
+  {"id": "isim", "bg": "parsomen", "ilk": "adı", "gecis": "daire", "gorsel": "cizme"},
+  {"id": "yarin", "bg": "sicak", "ilk": "yarın", "gecis": "kaydir"}
+ ]
+}
