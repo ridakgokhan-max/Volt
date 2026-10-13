@@ -217,7 +217,7 @@ const Fizik: S = ({ t, ws }) => {
   return (
     <g>
       <line x1={60} y1={1130} x2={420} y2={1130} stroke={INK} strokeWidth={8} />
-      <g transform={`translate(240 ${t < tz ? 560 : yb}) scale(${1 / squash} ${squash})`}>
+      <g transform={`translate(240 ${t < tz ? 560 : yb}) scale(${(1 / squash) * sp(t, tz - 0.45)} ${squash * sp(t, tz - 0.45)})`}>
         <ellipse cx={0} cy={50} rx={0} ry={0} />
         <circle cx={0} cy={0} r={50} fill={RED} stroke={INK} strokeWidth={7} />
         <path d="M -30 -20 A 36 36 0 0 1 10 -38" stroke="#fff" strokeWidth={8} fill="none" strokeLinecap="round" />
@@ -333,7 +333,7 @@ const Kamera: S = ({ t, ws, ev }) => {
   const tZ = ws("yakınlaşıyor");
   const tL = ws("ışık");
   const fall = cl((t - (tHit - 0.45)) / 0.45);
-  const by = t < tHit ? lerp(250, 980, fall * fall) : 980;
+  const by = t < tHit ? lerp(-260, 980, fall * fall) : 980;
   const zk = ez((t - tZ + 0.1) / 0.5) * (1 - ap(t, tL - 0.2, 0.4));
   const lk = ap(t, tL - 0.1, 0.3);
   const sx = 540 + Math.sin((t - tL) * 2.2) * 260;
@@ -426,8 +426,8 @@ const Kapanis: S = ({ t, ws }) => {
       })}
       <g transform={`translate(540 1000) scale(${sp(t, tT - 1.2) * press})`}>
         <rect x={-260} y={-70} width={520} height={140} rx={70} fill={clicked ? GREEN : RED} stroke="#fff" strokeWidth={8} />
-        <text x={clicked ? 30 : 0} y={22} textAnchor="middle" fontSize={64} fontWeight={900} fill="#fff" style={font}>{clicked ? "TAKİPTESİN" : "TAKİP ET"}</text>
-        {clicked ? <g transform="translate(-190 0) scale(0.45)"><Check cx={0} cy={0} k={done} color="#2a8f55" /></g> : null}
+        <text x={clicked ? 45 : 0} y={22} textAnchor="middle" fontSize={64} fontWeight={900} fill="#fff" style={font}>{clicked ? "TAKİPTESİN" : "TAKİP ET"}</text>
+        {clicked ? <g transform="translate(-200 0) scale(0.42)"><Check cx={0} cy={0} k={done} color="#2a8f55" /></g> : null}
       </g>
       {t > tT - 0.9 && t < tT + 1.2 ? (
         <path d={`M ${cur.x} ${cur.y} l 0 70 l 18 -16 l 14 30 l 14 -7 l -14 -29 l 24 -2 Z`} fill="#fff" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
