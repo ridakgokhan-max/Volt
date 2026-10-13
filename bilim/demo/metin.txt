@@ -1,0 +1,10 @@
+Bu video bir demo. Volt sisteminin neler yapabildiğini bir dakikada göstereceğim.
+Önce karakterimiz. Yürüyebiliyor, el sallayabiliyor ve duygularını yüzüyle anlatabiliyor.
+Her çizim, tebeşirle tahtaya çiziliyormuş gibi adım adım ortaya çıkabiliyor.
+Sahneler arasında farklı geçişler var: daire, kaydırma, yakınlaşma ve parazit efekti.
+Nesneler fizik kurallarına göre hareket ediyor: zıplıyor, sallanıyor ve yörüngede dönüyor.
+Sayılar ve grafikler canlanıyor, böylece veriler bir bakışta anlaşılıyor.
+Katmanlı arka planlarla derinlik hissi ve üç boyutlu görünüm de mümkün.
+Önemli anlarda kamera sarsılıyor, yakınlaşıyor ya da ışık tek bir noktaya odaklanıyor.
+Okuduğum her kelime altyazıda vurgulanıyor, önemli kelimeler büyüyüp renk değiştiriyor.
+Hepsinin altında müzik ve yüzlerce ses efekti var. Beğendiysen takip etmeyi unutma!
