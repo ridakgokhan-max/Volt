@@ -1,0 +1,807 @@
+{
+ "model": "large-v3",
+ "sure": 51.371,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.24,
+   "text": "Her gün kullanıyorsun ama Fermuar'ın hikayesi biraz hüzünlü.",
+   "kelimeler": [
+    {
+     "w": "Her",
+     "start": 0.0,
+     "end": 0.52,
+     "p": 0.997
+    },
+    {
+     "w": "gün",
+     "start": 0.52,
+     "end": 0.76,
+     "p": 0.999
+    },
+    {
+     "w": "kullanıyorsun",
+     "start": 0.76,
+     "end": 1.28,
+     "p": 0.999
+    },
+    {
+     "w": "ama",
+     "start": 1.28,
+     "end": 1.66,
+     "p": 1.0
+    },
+    {
+     "w": "Fermuar",
+     "start": 1.66,
+     "end": 2.14,
+     "p": 0.457
+    },
+    {
+     "w": "'ın",
+     "start": 2.14,
+     "end": 2.24,
+     "p": 0.997
+    },
+    {
+     "w": "hikayesi",
+     "start": 2.24,
+     "end": 2.64,
+     "p": 1.0
+    },
+    {
+     "w": "biraz",
+     "start": 2.64,
+     "end": 2.8,
+     "p": 1.0
+    },
+    {
+     "w": "hüzünlü.",
+     "start": 2.8,
+     "end": 3.24,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 3.32,
+   "end": 8.12,
+   "text": "İlk Fermuar 1893'te William Johnson adlı bir muci tarafından patentlendi.",
+   "kelimeler": [
+    {
+     "w": "İlk",
+     "start": 3.32,
+     "end": 3.74,
+     "p": 1.0
+    },
+    {
+     "w": "Fermuar",
+     "start": 3.74,
+     "end": 4.1,
+     "p": 0.997
+    },
+    {
+     "w": "1893'te",
+     "start": 4.1,
+     "end": 5.14,
+     "p": 0.979
+    },
+    {
+     "w": "William",
+     "start": 5.14,
+     "end": 5.4,
+     "p": 0.829
+    },
+    {
+     "w": "Johnson",
+     "start": 5.4,
+     "end": 5.8,
+     "p": 0.957
+    },
+    {
+     "w": "adlı",
+     "start": 5.8,
+     "end": 6.66,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 6.66,
+     "end": 6.8,
+     "p": 1.0
+    },
+    {
+     "w": "muci",
+     "start": 6.8,
+     "end": 6.96,
+     "p": 0.97
+    },
+    {
+     "w": "tarafından",
+     "start": 6.96,
+     "end": 7.46,
+     "p": 0.993
+    },
+    {
+     "w": "patentlendi.",
+     "start": 7.46,
+     "end": 8.12,
+     "p": 0.986
+    }
+   ]
+  },
+  {
+   "start": 8.24,
+   "end": 11.04,
+   "text": "Amacı basitti. Ayakkabı bağcıklarıyla uğraşmamak.",
+   "kelimeler": [
+    {
+     "w": "Amacı",
+     "start": 8.24,
+     "end": 8.66,
+     "p": 1.0
+    },
+    {
+     "w": "basitti.",
+     "start": 8.66,
+     "end": 9.04,
+     "p": 0.998
+    },
+    {
+     "w": "Ayakkabı",
+     "start": 9.22,
+     "end": 9.9,
+     "p": 0.999
+    },
+    {
+     "w": "bağcıklarıyla",
+     "start": 9.9,
+     "end": 10.4,
+     "p": 0.975
+    },
+    {
+     "w": "uğraşmamak.",
+     "start": 10.4,
+     "end": 11.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 11.06,
+   "end": 14.58,
+   "text": "Ama bir sorun vardı. Bu ilk model sık sık kendi kendine açılıyordu.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 11.06,
+     "end": 11.52,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 11.52,
+     "end": 11.66,
+     "p": 1.0
+    },
+    {
+     "w": "sorun",
+     "start": 11.66,
+     "end": 11.98,
+     "p": 1.0
+    },
+    {
+     "w": "vardı.",
+     "start": 11.98,
+     "end": 12.22,
+     "p": 1.0
+    },
+    {
+     "w": "Bu",
+     "start": 12.36,
+     "end": 12.58,
+     "p": 1.0
+    },
+    {
+     "w": "ilk",
+     "start": 12.58,
+     "end": 12.78,
+     "p": 1.0
+    },
+    {
+     "w": "model",
+     "start": 12.78,
+     "end": 13.04,
+     "p": 1.0
+    },
+    {
+     "w": "sık",
+     "start": 13.04,
+     "end": 13.38,
+     "p": 1.0
+    },
+    {
+     "w": "sık",
+     "start": 13.38,
+     "end": 13.54,
+     "p": 1.0
+    },
+    {
+     "w": "kendi",
+     "start": 13.54,
+     "end": 13.8,
+     "p": 1.0
+    },
+    {
+     "w": "kendine",
+     "start": 13.8,
+     "end": 14.2,
+     "p": 1.0
+    },
+    {
+     "w": "açılıyordu.",
+     "start": 14.2,
+     "end": 14.58,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 14.86,
+   "end": 17.1,
+   "text": "Düşünsene yürürken ayakkabının açılıveriyor.",
+   "kelimeler": [
+    {
+     "w": "Düşünsene",
+     "start": 14.86,
+     "end": 15.44,
+     "p": 1.0
+    },
+    {
+     "w": "yürürken",
+     "start": 15.44,
+     "end": 15.9,
+     "p": 1.0
+    },
+    {
+     "w": "ayakkabının",
+     "start": 15.9,
+     "end": 16.56,
+     "p": 0.944
+    },
+    {
+     "w": "açılıveriyor.",
+     "start": 16.56,
+     "end": 17.1,
+     "p": 0.738
+    }
+   ]
+  },
+  {
+   "start": 17.4,
+   "end": 19.46,
+   "text": "İnsanlar haklı olarak pek yüz vermedi.",
+   "kelimeler": [
+    {
+     "w": "İnsanlar",
+     "start": 17.4,
+     "end": 18.08,
+     "p": 0.999
+    },
+    {
+     "w": "haklı",
+     "start": 18.08,
+     "end": 18.4,
+     "p": 1.0
+    },
+    {
+     "w": "olarak",
+     "start": 18.4,
+     "end": 18.54,
+     "p": 1.0
+    },
+    {
+     "w": "pek",
+     "start": 18.54,
+     "end": 18.92,
+     "p": 0.999
+    },
+    {
+     "w": "yüz",
+     "start": 18.92,
+     "end": 19.02,
+     "p": 0.986
+    },
+    {
+     "w": "vermedi.",
+     "start": 19.02,
+     "end": 19.46,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 19.66,
+   "end": 25.1,
+   "text": "Yaklaşık 20 yıl sonra, 1913'te İsveçli mühendis Gideon Sandbeck tasarımı baştan yaptı.",
+   "kelimeler": [
+    {
+     "w": "Yaklaşık",
+     "start": 19.66,
+     "end": 20.34,
+     "p": 1.0
+    },
+    {
+     "w": "20",
+     "start": 20.34,
+     "end": 20.52,
+     "p": 0.999
+    },
+    {
+     "w": "yıl",
+     "start": 20.52,
+     "end": 20.74,
+     "p": 1.0
+    },
+    {
+     "w": "sonra,",
+     "start": 20.74,
+     "end": 20.94,
+     "p": 1.0
+    },
+    {
+     "w": "1913'te",
+     "start": 21.1,
+     "end": 22.02,
+     "p": 0.995
+    },
+    {
+     "w": "İsveçli",
+     "start": 22.02,
+     "end": 22.34,
+     "p": 0.963
+    },
+    {
+     "w": "mühendis",
+     "start": 22.34,
+     "end": 22.76,
+     "p": 0.967
+    },
+    {
+     "w": "Gideon",
+     "start": 22.76,
+     "end": 23.2,
+     "p": 0.996
+    },
+    {
+     "w": "Sandbeck",
+     "start": 23.2,
+     "end": 23.68,
+     "p": 0.839
+    },
+    {
+     "w": "tasarımı",
+     "start": 23.68,
+     "end": 24.38,
+     "p": 0.974
+    },
+    {
+     "w": "baştan",
+     "start": 24.38,
+     "end": 24.76,
+     "p": 1.0
+    },
+    {
+     "w": "yaptı.",
+     "start": 24.76,
+     "end": 25.1,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.18,
+   "end": 27.92,
+   "text": "Kancalar yerine iç içe geçen minik dişler kullandı.",
+   "kelimeler": [
+    {
+     "w": "Kancalar",
+     "start": 25.18,
+     "end": 25.82,
+     "p": 0.976
+    },
+    {
+     "w": "yerine",
+     "start": 25.82,
+     "end": 26.22,
+     "p": 1.0
+    },
+    {
+     "w": "iç",
+     "start": 26.22,
+     "end": 26.36,
+     "p": 0.998
+    },
+    {
+     "w": "içe",
+     "start": 26.36,
+     "end": 26.52,
+     "p": 0.993
+    },
+    {
+     "w": "geçen",
+     "start": 26.52,
+     "end": 26.84,
+     "p": 1.0
+    },
+    {
+     "w": "minik",
+     "start": 26.84,
+     "end": 27.16,
+     "p": 0.999
+    },
+    {
+     "w": "dişler",
+     "start": 27.16,
+     "end": 27.42,
+     "p": 1.0
+    },
+    {
+     "w": "kullandı.",
+     "start": 27.42,
+     "end": 27.92,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 28.46,
+   "end": 32.6,
+   "text": "Sürgü yukarı çıktıkça her diş karşısındakinin içine oturuyor ve kilitleniyor.",
+   "kelimeler": [
+    {
+     "w": "Sürgü",
+     "start": 28.3,
+     "end": 28.66,
+     "p": 0.994
+    },
+    {
+     "w": "yukarı",
+     "start": 28.66,
+     "end": 28.94,
+     "p": 1.0
+    },
+    {
+     "w": "çıktıkça",
+     "start": 28.94,
+     "end": 29.48,
+     "p": 0.999
+    },
+    {
+     "w": "her",
+     "start": 29.48,
+     "end": 29.7,
+     "p": 0.993
+    },
+    {
+     "w": "diş",
+     "start": 29.7,
+     "end": 30.04,
+     "p": 1.0
+    },
+    {
+     "w": "karşısındakinin",
+     "start": 30.04,
+     "end": 30.76,
+     "p": 0.821
+    },
+    {
+     "w": "içine",
+     "start": 30.76,
+     "end": 31.08,
+     "p": 0.999
+    },
+    {
+     "w": "oturuyor",
+     "start": 31.08,
+     "end": 31.62,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 31.62,
+     "end": 31.76,
+     "p": 0.998
+    },
+    {
+     "w": "kilitleniyor.",
+     "start": 31.76,
+     "end": 32.6,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.74,
+   "end": 35.24,
+   "text": "Bugün kullandığım fermuar hala bu fikir.",
+   "kelimeler": [
+    {
+     "w": "Bugün",
+     "start": 32.74,
+     "end": 33.22,
+     "p": 0.999
+    },
+    {
+     "w": "kullandığım",
+     "start": 33.22,
+     "end": 33.8,
+     "p": 0.999
+    },
+    {
+     "w": "fermuar",
+     "start": 33.8,
+     "end": 34.26,
+     "p": 0.836
+    },
+    {
+     "w": "hala",
+     "start": 34.26,
+     "end": 34.72,
+     "p": 1.0
+    },
+    {
+     "w": "bu",
+     "start": 34.72,
+     "end": 34.88,
+     "p": 1.0
+    },
+    {
+     "w": "fikir.",
+     "start": 34.88,
+     "end": 35.24,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 36.16,
+   "end": 37.0,
+   "text": "Adı da sonradan geldi.",
+   "kelimeler": [
+    {
+     "w": "Adı",
+     "start": 35.94,
+     "end": 36.3,
+     "p": 0.997
+    },
+    {
+     "w": "da",
+     "start": 36.3,
+     "end": 36.34,
+     "p": 0.998
+    },
+    {
+     "w": "sonradan",
+     "start": 36.34,
+     "end": 36.8,
+     "p": 1.0
+    },
+    {
+     "w": "geldi.",
+     "start": 36.8,
+     "end": 37.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 37.14,
+   "end": 43.34,
+   "text": "1920'lerde bir lastik çizme markası kapanırken çıkardığı sesten esinlenip ürününe zipper dedi.",
+   "kelimeler": [
+    {
+     "w": "1920",
+     "start": 37.14,
+     "end": 37.44,
+     "p": 0.999
+    },
+    {
+     "w": "'lerde",
+     "start": 37.44,
+     "end": 37.98,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 37.98,
+     "end": 38.14,
+     "p": 1.0
+    },
+    {
+     "w": "lastik",
+     "start": 38.14,
+     "end": 38.52,
+     "p": 1.0
+    },
+    {
+     "w": "çizme",
+     "start": 38.52,
+     "end": 38.74,
+     "p": 1.0
+    },
+    {
+     "w": "markası",
+     "start": 38.74,
+     "end": 39.24,
+     "p": 1.0
+    },
+    {
+     "w": "kapanırken",
+     "start": 39.24,
+     "end": 40.1,
+     "p": 0.915
+    },
+    {
+     "w": "çıkardığı",
+     "start": 40.1,
+     "end": 40.64,
+     "p": 1.0
+    },
+    {
+     "w": "sesten",
+     "start": 40.64,
+     "end": 41.0,
+     "p": 0.872
+    },
+    {
+     "w": "esinlenip",
+     "start": 41.0,
+     "end": 41.6,
+     "p": 0.999
+    },
+    {
+     "w": "ürününe",
+     "start": 41.6,
+     "end": 42.3,
+     "p": 0.996
+    },
+    {
+     "w": "zipper",
+     "start": 42.3,
+     "end": 42.94,
+     "p": 0.698
+    },
+    {
+     "w": "dedi.",
+     "start": 42.94,
+     "end": 43.34,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 43.62,
+   "end": 44.66,
+   "text": "Zip sesi yani.",
+   "kelimeler": [
+    {
+     "w": "Zip",
+     "start": 43.62,
+     "end": 44.22,
+     "p": 0.991
+    },
+    {
+     "w": "sesi",
+     "start": 44.22,
+     "end": 44.36,
+     "p": 1.0
+    },
+    {
+     "w": "yani.",
+     "start": 44.36,
+     "end": 44.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 44.94,
+   "end": 48.64,
+   "text": "Yarın çekmecende duran eski telefonu bedava bir güvenlik kamerasına çeviriyoruz.",
+   "kelimeler": [
+    {
+     "w": "Yarın",
+     "start": 44.94,
+     "end": 45.6,
+     "p": 1.0
+    },
+    {
+     "w": "çekmecende",
+     "start": 45.6,
+     "end": 46.02,
+     "p": 0.888
+    },
+    {
+     "w": "duran",
+     "start": 46.02,
+     "end": 46.3,
+     "p": 1.0
+    },
+    {
+     "w": "eski",
+     "start": 46.3,
+     "end": 46.56,
+     "p": 1.0
+    },
+    {
+     "w": "telefonu",
+     "start": 46.56,
+     "end": 46.98,
+     "p": 1.0
+    },
+    {
+     "w": "bedava",
+     "start": 46.98,
+     "end": 47.28,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 47.28,
+     "end": 47.4,
+     "p": 0.999
+    },
+    {
+     "w": "güvenlik",
+     "start": 47.4,
+     "end": 47.8,
+     "p": 1.0
+    },
+    {
+     "w": "kamerasına",
+     "start": 47.8,
+     "end": 48.2,
+     "p": 0.999
+    },
+    {
+     "w": "çeviriyoruz.",
+     "start": 48.2,
+     "end": 48.64,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 48.88,
+   "end": 50.46,
+   "text": "Telefonu şimdiden bulmaya başla.",
+   "kelimeler": [
+    {
+     "w": "Telefonu",
+     "start": 48.88,
+     "end": 49.52,
+     "p": 1.0
+    },
+    {
+     "w": "şimdiden",
+     "start": 49.52,
+     "end": 49.82,
+     "p": 1.0
+    },
+    {
+     "w": "bulmaya",
+     "start": 49.82,
+     "end": 50.14,
+     "p": 1.0
+    },
+    {
+     "w": "başla.",
+     "start": 50.14,
+     "end": 50.46,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
