@@ -176,6 +176,20 @@ const Sundback: S = ({ t, ws }) => {
         </g>
         <text x={40} y={18} textAnchor="middle" fontSize={50} fontWeight={900} fill="#fff" style={font}>Gideon Sundback</text>
       </g>
+      {/* isim gelene kadar takvim yaprakları uçuşur, sonra Meraklı düşünür */}
+      {t < tk - 0.2
+        ? Array.from({ length: 6 }).map((_, i) => {
+          const u = ((t - t20) * 1.4 + i / 6) % 1;
+          if (t < t20 || t > t13 + 0.6) return null;
+          return (
+            <g key={i} transform={`translate(${300 + i * 90 + Math.sin(u * 6 + i) * 60} ${700 + u * 420}) rotate(${u * 200 + i * 40})`} opacity={1 - u}>
+              <rect x={-50} y={-60} width={100} height={120} rx={8} fill="#fff" stroke={INK} strokeWidth={4} />
+              <rect x={-50} y={-60} width={100} height={30} rx={8} fill={RED} />
+            </g>
+          );
+        })
+        : null}
+      <Merakli x={540} y={1230} s={0.85} t={t} hareket="dusun" ink={CHALK} o={ap(t, t13 + 0.4) * (1 - ap(t, tk - 0.4, 0.3))} />
       {/* plan: kanca -> diş */}
       <g transform="translate(290 900)" opacity={hook > 0.01 ? 1 : 0}>
         <rect x={-190} y={-200} width={380} height={400} rx={20} fill="none" stroke="#cfe6ff" strokeWidth={5} strokeDasharray="16 12" />
@@ -232,12 +246,12 @@ const Mekanizma: S = ({ t, ws, ev }) => {
         <Txt x={0} y={280} text="çıkıntı oyuğa oturur" size={38} color={ACC} o={ap(t, 1.0)} />
       </g>
       {t > tl - 0.1 ? (
-        <g transform={`translate(800 1020) scale(${sp(t, tl)})`}>
+        <g transform={`translate(860 1000) scale(${sp(t, tl)})`}>
           <Lock cx={0} cy={0} s={0.8} fill={ACC} />
         </g>
       ) : null}
       <Tag x={540} y={300} text="BUGÜN HÂLÂ AYNI FİKİR" size={46} k={sp(t, th)} bg={GREEN} color="#fff" />
-      <Merakli x={830} y={1235} s={0.62} t={t - th} hareket={t > th ? "aha" : "dusun"} ink={CHALK} o={ap(t, 0.8)} />
+      <Merakli x={620} y={1235} s={0.62} t={t - th} hareket={t > th ? "aha" : "dusun"} ink={CHALK} o={ap(t, 0.8)} />
     </g>
   );
 };
@@ -253,7 +267,7 @@ const Isim: S = ({ t, ws }) => {
       <rect x={0} y={-40} width={1080} height={1960} fill="#5a3b1c" opacity={0.12} />
       <Tag x={540} y={370} text="1920'ler" size={64} k={sp(t, ty)} bg="#f3e2bf" />
       {/* lastik çizme (galoş) — fermuarı "zipper" anında kapanır */}
-      <g transform={`translate(330 ${lerp(1500, 1010, ez(sp(t, ty + 0.4)))})`}>
+      <g transform={`translate(330 1010) scale(${sp(t, ty + 0.3)})`} opacity={cl(sp(t, ty + 0.3) * 1.5)}>
         <path d="M -120 -230 L 40 -230 L 50 40 Q 170 50 200 120 L 200 170 L -130 170 Z" fill="#1d1d22" stroke="#f3e2bf" strokeWidth={7} strokeLinejoin="round" />
         <path d="M -130 150 L 200 150" stroke="#555" strokeWidth={10} />
         {Array.from({ length: 12 }).map((_, i) => {
