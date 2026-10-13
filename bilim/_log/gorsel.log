@@ -1,0 +1,46 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files:  42%|████▏     | 8/19 [00:00<00:00, 76.35it/s]Fetching 19 files:  84%|████████▍ | 16/19 [00:03<00:00,  3.57it/s]Fetching 19 files: 100%|██████████| 19/19 [00:19<00:00,  1.01s/it]
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:  46%|████▌     | 90/196 [00:00<00:00, 811.40it/s][A
+Loading weights:  88%|████████▊ | 172/196 [00:00<00:00, 605.12it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 619.44it/s]
+Loading pipeline components...:  43%|████▎     | 3/7 [00:05<00:07,  1.84s/it]Loading pipeline components...:  71%|███████▏  | 5/7 [00:06<00:01,  1.15it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 2/517 [00:00<00:39, 13.00it/s][A
+Loading weights:   8%|▊         | 42/517 [00:00<00:02, 197.73it/s][A
+Loading weights:  14%|█▎        | 71/517 [00:00<00:02, 194.63it/s][A
+Loading weights:  18%|█▊        | 93/517 [00:00<00:02, 202.50it/s][A
+Loading weights:  22%|██▏       | 115/517 [00:00<00:02, 184.46it/s][A
+Loading weights:  26%|██▌       | 135/517 [00:00<00:02, 184.16it/s][A
+Loading weights:  30%|██▉       | 155/517 [00:00<00:02, 149.44it/s][A
+Loading weights:  33%|███▎      | 172/517 [00:01<00:02, 152.12it/s][A
+Loading weights:  39%|███▊      | 200/517 [00:01<00:01, 165.44it/s][A
+Loading weights:  42%|████▏     | 218/517 [00:01<00:02, 148.75it/s][A
+Loading weights:  48%|████▊     | 248/517 [00:01<00:01, 167.48it/s][A
+Loading weights:  54%|█████▍    | 280/517 [00:01<00:01, 162.68it/s][A
+Loading weights:  60%|█████▉    | 310/517 [00:01<00:01, 191.34it/s][A
+Loading weights:  64%|██████▍   | 331/517 [00:01<00:01, 173.19it/s][A
+Loading weights:  68%|██████▊   | 350/517 [00:02<00:01, 162.71it/s][A
+Loading weights:  73%|███████▎  | 376/517 [00:02<00:00, 167.05it/s][A
+Loading weights:  76%|███████▌  | 394/517 [00:02<00:00, 150.78it/s][A
+Loading weights:  82%|████████▏ | 424/517 [00:02<00:00, 168.73it/s][A
+Loading weights:  85%|████████▌ | 442/517 [00:02<00:00, 165.82it/s][A
+Loading weights:  89%|████████▉ | 459/517 [00:02<00:00, 150.14it/s][A
+Loading weights:  93%|█████████▎| 482/517 [00:02<00:00, 151.19it/s][A
+Loading weights:  96%|█████████▋| 498/517 [00:03<00:00, 85.34it/s] [A
+Loading weights:  99%|█████████▊| 510/517 [00:03<00:00, 78.07it/s][ALoading weights: 100%|██████████| 517/517 [00:03<00:00, 143.38it/s]
+Loading pipeline components...:  86%|████████▌ | 6/7 [00:10<00:01,  1.78s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:11<00:00,  1.59s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:11<00:00,  1.62s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 73 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (88 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette , aged paper']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (88 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette , aged paper']
+atolye 187 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['sepia and grey - blue palette , aged paper']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['sepia and grey - blue palette , aged paper']
+cizme 203 sn
