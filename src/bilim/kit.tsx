@@ -26,7 +26,7 @@ export const sp = (t: number, a: number, damping = 11) =>
 export const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 
 // ---------- arka planlar ----------
-export type BgKind = "parsomen" | "gece" | "plan" | "tahta" | "devre" | "sicak" | "yesil";
+export type BgKind = "parsomen" | "gece" | "plan" | "tahta" | "devre" | "sicak" | "yesil" | "gok";
 
 const Stars: React.FC<{ t: number; n?: number; seed?: number }> = ({ t, n = 70, seed = 1 }) => {
   const out = [];
@@ -76,6 +76,7 @@ export const Bg: React.FC<{ kind: BgKind; t: number; seed?: number }> = ({ kind,
     devre: ["#0b1f1a", "#12372d"],
     sicak: ["#f3c9a5", "#e79f7d"],
     yesil: ["#d9f0dc", "#a9dcb6"],
+    gok: ["#3d8fd6", "#cfeaff"],
   };
   const [a, b] = grad[kind];
   return (
@@ -104,6 +105,7 @@ export const Bg: React.FC<{ kind: BgKind; t: number; seed?: number }> = ({ kind,
           ))}
         </g>
       ) : null}
+      {kind === "gok" ? <Clouds t={t} /> : null}
       {kind === "sicak" || kind === "yesil" ? <Bokeh t={t} color={kind === "sicak" ? "#fff2e0" : "#ffffff"} /> : null}
       <Dust t={t} color={kind === "sicak" || kind === "yesil" ? "#ffffff" : "#cfe6ff"} />
       <rect width={W} height={H} filter={`url(#bgn-${kind})`} />
@@ -117,6 +119,19 @@ const Bokeh: React.FC<{ t: number; color: string }> = ({ t, color }) => (
       const x = ((i * 397) % W) + Math.sin(t * 0.5 + i) * 30;
       const y = ((i * 613) % H) + Math.cos(t * 0.4 + i) * 30;
       return <circle key={i} cx={x} cy={y} r={40 + (i % 4) * 30} fill={color} opacity={0.12} />;
+    })}
+  </g>
+);
+
+const Clouds: React.FC<{ t: number }> = ({ t }) => (
+  <g fill="#ffffff" opacity={0.85}>
+    {[[150, 380, 1], [760, 520, 1.3], [420, 1500, 0.9], [900, 1700, 1.1]].map(([x, y, s], i) => {
+      const xx = ((x + t * (14 + i * 6)) % 1400) - 160;
+      return (
+        <g key={i} transform={`translate(${xx} ${y}) scale(${s})`}>
+          <circle cx={0} cy={0} r={55} /><circle cx={60} cy={-25} r={70} /><circle cx={130} cy={0} r={55} /><rect x={0} y={0} width={130} height={55} />
+        </g>
+      );
     })}
   </g>
 );

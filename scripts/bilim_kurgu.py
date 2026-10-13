@@ -179,7 +179,7 @@ def main(konu):
 
     # kelimeyi metinle bul: ara("daire") -> ilk geçen kelimenin indeksi (sonra=saniye sınırı)
     def norm(x):
-        return x.lower().replace("İ", "i").replace("I", "ı").strip(".,!?:;\"'…")
+        return x.replace("İ", "i").replace("I", "ı").lower().strip(".,!?:;\"'…")
 
     def ara(txt, sonra=0.0, n=0):
         q = norm(txt)
@@ -209,7 +209,8 @@ def main(konu):
     for v in K.get("vurgu", []):
         if isinstance(v, str):
             try:
-                kel[ara(v)]["vurgu"] = True
+                ex = [i for i, k in enumerate(kel) if norm(k["w"]) == norm(v)]
+                kel[ex[0] if ex else ara(v)]["vurgu"] = True
             except KeyError:
                 print("uyarı: vurgu kelimesi yok:", v)
     data = {"konu": konu, "baslik": K["baslik"], "audio": f"bilim/{konu}/mix.m4a", "sure": round(sure, 3),

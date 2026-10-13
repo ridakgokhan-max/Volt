@@ -1,0 +1,19 @@
+{
+ "baslik": "",
+ "not": "Kanal tanıtımı: 30 günlük takvimden konular. Yapay zekâ seslendirmesi (Piper).",
+ "kesimler": [],
+ "vurgu": ["tabağı", "yemeği", "parmak", "mavidir", "bir", "yeni", "uçaklar", "buzdolabı", "kar", "gps", "karekod", "kablosuz", "yapay", "fermuarın", "barkodun", "yapışkan", "limondan", "iğneden", "eski", "altı", "otuz", "dakika", "takip", "yarın"],
+ "sahneler": [
+  {"id": "soru1", "bg": "sicak", "ilk": 0},
+  {"id": "soru2", "bg": "gece", "ilk": "telefon", "gecis": "kaydir"},
+  {"id": "soru3", "bg": "gok", "ilk": "gökyüzü", "gecis": "glitch"},
+  {"id": "logo", "bg": "gece", "ilk": "bir", "gecis": "flas", "vur": ["hoş"]},
+  {"id": "hergun", "bg": "parsomen", "ilk": "burada", "gecis": "daire"},
+  {"id": "bilim", "bg": "gok", "ilk": "bilim:", "gecis": "zoom"},
+  {"id": "teknoloji", "bg": "devre", "ilk": "teknoloji", "gecis": "glitch"},
+  {"id": "tarih", "bg": "parsomen", "ilk": "tarih", "gecis": "perde"},
+  {"id": "diy", "bg": "tahta", "ilk": "kendin", "gecis": "kaydir"},
+  {"id": "rakam", "bg": "plan", "ilk": "altı", "gecis": "zoom"},
+  {"id": "kapanis", "bg": "gece", "ilk": "merak", "gecis": "daire"}
+ ]
+}

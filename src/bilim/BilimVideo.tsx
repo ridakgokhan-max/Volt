@@ -70,7 +70,7 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number }> = ({ sc, idx
       if (dt > 0 && dt < 0.35) shake += Math.sin(dt * 90) * 14 * (1 - dt / 0.35);
     }
   });
-  const ink = sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" ? INK : "#f4efe2";
+  const ink = sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";
   return (
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>

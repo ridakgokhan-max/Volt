@@ -1,0 +1,730 @@
+{
+ "konu": "tanitim",
+ "baslik": "",
+ "audio": "bilim/tanitim/mix.m4a",
+ "sure": 38.334,
+ "kelimeler": [
+  {
+   "w": "Mikrodalga",
+   "s": 0.12,
+   "e": 0.78,
+   "vurgu": false
+  },
+  {
+   "w": "neden",
+   "s": 0.78,
+   "e": 0.92,
+   "vurgu": false
+  },
+  {
+   "w": "tabağı",
+   "s": 0.92,
+   "e": 1.56,
+   "vurgu": true
+  },
+  {
+   "w": "değil",
+   "s": 1.56,
+   "e": 1.76,
+   "vurgu": false
+  },
+  {
+   "w": "de",
+   "s": 1.76,
+   "e": 1.94,
+   "vurgu": false
+  },
+  {
+   "w": "yemeği",
+   "s": 1.94,
+   "e": 2.28,
+   "vurgu": true
+  },
+  {
+   "w": "ısıtır?",
+   "s": 2.28,
+   "e": 2.76,
+   "vurgu": false
+  },
+  {
+   "w": "Telefon",
+   "s": 2.88,
+   "e": 3.48,
+   "vurgu": false
+  },
+  {
+   "w": "parmak",
+   "s": 3.48,
+   "e": 3.92,
+   "vurgu": true
+  },
+  {
+   "w": "izini",
+   "s": 3.92,
+   "e": 4.22,
+   "vurgu": false
+  },
+  {
+   "w": "nasıl",
+   "s": 4.22,
+   "e": 4.5,
+   "vurgu": false
+  },
+  {
+   "w": "tanır?",
+   "s": 4.5,
+   "e": 5.08,
+   "vurgu": false
+  },
+  {
+   "w": "Gökyüzü",
+   "s": 5.12,
+   "e": 5.76,
+   "vurgu": false
+  },
+  {
+   "w": "neden",
+   "s": 5.76,
+   "e": 5.88,
+   "vurgu": false
+  },
+  {
+   "w": "mavidir?",
+   "s": 5.88,
+   "e": 6.56,
+   "vurgu": true
+  },
+  {
+   "w": "Bir",
+   "s": 6.68,
+   "e": 6.94,
+   "vurgu": true
+  },
+  {
+   "w": "Dakikada",
+   "s": 6.94,
+   "e": 7.4,
+   "vurgu": false
+  },
+  {
+   "w": "Bilim'e",
+   "s": 7.4,
+   "e": 7.8,
+   "vurgu": false
+  },
+  {
+   "w": "hoş",
+   "s": 7.8,
+   "e": 8.0,
+   "vurgu": false
+  },
+  {
+   "w": "geldin!",
+   "s": 8.0,
+   "e": 8.52,
+   "vurgu": false
+  },
+  {
+   "w": "Burada",
+   "s": 8.6,
+   "e": 8.96,
+   "vurgu": false
+  },
+  {
+   "w": "her",
+   "s": 8.96,
+   "e": 9.22,
+   "vurgu": false
+  },
+  {
+   "w": "gün,",
+   "s": 9.22,
+   "e": 9.5,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 9.5,
+   "e": 9.68,
+   "vurgu": false
+  },
+  {
+   "w": "dakikada",
+   "s": 9.68,
+   "e": 10.18,
+   "vurgu": false
+  },
+  {
+   "w": "yeni",
+   "s": 10.18,
+   "e": 10.44,
+   "vurgu": true
+  },
+  {
+   "w": "bir",
+   "s": 10.44,
+   "e": 10.62,
+   "vurgu": false
+  },
+  {
+   "w": "şey",
+   "s": 10.62,
+   "e": 10.84,
+   "vurgu": false
+  },
+  {
+   "w": "öğreniyorsun.",
+   "s": 10.84,
+   "e": 11.42,
+   "vurgu": false
+  },
+  {
+   "w": "Bilim:",
+   "s": 11.74,
+   "e": 12.22,
+   "vurgu": false
+  },
+  {
+   "w": "uçaklar",
+   "s": 12.22,
+   "e": 12.78,
+   "vurgu": true
+  },
+  {
+   "w": "nasıl",
+   "s": 12.78,
+   "e": 13.04,
+   "vurgu": false
+  },
+  {
+   "w": "uçar,",
+   "s": 13.04,
+   "e": 13.54,
+   "vurgu": false
+  },
+  {
+   "w": "buzdolabı",
+   "s": 13.66,
+   "e": 14.2,
+   "vurgu": true
+  },
+  {
+   "w": "nasıl",
+   "s": 14.2,
+   "e": 14.4,
+   "vurgu": false
+  },
+  {
+   "w": "soğutur,",
+   "s": 14.4,
+   "e": 15.12,
+   "vurgu": false
+  },
+  {
+   "w": "kar",
+   "s": 15.2,
+   "e": 15.46,
+   "vurgu": true
+  },
+  {
+   "w": "taneleri",
+   "s": 15.46,
+   "e": 15.94,
+   "vurgu": false
+  },
+  {
+   "w": "neden",
+   "s": 15.94,
+   "e": 16.16,
+   "vurgu": false
+  },
+  {
+   "w": "altıgendir.",
+   "s": 16.16,
+   "e": 17.04,
+   "vurgu": false
+  },
+  {
+   "w": "Teknoloji:",
+   "s": 17.28,
+   "e": 17.92,
+   "vurgu": false
+  },
+  {
+   "w": "GPS,",
+   "s": 17.92,
+   "e": 18.2,
+   "vurgu": true
+  },
+  {
+   "w": "karekod,",
+   "s": 18.54,
+   "e": 19.06,
+   "vurgu": true
+  },
+  {
+   "w": "kablosuz",
+   "s": 19.24,
+   "e": 19.9,
+   "vurgu": true
+  },
+  {
+   "w": "şarj",
+   "s": 19.9,
+   "e": 20.18,
+   "vurgu": false
+  },
+  {
+   "w": "ve",
+   "s": 20.18,
+   "e": 20.3,
+   "vurgu": false
+  },
+  {
+   "w": "yapay",
+   "s": 20.3,
+   "e": 20.66,
+   "vurgu": true
+  },
+  {
+   "w": "zekâ.",
+   "s": 20.66,
+   "e": 20.98,
+   "vurgu": false
+  },
+  {
+   "w": "Tarih:",
+   "s": 21.18,
+   "e": 21.895,
+   "vurgu": false
+  },
+  {
+   "w": "fermuarın,",
+   "s": 21.895,
+   "e": 22.64,
+   "vurgu": true
+  },
+  {
+   "w": "barkodun",
+   "s": 22.72,
+   "e": 23.24,
+   "vurgu": true
+  },
+  {
+   "w": "ve",
+   "s": 23.24,
+   "e": 23.4,
+   "vurgu": false
+  },
+  {
+   "w": "yapışkan",
+   "s": 23.4,
+   "e": 23.86,
+   "vurgu": true
+  },
+  {
+   "w": "notun",
+   "s": 23.86,
+   "e": 24.28,
+   "vurgu": false
+  },
+  {
+   "w": "şaşırtıcı",
+   "s": 24.28,
+   "e": 24.94,
+   "vurgu": false
+  },
+  {
+   "w": "hikâyeleri.",
+   "s": 24.94,
+   "e": 25.52,
+   "vurgu": false
+  },
+  {
+   "w": "Kendin",
+   "s": 25.52,
+   "e": 26.22,
+   "vurgu": false
+  },
+  {
+   "w": "yap:",
+   "s": 26.22,
+   "e": 26.46,
+   "vurgu": false
+  },
+  {
+   "w": "limondan",
+   "s": 26.6,
+   "e": 27.22,
+   "vurgu": true
+  },
+  {
+   "w": "pil,",
+   "s": 27.22,
+   "e": 27.42,
+   "vurgu": false
+  },
+  {
+   "w": "iğneden",
+   "s": 27.58,
+   "e": 27.96,
+   "vurgu": true
+  },
+  {
+   "w": "pusula,",
+   "s": 27.96,
+   "e": 28.52,
+   "vurgu": false
+  },
+  {
+   "w": "eski",
+   "s": 28.6,
+   "e": 28.98,
+   "vurgu": true
+  },
+  {
+   "w": "telefondan",
+   "s": 28.98,
+   "e": 29.54,
+   "vurgu": false
+  },
+  {
+   "w": "güvenlik",
+   "s": 29.54,
+   "e": 30.04,
+   "vurgu": false
+  },
+  {
+   "w": "kamerası.",
+   "s": 30.04,
+   "e": 30.74,
+   "vurgu": false
+  },
+  {
+   "w": "Altı",
+   "s": 30.74,
+   "e": 31.135,
+   "vurgu": true
+  },
+  {
+   "w": "hafta,",
+   "s": 31.135,
+   "e": 31.715,
+   "vurgu": false
+  },
+  {
+   "w": "otuz",
+   "s": 31.715,
+   "e": 31.915,
+   "vurgu": true
+  },
+  {
+   "w": "konu,",
+   "s": 31.915,
+   "e": 32.515,
+   "vurgu": false
+  },
+  {
+   "w": "her",
+   "s": 32.515,
+   "e": 32.695,
+   "vurgu": false
+  },
+  {
+   "w": "gün",
+   "s": 32.695,
+   "e": 32.975,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 32.975,
+   "e": 33.115,
+   "vurgu": false
+  },
+  {
+   "w": "dakika.",
+   "s": 33.115,
+   "e": 33.475,
+   "vurgu": true
+  },
+  {
+   "w": "Merak",
+   "s": 33.755,
+   "e": 34.327,
+   "vurgu": false
+  },
+  {
+   "w": "ediyorsan",
+   "s": 34.327,
+   "e": 34.887,
+   "vurgu": false
+  },
+  {
+   "w": "takip",
+   "s": 34.887,
+   "e": 35.307,
+   "vurgu": true
+  },
+  {
+   "w": "et,",
+   "s": 35.307,
+   "e": 35.407,
+   "vurgu": false
+  },
+  {
+   "w": "yarın",
+   "s": 35.527,
+   "e": 35.947,
+   "vurgu": true
+  },
+  {
+   "w": "yeni",
+   "s": 35.947,
+   "e": 36.087,
+   "vurgu": false
+  },
+  {
+   "w": "bir",
+   "s": 36.087,
+   "e": 36.307,
+   "vurgu": false
+  },
+  {
+   "w": "soru",
+   "s": 36.307,
+   "e": 36.727,
+   "vurgu": false
+  },
+  {
+   "w": "seni",
+   "s": 36.727,
+   "e": 36.867,
+   "vurgu": false
+  },
+  {
+   "w": "bekliyor!",
+   "s": 36.867,
+   "e": 37.367,
+   "vurgu": false
+  }
+ ],
+ "satirlar": [
+  [
+   0,
+   2
+  ],
+  [
+   3,
+   6
+  ],
+  [
+   7,
+   9
+  ],
+  [
+   10,
+   11
+  ],
+  [
+   12,
+   14
+  ],
+  [
+   15,
+   17
+  ],
+  [
+   18,
+   19
+  ],
+  [
+   20,
+   22
+  ],
+  [
+   23,
+   26
+  ],
+  [
+   27,
+   28
+  ],
+  [
+   29,
+   30
+  ],
+  [
+   31,
+   32
+  ],
+  [
+   33,
+   35
+  ],
+  [
+   36,
+   39
+  ],
+  [
+   40,
+   41
+  ],
+  [
+   42,
+   43
+  ],
+  [
+   44,
+   47
+  ],
+  [
+   48,
+   49
+  ],
+  [
+   50,
+   53
+  ],
+  [
+   54,
+   55
+  ],
+  [
+   56,
+   57
+  ],
+  [
+   58,
+   59
+  ],
+  [
+   60,
+   61
+  ],
+  [
+   62,
+   65
+  ],
+  [
+   66,
+   67
+  ],
+  [
+   68,
+   70
+  ],
+  [
+   71,
+   73
+  ],
+  [
+   74,
+   75
+  ],
+  [
+   76,
+   77
+  ],
+  [
+   78,
+   81
+  ],
+  [
+   82,
+   83
+  ]
+ ],
+ "sahneler": [
+  {
+   "id": "soru1",
+   "bg": "sicak",
+   "bas": 0.0,
+   "son": 2.66,
+   "ev": {},
+   "gecis": "daire"
+  },
+  {
+   "id": "soru2",
+   "bg": "gece",
+   "bas": 2.66,
+   "son": 4.9,
+   "ev": {},
+   "gecis": "kaydir"
+  },
+  {
+   "id": "soru3",
+   "bg": "gok",
+   "bas": 4.9,
+   "son": 6.46,
+   "ev": {},
+   "gecis": "glitch"
+  },
+  {
+   "id": "logo",
+   "bg": "gece",
+   "bas": 6.46,
+   "son": 8.38,
+   "ev": {
+    "vur0": 1.34
+   },
+   "gecis": "flas"
+  },
+  {
+   "id": "hergun",
+   "bg": "parsomen",
+   "bas": 8.38,
+   "son": 11.52,
+   "ev": {},
+   "gecis": "daire"
+  },
+  {
+   "id": "bilim",
+   "bg": "gok",
+   "bas": 11.52,
+   "son": 17.06,
+   "ev": {},
+   "gecis": "zoom"
+  },
+  {
+   "id": "teknoloji",
+   "bg": "devre",
+   "bas": 17.06,
+   "son": 20.96,
+   "ev": {},
+   "gecis": "glitch"
+  },
+  {
+   "id": "tarih",
+   "bg": "parsomen",
+   "bas": 20.96,
+   "son": 25.3,
+   "ev": {},
+   "gecis": "perde"
+  },
+  {
+   "id": "diy",
+   "bg": "tahta",
+   "bas": 25.3,
+   "son": 30.52,
+   "ev": {},
+   "gecis": "kaydir"
+  },
+  {
+   "id": "rakam",
+   "bg": "plan",
+   "bas": 30.52,
+   "son": 33.535,
+   "ev": {},
+   "gecis": "zoom"
+  },
+  {
+   "id": "kapanis",
+   "bg": "gece",
+   "bas": 33.535,
+   "son": 38.334,
+   "ev": {},
+   "gecis": "daire"
+  }
+ ]
+}
