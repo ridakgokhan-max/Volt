@@ -1,6 +1,6 @@
 """Yapay zekâ seslendirmesi (demo ve taslaklar için): bilim/<konu>/metin.txt -> bilim/<konu>/ses.wav
 Piper (açık kaynak, çevrimdışı) Türkçe ses modeli kullanır; asıl videolarda Kadir'in kendi sesi kullanılır.
-Kullanım: python scripts/seslendir.py <konu> [ses] [hız]   ses: fettah | dfki | fahrettin   hız: 1.0 = normal, 0.9 = daha hızlı
+Kullanım: python scripts/seslendir.py <konu> [ses] [hız]   ses: dfki (Piper deposundaki tek Türkçe ses)   hız: 1.0 = normal, 0.9 = daha hızlı
 """
 import os
 import sys
@@ -40,6 +40,6 @@ def main(konu, name, scale):
 
 if __name__ == "__main__":
     k = sys.argv[1]
-    v = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else "fettah"
+    v = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else "dfki"
     r = float(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3] else 0.95
     main(k, v, r)
