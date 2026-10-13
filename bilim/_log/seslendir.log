@@ -1,15 +1,15 @@
-[0;93m2026-10-13 08:16:30.541006497 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-demo seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/demo/ses.wav
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[  0.00-  4.58] Bu video bir demo. Volt sisteminin neler yapabildiğini bir dakikada göstereceğim.
-[  4.76- 10.16] Önce karakterimiz. Yürüyebiliyor, el sallayabiliyor ve duygularını yüzüyle anlatabiliyor.
-[ 10.38- 14.72] Her çizim tebeşirle tahtaya çiziliyormuş gibi adım adım ortaya çıkabiliyor.
-[ 15.00- 20.32] Sahneler arasında farklı geçişler var, daire, kaydıma, yakınlaşma ve parazit efekti.
-[ 20.44- 25.72] Mesneler fizik kurallarına göre hareket ediyor, zıplıyor, sallanıyor ve yörüngede dönüyor.
-[ 25.72- 30.22] Sayılar ve grafikler canlanıyor. Böylece veriler bir bakışta anlaşılıyor.
-[ 30.40- 34.46] Katmanla arka planlarla derinlik hissi ve 3 boyutlu görünüm de mümkün.
-[ 34.50- 39.52] Önemli anlarda kamera sarsılıyor, yakınlaşıyor ya da ışık tek bir noktaya odaklanıyor.
-[ 39.76- 44.84] Okuduğum her kelime altyazıda vurgulanıyor. Önemli kelimeler büyük renk değiştiriyor.
-[ 45.06- 48.26] Hepsinin altında müzik ve yüzlerce ses efekti var.
-[ 48.46- 50.46] Beğendiysen takip etmeyi unutma.
-demo tamam: 106 kelime
+[0;93m2026-10-13 08:37:43.476981699 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+tanitim seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/tanitim/ses.wav
+[  0.00-  2.64] Mikrodalga neden tabağı değil de yemeği ısıtır?
+[  2.76-  4.96] Telefon parmak izini nasıl tanır?
+[  5.00-  6.44] Gökyüzü neden mavidir?
+[  6.56-  8.40] Bir dakikada bilime hoş geldin.
+[  8.48- 11.30] Burada her gün bir dakikada yeni bir şey öğreniyorsun.
+[ 11.62- 15.00] Bilim, uçaklar nasıl uçar, buzdolabı nasıl soğutur?
+[ 15.08- 16.92] Kar taneleri neden altıgendir?
+[ 17.16- 20.86] Teknolojik GPS, karekod, kablosuz şarj ve yapay zeka.
+[ 21.06- 25.24] Tarih, fermuarın, barkodun ve yapışkan notun şaşırtıcı hikayeleri.
+[ 25.24- 30.44] Kendin yap. Limondan pil, iğneden pusula, eski telefondan güvenlik kamerası.
+[ 30.44- 33.22] 6 hafta 30 konu her gün 1 dakika.
+[ 33.50- 37.18] Merak ediyorsan takip et. Yarın yeni bir soru seni bekliyor.
+tanitim tamam: 84 kelime
