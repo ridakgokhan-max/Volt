@@ -1,4 +1,5 @@
-tanitim: 37.5 sn kayıt -> 38.3 sn video, 84 kelime, 31 altyazı satırı, 11 sahne
+metinle hizalandı: transkript 116 -> metin 114 kelime
+fermuar: 51.4 sn kayıt -> 48.7 sn video, 114 kelime, 38 altyazı satırı, 7 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
 Getting Headless Shell - 9.6 Mb/98.9 Mb
@@ -31,13 +32,11 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/tanitim.mp4[39m
+[90mOutput               out/bilim/fermuar.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m○                    out/bilim/tanitim.mp4[39m [90m18.1 MB[39m
+[34m+                    out/bilim/fermuar.mp4[39m [90m20.6 MB[39m
 durum: success
