@@ -2,7 +2,7 @@ metinle hizalandı: transkript 116 -> metin 114 kelime
 fermuar: 51.4 sn kayıt -> 48.7 sn video, 114 kelime, 38 altyazı satırı, 7 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -11,7 +11,7 @@ Getting Headless Shell - 57.3 Mb/98.9 Mb
 Getting Headless Shell - 66.8 Mb/98.9 Mb
 Getting Headless Shell - 76.4 Mb/98.9 Mb
 Getting Headless Shell - 85.9 Mb/98.9 Mb
-Getting Headless Shell - 95.5 Mb/98.9 Mb
+Getting Headless Shell - 95.4 Mb/98.9 Mb
 Got Headless Shell
 Bundling 6%
 Bundling 21%
@@ -38,5 +38,5 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m+                    out/bilim/fermuar.mp4[39m [90m20.6 MB[39m
+[34m○                    out/bilim/fermuar.mp4[39m [90m20.9 MB[39m
 durum: success
