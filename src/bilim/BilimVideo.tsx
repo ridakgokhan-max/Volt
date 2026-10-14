@@ -3,13 +3,13 @@ import React from "react";
 import { AbsoluteFill, Audio, getInputProps, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
 import { data, SAHNE } from "./aktif";
-import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, sp, W } from "./kit";
+import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, lerp, sp, W } from "./kit";
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
 export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas";
-export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string; video?: string };
+export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string; video?: string; video_kutu?: [number, number, number, number]; derinlik?: boolean };
 /** w(i): i. kelimenin sahneye göre saniyesi; ws("kelime", n): sahne başından sonra o kelimenin n. geçişi */
 /** ses(t): o andaki ses şiddeti 0..1 (Meraklı'nın dudak senkronu için: <Merakli agiz={ses(t)} />) */
 export type SceneProps = { t: number; d: number; ev: Record<string, number>; w: (i: number) => number; ws: (txt: string, n?: number) => number; ses: (t: number) => number };
@@ -101,13 +101,28 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number; donus?: boolea
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>
         <Bg kind={sc.bg} t={t + idx * 3} seed={3 + (idx % 5)} />
-        {sc.gorsel ? (
+        {sc.gorsel && sc.derinlik ? (
+          // derinlikli görsel: arka / orta / ön katman farklı hızlarda kayar (kamera resmin içinde gezinir)
+          <>
+            {(["k0", "k1", "k2"] as const).map((k, i) => {
+              const p = ez(cl(t / Math.max(d, 0.1)));
+              const yon = idx % 2 ? -1 : 1;
+              const sc0 = [1.08, 1.12, 1.16][i] + [0.04, 0.1, 0.2][i] * p;
+              const dx = yon * lerp([30, 60, 110][i], -[30, 70, 130][i], p);
+              const dy = lerp([0, 0, 10][i], -[0, 20, 40][i], p);
+              return (
+                <Img key={k} src={staticFile(`bilim/${(data as { konu: string }).konu}/${sc.gorsel}_${k}.png`)}
+                  style={{ position: "absolute", inset: 0, width: W, height: H, objectFit: "cover", transform: `scale(${sc0}) translate(${dx}px, ${dy}px)` }} />
+              );
+            })}
+          </>
+        ) : sc.gorsel ? (
           <Img src={staticFile(`bilim/${(data as { konu: string }).konu}/${sc.gorsel}.jpg`)}
             style={{ position: "absolute", inset: 0, width: W, height: H, objectFit: "cover",
               transform: `scale(${1.04 + 0.1 * cl(t / Math.max(d, 0.1))}) translate(${(idx % 2 ? -1 : 1) * 14 * cl(t / Math.max(d, 0.1))}px, ${-10 * cl(t / Math.max(d, 0.1))}px)` }} />
         ) : null}
         {sc.video ? (
-          <div style={{ position: "absolute", left: 160, top: 450, width: 760, height: 760, borderRadius: 44, overflow: "hidden", border: `10px solid ${INK}`,
+          <div style={{ position: "absolute", left: (sc.video_kutu || [160])[0], top: (sc.video_kutu || [0, 450])[1], width: (sc.video_kutu || [0, 0, 760])[2], height: (sc.video_kutu || [0, 0, 0, 760])[3], zIndex: sc.video_kutu ? 2 : undefined, borderRadius: 44, overflow: "hidden", border: `10px solid ${INK}`,
             boxShadow: "0 30px 60px rgba(0,0,0,0.55)", transform: `scale(${sp(t, 0.05, 12)}) rotate(${(1 - sp(t, 0.05, 12)) * -6}deg)` }}>
             <Sequence from={lead}>
               <OffthreadVideo muted src={staticFile(`bilim/${(data as { konu: string }).konu}/${sc.video}.mp4`)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />

@@ -3,6 +3,7 @@ import React from "react";
 import type { SceneProps } from "../BilimVideo";
 import { ACC, ap, Arrow, BLUE, Check, CHALK, cl, Cross, ez, GREEN, Glow, INK, Kisi, lerp, Lock, Phone, RED, sp, Tag, Txt } from "../kit";
 import { Merakli } from "../merakli";
+import { Saat } from "../nesneler";
 
 type S = React.FC<SceneProps>;
 const font = { fontFamily: "var(--font)" };
@@ -45,23 +46,23 @@ const Zip: React.FC<{ x: number; y0: number; y1: number; slider: number; tw?: nu
 };
 
 // ---------- 1 — Giriş: dev fermuar kapanır ----------
-const Giris: S = ({ t, ws }) => {
+const Giris: S = ({ t, ws, ses }) => {
   const z = ez(t / 1.0);
   const th = ws("hüzünlü");
   return (
     <g>
       <Zip x={540} y0={260} y1={1260} slider={z} tw={44} spread={360} teeth={30} />
-      <g transform={`translate(540 760) scale(${sp(t, 0.95, 9)}) rotate(-4)`}>
+      <g transform={`translate(540 760) scale(${sp(t, 2.05, 9)}) rotate(-4)`}>
         <rect x={-330} y={-95} width={660} height={190} rx={30} fill={ACC} stroke={INK} strokeWidth={9} />
         <text x={0} y={42} textAnchor="middle" fontSize={130} fontWeight={900} fill={INK} style={font}>FERMUAR</text>
       </g>
-      <Merakli x={170} y={1230} s={0.75} t={t} hareket={t > th ? "uzgun" : "dur"} o={ap(t, 1.0, 0.3)} />
+      <Merakli kostum="sapka" agiz={ses(t)} x={170} y={1230} s={0.75} t={t} hareket={t > th ? "uzgun" : "dur"} o={ap(t, 2.0, 0.3)} />
     </g>
   );
 };
 
 // ---------- 2 — Judson, 1893: atölye görseli üstünde ----------
-const Judson: S = ({ t, ws }) => {
+const Judson: S = ({ t, ws, ses }) => {
   const ty = ws("1893'te");
   const tn = ws("whitcomb");
   const tp = ws("patentlendi");
@@ -108,7 +109,7 @@ const Judson: S = ({ t, ws }) => {
 };
 
 // ---------- 3 — Sorun: kendi kendine açılır ----------
-const Sorun: S = ({ t, ws, ev }) => {
+const Sorun: S = ({ t, ws, ev, ses }) => {
   const tk = ws("açılıyordu");
   const tv = ev.vur0;
   const ty = ws("vermedi") - 0.4;
@@ -133,7 +134,7 @@ const Sorun: S = ({ t, ws, ev }) => {
         <Txt x={0} y={190} text="kendi kendine açılıyor" size={34} o={popK} color={RED} />
       </g>
       {t > tk ? <Tag x={800} y={260} text="SIK SIK AÇILIYOR" size={40} k={sp(t, tk)} bg={RED} color="#fff" /> : null}
-      <Merakli x={x} y={1200} s={1.05} t={t} hareket={walking ? "yuru" : t < ty ? "sasir" : "uzgun"} />
+      <Merakli kostum="sapka" agiz={ses(t)} x={x} y={1200} s={1.05} t={t} hareket={walking ? "yuru" : t < ty ? "sasir" : "uzgun"} />
       {t > tv && t < tv + 0.9 ? (
         <g transform={`translate(${x + 70} 1110) scale(${sp(t, tv, 7)})`}>
           <path d="M 0 -70 L 18 -18 L 72 -26 L 30 8 L 56 60 L 0 28 L -56 60 L -30 8 L -72 -26 L -18 -18 Z" fill={ACC} stroke={INK} strokeWidth={6} />
@@ -152,7 +153,7 @@ const Sorun: S = ({ t, ws, ev }) => {
 };
 
 // ---------- 4 — Sundback, 1913: plan üzerinde yeniden tasarım ----------
-const Sundback: S = ({ t, ws }) => {
+const Sundback: S = ({ t, ws, ses }) => {
   const t20 = ws("yirmi") - 0.2;
   const t13 = ws("1913'te");
   const tg = ws("gideon");
@@ -166,6 +167,9 @@ const Sundback: S = ({ t, ws }) => {
       <g transform="translate(540 390)">
         <rect x={-200} y={-80} width={400} height={160} rx={20} fill="#0f3a66" stroke="#cfe6ff" strokeWidth={6} />
         <text x={0} y={45} textAnchor="middle" fontSize={120} fontWeight={900} fill={t >= t13 ? ACC : "#ffffff"} style={{ ...font, fontVariantNumeric: "tabular-nums" }}>{year}</text>
+      </g>
+      <g opacity={ap(t, t20 - 0.2, 0.3) * (1 - ap(t, t13 + 0.5, 0.3))}>
+        <Saat x={880} y={390} s={0.62} t={t} hiz={22} />
       </g>
       <g transform={`translate(540 560) scale(${sp(t, tg)})`} opacity={cl(sp(t, tg) * 1.5)}>
         <rect x={-300} y={-48} width={600} height={96} rx={48} fill="#0f3a66" stroke="#cfe6ff" strokeWidth={5} />
@@ -189,7 +193,7 @@ const Sundback: S = ({ t, ws }) => {
           );
         })
         : null}
-      <Merakli x={540} y={1230} s={0.85} t={t} hareket="dusun" ink={CHALK} o={ap(t, t13 + 0.4) * (1 - ap(t, tk - 0.4, 0.3))} />
+      <Merakli kostum="sapka" agiz={ses(t)} x={540} y={1230} s={0.85} t={t} hareket="dusun" ink={CHALK} o={ap(t, t13 + 0.4) * (1 - ap(t, tk - 0.4, 0.3))} />
       {/* plan: kanca -> diş */}
       <g transform="translate(290 900)" opacity={hook > 0.01 ? 1 : 0}>
         <rect x={-190} y={-200} width={380} height={400} rx={20} fill="none" stroke="#cfe6ff" strokeWidth={5} strokeDasharray="16 12" />
@@ -219,45 +223,27 @@ const Sundback: S = ({ t, ws }) => {
 };
 
 // ---------- 5 — Mekanizma: dişler iç içe kilitlenir ----------
-const Mekanizma: S = ({ t, ws, ev }) => {
+const Mekanizma: S = ({ t, ws, ev, ses }) => {
   const tl = ev.vur0;
   const th = ws("hâlâ");
   const sl = 1 - ez((t - 0.2) / 2.8);
-  const mag = sp(t, 0.6);
-  const mesh = cl(((t - 0.6) % 1.4) / 1.0);
   return (
     <g>
       <Glow cx={360} cy={760} r={420} id="mg" color={BRASS} o={0.2} />
       <Zip x={360} y0={330} y1={1230} slider={sl} tw={56} spread={150} teeth={20} fabric="#24324f" />
-      {/* büyüteç */}
-      <g transform={`translate(800 640) scale(${mag})`}>
-        <circle r={210} fill="#16233d" stroke="#fff" strokeWidth={12} />
-        <g clipPath="url(#mgc)">
-          <g transform={`translate(0 ${lerp(-60, 0, ez(mesh))})`}>
-            <path d="M -140 -40 h 70 a 30 30 0 0 1 60 0 h 10 v 70 h -140 Z" fill={BRASS} stroke={BRASS_D} strokeWidth={5} />
-          </g>
-          <g transform={`translate(0 ${lerp(60, 0, ez(mesh))})`}>
-            <path d="M 0 30 h 140 v 70 h -140 Z M 0 30 v -12 a 30 30 0 0 1 0 0" fill={BRASS} stroke={BRASS_D} strokeWidth={5} />
-            <circle cx={40} cy={22} r={26} fill={BRASS} stroke={BRASS_D} strokeWidth={5} />
-          </g>
-        </g>
-        <defs><clipPath id="mgc"><circle r={200} /></clipPath></defs>
-        <line x1={150} y1={150} x2={250} y2={260} stroke="#fff" strokeWidth={26} strokeLinecap="round" />
-        <Txt x={0} y={280} text="çıkıntı oyuğa oturur" size={38} color={ACC} o={ap(t, 1.0)} />
-      </g>
       {t > tl - 0.1 ? (
-        <g transform={`translate(860 1000) scale(${sp(t, tl)})`}>
+        <g transform={`translate(700 1120) scale(${0.6 * sp(t, tl)})`}>
           <Lock cx={0} cy={0} s={0.8} fill={ACC} />
         </g>
       ) : null}
       <Tag x={540} y={300} text="BUGÜN HÂLÂ AYNI FİKİR" size={46} k={sp(t, th)} bg={GREEN} color="#fff" />
-      <Merakli x={620} y={1235} s={0.62} t={t - th} hareket={t > th ? "aha" : "dusun"} ink={CHALK} o={ap(t, 0.8)} />
+      <Merakli kostum="sapka" agiz={ses(t)} x={930} y={1235} s={0.6} t={t - th} hareket={t > th ? "aha" : "dusun"} ink={CHALK} o={ap(t, 0.8)} />
     </g>
   );
 };
 
 // ---------- 6 — İsim: 1920'ler, "zipper" ----------
-const Isim: S = ({ t, ws }) => {
+const Isim: S = ({ t, ws, ses }) => {
   const ty = ws("1920'lerde");
   const tz = ws("\"zipper\"");
   const tzz = ws("zip", 1);
@@ -295,7 +281,7 @@ const Isim: S = ({ t, ws }) => {
 };
 
 // ---------- 7 — Yarın: çekmecedeki telefon ----------
-const Yarin: S = ({ t, ws }) => {
+const Yarin: S = ({ t, ws, ses }) => {
   const tc = ws("çekmecende");
   const tb = ws("bedava");
   const tg = ws("güvenlik");
@@ -320,7 +306,7 @@ const Yarin: S = ({ t, ws }) => {
       </g>
       <Tag x={540} y={330} text="YARIN" size={60} k={sp(t, 0.1)} bg={ACC} />
       <Tag x={620} y={1200} text="BEDAVA KAMERA" size={48} k={sp(t, tb)} bg={GREEN} color="#fff" />
-      <Merakli x={180} y={1230} s={0.75} t={t} hareket={t > tc ? "isaret" : "salla"} />
+      <Merakli kostum="sapka" agiz={ses(t)} x={180} y={1230} s={0.75} t={t} hareket={t > tc ? "isaret" : "salla"} />
     </g>
   );
 };
@@ -331,7 +317,7 @@ export const KAPAK: React.FC = () => (
   <g>
     <rect x={0} y={0} width={1080} height={1920} fill="#5a3b1c" opacity={0.15} />
     <Zip x={540} y0={760} y1={1560} slider={0.35} tw={50} spread={260} teeth={24} />
-    <Merakli x={850} y={1640} s={0.8} t={0.2} hareket="sasir" />
+    <Merakli kostum="sapka" x={850} y={1640} s={0.8} t={0.2} hareket="sasir" />
   </g>
 );
 export const KAPAK_YAZI = { ust: "Fermuar icat edildi ama", buyuk: "TUTMADI!", alt: "20 yıl neden bekledi?" };

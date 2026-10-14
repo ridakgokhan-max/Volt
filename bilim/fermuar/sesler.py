@@ -18,6 +18,9 @@ def fermuar_sesi(B, d=0.6):
 
 def cues(B, S, wt, st, sure, ara):
     p, E = B.put, B.efekt
+    # 0 kanca: kalp atışı + boing
+    p(S, 0.0, E("kalp"), 0.4)
+    p(S, 1.6, E("boing"), 0.35)
     # 1 giriş: dev fermuar kapanıyor
     p(S, 0.1, fermuar_sesi(B, 0.9), 0.8)
     p(S, 1.0, B.katman(E("metal"), B.thud()), 0.5)
@@ -26,7 +29,8 @@ def cues(B, S, wt, st, sure, ara):
     j0 = st["judson"]
     p(S, j0, B.katman(B.riser(0.4), B.shimmer(1.0)), 0.45)
     p(S, ara("1893'te") - 0.4, B.ticks(0.6, 24), 0.45)
-    p(S, ara("patentlendi"), B.stamp(), 0.8)
+    p(S, ara("patentlendi") - 0.4, E("sayfa"), 0.5)
+    p(S, ara("patentlendi"), B.katman(B.stamp(), E("daktilo")), 0.8)
     p(S, ara("ayakkabı"), E("kumas"), 0.6)
     p(S, ara("uğraşmamak"), E("bip_hata"), 0.35)
     # 3 sorun: yürüyüş, ayakkabı açılır, kalabalık yüz çevirir
@@ -37,9 +41,11 @@ def cues(B, S, wt, st, sure, ara):
         t += 0.29
     p(S, ara("açılıyordu"), fermuar_sesi(B, 0.25), 0.6)
     p(S, ara("açılıveriyor"), B.katman(E("pop"), fermuar_sesi(B, 0.3), E("darbe_hafif")), 0.7)
+    p(S, ara("açılıveriyor") + 0.15, E("sasirma"), 0.35)
     p(S, ara("vermedi") - 0.3, B.katman(E("bong"), E("dusus")), 0.45)
     # 4 Sundback: takvim çevrilir, plan çizilir
-    p(S, ara("yirmi") - 0.2, B.katman(B.ticks(0.9, 26), E("kagit")), 0.5)
+    p(S, ara("yirmi") - 0.2, B.katman(E("saat"), E("kagit")), 0.5)
+    p(S, ara("1913'te") - 0.9, E("yukselen"), 0.25)
     p(S, ara("1913'te"), B.ding(1318, 1.0, 0.35), 0.5)
     p(S, st["sundback"] + 0.3, B.chalk(1.5), 0.35)
     p(S, ara("dişler"), B.katman(E("metal"), B.sparkle(0.6)), 0.5)
@@ -47,7 +53,8 @@ def cues(B, S, wt, st, sure, ara):
     m0 = ara("sürgü")
     for k in range(16):
         p(S, m0 + 0.2 + k * 0.17, B.katman(B.click(), E("tik", perde=3)), 0.45)
-    p(S, ara("kilitleniyor"), B.katman(E("kilit"), E("metal_agir")), 0.7)
+    p(S, m0 + 0.1, E("disli"), 0.35)
+    p(S, ara("kilitleniyor"), B.katman(E("kilit"), E("metal_agir"), E("vurus")), 0.7)
     p(S, ara("hâlâ"), B.katman(B.ding(1568, 1.2, 0.4), B.sparkle(0.6)), 0.5)
     # 6 isim: 1920'ler, zip!
     p(S, st["isim"] + 0.1, B.shimmer(1.2), 0.35)
@@ -57,5 +64,6 @@ def cues(B, S, wt, st, sure, ara):
     y0 = st["yarin"]
     p(S, ara("çekmecende"), B.katman(E("kapi_ac"), E("tahta")), 0.55)
     p(S, ara("bedava") - 0.1, B.katman(E("guc"), B.pop(700)), 0.5)
-    p(S, ara("güvenlik"), B.katman(E("bip_iyi"), B.blip(1200, 0.12)), 0.5)
+    p(S, ara("güvenlik"), B.katman(E("bip_iyi"), B.blip(1200, 0.12), E("deklansor")), 0.5)
+    p(S, sure - 0.55, E("hisirti"), 0.4)
     p(S, min(sure - 2.0, ara("başla") + 0.4), B.stinger(), 0.6)

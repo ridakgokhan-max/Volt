@@ -223,7 +223,7 @@ def main(konu):
     for j, s in enumerate(K["sahneler"]):
         bas = 0.0 if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
         ev = {f"vur{n}": 0 for n in range(len(s.get("vur", [])))}
-        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **{a: s[a] for a in ("gorsel", "video") if s.get(a)}})
+        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **{a: s[a] for a in ("gorsel", "video", "video_kutu", "derinlik") if s.get(a)}})
     for j, s in enumerate(sc):
         s["son"] = sc[j + 1]["bas"] if j + 1 < len(sc) else round(sure, 3)
         for n, wi in enumerate(s.pop("_vur")):
