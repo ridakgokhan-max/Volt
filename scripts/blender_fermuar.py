@@ -107,7 +107,7 @@ for f in range(1, N + 1, 3):
     surgu.keyframe_insert("location", frame=f)
     for kok, s, z in linkler:
         a = aciklik(z, sz)
-        kok.location = (s * a, 0, 0)
+        kok.location = (s * a, 0, z)
         kok.rotation_euler = (0, s * a * 0.25, 0)
         kok.keyframe_insert("location", frame=f)
         kok.keyframe_insert("rotation_euler", frame=f)
