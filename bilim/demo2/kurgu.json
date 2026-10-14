@@ -1,0 +1,20 @@
+{
+ "baslik": "",
+ "temizle": false,
+ "seri": {"no": 3, "toplam": 30, "kategori": "Sistem"},
+ "kanca": {"yazi": "2 SANİYEN VAR!", "alt": "kaydırmadan önce", "sure": 2.0},
+ "dongu": true,
+ "vurgu": ["iki", "seri", "kategori", "şapka,", "önlük,", "baret.", "konuşuyor.", "derinlik", "Blender'da", "hızlı", "TikTok", "onayına", "başa"],
+ "sahneler": [
+  {"id": "kanca", "bg": "gece", "ilk": 0},
+  {"id": "rozet", "bg": "plan", "ilk": "artık", "gecis": "glitch"},
+  {"id": "kostum", "bg": "parsomen", "ilk": "meraklı", "gecis": "perde"},
+  {"id": "agiz", "bg": "sicak", "ilk": "=ve", "gecis": "kaydir"},
+  {"id": "derinlik", "bg": "parsomen", "ilk": "yapay", "gecis": "flas"},
+  {"id": "blender", "bg": "gece", "ilk": "gerektiğinde", "gecis": "zoom", "video": "blender_disli"},
+  {"id": "nesneler", "bg": "tahta", "ilk": "hazır", "gecis": "daire"},
+  {"id": "platform", "bg": "devre", "ilk": "aynı", "gecis": "glitch"},
+  {"id": "taslak", "bg": "parsomen", "ilk": "render", "gecis": "kaydir"},
+  {"id": "dongu", "bg": "gece", "ilk": "=ve", "gecis": "zoom"}
+ ]
+}

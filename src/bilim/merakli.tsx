@@ -9,8 +9,10 @@ const RED = "#d64933";
 const CREAM = "#f6eedd";
 const BLUSH = "#ff9a8a";
 const CYAN = "#5ce1ff";
+const BLUE_ = "#3a7bd5";
 
 export type Duygu = "neutral" | "happy" | "laugh" | "surprised" | "think" | "sad" | "angry" | "scared" | "excited" | "shy" | "sleepy" | "aha" | "wink";
+export type Kostum = "yok" | "sapka" | "onluk" | "baret" | "kulaklik" | "kemer" | "kasif" | "usta";
 export type Poz = {
   lean?: number; armL?: [number, number]; armR?: [number, number]; legL?: [number, number]; legR?: [number, number];
   mood?: Duygu; look?: [number, number]; talk?: number; curl?: number; flap?: number; gb?: number; tilt?: number; headdy?: number; sx?: number; sy?: number; blink?: boolean;
@@ -61,7 +63,7 @@ const Eye: React.FC<{ cx: number; m: Duygu; look: [number, number]; side: number
 };
 
 const Mouth: React.FC<{ m: Duygu; talk: number }> = ({ m, talk }) => {
-  if (talk > 0.02) return <ellipse cx={0} cy={26} rx={10} ry={(4 + 10 * talk) / 2} fill={RED} stroke={INK} strokeWidth={4} />;
+  if (talk > 0.02) return <ellipse cx={0} cy={26} rx={9 + 4 * talk} ry={(4 + 18 * talk) / 2} fill={RED} stroke={INK} strokeWidth={4} />;
   const s = { stroke: INK, strokeWidth: 4.5, fill: "none", strokeLinecap: "round" as const };
   switch (m) {
     case "happy": return <path d="M -14 22 Q 0 36 14 22" {...s} />;
@@ -79,7 +81,70 @@ const Mouth: React.FC<{ m: Duygu; talk: number }> = ({ m, talk }) => {
   }
 };
 
-const Head: React.FC<{ p: Poz }> = ({ p }) => {
+const Sapka: React.FC<{ k: Kostum }> = ({ k }) => {
+  if (k === "sapka" || k === "kasif") {
+    const ana = k === "sapka" ? "#5a4636" : "#c9a86a";
+    return (
+      <g>
+        <path d="M -40 -46 C -42 -80 -30 -96 0 -92 C 30 -96 42 -80 40 -46 Z" fill={ana} stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+        <path d="M -18 -88 Q 0 -78 18 -88" stroke={INK} strokeWidth={4} fill="none" />
+        <path d="M -40 -58 L 40 -58 L 40 -46 L -40 -46 Z" fill={k === "sapka" ? RED : "#5a4636"} stroke={INK} strokeWidth={4} />
+        <ellipse cx={0} cy={-45} rx={76} ry={12} fill={ana} stroke={INK} strokeWidth={6} />
+      </g>
+    );
+  }
+  if (k === "baret" || k === "usta")
+    return (
+      <g>
+        <path d="M -56 -26 C -56 -80 56 -80 56 -26 Z" fill="#ff9f1c" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+        <path d="M -10 -76 L -10 -28 M 10 -76 L 10 -28" stroke={INK} strokeWidth={4} />
+        <path d="M -72 -26 L 72 -26 L 66 -16 L -66 -16 Z" fill="#ff9f1c" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+        <circle cx={0} cy={-50} r={9} fill="#fff7d0" stroke={INK} strokeWidth={3} />
+      </g>
+    );
+  if (k === "kulaklik")
+    return (
+      <g>
+        <path d="M -54 -4 C -60 -78 60 -78 54 -4" stroke={INK} strokeWidth={10} fill="none" strokeLinecap="round" />
+        <rect x={-68} y={-20} width={22} height={38} rx={9} fill={CYAN} stroke={INK} strokeWidth={5} />
+        <rect x={46} y={-20} width={22} height={38} rx={9} fill={CYAN} stroke={INK} strokeWidth={5} />
+      </g>
+    );
+  return null;
+};
+
+/** Gövde kostümü (çubuk gövdenin arkasında çizilir) */
+const Govde: React.FC<{ k: Kostum; top: number[] }> = ({ k, top }) => {
+  if (k === "onluk") {
+    const [x, y] = top;
+    return (
+      <g>
+        <path d={`M ${x - 26} ${y + 4} L ${x + 26} ${y + 4} L 34 212 L -34 212 Z`} fill="#ffffff" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+        <path d={`M ${x - 8} ${y + 4} L ${x} ${y + 40} L ${x + 8} ${y + 4}`} stroke={INK} strokeWidth={4} fill="#dff3ff" />
+        <rect x={10} y={150} width={16} height={14} rx={2} fill="none" stroke={INK} strokeWidth={3} />
+        <path d="M 14 150 L 14 140 M 20 150 L 20 144" stroke={BLUE_} strokeWidth={4} strokeLinecap="round" />
+      </g>
+    );
+  }
+  if (k === "kemer" || k === "kasif" || k === "usta")
+    return (
+      <g>
+        <rect x={-34} y={176} width={68} height={16} rx={4} fill="#7a4b2a" stroke={INK} strokeWidth={5} />
+        <rect x={-8} y={174} width={16} height={20} rx={3} fill={ACC} stroke={INK} strokeWidth={4} />
+        {k === "kemer" || k === "usta" ? (
+          <g stroke={INK} strokeWidth={4} strokeLinecap="round">
+            <path d="M 28 190 L 30 222" stroke="#8a8f99" strokeWidth={7} />
+            <circle cx={30} cy={226} r={6} fill="none" stroke="#8a8f99" />
+            <path d="M -28 190 L -30 218" stroke={RED} strokeWidth={8} />
+            <path d="M -36 216 L -24 216" />
+          </g>
+        ) : null}
+      </g>
+    );
+  return null;
+};
+
+const Head: React.FC<{ p: Poz; kostum?: Kostum }> = ({ p, kostum = "yok" }) => {
   const m = p.mood || "neutral";
   const c = p.curl || 0;
   const [li, lo, ri, ro] = BROWS[m];
@@ -87,7 +152,7 @@ const Head: React.FC<{ p: Poz }> = ({ p }) => {
   const look = p.look || [0, 0];
   return (
     <g transform={`rotate(${p.tilt || 0})`}>
-      <path d={curlPath} stroke={INK} strokeWidth={9} fill="none" strokeLinecap="round" />
+      {kostum === "yok" || kostum === "onluk" || kostum === "kemer" || kostum === "kulaklik" ? <path d={curlPath} stroke={INK} strokeWidth={9} fill="none" strokeLinecap="round" /> : null}
       <circle r={52} fill={CREAM} stroke={INK} strokeWidth={9} />
       {["shy", "laugh", "happy", "excited"].includes(m) ? (
         <g opacity={0.8}>
@@ -108,12 +173,13 @@ const Head: React.FC<{ p: Poz }> = ({ p }) => {
       {m === "scared" ? <path d="M 44 -24 q 6 10 0 14 q -6 -4 0 -14 Z" fill={CYAN} stroke={INK} strokeWidth={2} /> : null}
       {m === "angry" ? <path d="M 36 -52 l 8 8 m 0 -8 l -8 8 m 16 -4 l -6 6" stroke={RED} strokeWidth={4} strokeLinecap="round" /> : null}
       {m === "sleepy" ? <text x={54} y={-48} fontSize={26} fontWeight={900} fill={INK}>z</text> : null}
+      <Sapka k={kostum} />
     </g>
   );
 };
 
 /** Tek karelik çizim: poz -> SVG (ayak tabanı y≈306, gövde merkezi x=0) */
-export const MerakliFigur: React.FC<{ p: Poz; ink?: string }> = ({ p, ink = INK }) => {
+export const MerakliFigur: React.FC<{ p: Poz; ink?: string; kostum?: Kostum }> = ({ p, ink = INK, kostum = "yok" }) => {
   const lean = p.lean || 0;
   const top = [Math.sin(lean * R) * 120, 190 - Math.cos(lean * R) * 120];
   const neck = [top[0] + Math.sin(lean * R) * 24, top[1] - Math.cos(lean * R) * 24];
@@ -131,13 +197,14 @@ export const MerakliFigur: React.FC<{ p: Poz; ink?: string }> = ({ p, ink = INK 
   const f = p.flap || 0;
   return (
     <g transform={`translate(0 306) scale(${p.sx || 1} ${p.sy || 1}) translate(0 -306)`}>
+      <Govde k={kostum} top={top} />
       <path d={parts.join(" ")} stroke={ink} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" fill="none" />
       <g transform={`translate(${top[0]} ${top[1] - 70}) rotate(${lean * 0.5} 0 60)`}>
         <path d="M -22 52 Q 0 64 22 52 L 18 66 Q 0 74 -18 66 Z" fill={ACC} stroke={INK} strokeWidth={5} />
         <path d={`M 10 64 L ${30 + f * 24} ${110 - Math.abs(f) * 30} L ${14 + f * 20} ${106 - Math.abs(f) * 24} Z`} fill={ACC} stroke={INK} strokeWidth={5} strokeLinejoin="round" />
       </g>
       <g transform={`translate(${hc[0]} ${hc[1]})`}>
-        <Head p={{ ...p, tilt: (p.tilt || 0) + lean * 0.5 }} />
+        <Head p={{ ...p, tilt: (p.tilt || 0) + lean * 0.5 }} kostum={kostum} />
       </g>
     </g>
   );
@@ -193,17 +260,23 @@ export const hareketPoz = (h: Hareket, t: number, duygu?: Duygu): { p: Poz; dy: 
   }
 };
 
-export const Merakli: React.FC<{ x: number; y: number; s?: number; t: number; hareket?: Hareket; duygu?: Duygu; poz?: Poz; flip?: boolean; ink?: string; o?: number }> = ({
-  x, y, s = 1, t, hareket = "dur", duygu, poz, flip = false, ink, o = 1,
+/** agiz: 0..1 ses şiddeti (dudak senkronu; SceneProps.ses(t) ile gelir). kostum: konuya göre kıyafet */
+export const Merakli: React.FC<{ x: number; y: number; s?: number; t: number; hareket?: Hareket; duygu?: Duygu; poz?: Poz; flip?: boolean; ink?: string; o?: number; kostum?: Kostum; agiz?: number }> = ({
+  x, y, s = 1, t, hareket = "dur", duygu, poz, flip = false, ink, o = 1, kostum = "yok", agiz,
 }) => {
   const { p, dy } = hareketPoz(hareket, t, duygu);
   const blink = Math.floor(t * FPS) % 96 > 92 && !["happy", "laugh", "aha", "excited", "sleepy"].includes((poz?.mood || p.mood) as string);
   const fp: Poz = { ...p, ...(poz || {}) };
+  if (agiz !== undefined) {
+    fp.talk = agiz > 0.06 ? agiz : 0;
+    fp.headdy = (fp.headdy || 0) - agiz * 4;
+    fp.tilt = (fp.tilt || 0) + agiz * 3 * Math.sin(t * 7);
+  }
   const shown = blink ? { ...fp, blink: true } : fp;
   return (
     <g opacity={o} transform={`translate(${x} ${y + dy}) scale(${flip ? -s : s} ${s}) translate(0 -306)`}>
       <ellipse cx={0} cy={310 - dy / s} rx={70} ry={10} fill={INK} opacity={0.18} />
-      <MerakliFigur p={shown} ink={ink} />
+      <MerakliFigur p={shown} ink={ink} kostum={kostum} />
     </g>
   );
 };

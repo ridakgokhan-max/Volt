@@ -14,6 +14,14 @@ on:
         description: "bilim/ altındaki klasör adı (src/bilim/aktif.ts ile aynı)"
         required: false
         default: ""
+      platform:
+        description: "instagram | tiktok | shorts | hepsi"
+        required: false
+        default: "instagram"
+      taslak:
+        description: "evet = sadece taslak (sahne kareleri) üret, tam video yok"
+        required: false
+        default: "hayir"
 
 permissions:
   contents: write
@@ -37,7 +45,7 @@ jobs:
       - name: Araçları kur
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
-          pip install -q numpy
+          pip install -q numpy pillow
           npm install --no-audit --no-fund
       - name: Konuyu belirle
         id: konu
@@ -51,10 +59,26 @@ jobs:
         run: |
           set -o pipefail
           python scripts/bilim_kurgu.py "${{ steps.konu.outputs.konu }}" 2>&1 | tee out/bilim/log.txt
-      - name: Videoyu üret
+      - name: Taslak (sahne kareleri, onay için)
+        if: github.event.inputs.taslak == 'evet'
         run: |
           set -o pipefail
-          npx remotion render src/index.ts Bilim "out/bilim/${{ steps.konu.outputs.konu }}.mp4" --props='{"konu":"${{ steps.konu.outputs.konu }}"}' --log=info 2>&1 | grep -v -E "^Rendered|^Encoded" | tail -n 80 | tee -a out/bilim/log.txt
+          K="${{ steps.konu.outputs.konu }}"
+          node scripts/taslak.mjs "$K" 2>&1 | grep -E "kare:|Error|error" | tee -a out/bilim/log.txt
+          python scripts/taslak_pafta.py "$K" | tee -a out/bilim/log.txt
+          rm -rf out/bilim/taslak
+      - name: Videoyu üret
+        if: github.event.inputs.taslak != 'evet'
+        run: |
+          set -o pipefail
+          K="${{ steps.konu.outputs.konu }}"
+          P="${{ github.event.inputs.platform }}"
+          [ -z "$P" ] && P=instagram
+          [ "$P" = "hepsi" ] && P="instagram tiktok shorts"
+          for PL in $P; do
+            AD="$K"; [ "$PL" != "instagram" ] && AD="$K-$PL"
+            npx remotion render src/index.ts Bilim "out/bilim/$AD.mp4" --props="{\"konu\":\"$K\",\"platform\":\"$PL\"}" --log=info 2>&1 | grep -v -E "^Rendered|^Encoded" | tail -n 40 | tee -a out/bilim/log.txt
+          done
       - name: Kapak ve kontrol kareleri
         if: always()
         run: |

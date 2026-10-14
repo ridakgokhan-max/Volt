@@ -223,7 +223,7 @@ def main(konu):
     for j, s in enumerate(K["sahneler"]):
         bas = 0.0 if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
         ev = {f"vur{n}": 0 for n in range(len(s.get("vur", [])))}
-        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **({"gorsel": s["gorsel"]} if s.get("gorsel") else {})})
+        sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **{a: s[a] for a in ("gorsel", "video") if s.get(a)}})
     for j, s in enumerate(sc):
         s["son"] = sc[j + 1]["bas"] if j + 1 < len(sc) else round(sure, 3)
         for n, wi in enumerate(s.pop("_vur")):
@@ -237,8 +237,20 @@ def main(konu):
                 kel[ex[0] if ex else ara(v)]["vurgu"] = True
             except KeyError:
                 print("uyarı: vurgu kelimesi yok:", v)
+    # --- ağız zarfı: Meraklı'nın dudak senkronu için kare başına ses şiddeti (0..1, 30 kare/sn) ---
+    hop = SR // 30
+    nfr = len(voice) // hop
+    rms = np.sqrt(np.mean(voice[:nfr * hop].reshape(nfr, hop) ** 2, axis=1))
+    ref = np.percentile(rms[rms > 1e-4], 92) if np.any(rms > 1e-4) else 1.0
+    env = np.clip((rms / max(ref, 1e-6) - 0.08) / 0.92, 0, 1) ** 0.8
+    sm = np.copy(env)
+    for i in range(1, nfr):  # hızlı açılış, yavaş kapanış
+        sm[i] = env[i] if env[i] > sm[i - 1] else sm[i - 1] * 0.55 + env[i] * 0.45
     data = {"konu": konu, "baslik": K["baslik"], "audio": f"bilim/{konu}/mix.m4a", "sure": round(sure, 3),
-            "kelimeler": kel, "satirlar": sat, "sahneler": sc}
+            "kelimeler": kel, "satirlar": sat, "sahneler": sc, "agiz": [round(float(v), 2) for v in sm]}
+    for alan in ("seri", "kanca", "dongu"):  # büyüme özellikleri: seri rozeti, ilk 2 sn kancası, döngü sonu
+        if alan in K:
+            data[alan] = K[alan]
     os.makedirs(os.path.join(ROOT, "src", "bilim", "data"), exist_ok=True)
     json.dump(data, open(os.path.join(ROOT, "src", "bilim", "data", f"{konu}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 

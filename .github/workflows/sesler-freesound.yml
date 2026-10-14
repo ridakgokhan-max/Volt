@@ -1,0 +1,32 @@
+name: Sesler - Freesound CC0 indir
+
+on:
+  workflow_dispatch:
+    inputs:
+      aramalar:
+        description: "virgülle ayrılmış İngilizce aramalar (ör. whoosh, page flip, crowd gasp)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  indir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: İndir (yalnızca CC0)
+        env:
+          FREESOUND_KEY: ${{ secrets.FREESOUND_KEY }}
+        run: |
+          IFS=',' read -ra A <<< "${{ github.event.inputs.aramalar }}"
+          python3 scripts/freesound_indir.py "${A[@]}" 2>&1 | tee sesler/freesound_log.txt
+          python3 scripts/ses_katalog.py || true
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add sesler || true
+          git commit -m "Freesound CC0 sesler [skip ci]" || true
+          git pull --rebase && git push

@@ -12,6 +12,8 @@ export const ACC = "#ffcf3a"; // vurgu sarısı
 export const RED = "#d64933";
 export const GREEN = "#3fae6a";
 export const BLUE = "#3b82c4";
+/** seri rozeti kategori renkleri */
+export const KATEGORI_RENK: Record<string, string> = { bilim: BLUE, tarih: "#b5793a", teknoloji: "#7c4dff", "kendin yap": GREEN, doga: GREEN, uzay: "#1f3c88", sistem: RED };
 
 export const cl = (x: number) => Math.max(0, Math.min(1, x));
 export const ez = (x: number) => {

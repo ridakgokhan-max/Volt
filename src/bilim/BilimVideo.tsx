@@ -1,17 +1,43 @@
 // Bir Dakikada Bilim — ana kompozisyon: ses, sahneler, geçişler, vurgulu altyazı
 import React from "react";
-import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, getInputProps, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
 import { data, SAHNE } from "./aktif";
-import { ACC, ap, Bg, BgKind, cl, ez, FPS, H, INK, sp, W } from "./kit";
+import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, sp, W } from "./kit";
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
 export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas";
-export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string };
+export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string; video?: string };
 /** w(i): i. kelimenin sahneye göre saniyesi; ws("kelime", n): sahne başından sonra o kelimenin n. geçişi */
-export type SceneProps = { t: number; d: number; ev: Record<string, number>; w: (i: number) => number; ws: (txt: string, n?: number) => number };
+/** ses(t): o andaki ses şiddeti 0..1 (Meraklı'nın dudak senkronu için: <Merakli agiz={ses(t)} />) */
+export type SceneProps = { t: number; d: number; ev: Record<string, number>; w: (i: number) => number; ws: (txt: string, n?: number) => number; ses: (t: number) => number };
+
+// ---------- platform güvenli alanları (Instagram / TikTok / YouTube Shorts) ----------
+export type Platform = "instagram" | "tiktok" | "shorts";
+export const PLATFORM: Platform = ((getInputProps() as { platform?: Platform }).platform || "instagram") as Platform;
+const ALAN: Record<Platform, { altyaziTop: number; sag: number; sol: number; ustTop: number; rozetTop: number }> = {
+  instagram: { altyaziTop: 1300, sag: 120, sol: 60, ustTop: 165, rozetTop: 160 },
+  tiktok: { altyaziTop: 1170, sag: 170, sol: 60, ustTop: 250, rozetTop: 250 },
+  shorts: { altyaziTop: 1210, sag: 150, sol: 60, ustTop: 215, rozetTop: 215 },
+};
+const A = ALAN[PLATFORM] || ALAN.instagram;
+
+// ---------- büyüme özellikleri (kurgu.json -> data) ----------
+type Seri = { no: number; toplam: number; kategori: string };
+type Kanca = { yazi: string; alt?: string; sure?: number };
+const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[] };
+const KANCA_SURE = D.kanca ? D.kanca.sure ?? 2 : 0;
+const DONGU = 15; // döngü sonu: son 15 karede ilk sahneye karışır
+const AGIZ = D.agiz || [];
+export const sesAn = (sn: number) => {
+  if (!AGIZ.length) return 0;
+  const i = sn * FPS;
+  const a = AGIZ[Math.max(0, Math.min(AGIZ.length - 1, Math.floor(i)))];
+  const b = AGIZ[Math.max(0, Math.min(AGIZ.length - 1, Math.floor(i) + 1))];
+  return a + (b - a) * (i - Math.floor(i));
+};
 
 const K: Kelime[] = data.kelimeler as Kelime[];
 const SAT: [number, number][] = data.satirlar as [number, number][];
@@ -34,13 +60,13 @@ const findWord = (from: number, txt: string, n = 0) => {
   return from + 1;
 };
 
-const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number }> = ({ sc, idx, lead }) => {
+const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number; donus?: boolean }> = ({ sc, idx, lead, donus }) => {
   const f = useCurrentFrame();
-  const t = (f - lead) / FPS; // sahnenin gerçek başlangıcına göre saniye
+  const t = donus ? 0 : (f - lead) / FPS; // donus: döngü karesi, ilk sahnenin ilk hali // sahnenin gerçek başlangıcına göre saniye
   const d = sc.son - sc.bas;
   const Draw = SAHNE[sc.id];
-  const rev = idx === 0 ? 1 : ez(f / OV);
-  const g: Gecis = sc.gecis || "daire";
+  const rev = idx === 0 && !donus ? 1 : ez(f / (donus ? DONGU : OV));
+  const g: Gecis = donus ? "zoom" : sc.gecis || "daire";
   const zoom = 1 + 0.045 * cl(t / Math.max(d, 0.1));
   // giriş geçişi
   const outer: React.CSSProperties = {};
@@ -80,8 +106,16 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number }> = ({ sc, idx
             style={{ position: "absolute", inset: 0, width: W, height: H, objectFit: "cover",
               transform: `scale(${1.04 + 0.1 * cl(t / Math.max(d, 0.1))}) translate(${(idx % 2 ? -1 : 1) * 14 * cl(t / Math.max(d, 0.1))}px, ${-10 * cl(t / Math.max(d, 0.1))}px)` }} />
         ) : null}
+        {sc.video ? (
+          <div style={{ position: "absolute", left: 160, top: 450, width: 760, height: 760, borderRadius: 44, overflow: "hidden", border: `10px solid ${INK}`,
+            boxShadow: "0 30px 60px rgba(0,0,0,0.55)", transform: `scale(${sp(t, 0.05, 12)}) rotate(${(1 - sp(t, 0.05, 12)) * -6}deg)` }}>
+            <Sequence from={lead}>
+              <OffthreadVideo muted src={staticFile(`bilim/${(data as { konu: string }).konu}/${sc.video}.mp4`)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </Sequence>
+          </div>
+        ) : null}
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0, color: ink }}>
-          <g transform="translate(0 40)">{Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} ws={(txt: string, n = 0) => findWord(sc.bas, txt, n) - sc.bas} /> : null}</g>
+          <g transform="translate(0 40)">{Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} ws={(txt: string, n = 0) => findWord(sc.bas, txt, n) - sc.bas} ses={(tt: number) => sesAn(sc.bas + tt)} /> : null}</g>
         </svg>
       </AbsoluteFill>
       {flash > 0 ? <AbsoluteFill style={{ background: "#fff", opacity: flash }} /> : null}
@@ -105,7 +139,7 @@ const Altyazi: React.FC = () => {
   const words = K.slice(a, b + 1);
   return (
     <div style={{
-      position: "absolute", top: 1300, left: 60, right: 120, display: "flex", flexWrap: "wrap", justifyContent: "center",
+      position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexWrap: "wrap", justifyContent: "center",
       alignContent: "flex-start", rowGap: 6, transform: `translateY(${(1 - inK) * 40}px)`, opacity: cl(inK * 1.4),
     }}>
       {words.map((k, j) => {
@@ -129,24 +163,84 @@ const Altyazi: React.FC = () => {
   );
 };
 
+const Rozet: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = f / FPS;
+  if (!D.seri) return null;
+  const { no, toplam, kategori } = D.seri;
+  const renk = KATEGORI_RENK[kategori.toLocaleLowerCase("tr-TR")] || BLUE;
+  const k = sp(t, KANCA_SURE + 0.15, 10);
+  const halka = cl(no / toplam);
+  return (
+    <div style={{ position: "absolute", top: A.rozetTop, right: A.sag - 70, display: "flex", flexDirection: "column", alignItems: "center", transform: `scale(${k}) rotate(${(1 - k) * -40}deg)`, transformOrigin: "50% 50%" }}>
+      <svg width={124} height={124} viewBox="0 0 124 124">
+        <circle cx={62} cy={62} r={56} fill={renk} stroke={INK} strokeWidth={6} />
+        <circle cx={62} cy={62} r={44} fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth={8} />
+        <circle cx={62} cy={62} r={44} fill="none" stroke="#fff" strokeWidth={8} strokeLinecap="round"
+          strokeDasharray={`${2 * Math.PI * 44 * halka * ez((t - KANCA_SURE - 0.3) / 0.8)} 999`} transform="rotate(-90 62 62)" />
+        <text x={62} y={72} textAnchor="middle" fontFamily={fontFamily} fontWeight={900} fontSize={30} fill="#fff">{no}/{toplam}</text>
+      </svg>
+      <div style={{ marginTop: -10, fontFamily, fontWeight: 900, fontSize: 22, letterSpacing: 1.5, color: "#fff", background: INK, padding: "4px 12px", borderRadius: 14, border: `3px solid ${renk}` }}>
+        {kategori.toLocaleUpperCase("tr-TR")}
+      </div>
+    </div>
+  );
+};
+
+/** İlk 2 saniye: dev, titreşen kanca yazısı — izleyiciyi kaydırmadan durdurur */
+const KancaYazi: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = f / FPS;
+  if (!D.kanca || t > KANCA_SURE + 0.4) return null;
+  const giris = sp(t, 0, 9);
+  const cikis = 1 - ap(t, KANCA_SURE - 0.05, 0.35);
+  const tit = Math.sin(t * 40) * 3 * (1 - cl(t / 0.6));
+  const kel = D.kanca.yazi.split(" ");
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: cikis, pointerEvents: "none" }}>
+      <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 45%, rgba(0,0,0,0) 30%, rgba(0,0,0,${0.55 * cikis}) 100%)` }} />
+      <div style={{ transform: `translateY(-220px) scale(${0.6 + 0.4 * giris}) rotate(${tit - 2}deg)`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 22px", padding: "0 70px" }}>
+        {kel.map((w, i) => {
+          const k = sp(t, 0.06 * i, 8);
+          const vur = i === kel.length - 1;
+          return (
+            <span key={i} style={{
+              fontFamily, fontWeight: 900, fontSize: vur ? 132 : 112, lineHeight: 1.05, color: vur ? ACC : "#fff",
+              WebkitTextStroke: "6px #1a1410", paintOrder: "stroke fill", textShadow: "0 12px 0 rgba(0,0,0,0.45)",
+              display: "inline-block", transform: `translateY(${(1 - k) * 120}px) scale(${k})`,
+            }}>{w}</span>
+          );
+        })}
+      </div>
+      {D.kanca.alt ? (
+        <div style={{ transform: `translateY(-60px)`, opacity: ap(t, 0.5, 0.3), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
+          {D.kanca.alt}
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 const Ust: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
   const prog = cl(t / data.sure);
-  const titleK = 1 - ap(t, 3.2, 0.5);
+  const t0 = KANCA_SURE; // kanca varsa logo ve başlık ondan sonra gelir
+  const titleK = ap(t, t0 + 0.1, 0.3) * (1 - ap(t, t0 + 3.2, 0.5));
+  const logoK = (D.kanca ? sp(t, t0, 12) : 1) * (D.dongu ? 1 - ap(t, data.sure - 0.9, 0.4) : 1);
   return (
     <>
-      <div style={{ position: "absolute", top: 120, left: 0, right: 0, height: 10, background: "rgba(0,0,0,0.25)" }}>
+      <div style={{ position: "absolute", top: A.ustTop - 45, left: 0, right: 0, height: 10, background: "rgba(0,0,0,0.25)" }}>
         <div style={{ width: `${prog * 100}%`, height: "100%", background: ACC }} />
       </div>
-      <div style={{ position: "absolute", top: 165, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-        <div style={{ fontFamily, fontWeight: 900, fontSize: 34, letterSpacing: 3, color: INK, background: ACC, padding: "8px 26px", borderRadius: 40, border: `4px solid ${INK}` }}>
+      <div style={{ position: "absolute", top: A.ustTop, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 34, letterSpacing: 3, color: INK, background: ACC, padding: "8px 26px", borderRadius: 40, border: `4px solid ${INK}`, transform: `scale(${logoK})`, opacity: cl(logoK * 2) }}>
           BİR DAKİKADA BİLİM
         </div>
         {titleK > 0.01 && data.baslik ? (
           <div style={{
             fontFamily, fontWeight: 900, fontSize: 58, color: "#fff", WebkitTextStroke: "3px #1a1410", paintOrder: "stroke fill",
-            textShadow: "0 6px 14px rgba(0,0,0,0.6)", opacity: titleK, transform: `scale(${0.9 + 0.1 * sp(t, 0.1)})`, textAlign: "center", padding: "0 60px",
+            textShadow: "0 6px 14px rgba(0,0,0,0.6)", opacity: titleK, transform: `scale(${0.9 + 0.1 * sp(t, t0 + 0.1)})`, textAlign: "center", padding: "0 60px",
           }}>{data.baslik}</div>
         ) : null}
       </div>
@@ -166,8 +260,15 @@ export const BilimVideo: React.FC = () => (
         </Sequence>
       );
     })}
+    {D.dongu ? (
+      <Sequence from={bilimSure() - DONGU} durationInFrames={DONGU}>
+        <SceneWrap sc={SC[0]} idx={0} lead={0} donus />
+      </Sequence>
+    ) : null}
     <Ust />
+    <Rozet />
     <Altyazi />
+    <KancaYazi />
     <Audio src={staticFile(data.audio)} />
   </AbsoluteFill>
 );
