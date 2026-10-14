@@ -15,7 +15,7 @@ import urllib.request
 TOKEN = os.environ.get("INSTAGRAM_TOKEN", "")
 API = "https://graph.instagram.com/v22.0"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "istatistik")
+OUT = os.environ.get("ISTATISTIK_KLASOR") or os.path.join(ROOT, "istatistik")
 METRIKLER = ["views", "reach", "saved", "shares", "likes", "comments", "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
 
 
