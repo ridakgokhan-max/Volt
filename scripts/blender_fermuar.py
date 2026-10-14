@@ -68,6 +68,7 @@ for i in range(DIS):
     kok = bpy.data.objects.new(f"link{i}", None)
     sc.collection.objects.link(kok)
     kok.location = (0, 0, z)
+    bpy.context.view_layer.update()
     dis = kutu(f"dis{i}", (0.42, 0.16, 0.16), (s * 0.06, 0, z), PIRINC)
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.07, location=(-s * 0.1, -0.05, z + 0.03))
     tum = bpy.context.active_object
