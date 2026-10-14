@@ -116,7 +116,7 @@ const Kostum: S = ({ t, ws, ses }) => {
         const giydi = t > ts[i];
         return (
           <g key={i} opacity={cl(k * 2)}>
-            <Merakli x={x} y={1210} s={0.62 * Math.max(0.01, k)} t={t + i} hareket={giydi ? (i === 1 ? "anlat" : i === 0 ? "isaret" : "salla") : "dur"} kostum={giydi ? kost[i] : "yok"} agiz={ses(t)} duygu={giydi ? "happy" : undefined} />
+            <Merakli x={x} y={1210} s={0.74 * Math.max(0.01, k)} t={t + i} hareket={giydi ? (i === 1 ? "anlat" : i === 0 ? "isaret" : "salla") : "dur"} kostum={giydi ? kost[i] : "yok"} agiz={ses(t)} duygu={giydi ? "happy" : undefined} />
             <Tag x={x} y={780} text={et[i]} size={38} k={sp(t, ts[i], 9)} bg={renk[i]} color="#fff" rot={i === 1 ? 0 : i ? 4 : -4} />
             <Patlama x={x} y={1000} t={t} a={ts[i]} r={160} c={renk[i]} />
           </g>
