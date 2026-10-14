@@ -1,0 +1,30 @@
+name: Instagram - Reels paylaş (onaylı)
+
+# Sadece Kadir "paylaş" dedikten sonra elle başlatılır. Otomatik tetiklenmez.
+on:
+  workflow_dispatch:
+    inputs:
+      konu:
+        description: "out/bilim/<konu>.mp4 ve bilim/<konu>/aciklama.txt"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Paylaş
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: |
+          mkdir -p istatistik
+          python3 scripts/instagram_paylas.py "${{ github.event.inputs.konu }}" 2>&1 | sed -E 's/access_token=[^&" ]+/access_token=***/g' | tee istatistik/paylasim_log.txt
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add istatistik/paylasim_log.txt && git commit -qm "Instagram paylaşım kaydı [skip ci]" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done
