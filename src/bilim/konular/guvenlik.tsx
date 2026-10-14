@@ -302,7 +302,6 @@ export const SAHNE: Record<string, S> = { giris: Giris, kurulum: Kurulum, roller
 export const KAPAK: React.FC = () => (
   <g>
     <g transform="translate(560 800) rotate(-6)"><KameraTel x={0} y={0} s={0.85} t={0.1} /></g>
-    <Arrow x0={220} y0={560} x1={380} y1={680} k={1} color={ACC} sw={12} />
     <Merakli x={250} y={1640} s={0.95} t={0.3} hareket="aha" kostum="usta" />
   </g>
 );
