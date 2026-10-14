@@ -16,7 +16,12 @@ kay = os.path.join(OUT, "KAYNAKLAR.md")
 satir = []
 for arg in sys.argv[1:]:
     ad, url = arg.split("=", 1)
-    veri = urllib.request.urlopen(url, timeout=60).read()
+    istek = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", "Accept": "*/*", "Referer": "https://lottiefiles.com/"})
+    try:
+        veri = urllib.request.urlopen(istek, timeout=60).read()
+    except Exception as e:  # noqa: BLE001
+        print("HATA:", ad, e)
+        continue
     if url.endswith(".json"):
         js = json.loads(veri)
     else:

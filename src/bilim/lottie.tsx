@@ -18,8 +18,12 @@ export const LottieKlip: React.FC<{
     let iptal = false;
     yukle(ad).then((veri) => {
       if (iptal || !kutu.current) return;
+      let bitti = false;
+      const tamam = () => { if (!bitti) { bitti = true; continueRender(bekle); } };
       anim.current = lottie.loadAnimation({ container: kutu.current, renderer: "svg", loop: false, autoplay: false, animationData: veri });
-      anim.current.addEventListener("DOMLoaded", () => continueRender(bekle));
+      anim.current.addEventListener("DOMLoaded", tamam);
+      if (anim.current.isLoaded) tamam();
+      setTimeout(tamam, 4000);
     }).catch(() => continueRender(bekle));
     return () => { iptal = true; anim.current?.destroy(); };
   }, [ad, bekle]);

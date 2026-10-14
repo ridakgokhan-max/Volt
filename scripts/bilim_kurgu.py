@@ -217,8 +217,12 @@ def main(konu):
                 c += 1
         raise KeyError(f"kelime bulunamadı: {txt}")
 
-    def idx(v, sonra=0.0):
-        return v if isinstance(v, int) else ara(v, sonra)
+    def idx(v, sonra=0.0):  # int: kelime sırası, "kelime", ya da ["kelime", n]: n. geçişi
+        if isinstance(v, int):
+            return v
+        if isinstance(v, list):
+            return ara(v[0], sonra, v[1])
+        return ara(v, sonra)
 
     # --- sahneler ---
     sc = []
