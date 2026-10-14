@@ -35,7 +35,7 @@ const Kanca: S = ({ t, ws, ses }) => {
   const bitti = t > ti;
   return (
     <g>
-      <g transform={`translate(560 1020) scale(${1.25 * k}) rotate(${Math.sin(t * 30) * 3 * (1 - dolu)})`}>
+      <g transform={`translate(560 1090) scale(${1.15 * k}) rotate(${Math.sin(t * 30) * 3 * (1 - dolu)})`}>
         <circle r={118} fill={bitti ? GREEN : "#fffaf0"} stroke={INK} strokeWidth={10} />
         <path d={`M 0 0 L 0 -100 A 100 100 0 ${dolu > 0.5 ? 1 : 0} 1 ${Math.sin(dolu * Math.PI * 2) * 100} ${-Math.cos(dolu * Math.PI * 2) * 100} Z`} fill={bitti ? "#2f8c55" : RED} opacity={0.85} />
         <rect x={-18} y={-150} width={36} height={30} rx={6} fill={INK} />
@@ -43,7 +43,7 @@ const Kanca: S = ({ t, ws, ses }) => {
         {bitti ? <path d="M -48 4 L -14 38 L 52 -34" stroke="#fff" strokeWidth={22} fill="none" strokeLinecap="round" strokeLinejoin="round" />
           : <text y={34} textAnchor="middle" fontSize={96} fontWeight={900} fill="#fff" stroke={INK} strokeWidth={10} paintOrder="stroke" style={font}>{Math.min(2, t).toFixed(1)}</text>}
       </g>
-      <Patlama x={560} y={1020} t={t} a={ti} r={330} />
+      <Patlama x={560} y={1090} t={t} a={ti} r={330} />
       <Merakli x={200} y={1230} s={0.72} t={t} hareket={bitti ? "aha" : "kos"} agiz={ses(t)} poz={bitti ? {} : { lean: 10 }} />
       {bitti ? <Tag x={560} y={1235} text="YAKALADIK!" size={56} k={sp(t, ti + 0.1)} bg={ACC} rot={-4} /> : null}
     </g>

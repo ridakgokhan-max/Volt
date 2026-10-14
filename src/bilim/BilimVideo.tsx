@@ -213,7 +213,7 @@ const KancaYazi: React.FC = () => {
         })}
       </div>
       {D.kanca.alt ? (
-        <div style={{ transform: `translateY(-60px)`, opacity: ap(t, 0.5, 0.3), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
+        <div style={{ transform: `translateY(-110px)`, opacity: ap(t, 0.5, 0.3), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
           {D.kanca.alt}
         </div>
       ) : null}
