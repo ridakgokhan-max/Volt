@@ -360,6 +360,21 @@ EFEKT = {
     "jingle_basari": ["jingles_PIZZI", "jingles_STEEL"],
     "jingle_retro": ["jingles_NES"],
     "jingle_vurgu": ["jingles_HIT"],
+    # Freesound CC0 seçkisi (sesler/freesound)
+    "hisirti": ["whoosh_", "swoosh_transition_"],
+    "sayfa": ["page_flip_"],
+    "sasirma": ["crowd_gasp_"],
+    "sihir": ["magic_sparkle_"],
+    "daktilo": ["typewriter_"],
+    "deklansor": ["camera_shutter_"],
+    "disli": ["mechanical_gears_"],
+    "saat": ["clock_ticking_"],
+    "baloncuk": ["bubble_pop_"],
+    "alkis": ["short_applause_"],
+    "kalp": ["heartbeat_"],
+    "boing": ["cartoon_boing_"],
+    "yukselen": ["riser_cinematic_"],
+    "vurus": ["impact_hit_"],
 }
 
 

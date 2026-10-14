@@ -39,6 +39,9 @@ def main(aramalar, adet=4):
             kayit[ad] = {"id": s["id"], "ad": s["name"], "yazar": s["username"], "lisans": s["license"], "adres": s["url"]}
             print("indirildi:", ad)
     json.dump(kayit, open(kayit_yolu, "w"), ensure_ascii=False, indent=1)
+    # katalog (ses_katalog.py) için paket bilgisi
+    json.dump({"paket": "Freesound CC0 seçkisi", "kaynak": "Freesound", "sayfa": "https://freesound.org",
+               "lisans": "CC0 1.0", "dosya": len(kayit)}, open(os.path.join(OUT, "kaynak.json"), "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":
