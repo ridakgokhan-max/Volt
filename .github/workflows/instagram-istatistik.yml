@@ -1,0 +1,32 @@
+name: Instagram - günlük istatistik
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # her gün 09:17 (Türkiye)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: İstatistikleri çek
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: python3 scripts/instagram_istatistik.py 2>&1 | tee istatistik/log.txt
+      - name: Anahtarın süresini uzat (60 gün)
+        if: always()
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+        run: curl -s -o /dev/null "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$INSTAGRAM_TOKEN" || true
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add istatistik || true
+          git commit -m "Instagram istatistikleri [skip ci]" || true
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
