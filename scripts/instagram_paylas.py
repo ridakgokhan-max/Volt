@@ -14,6 +14,7 @@ T = os.environ["INSTAGRAM_TOKEN"]
 API = "https://graph.instagram.com/v22.0"
 HAM = "https://raw.githubusercontent.com/ridakgokhan-max/Volt/main"
 konu = sys.argv[1]
+DENEME = "--deneme" in sys.argv  # kapsayıcıyı hazırlar ama YAYINLAMAZ (24 saatte kendiliğinden silinir)
 
 
 def istek(yol, veri=None):
@@ -40,6 +41,9 @@ for _ in range(60):
     if d.get("status_code") in ("ERROR", "EXPIRED"):
         sys.exit("Instagram videoyu işleyemedi: " + json.dumps(d, ensure_ascii=False))
     time.sleep(10)
+if DENEME:
+    print("DENEME TAMAM: video Instagram tarafından işlendi, yayınlanmadı.")
+    sys.exit(0)
 yayin = istek("me/media_publish", {"creation_id": kap})
 link = istek(f"GET {yayin['id']}", {"fields": "permalink"}).get("permalink")
 print("YAYINLANDI:", link)

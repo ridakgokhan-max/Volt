@@ -7,6 +7,10 @@ on:
       konu:
         description: "out/bilim/<konu>.mp4 ve bilim/<konu>/aciklama.txt"
         required: true
+      deneme:
+        description: "evet = sadece hazırla, yayınlama"
+        required: false
+        default: "hayir"
 
 permissions:
   contents: write
@@ -21,7 +25,8 @@ jobs:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
         run: |
           mkdir -p istatistik
-          python3 scripts/instagram_paylas.py "${{ github.event.inputs.konu }}" 2>&1 | sed -E 's/access_token=[^&" ]+/access_token=***/g' | tee istatistik/paylasim_log.txt
+          D=""; [ "${{ github.event.inputs.deneme }}" = "evet" ] && D="--deneme"
+          python3 scripts/instagram_paylas.py "${{ github.event.inputs.konu }}" $D 2>&1 | sed -E 's/access_token=[^&" ]+/access_token=***/g' | tee istatistik/paylasim_log.txt
       - name: Kaydet
         if: always()
         run: |
