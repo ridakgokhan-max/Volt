@@ -45,7 +45,7 @@ export const sesAn = (sn: number) => {
 const K: Kelime[] = data.kelimeler as Kelime[];
 const SAT: [number, number][] = data.satirlar as [number, number][];
 const SC: Sahne[] = data.sahneler as Sahne[];
-const OV = 12; // geçiş için üst üste binme (kare)
+const OV = 18; // geçiş için üst üste binme (kare) — 0,6 sn, izleyici takip edebilsin
 const norm = (x: string) => x.toLocaleLowerCase("tr-TR").replace(/[.,!?:;"'…]/g, "");
 
 export const bilimSure = () => Math.ceil(data.sure * FPS);
@@ -111,7 +111,7 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
   Object.entries(sc.ev).forEach(([k, v]) => {
     if (k.startsWith("vur")) {
       const dt = t - v;
-      if (dt > 0 && dt < 0.35) shake += Math.sin(dt * 90) * 14 * (1 - dt / 0.35);
+      if (dt > 0 && dt < 0.35) shake += Math.sin(dt * 60) * 9 * (1 - dt / 0.35);
     }
   });
   const ink = sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";

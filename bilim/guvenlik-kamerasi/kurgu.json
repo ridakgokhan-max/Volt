@@ -1,22 +1,170 @@
 {
  "baslik": "",
  "temizle": true,
- "kesimler": [[5.95, 8.80], [42.15, 46.0]],
- "kelime_sil": [12, 13, 14, 15, 16, 100, 101, 102, 103, 104, 105, 106, 107],
- "seri": {"no": 4, "toplam": 30, "kategori": "Kendin Yap"},
- "kanca": {"yazi": "ÇÖPE ATMA, KAMERA YAP!", "alt": "5 dakikada kurulum", "sure": 2.0},
- "acilis": {"sahne": "bildirim", "kelime": "bildirim", "ofset": -0.2, "sure": 1.3},
+ "kesimler": [
+  [
+   5.95,
+   8.8
+  ],
+  [
+   29.98,
+   31.6
+  ],
+  [
+   42.15,
+   46.0
+  ]
+ ],
+ "kelime_sil": [
+  12,
+  13,
+  14,
+  15,
+  16,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107
+ ],
+ "seri": {
+  "no": 4,
+  "toplam": 30,
+  "kategori": "Kendin Yap"
+ },
+ "kanca": {
+  "yazi": "ÇÖPE ATMA, KAMERA YAP!",
+  "alt": "5 dakikada kurulum",
+  "sure": 2.0
+ },
+ "acilis": {
+  "sahne": "bildirim",
+  "kelime": "bildirim",
+  "ofset": -0.2,
+  "sure": 1.5
+ },
  "dongu": true,
- "vurgu": ["bedava", "5", "Alfred", "kamera.", "ekran.", "pil", "püf", "güneş", "havadar", "bildirim", "çöpten", "göz", "Nasıl?"],
+ "vurgu": [
+  "bedava",
+  "5",
+  "Alfred",
+  "kamera.",
+  "ekran.",
+  "pil",
+  "püf",
+  "güneş",
+  "havadar",
+  "bildirim",
+  "çöpten",
+  "göz",
+  "Nasıl?"
+ ],
  "sahneler": [
-  {"id": "giris", "bg": "sicak", "ilk": 0, "vur": ["kamerası"]},
-  {"id": "kurulum", "bg": "plan", "ilk": ["=eski", 1], "gecis": "kaydir"},
-  {"id": "roller", "bg": "gece", "ilk": ["=eski", 1], "gecis": "zoom"},
-  {"id": "soru", "bg": "sicak", "ilk": "peki", "gecis": "glitch"},
-  {"id": "sarj", "bg": "yesil", "ilk": "=eski", "gecis": "perde"},
-  {"id": "yerlesim", "bg": "parsomen", "ilk": "kamerayı", "gecis": "kaydir"},
-  {"id": "bildirim", "bg": "gece", "ilk": "hareket", "gecis": "flas", "vur": ["bildirim"]},
-  {"id": "sonuc", "bg": "yesil", "ilk": "=yani", "gecis": "daire"},
-  {"id": "yarin", "bg": "devre", "ilk": "yarın", "gecis": "glitch"}
+  {
+   "id": "giris",
+   "bg": "sicak",
+   "ilk": 0,
+   "vur": [
+    "kamerası"
+   ]
+  },
+  {
+   "id": "kurulum",
+   "bg": "plan",
+   "ilk": [
+    "=eski",
+    1
+   ],
+   "gecis": "kaydir"
+  },
+  {
+   "id": "roller",
+   "bg": "gece",
+   "ilk": [
+    "=eski",
+    1
+   ],
+   "gecis": "zoom"
+  },
+  {
+   "id": "soru",
+   "bg": "sicak",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sarj",
+   "bg": "yesil",
+   "ilk": "=eski",
+   "gecis": "perde"
+  },
+  {
+   "id": "yerlesim",
+   "bg": "parsomen",
+   "ilk": "kamerayı",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "bildirim",
+   "bg": "gece",
+   "ilk": "hareket",
+   "gecis": "flas",
+   "vur": [
+    "bildirim"
+   ]
+  },
+  {
+   "id": "sonuc",
+   "bg": "yesil",
+   "ilk": "=yani",
+   "gecis": "daire"
+  },
+  {
+   "id": "yarin",
+   "bg": "devre",
+   "ilk": "yarın",
+   "gecis": "kaydir"
+  }
+ ],
+ "kelime_ekle": [
+  {
+   "w": "Kamerayı",
+   "start": 31.68,
+   "end": 31.98
+  },
+  {
+   "w": "kapıya",
+   "start": 32.0,
+   "end": 32.3
+  },
+  {
+   "w": "ya",
+   "start": 32.32,
+   "end": 32.42
+  },
+  {
+   "w": "da",
+   "start": 32.44,
+   "end": 32.52
+  },
+  {
+   "w": "balkona",
+   "start": 32.54,
+   "end": 32.92
+  },
+  {
+   "w": "çevir.",
+   "start": 32.94,
+   "end": 33.26
+  }
  ]
 }

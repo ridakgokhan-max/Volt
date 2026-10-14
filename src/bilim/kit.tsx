@@ -24,7 +24,7 @@ export const ez = (x: number) => {
 export const ap = (t: number, a: number, d = 0.4) => ez((t - a) / d);
 /** yaylı belirme (0→1, biraz taşar) */
 export const sp = (t: number, a: number, damping = 11) =>
-  spring({ frame: Math.max(0, (t - a) * FPS), fps: FPS, config: { damping, stiffness: 150, mass: 0.8 } });
+  spring({ frame: Math.max(0, (t - a) * FPS), fps: FPS, config: { damping, stiffness: 95, mass: 1 } });
 export const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 
 // ---------- arka planlar ----------

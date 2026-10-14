@@ -65,7 +65,7 @@ const Giris: S = ({ t, ws, ses }) => {
       {t > tk ? <LottieKlip ad="kamera" x={720} y={300} w={300} h={300} t={t} bas={tk} /> : null}
       <Tag x={540} y={300} text="BEDAVA KAMERA" size={54} k={sp(t, ws("bedava"))} bg={GREEN} color="#fff" rot={-3} />
       <g opacity={ap(t, t5 - 0.2, 0.3)}>
-        <Saat x={200} y={480} s={0.75} t={t - t5} hiz={10} />
+        <Saat x={200} y={480} s={0.75} t={t - t5} hiz={3} />
         <text x={200} y={620} textAnchor="middle" fontSize={56} fontWeight={900} fill={INK} style={font}>5 dk</text>
       </g>
       <Merakli x={880} y={1235} s={0.62} t={t} hareket={t > tk ? "aha" : "sasir"} kostum="usta" agiz={ses(t)} />
