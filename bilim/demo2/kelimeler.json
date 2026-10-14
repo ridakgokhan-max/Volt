@@ -1,0 +1,643 @@
+{
+ "model": "large-v3",
+ "sure": 41.39,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 2.64,
+   "text": "Bir videoya ilk iki saniyede nasıl bağlanırsın?",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 0.0,
+     "end": 0.08,
+     "p": 0.955
+    },
+    {
+     "w": "videoya",
+     "start": 0.08,
+     "end": 0.58,
+     "p": 0.999
+    },
+    {
+     "w": "ilk",
+     "start": 0.58,
+     "end": 0.82,
+     "p": 0.998
+    },
+    {
+     "w": "iki",
+     "start": 0.82,
+     "end": 1.06,
+     "p": 0.648
+    },
+    {
+     "w": "saniyede",
+     "start": 1.06,
+     "end": 1.56,
+     "p": 1.0
+    },
+    {
+     "w": "nasıl",
+     "start": 1.56,
+     "end": 1.78,
+     "p": 1.0
+    },
+    {
+     "w": "bağlanırsın?",
+     "start": 1.78,
+     "end": 2.64,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 2.74,
+   "end": 3.46,
+   "text": "İşte böyle.",
+   "kelimeler": [
+    {
+     "w": "İşte",
+     "start": 2.74,
+     "end": 3.12,
+     "p": 0.999
+    },
+    {
+     "w": "böyle.",
+     "start": 3.12,
+     "end": 3.46,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 3.7,
+   "end": 7.62,
+   "text": "Artık her videonun köşesinde seri numarası ve kategori rengi var.",
+   "kelimeler": [
+    {
+     "w": "Artık",
+     "start": 3.7,
+     "end": 4.24,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 4.24,
+     "end": 4.4,
+     "p": 1.0
+    },
+    {
+     "w": "videonun",
+     "start": 4.4,
+     "end": 4.98,
+     "p": 1.0
+    },
+    {
+     "w": "köşesinde",
+     "start": 4.98,
+     "end": 5.54,
+     "p": 1.0
+    },
+    {
+     "w": "seri",
+     "start": 5.54,
+     "end": 5.92,
+     "p": 0.999
+    },
+    {
+     "w": "numarası",
+     "start": 5.92,
+     "end": 6.32,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 6.32,
+     "end": 6.52,
+     "p": 1.0
+    },
+    {
+     "w": "kategori",
+     "start": 6.52,
+     "end": 7.08,
+     "p": 1.0
+    },
+    {
+     "w": "rengi",
+     "start": 7.08,
+     "end": 7.5,
+     "p": 1.0
+    },
+    {
+     "w": "var.",
+     "start": 7.5,
+     "end": 7.62,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 7.82,
+   "end": 9.66,
+   "text": "Meraklı da konuya göre giyiniyor.",
+   "kelimeler": [
+    {
+     "w": "Meraklı",
+     "start": 7.82,
+     "end": 8.34,
+     "p": 0.999
+    },
+    {
+     "w": "da",
+     "start": 8.34,
+     "end": 8.46,
+     "p": 0.993
+    },
+    {
+     "w": "konuya",
+     "start": 8.46,
+     "end": 8.82,
+     "p": 1.0
+    },
+    {
+     "w": "göre",
+     "start": 8.82,
+     "end": 9.06,
+     "p": 1.0
+    },
+    {
+     "w": "giyiniyor.",
+     "start": 9.06,
+     "end": 9.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 9.8,
+   "end": 12.74,
+   "text": "Tarihte şapka, bilimde önlük, kendin yap tabaret.",
+   "kelimeler": [
+    {
+     "w": "Tarihte",
+     "start": 9.8,
+     "end": 10.34,
+     "p": 0.999
+    },
+    {
+     "w": "şapka,",
+     "start": 10.34,
+     "end": 10.9,
+     "p": 0.997
+    },
+    {
+     "w": "bilimde",
+     "start": 10.9,
+     "end": 11.3,
+     "p": 0.992
+    },
+    {
+     "w": "önlük,",
+     "start": 11.3,
+     "end": 11.68,
+     "p": 0.994
+    },
+    {
+     "w": "kendin",
+     "start": 11.68,
+     "end": 12.18,
+     "p": 0.999
+    },
+    {
+     "w": "yap",
+     "start": 12.18,
+     "end": 12.32,
+     "p": 0.968
+    },
+    {
+     "w": "tabaret.",
+     "start": 12.32,
+     "end": 12.74,
+     "p": 0.968
+    }
+   ]
+  },
+  {
+   "start": 12.94,
+   "end": 16.12,
+   "text": "Ve ben konuştukça meraklı da benimle birlikte konuşuyor.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 12.94,
+     "end": 13.24,
+     "p": 1.0
+    },
+    {
+     "w": "ben",
+     "start": 13.24,
+     "end": 13.46,
+     "p": 0.997
+    },
+    {
+     "w": "konuştukça",
+     "start": 13.46,
+     "end": 14.22,
+     "p": 0.999
+    },
+    {
+     "w": "meraklı",
+     "start": 14.22,
+     "end": 14.68,
+     "p": 0.964
+    },
+    {
+     "w": "da",
+     "start": 14.68,
+     "end": 14.82,
+     "p": 1.0
+    },
+    {
+     "w": "benimle",
+     "start": 14.82,
+     "end": 15.2,
+     "p": 1.0
+    },
+    {
+     "w": "birlikte",
+     "start": 15.2,
+     "end": 15.52,
+     "p": 1.0
+    },
+    {
+     "w": "konuşuyor.",
+     "start": 15.52,
+     "end": 16.12,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 16.34,
+   "end": 19.14,
+   "text": "Yapay zeka görselleri artık derinlik kazanıyor.",
+   "kelimeler": [
+    {
+     "w": "Yapay",
+     "start": 16.34,
+     "end": 16.76,
+     "p": 0.93
+    },
+    {
+     "w": "zeka",
+     "start": 16.76,
+     "end": 17.1,
+     "p": 0.979
+    },
+    {
+     "w": "görselleri",
+     "start": 17.1,
+     "end": 17.86,
+     "p": 0.997
+    },
+    {
+     "w": "artık",
+     "start": 17.86,
+     "end": 18.08,
+     "p": 1.0
+    },
+    {
+     "w": "derinlik",
+     "start": 18.08,
+     "end": 18.66,
+     "p": 1.0
+    },
+    {
+     "w": "kazanıyor.",
+     "start": 18.66,
+     "end": 19.14,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 20.1,
+   "end": 21.88,
+   "text": "Kamera resmin içinde geziniyor.",
+   "kelimeler": [
+    {
+     "w": "Kamera",
+     "start": 19.92,
+     "end": 20.3,
+     "p": 0.997
+    },
+    {
+     "w": "resmin",
+     "start": 20.3,
+     "end": 20.84,
+     "p": 0.999
+    },
+    {
+     "w": "içinde",
+     "start": 20.84,
+     "end": 21.12,
+     "p": 0.998
+    },
+    {
+     "w": "geziniyor.",
+     "start": 21.12,
+     "end": 21.88,
+     "p": 0.991
+    }
+   ]
+  },
+  {
+   "start": 21.98,
+   "end": 25.26,
+   "text": "Gerektiğinde blenderda üç boyutlu sahneler hazırlanıyor.",
+   "kelimeler": [
+    {
+     "w": "Gerektiğinde",
+     "start": 21.98,
+     "end": 22.66,
+     "p": 1.0
+    },
+    {
+     "w": "blenderda",
+     "start": 22.66,
+     "end": 23.36,
+     "p": 0.94
+    },
+    {
+     "w": "üç",
+     "start": 23.36,
+     "end": 23.52,
+     "p": 0.825
+    },
+    {
+     "w": "boyutlu",
+     "start": 23.52,
+     "end": 24.1,
+     "p": 0.988
+    },
+    {
+     "w": "sahneler",
+     "start": 24.1,
+     "end": 24.62,
+     "p": 0.999
+    },
+    {
+     "w": "hazırlanıyor.",
+     "start": 24.62,
+     "end": 25.26,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.56,
+   "end": 29.42,
+   "text": "Hazır nesne kütüphanesi sayesinde her konu çok daha hızlı çiziliyor.",
+   "kelimeler": [
+    {
+     "w": "Hazır",
+     "start": 25.56,
+     "end": 25.92,
+     "p": 0.999
+    },
+    {
+     "w": "nesne",
+     "start": 25.92,
+     "end": 26.34,
+     "p": 0.989
+    },
+    {
+     "w": "kütüphanesi",
+     "start": 26.34,
+     "end": 27.08,
+     "p": 0.997
+    },
+    {
+     "w": "sayesinde",
+     "start": 27.08,
+     "end": 27.7,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 27.7,
+     "end": 27.92,
+     "p": 1.0
+    },
+    {
+     "w": "konu",
+     "start": 27.92,
+     "end": 28.32,
+     "p": 1.0
+    },
+    {
+     "w": "çok",
+     "start": 28.32,
+     "end": 28.42,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 28.42,
+     "end": 28.66,
+     "p": 1.0
+    },
+    {
+     "w": "hızlı",
+     "start": 28.66,
+     "end": 29.02,
+     "p": 1.0
+    },
+    {
+     "w": "çiziliyor.",
+     "start": 29.02,
+     "end": 29.42,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 29.42,
+   "end": 34.38,
+   "text": "Aynı video Instagram, TikTok ve YouTube'e sorts için ayrı ayrı ayarlanıyor.",
+   "kelimeler": [
+    {
+     "w": "Aynı",
+     "start": 29.42,
+     "end": 30.06,
+     "p": 0.932
+    },
+    {
+     "w": "video",
+     "start": 30.06,
+     "end": 30.32,
+     "p": 0.984
+    },
+    {
+     "w": "Instagram,",
+     "start": 30.32,
+     "end": 30.6,
+     "p": 0.556
+    },
+    {
+     "w": "TikTok",
+     "start": 31.1,
+     "end": 31.46,
+     "p": 0.936
+    },
+    {
+     "w": "ve",
+     "start": 31.46,
+     "end": 31.84,
+     "p": 0.996
+    },
+    {
+     "w": "YouTube",
+     "start": 31.84,
+     "end": 32.1,
+     "p": 0.76
+    },
+    {
+     "w": "'e",
+     "start": 32.1,
+     "end": 32.44,
+     "p": 0.705
+    },
+    {
+     "w": "sorts",
+     "start": 32.44,
+     "end": 32.58,
+     "p": 0.589
+    },
+    {
+     "w": "için",
+     "start": 32.58,
+     "end": 32.92,
+     "p": 0.993
+    },
+    {
+     "w": "ayrı",
+     "start": 32.92,
+     "end": 33.5,
+     "p": 0.999
+    },
+    {
+     "w": "ayrı",
+     "start": 33.5,
+     "end": 33.76,
+     "p": 0.999
+    },
+    {
+     "w": "ayarlanıyor.",
+     "start": 33.76,
+     "end": 34.38,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 34.56,
+   "end": 37.8,
+   "text": "Hender almadan önce sahneleri senin onayına sunuyorum.",
+   "kelimeler": [
+    {
+     "w": "Hender",
+     "start": 34.56,
+     "end": 35.0,
+     "p": 0.753
+    },
+    {
+     "w": "almadan",
+     "start": 35.0,
+     "end": 35.56,
+     "p": 0.94
+    },
+    {
+     "w": "önce",
+     "start": 35.56,
+     "end": 35.86,
+     "p": 0.999
+    },
+    {
+     "w": "sahneleri",
+     "start": 35.86,
+     "end": 36.54,
+     "p": 0.998
+    },
+    {
+     "w": "senin",
+     "start": 36.54,
+     "end": 36.82,
+     "p": 0.995
+    },
+    {
+     "w": "onayına",
+     "start": 36.82,
+     "end": 37.3,
+     "p": 0.999
+    },
+    {
+     "w": "sunuyorum.",
+     "start": 37.3,
+     "end": 37.8,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 37.88,
+   "end": 40.98,
+   "text": "Ve video bittiğinde fark ettirmeden başa dönüyor.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 37.88,
+     "end": 38.14,
+     "p": 0.995
+    },
+    {
+     "w": "video",
+     "start": 38.14,
+     "end": 38.44,
+     "p": 0.998
+    },
+    {
+     "w": "bittiğinde",
+     "start": 38.44,
+     "end": 39.14,
+     "p": 1.0
+    },
+    {
+     "w": "fark",
+     "start": 39.14,
+     "end": 39.46,
+     "p": 0.994
+    },
+    {
+     "w": "ettirmeden",
+     "start": 39.46,
+     "end": 40.16,
+     "p": 0.986
+    },
+    {
+     "w": "başa",
+     "start": 40.16,
+     "end": 40.64,
+     "p": 0.999
+    },
+    {
+     "w": "dönüyor.",
+     "start": 40.64,
+     "end": 40.98,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}

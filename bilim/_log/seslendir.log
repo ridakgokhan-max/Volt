@@ -1,15 +1,16 @@
-[0;93m2026-10-13 08:37:43.476981699 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-tanitim seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/tanitim/ses.wav
-[  0.00-  2.64] Mikrodalga neden tabağı değil de yemeği ısıtır?
-[  2.76-  4.96] Telefon parmak izini nasıl tanır?
-[  5.00-  6.44] Gökyüzü neden mavidir?
-[  6.56-  8.40] Bir dakikada bilime hoş geldin.
-[  8.48- 11.30] Burada her gün bir dakikada yeni bir şey öğreniyorsun.
-[ 11.62- 15.00] Bilim, uçaklar nasıl uçar, buzdolabı nasıl soğutur?
-[ 15.08- 16.92] Kar taneleri neden altıgendir?
-[ 17.16- 20.86] Teknolojik GPS, karekod, kablosuz şarj ve yapay zeka.
-[ 21.06- 25.24] Tarih, fermuarın, barkodun ve yapışkan notun şaşırtıcı hikayeleri.
-[ 25.24- 30.44] Kendin yap. Limondan pil, iğneden pusula, eski telefondan güvenlik kamerası.
-[ 30.44- 33.22] 6 hafta 30 konu her gün 1 dakika.
-[ 33.50- 37.18] Merak ediyorsan takip et. Yarın yeni bir soru seni bekliyor.
-tanitim tamam: 84 kelime
+[0;93m2026-10-14 08:08:43.552353975 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+demo2 seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/demo2/ses.wav
+[  0.00-  2.64] Bir videoya ilk iki saniyede nasıl bağlanırsın?
+[  2.74-  3.46] İşte böyle.
+[  3.70-  7.62] Artık her videonun köşesinde seri numarası ve kategori rengi var.
+[  7.82-  9.66] Meraklı da konuya göre giyiniyor.
+[  9.80- 12.74] Tarihte şapka, bilimde önlük, kendin yap tabaret.
+[ 12.94- 16.12] Ve ben konuştukça meraklı da benimle birlikte konuşuyor.
+[ 16.34- 19.14] Yapay zeka görselleri artık derinlik kazanıyor.
+[ 20.10- 21.88] Kamera resmin içinde geziniyor.
+[ 21.98- 25.26] Gerektiğinde blenderda üç boyutlu sahneler hazırlanıyor.
+[ 25.56- 29.42] Hazır nesne kütüphanesi sayesinde her konu çok daha hızlı çiziliyor.
+[ 29.42- 34.38] Aynı video Instagram, TikTok ve YouTube'e sorts için ayrı ayrı ayarlanıyor.
+[ 34.56- 37.80] Hender almadan önce sahneleri senin onayına sunuyorum.
+[ 37.88- 40.98] Ve video bittiğinde fark ettirmeden başa dönüyor.
+demo2 tamam: 91 kelime
