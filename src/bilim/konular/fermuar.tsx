@@ -1,7 +1,7 @@
 // Konu: Fermuarın hüzünlü hikâyesi (ws("kelime") = sahne içindeki saniye)
 import React from "react";
 import type { SceneProps } from "../BilimVideo";
-import { ACC, ap, Arrow, BLUE, Check, CHALK, cl, Cross, ez, GREEN, Glow, INK, Kamera, Kisi, lerp, Lock, Odak, Phone, RED, sp, Tag, Txt } from "../kit";
+import { ACC, ap, Arrow, BLUE, Check, CHALK, cl, Cross, ez, GREEN, Glow, INK, Kamera, kameraAn, Kisi, lerp, Lock, Odak, Phone, RED, sp, Tag, Txt } from "../kit";
 import { Merakli } from "../merakli";
 import { Saat } from "../nesneler";
 
@@ -170,6 +170,7 @@ const Sundback: S = ({ t, ws, ses }) => {
   const KAM = [{ t: 0, x: 540, y: 760, z: 1 }, { t: tk - 0.3, x: 540, y: 760, z: 1 }, { t: tk + 0.3, x: 290, y: 860, z: 1.5 }, { t: td - 0.35, x: 290, y: 860, z: 1.5 }, { t: td + 0.3, x: 790, y: 860, z: 1.5 }, { t: td + 2.0, x: 790, y: 860, z: 1.5 }, { t: td + 2.6, x: 540, y: 760, z: 1 }];
   return (
     <Kamera t={t} anlar={KAM}>
+      <g opacity={1 - cl((kameraAn(t, KAM).z - 1) / 0.3)}>
       <g transform="translate(540 390)">
         <rect x={-200} y={-80} width={400} height={160} rx={20} fill="#0f3a66" stroke="#cfe6ff" strokeWidth={6} />
         <text x={0} y={45} textAnchor="middle" fontSize={120} fontWeight={900} fill={t >= t13 ? ACC : "#ffffff"} style={{ ...font, fontVariantNumeric: "tabular-nums" }}>{year}</text>
@@ -185,6 +186,7 @@ const Sundback: S = ({ t, ws, ses }) => {
           <rect x={-40} y={-7} width={80} height={14} fill="#fecc00" />
         </g>
         <text x={40} y={18} textAnchor="middle" fontSize={50} fontWeight={900} fill="#fff" style={font}>Gideon Sundback</text>
+      </g>
       </g>
       {/* isim gelene kadar takvim yaprakları uçuşur, sonra Meraklı düşünür */}
       {t < tk - 0.2
