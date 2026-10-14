@@ -1,0 +1,55 @@
+name: Ses - klon denemesi (gizli)
+
+# Kadir'in sesiyle metin okutur. Çıktı GİZLİ depoya (volt-istatistik/klon/) yazılır, bu açık depoya yazılmaz.
+on:
+  workflow_dispatch:
+    inputs:
+      konu:
+        description: "bilim/<konu>/metin.txt okunur"
+        required: true
+      referans:
+        description: "referans kayıt: bilim/<konu>/ses.m4a"
+        required: true
+        default: "bilim/guvenlik-kamerasi/ses.m4a"
+      bas:
+        description: "referans başlangıç saniyesi"
+        default: "8.85"
+      bitis:
+        description: "referans bitiş saniyesi"
+        default: "24.0"
+
+permissions:
+  contents: read
+
+jobs:
+  klon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Kur
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts 2>&1 | tail -3
+      - name: Referans sesi hazırla (temizlenmiş, 24 kHz)
+        run: |
+          python scripts/ses_temizle.py "${{ github.event.inputs.referans }}" /tmp/temiz.wav
+          ffmpeg -y -loglevel error -ss ${{ github.event.inputs.bas }} -to ${{ github.event.inputs.bitis }} -i /tmp/temiz.wav -ac 1 -ar 24000 /tmp/ref.wav
+      - name: Sesi üret
+        run: python scripts/ses_klon.py /tmp/ref.wav "bilim/${{ github.event.inputs.konu }}/metin.txt" /tmp/klon.wav 2>&1 | grep -vE "it/s|%\|" | tail -n 40
+      - name: Gizli depoya kaydet
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: |
+          K="${{ github.event.inputs.konu }}"
+          git clone -q "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+          mkdir -p /tmp/gizli/klon/$K
+          ffmpeg -y -loglevel error -i /tmp/klon.wav -c:a aac -b:a 160k /tmp/gizli/klon/$K/klon.m4a
+          cp /tmp/ref.wav /tmp/gizli/klon/$K/referans.wav
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Klon ses: $K" && git push -q
