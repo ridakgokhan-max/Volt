@@ -1,0 +1,767 @@
+{
+ "model": "large-v3",
+ "sure": 42.496,
+ "segmentler": [
+  {
+   "start": 1.58,
+   "end": 4.68,
+   "text": "Çekmecen'deki o eski telefon bedava güvenlik kamerası.",
+   "kelimeler": [
+    {
+     "w": "Çekmecen'deki",
+     "start": 1.58,
+     "end": 2.16,
+     "p": 0.864
+    },
+    {
+     "w": "o",
+     "start": 2.16,
+     "end": 2.6,
+     "p": 0.988
+    },
+    {
+     "w": "eski",
+     "start": 2.6,
+     "end": 2.94,
+     "p": 1.0
+    },
+    {
+     "w": "telefon",
+     "start": 2.94,
+     "end": 3.22,
+     "p": 1.0
+    },
+    {
+     "w": "bedava",
+     "start": 3.22,
+     "end": 3.7,
+     "p": 0.995
+    },
+    {
+     "w": "güvenlik",
+     "start": 3.7,
+     "end": 4.14,
+     "p": 1.0
+    },
+    {
+     "w": "kamerası.",
+     "start": 4.14,
+     "end": 4.68,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 4.7,
+   "end": 6.46,
+   "text": "Üstelik kurmak 5 dakika sürüyor.",
+   "kelimeler": [
+    {
+     "w": "Üstelik",
+     "start": 4.7,
+     "end": 5.24,
+     "p": 1.0
+    },
+    {
+     "w": "kurmak",
+     "start": 5.24,
+     "end": 5.62,
+     "p": 1.0
+    },
+    {
+     "w": "5",
+     "start": 5.62,
+     "end": 5.78,
+     "p": 0.986
+    },
+    {
+     "w": "dakika",
+     "start": 5.78,
+     "end": 6.06,
+     "p": 1.0
+    },
+    {
+     "w": "sürüyor.",
+     "start": 6.06,
+     "end": 6.46,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 6.66,
+   "end": 9.7,
+   "text": "Eski telefona ücretsiz bir ev kamerası uygulaması kur.",
+   "kelimeler": [
+    {
+     "w": "Eski",
+     "start": 6.66,
+     "end": 7.24,
+     "p": 1.0
+    },
+    {
+     "w": "telefona",
+     "start": 7.24,
+     "end": 7.7,
+     "p": 0.998
+    },
+    {
+     "w": "ücretsiz",
+     "start": 7.7,
+     "end": 8.34,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 8.34,
+     "end": 8.48,
+     "p": 1.0
+    },
+    {
+     "w": "ev",
+     "start": 8.48,
+     "end": 8.66,
+     "p": 1.0
+    },
+    {
+     "w": "kamerası",
+     "start": 8.66,
+     "end": 9.12,
+     "p": 1.0
+    },
+    {
+     "w": "uygulaması",
+     "start": 9.12,
+     "end": 9.52,
+     "p": 1.0
+    },
+    {
+     "w": "kur.",
+     "start": 9.52,
+     "end": 9.7,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 9.88,
+   "end": 10.74,
+   "text": "Alfred gibi.",
+   "kelimeler": [
+    {
+     "w": "Alfred",
+     "start": 9.88,
+     "end": 10.46,
+     "p": 0.977
+    },
+    {
+     "w": "gibi.",
+     "start": 10.46,
+     "end": 10.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.9,
+   "end": 13.5,
+   "text": "Aynı uygulamayı şu an kullandığın telefona da kur.",
+   "kelimeler": [
+    {
+     "w": "Aynı",
+     "start": 10.9,
+     "end": 11.46,
+     "p": 1.0
+    },
+    {
+     "w": "uygulamayı",
+     "start": 11.46,
+     "end": 11.96,
+     "p": 1.0
+    },
+    {
+     "w": "şu",
+     "start": 11.96,
+     "end": 12.12,
+     "p": 1.0
+    },
+    {
+     "w": "an",
+     "start": 12.12,
+     "end": 12.28,
+     "p": 1.0
+    },
+    {
+     "w": "kullandığın",
+     "start": 12.28,
+     "end": 12.78,
+     "p": 0.999
+    },
+    {
+     "w": "telefona",
+     "start": 12.78,
+     "end": 13.22,
+     "p": 0.997
+    },
+    {
+     "w": "da",
+     "start": 13.22,
+     "end": 13.32,
+     "p": 1.0
+    },
+    {
+     "w": "kur.",
+     "start": 13.32,
+     "end": 13.5,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 13.6,
+   "end": 15.78,
+   "text": "Ve ikisinde de aynı hesapla giriş yap.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 13.6,
+     "end": 14.0,
+     "p": 0.999
+    },
+    {
+     "w": "ikisinde",
+     "start": 14.0,
+     "end": 14.4,
+     "p": 0.999
+    },
+    {
+     "w": "de",
+     "start": 14.4,
+     "end": 14.6,
+     "p": 1.0
+    },
+    {
+     "w": "aynı",
+     "start": 14.6,
+     "end": 14.9,
+     "p": 1.0
+    },
+    {
+     "w": "hesapla",
+     "start": 14.9,
+     "end": 15.32,
+     "p": 0.999
+    },
+    {
+     "w": "giriş",
+     "start": 15.32,
+     "end": 15.6,
+     "p": 1.0
+    },
+    {
+     "w": "yap.",
+     "start": 15.6,
+     "end": 15.78,
+     "p": 0.993
+    }
+   ]
+  },
+  {
+   "start": 15.86,
+   "end": 17.26,
+   "text": "Eski telefon artık kamera.",
+   "kelimeler": [
+    {
+     "w": "Eski",
+     "start": 15.86,
+     "end": 16.32,
+     "p": 1.0
+    },
+    {
+     "w": "telefon",
+     "start": 16.32,
+     "end": 16.68,
+     "p": 0.941
+    },
+    {
+     "w": "artık",
+     "start": 16.68,
+     "end": 16.84,
+     "p": 0.916
+    },
+    {
+     "w": "kamera.",
+     "start": 16.84,
+     "end": 17.26,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 17.46,
+   "end": 18.48,
+   "text": "Yenisi de ekran.",
+   "kelimeler": [
+    {
+     "w": "Yenisi",
+     "start": 17.46,
+     "end": 18.04,
+     "p": 0.99
+    },
+    {
+     "w": "de",
+     "start": 18.04,
+     "end": 18.16,
+     "p": 1.0
+    },
+    {
+     "w": "ekran.",
+     "start": 18.16,
+     "end": 18.48,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 18.62,
+   "end": 19.96,
+   "text": "Peki pil bitince ne olacak?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 18.62,
+     "end": 18.98,
+     "p": 0.999
+    },
+    {
+     "w": "pil",
+     "start": 18.98,
+     "end": 19.2,
+     "p": 0.998
+    },
+    {
+     "w": "bitince",
+     "start": 19.2,
+     "end": 19.56,
+     "p": 1.0
+    },
+    {
+     "w": "ne",
+     "start": 19.56,
+     "end": 19.74,
+     "p": 1.0
+    },
+    {
+     "w": "olacak?",
+     "start": 19.74,
+     "end": 19.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 20.18,
+   "end": 21.58,
+   "text": "İşin püf noktası da burada.",
+   "kelimeler": [
+    {
+     "w": "İşin",
+     "start": 20.18,
+     "end": 20.72,
+     "p": 0.999
+    },
+    {
+     "w": "püf",
+     "start": 20.72,
+     "end": 20.88,
+     "p": 0.995
+    },
+    {
+     "w": "noktası",
+     "start": 20.88,
+     "end": 21.24,
+     "p": 1.0
+    },
+    {
+     "w": "da",
+     "start": 21.24,
+     "end": 21.34,
+     "p": 1.0
+    },
+    {
+     "w": "burada.",
+     "start": 21.34,
+     "end": 21.58,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 21.78,
+   "end": 23.44,
+   "text": "Eski telefonu şarja takılı bırak.",
+   "kelimeler": [
+    {
+     "w": "Eski",
+     "start": 21.78,
+     "end": 22.16,
+     "p": 1.0
+    },
+    {
+     "w": "telefonu",
+     "start": 22.16,
+     "end": 22.64,
+     "p": 0.987
+    },
+    {
+     "w": "şarja",
+     "start": 22.64,
+     "end": 22.92,
+     "p": 0.979
+    },
+    {
+     "w": "takılı",
+     "start": 22.92,
+     "end": 23.22,
+     "p": 1.0
+    },
+    {
+     "w": "bırak.",
+     "start": 23.22,
+     "end": 23.44,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 23.56,
+   "end": 26.42,
+   "text": "Ama ısınmasın diye güneş almayan, hava dar bir yere koy.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 23.56,
+     "end": 23.96,
+     "p": 0.999
+    },
+    {
+     "w": "ısınmasın",
+     "start": 23.96,
+     "end": 24.5,
+     "p": 0.999
+    },
+    {
+     "w": "diye",
+     "start": 24.5,
+     "end": 24.6,
+     "p": 1.0
+    },
+    {
+     "w": "güneş",
+     "start": 24.6,
+     "end": 24.94,
+     "p": 1.0
+    },
+    {
+     "w": "almayan,",
+     "start": 24.94,
+     "end": 25.38,
+     "p": 0.965
+    },
+    {
+     "w": "hava",
+     "start": 25.4,
+     "end": 25.74,
+     "p": 0.656
+    },
+    {
+     "w": "dar",
+     "start": 25.74,
+     "end": 25.86,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 25.86,
+     "end": 26.04,
+     "p": 1.0
+    },
+    {
+     "w": "yere",
+     "start": 26.04,
+     "end": 26.22,
+     "p": 1.0
+    },
+    {
+     "w": "koy.",
+     "start": 26.22,
+     "end": 26.42,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 26.66,
+   "end": 29.78,
+   "text": "Kamerayı kapıya veya kamerayı kapıya ya da balkona çevir.",
+   "kelimeler": [
+    {
+     "w": "Kamerayı",
+     "start": 26.66,
+     "end": 27.24,
+     "p": 0.998
+    },
+    {
+     "w": "kapıya",
+     "start": 27.24,
+     "end": 27.56,
+     "p": 1.0
+    },
+    {
+     "w": "veya",
+     "start": 27.56,
+     "end": 27.76,
+     "p": 0.887
+    },
+    {
+     "w": "kamerayı",
+     "start": 27.76,
+     "end": 28.48,
+     "p": 0.968
+    },
+    {
+     "w": "kapıya",
+     "start": 28.48,
+     "end": 28.8,
+     "p": 1.0
+    },
+    {
+     "w": "ya",
+     "start": 28.8,
+     "end": 28.92,
+     "p": 0.999
+    },
+    {
+     "w": "da",
+     "start": 28.92,
+     "end": 29.02,
+     "p": 1.0
+    },
+    {
+     "w": "balkona",
+     "start": 29.02,
+     "end": 29.44,
+     "p": 1.0
+    },
+    {
+     "w": "çevir.",
+     "start": 29.44,
+     "end": 29.78,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 33.46,
+   "text": "Hareket algılamayı açarsan biri geçine telefonuna bildirim düşer.",
+   "kelimeler": [
+    {
+     "w": "Hareket",
+     "start": 30.0,
+     "end": 30.32,
+     "p": 0.847
+    },
+    {
+     "w": "algılamayı",
+     "start": 30.32,
+     "end": 30.84,
+     "p": 0.996
+    },
+    {
+     "w": "açarsan",
+     "start": 30.84,
+     "end": 31.38,
+     "p": 0.999
+    },
+    {
+     "w": "biri",
+     "start": 31.38,
+     "end": 31.64,
+     "p": 0.796
+    },
+    {
+     "w": "geçine",
+     "start": 31.64,
+     "end": 31.98,
+     "p": 0.894
+    },
+    {
+     "w": "telefonuna",
+     "start": 31.98,
+     "end": 32.52,
+     "p": 0.987
+    },
+    {
+     "w": "bildirim",
+     "start": 32.52,
+     "end": 33.14,
+     "p": 0.997
+    },
+    {
+     "w": "düşer.",
+     "start": 33.14,
+     "end": 33.46,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 33.54,
+   "end": 37.5,
+   "text": "Yani hem bir telefonu çöpten kurtardın hem evine bedava bir göz kazandın.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 33.54,
+     "end": 33.86,
+     "p": 0.998
+    },
+    {
+     "w": "hem",
+     "start": 33.86,
+     "end": 34.04,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 34.04,
+     "end": 34.24,
+     "p": 0.999
+    },
+    {
+     "w": "telefonu",
+     "start": 34.24,
+     "end": 34.7,
+     "p": 0.999
+    },
+    {
+     "w": "çöpten",
+     "start": 34.7,
+     "end": 35.04,
+     "p": 0.999
+    },
+    {
+     "w": "kurtardın",
+     "start": 35.04,
+     "end": 35.58,
+     "p": 1.0
+    },
+    {
+     "w": "hem",
+     "start": 35.58,
+     "end": 35.86,
+     "p": 0.891
+    },
+    {
+     "w": "evine",
+     "start": 35.86,
+     "end": 36.26,
+     "p": 0.999
+    },
+    {
+     "w": "bedava",
+     "start": 36.26,
+     "end": 36.68,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 36.68,
+     "end": 36.82,
+     "p": 0.999
+    },
+    {
+     "w": "göz",
+     "start": 36.82,
+     "end": 37.0,
+     "p": 1.0
+    },
+    {
+     "w": "kazandın.",
+     "start": 37.0,
+     "end": 37.5,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 37.72,
+   "end": 40.9,
+   "text": "Yarın ortada kablo yok ama telefon şarj oluyor.",
+   "kelimeler": [
+    {
+     "w": "Yarın",
+     "start": 37.72,
+     "end": 38.4,
+     "p": 1.0
+    },
+    {
+     "w": "ortada",
+     "start": 38.4,
+     "end": 38.86,
+     "p": 0.996
+    },
+    {
+     "w": "kablo",
+     "start": 38.86,
+     "end": 39.22,
+     "p": 1.0
+    },
+    {
+     "w": "yok",
+     "start": 39.22,
+     "end": 39.36,
+     "p": 1.0
+    },
+    {
+     "w": "ama",
+     "start": 39.36,
+     "end": 39.66,
+     "p": 0.999
+    },
+    {
+     "w": "telefon",
+     "start": 39.66,
+     "end": 40.28,
+     "p": 0.999
+    },
+    {
+     "w": "şarj",
+     "start": 40.28,
+     "end": 40.72,
+     "p": 1.0
+    },
+    {
+     "w": "oluyor.",
+     "start": 40.72,
+     "end": 40.9,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 41.04,
+   "end": 41.56,
+   "text": "Nasıl?",
+   "kelimeler": [
+    {
+     "w": "Nasıl?",
+     "start": 41.04,
+     "end": 41.56,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}
