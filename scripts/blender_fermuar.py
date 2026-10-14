@@ -73,7 +73,7 @@ for i in range(DIS):
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.07, location=(-s * 0.1, -0.05, z + 0.03))
     tum = bpy.context.active_object
     tum.data.materials.append(PIRINC)
-    serit = kutu(f"serit{i}", (1.1, 0.05, ADIM * 1.02), (s * (0.27 + 0.55), 0.02, z), KUMAS)
+    serit = kutu(f"serit{i}", (1.1, 0.05, ADIM * 2.04), (s * (0.27 + 0.55), 0.02, z), KUMAS)
     for o in (dis, tum, serit):
         o.parent = kok
         o.matrix_parent_inverse = kok.matrix_world.inverted()
