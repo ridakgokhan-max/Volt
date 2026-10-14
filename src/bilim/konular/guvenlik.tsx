@@ -242,7 +242,7 @@ const Bildirim: S = ({ t, ws, ses }) => {
           </g>
         ) : null}
       </g>
-      {t > tb - 0.05 ? <LottieKlip ad="bildirim" x={700} y={260} w={320} h={320} t={t} bas={tb - 0.05} /> : null}
+      {t > tb - 0.05 ? <LottieKlip ad="bildirim" x={700} y={260} w={320} h={320} t={t} bas={tb - 0.05} dongu /> : null}
       <Merakli x={140} y={1240} s={0.5} t={t} hareket={t > tb ? "sasir" : "dur"} kostum="usta" agiz={ses(t)} />
     </g>
   );
