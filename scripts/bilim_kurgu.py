@@ -133,8 +133,10 @@ def main(konu):
             return GAP_DEF
         return GAP.get(last["w"].strip()[-1:], GAP_DEF)
 
-    out, mapping, tnew = [], [], 0.12
-    out.append(np.zeros(int(0.12 * SR)))
+    # açılış: videonun en çarpıcı anı başta kısaca gösterilir, ses ondan sonra başlar
+    AC = float(K["acilis"]["sure"]) if K.get("acilis") else 0.0
+    out, mapping, tnew = [], [], 0.12 + AC
+    out.append(np.zeros(int((0.12 + AC) * SR)))
     for i, (a, b) in enumerate(pieces):
         a0, b0 = max(0, a - PAD), min(total, b + PAD)
         seg = x[int(a0 * SR):int(b0 * SR)].copy()
@@ -221,7 +223,7 @@ def main(konu):
     # --- sahneler ---
     sc = []
     for j, s in enumerate(K["sahneler"]):
-        bas = 0.0 if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
+        bas = AC if j == 0 else round(kel[idx(s["ilk"], sc[-1]["bas"] if sc else 0)]["s"] - 0.22, 3)
         ev = {f"vur{n}": 0 for n in range(len(s.get("vur", [])))}
         sc.append({"id": s["id"], "bg": s["bg"], "bas": bas, "son": 0, "ev": ev, "_vur": s.get("vur", []), "gecis": s.get("gecis", "daire"), **{a: s[a] for a in ("gorsel", "video", "video_kutu", "derinlik") if s.get(a)}})
     for j, s in enumerate(sc):
@@ -248,9 +250,15 @@ def main(konu):
         sm[i] = env[i] if env[i] > sm[i - 1] else sm[i - 1] * 0.55 + env[i] * 0.45
     data = {"konu": konu, "baslik": K["baslik"], "audio": f"bilim/{konu}/mix.m4a", "sure": round(sure, 3),
             "kelimeler": kel, "satirlar": sat, "sahneler": sc, "agiz": [round(float(v), 2) for v in sm]}
-    for alan in ("seri", "kanca", "dongu"):  # büyüme özellikleri: seri rozeti, ilk 2 sn kancası, döngü sonu
+    for alan in ("seri", "kanca", "dongu", "acilis"):  # büyüme özellikleri: seri rozeti, kanca, döngü sonu, açılış
         if alan in K:
-            data[alan] = K[alan]
+            data[alan] = dict(K[alan]) if isinstance(K[alan], dict) else K[alan]
+    if AC:  # açılış anı bir kelimeyle verildiyse sahne içindeki saniyeye çevir
+        a = data["acilis"]
+        hedef = next(x for x in sc if x["id"] == a["sahne"])
+        if "kelime" in a:
+            a["an"] = round(kel[ara(a["kelime"], hedef["bas"])]["s"] - hedef["bas"] + float(a.get("ofset", 0)), 3)
+        a.setdefault("an", 0.0)
     os.makedirs(os.path.join(ROOT, "src", "bilim", "data"), exist_ok=True)
     json.dump(data, open(os.path.join(ROOT, "src", "bilim", "data", f"{konu}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
@@ -263,8 +271,10 @@ def main(konu):
     wt = lambda i: kel[i]["s"]  # noqa: E731
     starts = {s["id"]: s["bas"] for s in sc}
     for i, s in enumerate(sc):
-        if i > 0:
+        if i > 0 or AC:
             B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), 0.55)
+    if AC:  # açılış vuruşu
+        B.put(sfx, 0.0, B.katman(B.efekt("vurus", yedek=B.boom), B.riser(max(0.4, AC))), 0.6)
     import inspect
     if "ara" in inspect.signature(mod.cues).parameters:
         mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])

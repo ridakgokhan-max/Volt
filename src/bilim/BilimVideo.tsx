@@ -2,6 +2,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, getInputProps, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
+import { CameraMotionBlur } from "@remotion/motion-blur";
 import { data, SAHNE } from "./aktif";
 import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, lerp, sp, W } from "./kit";
 
@@ -27,7 +28,9 @@ const A = ALAN[PLATFORM] || ALAN.instagram;
 // ---------- büyüme özellikleri (kurgu.json -> data) ----------
 type Seri = { no: number; toplam: number; kategori: string };
 type Kanca = { yazi: string; alt?: string; sure?: number };
-const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[] };
+type Acilis = { sahne: string; an: number; sure: number };
+const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis };
+const AC = D.acilis;
 const KANCA_SURE = D.kanca ? D.kanca.sure ?? 2 : 0;
 const DONGU = 15; // döngü sonu: son 15 karede ilk sahneye karışır
 const AGIZ = D.agiz || [];
@@ -60,12 +63,27 @@ const findWord = (from: number, txt: string, n = 0) => {
   return from + 1;
 };
 
-const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number; donus?: boolean }> = ({ sc, idx, lead, donus }) => {
+type WrapProps = { sc: Sahne; idx: number; lead: number; donus?: boolean; sabitT?: number; acilis?: boolean };
+/** Geçiş karelerinde sinema kamerası gibi hareket bulanıklığı (motion blur) */
+const SceneWrap: React.FC<WrapProps> = (p) => {
   const f = useCurrentFrame();
-  const t = donus ? 0 : (f - lead) / FPS; // donus: döngü karesi, ilk sahnenin ilk hali // sahnenin gerçek başlangıcına göre saniye
+  const gecisVar = !p.acilis && (p.idx > 0 || !!AC || p.donus) && f < (p.donus ? DONGU : OV);
+  return gecisVar ? (
+    <CameraMotionBlur shutterAngle={200} samples={5}>
+      <SceneIc {...p} />
+    </CameraMotionBlur>
+  ) : (
+    <SceneIc {...p} />
+  );
+};
+
+const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) => {
+  const f = useCurrentFrame();
+  // donus: döngü karesi (ilk görüntünün sabit hali); acilis: videonun en çarpıcı anı, başta kısaca oynar
+  const t = donus ? sabitT ?? 0 : sabitT !== undefined ? sabitT + f / FPS : (f - lead) / FPS;
   const d = sc.son - sc.bas;
   const Draw = SAHNE[sc.id];
-  const rev = idx === 0 && !donus ? 1 : ez(f / (donus ? DONGU : OV));
+  const rev = acilis || (idx === 0 && !donus && !AC) ? 1 : ez(f / (donus ? DONGU : OV));
   const g: Gecis = donus ? "zoom" : sc.gecis || "daire";
   const zoom = 1 + 0.045 * cl(t / Math.max(d, 0.1));
   // giriş geçişi
@@ -97,6 +115,7 @@ const SceneWrap: React.FC<{ sc: Sahne; idx: number; lead: number; donus?: boolea
     }
   });
   const ink = sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";
+  if (acilis) outer.transform = `scale(${1.14 - 0.14 * ez(f / 10)})`;
   return (
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>
@@ -265,9 +284,14 @@ const Ust: React.FC = () => {
 
 export const BilimVideo: React.FC = () => (
   <AbsoluteFill style={{ background: "#111", ["--font" as string]: fontFamily } as React.CSSProperties}>
+    {AC ? (
+      <Sequence from={0} durationInFrames={Math.round(AC.sure * FPS) + OV}>
+        <SceneWrap sc={SC.find((s) => s.id === AC.sahne) || SC[0]} idx={Math.max(0, SC.findIndex((s) => s.id === AC.sahne))} lead={0} sabitT={AC.an} acilis />
+      </Sequence>
+    ) : null}
     {SC.map((sc, idx) => {
       const real = Math.round(sc.bas * FPS);
-      const from = Math.max(0, real - (idx === 0 ? 0 : OV));
+      const from = Math.max(0, real - (idx === 0 && !AC ? 0 : OV));
       const dur = Math.round(sc.son * FPS) - from + (idx === SC.length - 1 ? 30 : OV);
       return (
         <Sequence key={sc.id} from={from} durationInFrames={dur}>
@@ -277,7 +301,11 @@ export const BilimVideo: React.FC = () => (
     })}
     {D.dongu ? (
       <Sequence from={bilimSure() - DONGU} durationInFrames={DONGU}>
-        <SceneWrap sc={SC[0]} idx={0} lead={0} donus />
+        {AC ? (
+          <SceneWrap sc={SC.find((s) => s.id === AC.sahne) || SC[0]} idx={0} lead={0} donus sabitT={AC.an} />
+        ) : (
+          <SceneWrap sc={SC[0]} idx={0} lead={0} donus />
+        )}
       </Sequence>
     ) : null}
     <Ust />
