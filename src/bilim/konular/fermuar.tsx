@@ -1,7 +1,7 @@
 // Konu: Fermuarın hüzünlü hikâyesi (ws("kelime") = sahne içindeki saniye)
 import React from "react";
 import type { SceneProps } from "../BilimVideo";
-import { ACC, ap, Arrow, BLUE, Check, CHALK, cl, Cross, ez, GREEN, Glow, INK, Kamera, kameraAn, Kisi, lerp, Lock, Odak, Phone, RED, sp, Tag, Txt } from "../kit";
+import { ACC, ap, Arrow, BLUE, Check, CHALK, cl, Cross, ez, GREEN, Glow, INK, Kisi, lerp, Lock, Phone, RED, sp, Tag, Txt } from "../kit";
 import { Merakli } from "../merakli";
 import { Saat } from "../nesneler";
 
@@ -49,16 +49,15 @@ const Zip: React.FC<{ x: number; y0: number; y1: number; slider: number; tw?: nu
 const Giris: S = ({ t, ws, ses }) => {
   const z = ez(t / 1.0);
   const th = ws("hüzünlü");
-  const KAM = [{ t: 0, x: 540, y: 330, z: 1.9 }, { t: 1.0, x: 540, y: 1180, z: 1.9 }, { t: 1.9, x: 540, y: 760, z: 1 }];
   return (
-    <Kamera t={t} anlar={KAM}>
+    <g>
       <Zip x={540} y0={260} y1={1260} slider={z} tw={44} spread={360} teeth={30} />
       <g transform={`translate(540 760) scale(${sp(t, 2.05, 9)}) rotate(-4)`}>
         <rect x={-330} y={-95} width={660} height={190} rx={30} fill={ACC} stroke={INK} strokeWidth={9} />
         <text x={0} y={42} textAnchor="middle" fontSize={130} fontWeight={900} fill={INK} style={font}>FERMUAR</text>
       </g>
       <Merakli kostum="sapka" agiz={ses(t)} x={170} y={1230} s={0.75} t={t} hareket={t > th ? "uzgun" : "dur"} o={ap(t, 2.0, 0.3)} />
-    </Kamera>
+    </g>
   );
 };
 
@@ -105,8 +104,6 @@ const Judson: S = ({ t, ws, ses }) => {
         <path d={`M -20 -10 q 40 ${30 + Math.sin(t * 5) * 10} 10 70 q -40 20 -60 -10`} stroke="#f3e2bf" strokeWidth={5} fill="none" />
         <Cross cx={0} cy={-20} r={120} k={ap(t, ws("uğraşmamak"), 0.4)} sw={14} />
       </g>
-      <Odak id="od-pat" t={t} a={tp - 0.1} b={ta - 0.3} x={760} y={860} rx={240} ry={300} />
-      <Odak id="od-ayk" t={t} a={ta} x={260} y={1040} rx={180} ry={160} />
     </g>
   );
 };
@@ -144,8 +141,6 @@ const Sorun: S = ({ t, ws, ev, ses }) => {
           <text x={0} y={14} textAnchor="middle" fontSize={34} fontWeight={900} fill={INK} style={font}>POP!</text>
         </g>
       ) : null}
-      <Odak id="od-kart" t={t} a={tk} b={tk + 1.6} x={800} y={560} rx={240} ry={200} />
-      <Odak id="od-pop" t={t} a={tv} b={tv + 1.2} x={x + 40} y={1110} rx={140} ry={120} renk={RED} />
       {/* yüz çeviren kalabalık */}
       {t > ty
         ? [0, 1, 2, 3].map((i) => {
@@ -167,10 +162,8 @@ const Sundback: S = ({ t, ws, ses }) => {
   const year = Math.round(lerp(1893, 1913, ez((t - t20) / 1.4)));
   const hook = ap(t, tk - 0.2, 0.8);
   const teeth = ap(t, td - 0.6, 0.9);
-  const KAM = [{ t: 0, x: 540, y: 760, z: 1 }, { t: tk - 0.3, x: 540, y: 760, z: 1 }, { t: tk + 0.3, x: 290, y: 860, z: 1.5 }, { t: td - 0.35, x: 290, y: 860, z: 1.5 }, { t: td + 0.3, x: 790, y: 860, z: 1.5 }, { t: td + 2.0, x: 790, y: 860, z: 1.5 }, { t: td + 2.6, x: 540, y: 760, z: 1 }];
   return (
-    <Kamera t={t} anlar={KAM}>
-      <g opacity={1 - cl((kameraAn(t, KAM).z - 1) / 0.3)}>
+    <g>
       <g transform="translate(540 390)">
         <rect x={-200} y={-80} width={400} height={160} rx={20} fill="#0f3a66" stroke="#cfe6ff" strokeWidth={6} />
         <text x={0} y={45} textAnchor="middle" fontSize={120} fontWeight={900} fill={t >= t13 ? ACC : "#ffffff"} style={{ ...font, fontVariantNumeric: "tabular-nums" }}>{year}</text>
@@ -186,7 +179,6 @@ const Sundback: S = ({ t, ws, ses }) => {
           <rect x={-40} y={-7} width={80} height={14} fill="#fecc00" />
         </g>
         <text x={40} y={18} textAnchor="middle" fontSize={50} fontWeight={900} fill="#fff" style={font}>Gideon Sundback</text>
-      </g>
       </g>
       {/* isim gelene kadar takvim yaprakları uçuşur, sonra Meraklı düşünür */}
       {t < tk - 0.2
@@ -226,9 +218,7 @@ const Sundback: S = ({ t, ws, ses }) => {
         <Txt x={0} y={240} text="DİŞ" size={44} color={ACC} o={teeth} />
         <g transform="translate(150 -170)"><Check cx={0} cy={0} s={0.45} k={ap(t, td, 0.4)} /></g>
       </g>
-      <Odak id="od-kanca" t={t} a={tk} b={td - 0.3} x={290} y={910} rx={230} ry={270} renk="#cfe6ff" />
-      <Odak id="od-dis" t={t} a={td} b={td + 2.2} x={790} y={910} rx={230} ry={270} />
-    </Kamera>
+    </g>
   );
 };
 
@@ -246,8 +236,6 @@ const Mekanizma: S = ({ t, ws, ev, ses }) => {
           <Lock cx={0} cy={0} s={0.8} fill={ACC} />
         </g>
       ) : null}
-      <Odak id="od-surgu" t={t} a={0.3} b={tl - 0.2} x={360} y={lerp(330, 1230, sl) + 20} rx={130} ry={150} />
-      <Odak id="od-kilit" t={t} a={tl} b={th - 0.2} x={700} y={1120} rx={110} />
       <Tag x={540} y={300} text="BUGÜN HÂLÂ AYNI FİKİR" size={46} k={sp(t, th)} bg={GREEN} color="#fff" />
       <Merakli kostum="sapka" agiz={ses(t)} x={930} y={1235} s={0.6} t={t - th} hareket={t > th ? "aha" : "dusun"} ink={CHALK} o={ap(t, 0.8)} />
     </g>
@@ -264,7 +252,6 @@ const Isim: S = ({ t, ws, ses }) => {
     <g>
       <rect x={0} y={-40} width={1080} height={1960} fill="#5a3b1c" opacity={0.12} />
       <Tag x={540} y={370} text="1920'ler" size={64} k={sp(t, ty)} bg="#f3e2bf" />
-      <Kamera t={t} anlar={[{ t: 0, x: 540, y: 760, z: 1 }, { t: tz - 0.8, x: 540, y: 760, z: 1 }, { t: tz - 0.25, x: 330, y: 930, z: 1.55 }, { t: tz + 0.8, x: 330, y: 930, z: 1.55 }, { t: tz + 1.4, x: 540, y: 760, z: 1 }]}>
       {/* lastik çizme (galoş) — fermuarı "zipper" anında kapanır */}
       <g transform={`translate(330 1010) scale(${sp(t, ty + 0.3)})`} opacity={cl(sp(t, ty + 0.3) * 1.5)}>
         <path d="M -120 -230 L 40 -230 L 50 40 Q 170 50 200 120 L 200 170 L -130 170 Z" fill="#1d1d22" stroke="#f3e2bf" strokeWidth={7} strokeLinejoin="round" />
@@ -277,8 +264,6 @@ const Isim: S = ({ t, ws, ses }) => {
         })}
         <rect x={-20} y={lerp(140, -230, ez((t - (tz - 0.25)) / 0.5)) - 20} width={40} height={40} rx={8} fill="#c9c2b4" stroke={INK} strokeWidth={4} />
       </g>
-        <Odak id="od-cizme" t={t} a={tz - 0.3} b={tz + 1.0} x={330} y={960} rx={120} ry={220} />
-      </Kamera>
       {zk > 0 ? (
         <g transform={`translate(${lerp(-700, 540, zk)} 760) skewX(${(1 - zk) * -20})`}>
           {[0, 1, 2, 3].map((i) => <line key={i} x1={-560 - i * 30} y1={-60 + i * 40} x2={-380 - i * 10} y2={-60 + i * 40} stroke={INK} strokeWidth={8} strokeLinecap="round" opacity={(1 - zk) * 0.8 + 0.2} />)}
@@ -302,9 +287,8 @@ const Yarin: S = ({ t, ws, ses }) => {
   const tg = ws("güvenlik");
   const dr = ez((t - tc) / 0.5);
   const ph = sp(t, tc + 0.3);
-  const KAM = [{ t: 0, x: 540, y: 760, z: 1 }, { t: tc - 0.3, x: 560, y: 820, z: 1.15 }, { t: tc + 0.2, x: 620, y: 960, z: 1.45 }, { t: tc + 0.8, x: 620, y: 700, z: 1.35 }, { t: tb - 0.2, x: 620, y: 700, z: 1.35 }, { t: tb + 0.4, x: 540, y: 760, z: 1 }];
   return (
-    <Kamera t={t} anlar={KAM}>
+    <g>
       <g transform="translate(620 860)">
         <rect x={-280} y={-260} width={560} height={420} rx={20} fill="#c98f5b" stroke={INK} strokeWidth={8} />
         <rect x={-250} y={-230} width={500} height={150} rx={12} fill="#b97a45" stroke={INK} strokeWidth={6} />
@@ -323,8 +307,7 @@ const Yarin: S = ({ t, ws, ses }) => {
       <Tag x={540} y={330} text="YARIN" size={60} k={sp(t, 0.1)} bg={ACC} />
       <Tag x={620} y={1200} text="BEDAVA KAMERA" size={48} k={sp(t, tb)} bg={GREEN} color="#fff" />
       <Merakli kostum="sapka" agiz={ses(t)} x={180} y={1230} s={0.75} t={t} hareket={t > tc ? "isaret" : "salla"} />
-      <Odak id="od-tel" t={t} a={tg - 0.1} x={620} y={560} rx={170} ry={230} renk={RED} />
-    </Kamera>
+    </g>
   );
 };
 
