@@ -120,7 +120,7 @@ const Sorun: S = ({ t, ws, ev, ses }) => {
     <g>
       <line x1={0} y1={1200} x2={1080} y2={1200} stroke={INK} strokeWidth={7} />
       {/* açılan toka kartı */}
-      <g transform={`translate(800 470) scale(${sp(t, 0.3)})`}>
+      <g transform={`translate(800 560) scale(${sp(t, 0.3)})`}>
         <rect x={-200} y={-150} width={400} height={300} rx={26} fill="#fff4ea" stroke={INK} strokeWidth={7} />
         {[0, 1, 2, 3, 4].map((i) => {
           const o = popK * (i % 2 ? 1 : -1) * (20 + i * 6) * (0.6 + 0.4 * Math.sin(t * 8 + i));
@@ -133,7 +133,7 @@ const Sorun: S = ({ t, ws, ev, ses }) => {
         })}
         <Txt x={0} y={190} text="kendi kendine açılıyor" size={34} o={popK} color={RED} />
       </g>
-      {t > tk ? <Tag x={800} y={260} text="SIK SIK AÇILIYOR" size={40} k={sp(t, tk)} bg={RED} color="#fff" /> : null}
+      {t > tk ? <Tag x={760} y={330} text="SIK SIK AÇILIYOR" size={40} k={sp(t, tk)} bg={RED} color="#fff" /> : null}
       <Merakli kostum="sapka" agiz={ses(t)} x={x} y={1200} s={1.05} t={t} hareket={walking ? "yuru" : t < ty ? "sasir" : "uzgun"} />
       {t > tv && t < tv + 0.9 ? (
         <g transform={`translate(${x + 70} 1110) scale(${sp(t, tv, 7)})`}>
