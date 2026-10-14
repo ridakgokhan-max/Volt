@@ -370,3 +370,51 @@ export const Glow: React.FC<{ cx: number; cy: number; r: number; color?: string;
     <circle cx={cx} cy={cy} r={r} fill={`url(#${id})`} />
   </g>
 );
+
+// ---------- kamera: tek çizim üzerinde gezinme ----------
+/** t anında kameranın baktığı nokta (x,y) ve yakınlık (z). anlar zamana göre sıralı. */
+export type KameraAn = { t: number; x: number; y: number; z: number };
+export const kameraAn = (t: number, anlar: KameraAn[]) => {
+  if (t <= anlar[0].t) return anlar[0];
+  for (let i = 0; i < anlar.length - 1; i++) {
+    const a = anlar[i];
+    const b = anlar[i + 1];
+    if (t <= b.t) {
+      const k = ez((t - a.t) / Math.max(b.t - a.t, 0.001));
+      return { t, x: lerp(a.x, b.x, k), y: lerp(a.y, b.y, k), z: lerp(a.z, b.z, k) };
+    }
+  }
+  return anlar[anlar.length - 1];
+};
+export const Kamera: React.FC<{ t: number; anlar: KameraAn[]; children: React.ReactNode }> = ({ t, anlar, children }) => {
+  const k = kameraAn(t, anlar);
+  return <g transform={`translate(540 920) scale(${k.z}) translate(${-k.x} ${-k.y})`}>{children}</g>;
+};
+
+// ---------- odak: anlatılan parça parlar, gerisi kararır ----------
+/** a..b saniyeleri arasında (x,y) çevresi aydınlık kalır; rx/ry elips yarıçapları */
+export const Odak: React.FC<{ id: string; t: number; a: number; b?: number; x: number; y: number; rx: number; ry?: number; renk?: string; koyu?: number }> = ({
+  id, t, a, b = 1e9, x, y, rx, ry, renk = ACC, koyu = 0.62,
+}) => {
+  const k = ap(t, a, 0.35) * (1 - ap(t, b, 0.35));
+  if (k <= 0.005) return null;
+  const r2 = ry ?? rx;
+  const nefes = 1 + 0.03 * Math.sin(t * 6);
+  return (
+    <g pointerEvents="none">
+      <defs>
+        <radialGradient id={`${id}-g`}>
+          <stop offset="0.82" stopColor="#000" />
+          <stop offset="1" stopColor="#fff" />
+        </radialGradient>
+        <mask id={`${id}-m`}>
+          <rect x={-3000} y={-3000} width={7000} height={8000} fill="#fff" />
+          <ellipse cx={x} cy={y} rx={rx * nefes} ry={r2 * nefes} fill={`url(#${id}-g)`} />
+        </mask>
+      </defs>
+      <rect x={-3000} y={-3000} width={7000} height={8000} fill="#05070c" opacity={koyu * k} mask={`url(#${id}-m)`} />
+      <ellipse cx={x} cy={y} rx={rx * nefes} ry={r2 * nefes} fill="none" stroke={renk} strokeWidth={6} strokeDasharray="22 14"
+        strokeDashoffset={-t * 60} opacity={0.9 * k} />
+    </g>
+  );
+};
