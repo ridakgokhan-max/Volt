@@ -1,0 +1,62 @@
+{
+ "model": "large-v3",
+ "sure": 5.419,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 1.58,
+   "text": "Tavanın 59 sütun...",
+   "kelimeler": [
+    {
+     "w": "Tavanın",
+     "start": 0.0,
+     "end": 0.46,
+     "p": 0.707
+    },
+    {
+     "w": "59",
+     "start": 0.46,
+     "end": 0.84,
+     "p": 0.954
+    },
+    {
+     "w": "sütun...",
+     "start": 0.84,
+     "end": 1.58,
+     "p": 0.714
+    }
+   ]
+  },
+  {
+   "start": 3.56,
+   "end": 5.38,
+   "text": "Tavanını 59 sütun taşıyor.",
+   "kelimeler": [
+    {
+     "w": "Tavanını",
+     "start": 3.5,
+     "end": 3.98,
+     "p": 0.964
+    },
+    {
+     "w": "59",
+     "start": 3.98,
+     "end": 4.46,
+     "p": 0.994
+    },
+    {
+     "w": "sütun",
+     "start": 4.46,
+     "end": 5.08,
+     "p": 0.998
+    },
+    {
+     "w": "taşıyor.",
+     "start": 5.08,
+     "end": 5.38,
+     "p": 0.957
+    }
+   ]
+  }
+ ]
+}

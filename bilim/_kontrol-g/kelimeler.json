@@ -1,0 +1,74 @@
+{
+ "model": "large-v3",
+ "sure": 6.912,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.76,
+   "text": "Bu hızla olimpik bir havuzu 13 saniye...",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 0.0,
+     "end": 0.58,
+     "p": 0.021
+    },
+    {
+     "w": "hızla",
+     "start": 0.58,
+     "end": 1.64,
+     "p": 0.993
+    },
+    {
+     "w": "olimpik",
+     "start": 1.64,
+     "end": 2.2,
+     "p": 0.948
+    },
+    {
+     "w": "bir",
+     "start": 2.2,
+     "end": 2.3,
+     "p": 0.997
+    },
+    {
+     "w": "havuzu",
+     "start": 2.3,
+     "end": 2.74,
+     "p": 0.993
+    },
+    {
+     "w": "13",
+     "start": 2.74,
+     "end": 3.2,
+     "p": 0.944
+    },
+    {
+     "w": "saniye...",
+     "start": 3.2,
+     "end": 3.76,
+     "p": 0.837
+    }
+   ]
+  },
+  {
+   "start": 3.76,
+   "end": 6.28,
+   "text": "Bu hızla...",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 3.76,
+     "end": 4.74,
+     "p": 0.984
+    },
+    {
+     "w": "hızla...",
+     "start": 4.74,
+     "end": 6.28,
+     "p": 0.81
+    }
+   ]
+  }
+ ]
+}

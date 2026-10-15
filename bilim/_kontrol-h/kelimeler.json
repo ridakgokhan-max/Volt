@@ -1,0 +1,49 @@
+{
+ "model": "large-v3",
+ "sure": 4.203,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.98,
+   "text": "50 yılda... 50 yılda önleyeceği zarar...",
+   "kelimeler": [
+    {
+     "w": "50",
+     "start": 0.0,
+     "end": 0.12,
+     "p": 0.807
+    },
+    {
+     "w": "yılda...",
+     "start": 0.12,
+     "end": 0.46,
+     "p": 0.745
+    },
+    {
+     "w": "50",
+     "start": 0.46,
+     "end": 2.1,
+     "p": 0.943
+    },
+    {
+     "w": "yılda",
+     "start": 2.1,
+     "end": 2.66,
+     "p": 0.999
+    },
+    {
+     "w": "önleyeceği",
+     "start": 2.66,
+     "end": 3.52,
+     "p": 0.982
+    },
+    {
+     "w": "zarar...",
+     "start": 3.52,
+     "end": 3.98,
+     "p": 0.998
+    }
+   ]
+  }
+ ]
+}
