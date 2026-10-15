@@ -3,6 +3,8 @@ import React from "react";
 import { AbsoluteFill, Audio, getInputProps, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
 import { CameraMotionBlur } from "@remotion/motion-blur";
+import { CtaAdim, ctaGorunur, CtaVideo } from "./Cta";
+import { MerakliGorunur } from "./merakli";
 import { data, SAHNE } from "./aktif";
 import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, lerp, sp, W } from "./kit";
 
@@ -29,7 +31,7 @@ const A = ALAN[PLATFORM] || ALAN.instagram;
 type Seri = { no: number; toplam: number; kategori: string };
 type Kanca = { yazi: string; alt?: string; sure?: number };
 type Acilis = { sahne: string; an: number; sure: number };
-const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis; imza?: boolean };
+const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis; imza?: boolean; cta?: CtaAdim[] };
 const AC = D.acilis;
 const KANCA_SURE = D.kanca ? D.kanca.sure ?? 2 : 0;
 const DONGU = 15; // döngü sonu: son 15 karede ilk sahneye karışır
@@ -149,7 +151,9 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
           </div>
         ) : null}
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0, color: ink }}>
+          <MerakliGorunur.Provider value={1 - ctaGorunur(donus ? data.sure - (DONGU - f) / FPS : acilis ? f / FPS : sc.bas + t, D.cta || [])}>
           <g transform="translate(0 40)">{Draw ? <Draw t={t} d={d} ev={sc.ev} w={(i: number) => wordTime(i) - sc.bas} ws={(txt: string, n = 0) => findWord(sc.bas, txt, n) - sc.bas} ses={(tt: number) => sesAn(sc.bas + tt)} /> : null}</g>
+          </MerakliGorunur.Provider>
         </svg>
       </AbsoluteFill>
       {flash > 0 ? <AbsoluteFill style={{ background: "#fff", opacity: flash }} /> : null}
@@ -292,6 +296,17 @@ const Imza: React.FC = () => {
   );
 };
 
+/** Etkileşim çağrısı: Meraklı Instagram'ın beğen / yorum / takip düğmelerine dokunur */
+const Cta: React.FC = () => {
+  const f = useCurrentFrame();
+  if (!D.cta || !D.cta.length) return null;
+  return (
+    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>
+      <CtaVideo t={f / FPS} adimlar={D.cta} />
+    </svg>
+  );
+};
+
 const Ust: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
@@ -349,6 +364,7 @@ export const BilimVideo: React.FC = () => (
     <Ust />
     <Rozet />
     <Altyazi />
+    <Cta />
     <KancaYazi />
     <Audio src={staticFile(data.audio)} />
   </AbsoluteFill>

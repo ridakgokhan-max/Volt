@@ -172,5 +172,21 @@
    "ilk": "=yani",
    "gecis": "daire"
   }
- ]
+ ],
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "sığar"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "sence",
+   "ofset": 0.0
+  },
+  {
+   "tur": "takip",
+   "son": true
+  }
+ ],
+ "son_bosluk": 3.3
 }

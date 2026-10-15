@@ -3,6 +3,9 @@
 import React from "react";
 import { FPS } from "./kit";
 
+/** Sahne Meraklı'sının görünürlük çarpanı (CTA anında 0: o sırada CTA Meraklı'sı sahnede) */
+export const MerakliGorunur = React.createContext(1);
+
 const INK = "#2b2420";
 const ACC = "#ffcf3a";
 const RED = "#d64933";
@@ -264,6 +267,7 @@ export const hareketPoz = (h: Hareket, t: number, duygu?: Duygu): { p: Poz; dy: 
 export const Merakli: React.FC<{ x: number; y: number; s?: number; t: number; hareket?: Hareket; duygu?: Duygu; poz?: Poz; flip?: boolean; ink?: string; o?: number; kostum?: Kostum; agiz?: number }> = ({
   x, y, s = 1, t, hareket = "dur", duygu, poz, flip = false, ink, o = 1, kostum = "yok", agiz,
 }) => {
+  const gor = React.useContext(MerakliGorunur);
   const { p, dy } = hareketPoz(hareket, t, duygu);
   const blink = Math.floor(t * FPS) % 96 > 92 && !["happy", "laugh", "aha", "excited", "sleepy"].includes((poz?.mood || p.mood) as string);
   const fp: Poz = { ...p, ...(poz || {}) };
@@ -274,7 +278,7 @@ export const Merakli: React.FC<{ x: number; y: number; s?: number; t: number; ha
   }
   const shown = blink ? { ...fp, blink: true } : fp;
   return (
-    <g opacity={o} transform={`translate(${x} ${y + dy}) scale(${flip ? -s : s} ${s}) translate(0 -306)`}>
+    <g opacity={o * gor} transform={`translate(${x} ${y + dy}) scale(${flip ? -s : s} ${s}) translate(0 -306)`}>
       <ellipse cx={0} cy={310 - dy / s} rx={70} ry={10} fill={INK} opacity={0.18} />
       <MerakliFigur p={shown} ink={ink} kostum={kostum} />
     </g>

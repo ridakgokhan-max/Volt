@@ -75,5 +75,21 @@
    "ilk": "=yani",
    "gecis": "daire"
   }
- ]
+ ],
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "üretiyor"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "yapıyor",
+   "yazi": "Sen kılıflı mı?"
+  },
+  {
+   "tur": "takip",
+   "son": true
+  }
+ ],
+ "son_bosluk": 3.3
 }

@@ -149,7 +149,7 @@ def main(konu):
             g = gap_after(b)
             out.append(np.zeros(int(g * SR)))
             tnew += g
-    out.append(np.zeros(int(0.6 * SR)))
+    out.append(np.zeros(int(float(K.get("son_bosluk", 0.6)) * SR)))  # sondaki boşluk (takip çağrısı için uzatılabilir)
     voice = np.concatenate(out)
     sure = len(voice) / SR
 
@@ -257,6 +257,21 @@ def main(konu):
     for alan in ("seri", "kanca", "dongu", "acilis", "imza"):  # büyüme özellikleri: seri rozeti, kanca, döngü sonu, açılış
         if alan in K:
             data[alan] = dict(K[alan]) if isinstance(K[alan], dict) else K[alan]
+    # etkileşim çağrısı (beğen / yorum / takip): {"tur", "kelime" [, "n", "ofset", "yazi"]} ya da {"tur", "son": true}
+    if K.get("cta"):
+        cta = []
+        son_kelime = kel[-1]["e"]
+        for c in K["cta"]:
+            if c.get("son"):
+                bas = son_kelime + float(c.get("ofset", 0.15))
+            else:
+                bas = kel[ara(c["kelime"], 0, c.get("n", 0))]["e"] + float(c.get("ofset", 0.1))
+            d = {"tur": c["tur"], "bas": round(bas, 3)}
+            if c.get("yazi"):
+                d["yazi"] = c["yazi"]
+            cta.append(d)
+        data["cta"] = cta
+        print("CTA:", cta)
     if AC:  # açılış anı bir kelimeyle verildiyse sahne içindeki saniyeye çevir
         a = data["acilis"]
         hedef = next(x for x in sc if x["id"] == a["sahne"])
@@ -279,6 +294,12 @@ def main(konu):
             B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), 0.55)
     if AC:  # açılış vuruşu
         B.put(sfx, 0.0, B.katman(B.efekt("vurus", yedek=B.boom), B.riser(max(0.4, AC))), 0.6)
+    for c in data.get("cta", []):  # CTA: yürüyüş, balon pıtı, dokunuş
+        B.put(sfx, c["bas"] + 0.05, B.whoosh(0.5), 0.3)
+        B.put(sfx, c["bas"] + 0.95, B.pop(), 0.45)
+        B.put(sfx, c["bas"] + 1.25, B.katman(B.efekt("tik"), B.blip(1200, 0.08)), 0.55)
+        if c["tur"] == "begen":
+            B.put(sfx, c["bas"] + 1.3, B.chime_up(), 0.3)
     import inspect
     if "ara" in inspect.signature(mod.cues).parameters:
         mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])

@@ -3,7 +3,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Img, staticFile, useCurrentFrame } from "remotion";
 import { ACC, ap, cl, ez, FPS, H, INK, lerp, RED, sp, W } from "./kit";
-import { Merakli } from "./merakli";
+import { Merakli, MerakliGorunur } from "./merakli";
 import { loadFont } from "@remotion/google-fonts/Nunito";
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
@@ -14,7 +14,8 @@ export const IG = {
   takip: { x: 448, y: 1662 },
 };
 
-export type CtaAdim = { tur: "begen" | "yorum" | "takip"; bas: number };
+export type CtaAdim = { tur: "begen" | "yorum" | "takip"; bas: number; yazi?: string };
+export const CTA_SURE = 2.8;
 
 /** Parlayan dokunma halkası */
 const Halka: React.FC<{ x: number; y: number; t: number }> = ({ x, y, t }) =>
@@ -80,7 +81,7 @@ export const IgTaklit: React.FC<{ begendi: number; takip: number }> = ({ begendi
 const BALON: Record<CtaAdim["tur"], string> = { begen: "Beğen!", yorum: "Fikrini yaz!", takip: "Takip et!" };
 
 /** Meraklı'nın konumu: hedef düğmenin yanına yürür, dokunur, geri çekilir. t = saniye */
-export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { x: number; y: number } }> = ({ t, adimlar, baslangic = { x: 540, y: 1240 } }) => {
+export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { x: number; y: number }; yazi?: string }> = ({ t, adimlar, baslangic = { x: 540, y: 1240 }, yazi }) => {
   // her adım: 0..0.9 yürü, 0.9..1.6 dokun + balon, sonraki adıma kadar bekle
   let x = baslangic.x;
   let y = baslangic.y;
@@ -109,7 +110,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
       parmak = { x: lerp(el.x, hd.x + 6, git), y: lerp(el.y, hd.y + 50, git), b: dokun };
       if (dt > 1.25) halka = { x: hd.x, y: hd.y, t: dt - 1.25 };
       if (dt > 1.9) parmak = null;
-      balon = { k: sp(t, a.bas + 0.95, 9) * (1 - ap(t, a.bas + 2.4, 0.25)), yazi: BALON[a.tur] };
+      balon = { k: sp(t, a.bas + 0.95, 9) * (1 - ap(t, a.bas + 2.4, 0.25)), yazi: yazi || a.yazi || BALON[a.tur] };
     }
     px = dur.x;
     py = dur.y;
@@ -154,5 +155,36 @@ export const CtaDemo: React.FC = () => {
       </svg>
       <Audio src={staticFile("bilim/cta-demo/ses.wav")} />
     </AbsoluteFill>
+  );
+};
+
+/** Gerçek videoda: her adım ayrı anda; Meraklı alttan girer, düğmeye dokunur, kaybolur */
+export const ctaGorunur = (t: number, adimlar: CtaAdim[]) => {
+  let v = 0;
+  for (const a of adimlar) {
+    const dt = t - a.bas;
+    if (dt > -0.25 && dt < CTA_SURE + 0.25) v = Math.max(v, ap(dt, -0.25, 0.25) * (1 - ap(dt, CTA_SURE - 0.3, 0.3)));
+  }
+  return v;
+};
+
+export const CtaVideo: React.FC<{ t: number; adimlar: CtaAdim[] }> = ({ t, adimlar }) => {
+  const a = adimlar.find((x) => t - x.bas > -0.25 && t - x.bas < CTA_SURE + 0.25);
+  if (!a) return null;
+  const v = ctaGorunur(t, adimlar);
+  const begendi = a.tur === "begen" ? ap(t, a.bas + 1.25, 0.3) : 0;
+  return (
+    <MerakliGorunur.Provider value={1}>
+      <g opacity={v}>
+        <CtaKatman t={t} adimlar={[a]} baslangic={a.tur === "takip" ? { x: 540, y: 1560 } : { x: 600, y: 1240 }} yazi={a.yazi} />
+        {begendi > 0 && begendi < 1
+          ? Array.from({ length: 8 }).map((_, i) => {
+              const an = (i / 8) * Math.PI * 2;
+              const r = 40 + begendi * 90;
+              return <circle key={i} cx={IG.begen.x + Math.cos(an) * r} cy={IG.begen.y + Math.sin(an) * r} r={12 * (1 - begendi)} fill={RED} />;
+            })
+          : null}
+      </g>
+    </MerakliGorunur.Provider>
   );
 };
