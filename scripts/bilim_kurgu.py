@@ -267,8 +267,9 @@ def main(konu):
             else:
                 bas = kel[ara(c["kelime"], 0, c.get("n", 0))]["e"] + float(c.get("ofset", 0.1))
             d = {"tur": c["tur"], "bas": round(bas, 3)}
-            if c.get("yazi"):
-                d["yazi"] = c["yazi"]
+            for alan in ("yazi", "kostum"):
+                if c.get(alan) or K.get("cta_kostum") and alan == "kostum":
+                    d[alan] = c.get(alan) or K.get("cta_kostum")
             cta.append(d)
         data["cta"] = cta
         print("CTA:", cta)

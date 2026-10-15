@@ -14,7 +14,7 @@ export const IG = {
   takip: { x: 448, y: 1662 },
 };
 
-export type CtaAdim = { tur: "begen" | "yorum" | "takip"; bas: number; yazi?: string };
+export type CtaAdim = { tur: "begen" | "yorum" | "takip"; bas: number; yazi?: string; kostum?: string };
 export const CTA_SURE = 2.8;
 
 /** Parlayan dokunma halkası */
@@ -117,7 +117,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   }
   return (
     <g>
-      <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum="baret" ink="#fff" />
+      <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum={(adimlar[0]?.kostum || "baret") as any} ink="#fff" />
       {balon ? <Balon x={Math.max(balon.yazi.length * 15 + 80, Math.min(1000 - balon.yazi.length * 15 - 60, x))} y={y - 280} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}

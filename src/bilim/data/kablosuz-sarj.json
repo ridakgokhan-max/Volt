@@ -2075,16 +2075,19 @@
  "cta": [
   {
    "tur": "begen",
-   "bas": 20.281
+   "bas": 20.281,
+   "kostum": "kulaklik"
   },
   {
    "tur": "yorum",
    "bas": 34.786,
-   "yazi": "Sen kılıflı mı?"
+   "yazi": "Sen kılıflı mı?",
+   "kostum": "kulaklik"
   },
   {
    "tur": "takip",
-   "bas": 41.08
+   "bas": 41.08,
+   "kostum": "kulaklik"
   }
  ]
 }
