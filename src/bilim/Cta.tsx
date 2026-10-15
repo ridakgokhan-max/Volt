@@ -117,7 +117,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   return (
     <g>
       <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum="baret" ink="#fff" />
-      {balon ? <Balon x={x} y={y - 220} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
+      {balon ? <Balon x={Math.max(balon.yazi.length * 15 + 80, Math.min(1000 - balon.yazi.length * 15 - 60, x))} y={y - 280} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}
     </g>
