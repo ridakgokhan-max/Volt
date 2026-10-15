@@ -41,7 +41,7 @@ const Spiral: React.FC<{ x: number; y: number; s?: number; t: number; yon: numbe
 const Duzen: React.FC<{ t: number; dx?: number; alan?: number; kilif?: number; ikinci?: number; isi?: number }> = ({ t, dx = 0, alan = 1, kilif = 0, ikinci = 0, isi = 0 }) => {
   const altY = 940;
   const ustY = 690 - kilif * 70;
-  const kop = cl(Math.abs(dx) / 260); // kayma arttıkça çizgiler kopar
+  const kop = cl(Math.abs(dx) / 200); // kayma arttıkça çizgiler kopar
   const guc = alan * (1 - kop) * (1 - kilif * 0.6);
   const yon = Math.sin(t * 9) > 0 ? 1 : -1;
   return (
@@ -104,7 +104,7 @@ const Giris: S = ({ t, ws, ses }) => {
         return <path key={i} d={`M ${520 + Math.sin(i * 2) * 20} ${1060 - u * 80} l -24 30 l 22 0 l -18 32`} stroke={ACC} strokeWidth={8} fill="none" strokeLinejoin="round" opacity={sim * (1 - u)} />;
       })}
       {/* kesilmiş kablo */}
-      <g opacity={ap(t, tk - 0.3, 0.3)} transform="translate(200 1010)">
+      <g opacity={ap(t, tk - 0.3, 0.3)} transform="translate(900 1000)">
         <path d="M -140 60 C -60 60 -60 -10 20 -10" stroke={INK} strokeWidth={16} fill="none" strokeLinecap="round" />
         <rect x={20} y={-26} width={50} height={32} rx={6} fill="#a7adb6" stroke={INK} strokeWidth={5} />
         <Cross cx={0} cy={0} r={90} k={ap(t, tk, 0.35)} sw={14} />
@@ -129,7 +129,7 @@ const BobinSahne: S = ({ t, ws, ses }) => {
   const sayi = Math.round(100000 * ap(t, t1 - 0.3, 1.0));
   return (
     <g>
-      <g transform={`translate(540 760) scale(${sp(t, tb - 0.5, 10)})`}>
+      <g transform={`translate(540 760) scale(${sp(t, 0.15, 10)})`}>
         <Spiral x={0} y={0} s={0.85} t={t * hiz} yon={yon} />
       </g>
       <Tag x={540} y={330} text="BAKIR BOBİN" size={52} k={sp(t, tb)} bg={BAKIR} color="#fff" rot={-2} />
@@ -175,7 +175,7 @@ const Kayma: S = ({ t, ws, ses }) => {
   const tk = ws("kaydırınca");
   const td = ws("duruyor");
   const tm = ws("milimetrede");
-  const dx = 300 * ez((t - tk + 0.2) / 0.8) * (1 - ap(t, tm - 0.6, 0.6));
+  const dx = 230 * ez((t - tk + 0.2) / 0.8) * (1 - ap(t, tm - 0.6, 0.6));
   return (
     <g>
       <Duzen t={t} dx={dx} />
@@ -211,11 +211,11 @@ const Isi: S = ({ t, ws, ses }) => {
     <g>
       <Duzen t={t} dx={dx} isi={isi} kilif={kilif} />
       <g opacity={ap(t, ti - 0.3, 0.3)}>
-        <Termometre x={150} y={500} s={0.9} seviye={lerp(0.3, 0.85, isi) + 0.02 * Math.sin(t * 6)} />
+        <Termometre x={150} y={590} s={0.85} seviye={lerp(0.3, 0.85, isi) + 0.02 * Math.sin(t * 6)} />
       </g>
       <g opacity={ap(t, ty - 0.3, 0.3)}>
-        <Pil x={920} y={500} s={0.9} dolu={0.3 + 0.03 * cl((t - ty) / 3)} />
-        <text x={920} y={650} textAnchor="middle" fontSize={44} fontWeight={900} fill={RED} style={font}>YAVAŞ</text>
+        <Pil x={920} y={560} s={0.85} dolu={0.3 + 0.03 * cl((t - ty) / 3)} />
+        <text x={920} y={700} textAnchor="middle" fontSize={44} fontWeight={900} fill={RED} style={font}>YAVAŞ</text>
       </g>
       <Tag x={540} y={330} text="ENERJİ BOŞA GİDER" size={44} k={sp(t, ws("enerji")) * (1 - ap(t, tl - 0.3, 0.2))} bg={RED} color="#fff" rot={-2} />
       <Tag x={540} y={330} text="KALIN KILIF = AYNI SORUN" size={40} k={sp(t, tl + 0.1)} bg={ACC} rot={2} />
