@@ -1,17 +1,22 @@
-[  0.00-  6.74] Bu hızla olimpik bir havuzu 13 saniyede boşaltır.
-_kontrol-i tamam: 8 kelime
-[  0.00-  2.98] Telefonla şarj aleti arasında hiç kablo yok.
-[  3.86-  4.80] Ama elektrik geçiyor.
-[  5.80-  7.26] Hile değil, mıknatıs.
-[  7.98-  9.96] Şarj aletinin içinde bakır bir bobin var.
-[ 10.26- 14.96] İçinden geçen akım saniyede 100 binden fazla kez yön değiştiriyor.
-[ 15.12- 18.34] Ve etrafında sürekli değişen bir manyetik alan oluşturuyor.
-[ 19.42- 23.72] Telefonun arkasındaki ikinci bobin, bu alandan yeniden elektrik üretiyor.
-[ 24.54- 28.20] Peki telefonun biraz kaydırınca şarj neden duruyor?
-[ 28.20- 31.96] Çünkü bu alan sadece birkaç milimetrede güçlü.
-[ 32.80- 35.88] İki bobin biraz kayınca enerji boşa gidiyor.
-[ 35.98- 38.40] Telefon ısınıyor, şarj yavaşlıyor.
-[ 39.32- 41.54] Kalın bir kılıfta da aynı etkiyi yapıyor.
-[ 42.60- 45.38] Yani kablosuz şarj aslında kablosuz değil.
-[ 45.58- 48.82] Kablo iki bobinin arasındaki boşlukta saklı.
-kablosuz-sarj tamam: 91 kelime
+[  0.00-  5.00] Dün İstanbul'a 1942'den beri ölçülen en büyük yağmur düştü.
+[  5.02-  8.62] Tokyo'da ise böyle bir yağmur sokakları göle çeviremiyor.
+[  8.82-  9.34] Neden?
+[  9.52- 11.20] Cevap, şehrin altında.
+[ 11.34- 14.56] Tokyo'nun hemen dışında, yerin 50 metre altında.
+[ 14.70- 16.92] Dünyanın en büyük sel tüneli var.
+[ 17.16- 21.34] Nehirler taşmaya başlayınca fazla su 5 dev kuyuya dökülüyor.
+[ 21.46- 24.34] Her biri 70 metre derinliğinde, yani içine.
+[ 24.46- 26.00] 20 katlı bir binaya sığar.
+[ 26.00- 30.40] Kuyular 6,3 kilometrelik bir tünelle birbirine bağlı.
+[ 30.46- 32.96] Su sonunda dev bir depoya ulaşıyor.
+[ 33.10- 35.26] Tavanını 59 sütun taşıyor.
+[ 35.40- 36.84] Her biri 500 ton.
+[ 36.98- 43.36] Sonra devreye uçak motorundan uyarlanmış pompalar giriyor ve suyu saniyede 200 ton nehre basıyor.
+[ 43.52- 47.28] Bu hızla olimpik bir havuzu 13 saniyede boşaltır.
+[ 47.88- 50.76] Sistem yılda ortalama 8 kez çalışıyor.
+[ 51.30- 56.84] Japonya'nın hesabına göre 50 yılda önleyeceği zarar yapı masrafının 3 katından fazla.
+[ 57.00- 58.54] Yani sel kader değil.
+[ 58.66- 59.86] Altyapı meselesi.
+[ 59.86- 62.78] Sence İstanbul'da böyle bir sistem gerekir mi?
+[ 62.86- 63.78] Yorumlara yazınız.
+_kontrol-j tamam: 135 kelime
