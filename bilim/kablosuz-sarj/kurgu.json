@@ -1,0 +1,79 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "kesimler": [
+  [
+   0.0,
+   0.38
+  ]
+ ],
+ "seri": {
+  "no": 5,
+  "toplam": 30,
+  "kategori": "Teknoloji"
+ },
+ "kanca": {
+  "yazi": "KABLO YOK, ELEKTRİK VAR!",
+  "alt": "Hile değil, mıknatıs",
+  "sure": 2.0
+ },
+ "dongu": true,
+ "imza": true,
+ "vurgu": [
+  "kablo",
+  "mıknatıs.",
+  "bobin",
+  "100",
+  "manyetik",
+  "ikinci",
+  "milimetrede",
+  "ısınıyor,",
+  "yavaşlıyor.",
+  "Kalın",
+  "değil;",
+  "saklı."
+ ],
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "sicak",
+   "ilk": 0,
+   "vur": [
+    "mıknatıs"
+   ]
+  },
+  {
+   "id": "bobin",
+   "bg": "devre",
+   "ilk": [
+    "şarj",
+    1
+   ],
+   "gecis": "zoom"
+  },
+  {
+   "id": "alan",
+   "bg": "gece",
+   "ilk": "=ve",
+   "gecis": "daire"
+  },
+  {
+   "id": "kayma",
+   "bg": "plan",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "isi",
+   "bg": "sicak",
+   "ilk": "=iki",
+   "gecis": "perde"
+  },
+  {
+   "id": "sonuc",
+   "bg": "gece",
+   "ilk": "=yani",
+   "gecis": "daire"
+  }
+ ]
+}

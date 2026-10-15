@@ -1,3 +1,3 @@
-Telefonla şarj aleti arasında hiç kablo yok, ama elektrik geçiyor. Hile değil, mıknatıs. Şarj aletinin içinde bakır bir bobin var. İçinden geçen akım saniyede yüz binden fazla kez yön değiştiriyor ve etrafında sürekli değişen bir manyetik alan oluşturuyor. Telefonun arkasındaki ikinci bobin, bu alandan yeniden elektrik üretiyor.
+Telefonla şarj aleti arasında hiç kablo yok, ama elektrik geçiyor. Hile değil, mıknatıs. Şarj aletinin içinde bakır bir bobin var. İçinden geçen akım saniyede 100 binden fazla kez yön değiştiriyor ve etrafında sürekli değişen bir manyetik alan oluşturuyor. Telefonun arkasındaki ikinci bobin, bu alandan yeniden elektrik üretiyor.
 Peki telefonu biraz kaydırınca şarj neden duruyor? Çünkü bu alan sadece birkaç milimetrede güçlü. İki bobin biraz kayınca enerji boşa gidiyor, telefon ısınıyor, şarj yavaşlıyor. Kalın bir kılıf da aynı etkiyi yapıyor.
-Yani kablosuz şarj aslında kablosuz değil; kablo, iki bobinin arasındaki boşlukta saklı. Pazartesi: fiziğe göre gökyüzü aslında mor olmalıydı.
+Yani kablosuz şarj aslında kablosuz değil; kablo, iki bobinin arasındaki boşlukta saklı.
