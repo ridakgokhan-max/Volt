@@ -1,0 +1,41 @@
+name: Instagram - yorumlar (cevaplar onaylı)
+
+# cek: yorumları gizli depoya çeker (her gün otomatik de çalışır).
+# yanitla: SADECE Kadir'in onayladığı cevapları gönderir; elle başlatılır.
+on:
+  schedule:
+    - cron: "25 6 * * *"   # her gün 09:25 (Türkiye) — sadece çekme
+  workflow_dispatch:
+    inputs:
+      islem:
+        description: "cek veya yanitla"
+        required: true
+        default: "cek"
+
+permissions:
+  contents: write
+
+jobs:
+  yorum:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gizli depoyu al
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: git clone -q "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+      - name: Çalıştır
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          ISTATISTIK_KLASOR: /tmp/gizli
+        run: |
+          I="${{ github.event.inputs.islem }}"; [ -z "$I" ] && I=cek
+          python3 scripts/instagram_yorum.py "$I" 2>&1 | sed -E 's/access_token=[^&" ]+/access_token=***/g'
+      - name: Gizli depoya kaydet
+        if: always()
+        run: |
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Yorumlar $(date +%F_%H%M)" || true
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done
