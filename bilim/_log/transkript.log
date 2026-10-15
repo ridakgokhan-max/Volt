@@ -1,8 +1,17 @@
-[  0.00-  1.58] Tavanın 59 sütun...
-[  3.56-  5.38] Tavanını 59 sütun taşıyor.
-_kontrol-f tamam: 7 kelime
-[  0.00-  3.76] Bu hızla olimpik bir havuzu 13 saniye...
-[  3.76-  6.28] Bu hızla...
-_kontrol-g tamam: 9 kelime
-[  0.00-  3.98] 50 yılda... 50 yılda önleyeceği zarar...
-_kontrol-h tamam: 6 kelime
+[  0.00-  6.74] Bu hızla olimpik bir havuzu 13 saniyede boşaltır.
+_kontrol-i tamam: 8 kelime
+[  0.00-  2.98] Telefonla şarj aleti arasında hiç kablo yok.
+[  3.86-  4.80] Ama elektrik geçiyor.
+[  5.80-  7.26] Hile değil, mıknatıs.
+[  7.98-  9.96] Şarj aletinin içinde bakır bir bobin var.
+[ 10.26- 14.96] İçinden geçen akım saniyede 100 binden fazla kez yön değiştiriyor.
+[ 15.12- 18.34] Ve etrafında sürekli değişen bir manyetik alan oluşturuyor.
+[ 19.42- 23.72] Telefonun arkasındaki ikinci bobin, bu alandan yeniden elektrik üretiyor.
+[ 24.54- 28.20] Peki telefonun biraz kaydırınca şarj neden duruyor?
+[ 28.20- 31.96] Çünkü bu alan sadece birkaç milimetrede güçlü.
+[ 32.80- 35.88] İki bobin biraz kayınca enerji boşa gidiyor.
+[ 35.98- 38.40] Telefon ısınıyor, şarj yavaşlıyor.
+[ 39.32- 41.54] Kalın bir kılıfta da aynı etkiyi yapıyor.
+[ 42.60- 45.38] Yani kablosuz şarj aslında kablosuz değil.
+[ 45.58- 48.82] Kablo iki bobinin arasındaki boşlukta saklı.
+kablosuz-sarj tamam: 91 kelime

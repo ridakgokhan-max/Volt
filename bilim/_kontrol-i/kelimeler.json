@@ -1,0 +1,61 @@
+{
+ "model": "large-v3",
+ "sure": 7.211,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 6.74,
+   "text": "Bu hızla olimpik bir havuzu 13 saniyede boşaltır.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 0.0,
+     "end": 2.34,
+     "p": 0.72
+    },
+    {
+     "w": "hızla",
+     "start": 2.34,
+     "end": 3.42,
+     "p": 0.994
+    },
+    {
+     "w": "olimpik",
+     "start": 3.42,
+     "end": 4.42,
+     "p": 0.986
+    },
+    {
+     "w": "bir",
+     "start": 4.42,
+     "end": 4.52,
+     "p": 0.999
+    },
+    {
+     "w": "havuzu",
+     "start": 4.52,
+     "end": 4.94,
+     "p": 0.999
+    },
+    {
+     "w": "13",
+     "start": 4.94,
+     "end": 5.48,
+     "p": 0.993
+    },
+    {
+     "w": "saniyede",
+     "start": 5.48,
+     "end": 6.12,
+     "p": 0.999
+    },
+    {
+     "w": "boşaltır.",
+     "start": 6.12,
+     "end": 6.74,
+     "p": 0.995
+    }
+   ]
+  }
+ ]
+}

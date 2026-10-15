@@ -1,0 +1,650 @@
+{
+ "model": "large-v3",
+ "sure": 49.835,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 2.98,
+   "text": "Telefonla şarj aleti arasında hiç kablo yok.",
+   "kelimeler": [
+    {
+     "w": "Telefonla",
+     "start": 0.0,
+     "end": 0.82,
+     "p": 0.954
+    },
+    {
+     "w": "şarj",
+     "start": 0.82,
+     "end": 1.18,
+     "p": 0.998
+    },
+    {
+     "w": "aleti",
+     "start": 1.18,
+     "end": 1.46,
+     "p": 0.999
+    },
+    {
+     "w": "arasında",
+     "start": 1.46,
+     "end": 1.84,
+     "p": 0.999
+    },
+    {
+     "w": "hiç",
+     "start": 1.84,
+     "end": 2.32,
+     "p": 0.98
+    },
+    {
+     "w": "kablo",
+     "start": 2.32,
+     "end": 2.76,
+     "p": 0.998
+    },
+    {
+     "w": "yok.",
+     "start": 2.76,
+     "end": 2.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 3.86,
+   "end": 4.8,
+   "text": "Ama elektrik geçiyor.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 3.54,
+     "end": 3.96,
+     "p": 0.997
+    },
+    {
+     "w": "elektrik",
+     "start": 3.96,
+     "end": 4.44,
+     "p": 1.0
+    },
+    {
+     "w": "geçiyor.",
+     "start": 4.44,
+     "end": 4.8,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 5.8,
+   "end": 7.26,
+   "text": "Hile değil, mıknatıs.",
+   "kelimeler": [
+    {
+     "w": "Hile",
+     "start": 5.52,
+     "end": 5.94,
+     "p": 0.998
+    },
+    {
+     "w": "değil,",
+     "start": 5.94,
+     "end": 6.2,
+     "p": 0.999
+    },
+    {
+     "w": "mıknatıs.",
+     "start": 6.34,
+     "end": 7.26,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 7.98,
+   "end": 9.96,
+   "text": "Şarj aletinin içinde bakır bir bobin var.",
+   "kelimeler": [
+    {
+     "w": "Şarj",
+     "start": 7.72,
+     "end": 8.14,
+     "p": 0.999
+    },
+    {
+     "w": "aletinin",
+     "start": 8.14,
+     "end": 8.5,
+     "p": 0.996
+    },
+    {
+     "w": "içinde",
+     "start": 8.5,
+     "end": 8.76,
+     "p": 0.999
+    },
+    {
+     "w": "bakır",
+     "start": 8.76,
+     "end": 9.4,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 9.4,
+     "end": 9.5,
+     "p": 1.0
+    },
+    {
+     "w": "bobin",
+     "start": 9.5,
+     "end": 9.8,
+     "p": 0.987
+    },
+    {
+     "w": "var.",
+     "start": 9.8,
+     "end": 9.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.26,
+   "end": 14.96,
+   "text": "İçinden geçen akım saniyede 100 binden fazla kez yön değiştiriyor.",
+   "kelimeler": [
+    {
+     "w": "İçinden",
+     "start": 10.26,
+     "end": 10.96,
+     "p": 1.0
+    },
+    {
+     "w": "geçen",
+     "start": 10.96,
+     "end": 11.38,
+     "p": 1.0
+    },
+    {
+     "w": "akım",
+     "start": 11.38,
+     "end": 11.72,
+     "p": 0.993
+    },
+    {
+     "w": "saniyede",
+     "start": 11.72,
+     "end": 12.44,
+     "p": 0.993
+    },
+    {
+     "w": "100",
+     "start": 12.44,
+     "end": 12.72,
+     "p": 0.846
+    },
+    {
+     "w": "binden",
+     "start": 12.72,
+     "end": 13.18,
+     "p": 0.908
+    },
+    {
+     "w": "fazla",
+     "start": 13.18,
+     "end": 13.54,
+     "p": 0.999
+    },
+    {
+     "w": "kez",
+     "start": 13.54,
+     "end": 13.96,
+     "p": 0.999
+    },
+    {
+     "w": "yön",
+     "start": 13.96,
+     "end": 14.46,
+     "p": 0.996
+    },
+    {
+     "w": "değiştiriyor.",
+     "start": 14.46,
+     "end": 14.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 15.12,
+   "end": 18.34,
+   "text": "Ve etrafında sürekli değişen bir manyetik alan oluşturuyor.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 15.12,
+     "end": 15.7,
+     "p": 0.993
+    },
+    {
+     "w": "etrafında",
+     "start": 15.7,
+     "end": 16.26,
+     "p": 1.0
+    },
+    {
+     "w": "sürekli",
+     "start": 16.26,
+     "end": 16.64,
+     "p": 0.946
+    },
+    {
+     "w": "değişen",
+     "start": 16.64,
+     "end": 17.02,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 17.02,
+     "end": 17.16,
+     "p": 1.0
+    },
+    {
+     "w": "manyetik",
+     "start": 17.16,
+     "end": 17.6,
+     "p": 0.999
+    },
+    {
+     "w": "alan",
+     "start": 17.6,
+     "end": 17.76,
+     "p": 0.999
+    },
+    {
+     "w": "oluşturuyor.",
+     "start": 17.76,
+     "end": 18.34,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 19.42,
+   "end": 23.72,
+   "text": "Telefonun arkasındaki ikinci bobin, bu alandan yeniden elektrik üretiyor.",
+   "kelimeler": [
+    {
+     "w": "Telefonun",
+     "start": 19.42,
+     "end": 20.26,
+     "p": 1.0
+    },
+    {
+     "w": "arkasındaki",
+     "start": 20.26,
+     "end": 20.72,
+     "p": 1.0
+    },
+    {
+     "w": "ikinci",
+     "start": 20.72,
+     "end": 21.2,
+     "p": 0.992
+    },
+    {
+     "w": "bobin,",
+     "start": 21.2,
+     "end": 21.54,
+     "p": 0.999
+    },
+    {
+     "w": "bu",
+     "start": 21.62,
+     "end": 22.14,
+     "p": 0.989
+    },
+    {
+     "w": "alandan",
+     "start": 22.14,
+     "end": 22.56,
+     "p": 0.999
+    },
+    {
+     "w": "yeniden",
+     "start": 22.56,
+     "end": 22.96,
+     "p": 1.0
+    },
+    {
+     "w": "elektrik",
+     "start": 22.96,
+     "end": 23.38,
+     "p": 1.0
+    },
+    {
+     "w": "üretiyor.",
+     "start": 23.38,
+     "end": 23.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 24.54,
+   "end": 28.2,
+   "text": "Peki telefonun biraz kaydırınca şarj neden duruyor?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 24.54,
+     "end": 25.38,
+     "p": 0.999
+    },
+    {
+     "w": "telefonun",
+     "start": 25.38,
+     "end": 25.94,
+     "p": 0.942
+    },
+    {
+     "w": "biraz",
+     "start": 25.94,
+     "end": 26.14,
+     "p": 1.0
+    },
+    {
+     "w": "kaydırınca",
+     "start": 26.14,
+     "end": 26.86,
+     "p": 0.999
+    },
+    {
+     "w": "şarj",
+     "start": 26.86,
+     "end": 27.54,
+     "p": 0.994
+    },
+    {
+     "w": "neden",
+     "start": 27.54,
+     "end": 27.68,
+     "p": 0.999
+    },
+    {
+     "w": "duruyor?",
+     "start": 27.68,
+     "end": 28.2,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 28.2,
+   "end": 31.96,
+   "text": "Çünkü bu alan sadece birkaç milimetrede güçlü.",
+   "kelimeler": [
+    {
+     "w": "Çünkü",
+     "start": 28.2,
+     "end": 29.16,
+     "p": 0.985
+    },
+    {
+     "w": "bu",
+     "start": 29.16,
+     "end": 29.44,
+     "p": 0.997
+    },
+    {
+     "w": "alan",
+     "start": 29.44,
+     "end": 29.7,
+     "p": 0.998
+    },
+    {
+     "w": "sadece",
+     "start": 29.7,
+     "end": 30.16,
+     "p": 0.997
+    },
+    {
+     "w": "birkaç",
+     "start": 30.16,
+     "end": 30.96,
+     "p": 0.982
+    },
+    {
+     "w": "milimetrede",
+     "start": 30.96,
+     "end": 31.6,
+     "p": 0.989
+    },
+    {
+     "w": "güçlü.",
+     "start": 31.6,
+     "end": 31.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.8,
+   "end": 35.88,
+   "text": "İki bobin biraz kayınca enerji boşa gidiyor.",
+   "kelimeler": [
+    {
+     "w": "İki",
+     "start": 32.54,
+     "end": 32.96,
+     "p": 0.936
+    },
+    {
+     "w": "bobin",
+     "start": 32.96,
+     "end": 33.24,
+     "p": 0.996
+    },
+    {
+     "w": "biraz",
+     "start": 33.24,
+     "end": 33.8,
+     "p": 0.999
+    },
+    {
+     "w": "kayınca",
+     "start": 33.8,
+     "end": 34.36,
+     "p": 1.0
+    },
+    {
+     "w": "enerji",
+     "start": 34.36,
+     "end": 35.32,
+     "p": 0.998
+    },
+    {
+     "w": "boşa",
+     "start": 35.32,
+     "end": 35.58,
+     "p": 1.0
+    },
+    {
+     "w": "gidiyor.",
+     "start": 35.58,
+     "end": 35.88,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 35.98,
+   "end": 38.4,
+   "text": "Telefon ısınıyor, şarj yavaşlıyor.",
+   "kelimeler": [
+    {
+     "w": "Telefon",
+     "start": 35.98,
+     "end": 36.74,
+     "p": 1.0
+    },
+    {
+     "w": "ısınıyor,",
+     "start": 36.74,
+     "end": 37.24,
+     "p": 0.999
+    },
+    {
+     "w": "şarj",
+     "start": 37.28,
+     "end": 37.9,
+     "p": 1.0
+    },
+    {
+     "w": "yavaşlıyor.",
+     "start": 37.9,
+     "end": 38.4,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 39.32,
+   "end": 41.54,
+   "text": "Kalın bir kılıfta da aynı etkiyi yapıyor.",
+   "kelimeler": [
+    {
+     "w": "Kalın",
+     "start": 39.12,
+     "end": 39.54,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 39.54,
+     "end": 39.66,
+     "p": 1.0
+    },
+    {
+     "w": "kılıfta",
+     "start": 39.66,
+     "end": 40.04,
+     "p": 0.998
+    },
+    {
+     "w": "da",
+     "start": 40.04,
+     "end": 40.2,
+     "p": 1.0
+    },
+    {
+     "w": "aynı",
+     "start": 40.2,
+     "end": 40.92,
+     "p": 1.0
+    },
+    {
+     "w": "etkiyi",
+     "start": 40.92,
+     "end": 41.34,
+     "p": 0.999
+    },
+    {
+     "w": "yapıyor.",
+     "start": 41.34,
+     "end": 41.54,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 42.6,
+   "end": 45.38,
+   "text": "Yani kablosuz şarj aslında kablosuz değil.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 42.32,
+     "end": 42.74,
+     "p": 1.0
+    },
+    {
+     "w": "kablosuz",
+     "start": 42.74,
+     "end": 43.36,
+     "p": 0.999
+    },
+    {
+     "w": "şarj",
+     "start": 43.36,
+     "end": 43.62,
+     "p": 0.999
+    },
+    {
+     "w": "aslında",
+     "start": 43.62,
+     "end": 44.0,
+     "p": 0.999
+    },
+    {
+     "w": "kablosuz",
+     "start": 44.0,
+     "end": 45.16,
+     "p": 1.0
+    },
+    {
+     "w": "değil.",
+     "start": 45.16,
+     "end": 45.38,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 45.58,
+   "end": 48.82,
+   "text": "Kablo iki bobinin arasındaki boşlukta saklı.",
+   "kelimeler": [
+    {
+     "w": "Kablo",
+     "start": 45.58,
+     "end": 46.3,
+     "p": 0.992
+    },
+    {
+     "w": "iki",
+     "start": 46.3,
+     "end": 46.98,
+     "p": 0.982
+    },
+    {
+     "w": "bobinin",
+     "start": 46.98,
+     "end": 47.44,
+     "p": 0.98
+    },
+    {
+     "w": "arasındaki",
+     "start": 47.44,
+     "end": 47.86,
+     "p": 1.0
+    },
+    {
+     "w": "boşlukta",
+     "start": 47.86,
+     "end": 48.48,
+     "p": 1.0
+    },
+    {
+     "w": "saklı.",
+     "start": 48.48,
+     "end": 48.82,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}
