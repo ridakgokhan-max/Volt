@@ -40,8 +40,8 @@ def istek(yol, yontem="GET", **prm):
 
 def cek():
     ben = istek("me", fields="id,username")
-    medya = istek("me/media", fields="id,caption,media_product_type,timestamp,permalink", limit=15).get("data", [])
-    sonuc = []
+    medya = istek("me/media", fields="id,caption,media_product_type,timestamp,permalink,comments_count", limit=15).get("data", [])
+    sonuc, ozet = [], []
     for m in medya:
         if m.get("media_product_type") != "REELS":
             continue
@@ -49,6 +49,7 @@ def cek():
             yorumlar = istek(f"{m['id']}/comments", fields="id,text,timestamp,username,like_count,replies{id,text,username,timestamp}", limit=50).get("data", [])
         except RuntimeError as e:
             sys.exit(f"Yorumlar okunamadı (izin eksik olabilir: instagram_business_manage_comments): {e}")
+        ozet.append({"video": (m.get("caption") or "")[:40], "sayac": m.get("comments_count"), "gelen": len(yorumlar)})
         for y in yorumlar:
             cevaplar = (y.get("replies") or {}).get("data", [])
             sonuc.append({
@@ -59,7 +60,7 @@ def cek():
                 "cevaplar": [{"kisi": c.get("username"), "metin": c.get("text")} for c in cevaplar],
             })
     os.makedirs(OUT, exist_ok=True)
-    json.dump({"tarih": datetime.datetime.now().isoformat(timespec="minutes"), "yorumlar": sonuc},
+    json.dump({"tarih": datetime.datetime.now().isoformat(timespec="minutes"), "yorumlar": sonuc, "ozet": ozet},
               open(os.path.join(OUT, "yorumlar.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     bekleyen = [y for y in sonuc if not y["cevaplandi"] and not y["bizim_yorum"]]
     print(f"{len(sonuc)} yorum, {len(bekleyen)} cevap bekliyor")
