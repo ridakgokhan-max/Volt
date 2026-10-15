@@ -158,7 +158,7 @@ const Alt: S = ({ t, ws, ses }) => {
         <Bina x={700} y={560} w={140} h={340} />
         <Bina x={860} y={560} w={120} h={250} renk="#6b7891" />
         <rect x={0} y={540} width={1080} height={30} fill="#5b5f66" />
-        <Toprak y0={570} y1={2200} />
+        <Toprak y0={570} y1={2900} />
         {/* tünel kesiti */}
         <g transform={`translate(560 ${1330}) scale(${tun})`}>
           <circle r={230} fill="#2a2f3a" stroke={INK} strokeWidth={10} />
@@ -191,7 +191,7 @@ const KUY = { y0: 520, y1: 1120, w: 120 };
 const Kuyular: React.FC<{ t: number; dolu: (i: number) => number; sol?: (i: number) => number; tasma?: number }> = ({ t, dolu, sol = () => 1, tasma = 0 }) => (
   <g>
     <rect x={0} y={0} width={1080} height={KUY.y0 - 40} fill="#9cc6ef" />
-    <Toprak y0={KUY.y0 - 40} y1={1400} />
+    <Toprak y0={KUY.y0 - 40} y1={2000} />
     {/* nehir */}
     <Su x={0} y={KUY.y0 - 140 - tasma * 40} w={1080} h={100 + tasma * 40} t={t} />
     {KX.map((x, i) => {
@@ -261,7 +261,7 @@ const Tunel: S = ({ t, ws, ses }) => {
           })
         : null}
       <Tag x={540} y={360} text={`${km} KM TÜNEL`} size={60} k={sp(t, t6 - 0.2)} bg={ACC} rot={-2} />
-      <Tag x={540} y={1260} text="HEPSİ BİRBİRİNE BAĞLI" size={40} k={sp(t, tb)} bg={GREEN} color="#fff" />
+      <Tag x={540} y={470} text="HEPSİ BİRBİRİNE BAĞLI" size={40} k={sp(t, tb)} bg={GREEN} color="#fff" />
     </g>
   );
 };
@@ -282,9 +282,9 @@ const Depo: S = ({ t, ws, ses, ev }) => {
   });
   return (
     <g>
-      <rect x={0} y={300} width={1080} height={1000} fill="#2c3240" />
+      <rect x={0} y={300} width={1080} height={1700} fill="#2c3240" />
       <path d="M 0 1300 L 260 640 L 820 640 L 1080 1300 Z" fill="#3c4456" />
-      <Su x={0} y={1180 - ap(t, 0.1, 2) * 60} w={1080} h={140 + ap(t, 0.1, 2) * 60} t={t} renk="#3373b8" />
+      <Su x={0} y={1180 - ap(t, 0.1, 2) * 60} w={1080} h={800} t={t} renk="#3373b8" />
       {sutunlar.map((p) => {
         const g = ap(t, 0.15 + p.i * 0.07, 0.3);
         const hh = 520 * p.s;
@@ -297,15 +297,15 @@ const Depo: S = ({ t, ws, ses, ev }) => {
       })}
       <Glow cx={540} cy={420} r={420} id="dg" color="#fff2c4" o={0.25} />
       <Merakli x={430} y={1150} s={0.18} t={t} hareket="sasir" kostum="baret" ink={CHALK} />
-      <Tag x={540} y={360} text={`${sayi} SÜTUN`} size={60} k={sp(t, t59 - 0.3)} bg={ACC} rot={-2} />
+      <Tag x={540} y={360} text={`${sayi} SÜTUN`} size={60} k={sp(t, t59 - 0.3) * (1 - ap(t, t500 - 0.45, 0.2))} bg={ACC} rot={-2} />
       {t > t500 - 0.4 ? (
-        <g transform={`translate(${540} ${lerp(200, 520, dus)})`}>
+        <g transform={`translate(${540} ${lerp(160, 560, dus)})`}>
           <path d="M -120 0 L 120 0 L 90 -150 L -90 -150 Z" fill="#3a3f4a" stroke={INK} strokeWidth={8} />
           <circle cx={0} cy={-170} r={26} fill="none" stroke={INK} strokeWidth={10} />
           <text x={0} y={-50} textAnchor="middle" fontSize={56} fontWeight={900} fill={ACC} style={font}>500 TON</text>
         </g>
       ) : null}
-      <Tag x={540} y={1260} text="HER BİRİ 500 TON" size={42} k={sp(t, t500 + 0.3)} bg={RED} color="#fff" />
+      <Tag x={540} y={1170} text="HER BİRİ 500 TON" size={42} k={sp(t, t500 + 0.3)} bg={RED} color="#fff" />
     </g>
   );
 };
@@ -360,7 +360,7 @@ const Pompalar: S = ({ t, ws, ses }) => {
         <ellipse cx={-30} cy={34} rx={36} ry={16} fill="#5d6b82" stroke={INK} strokeWidth={4} />
       </g>
       <Tag x={540} y={420} text="UÇAK MOTORUNDAN" size={40} k={sp(t, tu) * (1 - ap(t, t2 - 0.3, 0.3))} bg="#fff" rot={-2} />
-      <g transform={`translate(560 ${1270}) scale(${sp(t, t2 - 0.3, 9)})`}>
+      <g transform={`translate(540 ${330}) scale(${sp(t, t2 - 0.3, 9)})`}>
         <rect x={-300} y={-70} width={600} height={130} rx={65} fill={ACC} stroke={INK} strokeWidth={8} />
         <text x={0} y={22} textAnchor="middle" fontSize={68} fontWeight={900} fill={INK} style={font}>{`${ton} TON / SN`}</text>
       </g>
@@ -377,7 +377,7 @@ const Havuz: S = ({ t, ws, ses }) => {
   const sn = Math.min(13, Math.round(13 * bos));
   return (
     <g>
-      <g transform="translate(540 760)">
+      <g transform="translate(540 700)">
         <rect x={-420} y={-300} width={840} height={600} rx={24} fill="#e9eef5" stroke={INK} strokeWidth={10} />
         <rect x={-396} y={-276} width={792} height={552} fill="#b9c6d6" />
         <Su x={-396} y={-276 + 552 * bos} w={792} h={552 * (1 - bos)} t={t} renk="#48a6ea" />
@@ -387,12 +387,12 @@ const Havuz: S = ({ t, ws, ses }) => {
         {bos > 0.02 && bos < 0.99 ? <circle cx={0} cy={260} r={40 + 10 * Math.sin(t * 12)} fill="none" stroke="#fff" strokeWidth={6} opacity={0.7} /> : null}
       </g>
       <Tag x={540} y={360} text="OLİMPİK HAVUZ" size={52} k={sp(t, to - 0.2)} bg="#fff" rot={-2} />
-      <Saat x={260} y={1180} s={0.8} t={t - bas} hiz={6} />
-      <g transform={`translate(560 1190) scale(${sp(t, t13 - 0.4, 9)})`}>
+      <Saat x={260} y={1110} s={0.8} t={t - bas} hiz={6} />
+      <g transform={`translate(560 1120) scale(${sp(t, t13 - 0.4, 9)})`}>
         <rect x={-130} y={-70} width={300} height={130} rx={30} fill={INK} />
         <text x={20} y={26} textAnchor="middle" fontSize={84} fontWeight={900} fill={ACC} style={font}>{`${sn} sn`}</text>
       </g>
-      <Check cx={880} cy={1180} s={0.75} k={ap(t, bas + 2.7, 0.4)} />
+      <Check cx={880} cy={1110} s={0.75} k={ap(t, bas + 2.7, 0.4)} />
     </g>
   );
 };
@@ -424,7 +424,7 @@ const Takvim: S = ({ t, ws, ses }) => {
           </g>
         );
       })}
-      <Tag x={540} y={1270} text="YILDA ~8 KEZ" size={56} k={sp(t, t8 + 0.6)} bg={ACC} />
+      <Tag x={540} y={315} text="YILDA ~8 KEZ" size={56} k={sp(t, t8 + 0.6)} bg={ACC} />
       <Merakli x={960} y={1240} s={0.4} t={t} hareket="anlat" kostum="baret" agiz={ses(t)} flip />
     </g>
   );
@@ -438,7 +438,7 @@ const Terazi: S = ({ t, ws, ses }) => {
   const Para: React.FC<{ x: number; y: number; n: number; k: number }> = ({ x, y, n, k }) => (
     <g>
       {Array.from({ length: n }).map((_, i) => (
-        <g key={i} opacity={ap(k, i * 0.25, 0.2)}>
+        <g key={i} opacity={ap(k, i * 0.08, 0.15)}>
           <ellipse cx={x + ((i % 3) - 1) * 70} cy={y - Math.floor(i / 3) * 34} rx={52} ry={18} fill={ACC} stroke={INK} strokeWidth={5} />
         </g>
       ))}
@@ -496,7 +496,7 @@ const Sonuc: S = ({ t, ws, ses }) => {
           <path d="M -40 -180 L 0 -250 L 40 -180 Z" />
         </g>
       </g>
-      <Toprak y0={760} y1={1300} />
+      <Toprak y0={760} y1={2000} />
       {/* çizilen tünel hattı */}
       <rect x={90} y={1000} width={900 * ciz} height={90} rx={45} fill="#2a2f3a" stroke={INK} strokeWidth={7} />
       <Su x={110} y={1030} w={Math.max(0, 860 * ciz)} h={46} t={t} />
@@ -514,7 +514,7 @@ const Sonuc: S = ({ t, ws, ses }) => {
         <text x={0} y={-12} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={font}>İstanbul'a da</text>
         <text x={0} y={56} textAnchor="middle" fontSize={50} fontWeight={900} fill={RED} style={font}>gerekir mi?</text>
       </g>
-      <Tag x={540} y={1240} text="YORUMLARA YAZ" size={50} k={sp(t, ty - 0.1)} bg={ACC} rot={-2} />
+      <Tag x={540} y={1180} text="YORUMLARA YAZ" size={50} k={sp(t, ty - 0.1)} bg={ACC} rot={-2} />
       <Merakli x={920} y={1240} s={0.45} t={t} hareket={t > ty ? "isaret" : t > ts ? "dusun" : "anlat"} kostum="baret" agiz={ses(t)} flip />
     </g>
   );

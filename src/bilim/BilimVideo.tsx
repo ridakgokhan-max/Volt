@@ -226,7 +226,7 @@ const KancaYazi: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
   if (!D.kanca || t > KANCA_SURE + 0.4) return null;
-  const giris = sp(t + 0.35, 0, 9);
+  const giris = sp(t + 0.9, 0, 9);
   const cikis = 1 - ap(t, KANCA_SURE - 0.05, 0.35);
   const tit = Math.sin(t * 40) * 3 * (1 - cl(t / 0.6));
   const kel = D.kanca.yazi.split(" ");
@@ -235,7 +235,7 @@ const KancaYazi: React.FC = () => {
       <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 45%, rgba(0,0,0,0) 30%, rgba(0,0,0,${0.55 * cikis}) 100%)` }} />
       <div style={{ transform: `translateY(-220px) scale(${0.6 + 0.4 * giris}) rotate(${tit - 2}deg)`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 22px", padding: "0 70px" }}>
         {kel.map((w, i) => {
-          const k = sp(t + 0.35, 0.06 * i, 8);
+          const k = sp(t + 0.9, 0.06 * i, 8);
           const vur = i === kel.length - 1;
           return (
             <span key={i} style={{
