@@ -1,0 +1,176 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "kesimler": [
+  [
+   0.0,
+   0.7
+  ],
+  [
+   39.9,
+   43.58
+  ],
+  [
+   54.72,
+   59.98
+  ],
+  [
+   70.18,
+   72.56
+  ]
+ ],
+ "kelime_sil": [
+  2,
+  23,
+  59,
+  71,
+  72,
+  93,
+  94,
+  95,
+  108,
+  111,
+  112,
+  113
+ ],
+ "kelime_ekle": [
+  {
+   "w": "Tavanını",
+   "start": 43.62,
+   "end": 44.05
+  },
+  {
+   "w": "59",
+   "start": 44.05,
+   "end": 44.48
+  },
+  {
+   "w": "Bu",
+   "start": 60.05,
+   "end": 60.25
+  },
+  {
+   "w": "hızla",
+   "start": 60.25,
+   "end": 60.62
+  },
+  {
+   "w": "olimpik",
+   "start": 60.85,
+   "end": 61.4
+  },
+  {
+   "w": "50",
+   "start": 72.6,
+   "end": 72.85
+  },
+  {
+   "w": "yılda",
+   "start": 72.85,
+   "end": 73.35
+  },
+  {
+   "w": "önleyeceği",
+   "start": 73.58,
+   "end": 74.08
+  }
+ ],
+ "duzelt": {
+  "1": "İstanbul'a",
+  "21": "Tokyo'nun",
+  "56": "6,3",
+  "104": "Japonya'nın",
+  "111": "yapım",
+  "49": "içine"
+ },
+ "kanca": {
+  "yazi": "TOKYO NEDEN SU BASMIYOR?",
+  "alt": "Dün İstanbul'u su bastı",
+  "sure": 2.2
+ },
+ "dongu": true,
+ "imza": true,
+ "vurgu": [
+  "1942'den",
+  "Neden?",
+  "altında.",
+  "50",
+  "5",
+  "70",
+  "20",
+  "6,3",
+  "59",
+  "500",
+  "uçak",
+  "200",
+  "13",
+  "8",
+  "3",
+  "kader",
+  "Altyapı"
+ ],
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "gok",
+   "ilk": 0
+  },
+  {
+   "id": "alt",
+   "bg": "gece",
+   "ilk": "cevap",
+   "gecis": "perde"
+  },
+  {
+   "id": "kuyu",
+   "bg": "gok",
+   "ilk": "nehirler",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "tunel",
+   "bg": "gok",
+   "ilk": "kuyular",
+   "gecis": "zoom"
+  },
+  {
+   "id": "depo",
+   "bg": "gece",
+   "ilk": "=su",
+   "gecis": "daire",
+   "vur": [
+    "500"
+   ]
+  },
+  {
+   "id": "pompa",
+   "bg": "plan",
+   "ilk": "sonra",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "havuz",
+   "bg": "yesil",
+   "ilk": "=bu",
+   "gecis": "perde"
+  },
+  {
+   "id": "takvim",
+   "bg": "sicak",
+   "ilk": "sistem",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "terazi",
+   "bg": "parsomen",
+   "ilk": "japonya",
+   "gecis": "zoom"
+  },
+  {
+   "id": "sonuc",
+   "bg": "sicak",
+   "ilk": "=yani",
+   "gecis": "daire"
+  }
+ ]
+}

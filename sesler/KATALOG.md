@@ -1,6 +1,6 @@
 # Ses kütüphanesi
 
-Toplam **666** ses. Hepsi CC0 (kamu malı): ticari kullanım serbest, kaynak belirtmek gerekmez, depoda paylaşmak serbest.
+Toplam **686** ses. Hepsi CC0 (kamu malı): ticari kullanım serbest, kaynak belirtmek gerekmez, depoda paylaşmak serbest.
 
 Videolarda `scripts/bilim_ses.py` içindeki `ornek()` ile kullanılır. Her kullanımda perde ve ses düzeyi hafifçe değiştirilir.
 
@@ -8,7 +8,7 @@ Videolarda `scripts/bilim_ses.py` içindeki `ornek()` ile kullanılır. Her kull
 |---|---|---|
 | bip | 17 | bong_001, confirmation_001, confirmation_002, confirmation_003, confirmation_004, error_001 |
 | darbe | 166 | footstep00, footstep01, footstep02, footstep03, footstep04, footstep05 |
-| diger | 93 | back_001, back_002, back_003, back_004, bubble_pop_217760, bubble_pop_708201 |
+| diger | 113 | back_001, back_002, back_003, back_004, bubble_pop_217760, bubble_pop_708201 |
 | dijital | 32 | highDown, highUp, lowDown, lowRandom, lowThreeTone, pepSound1 |
 | kagit | 41 | bookClose, bookFlip1, bookFlip2, bookFlip3, bookOpen, bookPlace1 |
 | kapi | 15 | creak1, creak2, creak3, doorClose_000, doorClose_001, doorClose_002 |
@@ -21,7 +21,7 @@ Videolarda `scripts/bilim_ses.py` içindeki `ornek()` ile kullanılır. Her kull
 
 ## Paketler
 
-- [Freesound — Freesound CC0 seçkisi](https://freesound.org): 60 ses, lisans: CC0 1.0
+- [Freesound — Freesound CC0 seçkisi](https://freesound.org): 80 ses, lisans: CC0 1.0
 - [Kenney — casino-audio](https://kenney.nl/assets/casino-audio): 55 ses, lisans: CC0 1.0 (kamu malı)
 - [Kenney — digital-audio](https://kenney.nl/assets/digital-audio): 63 ses, lisans: CC0 1.0 (kamu malı)
 - [Kenney — impact-sounds](https://kenney.nl/assets/impact-sounds): 130 ses, lisans: CC0 1.0 (kamu malı)

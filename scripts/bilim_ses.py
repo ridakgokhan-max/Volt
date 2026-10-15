@@ -375,6 +375,11 @@ EFEKT = {
     "boing": ["cartoon_boing_"],
     "yukselen": ["riser_cinematic_"],
     "vurus": ["impact_hit_"],
+    "yagmur": ["heavy_rain_"],
+    "su_akis": ["water_rush_"],
+    "su_sicrama": ["water_splash_"],
+    "gok_gurultu": ["thunder_"],
+    "su_gider": ["water_drain_"],
 }
 
 

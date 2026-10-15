@@ -29,7 +29,7 @@ const A = ALAN[PLATFORM] || ALAN.instagram;
 type Seri = { no: number; toplam: number; kategori: string };
 type Kanca = { yazi: string; alt?: string; sure?: number };
 type Acilis = { sahne: string; an: number; sure: number };
-const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis };
+const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis; imza?: boolean };
 const AC = D.acilis;
 const KANCA_SURE = D.kanca ? D.kanca.sure ?? 2 : 0;
 const DONGU = 15; // döngü sonu: son 15 karede ilk sahneye karışır
@@ -226,7 +226,7 @@ const KancaYazi: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
   if (!D.kanca || t > KANCA_SURE + 0.4) return null;
-  const giris = sp(t, 0, 9);
+  const giris = sp(t + 0.35, 0, 9);
   const cikis = 1 - ap(t, KANCA_SURE - 0.05, 0.35);
   const tit = Math.sin(t * 40) * 3 * (1 - cl(t / 0.6));
   const kel = D.kanca.yazi.split(" ");
@@ -235,7 +235,7 @@ const KancaYazi: React.FC = () => {
       <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 45%, rgba(0,0,0,0) 30%, rgba(0,0,0,${0.55 * cikis}) 100%)` }} />
       <div style={{ transform: `translateY(-220px) scale(${0.6 + 0.4 * giris}) rotate(${tit - 2}deg)`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 22px", padding: "0 70px" }}>
         {kel.map((w, i) => {
-          const k = sp(t, 0.06 * i, 8);
+          const k = sp(t + 0.35, 0.06 * i, 8);
           const vur = i === kel.length - 1;
           return (
             <span key={i} style={{
@@ -247,10 +247,47 @@ const KancaYazi: React.FC = () => {
         })}
       </div>
       {D.kanca.alt ? (
-        <div style={{ transform: `translateY(-110px)`, opacity: ap(t, 0.5, 0.3), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
+        <div style={{ transform: `translateY(-110px)`, opacity: ap(t, 0.15, 0.25), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
           {D.kanca.alt}
         </div>
       ) : null}
+    </AbsoluteFill>
+  );
+};
+
+
+/** Kanalın imza görünümü: her videoda aynı sıcak ışık huzmesi + kenar karartma + ince film greni */
+const Imza: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = f / FPS;
+  if (!D.imza) return null;
+  const nefes = 0.85 + 0.15 * Math.sin(t * 0.9);
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0, mixBlendMode: "screen" }}>
+        <defs>
+          <linearGradient id="imza-h" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#ffe7a8" stopOpacity={0.55 * nefes} />
+            <stop offset="55%" stopColor="#ffd77a" stopOpacity={0.08} />
+            <stop offset="100%" stopColor="#ffd77a" stopOpacity={0} />
+          </linearGradient>
+          <radialGradient id="imza-k" cx="0" cy="0" r="0.6">
+            <stop offset="0%" stopColor="#fff3cf" stopOpacity={0.5 * nefes} />
+            <stop offset="100%" stopColor="#fff3cf" stopOpacity={0} />
+          </radialGradient>
+        </defs>
+        <rect width={W} height={H} fill="url(#imza-k)" />
+        {[0, 1, 2, 3].map((i) => {
+          const a = -8 + i * 9 + Math.sin(t * 0.35 + i) * 1.5;
+          const w = 90 + i * 40;
+          return <path key={i} d={`M ${-60 + i * 30} -60 L ${1500} ${900 + i * 260} L ${1500} ${900 + i * 260 + w} Z`} fill="url(#imza-h)" opacity={0.35 - i * 0.06} transform={`rotate(${a} 0 0)`} />;
+        })}
+      </svg>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(20,12,4,0.38) 100%)" }} />
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0, opacity: 0.07, mixBlendMode: "overlay" }}>
+        <filter id="imza-g"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={f % 7} /></filter>
+        <rect width={W} height={H} filter="url(#imza-g)" />
+      </svg>
     </AbsoluteFill>
   );
 };
@@ -308,6 +345,7 @@ export const BilimVideo: React.FC = () => (
         )}
       </Sequence>
     ) : null}
+    <Imza />
     <Ust />
     <Rozet />
     <Altyazi />
