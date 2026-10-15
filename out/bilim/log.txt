@@ -1,5 +1,5 @@
-metinle hizalandı: transkript 91 -> metin 91 kelime
-kablosuz-sarj: 49.8 sn kayıt -> 41.7 sn video, 91 kelime, 30 altyazı satırı, 6 sahne
+CTA: [{'tur': 'begen', 'bas': 26.106}, {'tur': 'yorum', 'bas': 60.293}, {'tur': 'takip', 'bas': 63.889}]
+tokyo-sel: 85.9 sn kayıt -> 67.3 sn video, 131 kelime, 40 altyazı satırı, 10 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
 Getting Headless Shell - 9.6 Mb/98.9 Mb
@@ -19,11 +19,11 @@ Bundling 32%
 Bundling 43%
 Bundling 54%
 Bundling 65%
-Bundling 70%
-Bundling 75%
-Bundling 80%
-Bundling 85%
-Bundling 91%
+Bundling 71%
+Bundling 76%
+Bundling 81%
+Bundling 87%
+Bundling 92%
 Bundling 98%
 Bundling 100%
 Getting composition
@@ -32,11 +32,11 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/kablosuz-sarj.mp4[39m
+[90mOutput               out/bilim/tokyo-sel.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/kablosuz-sarj.mp4[39m [90m22 MB[39m
+[34m○                    out/bilim/tokyo-sel.mp4[39m [90m25.6 MB[39m
 durum: success
