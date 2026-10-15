@@ -1,0 +1,921 @@
+{
+ "model": "large-v3",
+ "sure": 85.931,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 5.74,
+   "text": "Dün İstanbul'a 1942'den beri ölçülen en büyük yağmur düştü.",
+   "kelimeler": [
+    {
+     "w": "Dün",
+     "start": 0.0,
+     "end": 0.86,
+     "p": 0.999
+    },
+    {
+     "w": "İstanbul",
+     "start": 0.86,
+     "end": 1.24,
+     "p": 1.0
+    },
+    {
+     "w": "'a",
+     "start": 1.24,
+     "end": 1.48,
+     "p": 1.0
+    },
+    {
+     "w": "1942'den",
+     "start": 1.48,
+     "end": 3.06,
+     "p": 0.998
+    },
+    {
+     "w": "beri",
+     "start": 3.06,
+     "end": 3.3,
+     "p": 1.0
+    },
+    {
+     "w": "ölçülen",
+     "start": 3.3,
+     "end": 3.76,
+     "p": 1.0
+    },
+    {
+     "w": "en",
+     "start": 3.76,
+     "end": 4.36,
+     "p": 0.999
+    },
+    {
+     "w": "büyük",
+     "start": 4.36,
+     "end": 4.76,
+     "p": 1.0
+    },
+    {
+     "w": "yağmur",
+     "start": 4.76,
+     "end": 5.32,
+     "p": 1.0
+    },
+    {
+     "w": "düştü.",
+     "start": 5.32,
+     "end": 5.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 6.08,
+   "end": 9.96,
+   "text": "Tokyo'da ise böyle bir yağmur sokakları göle çeviremiyor.",
+   "kelimeler": [
+    {
+     "w": "Tokyo'da",
+     "start": 6.08,
+     "end": 6.92,
+     "p": 0.968
+    },
+    {
+     "w": "ise",
+     "start": 6.92,
+     "end": 7.08,
+     "p": 1.0
+    },
+    {
+     "w": "böyle",
+     "start": 7.08,
+     "end": 7.76,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 7.76,
+     "end": 7.96,
+     "p": 1.0
+    },
+    {
+     "w": "yağmur",
+     "start": 7.96,
+     "end": 8.44,
+     "p": 1.0
+    },
+    {
+     "w": "sokakları",
+     "start": 8.44,
+     "end": 9.26,
+     "p": 0.998
+    },
+    {
+     "w": "göle",
+     "start": 9.26,
+     "end": 9.48,
+     "p": 0.997
+    },
+    {
+     "w": "çeviremiyor.",
+     "start": 9.48,
+     "end": 9.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.76,
+   "end": 10.9,
+   "text": "Neden?",
+   "kelimeler": [
+    {
+     "w": "Neden?",
+     "start": 10.48,
+     "end": 10.9,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 11.64,
+   "end": 13.84,
+   "text": "Cevap, şehrin altında.",
+   "kelimeler": [
+    {
+     "w": "Cevap,",
+     "start": 11.64,
+     "end": 12.48,
+     "p": 0.999
+    },
+    {
+     "w": "şehrin",
+     "start": 12.5,
+     "end": 13.42,
+     "p": 0.999
+    },
+    {
+     "w": "altında.",
+     "start": 13.42,
+     "end": 13.84,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 14.9,
+   "end": 20.18,
+   "text": "Tokyo'nun hemen dışında, yerin 50 metre altında, dünyanın en büyük sel tüneli var.",
+   "kelimeler": [
+    {
+     "w": "Tokyo",
+     "start": 14.62,
+     "end": 15.04,
+     "p": 0.996
+    },
+    {
+     "w": "'nun",
+     "start": 15.04,
+     "end": 15.24,
+     "p": 1.0
+    },
+    {
+     "w": "hemen",
+     "start": 15.24,
+     "end": 15.42,
+     "p": 1.0
+    },
+    {
+     "w": "dışında,",
+     "start": 15.42,
+     "end": 15.96,
+     "p": 1.0
+    },
+    {
+     "w": "yerin",
+     "start": 16.04,
+     "end": 16.66,
+     "p": 1.0
+    },
+    {
+     "w": "50",
+     "start": 16.66,
+     "end": 16.9,
+     "p": 0.983
+    },
+    {
+     "w": "metre",
+     "start": 16.9,
+     "end": 17.18,
+     "p": 0.954
+    },
+    {
+     "w": "altında,",
+     "start": 17.18,
+     "end": 17.7,
+     "p": 1.0
+    },
+    {
+     "w": "dünyanın",
+     "start": 17.82,
+     "end": 18.38,
+     "p": 0.999
+    },
+    {
+     "w": "en",
+     "start": 18.38,
+     "end": 18.6,
+     "p": 1.0
+    },
+    {
+     "w": "büyük",
+     "start": 18.6,
+     "end": 19.0,
+     "p": 1.0
+    },
+    {
+     "w": "sel",
+     "start": 19.0,
+     "end": 19.64,
+     "p": 0.999
+    },
+    {
+     "w": "tüneli",
+     "start": 19.64,
+     "end": 20.02,
+     "p": 0.999
+    },
+    {
+     "w": "var.",
+     "start": 20.02,
+     "end": 20.18,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 21.48,
+   "end": 25.56,
+   "text": "Nehirler taşmaya başlayınca fazla su 5 dev kuyuya dökülüyor.",
+   "kelimeler": [
+    {
+     "w": "Nehirler",
+     "start": 21.32,
+     "end": 21.74,
+     "p": 0.998
+    },
+    {
+     "w": "taşmaya",
+     "start": 21.74,
+     "end": 22.26,
+     "p": 0.999
+    },
+    {
+     "w": "başlayınca",
+     "start": 22.26,
+     "end": 22.9,
+     "p": 1.0
+    },
+    {
+     "w": "fazla",
+     "start": 22.9,
+     "end": 23.5,
+     "p": 0.824
+    },
+    {
+     "w": "su",
+     "start": 23.5,
+     "end": 23.8,
+     "p": 1.0
+    },
+    {
+     "w": "5",
+     "start": 23.8,
+     "end": 24.3,
+     "p": 0.949
+    },
+    {
+     "w": "dev",
+     "start": 24.3,
+     "end": 24.72,
+     "p": 0.999
+    },
+    {
+     "w": "kuyuya",
+     "start": 24.72,
+     "end": 25.14,
+     "p": 0.992
+    },
+    {
+     "w": "dökülüyor.",
+     "start": 25.14,
+     "end": 25.56,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 25.72,
+   "end": 29.32,
+   "text": "Her biri 70 metre derinliğinde, yani içine.",
+   "kelimeler": [
+    {
+     "w": "Her",
+     "start": 25.72,
+     "end": 26.36,
+     "p": 1.0
+    },
+    {
+     "w": "biri",
+     "start": 26.36,
+     "end": 26.64,
+     "p": 0.999
+    },
+    {
+     "w": "70",
+     "start": 26.64,
+     "end": 27.0,
+     "p": 1.0
+    },
+    {
+     "w": "metre",
+     "start": 27.0,
+     "end": 27.34,
+     "p": 0.996
+    },
+    {
+     "w": "derinliğinde,",
+     "start": 27.34,
+     "end": 28.02,
+     "p": 1.0
+    },
+    {
+     "w": "yani",
+     "start": 28.12,
+     "end": 28.94,
+     "p": 1.0
+    },
+    {
+     "w": "içine.",
+     "start": 28.94,
+     "end": 29.32,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 54.54,
+   "text": "20 katlı bir binaya sığar. Kuyular 6,3 kilometrelik bir tünelle birbirine bağlı. Su sonunda dev bir depoya ulaşıyor. Tavanını 59 sütun taşıyor. Her biri 500 ton. Sonra devreye uçak motorundan uyarlanmış pompalar giriyor ve suyu saniyede 200 ton nehre basıyor.",
+   "kelimeler": [
+    {
+     "w": "20",
+     "start": 30.0,
+     "end": 30.82,
+     "p": 0.976
+    },
+    {
+     "w": "katlı",
+     "start": 30.82,
+     "end": 31.2,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 31.2,
+     "end": 31.36,
+     "p": 0.999
+    },
+    {
+     "w": "binaya",
+     "start": 31.36,
+     "end": 31.66,
+     "p": 0.999
+    },
+    {
+     "w": "sığar.",
+     "start": 31.66,
+     "end": 32.04,
+     "p": 0.997
+    },
+    {
+     "w": "Kuyular",
+     "start": 32.44,
+     "end": 33.2,
+     "p": 1.0
+    },
+    {
+     "w": "6",
+     "start": 33.2,
+     "end": 33.74,
+     "p": 0.998
+    },
+    {
+     "w": ",3",
+     "start": 33.74,
+     "end": 34.38,
+     "p": 0.992
+    },
+    {
+     "w": "kilometrelik",
+     "start": 34.38,
+     "end": 35.08,
+     "p": 0.983
+    },
+    {
+     "w": "bir",
+     "start": 35.08,
+     "end": 35.22,
+     "p": 0.999
+    },
+    {
+     "w": "tünelle",
+     "start": 35.22,
+     "end": 35.68,
+     "p": 0.951
+    },
+    {
+     "w": "birbirine",
+     "start": 35.68,
+     "end": 36.44,
+     "p": 1.0
+    },
+    {
+     "w": "bağlı.",
+     "start": 36.44,
+     "end": 36.8,
+     "p": 0.999
+    },
+    {
+     "w": "Su",
+     "start": 37.24,
+     "end": 38.0,
+     "p": 1.0
+    },
+    {
+     "w": "sonunda",
+     "start": 38.0,
+     "end": 38.44,
+     "p": 1.0
+    },
+    {
+     "w": "dev",
+     "start": 38.44,
+     "end": 38.7,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 38.7,
+     "end": 38.86,
+     "p": 1.0
+    },
+    {
+     "w": "depoya",
+     "start": 38.86,
+     "end": 39.2,
+     "p": 0.999
+    },
+    {
+     "w": "ulaşıyor.",
+     "start": 39.2,
+     "end": 39.68,
+     "p": 1.0
+    },
+    {
+     "w": "Tavanını",
+     "start": 39.88,
+     "end": 40.48,
+     "p": 0.929
+    },
+    {
+     "w": "59",
+     "start": 40.48,
+     "end": 44.5,
+     "p": 1.0
+    },
+    {
+     "w": "sütun",
+     "start": 44.5,
+     "end": 45.06,
+     "p": 0.905
+    },
+    {
+     "w": "taşıyor.",
+     "start": 45.06,
+     "end": 45.4,
+     "p": 1.0
+    },
+    {
+     "w": "Her",
+     "start": 45.54,
+     "end": 46.14,
+     "p": 0.999
+    },
+    {
+     "w": "biri",
+     "start": 46.14,
+     "end": 46.38,
+     "p": 1.0
+    },
+    {
+     "w": "500",
+     "start": 46.38,
+     "end": 46.74,
+     "p": 1.0
+    },
+    {
+     "w": "ton.",
+     "start": 46.74,
+     "end": 47.1,
+     "p": 1.0
+    },
+    {
+     "w": "Sonra",
+     "start": 47.34,
+     "end": 48.1,
+     "p": 1.0
+    },
+    {
+     "w": "devreye",
+     "start": 48.1,
+     "end": 48.48,
+     "p": 1.0
+    },
+    {
+     "w": "uçak",
+     "start": 48.48,
+     "end": 48.8,
+     "p": 1.0
+    },
+    {
+     "w": "motorundan",
+     "start": 48.8,
+     "end": 49.38,
+     "p": 1.0
+    },
+    {
+     "w": "uyarlanmış",
+     "start": 49.38,
+     "end": 50.0,
+     "p": 0.998
+    },
+    {
+     "w": "pompalar",
+     "start": 50.0,
+     "end": 50.46,
+     "p": 0.999
+    },
+    {
+     "w": "giriyor",
+     "start": 50.46,
+     "end": 50.76,
+     "p": 0.999
+    },
+    {
+     "w": "ve",
+     "start": 50.76,
+     "end": 51.58,
+     "p": 0.228
+    },
+    {
+     "w": "suyu",
+     "start": 51.58,
+     "end": 52.16,
+     "p": 1.0
+    },
+    {
+     "w": "saniyede",
+     "start": 52.16,
+     "end": 53.04,
+     "p": 1.0
+    },
+    {
+     "w": "200",
+     "start": 53.04,
+     "end": 53.42,
+     "p": 1.0
+    },
+    {
+     "w": "ton",
+     "start": 53.42,
+     "end": 53.88,
+     "p": 1.0
+    },
+    {
+     "w": "nehre",
+     "start": 53.88,
+     "end": 54.22,
+     "p": 0.944
+    },
+    {
+     "w": "basıyor.",
+     "start": 54.22,
+     "end": 54.54,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 54.54,
+   "end": 63.76,
+   "text": "Bu hızla olimpik bir havuzu 13 saniyede boşaltır.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 54.54,
+     "end": 55.58,
+     "p": 0.962
+    },
+    {
+     "w": "hızla",
+     "start": 55.58,
+     "end": 60.42,
+     "p": 0.999
+    },
+    {
+     "w": "olimpik",
+     "start": 60.42,
+     "end": 61.42,
+     "p": 0.98
+    },
+    {
+     "w": "bir",
+     "start": 61.42,
+     "end": 61.54,
+     "p": 1.0
+    },
+    {
+     "w": "havuzu",
+     "start": 61.54,
+     "end": 61.96,
+     "p": 0.999
+    },
+    {
+     "w": "13",
+     "start": 61.96,
+     "end": 62.44,
+     "p": 0.99
+    },
+    {
+     "w": "saniyede",
+     "start": 62.44,
+     "end": 63.1,
+     "p": 0.992
+    },
+    {
+     "w": "boşaltır.",
+     "start": 63.1,
+     "end": 63.76,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 65.14,
+   "end": 68.12,
+   "text": "Sistem yılda ortalama 8 kez çalışıyor.",
+   "kelimeler": [
+    {
+     "w": "Sistem",
+     "start": 65.14,
+     "end": 66.06,
+     "p": 0.997
+    },
+    {
+     "w": "yılda",
+     "start": 66.06,
+     "end": 66.62,
+     "p": 0.998
+    },
+    {
+     "w": "ortalama",
+     "start": 66.62,
+     "end": 67.06,
+     "p": 1.0
+    },
+    {
+     "w": "8",
+     "start": 67.06,
+     "end": 67.34,
+     "p": 0.999
+    },
+    {
+     "w": "kez",
+     "start": 67.34,
+     "end": 67.64,
+     "p": 0.999
+    },
+    {
+     "w": "çalışıyor.",
+     "start": 67.64,
+     "end": 68.12,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 68.38,
+   "end": 76.72,
+   "text": "Japonya'nın hesabına göre 50 yılda önleyeceği zarar yapı masrafının 3 katından fazla.",
+   "kelimeler": [
+    {
+     "w": "Japonya",
+     "start": 68.38,
+     "end": 69.04,
+     "p": 0.997
+    },
+    {
+     "w": "'nın",
+     "start": 69.04,
+     "end": 69.18,
+     "p": 1.0
+    },
+    {
+     "w": "hesabına",
+     "start": 69.18,
+     "end": 69.68,
+     "p": 1.0
+    },
+    {
+     "w": "göre",
+     "start": 69.68,
+     "end": 69.98,
+     "p": 1.0
+    },
+    {
+     "w": "50",
+     "start": 69.98,
+     "end": 70.66,
+     "p": 0.997
+    },
+    {
+     "w": "yılda",
+     "start": 70.66,
+     "end": 71.04,
+     "p": 1.0
+    },
+    {
+     "w": "önleyeceği",
+     "start": 71.04,
+     "end": 74.1,
+     "p": 0.996
+    },
+    {
+     "w": "zarar",
+     "start": 74.1,
+     "end": 74.54,
+     "p": 1.0
+    },
+    {
+     "w": "yapı",
+     "start": 74.54,
+     "end": 75.08,
+     "p": 0.796
+    },
+    {
+     "w": "masrafının",
+     "start": 75.08,
+     "end": 75.6,
+     "p": 1.0
+    },
+    {
+     "w": "3",
+     "start": 75.6,
+     "end": 75.88,
+     "p": 0.999
+    },
+    {
+     "w": "katından",
+     "start": 75.88,
+     "end": 76.34,
+     "p": 1.0
+    },
+    {
+     "w": "fazla.",
+     "start": 76.34,
+     "end": 76.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 77.48,
+   "end": 78.58,
+   "text": "Yani sel kader değil.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 77.16,
+     "end": 77.62,
+     "p": 0.995
+    },
+    {
+     "w": "sel",
+     "start": 77.62,
+     "end": 77.88,
+     "p": 0.987
+    },
+    {
+     "w": "kader",
+     "start": 77.88,
+     "end": 78.44,
+     "p": 0.979
+    },
+    {
+     "w": "değil.",
+     "start": 78.44,
+     "end": 78.58,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 79.44,
+   "end": 80.32,
+   "text": "Altyapı meselesi.",
+   "kelimeler": [
+    {
+     "w": "Altyapı",
+     "start": 79.32,
+     "end": 79.78,
+     "p": 0.948
+    },
+    {
+     "w": "meselesi.",
+     "start": 79.78,
+     "end": 80.32,
+     "p": 0.983
+    }
+   ]
+  },
+  {
+   "start": 80.32,
+   "end": 83.6,
+   "text": "Sence İstanbul'da böyle bir sistem gerekir mi?",
+   "kelimeler": [
+    {
+     "w": "Sence",
+     "start": 80.32,
+     "end": 81.06,
+     "p": 0.994
+    },
+    {
+     "w": "İstanbul'da",
+     "start": 81.06,
+     "end": 82.02,
+     "p": 1.0
+    },
+    {
+     "w": "böyle",
+     "start": 82.02,
+     "end": 82.18,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 82.18,
+     "end": 82.4,
+     "p": 1.0
+    },
+    {
+     "w": "sistem",
+     "start": 82.4,
+     "end": 82.74,
+     "p": 0.999
+    },
+    {
+     "w": "gerekir",
+     "start": 82.74,
+     "end": 83.5,
+     "p": 0.997
+    },
+    {
+     "w": "mi?",
+     "start": 83.5,
+     "end": 83.6,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 83.6,
+   "end": 84.8,
+   "text": "Yorumlara yazın.",
+   "kelimeler": [
+    {
+     "w": "Yorumlara",
+     "start": 83.6,
+     "end": 84.52,
+     "p": 0.826
+    },
+    {
+     "w": "yazın.",
+     "start": 84.52,
+     "end": 84.8,
+     "p": 0.613
+    }
+   ]
+  }
+ ]
+}
