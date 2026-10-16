@@ -1,0 +1,967 @@
+{
+ "model": "large-v3",
+ "sure": 55.217,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.42,
+   "text": "İnstagram'da çok hızlı takipçim artsın diyorsan bu stratejiyi uygula.",
+   "kelimeler": [
+    {
+     "w": "İnstagram'da",
+     "start": 0.0,
+     "end": 0.6,
+     "p": 0.873
+    },
+    {
+     "w": "çok",
+     "start": 0.6,
+     "end": 0.76,
+     "p": 0.972
+    },
+    {
+     "w": "hızlı",
+     "start": 0.76,
+     "end": 1.0,
+     "p": 0.999
+    },
+    {
+     "w": "takipçim",
+     "start": 1.0,
+     "end": 1.5,
+     "p": 0.993
+    },
+    {
+     "w": "artsın",
+     "start": 1.5,
+     "end": 1.84,
+     "p": 0.99
+    },
+    {
+     "w": "diyorsan",
+     "start": 1.84,
+     "end": 2.26,
+     "p": 0.971
+    },
+    {
+     "w": "bu",
+     "start": 2.26,
+     "end": 2.4,
+     "p": 0.942
+    },
+    {
+     "w": "stratejiyi",
+     "start": 2.4,
+     "end": 3.08,
+     "p": 0.993
+    },
+    {
+     "w": "uygula.",
+     "start": 3.08,
+     "end": 3.42,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 3.52,
+   "end": 5.86,
+   "text": "İyi dinle, not al çünkü kimse anlatmıyor.",
+   "kelimeler": [
+    {
+     "w": "İyi",
+     "start": 3.52,
+     "end": 3.8,
+     "p": 0.996
+    },
+    {
+     "w": "dinle,",
+     "start": 3.8,
+     "end": 4.22,
+     "p": 0.994
+    },
+    {
+     "w": "not",
+     "start": 4.24,
+     "end": 4.4,
+     "p": 0.981
+    },
+    {
+     "w": "al",
+     "start": 4.4,
+     "end": 4.6,
+     "p": 0.996
+    },
+    {
+     "w": "çünkü",
+     "start": 4.6,
+     "end": 4.8,
+     "p": 0.886
+    },
+    {
+     "w": "kimse",
+     "start": 4.8,
+     "end": 5.18,
+     "p": 0.999
+    },
+    {
+     "w": "anlatmıyor.",
+     "start": 5.18,
+     "end": 5.86,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 5.92,
+   "end": 6.96,
+   "text": "Şimdi ben anlatacağım.",
+   "kelimeler": [
+    {
+     "w": "Şimdi",
+     "start": 5.92,
+     "end": 6.1,
+     "p": 0.996
+    },
+    {
+     "w": "ben",
+     "start": 6.1,
+     "end": 6.36,
+     "p": 0.996
+    },
+    {
+     "w": "anlatacağım.",
+     "start": 6.36,
+     "end": 6.96,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 7.08,
+   "end": 9.36,
+   "text": "Şimdi bir tane Edis'ten video paylaşıyorsun.",
+   "kelimeler": [
+    {
+     "w": "Şimdi",
+     "start": 7.08,
+     "end": 7.34,
+     "p": 0.977
+    },
+    {
+     "w": "bir",
+     "start": 7.34,
+     "end": 7.52,
+     "p": 0.986
+    },
+    {
+     "w": "tane",
+     "start": 7.52,
+     "end": 7.84,
+     "p": 1.0
+    },
+    {
+     "w": "Edis'ten",
+     "start": 7.84,
+     "end": 8.46,
+     "p": 0.924
+    },
+    {
+     "w": "video",
+     "start": 8.46,
+     "end": 8.72,
+     "p": 0.998
+    },
+    {
+     "w": "paylaşıyorsun.",
+     "start": 8.72,
+     "end": 9.36,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 9.54,
+   "end": 10.64,
+   "text": "Hazır şablonların var.",
+   "kelimeler": [
+    {
+     "w": "Hazır",
+     "start": 9.54,
+     "end": 9.76,
+     "p": 0.948
+    },
+    {
+     "w": "şablonların",
+     "start": 9.76,
+     "end": 10.38,
+     "p": 0.968
+    },
+    {
+     "w": "var.",
+     "start": 10.38,
+     "end": 10.64,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.76,
+   "end": 12.82,
+   "text": "Mutlaka bunu yapman gerekiyor.",
+   "kelimeler": [
+    {
+     "w": "Mutlaka",
+     "start": 10.76,
+     "end": 11.32,
+     "p": 1.0
+    },
+    {
+     "w": "bunu",
+     "start": 11.32,
+     "end": 11.86,
+     "p": 1.0
+    },
+    {
+     "w": "yapman",
+     "start": 11.86,
+     "end": 12.32,
+     "p": 1.0
+    },
+    {
+     "w": "gerekiyor.",
+     "start": 12.32,
+     "end": 12.82,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 12.94,
+   "end": 14.6,
+   "text": "Bir tane normal reels atıyorsun.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 12.94,
+     "end": 13.08,
+     "p": 1.0
+    },
+    {
+     "w": "tane",
+     "start": 13.08,
+     "end": 13.32,
+     "p": 1.0
+    },
+    {
+     "w": "normal",
+     "start": 13.32,
+     "end": 13.72,
+     "p": 0.997
+    },
+    {
+     "w": "reels",
+     "start": 13.72,
+     "end": 14.24,
+     "p": 0.6
+    },
+    {
+     "w": "atıyorsun.",
+     "start": 14.24,
+     "end": 14.6,
+     "p": 0.995
+    }
+   ]
+  },
+  {
+   "start": 14.78,
+   "end": 16.38,
+   "text": "Bir tane kaydırmalı post atıyorsun.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 14.78,
+     "end": 14.9,
+     "p": 1.0
+    },
+    {
+     "w": "tane",
+     "start": 14.9,
+     "end": 15.12,
+     "p": 1.0
+    },
+    {
+     "w": "kaydırmalı",
+     "start": 15.12,
+     "end": 15.78,
+     "p": 0.999
+    },
+    {
+     "w": "post",
+     "start": 15.78,
+     "end": 15.9,
+     "p": 0.826
+    },
+    {
+     "w": "atıyorsun.",
+     "start": 15.9,
+     "end": 16.38,
+     "p": 0.915
+    }
+   ]
+  },
+  {
+   "start": 16.58,
+   "end": 18.36,
+   "text": "Bir tane de deneme videosu atıyorsun.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 16.58,
+     "end": 16.7,
+     "p": 1.0
+    },
+    {
+     "w": "tane",
+     "start": 16.7,
+     "end": 16.96,
+     "p": 1.0
+    },
+    {
+     "w": "de",
+     "start": 16.96,
+     "end": 17.16,
+     "p": 1.0
+    },
+    {
+     "w": "deneme",
+     "start": 17.16,
+     "end": 17.54,
+     "p": 1.0
+    },
+    {
+     "w": "videosu",
+     "start": 17.54,
+     "end": 18.02,
+     "p": 0.996
+    },
+    {
+     "w": "atıyorsun.",
+     "start": 18.02,
+     "end": 18.36,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 18.56,
+   "end": 20.26,
+   "text": "Bunu her gün yapacaksın.",
+   "kelimeler": [
+    {
+     "w": "Bunu",
+     "start": 18.56,
+     "end": 18.86,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 18.86,
+     "end": 19.32,
+     "p": 1.0
+    },
+    {
+     "w": "gün",
+     "start": 19.32,
+     "end": 19.72,
+     "p": 1.0
+    },
+    {
+     "w": "yapacaksın.",
+     "start": 19.72,
+     "end": 20.26,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 20.56,
+   "end": 22.6,
+   "text": "Bunu söyleyince hemen şunu duyuyorum.",
+   "kelimeler": [
+    {
+     "w": "Bunu",
+     "start": 20.56,
+     "end": 20.72,
+     "p": 1.0
+    },
+    {
+     "w": "söyleyince",
+     "start": 20.72,
+     "end": 21.4,
+     "p": 1.0
+    },
+    {
+     "w": "hemen",
+     "start": 21.4,
+     "end": 21.74,
+     "p": 1.0
+    },
+    {
+     "w": "şunu",
+     "start": 21.74,
+     "end": 22.08,
+     "p": 1.0
+    },
+    {
+     "w": "duyuyorum.",
+     "start": 22.08,
+     "end": 22.6,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 22.72,
+   "end": 23.94,
+   "text": "4 tane mi içerik atacağım?",
+   "kelimeler": [
+    {
+     "w": "4",
+     "start": 22.72,
+     "end": 22.86,
+     "p": 0.93
+    },
+    {
+     "w": "tane",
+     "start": 22.86,
+     "end": 23.14,
+     "p": 0.999
+    },
+    {
+     "w": "mi",
+     "start": 23.14,
+     "end": 23.3,
+     "p": 1.0
+    },
+    {
+     "w": "içerik",
+     "start": 23.3,
+     "end": 23.66,
+     "p": 0.999
+    },
+    {
+     "w": "atacağım?",
+     "start": 23.66,
+     "end": 23.94,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 24.04,
+   "end": 25.58,
+   "text": "Evet, 4 tane içerik atacaksın.",
+   "kelimeler": [
+    {
+     "w": "Evet,",
+     "start": 24.04,
+     "end": 24.3,
+     "p": 0.999
+    },
+    {
+     "w": "4",
+     "start": 24.34,
+     "end": 24.58,
+     "p": 1.0
+    },
+    {
+     "w": "tane",
+     "start": 24.58,
+     "end": 24.86,
+     "p": 1.0
+    },
+    {
+     "w": "içerik",
+     "start": 24.86,
+     "end": 25.24,
+     "p": 1.0
+    },
+    {
+     "w": "atacaksın.",
+     "start": 25.24,
+     "end": 25.58,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.82,
+   "end": 28.84,
+   "text": "Başka şansın yoksa o 4 içeriği atacaksın.",
+   "kelimeler": [
+    {
+     "w": "Başka",
+     "start": 25.82,
+     "end": 26.24,
+     "p": 1.0
+    },
+    {
+     "w": "şansın",
+     "start": 26.24,
+     "end": 26.78,
+     "p": 0.999
+    },
+    {
+     "w": "yoksa",
+     "start": 26.78,
+     "end": 27.34,
+     "p": 1.0
+    },
+    {
+     "w": "o",
+     "start": 27.34,
+     "end": 27.66,
+     "p": 0.997
+    },
+    {
+     "w": "4",
+     "start": 27.66,
+     "end": 27.84,
+     "p": 1.0
+    },
+    {
+     "w": "içeriği",
+     "start": 27.84,
+     "end": 28.3,
+     "p": 0.954
+    },
+    {
+     "w": "atacaksın.",
+     "start": 28.3,
+     "end": 28.84,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 28.84,
+   "end": 34.76,
+   "text": "haftanın en az 6 günü atacaksın sonrasında iki hafta sonra iki iki buçuk hafta sonra eline bir",
+   "kelimeler": [
+    {
+     "w": "haftanın",
+     "start": 28.84,
+     "end": 29.54,
+     "p": 0.76
+    },
+    {
+     "w": "en",
+     "start": 29.54,
+     "end": 29.84,
+     "p": 0.985
+    },
+    {
+     "w": "az",
+     "start": 29.84,
+     "end": 30.04,
+     "p": 0.988
+    },
+    {
+     "w": "6",
+     "start": 30.04,
+     "end": 30.42,
+     "p": 0.784
+    },
+    {
+     "w": "günü",
+     "start": 30.42,
+     "end": 30.7,
+     "p": 0.965
+    },
+    {
+     "w": "atacaksın",
+     "start": 30.7,
+     "end": 31.06,
+     "p": 0.976
+    },
+    {
+     "w": "sonrasında",
+     "start": 31.06,
+     "end": 31.92,
+     "p": 0.746
+    },
+    {
+     "w": "iki",
+     "start": 31.92,
+     "end": 32.16,
+     "p": 0.178
+    },
+    {
+     "w": "hafta",
+     "start": 32.16,
+     "end": 32.62,
+     "p": 0.964
+    },
+    {
+     "w": "sonra",
+     "start": 32.62,
+     "end": 32.84,
+     "p": 0.977
+    },
+    {
+     "w": "iki",
+     "start": 32.84,
+     "end": 33.16,
+     "p": 0.259
+    },
+    {
+     "w": "iki",
+     "start": 33.16,
+     "end": 33.36,
+     "p": 0.672
+    },
+    {
+     "w": "buçuk",
+     "start": 33.36,
+     "end": 33.72,
+     "p": 0.998
+    },
+    {
+     "w": "hafta",
+     "start": 33.72,
+     "end": 34.08,
+     "p": 0.993
+    },
+    {
+     "w": "sonra",
+     "start": 34.08,
+     "end": 34.24,
+     "p": 0.987
+    },
+    {
+     "w": "eline",
+     "start": 34.24,
+     "end": 34.62,
+     "p": 0.943
+    },
+    {
+     "w": "bir",
+     "start": 34.62,
+     "end": 34.76,
+     "p": 0.963
+    }
+   ]
+  },
+  {
+   "start": 34.76,
+   "end": 40.08,
+   "text": "veri geçecek sayfanda hangisi işe yarıyor hangisi daha etkileşim veriyor hangisi senin sayfana daha",
+   "kelimeler": [
+    {
+     "w": "veri",
+     "start": 34.76,
+     "end": 35.06,
+     "p": 0.984
+    },
+    {
+     "w": "geçecek",
+     "start": 35.06,
+     "end": 35.54,
+     "p": 0.931
+    },
+    {
+     "w": "sayfanda",
+     "start": 35.54,
+     "end": 36.04,
+     "p": 0.952
+    },
+    {
+     "w": "hangisi",
+     "start": 36.04,
+     "end": 36.56,
+     "p": 0.988
+    },
+    {
+     "w": "işe",
+     "start": 36.56,
+     "end": 36.76,
+     "p": 0.998
+    },
+    {
+     "w": "yarıyor",
+     "start": 36.76,
+     "end": 37.02,
+     "p": 0.995
+    },
+    {
+     "w": "hangisi",
+     "start": 37.02,
+     "end": 37.44,
+     "p": 0.927
+    },
+    {
+     "w": "daha",
+     "start": 37.44,
+     "end": 37.64,
+     "p": 0.989
+    },
+    {
+     "w": "etkileşim",
+     "start": 37.64,
+     "end": 38.32,
+     "p": 0.996
+    },
+    {
+     "w": "veriyor",
+     "start": 38.32,
+     "end": 38.68,
+     "p": 0.996
+    },
+    {
+     "w": "hangisi",
+     "start": 38.68,
+     "end": 39.14,
+     "p": 0.961
+    },
+    {
+     "w": "senin",
+     "start": 39.14,
+     "end": 39.4,
+     "p": 0.971
+    },
+    {
+     "w": "sayfana",
+     "start": 39.4,
+     "end": 39.88,
+     "p": 0.994
+    },
+    {
+     "w": "daha",
+     "start": 39.88,
+     "end": 40.08,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 40.08,
+   "end": 46.92,
+   "text": "uygun bunu çözeceksin bulduktan sonra o bulduğun stratejiyi iki kez yapacaksın yani 4 içeriği ikiye",
+   "kelimeler": [
+    {
+     "w": "uygun",
+     "start": 40.08,
+     "end": 40.52,
+     "p": 0.999
+    },
+    {
+     "w": "bunu",
+     "start": 40.52,
+     "end": 40.66,
+     "p": 0.958
+    },
+    {
+     "w": "çözeceksin",
+     "start": 40.66,
+     "end": 41.22,
+     "p": 0.997
+    },
+    {
+     "w": "bulduktan",
+     "start": 41.22,
+     "end": 42.04,
+     "p": 0.967
+    },
+    {
+     "w": "sonra",
+     "start": 42.04,
+     "end": 42.48,
+     "p": 0.999
+    },
+    {
+     "w": "o",
+     "start": 42.48,
+     "end": 42.76,
+     "p": 0.973
+    },
+    {
+     "w": "bulduğun",
+     "start": 42.76,
+     "end": 43.38,
+     "p": 0.991
+    },
+    {
+     "w": "stratejiyi",
+     "start": 43.38,
+     "end": 44.12,
+     "p": 0.972
+    },
+    {
+     "w": "iki",
+     "start": 44.12,
+     "end": 44.54,
+     "p": 0.767
+    },
+    {
+     "w": "kez",
+     "start": 44.54,
+     "end": 44.88,
+     "p": 0.998
+    },
+    {
+     "w": "yapacaksın",
+     "start": 44.88,
+     "end": 45.3,
+     "p": 0.995
+    },
+    {
+     "w": "yani",
+     "start": 45.3,
+     "end": 45.64,
+     "p": 0.948
+    },
+    {
+     "w": "4",
+     "start": 45.64,
+     "end": 45.94,
+     "p": 0.435
+    },
+    {
+     "w": "içeriği",
+     "start": 45.94,
+     "end": 46.52,
+     "p": 0.984
+    },
+    {
+     "w": "ikiye",
+     "start": 46.52,
+     "end": 46.92,
+     "p": 0.847
+    }
+   ]
+  },
+  {
+   "start": 46.92,
+   "end": 53.76,
+   "text": "böleceksin tutan iki içeriği şeklinde ilerleyeceksin bunu yaptığında takipçi elde etmeme şansın yok ve",
+   "kelimeler": [
+    {
+     "w": "böleceksin",
+     "start": 46.92,
+     "end": 47.4,
+     "p": 0.988
+    },
+    {
+     "w": "tutan",
+     "start": 47.4,
+     "end": 48.06,
+     "p": 0.984
+    },
+    {
+     "w": "iki",
+     "start": 48.06,
+     "end": 48.32,
+     "p": 0.628
+    },
+    {
+     "w": "içeriği",
+     "start": 48.32,
+     "end": 48.8,
+     "p": 0.871
+    },
+    {
+     "w": "şeklinde",
+     "start": 48.8,
+     "end": 49.28,
+     "p": 0.995
+    },
+    {
+     "w": "ilerleyeceksin",
+     "start": 49.28,
+     "end": 50.02,
+     "p": 0.994
+    },
+    {
+     "w": "bunu",
+     "start": 50.02,
+     "end": 50.28,
+     "p": 0.966
+    },
+    {
+     "w": "yaptığında",
+     "start": 50.28,
+     "end": 50.94,
+     "p": 0.983
+    },
+    {
+     "w": "takipçi",
+     "start": 50.94,
+     "end": 51.72,
+     "p": 0.99
+    },
+    {
+     "w": "elde",
+     "start": 51.72,
+     "end": 52.18,
+     "p": 0.987
+    },
+    {
+     "w": "etmeme",
+     "start": 52.18,
+     "end": 52.6,
+     "p": 0.995
+    },
+    {
+     "w": "şansın",
+     "start": 52.6,
+     "end": 53.26,
+     "p": 0.998
+    },
+    {
+     "w": "yok",
+     "start": 53.26,
+     "end": 53.52,
+     "p": 0.998
+    },
+    {
+     "w": "ve",
+     "start": 53.52,
+     "end": 53.76,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 53.76,
+   "end": 55.04,
+   "text": "Ve çok hızlı patlarsın.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 53.76,
+     "end": 53.84,
+     "p": 0.651
+    },
+    {
+     "w": "çok",
+     "start": 53.84,
+     "end": 53.98,
+     "p": 0.995
+    },
+    {
+     "w": "hızlı",
+     "start": 53.98,
+     "end": 54.38,
+     "p": 0.999
+    },
+    {
+     "w": "patlarsın.",
+     "start": 54.38,
+     "end": 55.04,
+     "p": 0.988
+    }
+   ]
+  }
+ ]
+}
