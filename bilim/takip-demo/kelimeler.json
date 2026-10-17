@@ -1,0 +1,422 @@
+{
+ "model": "large-v3",
+ "sure": 35.84,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 0.92,
+   "text": "Bir dakikan var mı?",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 0.0,
+     "end": 0.12,
+     "p": 0.905
+    },
+    {
+     "w": "dakikan",
+     "start": 0.12,
+     "end": 0.6,
+     "p": 0.985
+    },
+    {
+     "w": "var",
+     "start": 0.6,
+     "end": 0.78,
+     "p": 0.999
+    },
+    {
+     "w": "mı?",
+     "start": 0.78,
+     "end": 0.92,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 2.46,
+   "end": 5.26,
+   "text": "Sana her gün yeni bir şey öğreteyim.",
+   "kelimeler": [
+    {
+     "w": "Sana",
+     "start": 2.46,
+     "end": 3.34,
+     "p": 0.983
+    },
+    {
+     "w": "her",
+     "start": 3.34,
+     "end": 3.6,
+     "p": 0.994
+    },
+    {
+     "w": "gün",
+     "start": 3.6,
+     "end": 3.9,
+     "p": 0.997
+    },
+    {
+     "w": "yeni",
+     "start": 3.9,
+     "end": 4.18,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 4.18,
+     "end": 4.4,
+     "p": 1.0
+    },
+    {
+     "w": "şey",
+     "start": 4.4,
+     "end": 4.66,
+     "p": 0.998
+    },
+    {
+     "w": "öğreteyim.",
+     "start": 4.66,
+     "end": 5.26,
+     "p": 0.985
+    }
+   ]
+  },
+  {
+   "start": 7.92,
+   "end": 11.24,
+   "text": "Çekmecedeki eski telefonu bedava güvenlik kamerasına çeviriyoruz.",
+   "kelimeler": [
+    {
+     "w": "Çekmecedeki",
+     "start": 7.92,
+     "end": 8.8,
+     "p": 0.994
+    },
+    {
+     "w": "eski",
+     "start": 8.8,
+     "end": 9.06,
+     "p": 1.0
+    },
+    {
+     "w": "telefonu",
+     "start": 9.06,
+     "end": 9.56,
+     "p": 1.0
+    },
+    {
+     "w": "bedava",
+     "start": 9.56,
+     "end": 9.9,
+     "p": 0.998
+    },
+    {
+     "w": "güvenlik",
+     "start": 9.9,
+     "end": 10.3,
+     "p": 1.0
+    },
+    {
+     "w": "kamerasına",
+     "start": 10.3,
+     "end": 10.74,
+     "p": 0.999
+    },
+    {
+     "w": "çeviriyoruz.",
+     "start": 10.74,
+     "end": 11.24,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 12.66,
+   "end": 17.16,
+   "text": "Tokyo'nun yerin 50 metre altındaki dev sel tünelini geziyoruz.",
+   "kelimeler": [
+    {
+     "w": "Tokyo",
+     "start": 12.66,
+     "end": 13.54,
+     "p": 0.955
+    },
+    {
+     "w": "'nun",
+     "start": 13.54,
+     "end": 13.76,
+     "p": 0.999
+    },
+    {
+     "w": "yerin",
+     "start": 13.76,
+     "end": 14.3,
+     "p": 0.993
+    },
+    {
+     "w": "50",
+     "start": 14.3,
+     "end": 14.52,
+     "p": 0.949
+    },
+    {
+     "w": "metre",
+     "start": 14.52,
+     "end": 14.78,
+     "p": 0.987
+    },
+    {
+     "w": "altındaki",
+     "start": 14.78,
+     "end": 15.34,
+     "p": 1.0
+    },
+    {
+     "w": "dev",
+     "start": 15.34,
+     "end": 15.78,
+     "p": 0.973
+    },
+    {
+     "w": "sel",
+     "start": 15.78,
+     "end": 16.04,
+     "p": 0.962
+    },
+    {
+     "w": "tünelini",
+     "start": 16.04,
+     "end": 16.58,
+     "p": 0.983
+    },
+    {
+     "w": "geziyoruz.",
+     "start": 16.58,
+     "end": 17.16,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 18.1,
+   "end": 21.62,
+   "text": "Kablosuz şarjın aslında hiç de kablosuz olmadığını gösteriyoruz.",
+   "kelimeler": [
+    {
+     "w": "Kablosuz",
+     "start": 18.1,
+     "end": 18.98,
+     "p": 1.0
+    },
+    {
+     "w": "şarjın",
+     "start": 18.98,
+     "end": 19.42,
+     "p": 0.999
+    },
+    {
+     "w": "aslında",
+     "start": 19.42,
+     "end": 19.74,
+     "p": 0.998
+    },
+    {
+     "w": "hiç",
+     "start": 19.74,
+     "end": 20.06,
+     "p": 0.996
+    },
+    {
+     "w": "de",
+     "start": 20.06,
+     "end": 20.2,
+     "p": 0.998
+    },
+    {
+     "w": "kablosuz",
+     "start": 20.2,
+     "end": 20.68,
+     "p": 1.0
+    },
+    {
+     "w": "olmadığını",
+     "start": 20.68,
+     "end": 21.08,
+     "p": 1.0
+    },
+    {
+     "w": "gösteriyoruz.",
+     "start": 21.08,
+     "end": 21.62,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 23.06,
+   "end": 26.92,
+   "text": "Fermuar'ın 20 yıl kimsenin yüz vermediği hikayesini anlatıyoruz.",
+   "kelimeler": [
+    {
+     "w": "Fermuar",
+     "start": 23.06,
+     "end": 23.94,
+     "p": 0.977
+    },
+    {
+     "w": "'ın",
+     "start": 23.94,
+     "end": 24.12,
+     "p": 0.981
+    },
+    {
+     "w": "20",
+     "start": 24.12,
+     "end": 24.52,
+     "p": 0.997
+    },
+    {
+     "w": "yıl",
+     "start": 24.52,
+     "end": 24.74,
+     "p": 1.0
+    },
+    {
+     "w": "kimsenin",
+     "start": 24.74,
+     "end": 25.26,
+     "p": 0.993
+    },
+    {
+     "w": "yüz",
+     "start": 25.26,
+     "end": 25.4,
+     "p": 0.975
+    },
+    {
+     "w": "vermediği",
+     "start": 25.4,
+     "end": 25.96,
+     "p": 0.999
+    },
+    {
+     "w": "hikayesini",
+     "start": 25.96,
+     "end": 26.46,
+     "p": 0.998
+    },
+    {
+     "w": "anlatıyoruz.",
+     "start": 26.46,
+     "end": 26.92,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 28.06,
+   "end": 31.04,
+   "text": "Her video bir dakika, her gün yeni bir merak.",
+   "kelimeler": [
+    {
+     "w": "Her",
+     "start": 28.06,
+     "end": 28.6,
+     "p": 0.661
+    },
+    {
+     "w": "video",
+     "start": 28.6,
+     "end": 28.92,
+     "p": 0.982
+    },
+    {
+     "w": "bir",
+     "start": 28.92,
+     "end": 29.08,
+     "p": 0.941
+    },
+    {
+     "w": "dakika,",
+     "start": 29.08,
+     "end": 29.38,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 29.52,
+     "end": 29.86,
+     "p": 0.998
+    },
+    {
+     "w": "gün",
+     "start": 29.86,
+     "end": 30.1,
+     "p": 1.0
+    },
+    {
+     "w": "yeni",
+     "start": 30.1,
+     "end": 30.56,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 30.56,
+     "end": 30.74,
+     "p": 1.0
+    },
+    {
+     "w": "merak.",
+     "start": 30.74,
+     "end": 31.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.24,
+   "end": 34.2,
+   "text": "Sıradakini kaçırmamak için hemen takip et.",
+   "kelimeler": [
+    {
+     "w": "Sıradakini",
+     "start": 32.24,
+     "end": 32.78,
+     "p": 0.999
+    },
+    {
+     "w": "kaçırmamak",
+     "start": 32.78,
+     "end": 33.32,
+     "p": 0.999
+    },
+    {
+     "w": "için",
+     "start": 33.32,
+     "end": 33.46,
+     "p": 1.0
+    },
+    {
+     "w": "hemen",
+     "start": 33.46,
+     "end": 33.66,
+     "p": 0.999
+    },
+    {
+     "w": "takip",
+     "start": 33.66,
+     "end": 34.08,
+     "p": 1.0
+    },
+    {
+     "w": "et.",
+     "start": 34.08,
+     "end": 34.2,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
