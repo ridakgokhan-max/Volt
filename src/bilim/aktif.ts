@@ -18,6 +18,8 @@ import * as kablosuz from "./konular/kablosuz";
 import kablosuzData from "./data/kablosuz-sarj.json";
 import * as takipdemo from "./konular/takipdemo";
 import takipdemoData from "./data/takip-demo.json";
+import * as tanitim2 from "./konular/tanitim2";
+import tanitim2Data from "./data/tanitim2.json";
 
 type Konu = { data: typeof parmakIziData; SAHNE: Record<string, any>; KAPAK: React.FC; KAPAK_YAZI: { ust: string; buyuk: string; alt: string } };
 const KONULAR: Record<string, Konu> = {
@@ -30,6 +32,7 @@ const KONULAR: Record<string, Konu> = {
   "tokyo-sel": { data: tokyoData as any, ...tokyo } as Konu,
   "kablosuz-sarj": { data: kablosuzData as any, ...kablosuz } as Konu,
   "takip-demo": { data: takipdemoData as any, ...takipdemo } as Konu,
+  tanitim2: { data: tanitim2Data as any, ...tanitim2 } as Konu,
 };
 const secilen = (getInputProps() as { konu?: string }).konu || "demo";
 const k = KONULAR[secilen] || KONULAR["demo"];

@@ -1,0 +1,82 @@
+{
+ "baslik": "",
+ "temizle": false,
+ "kanca": {
+  "yazi": "GÖKYÜZÜ MOR OLMALIYDI",
+  "alt": "Fizik böyle diyor",
+  "sure": 1.9
+ },
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 3.0,
+ "cta": [
+  {
+   "tur": "yorum",
+   "kelime": "anlatayım",
+   "ofset": 0.05,
+   "yazi": "Hangisi önce?",
+   "kostum": "onluk"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "kostum": "onluk"
+  }
+ ],
+ "vurgu": [
+  "mor",
+  "açacağı",
+  "yirmi",
+  "top",
+  "pet",
+  "dakikada.",
+  "hangisini",
+  "takip"
+ ],
+ "sahneler": [
+  {
+   "id": "gok",
+   "bg": "gok",
+   "ilk": 0
+  },
+  {
+   "id": "konserve",
+   "bg": "sicak",
+   "ilk": "konserve",
+   "gecis": "kaydir",
+   "vur": [
+    "açacağı"
+   ]
+  },
+  {
+   "id": "gps",
+   "bg": "gece",
+   "ilk": "telefonun",
+   "gecis": "zoom"
+  },
+  {
+   "id": "alev",
+   "bg": "gece",
+   "ilk": "uzayda",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "cicek",
+   "bg": "yesil",
+   "ilk": "=ve",
+   "gecis": "perde"
+  },
+  {
+   "id": "yakinda",
+   "bg": "sicak",
+   "ilk": "hepsinin",
+   "gecis": "daire"
+  },
+  {
+   "id": "takip",
+   "bg": "gece",
+   "ilk": "kaçırmamak",
+   "gecis": "zoom"
+  }
+ ]
+}
