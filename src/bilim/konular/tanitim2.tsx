@@ -116,7 +116,7 @@ const Mum: React.FC<{ x: number; y: number; top: number; t: number }> = ({ x, y,
 // ---------- 4 — Uzayda alev top gibi yanar ----------
 const Alev: S = ({ t, ws, ses }) => {
   const tu = ws("uzayda");
-  const tt = ws("top");
+  const tt = ws("balon");
   return (
     <g>
       <Tag x={290} y={420} text="DÜNYA" size={44} k={1} bg="#fff" />
@@ -124,7 +124,7 @@ const Alev: S = ({ t, ws, ses }) => {
       <Mum x={290} y={760} top={0} t={t} />
       <Mum x={790} y={760} top={ez((t - tt + 0.3) / 0.6)} t={t} />
       <line x1={540} y1={480} x2={540} y2={1100} stroke={CHALK} strokeWidth={4} strokeDasharray="16 14" opacity={0.5} />
-      <Tag x={790} y={1110} text="TOP GİBİ!" size={50} k={sp(t, tt, 8)} bg={ACC} rot={3} />
+      <Tag x={790} y={1110} text="BALON GİBİ!" size={50} k={sp(t, tt, 8)} bg={ACC} rot={3} />
       <Merakli x={540} y={1240} s={0.4} t={t} hareket="sasir" kostum="kasif" agiz={ses(t)} ink={CHALK} />
     </g>
   );
