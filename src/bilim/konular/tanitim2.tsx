@@ -37,7 +37,7 @@ const Gok: S = ({ t, ws, ses }) => {
         const a = -2.4 + i * 0.25;
         return <line key={i} x1={820 + Math.cos(a) * 110} y1={420 + Math.sin(a) * 110} x2={820 + Math.cos(a) * (110 + u * 520)} y2={420 + Math.sin(a) * (110 + u * 520)} stroke={c} strokeWidth={12} strokeLinecap="round" opacity={1 - u} />;
       })}
-      <rect x={0} y={1060} width={1080} height={300} fill="#3f6b3a" />
+      <rect x={0} y={1060} width={1080} height={940} fill="#3f6b3a" />
       <path d="M 0 1060 Q 270 980 540 1060 T 1080 1060 L 1080 1100 L 0 1100 Z" fill="#4f8a47" />
       <Soru x={330} y={720} k={sp(t, Math.max(tm, 2.1), 8)} t={t} />
       <Merakli x={760} y={1240} s={0.55} t={t} hareket={t > 2 ? "dusun" : "sasir"} kostum="onluk" agiz={ses(t)} />
