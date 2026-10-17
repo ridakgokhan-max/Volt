@@ -1,0 +1,386 @@
+{
+ "model": "large-v3",
+ "sure": 35.328,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 2.18,
+   "text": "Aslında gökyüzü mor olmalıydı.",
+   "kelimeler": [
+    {
+     "w": "Aslında",
+     "start": 0.0,
+     "end": 0.8,
+     "p": 0.996
+    },
+    {
+     "w": "gökyüzü",
+     "start": 0.8,
+     "end": 1.36,
+     "p": 0.999
+    },
+    {
+     "w": "mor",
+     "start": 1.36,
+     "end": 1.48,
+     "p": 1.0
+    },
+    {
+     "w": "olmalıydı.",
+     "start": 1.48,
+     "end": 2.18,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 3.5,
+   "end": 6.6,
+   "text": "Konserve kutusu icat edildiğinde açacağı yoktu.",
+   "kelimeler": [
+    {
+     "w": "Konserve",
+     "start": 3.5,
+     "end": 4.38,
+     "p": 0.998
+    },
+    {
+     "w": "kutusu",
+     "start": 4.38,
+     "end": 4.72,
+     "p": 1.0
+    },
+    {
+     "w": "icat",
+     "start": 4.72,
+     "end": 5.12,
+     "p": 1.0
+    },
+    {
+     "w": "edildiğinde",
+     "start": 5.12,
+     "end": 5.7,
+     "p": 1.0
+    },
+    {
+     "w": "açacağı",
+     "start": 5.7,
+     "end": 6.32,
+     "p": 0.999
+    },
+    {
+     "w": "yoktu.",
+     "start": 6.32,
+     "end": 6.6,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 7.34,
+   "end": 10.66,
+   "text": "Telefonun 20 bin kilometre yukarıdaki uyduları dinliyor.",
+   "kelimeler": [
+    {
+     "w": "Telefonun",
+     "start": 7.34,
+     "end": 8.22,
+     "p": 0.999
+    },
+    {
+     "w": "20",
+     "start": 8.22,
+     "end": 8.58,
+     "p": 0.909
+    },
+    {
+     "w": "bin",
+     "start": 8.58,
+     "end": 8.78,
+     "p": 0.711
+    },
+    {
+     "w": "kilometre",
+     "start": 8.78,
+     "end": 9.36,
+     "p": 0.998
+    },
+    {
+     "w": "yukarıdaki",
+     "start": 9.36,
+     "end": 9.84,
+     "p": 1.0
+    },
+    {
+     "w": "uyduları",
+     "start": 9.84,
+     "end": 10.36,
+     "p": 0.999
+    },
+    {
+     "w": "dinliyor.",
+     "start": 10.36,
+     "end": 10.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 11.68,
+   "end": 14.44,
+   "text": "Uzayda bir mum yaksan alevi yuvarlak bir tok gibi yanar.",
+   "kelimeler": [
+    {
+     "w": "Uzayda",
+     "start": 11.52,
+     "end": 11.96,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 11.96,
+     "end": 12.12,
+     "p": 1.0
+    },
+    {
+     "w": "mum",
+     "start": 12.12,
+     "end": 12.32,
+     "p": 1.0
+    },
+    {
+     "w": "yaksan",
+     "start": 12.32,
+     "end": 12.82,
+     "p": 0.998
+    },
+    {
+     "w": "alevi",
+     "start": 12.82,
+     "end": 13.18,
+     "p": 0.917
+    },
+    {
+     "w": "yuvarlak",
+     "start": 13.18,
+     "end": 13.62,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 13.62,
+     "end": 13.74,
+     "p": 1.0
+    },
+    {
+     "w": "tok",
+     "start": 13.74,
+     "end": 13.92,
+     "p": 0.879
+    },
+    {
+     "w": "gibi",
+     "start": 13.92,
+     "end": 14.12,
+     "p": 1.0
+    },
+    {
+     "w": "yanar.",
+     "start": 14.12,
+     "end": 14.44,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 15.72,
+   "end": 18.72,
+   "text": "Ve tatile giderken çiçeklerini bir pet şişeyle sulayabilirsin.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 15.34,
+     "end": 15.78,
+     "p": 1.0
+    },
+    {
+     "w": "tatile",
+     "start": 15.78,
+     "end": 16.22,
+     "p": 0.998
+    },
+    {
+     "w": "giderken",
+     "start": 16.22,
+     "end": 16.62,
+     "p": 1.0
+    },
+    {
+     "w": "çiçeklerini",
+     "start": 16.62,
+     "end": 17.18,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 17.18,
+     "end": 17.38,
+     "p": 1.0
+    },
+    {
+     "w": "pet",
+     "start": 17.38,
+     "end": 17.6,
+     "p": 0.974
+    },
+    {
+     "w": "şişeyle",
+     "start": 17.6,
+     "end": 18.02,
+     "p": 0.992
+    },
+    {
+     "w": "sulayabilirsin.",
+     "start": 18.02,
+     "end": 18.72,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 20.56,
+   "end": 24.18,
+   "text": "Hepsinin cevabı önümüzdeki günlerde her gün bir dakikada.",
+   "kelimeler": [
+    {
+     "w": "Hepsinin",
+     "start": 20.46,
+     "end": 20.9,
+     "p": 1.0
+    },
+    {
+     "w": "cevabı",
+     "start": 20.9,
+     "end": 21.58,
+     "p": 1.0
+    },
+    {
+     "w": "önümüzdeki",
+     "start": 21.58,
+     "end": 22.28,
+     "p": 0.999
+    },
+    {
+     "w": "günlerde",
+     "start": 22.28,
+     "end": 22.8,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 22.8,
+     "end": 23.2,
+     "p": 0.988
+    },
+    {
+     "w": "gün",
+     "start": 23.2,
+     "end": 23.48,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 23.48,
+     "end": 23.66,
+     "p": 0.955
+    },
+    {
+     "w": "dakikada.",
+     "start": 23.66,
+     "end": 24.18,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.86,
+   "end": 27.38,
+   "text": "Sence hangisini ilk anlatayım?",
+   "kelimeler": [
+    {
+     "w": "Sence",
+     "start": 25.7,
+     "end": 26.14,
+     "p": 0.998
+    },
+    {
+     "w": "hangisini",
+     "start": 26.14,
+     "end": 26.6,
+     "p": 1.0
+    },
+    {
+     "w": "ilk",
+     "start": 26.6,
+     "end": 26.82,
+     "p": 1.0
+    },
+    {
+     "w": "anlatayım?",
+     "start": 26.82,
+     "end": 27.38,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.18,
+   "end": 32.7,
+   "text": "Yorumlara yaz, kaçırmamak için de takip et.",
+   "kelimeler": [
+    {
+     "w": "Yorumlara",
+     "start": 30.18,
+     "end": 30.58,
+     "p": 0.945
+    },
+    {
+     "w": "yaz,",
+     "start": 30.58,
+     "end": 30.84,
+     "p": 0.999
+    },
+    {
+     "w": "kaçırmamak",
+     "start": 31.04,
+     "end": 31.9,
+     "p": 0.999
+    },
+    {
+     "w": "için",
+     "start": 31.9,
+     "end": 32.06,
+     "p": 0.998
+    },
+    {
+     "w": "de",
+     "start": 32.06,
+     "end": 32.18,
+     "p": 0.999
+    },
+    {
+     "w": "takip",
+     "start": 32.18,
+     "end": 32.56,
+     "p": 1.0
+    },
+    {
+     "w": "et.",
+     "start": 32.56,
+     "end": 32.7,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
