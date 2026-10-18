@@ -20,6 +20,14 @@ import * as takipdemo from "./konular/takipdemo";
 import takipdemoData from "./data/takip-demo.json";
 import * as tanitim2 from "./konular/tanitim2";
 import tanitim2Data from "./data/tanitim2.json";
+import * as gokyuzu from "./konular/gokyuzu";
+import gokyuzuData from "./data/gokyuzu.json";
+import * as konserve from "./konular/konserve";
+import konserveData from "./data/konserve.json";
+import * as gps from "./konular/gps";
+import gpsData from "./data/gps.json";
+import * as cicek from "./konular/cicek";
+import cicekData from "./data/cicek-sulama.json";
 
 type Konu = { data: typeof parmakIziData; SAHNE: Record<string, any>; KAPAK: React.FC; KAPAK_YAZI: { ust: string; buyuk: string; alt: string } };
 const KONULAR: Record<string, Konu> = {
@@ -33,6 +41,10 @@ const KONULAR: Record<string, Konu> = {
   "kablosuz-sarj": { data: kablosuzData as any, ...kablosuz } as Konu,
   "takip-demo": { data: takipdemoData as any, ...takipdemo } as Konu,
   tanitim2: { data: tanitim2Data as any, ...tanitim2 } as Konu,
+  gokyuzu: { data: gokyuzuData as any, ...gokyuzu } as Konu,
+  konserve: { data: konserveData as any, ...konserve } as Konu,
+  gps: { data: gpsData as any, ...gps } as Konu,
+  "cicek-sulama": { data: cicekData as any, ...cicek } as Konu,
 };
 const secilen = (getInputProps() as { konu?: string }).konu || "demo";
 const k = KONULAR[secilen] || KONULAR["demo"];

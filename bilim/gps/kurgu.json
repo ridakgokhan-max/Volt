@@ -1,0 +1,141 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 3.3,
+ "kesimler": [
+  [
+   0.0,
+   4.25
+  ],
+  [
+   21.3,
+   24.15
+  ],
+  [
+   56.75,
+   58.6
+  ]
+ ],
+ "kelime_sil": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  42,
+  43,
+  44,
+  45,
+  98,
+  99,
+  100
+ ],
+ "kelime_ekle": [
+  {
+   "w": "Telefon",
+   "start": 24.2,
+   "end": 24.5
+  },
+  {
+   "w": "sinyalin",
+   "start": 24.55,
+   "end": 25.05
+  }
+ ],
+ "seri": {
+  "no": 8,
+  "toplam": 30,
+  "kategori": "Teknoloji"
+ },
+ "kanca": {
+  "yazi": "TELEFONUN 20.000 KM YUKARIYI DİNLİYOR",
+  "alt": "İnternet bile gerekmiyor",
+  "sure": 2.0
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "buluyor"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "kayardı",
+   "yazi": "Biliyor muydun?"
+  },
+  {
+   "tur": "takip",
+   "son": true
+  }
+ ],
+ "cta_kostum": "kulaklik",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "gece",
+   "ilk": 0
+  },
+  {
+   "id": "uydular",
+   "bg": "gece",
+   "ilk": "dünyanın",
+   "gecis": "zoom"
+  },
+  {
+   "id": "yayin",
+   "bg": "devre",
+   "ilk": "=her",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sure",
+   "bg": "plan",
+   "ilk": "=telefon",
+   "gecis": "perde"
+  },
+  {
+   "id": "dort",
+   "bg": "plan",
+   "ilk": "4",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "soru",
+   "bg": "gece",
+   "ilk": "peki",
+   "gecis": "zoom"
+  },
+  {
+   "id": "saatler",
+   "bg": "tahta",
+   "ilk": "uydulardaki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "kayma",
+   "bg": "sicak",
+   "ilk": "=bu",
+   "gecis": "perde"
+  },
+  {
+   "id": "sonuc",
+   "bg": "gece",
+   "ilk": "yani",
+   "gecis": "daire"
+  }
+ ],
+ "vurgu": [
+  "20.000",
+  "internete",
+  "30'dan",
+  "buradayım",
+  "4",
+  "birkaç",
+  "Einstein'ın",
+  "38",
+  "kilometrelerce",
+  "teşekkür"
+ ]
+}

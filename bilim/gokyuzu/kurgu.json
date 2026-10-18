@@ -1,0 +1,136 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 3.3,
+ "kesimler": [
+  [
+   1.85,
+   5.35
+  ],
+  [
+   31.5,
+   34.75
+  ]
+ ],
+ "kelime_sil": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  60,
+  61,
+  62,
+  63
+ ],
+ "kelime_ekle": [
+  {
+   "w": "Güneş",
+   "start": 34.8,
+   "end": 35.3
+  },
+  {
+   "w": "zaten",
+   "start": 35.32,
+   "end": 35.95
+  },
+  {
+   "w": "daha",
+   "start": 35.98,
+   "end": 36.3
+  },
+  {
+   "w": "az",
+   "start": 36.32,
+   "end": 36.7
+  }
+ ],
+ "seri": {
+  "no": 6,
+  "toplam": 30,
+  "kategori": "Bilim"
+ },
+ "kanca": {
+  "yazi": "GÖKYÜZÜ MOR OLMALIYDI",
+  "alt": "Fizik böyle diyor",
+  "sure": 1.9
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "=saçılıyor.",
+   "n": 1
+  },
+  {
+   "tur": "yorum",
+   "kelime": "görmüyoruz",
+   "yazi": "Sence neden?"
+  },
+  {
+   "tur": "takip",
+   "son": true
+  }
+ ],
+ "cta_kostum": "onluk",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "gok",
+   "ilk": 0
+  },
+  {
+   "id": "isik",
+   "bg": "gece",
+   "ilk": "güneş",
+   "gecis": "zoom"
+  },
+  {
+   "id": "sacilma",
+   "bg": "plan",
+   "ilk": "=bu",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "goz",
+   "bg": "gok",
+   "ilk": "gökyüzünde",
+   "gecis": "perde"
+  },
+  {
+   "id": "soru",
+   "bg": "gece",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sebep",
+   "bg": "tahta",
+   "ilk": "iki",
+   "gecis": "daire"
+  },
+  {
+   "id": "aksam",
+   "bg": "gok",
+   "ilk": "akşam",
+   "gecis": "perde"
+  },
+  {
+   "id": "sonuc",
+   "bg": "sicak",
+   "ilk": "yani",
+   "gecis": "daire"
+  }
+ ],
+ "vurgu": [
+  "mor",
+  "renkler",
+  "saçılıyor.",
+  "mavi.",
+  "gözümüz",
+  "turuncu",
+  "kırmızı"
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 3.3,
+ "kesimler": [
+  [
+   0.0,
+   2.2
+  ],
+  [
+   32.1,
+   36.35
+  ]
+ ],
+ "kelime_sil": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  56,
+  57,
+  58,
+  59,
+  60
+ ],
+ "kelime_ekle": [
+  {
+   "w": "Askerler",
+   "start": 36.44,
+   "end": 37.45
+  },
+  {
+   "w": "süngü,",
+   "start": 37.5,
+   "end": 38.3
+  },
+  {
+   "w": "bıçak,",
+   "start": 38.34,
+   "end": 39.0
+  },
+  {
+   "w": "hatta",
+   "start": 39.04,
+   "end": 39.5
+  },
+  {
+   "w": "tüfek",
+   "start": 39.54,
+   "end": 39.9
+  },
+  {
+   "w": "kullanıyordu.",
+   "start": 39.92,
+   "end": 40.48
+  }
+ ],
+ "seri": {
+  "no": 7,
+  "toplam": 30,
+  "kategori": "Tarih"
+ },
+ "kanca": {
+  "yazi": "AÇACAĞI 50 YIL SONRA GELDİ",
+  "alt": "Konservenin tuhaf hikâyesi",
+  "sure": 1.9
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "göndermekti"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "açıyordu",
+   "yazi": "Sen nasıl açardın?"
+  },
+  {
+   "tur": "takip",
+   "son": true
+  }
+ ],
+ "cta_kostum": "sapka",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "sicak",
+   "ilk": 0
+  },
+  {
+   "id": "cizelge",
+   "bg": "tahta",
+   "ilk": "=açacak",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "patent",
+   "bg": "parsomen",
+   "ilk": "1810",
+   "gecis": "zoom"
+  },
+  {
+   "id": "amac",
+   "bg": "gok",
+   "ilk": "amaç",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "agir",
+   "bg": "sicak",
+   "ilk": "ilk",
+   "gecis": "perde"
+  },
+  {
+   "id": "talimat",
+   "bg": "parsomen",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "asker",
+   "bg": "gece",
+   "ilk": "askerler",
+   "gecis": "flas"
+  },
+  {
+   "id": "acacak",
+   "bg": "sicak",
+   "ilk": "kutular",
+   "gecis": "daire"
+  },
+  {
+   "id": "sonuc",
+   "bg": "yesil",
+   "ilk": "yani",
+   "gecis": "daire"
+  }
+ ],
+ "vurgu": [
+  "yoktu.",
+  "50",
+  "1810'da",
+  "ağırdı.",
+  "keski",
+  "tüfek",
+  "1850'lerde",
+  "başka"
+ ]
+}
