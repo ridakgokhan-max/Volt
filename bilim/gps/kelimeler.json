@@ -1,0 +1,682 @@
+{
+ "model": "large-v3",
+ "sure": 58.581,
+ "segmentler": [
+  {
+   "start": 1.26,
+   "end": 10.9,
+   "text": "Telefonun 20.000 km yukarı dinliyor. Telefonun şu an yaklaşık 20.000 km yukarıdaki uyduları dinliyor. Ve bunun için internete ihtiyacı yok.",
+   "kelimeler": [
+    {
+     "w": "Telefonun",
+     "start": 1.26,
+     "end": 2.02,
+     "p": 0.995
+    },
+    {
+     "w": "20",
+     "start": 2.02,
+     "end": 2.38,
+     "p": 0.953
+    },
+    {
+     "w": ".000",
+     "start": 2.38,
+     "end": 2.72,
+     "p": 0.894
+    },
+    {
+     "w": "km",
+     "start": 2.72,
+     "end": 2.92,
+     "p": 0.875
+    },
+    {
+     "w": "yukarı",
+     "start": 2.92,
+     "end": 3.46,
+     "p": 0.967
+    },
+    {
+     "w": "dinliyor.",
+     "start": 3.46,
+     "end": 3.92,
+     "p": 0.823
+    },
+    {
+     "w": "Telefonun",
+     "start": 4.34,
+     "end": 5.1,
+     "p": 0.999
+    },
+    {
+     "w": "şu",
+     "start": 5.1,
+     "end": 5.24,
+     "p": 0.998
+    },
+    {
+     "w": "an",
+     "start": 5.24,
+     "end": 5.48,
+     "p": 1.0
+    },
+    {
+     "w": "yaklaşık",
+     "start": 5.48,
+     "end": 6.14,
+     "p": 1.0
+    },
+    {
+     "w": "20",
+     "start": 6.14,
+     "end": 6.44,
+     "p": 1.0
+    },
+    {
+     "w": ".000",
+     "start": 6.44,
+     "end": 6.7,
+     "p": 1.0
+    },
+    {
+     "w": "km",
+     "start": 6.7,
+     "end": 6.88,
+     "p": 1.0
+    },
+    {
+     "w": "yukarıdaki",
+     "start": 6.88,
+     "end": 7.68,
+     "p": 1.0
+    },
+    {
+     "w": "uyduları",
+     "start": 7.68,
+     "end": 8.24,
+     "p": 1.0
+    },
+    {
+     "w": "dinliyor.",
+     "start": 8.24,
+     "end": 8.54,
+     "p": 1.0
+    },
+    {
+     "w": "Ve",
+     "start": 8.64,
+     "end": 9.16,
+     "p": 0.995
+    },
+    {
+     "w": "bunun",
+     "start": 9.16,
+     "end": 9.4,
+     "p": 1.0
+    },
+    {
+     "w": "için",
+     "start": 9.4,
+     "end": 9.68,
+     "p": 1.0
+    },
+    {
+     "w": "internete",
+     "start": 9.68,
+     "end": 10.16,
+     "p": 0.997
+    },
+    {
+     "w": "ihtiyacı",
+     "start": 10.16,
+     "end": 10.64,
+     "p": 1.0
+    },
+    {
+     "w": "yok.",
+     "start": 10.64,
+     "end": 10.9,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 11.32,
+   "end": 20.98,
+   "text": "Dünyanın etrafında 30'dan fazla GPS uydusu dönüyor. Her biri durmadan aynı şeyi yayınlıyor. Ben buradayım. Ve saat tam olarak şu.",
+   "kelimeler": [
+    {
+     "w": "Dünyanın",
+     "start": 11.32,
+     "end": 12.08,
+     "p": 0.999
+    },
+    {
+     "w": "etrafında",
+     "start": 12.08,
+     "end": 12.68,
+     "p": 1.0
+    },
+    {
+     "w": "30'dan",
+     "start": 12.68,
+     "end": 13.5,
+     "p": 0.998
+    },
+    {
+     "w": "fazla",
+     "start": 13.5,
+     "end": 13.9,
+     "p": 1.0
+    },
+    {
+     "w": "GPS",
+     "start": 13.9,
+     "end": 14.22,
+     "p": 0.999
+    },
+    {
+     "w": "uydusu",
+     "start": 14.22,
+     "end": 14.76,
+     "p": 0.999
+    },
+    {
+     "w": "dönüyor.",
+     "start": 14.76,
+     "end": 15.14,
+     "p": 1.0
+    },
+    {
+     "w": "Her",
+     "start": 15.4,
+     "end": 16.16,
+     "p": 1.0
+    },
+    {
+     "w": "biri",
+     "start": 16.16,
+     "end": 16.38,
+     "p": 0.998
+    },
+    {
+     "w": "durmadan",
+     "start": 16.38,
+     "end": 16.84,
+     "p": 1.0
+    },
+    {
+     "w": "aynı",
+     "start": 16.84,
+     "end": 17.12,
+     "p": 1.0
+    },
+    {
+     "w": "şeyi",
+     "start": 17.12,
+     "end": 17.4,
+     "p": 1.0
+    },
+    {
+     "w": "yayınlıyor.",
+     "start": 17.4,
+     "end": 17.86,
+     "p": 1.0
+    },
+    {
+     "w": "Ben",
+     "start": 18.0,
+     "end": 18.44,
+     "p": 0.999
+    },
+    {
+     "w": "buradayım.",
+     "start": 18.44,
+     "end": 19.0,
+     "p": 1.0
+    },
+    {
+     "w": "Ve",
+     "start": 19.1,
+     "end": 19.52,
+     "p": 0.993
+    },
+    {
+     "w": "saat",
+     "start": 19.52,
+     "end": 20.14,
+     "p": 0.994
+    },
+    {
+     "w": "tam",
+     "start": 20.14,
+     "end": 20.4,
+     "p": 1.0
+    },
+    {
+     "w": "olarak",
+     "start": 20.4,
+     "end": 20.64,
+     "p": 1.0
+    },
+    {
+     "w": "şu.",
+     "start": 20.64,
+     "end": 20.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 21.42,
+   "end": 28.96,
+   "text": "Telefonun sinyalin, telefon sinyalin ne kadar sürede geldiğinden, uyduya olan uzaklığı hesaplıyor.",
+   "kelimeler": [
+    {
+     "w": "Telefonun",
+     "start": 21.42,
+     "end": 22.18,
+     "p": 0.955
+    },
+    {
+     "w": "sinyalin,",
+     "start": 22.18,
+     "end": 22.7,
+     "p": 0.833
+    },
+    {
+     "w": "telefon",
+     "start": 22.7,
+     "end": 24.38,
+     "p": 0.922
+    },
+    {
+     "w": "sinyalin",
+     "start": 24.38,
+     "end": 25.06,
+     "p": 0.873
+    },
+    {
+     "w": "ne",
+     "start": 25.06,
+     "end": 25.16,
+     "p": 1.0
+    },
+    {
+     "w": "kadar",
+     "start": 25.16,
+     "end": 25.44,
+     "p": 1.0
+    },
+    {
+     "w": "sürede",
+     "start": 25.44,
+     "end": 25.96,
+     "p": 1.0
+    },
+    {
+     "w": "geldiğinden,",
+     "start": 25.96,
+     "end": 26.64,
+     "p": 1.0
+    },
+    {
+     "w": "uyduya",
+     "start": 26.74,
+     "end": 27.7,
+     "p": 0.961
+    },
+    {
+     "w": "olan",
+     "start": 27.7,
+     "end": 27.9,
+     "p": 1.0
+    },
+    {
+     "w": "uzaklığı",
+     "start": 27.9,
+     "end": 28.42,
+     "p": 1.0
+    },
+    {
+     "w": "hesaplıyor.",
+     "start": 28.42,
+     "end": 28.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 28.96,
+   "end": 34.24,
+   "text": "4 uydunun uzaklığını birleştirince yerini birkaç metre içinde buluyor",
+   "kelimeler": [
+    {
+     "w": "4",
+     "start": 28.96,
+     "end": 30.06,
+     "p": 0.373
+    },
+    {
+     "w": "uydunun",
+     "start": 30.06,
+     "end": 30.62,
+     "p": 0.993
+    },
+    {
+     "w": "uzaklığını",
+     "start": 30.62,
+     "end": 31.28,
+     "p": 1.0
+    },
+    {
+     "w": "birleştirince",
+     "start": 31.28,
+     "end": 31.98,
+     "p": 1.0
+    },
+    {
+     "w": "yerini",
+     "start": 31.98,
+     "end": 32.88,
+     "p": 0.992
+    },
+    {
+     "w": "birkaç",
+     "start": 32.88,
+     "end": 33.34,
+     "p": 0.991
+    },
+    {
+     "w": "metre",
+     "start": 33.34,
+     "end": 33.54,
+     "p": 0.995
+    },
+    {
+     "w": "içinde",
+     "start": 33.54,
+     "end": 33.86,
+     "p": 1.0
+    },
+    {
+     "w": "buluyor",
+     "start": 33.86,
+     "end": 34.24,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 34.24,
+   "end": 37.68,
+   "text": "Peki işin en şaşırtıcı kısmı ne?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 34.24,
+     "end": 35.54,
+     "p": 0.004
+    },
+    {
+     "w": "işin",
+     "start": 35.54,
+     "end": 36.24,
+     "p": 0.997
+    },
+    {
+     "w": "en",
+     "start": 36.24,
+     "end": 36.46,
+     "p": 0.999
+    },
+    {
+     "w": "şaşırtıcı",
+     "start": 36.46,
+     "end": 37.1,
+     "p": 1.0
+    },
+    {
+     "w": "kısmı",
+     "start": 37.1,
+     "end": 37.52,
+     "p": 1.0
+    },
+    {
+     "w": "ne?",
+     "start": 37.52,
+     "end": 37.68,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 38.76,
+   "end": 42.54,
+   "text": "Uydulardaki saatler Einstein'in görevlilik kuralları yüzünden",
+   "kelimeler": [
+    {
+     "w": "Uydulardaki",
+     "start": 38.76,
+     "end": 39.76,
+     "p": 0.998
+    },
+    {
+     "w": "saatler",
+     "start": 39.76,
+     "end": 40.3,
+     "p": 0.999
+    },
+    {
+     "w": "Einstein",
+     "start": 40.3,
+     "end": 40.76,
+     "p": 0.996
+    },
+    {
+     "w": "'in",
+     "start": 40.76,
+     "end": 41.16,
+     "p": 0.948
+    },
+    {
+     "w": "görevlilik",
+     "start": 41.16,
+     "end": 41.66,
+     "p": 0.815
+    },
+    {
+     "w": "kuralları",
+     "start": 41.66,
+     "end": 42.12,
+     "p": 1.0
+    },
+    {
+     "w": "yüzünden",
+     "start": 42.12,
+     "end": 42.54,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 42.54,
+   "end": 47.06,
+   "text": "Yerlerinden günde yaklaşık 38 mikrosaniye hızla işliyor",
+   "kelimeler": [
+    {
+     "w": "Yerlerinden",
+     "start": 42.54,
+     "end": 43.78,
+     "p": 0.963
+    },
+    {
+     "w": "günde",
+     "start": 43.78,
+     "end": 44.52,
+     "p": 0.999
+    },
+    {
+     "w": "yaklaşık",
+     "start": 44.52,
+     "end": 45.0,
+     "p": 1.0
+    },
+    {
+     "w": "38",
+     "start": 45.0,
+     "end": 45.42,
+     "p": 1.0
+    },
+    {
+     "w": "mikrosaniye",
+     "start": 45.42,
+     "end": 46.34,
+     "p": 0.972
+    },
+    {
+     "w": "hızla",
+     "start": 46.34,
+     "end": 46.68,
+     "p": 0.991
+    },
+    {
+     "w": "işliyor",
+     "start": 46.68,
+     "end": 47.06,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 47.06,
+   "end": 52.48,
+   "text": "Bu düzeltilmeseydi konumun her gün kilometrelerce kayardı",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 47.06,
+     "end": 48.3,
+     "p": 0.998
+    },
+    {
+     "w": "düzeltilmeseydi",
+     "start": 48.3,
+     "end": 49.24,
+     "p": 1.0
+    },
+    {
+     "w": "konumun",
+     "start": 49.24,
+     "end": 50.38,
+     "p": 0.939
+    },
+    {
+     "w": "her",
+     "start": 50.38,
+     "end": 50.62,
+     "p": 1.0
+    },
+    {
+     "w": "gün",
+     "start": 50.62,
+     "end": 50.94,
+     "p": 1.0
+    },
+    {
+     "w": "kilometrelerce",
+     "start": 50.94,
+     "end": 52.02,
+     "p": 1.0
+    },
+    {
+     "w": "kayardı",
+     "start": 52.02,
+     "end": 52.48,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 52.48,
+   "end": 56.82,
+   "text": "Yani cebindeki harita Einstein'a bir teşekkür borçlu",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 52.48,
+     "end": 53.66,
+     "p": 0.998
+    },
+    {
+     "w": "cebindeki",
+     "start": 53.66,
+     "end": 54.2,
+     "p": 1.0
+    },
+    {
+     "w": "harita",
+     "start": 54.2,
+     "end": 54.68,
+     "p": 1.0
+    },
+    {
+     "w": "Einstein",
+     "start": 54.68,
+     "end": 55.54,
+     "p": 0.999
+    },
+    {
+     "w": "'a",
+     "start": 55.54,
+     "end": 55.84,
+     "p": 0.94
+    },
+    {
+     "w": "bir",
+     "start": 55.84,
+     "end": 55.94,
+     "p": 1.0
+    },
+    {
+     "w": "teşekkür",
+     "start": 55.94,
+     "end": 56.26,
+     "p": 0.997
+    },
+    {
+     "w": "borçlu",
+     "start": 56.26,
+     "end": 56.82,
+     "p": 0.836
+    }
+   ]
+  },
+  {
+   "start": 56.82,
+   "end": 58.56,
+   "text": "Altyazı M.K.",
+   "kelimeler": [
+    {
+     "w": "Altyazı",
+     "start": 56.82,
+     "end": 58.56,
+     "p": 0.79
+    },
+    {
+     "w": "M",
+     "start": 58.56,
+     "end": 58.56,
+     "p": 0.996
+    },
+    {
+     "w": ".K.",
+     "start": 58.56,
+     "end": 58.56,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}

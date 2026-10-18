@@ -1,0 +1,667 @@
+{
+ "model": "large-v3",
+ "sure": 58.475,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 5.14,
+   "text": "Gökyüzü mor olmalıydı. Fiziğe bakarsan gökyüzü aslında mor olmalıydı.",
+   "kelimeler": [
+    {
+     "w": "Gökyüzü",
+     "start": 0.0,
+     "end": 0.98,
+     "p": 0.997
+    },
+    {
+     "w": "mor",
+     "start": 0.98,
+     "end": 1.18,
+     "p": 0.996
+    },
+    {
+     "w": "olmalıydı.",
+     "start": 1.18,
+     "end": 1.88,
+     "p": 1.0
+    },
+    {
+     "w": "Fiziğe",
+     "start": 2.0,
+     "end": 2.7,
+     "p": 0.934
+    },
+    {
+     "w": "bakarsan",
+     "start": 2.7,
+     "end": 3.42,
+     "p": 1.0
+    },
+    {
+     "w": "gökyüzü",
+     "start": 3.42,
+     "end": 3.96,
+     "p": 1.0
+    },
+    {
+     "w": "aslında",
+     "start": 3.96,
+     "end": 4.22,
+     "p": 1.0
+    },
+    {
+     "w": "mor",
+     "start": 4.22,
+     "end": 4.56,
+     "p": 1.0
+    },
+    {
+     "w": "olmalıydı.",
+     "start": 4.56,
+     "end": 5.14,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 5.42,
+   "end": 9.42,
+   "text": "Güneş ışığı beyaz görünür ama içinde bütün renkler var.",
+   "kelimeler": [
+    {
+     "w": "Güneş",
+     "start": 5.42,
+     "end": 6.12,
+     "p": 1.0
+    },
+    {
+     "w": "ışığı",
+     "start": 6.12,
+     "end": 6.42,
+     "p": 1.0
+    },
+    {
+     "w": "beyaz",
+     "start": 6.42,
+     "end": 6.8,
+     "p": 1.0
+    },
+    {
+     "w": "görünür",
+     "start": 6.8,
+     "end": 7.2,
+     "p": 0.999
+    },
+    {
+     "w": "ama",
+     "start": 7.2,
+     "end": 7.7,
+     "p": 0.988
+    },
+    {
+     "w": "içinde",
+     "start": 7.7,
+     "end": 8.26,
+     "p": 1.0
+    },
+    {
+     "w": "bütün",
+     "start": 8.26,
+     "end": 8.74,
+     "p": 1.0
+    },
+    {
+     "w": "renkler",
+     "start": 8.74,
+     "end": 9.2,
+     "p": 1.0
+    },
+    {
+     "w": "var.",
+     "start": 9.2,
+     "end": 9.42,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.46,
+   "end": 14.28,
+   "text": "Bu ışık havadaki minicik moleküllere çarpıp etrafa saçılıyor.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 10.1,
+     "end": 10.5,
+     "p": 1.0
+    },
+    {
+     "w": "ışık",
+     "start": 10.5,
+     "end": 10.92,
+     "p": 1.0
+    },
+    {
+     "w": "havadaki",
+     "start": 10.92,
+     "end": 11.5,
+     "p": 0.997
+    },
+    {
+     "w": "minicik",
+     "start": 11.5,
+     "end": 12.0,
+     "p": 0.999
+    },
+    {
+     "w": "moleküllere",
+     "start": 12.0,
+     "end": 12.52,
+     "p": 0.995
+    },
+    {
+     "w": "çarpıp",
+     "start": 12.52,
+     "end": 13.02,
+     "p": 1.0
+    },
+    {
+     "w": "etrafa",
+     "start": 13.02,
+     "end": 13.9,
+     "p": 1.0
+    },
+    {
+     "w": "saçılıyor.",
+     "start": 13.9,
+     "end": 14.28,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 15.76,
+   "end": 19.72,
+   "text": "Mavi ve mor gibi kısa dalgalı renkler kırmızıdan çok daha fazla saçılıyor.",
+   "kelimeler": [
+    {
+     "w": "Mavi",
+     "start": 15.64,
+     "end": 16.04,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 16.04,
+     "end": 16.14,
+     "p": 1.0
+    },
+    {
+     "w": "mor",
+     "start": 16.14,
+     "end": 16.38,
+     "p": 1.0
+    },
+    {
+     "w": "gibi",
+     "start": 16.38,
+     "end": 16.6,
+     "p": 1.0
+    },
+    {
+     "w": "kısa",
+     "start": 16.6,
+     "end": 16.96,
+     "p": 1.0
+    },
+    {
+     "w": "dalgalı",
+     "start": 16.96,
+     "end": 17.34,
+     "p": 1.0
+    },
+    {
+     "w": "renkler",
+     "start": 17.34,
+     "end": 17.68,
+     "p": 1.0
+    },
+    {
+     "w": "kırmızıdan",
+     "start": 17.68,
+     "end": 18.48,
+     "p": 0.999
+    },
+    {
+     "w": "çok",
+     "start": 18.48,
+     "end": 18.7,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 18.7,
+     "end": 18.94,
+     "p": 1.0
+    },
+    {
+     "w": "fazla",
+     "start": 18.94,
+     "end": 19.26,
+     "p": 1.0
+    },
+    {
+     "w": "saçılıyor.",
+     "start": 19.26,
+     "end": 19.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 20.56,
+   "end": 23.94,
+   "text": "Gökyüzünde nereye baksan gözüne bu saçılan ışık geliyor.",
+   "kelimeler": [
+    {
+     "w": "Gökyüzünde",
+     "start": 20.56,
+     "end": 21.36,
+     "p": 0.975
+    },
+    {
+     "w": "nereye",
+     "start": 21.36,
+     "end": 21.68,
+     "p": 1.0
+    },
+    {
+     "w": "baksan",
+     "start": 21.68,
+     "end": 22.14,
+     "p": 1.0
+    },
+    {
+     "w": "gözüne",
+     "start": 22.14,
+     "end": 22.9,
+     "p": 0.999
+    },
+    {
+     "w": "bu",
+     "start": 22.9,
+     "end": 23.02,
+     "p": 1.0
+    },
+    {
+     "w": "saçılan",
+     "start": 23.02,
+     "end": 23.38,
+     "p": 1.0
+    },
+    {
+     "w": "ışık",
+     "start": 23.38,
+     "end": 23.76,
+     "p": 1.0
+    },
+    {
+     "w": "geliyor.",
+     "start": 23.76,
+     "end": 23.94,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 25.36,
+   "end": 29.92,
+   "text": "Peki en çok saçılan mor ise neden mor bir gökyüzü görmüyoruz?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 25.36,
+     "end": 26.16,
+     "p": 1.0
+    },
+    {
+     "w": "en",
+     "start": 26.16,
+     "end": 26.5,
+     "p": 0.999
+    },
+    {
+     "w": "çok",
+     "start": 26.5,
+     "end": 26.74,
+     "p": 1.0
+    },
+    {
+     "w": "saçılan",
+     "start": 26.74,
+     "end": 27.18,
+     "p": 1.0
+    },
+    {
+     "w": "mor",
+     "start": 27.18,
+     "end": 27.38,
+     "p": 1.0
+    },
+    {
+     "w": "ise",
+     "start": 27.38,
+     "end": 27.56,
+     "p": 1.0
+    },
+    {
+     "w": "neden",
+     "start": 27.56,
+     "end": 28.32,
+     "p": 0.999
+    },
+    {
+     "w": "mor",
+     "start": 28.32,
+     "end": 28.64,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 28.64,
+     "end": 28.8,
+     "p": 1.0
+    },
+    {
+     "w": "gökyüzü",
+     "start": 28.8,
+     "end": 29.26,
+     "p": 1.0
+    },
+    {
+     "w": "görmüyoruz?",
+     "start": 29.26,
+     "end": 29.92,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 56.2,
+   "text": "İki sebebi var. Güneş zaten daha az mor ışık gönderiyor. Gözümüzde mora, maviye göre çok daha az duyarlı. Sonuç mavi, akşam ise ışık havada çok daha uzun yol alıyor. Mavi yolda saçılıp kayboluyor. Geriye turuncu ve kırmızı kalıyor. Yani gökyüzünün rengi biraz da gözümüz seçiyor.",
+   "kelimeler": [
+    {
+     "w": "İki",
+     "start": 30.0,
+     "end": 30.7,
+     "p": 0.983
+    },
+    {
+     "w": "sebebi",
+     "start": 30.7,
+     "end": 31.06,
+     "p": 1.0
+    },
+    {
+     "w": "var.",
+     "start": 31.06,
+     "end": 31.18,
+     "p": 1.0
+    },
+    {
+     "w": "Güneş",
+     "start": 31.64,
+     "end": 32.48,
+     "p": 1.0
+    },
+    {
+     "w": "zaten",
+     "start": 32.48,
+     "end": 32.98,
+     "p": 0.996
+    },
+    {
+     "w": "daha",
+     "start": 32.98,
+     "end": 33.54,
+     "p": 0.758
+    },
+    {
+     "w": "az",
+     "start": 33.54,
+     "end": 36.74,
+     "p": 1.0
+    },
+    {
+     "w": "mor",
+     "start": 36.74,
+     "end": 37.04,
+     "p": 0.999
+    },
+    {
+     "w": "ışık",
+     "start": 37.04,
+     "end": 37.42,
+     "p": 1.0
+    },
+    {
+     "w": "gönderiyor.",
+     "start": 37.42,
+     "end": 37.88,
+     "p": 1.0
+    },
+    {
+     "w": "Gözümüzde",
+     "start": 38.18,
+     "end": 39.02,
+     "p": 0.955
+    },
+    {
+     "w": "mora,",
+     "start": 39.02,
+     "end": 39.44,
+     "p": 0.999
+    },
+    {
+     "w": "maviye",
+     "start": 39.44,
+     "end": 40.22,
+     "p": 0.994
+    },
+    {
+     "w": "göre",
+     "start": 40.22,
+     "end": 40.42,
+     "p": 1.0
+    },
+    {
+     "w": "çok",
+     "start": 40.42,
+     "end": 40.84,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 40.84,
+     "end": 41.16,
+     "p": 1.0
+    },
+    {
+     "w": "az",
+     "start": 41.16,
+     "end": 41.46,
+     "p": 1.0
+    },
+    {
+     "w": "duyarlı.",
+     "start": 41.46,
+     "end": 41.9,
+     "p": 0.998
+    },
+    {
+     "w": "Sonuç",
+     "start": 42.1,
+     "end": 42.94,
+     "p": 1.0
+    },
+    {
+     "w": "mavi,",
+     "start": 42.94,
+     "end": 43.96,
+     "p": 0.755
+    },
+    {
+     "w": "akşam",
+     "start": 43.98,
+     "end": 44.68,
+     "p": 1.0
+    },
+    {
+     "w": "ise",
+     "start": 44.68,
+     "end": 44.9,
+     "p": 1.0
+    },
+    {
+     "w": "ışık",
+     "start": 44.9,
+     "end": 45.72,
+     "p": 1.0
+    },
+    {
+     "w": "havada",
+     "start": 45.72,
+     "end": 46.32,
+     "p": 0.999
+    },
+    {
+     "w": "çok",
+     "start": 46.32,
+     "end": 46.5,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 46.5,
+     "end": 46.76,
+     "p": 1.0
+    },
+    {
+     "w": "uzun",
+     "start": 46.76,
+     "end": 47.14,
+     "p": 1.0
+    },
+    {
+     "w": "yol",
+     "start": 47.14,
+     "end": 47.24,
+     "p": 1.0
+    },
+    {
+     "w": "alıyor.",
+     "start": 47.24,
+     "end": 47.52,
+     "p": 0.999
+    },
+    {
+     "w": "Mavi",
+     "start": 47.74,
+     "end": 48.5,
+     "p": 0.999
+    },
+    {
+     "w": "yolda",
+     "start": 48.5,
+     "end": 48.84,
+     "p": 0.945
+    },
+    {
+     "w": "saçılıp",
+     "start": 48.84,
+     "end": 49.32,
+     "p": 0.973
+    },
+    {
+     "w": "kayboluyor.",
+     "start": 49.32,
+     "end": 49.82,
+     "p": 1.0
+    },
+    {
+     "w": "Geriye",
+     "start": 49.96,
+     "end": 50.74,
+     "p": 1.0
+    },
+    {
+     "w": "turuncu",
+     "start": 50.74,
+     "end": 51.3,
+     "p": 0.999
+    },
+    {
+     "w": "ve",
+     "start": 51.3,
+     "end": 51.38,
+     "p": 1.0
+    },
+    {
+     "w": "kırmızı",
+     "start": 51.38,
+     "end": 51.8,
+     "p": 1.0
+    },
+    {
+     "w": "kalıyor.",
+     "start": 51.8,
+     "end": 52.14,
+     "p": 1.0
+    },
+    {
+     "w": "Yani",
+     "start": 52.34,
+     "end": 53.16,
+     "p": 1.0
+    },
+    {
+     "w": "gökyüzünün",
+     "start": 53.16,
+     "end": 53.84,
+     "p": 1.0
+    },
+    {
+     "w": "rengi",
+     "start": 53.84,
+     "end": 54.32,
+     "p": 1.0
+    },
+    {
+     "w": "biraz",
+     "start": 54.32,
+     "end": 55.0,
+     "p": 0.998
+    },
+    {
+     "w": "da",
+     "start": 55.0,
+     "end": 55.22,
+     "p": 0.999
+    },
+    {
+     "w": "gözümüz",
+     "start": 55.22,
+     "end": 55.76,
+     "p": 1.0
+    },
+    {
+     "w": "seçiyor.",
+     "start": 55.76,
+     "end": 56.2,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
