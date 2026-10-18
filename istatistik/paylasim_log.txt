@@ -1,6 +1,8 @@
-kapsayıcı: 17886763548504259
+kapsayıcı: 17887021272504259
+durum: IN_PROGRESS IN_PROGRESS
+durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: FINISHED FINISHED
-YAYINLANDI: https://www.instagram.com/reel/DempfS2kui_/
+DENEME TAMAM: video Instagram tarafından işlendi, yayınlanmadı.
