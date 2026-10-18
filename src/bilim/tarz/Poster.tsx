@@ -81,7 +81,7 @@ export const TarzPoster: React.FC = () => {
           <div style={{ position: "absolute", left: 26, top: 64, fontFamily: KALIN, fontSize: 250, lineHeight: 1, color: DOMATES, letterSpacing: -10 }}>50</div>
           <div style={{ position: "absolute", left: 338, top: 100, fontFamily: KALIN, fontSize: 50, lineHeight: 0.95, color: LACI }}>YIL<br />SONRA</div>
           <div style={{ position: "absolute", left: 340, top: 214, fontFamily: YAZI, fontSize: 24, fontWeight: 700, lineHeight: 1.15, color: LACI }}>açacak<br />icat edildi.</div>
-          <div style={{ position: "absolute", left: 338, top: 284, height: 34, width: 172 * ap(t, tAc, 0.25), background: DOMATES, overflow: "hidden", whiteSpace: "nowrap" }}>
+          <div style={{ position: "absolute", left: 330, top: 284, height: 34, width: 196 * ap(t, tAc, 0.25), background: DOMATES, overflow: "hidden", whiteSpace: "nowrap" }}>
             <div style={{ fontFamily: KALIN, fontSize: 20, color: KREM, padding: "6px 10px" }}>AÇACAK = YOK</div>
           </div>
         </div>

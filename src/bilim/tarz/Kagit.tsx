@@ -112,7 +112,7 @@ export const TarzKagit: React.FC = () => {
               </g>
               <g transform={`translate(390 395) rotate(${6 + oyna(adim, 4)}) scale(${pop(t, tAc, 9)})`}>
                 <rect x={-78} y={-30} width={156} height={60} rx={4} fill={KREM} filter="url(#golge)" />
-                <text x={-14} y={9} textAnchor="middle" fontFamily={YAZI} fontWeight={800} fontSize={24} fill={KOYU}>Açacak?</text>
+                <text x={-20} y={9} textAnchor="middle" fontFamily={YAZI} fontWeight={800} fontSize={22} fill={KOYU}>Açacak?</text>
                 <circle cx={52} cy={0} r={22} fill={KIRMIZI} />
                 <text x={52} y={6} textAnchor="middle" fontFamily={YAZI} fontWeight={800} fontSize={15} fill={KREM}>YOK</text>
               </g>
