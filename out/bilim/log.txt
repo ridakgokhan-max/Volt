@@ -1,6 +1,12 @@
-metinle hizalandı: transkript 90 -> metin 87 kelime
-CTA: [{'tur': 'begen', 'bas': 24.489, 'kostum': 'kulaklik'}, {'tur': 'yorum', 'bas': 39.226, 'yazi': 'Biliyor muydun?', 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 42.491, 'kostum': 'kulaklik'}]
-gps: 58.6 sn kayıt -> 45.6 sn video, 87 kelime, 29 altyazı satırı, 9 sahne
+metinle hizalandı: transkript 95 -> metin 93 kelime
+CTA: [{'tur': 'begen', 'bas': 13.079, 'kostum': 'baret'}, {'tur': 'yorum', 'bas': 24.071, 'yazi': 'Sence neden?', 'kostum': 'baret'}, {'tur': 'takip', 'bas': 43.92, 'kostum': 'baret'}]
+cicek-sulama: 65.3 sn kayıt -> 47.2 sn video, 93 kelime, 31 altyazı satırı, 8 sahne
+[90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
+Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 19.1 Mb/98.9 Mb
+Getting Headless Shell - 28.6 Mb/98.9 Mb
+Getting Headless Shell - 38.2 Mb/98.9 Mb
 Getting Headless Shell - 47.7 Mb/98.9 Mb
 Getting Headless Shell - 57.3 Mb/98.9 Mb
 Getting Headless Shell - 66.8 Mb/98.9 Mb
@@ -27,18 +33,11 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/gps.mp4[39m
+[90mOutput               out/bilim/cicek-sulama.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m+                    out/bilim/gps.mp4[39m [90m25.3 MB[39m
+[34m+                    out/bilim/cicek-sulama.mp4[39m [90m16.9 MB[39m
 durum: success
