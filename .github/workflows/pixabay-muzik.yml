@@ -34,7 +34,9 @@ jobs:
             if grep -q "$AD" "$K"; then echo "zaten var: $AD"; continue; fi
             HTML=$(curl -sSL -A "$UA" "$SAYFA" </dev/null || true)
             MP3=$(echo "$HTML" | grep -oE 'https://cdn\.pixabay\.com/(download/)?audio/[^"\\ ]+\.mp3[^"\\ ]*' | head -1)
-            if [ -z "$MP3" ]; then echo "BULUNAMADI: $AD (sayfa $(echo "$HTML" | wc -c) bayt)"; continue; fi
+            if [ -z "$MP3" ]; then
+              { echo "== $AD bayt=$(echo "$HTML" | wc -c)"; echo "$HTML" | grep -o '<title>[^<]*' | head -1; echo "$HTML" | grep -oE 'cdn\.pixabay\.com[^"\\ ]{0,120}' | sort -u | head -15; echo "$HTML" | grep -oiE '[^"]{0,60}\.mp3[^"]{0,20}' | head -5; } >> /tmp/gizli/muzik/hata.txt
+              echo "BULUNAMADI: $AD"; continue; fi
             mkdir -p "/tmp/gizli/muzik/$DUYGU"
             curl -sSfL -A "$UA" -e "$SAYFA" -o "/tmp/gizli/muzik/$DUYGU/$AD.mp3" "$MP3" </dev/null && \
               printf "%s\t%s\t%s\t%s\n" "$DUYGU" "$AD" "$SAYFA" "Pixabay Content License" >> "$K" && echo "indirildi: $DUYGU/$AD"
