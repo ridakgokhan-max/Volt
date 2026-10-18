@@ -1,0 +1,43 @@
+name: Dosya indir (Canva görselleri vb.)
+
+# Canva'dan dışa aktarılan görselleri indirip public/bilim/<konu>/<ad>.jpg olarak kaydeder.
+on:
+  workflow_dispatch:
+    inputs:
+      konu:
+        description: "public/bilim altındaki klasör"
+        required: true
+      liste:
+        description: "her satır: ad|https://adres  (satırlar ; ile de ayrılabilir)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  indir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: İndir ve JPG'ye çevir
+        env:
+          KONU: ${{ github.event.inputs.konu }}
+          LISTE: ${{ github.event.inputs.liste }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          case "$KONU" in *[!a-z0-9-]*|"") echo "geçersiz konu"; exit 1;; esac
+          mkdir -p "public/bilim/$KONU"
+          echo "$LISTE" | tr ';' '\n' | while IFS='|' read -r AD URL; do
+            AD=$(echo "$AD" | tr -cd 'a-z0-9-'); [ -z "$AD" ] && continue
+            case "$URL" in https://export-download.canva.com/*|https://media.canva.com/*) ;; *) echo "izin verilmeyen adres: $AD"; continue;; esac
+            curl -sSfL -o /tmp/g.png "$URL"
+            ffmpeg -y -loglevel error -i /tmp/g.png -q:v 2 "public/bilim/$KONU/$AD.jpg"
+            echo "indirildi: $AD"
+          done
+      - name: Kaydet
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add public/bilim/
+          git commit -m "Görseller indirildi [skip ci]" || true
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done
