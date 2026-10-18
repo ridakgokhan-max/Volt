@@ -28,6 +28,8 @@ import * as gps from "./konular/gps";
 import gpsData from "./data/gps.json";
 import * as cicek from "./konular/cicek";
 import cicekData from "./data/cicek-sulama.json";
+import * as canvademo from "./konular/canvademo";
+import canvademoData from "./data/canva-demo.json";
 
 type Konu = { data: typeof parmakIziData; SAHNE: Record<string, any>; KAPAK: React.FC; KAPAK_YAZI: { ust: string; buyuk: string; alt: string } };
 const KONULAR: Record<string, Konu> = {
@@ -45,6 +47,7 @@ const KONULAR: Record<string, Konu> = {
   konserve: { data: konserveData as any, ...konserve } as Konu,
   gps: { data: gpsData as any, ...gps } as Konu,
   "cicek-sulama": { data: cicekData as any, ...cicek } as Konu,
+  "canva-demo": { data: canvademoData as any, ...canvademo } as Konu,
 };
 const secilen = (getInputProps() as { konu?: string }).konu || "demo";
 const k = KONULAR[secilen] || KONULAR["demo"];

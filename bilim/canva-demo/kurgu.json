@@ -1,0 +1,88 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": false,
+ "imza": false,
+ "son_bosluk": 0.8,
+ "kesimler": [
+  [
+   0.0,
+   2.2
+  ],
+  [
+   23.75,
+   60.0
+  ]
+ ],
+ "kelime_sil": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "kelime_ekle": [],
+ "seri": {
+  "no": 7,
+  "toplam": 30,
+  "kategori": "Tarih"
+ },
+ "kanca": {
+  "yazi": "AÇACAĞI 50 YIL SONRA GELDİ",
+  "alt": "Konservenin tuhaf hikâyesi",
+  "sure": 1.9
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "göndermekti"
+  }
+ ],
+ "cta_kostum": "sapka",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "sicak",
+   "ilk": 0,
+   "gorsel": "kutu"
+  },
+  {
+   "id": "cizelge",
+   "bg": "tahta",
+   "ilk": "=açacak",
+   "gecis": "kaydir",
+   "gorsel": "cizelge"
+  },
+  {
+   "id": "patent",
+   "bg": "parsomen",
+   "ilk": "1810",
+   "gecis": "zoom",
+   "gorsel": "patent"
+  },
+  {
+   "id": "amac",
+   "bg": "gok",
+   "ilk": "amaç",
+   "gecis": "kaydir",
+   "gorsel": "gemi"
+  },
+  {
+   "id": "agir",
+   "bg": "sicak",
+   "ilk": "ilk",
+   "gecis": "perde",
+   "gorsel": "agir"
+  }
+ ],
+ "vurgu": [
+  "yoktu.",
+  "50",
+  "1810'da",
+  "ağırdı.",
+  "keski",
+  "tüfek",
+  "1850'lerde",
+  "başka"
+ ]
+}

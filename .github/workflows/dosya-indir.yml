@@ -31,7 +31,7 @@ jobs:
             AD=$(echo "$AD" | tr -cd 'a-z0-9-'); [ -z "$AD" ] && continue
             case "$URL" in https://export-download.canva.com/*|https://media.canva.com/*) ;; *) echo "izin verilmeyen adres: $AD"; continue;; esac
             curl -sSfL -o /tmp/g.png "$URL"
-            ffmpeg -y -loglevel error -i /tmp/g.png -q:v 2 "public/bilim/$KONU/$AD.jpg"
+            ffmpeg -nostdin -y -loglevel error -i /tmp/g.png -q:v 2 "public/bilim/$KONU/$AD.jpg"
             echo "indirildi: $AD"
           done
       - name: Kaydet
