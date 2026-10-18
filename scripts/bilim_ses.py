@@ -438,3 +438,30 @@ def katman(*sesler, kazanc=None):
     for i, s in enumerate(sesler):
         out[: len(s)] += s * (kazanc[i] if kazanc else 1.0)
     return out
+
+
+# ---------- gerçek müzik (Pixabay; gizli depodan gelir) ----------
+def muzik_dosyadan(dur, duygu, anahtar="", parca=None, klasor=None):
+    """muzik/<duygu>/*.mp3 içinden bir parça seçer, video süresine göre keser/döndürür.
+    Klasör yoksa ya da boşsa None döner (çağıran sentez müziğe düşer)."""
+    import glob as _glob
+    import hashlib as _hl
+    klasor = klasor or _os.environ.get("MUZIK_DIR", "/tmp/gizli/muzik")
+    adaylar = sorted(_glob.glob(_os.path.join(klasor, duygu, "*.mp3")))
+    if parca:
+        adaylar = [a for a in adaylar if parca in _os.path.basename(a)] or adaylar
+    if not adaylar:
+        return None
+    sec = adaylar[int(_hl.md5(anahtar.encode()).hexdigest(), 16) % len(adaylar)] if len(adaylar) > 1 else adaylar[0]
+    raw = _sp.run(["ffmpeg", "-loglevel", "error", "-i", sec, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+                  capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
+    N = int(dur * SR)
+    if len(x) < N:  # kısa parça: döngüye al
+        x = np.tile(x, N // max(len(x), 1) + 1)
+    x = x[:N].copy()
+    fi, fo = int(0.25 * SR), int(min(1.6, dur / 4) * SR)
+    x[:fi] *= np.linspace(0, 1, fi)
+    x[-fo:] *= np.linspace(1, 0, fo)
+    print(f"müzik: {duygu} -> {_os.path.basename(sec)}")
+    return x

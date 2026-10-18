@@ -55,6 +55,10 @@ jobs:
           if [ -z "$K" ]; then K=demo; fi
           echo "konu=$K" >> $GITHUB_OUTPUT
           mkdir -p out/bilim
+      - name: Müzik kütüphanesi (gizli depodan, Pixabay)
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: git clone -q --depth 1 "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli || echo "müzik kütüphanesi alınamadı, sentez müzik kullanılacak"
       - name: Kurgu (ses, altyazı zamanı, efekt, müzik)
         run: |
           set -o pipefail

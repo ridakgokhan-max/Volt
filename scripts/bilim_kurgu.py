@@ -306,7 +306,12 @@ def main(konu):
         mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
     else:
         mod.cues(B, sfx, wt, starts, sure)
-    mus = B.music(sure, full_from=sc[1]["bas"] if len(sc) > 1 else 3.0, outro_at=max(sure - 2.6, 5))
+    mus = None
+    if K.get("muzik"):  # kurgu.json: "muzik": "merak" | "nostalji" | "teknoloji" | "neseli" | "duygusal"
+        mus = B.muzik_dosyadan(sure, K["muzik"], anahtar=konu, parca=K.get("muzik_parca"))
+    gercek_muzik = mus is not None
+    if mus is None:
+        mus = B.music(sure, full_from=sc[1]["bas"] if len(sc) > 1 else 3.0, outro_at=max(sure - 2.6, 5))
 
     pub = os.path.join(ROOT, "public", "bilim", konu)
     os.makedirs(pub, exist_ok=True)
@@ -327,7 +332,7 @@ def main(konu):
     save(f"{tmp}/music.wav", B.norm(mus, 0.8))
     fc = ("[0:a]loudnorm=I=-16:TP=-2:LRA=9,"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
-          "[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.30[m];"
+          f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
           "[m][vk]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=400[md];"
           "[2:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.62[s];"
           "[v][md][s]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.8:level=false[out]")
