@@ -110,7 +110,7 @@ export const TarzKagit: React.FC = () => {
                 <rect x={-48} y={-46} width={96} height={40} rx={6} fill="#4C535A" />
                 <rect x={-48} y={-46} width={96} height={12} rx={6} fill="#646C73" />
               </g>
-              <g transform={`translate(400 335) rotate(${6 + oyna(adim, 4)}) scale(${pop(t, tAc, 9)})`}>
+              <g transform={`translate(390 395) rotate(${6 + oyna(adim, 4)}) scale(${pop(t, tAc, 9)})`}>
                 <rect x={-78} y={-30} width={156} height={60} rx={4} fill={KREM} filter="url(#golge)" />
                 <text x={-14} y={9} textAnchor="middle" fontFamily={YAZI} fontWeight={800} fontSize={24} fill={KOYU}>Açacak?</text>
                 <circle cx={52} cy={0} r={22} fill={KIRMIZI} />
@@ -189,7 +189,7 @@ export const TarzKagit: React.FC = () => {
           <div style={{ position: "absolute", left: 40, right: 40, bottom: 50, textAlign: "center" }}>
             <div style={{ display: "inline-block", background: KREM, padding: "10px 16px", borderRadius: 4, boxShadow: "0 5px 10px rgba(0,0,0,0.3)", fontFamily: YAZI, fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: KOYU }}>
               {sat.map((k, i) => (
-                <span key={i} style={{ margin: "0 4px", padding: "0 5px", borderRadius: 3, background: k.durum === "simdi" ? SARI : "transparent", color: k.durum === "gelecek" ? "#A79D92" : KOYU, fontWeight: k.durum === "gelecek" ? 500 : 800 }}>{k.w}</span>
+                <React.Fragment key={i}><span style={{ margin: "0 4px", padding: "0 5px", borderRadius: 3, background: k.durum === "simdi" ? SARI : "transparent", color: k.durum === "gelecek" ? "#A79D92" : KOYU, fontWeight: k.durum === "gelecek" ? 500 : 800 }}>{k.w}</span>{" "}</React.Fragment>
               ))}
             </div>
           </div>

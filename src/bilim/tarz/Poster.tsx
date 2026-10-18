@@ -55,7 +55,7 @@ export const TarzPoster: React.FC = () => {
   // kutu: büyük → çizelgede küçük simge → patentte yine büyük
   const kucul = ap(t, S2 - 0.05, 0.5);
   const buyu = ap(t, S3 - 0.05, 0.5);
-  const yuksel = pop(t, 0.1, 13);
+  const yuksel = 1 - Math.pow(1 - Math.min(1, Math.max(0, (t - 0.1) / 0.6)), 3);
   const kx = lerp(lerp(270, 70, kucul), 270, buyu);
   const ky = lerp(lerp(380 + (1 - yuksel) * 520, ZEMIN_Y - 62, kucul), 420, buyu);
   const ks = lerp(lerp(1, 0.2, kucul), 0.82, buyu);
@@ -79,9 +79,9 @@ export const TarzPoster: React.FC = () => {
         {/* sahne 1 başlık (ilk karede tam) */}
         <div style={{ opacity: ust1, transform: `translateX(${-(1 - ust1) * 80}px)` }}>
           <div style={{ position: "absolute", left: 26, top: 64, fontFamily: KALIN, fontSize: 250, lineHeight: 1, color: DOMATES, letterSpacing: -10 }}>50</div>
-          <div style={{ position: "absolute", left: 300, top: 104, fontFamily: KALIN, fontSize: 58, lineHeight: 0.95, color: LACI }}>YIL<br />SONRA</div>
-          <div style={{ position: "absolute", left: 304, top: 232, fontFamily: YAZI, fontSize: 24, fontWeight: 700, lineHeight: 1.15, color: LACI }}>açacak<br />icat edildi.</div>
-          <div style={{ position: "absolute", left: 300, top: 300, height: 34, width: 200 * ap(t, tAc, 0.25), background: DOMATES, overflow: "hidden", whiteSpace: "nowrap" }}>
+          <div style={{ position: "absolute", left: 338, top: 100, fontFamily: KALIN, fontSize: 50, lineHeight: 0.95, color: LACI }}>YIL<br />SONRA</div>
+          <div style={{ position: "absolute", left: 340, top: 214, fontFamily: YAZI, fontSize: 24, fontWeight: 700, lineHeight: 1.15, color: LACI }}>açacak<br />icat edildi.</div>
+          <div style={{ position: "absolute", left: 338, top: 284, height: 34, width: 172 * ap(t, tAc, 0.25), background: DOMATES, overflow: "hidden", whiteSpace: "nowrap" }}>
             <div style={{ fontFamily: KALIN, fontSize: 20, color: KREM, padding: "6px 10px" }}>AÇACAK = YOK</div>
           </div>
         </div>
@@ -148,7 +148,7 @@ export const TarzPoster: React.FC = () => {
         {/* altyazı */}
         <div style={{ position: "absolute", left: 32, right: 32, bottom: 48, borderTop: `2px solid ${LACI}`, paddingTop: 16, fontFamily: YAZI, fontSize: 30, fontWeight: 700, lineHeight: 1.25, color: LACI }}>
           {sat.map((k, i) => (
-            <span key={i} style={{ marginRight: 9, color: k.durum === "gelecek" ? "#9A9488" : LACI, fontWeight: k.durum === "gelecek" ? 500 : 700, boxShadow: k.durum === "simdi" ? `inset 0 -10px 0 ${DOMATES}` : "none" }}>{k.w}</span>
+            <React.Fragment key={i}><span style={{ color: k.durum === "gelecek" ? "#9A9488" : LACI, fontWeight: k.durum === "gelecek" ? 500 : 700, boxShadow: k.durum === "simdi" ? `inset 0 -10px 0 ${DOMATES}` : "none" }}>{k.w}</span>{" "}</React.Fragment>
           ))}
         </div>
       </Olcek>
