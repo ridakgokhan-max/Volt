@@ -1,0 +1,49 @@
+{
+ "model": "large-v3",
+ "sure": 7.019,
+ "segmentler": [
+  {
+   "start": 1.94,
+   "end": 5.98,
+   "text": "Askerler süngü, bıçak, hatta tüfek kullanıyordu.",
+   "kelimeler": [
+    {
+     "w": "Askerler",
+     "start": 1.94,
+     "end": 3.0,
+     "p": 0.838
+    },
+    {
+     "w": "süngü,",
+     "start": 3.0,
+     "end": 3.82,
+     "p": 0.989
+    },
+    {
+     "w": "bıçak,",
+     "start": 3.84,
+     "end": 4.54,
+     "p": 0.999
+    },
+    {
+     "w": "hatta",
+     "start": 4.54,
+     "end": 5.04,
+     "p": 0.998
+    },
+    {
+     "w": "tüfek",
+     "start": 5.04,
+     "end": 5.42,
+     "p": 0.998
+    },
+    {
+     "w": "kullanıyordu.",
+     "start": 5.42,
+     "end": 5.98,
+     "p": 0.998
+    }
+   ]
+  }
+ ]
+}

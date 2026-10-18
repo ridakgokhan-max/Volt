@@ -1,0 +1,67 @@
+{
+ "model": "large-v3",
+ "sure": 4.608,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 4.58,
+   "text": "Zaten az, güneş zaten daha az mor ışık gönderiyor.",
+   "kelimeler": [
+    {
+     "w": "Zaten",
+     "start": 0.0,
+     "end": 0.24,
+     "p": 0.831
+    },
+    {
+     "w": "az,",
+     "start": 0.24,
+     "end": 0.46,
+     "p": 0.944
+    },
+    {
+     "w": "güneş",
+     "start": 0.56,
+     "end": 2.32,
+     "p": 0.981
+    },
+    {
+     "w": "zaten",
+     "start": 2.32,
+     "end": 2.98,
+     "p": 0.971
+    },
+    {
+     "w": "daha",
+     "start": 2.98,
+     "end": 3.32,
+     "p": 0.998
+    },
+    {
+     "w": "az",
+     "start": 3.32,
+     "end": 3.72,
+     "p": 1.0
+    },
+    {
+     "w": "mor",
+     "start": 3.72,
+     "end": 4.04,
+     "p": 0.972
+    },
+    {
+     "w": "ışık",
+     "start": 4.04,
+     "end": 4.44,
+     "p": 0.999
+    },
+    {
+     "w": "gönderiyor.",
+     "start": 4.44,
+     "end": 4.58,
+     "p": 0.796
+    }
+   ]
+  }
+ ]
+}
