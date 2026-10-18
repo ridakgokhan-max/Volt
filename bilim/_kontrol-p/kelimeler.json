@@ -1,0 +1,557 @@
+{
+ "model": "large-v3",
+ "sure": 42.965,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.32,
+   "text": "Konserve kutusu icat edildiğinde açacağı yoktu.",
+   "kelimeler": [
+    {
+     "w": "Konserve",
+     "start": 0.0,
+     "end": 0.84,
+     "p": 0.984
+    },
+    {
+     "w": "kutusu",
+     "start": 0.84,
+     "end": 1.18,
+     "p": 0.998
+    },
+    {
+     "w": "icat",
+     "start": 1.18,
+     "end": 1.54,
+     "p": 0.999
+    },
+    {
+     "w": "edildiğinde",
+     "start": 1.54,
+     "end": 2.18,
+     "p": 0.999
+    },
+    {
+     "w": "açacağı",
+     "start": 2.18,
+     "end": 3.0,
+     "p": 0.998
+    },
+    {
+     "w": "yoktu.",
+     "start": 3.0,
+     "end": 3.32,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 3.44,
+   "end": 6.46,
+   "text": "Açacak ondan yaklaşık 50 yıl sonra geldi.",
+   "kelimeler": [
+    {
+     "w": "Açacak",
+     "start": 3.44,
+     "end": 4.02,
+     "p": 0.999
+    },
+    {
+     "w": "ondan",
+     "start": 4.02,
+     "end": 4.34,
+     "p": 0.946
+    },
+    {
+     "w": "yaklaşık",
+     "start": 4.34,
+     "end": 5.3,
+     "p": 1.0
+    },
+    {
+     "w": "50",
+     "start": 5.3,
+     "end": 5.54,
+     "p": 0.991
+    },
+    {
+     "w": "yıl",
+     "start": 5.54,
+     "end": 5.84,
+     "p": 1.0
+    },
+    {
+     "w": "sonra",
+     "start": 5.84,
+     "end": 6.1,
+     "p": 1.0
+    },
+    {
+     "w": "geldi.",
+     "start": 6.1,
+     "end": 6.46,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 6.94,
+   "end": 11.18,
+   "text": "1810'da İngiltere'de yiyeceği metal kutuda saklama fikri patentlendi.",
+   "kelimeler": [
+    {
+     "w": "1810'da",
+     "start": 6.94,
+     "end": 7.78,
+     "p": 0.999
+    },
+    {
+     "w": "İngiltere'de",
+     "start": 7.78,
+     "end": 8.52,
+     "p": 1.0
+    },
+    {
+     "w": "yiyeceği",
+     "start": 8.52,
+     "end": 9.1,
+     "p": 0.998
+    },
+    {
+     "w": "metal",
+     "start": 9.1,
+     "end": 9.3,
+     "p": 1.0
+    },
+    {
+     "w": "kutuda",
+     "start": 9.3,
+     "end": 9.82,
+     "p": 1.0
+    },
+    {
+     "w": "saklama",
+     "start": 9.82,
+     "end": 10.24,
+     "p": 1.0
+    },
+    {
+     "w": "fikri",
+     "start": 10.24,
+     "end": 10.54,
+     "p": 1.0
+    },
+    {
+     "w": "patentlendi.",
+     "start": 10.54,
+     "end": 11.18,
+     "p": 0.996
+    }
+   ]
+  },
+  {
+   "start": 11.4,
+   "end": 15.06,
+   "text": "Amaç askerlere ve denizcilere bozulmayan yiyecek göndermekti.",
+   "kelimeler": [
+    {
+     "w": "Amaç",
+     "start": 11.4,
+     "end": 12.08,
+     "p": 0.998
+    },
+    {
+     "w": "askerlere",
+     "start": 12.08,
+     "end": 12.7,
+     "p": 0.993
+    },
+    {
+     "w": "ve",
+     "start": 12.7,
+     "end": 12.84,
+     "p": 1.0
+    },
+    {
+     "w": "denizcilere",
+     "start": 12.84,
+     "end": 13.4,
+     "p": 1.0
+    },
+    {
+     "w": "bozulmayan",
+     "start": 13.4,
+     "end": 14.04,
+     "p": 0.999
+    },
+    {
+     "w": "yiyecek",
+     "start": 14.04,
+     "end": 14.38,
+     "p": 1.0
+    },
+    {
+     "w": "göndermekti.",
+     "start": 14.38,
+     "end": 15.06,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 15.22,
+   "end": 19.32,
+   "text": "İlk kutular kalın demirdendi ve bazıları boşken bile ağırdı.",
+   "kelimeler": [
+    {
+     "w": "İlk",
+     "start": 15.22,
+     "end": 15.66,
+     "p": 1.0
+    },
+    {
+     "w": "kutular",
+     "start": 15.66,
+     "end": 15.98,
+     "p": 1.0
+    },
+    {
+     "w": "kalın",
+     "start": 15.98,
+     "end": 16.5,
+     "p": 1.0
+    },
+    {
+     "w": "demirdendi",
+     "start": 16.5,
+     "end": 17.02,
+     "p": 0.999
+    },
+    {
+     "w": "ve",
+     "start": 17.02,
+     "end": 17.4,
+     "p": 0.97
+    },
+    {
+     "w": "bazıları",
+     "start": 17.4,
+     "end": 18.02,
+     "p": 1.0
+    },
+    {
+     "w": "boşken",
+     "start": 18.02,
+     "end": 18.6,
+     "p": 1.0
+    },
+    {
+     "w": "bile",
+     "start": 18.6,
+     "end": 18.78,
+     "p": 1.0
+    },
+    {
+     "w": "ağırdı.",
+     "start": 18.78,
+     "end": 19.32,
+     "p": 0.97
+    }
+   ]
+  },
+  {
+   "start": 19.6,
+   "end": 21.66,
+   "text": "Peki insanlar bu kutuları nasıl açıyordu?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 19.6,
+     "end": 19.76,
+     "p": 1.0
+    },
+    {
+     "w": "insanlar",
+     "start": 19.76,
+     "end": 20.18,
+     "p": 1.0
+    },
+    {
+     "w": "bu",
+     "start": 20.18,
+     "end": 20.54,
+     "p": 1.0
+    },
+    {
+     "w": "kutuları",
+     "start": 20.54,
+     "end": 21.04,
+     "p": 1.0
+    },
+    {
+     "w": "nasıl",
+     "start": 21.04,
+     "end": 21.18,
+     "p": 1.0
+    },
+    {
+     "w": "açıyordu?",
+     "start": 21.18,
+     "end": 21.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 21.88,
+   "end": 24.14,
+   "text": "Kutunun üstünde talimat yazıyordu.",
+   "kelimeler": [
+    {
+     "w": "Kutunun",
+     "start": 21.88,
+     "end": 22.46,
+     "p": 1.0
+    },
+    {
+     "w": "üstünde",
+     "start": 22.46,
+     "end": 22.98,
+     "p": 1.0
+    },
+    {
+     "w": "talimat",
+     "start": 22.98,
+     "end": 23.64,
+     "p": 0.999
+    },
+    {
+     "w": "yazıyordu.",
+     "start": 23.64,
+     "end": 24.14,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 24.28,
+   "end": 25.92,
+   "text": "Keski ve çekişle açın.",
+   "kelimeler": [
+    {
+     "w": "Keski",
+     "start": 24.28,
+     "end": 24.82,
+     "p": 0.993
+    },
+    {
+     "w": "ve",
+     "start": 24.82,
+     "end": 24.92,
+     "p": 1.0
+    },
+    {
+     "w": "çekişle",
+     "start": 24.92,
+     "end": 25.64,
+     "p": 0.932
+    },
+    {
+     "w": "açın.",
+     "start": 25.64,
+     "end": 25.92,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 26.44,
+   "end": 29.96,
+   "text": "Askerler süngü, bıçak hatta tüfek kullanıyordu.",
+   "kelimeler": [
+    {
+     "w": "Askerler",
+     "start": 26.44,
+     "end": 26.88,
+     "p": 0.976
+    },
+    {
+     "w": "süngü,",
+     "start": 26.88,
+     "end": 27.68,
+     "p": 0.987
+    },
+    {
+     "w": "bıçak",
+     "start": 27.8,
+     "end": 28.52,
+     "p": 0.999
+    },
+    {
+     "w": "hatta",
+     "start": 28.52,
+     "end": 29.0,
+     "p": 0.917
+    },
+    {
+     "w": "tüfek",
+     "start": 29.0,
+     "end": 29.38,
+     "p": 0.999
+    },
+    {
+     "w": "kullanıyordu.",
+     "start": 29.38,
+     "end": 29.96,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 30.04,
+   "end": 34.5,
+   "text": "Kutular zamanla inceldi ve 1850'lerde ilk açacaklar ortaya çıktı.",
+   "kelimeler": [
+    {
+     "w": "Kutular",
+     "start": 30.04,
+     "end": 30.66,
+     "p": 0.999
+    },
+    {
+     "w": "zamanla",
+     "start": 30.66,
+     "end": 31.2,
+     "p": 0.999
+    },
+    {
+     "w": "inceldi",
+     "start": 31.2,
+     "end": 31.78,
+     "p": 0.999
+    },
+    {
+     "w": "ve",
+     "start": 31.78,
+     "end": 32.1,
+     "p": 0.995
+    },
+    {
+     "w": "1850",
+     "start": 32.1,
+     "end": 32.88,
+     "p": 0.997
+    },
+    {
+     "w": "'lerde",
+     "start": 32.88,
+     "end": 33.12,
+     "p": 0.998
+    },
+    {
+     "w": "ilk",
+     "start": 33.12,
+     "end": 33.38,
+     "p": 0.999
+    },
+    {
+     "w": "açacaklar",
+     "start": 33.38,
+     "end": 33.94,
+     "p": 0.998
+    },
+    {
+     "w": "ortaya",
+     "start": 33.94,
+     "end": 34.28,
+     "p": 1.0
+    },
+    {
+     "w": "çıktı.",
+     "start": 34.28,
+     "end": 34.5,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 34.82,
+   "end": 39.54,
+   "text": "Yani bir icadın işe yaraması için bazen başka bir icadı beklemesi gerekiyor.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 34.82,
+     "end": 35.32,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 35.32,
+     "end": 35.52,
+     "p": 0.999
+    },
+    {
+     "w": "icadın",
+     "start": 35.52,
+     "end": 36.12,
+     "p": 0.997
+    },
+    {
+     "w": "işe",
+     "start": 36.12,
+     "end": 36.34,
+     "p": 1.0
+    },
+    {
+     "w": "yaraması",
+     "start": 36.34,
+     "end": 36.66,
+     "p": 0.966
+    },
+    {
+     "w": "için",
+     "start": 36.66,
+     "end": 36.86,
+     "p": 1.0
+    },
+    {
+     "w": "bazen",
+     "start": 36.86,
+     "end": 37.56,
+     "p": 0.999
+    },
+    {
+     "w": "başka",
+     "start": 37.56,
+     "end": 37.98,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 37.98,
+     "end": 38.18,
+     "p": 1.0
+    },
+    {
+     "w": "icadı",
+     "start": 38.18,
+     "end": 38.58,
+     "p": 0.75
+    },
+    {
+     "w": "beklemesi",
+     "start": 38.58,
+     "end": 38.96,
+     "p": 1.0
+    },
+    {
+     "w": "gerekiyor.",
+     "start": 38.96,
+     "end": 39.54,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
