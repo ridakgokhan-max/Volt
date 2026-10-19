@@ -175,10 +175,12 @@ const Altyazi: React.FC = () => {
   if (t > lineEnd + 0.9 && t < next) return null;
   const inK = sp(t, K[a].s - 0.12, 14);
   const words = K.slice(a, b + 1);
+  // takip çağrısında Meraklı alttaki "Takip et" düğmesine yürür: altyazı onun üstüne binmesin diye yukarı kayar
+  const takipK = ctaGorunur(t, (D.cta || []).filter((c) => c.tur === "takip"));
   return (
     <div style={{
       position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexWrap: "wrap", justifyContent: "center",
-      alignContent: "flex-start", rowGap: 6, transform: `translateY(${(1 - inK) * 40}px)`, opacity: cl(inK * 1.4),
+      alignContent: "flex-start", rowGap: 6, transform: `translateY(${(1 - inK) * 40 - 330 * takipK}px)`, opacity: cl(inK * 1.4),
     }}>
       {words.map((k, j) => {
         const gi = a + j;
