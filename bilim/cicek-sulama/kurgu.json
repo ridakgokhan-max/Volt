@@ -3,7 +3,7 @@
  "temizle": true,
  "dongu": true,
  "imza": true,
- "son_bosluk": 3.3,
+ "son_bosluk": 1.0,
  "kesimler": [
   [
    24.3,
@@ -50,7 +50,8 @@
   },
   {
    "tur": "takip",
-   "son": true
+   "son": true,
+   "ofset": -2.2
   }
  ],
  "cta_kostum": "baret",

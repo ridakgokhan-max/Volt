@@ -3,7 +3,7 @@
  "temizle": true,
  "dongu": true,
  "imza": true,
- "son_bosluk": 3.3,
+ "son_bosluk": 1.0,
  "kesimler": [
   [
    0.0,
@@ -64,10 +64,6 @@
    "tur": "yorum",
    "kelime": "kayardı",
    "yazi": "Biliyor muydun?"
-  },
-  {
-   "tur": "takip",
-   "son": true
   }
  ],
  "cta_kostum": "kulaklik",
