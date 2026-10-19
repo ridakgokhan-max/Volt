@@ -213,7 +213,7 @@ const Sonuc: S = ({ t, ws, ses }) => {
         <Txt x={0} y={20} text="AÇACAK" size={50} color="#fff" />
       </g>
       {bir > 0.95 ? <circle cx={540} cy={720} r={60 + 40 * Math.sin(t * 6)} fill="none" stroke={ACC} strokeWidth={10} opacity={0.7} /> : null}
-      <Tag x={540} y={1020} text="İCAT, İCADI BEKLER" size={46} k={sp(t, tb + 0.3)} bg={ACC} rot={-2} />
+      <Tag x={540} y={450} text="İCAT, İCADI BEKLER" size={46} k={sp(t, tb + 0.3)} bg={ACC} rot={-2} />
       <Merakli x={880} y={1240} s={0.5} t={t} hareket={t > tb ? "aha" : "anlat"} kostum="sapka" agiz={ses(t)} />
     </g>
   );
