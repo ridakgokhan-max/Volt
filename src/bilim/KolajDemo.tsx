@@ -145,7 +145,7 @@ const Sahne2: React.FC<{ t: number }> = ({ t }) => {
       <Parca t={t} ad="balkavanoz" x={540} y={500} w={330} a={5.15} yon="alt" />
       <Parca t={t} ad="mikrop" x={20 + mx} y={900} w={330} rot={-10} a={6.0} yon="sol" cikis={7.8} />
       <Parca t={t} ad="mikrop2" x={1060 - mx} y={1150} w={330} rot={12} a={6.1} yon="sag" cikis={7.8} />
-      <Serit t={t} a={5.1} text="BAL NEDEN BOZULMAZ?" y={200} size={84} rot={-2} />
+      <Serit t={t} a={5.1} text="BAL NEDEN BOZULMAZ?" y={205} size={68} rot={-2} />
       <Muhur t={t} a={7.4} text="✕" x={300} y={1000} size={110} rot={0} />
       <Muhur t={t} a={7.5} text="✕" x={780} y={1250} size={110} rot={0} />
       <Serit t={t} a={8.0} text="İÇİNDE SERBEST SU YOK" y={1500} size={62} rot={1.5} bg={INK} color={KREM} />
