@@ -33,7 +33,7 @@ const Giris: S = ({ t, ws, ses }) => {
       <KolajDefs />
       <Parca t={t} ad="dunya" x={540} y={900} w={1000} />
       <Yol x1={800} y1={420} x2={430} y2={820} t={t} />
-      <Parca t={t} ad="uydu" x={800} y={190} w={380} rot={-8} />
+      <Parca t={t} ad="uydu" x={780} y={230} w={480} rot={-8} />
       <Parca t={t} ad="telefon" x={420} y={600} w={290} rot={6} />
       <Serit t={t} a={0} text="20.000 KM" x={300} y={330} size={64} rot={-5} bg={INK} color={KREM} />
       <Muhur t={t} a={ti - 0.1} text="İNTERNET YOK" x={560} y={1180} size={78} rot={-6} />
@@ -53,7 +53,7 @@ const Uydular: S = ({ t, ws }) => {
         const aci = tq * 0.55 + (i * Math.PI * 2) / 5;
         const x = 540 + Math.cos(aci) * 430;
         const y = 760 + Math.sin(aci) * 300;
-        return <Parca key={i} t={t} ad="uydu" x={x} y={y - 80} w={180} rot={(i % 2 ? 10 : -10)} a={0.25 + i * 0.12} yon="pop" flip={i % 2 === 1} />;
+        return <Parca key={i} t={t} ad="uydu" x={x} y={y - 80} w={230} rot={(i % 2 ? 10 : -10)} a={0.25 + i * 0.12} yon="pop" flip={i % 2 === 1} />;
       })}
       <Serit t={t} a={ws("30'dan") - 0.1} text="30+ GPS UYDUSU" y={1230} size={70} rot={2} />
     </g>
@@ -64,8 +64,8 @@ const Uydular: S = ({ t, ws }) => {
 const Yayin: S = ({ t, ws }) => (
   <g>
     <KolajDefs />
-    <Halka x={540} y={470} t={t} buyuk={330} />
-    <Parca t={t} ad="uydu" x={540} y={260} w={440} a={0.05} yon="ust" />
+    <Halka x={540} y={400} t={t} buyuk={330} />
+    <Parca t={t} ad="uydu" x={540} y={290} w={620} a={0.05} yon="ust" />
     <Serit t={t} a={ws("buradayım") - 0.15} text="BEN BURADAYIM" x={400} y={880} size={66} rot={-3} bg={INK} color={KREM} />
     <Parca t={t} ad="saat" x={800} y={860} w={290} rot={8} a={ws("saat") - 0.15} yon="sag" />
     <Serit t={t} a={ws("saat") + 0.2} text="SAAT TAM OLARAK ŞU" x={480} y={1230} size={60} rot={2} />
@@ -78,7 +78,7 @@ const Sure: S = ({ t, ws }) => {
   return (
     <g>
       <KolajDefs />
-      <Parca t={t} ad="uydu" x={820} y={230} w={300} rot={-10} a={0.05} yon="sag" />
+      <Parca t={t} ad="uydu" x={780} y={250} w={420} rot={-10} a={0.05} yon="sag" />
       <Yol x1={800} y1={420} x2={360} y2={700} t={t} />
       <Parca t={t} ad="telefon" x={330} y={560} w={300} rot={-6} a={0.1} yon="sol" />
       <Parca t={t} ad="kronometre" x={760} y={700} w={300} rot={10} a={ws("sürede") - 0.15} yon="pop" />
@@ -90,13 +90,13 @@ const Sure: S = ({ t, ws }) => {
 // 5 — 4 uydu birleşince birkaç metre
 const Dort: S = ({ t, ws }) => {
   const t4 = ws("4");
-  const yerler: [number, number, number][] = [[180, 250, -12], [900, 260, 10], [170, 860, 8], [910, 870, -8]];
+  const yerler: [number, number, number][] = [[200, 200, -12], [880, 200, 10], [200, 960, 8], [880, 970, -8]];
   return (
     <g>
       <KolajDefs />
       <Parca t={t} ad="harita" x={540} y={330} w={900} rot={-2} a={0.05} yon="alt" />
       {yerler.map(([x, y, r], i) => (
-        <Parca key={i} t={t} ad="uydu" x={x} y={y} w={190} rot={r} a={t4 + i * 0.2} yon={i % 2 ? "sag" : "sol"} d={0.3} flip={i % 2 === 1} />
+        <Parca key={i} t={t} ad="uydu" x={x} y={y} w={250} rot={r} a={t4 + i * 0.2} yon={i % 2 ? "sag" : "sol"} d={0.3} flip={i % 2 === 1} />
       ))}
       {adim(t) > ws("birleştirince") - 0.1 ? <Igne x={540} y={760} s={1.1} /> : null}
       <Serit t={t} a={ws("birkaç") - 0.1} text="4 UYDU = BİRKAÇ METRE" y={1230} size={62} rot={2} bg={INK} color={KREM} />
@@ -164,7 +164,7 @@ export const KAPAK: React.FC = () => (
   <g>
     <KolajDefs />
     <Parca t={0} ad="dunya" x={540} y={1180} w={1150} />
-    <Parca t={0} ad="uydu" x={800} y={930} w={360} rot={-8} />
+    <Parca t={0} ad="uydu" x={760} y={960} w={480} rot={-8} />
     <Parca t={0} ad="telefon" x={330} y={1000} w={300} rot={6} />
     <Merakli x={880} y={1760} s={0.7} t={0.3} hareket="sasir" kostum="kulaklik" />
   </g>
