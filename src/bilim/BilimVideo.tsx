@@ -31,7 +31,7 @@ const A = ALAN[PLATFORM] || ALAN.instagram;
 type Seri = { no: number; toplam: number; kategori: string };
 type Kanca = { yazi: string; alt?: string; sure?: number };
 type Acilis = { sahne: string; an: number; sure: number };
-const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis; imza?: boolean; cta?: CtaAdim[] };
+const D = data as unknown as { seri?: Seri; kanca?: Kanca; dongu?: boolean; agiz?: number[]; acilis?: Acilis; imza?: boolean; cta?: CtaAdim[]; arka?: string };
 const AC = D.acilis;
 const KANCA_SURE = D.kanca ? D.kanca.sure ?? 2 : 0;
 const DONGU = 15; // döngü sonu: son 15 karede ilk sahneye karışır
@@ -121,7 +121,7 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
   return (
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>
-        <Bg kind={sc.bg} t={t + idx * 3} seed={3 + (idx % 5)} />
+        {D.arka ? null : <Bg kind={sc.bg} t={t + idx * 3} seed={3 + (idx % 5)} />}
         {sc.gorsel && sc.derinlik ? (
           // derinlikli görsel: arka / orta / ön katman farklı hızlarda kayar (kamera resmin içinde gezinir)
           <>
@@ -338,6 +338,10 @@ const Ust: React.FC = () => {
 
 export const BilimVideo: React.FC = () => (
   <AbsoluteFill style={{ background: "#111", ["--font" as string]: fontFamily } as React.CSSProperties}>
+    {D.arka ? (
+      // tüm video boyunca tek parça arka plan (ör. Blender'da render edilmiş 3D sahne); sahneler üstüne şeffaf katman olarak biner
+      <OffthreadVideo muted src={staticFile(`bilim/${(data as { konu: string }).konu}/${D.arka}`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+    ) : null}
     {AC ? (
       <Sequence from={0} durationInFrames={Math.round(AC.sure * FPS) + OV}>
         <SceneWrap sc={SC.find((s) => s.id === AC.sahne) || SC[0]} idx={Math.max(0, SC.findIndex((s) => s.id === AC.sahne))} lead={0} sabitT={AC.an} acilis />

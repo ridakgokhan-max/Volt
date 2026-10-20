@@ -1,0 +1,119 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": false,
+ "son_bosluk": 1.0,
+ "kesimler": [
+  [
+   24.3,
+   27.5
+  ],
+  [
+   36.6,
+   40.75
+  ]
+ ],
+ "kelime_sil": [
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  59,
+  60,
+  61,
+  62,
+  63
+ ],
+ "kelime_ekle": [],
+ "seri": {
+  "no": 9,
+  "toplam": 30,
+  "kategori": "Kendin Yap"
+ },
+ "kanca": {
+  "yazi": "ÇİÇEKLER KURUMASIN",
+  "alt": "Bedava otomatik sulama",
+  "sure": 1.9
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "=aç."
+  },
+  {
+   "tur": "yorum",
+   "kelime": "boşalmıyor",
+   "yazi": "Sence neden?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "baret",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "gok",
+   "ilk": 0
+  },
+  {
+   "id": "cozum",
+   "bg": "yesil",
+   "ilk": "=bir",
+   "gecis": "zoom"
+  },
+  {
+   "id": "delik",
+   "bg": "sicak",
+   "ilk": "şişenin",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "gom",
+   "bg": "yesil",
+   "ilk": "=şişeyi",
+   "gecis": "perde"
+  },
+  {
+   "id": "soru",
+   "bg": "gok",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "hava",
+   "bg": "plan",
+   "ilk": "çünkü",
+   "gecis": "daire"
+  },
+  {
+   "id": "dene",
+   "bg": "sicak",
+   "ilk": "gitmeden",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sonuc",
+   "bg": "yesil",
+   "ilk": "yani",
+   "gecis": "daire"
+  }
+ ],
+ "vurgu": [
+  "kurumasın.",
+  "haftalığına",
+  "delik",
+  "göm.",
+  "hava",
+  "dene.",
+  "kendisi"
+ ],
+ "muzik": "neseli",
+ "muzik_parca": "viacheslavstarostin-ukulele",
+ "arka": "arka.mp4"
+}

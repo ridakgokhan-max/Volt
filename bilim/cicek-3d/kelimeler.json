@@ -1,0 +1,782 @@
+{
+ "model": "large-v3",
+ "sure": 65.28,
+ "segmentler": [
+  {
+   "start": 0.96,
+   "end": 2.48,
+   "text": "Çiçeklerin asla kurumasın.",
+   "kelimeler": [
+    {
+     "w": "Çiçeklerin",
+     "start": 0.96,
+     "end": 1.38,
+     "p": 0.968
+    },
+    {
+     "w": "asla",
+     "start": 1.38,
+     "end": 1.74,
+     "p": 0.992
+    },
+    {
+     "w": "kurumasın.",
+     "start": 1.74,
+     "end": 2.48,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 2.68,
+   "end": 6.06,
+   "text": "Tatile gidiyorsun ve çiçeklerin kuruyacak.",
+   "kelimeler": [
+    {
+     "w": "Tatile",
+     "start": 2.68,
+     "end": 3.44,
+     "p": 0.995
+    },
+    {
+     "w": "gidiyorsun",
+     "start": 3.44,
+     "end": 3.86,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 3.86,
+     "end": 4.56,
+     "p": 0.927
+    },
+    {
+     "w": "çiçeklerin",
+     "start": 4.56,
+     "end": 5.42,
+     "p": 1.0
+    },
+    {
+     "w": "kuruyacak.",
+     "start": 5.42,
+     "end": 6.06,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 7.0,
+   "end": 9.98,
+   "text": "Bir pet şişe bunu bir haftalığına çözebilir.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 6.68,
+     "end": 7.06,
+     "p": 0.998
+    },
+    {
+     "w": "pet",
+     "start": 7.06,
+     "end": 7.3,
+     "p": 0.896
+    },
+    {
+     "w": "şişe",
+     "start": 7.3,
+     "end": 7.72,
+     "p": 1.0
+    },
+    {
+     "w": "bunu",
+     "start": 7.72,
+     "end": 8.64,
+     "p": 0.975
+    },
+    {
+     "w": "bir",
+     "start": 8.64,
+     "end": 8.88,
+     "p": 0.994
+    },
+    {
+     "w": "haftalığına",
+     "start": 8.88,
+     "end": 9.44,
+     "p": 1.0
+    },
+    {
+     "w": "çözebilir.",
+     "start": 9.44,
+     "end": 9.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 10.9,
+   "end": 17.0,
+   "text": "Şişenin kapağına ısıtılmış bir iğne ile bir ya da iki küçük delik aç.",
+   "kelimeler": [
+    {
+     "w": "Şişenin",
+     "start": 10.9,
+     "end": 11.66,
+     "p": 0.998
+    },
+    {
+     "w": "kapağına",
+     "start": 11.66,
+     "end": 12.24,
+     "p": 0.997
+    },
+    {
+     "w": "ısıtılmış",
+     "start": 12.24,
+     "end": 13.52,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 13.52,
+     "end": 13.78,
+     "p": 1.0
+    },
+    {
+     "w": "iğne",
+     "start": 13.78,
+     "end": 14.12,
+     "p": 0.999
+    },
+    {
+     "w": "ile",
+     "start": 14.12,
+     "end": 14.3,
+     "p": 0.91
+    },
+    {
+     "w": "bir",
+     "start": 14.3,
+     "end": 15.42,
+     "p": 0.952
+    },
+    {
+     "w": "ya",
+     "start": 15.42,
+     "end": 15.66,
+     "p": 0.996
+    },
+    {
+     "w": "da",
+     "start": 15.66,
+     "end": 15.76,
+     "p": 1.0
+    },
+    {
+     "w": "iki",
+     "start": 15.76,
+     "end": 16.18,
+     "p": 0.999
+    },
+    {
+     "w": "küçük",
+     "start": 16.18,
+     "end": 16.48,
+     "p": 1.0
+    },
+    {
+     "w": "delik",
+     "start": 16.48,
+     "end": 16.86,
+     "p": 1.0
+    },
+    {
+     "w": "aç.",
+     "start": 16.86,
+     "end": 17.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 18.34,
+   "end": 19.82,
+   "text": "Şişeyi suyla doldur.",
+   "kelimeler": [
+    {
+     "w": "Şişeyi",
+     "start": 18.34,
+     "end": 19.1,
+     "p": 0.999
+    },
+    {
+     "w": "suyla",
+     "start": 19.1,
+     "end": 19.44,
+     "p": 0.949
+    },
+    {
+     "w": "doldur.",
+     "start": 19.44,
+     "end": 19.82,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 20.26,
+   "end": 21.44,
+   "text": "Kapağı kapat.",
+   "kelimeler": [
+    {
+     "w": "Kapağı",
+     "start": 20.26,
+     "end": 21.02,
+     "p": 0.999
+    },
+    {
+     "w": "kapat.",
+     "start": 21.02,
+     "end": 21.44,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 22.18,
+   "end": 23.6,
+   "text": "Toprağı iyice sula.",
+   "kelimeler": [
+    {
+     "w": "Toprağı",
+     "start": 22.18,
+     "end": 22.94,
+     "p": 0.998
+    },
+    {
+     "w": "iyice",
+     "start": 22.94,
+     "end": 23.34,
+     "p": 1.0
+    },
+    {
+     "w": "sula.",
+     "start": 23.34,
+     "end": 23.6,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 24.4,
+   "end": 25.84,
+   "text": "Şişeyi ters çevir.",
+   "kelimeler": [
+    {
+     "w": "Şişeyi",
+     "start": 24.4,
+     "end": 25.16,
+     "p": 1.0
+    },
+    {
+     "w": "ters",
+     "start": 25.16,
+     "end": 25.5,
+     "p": 1.0
+    },
+    {
+     "w": "çevir.",
+     "start": 25.5,
+     "end": 25.84,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 26.68,
+   "end": 27.56,
+   "text": "Ve kapağı kap...",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 26.32,
+     "end": 26.7,
+     "p": 0.872
+    },
+    {
+     "w": "kapağı",
+     "start": 26.7,
+     "end": 27.2,
+     "p": 0.999
+    },
+    {
+     "w": "kap...",
+     "start": 27.2,
+     "end": 27.56,
+     "p": 0.51
+    }
+   ]
+  },
+  {
+   "start": 27.56,
+   "end": 29.42,
+   "text": "Şişeyi ters çevir.",
+   "kelimeler": [
+    {
+     "w": "Şişeyi",
+     "start": 27.56,
+     "end": 28.82,
+     "p": 0.998
+    },
+    {
+     "w": "ters",
+     "start": 28.82,
+     "end": 29.08,
+     "p": 1.0
+    },
+    {
+     "w": "çevir.",
+     "start": 29.08,
+     "end": 29.42,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 32.74,
+   "text": "Ve kapak kısmını toprağa 5-6 santim göm.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 30.0,
+     "end": 30.22,
+     "p": 0.956
+    },
+    {
+     "w": "kapak",
+     "start": 30.22,
+     "end": 30.58,
+     "p": 0.999
+    },
+    {
+     "w": "kısmını",
+     "start": 30.58,
+     "end": 30.98,
+     "p": 1.0
+    },
+    {
+     "w": "toprağa",
+     "start": 30.98,
+     "end": 31.56,
+     "p": 0.997
+    },
+    {
+     "w": "5",
+     "start": 31.56,
+     "end": 31.72,
+     "p": 0.976
+    },
+    {
+     "w": "-6",
+     "start": 31.72,
+     "end": 32.0,
+     "p": 1.0
+    },
+    {
+     "w": "santim",
+     "start": 32.0,
+     "end": 32.44,
+     "p": 0.847
+    },
+    {
+     "w": "göm.",
+     "start": 32.44,
+     "end": 32.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 33.64,
+   "end": 36.02,
+   "text": "Peki su neden bir anda boşalmıyor?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 33.64,
+     "end": 34.4,
+     "p": 1.0
+    },
+    {
+     "w": "su",
+     "start": 34.4,
+     "end": 34.68,
+     "p": 0.973
+    },
+    {
+     "w": "neden",
+     "start": 34.68,
+     "end": 34.88,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 34.88,
+     "end": 35.2,
+     "p": 1.0
+    },
+    {
+     "w": "anda",
+     "start": 35.2,
+     "end": 35.4,
+     "p": 1.0
+    },
+    {
+     "w": "boşalmıyor?",
+     "start": 35.4,
+     "end": 36.02,
+     "p": 0.99
+    }
+   ]
+  },
+  {
+   "start": 36.94,
+   "end": 39.14,
+   "text": "Çünkü şişenin içine hava giremiyor.",
+   "kelimeler": [
+    {
+     "w": "Çünkü",
+     "start": 36.7,
+     "end": 37.08,
+     "p": 0.999
+    },
+    {
+     "w": "şişenin",
+     "start": 37.08,
+     "end": 37.64,
+     "p": 1.0
+    },
+    {
+     "w": "içine",
+     "start": 37.64,
+     "end": 38.1,
+     "p": 1.0
+    },
+    {
+     "w": "hava",
+     "start": 38.1,
+     "end": 38.78,
+     "p": 0.999
+    },
+    {
+     "w": "giremiyor.",
+     "start": 38.78,
+     "end": 39.14,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 41.12,
+   "end": 42.9,
+   "text": "Çünkü şişenin içine hava giremiyor.",
+   "kelimeler": [
+    {
+     "w": "Çünkü",
+     "start": 40.84,
+     "end": 41.22,
+     "p": 0.67
+    },
+    {
+     "w": "şişenin",
+     "start": 41.22,
+     "end": 41.74,
+     "p": 1.0
+    },
+    {
+     "w": "içine",
+     "start": 41.74,
+     "end": 42.12,
+     "p": 1.0
+    },
+    {
+     "w": "hava",
+     "start": 42.12,
+     "end": 42.52,
+     "p": 1.0
+    },
+    {
+     "w": "giremiyor.",
+     "start": 42.52,
+     "end": 42.9,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 43.44,
+   "end": 47.32,
+   "text": "Toprak kuruduğu ölçüde aradaki boşluklardan hava giriyor.",
+   "kelimeler": [
+    {
+     "w": "Toprak",
+     "start": 43.44,
+     "end": 44.2,
+     "p": 0.999
+    },
+    {
+     "w": "kuruduğu",
+     "start": 44.2,
+     "end": 44.74,
+     "p": 1.0
+    },
+    {
+     "w": "ölçüde",
+     "start": 44.74,
+     "end": 45.1,
+     "p": 1.0
+    },
+    {
+     "w": "aradaki",
+     "start": 45.1,
+     "end": 46.0,
+     "p": 0.984
+    },
+    {
+     "w": "boşluklardan",
+     "start": 46.0,
+     "end": 46.66,
+     "p": 1.0
+    },
+    {
+     "w": "hava",
+     "start": 46.66,
+     "end": 47.06,
+     "p": 1.0
+    },
+    {
+     "w": "giriyor.",
+     "start": 47.06,
+     "end": 47.32,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 48.24,
+   "end": 50.06,
+   "text": "Şişe de ancak o kadar su bırakıyor.",
+   "kelimeler": [
+    {
+     "w": "Şişe",
+     "start": 48.06,
+     "end": 48.44,
+     "p": 0.853
+    },
+    {
+     "w": "de",
+     "start": 48.44,
+     "end": 48.54,
+     "p": 1.0
+    },
+    {
+     "w": "ancak",
+     "start": 48.54,
+     "end": 49.0,
+     "p": 1.0
+    },
+    {
+     "w": "o",
+     "start": 49.0,
+     "end": 49.14,
+     "p": 1.0
+    },
+    {
+     "w": "kadar",
+     "start": 49.14,
+     "end": 49.38,
+     "p": 1.0
+    },
+    {
+     "w": "su",
+     "start": 49.38,
+     "end": 49.64,
+     "p": 1.0
+    },
+    {
+     "w": "bırakıyor.",
+     "start": 49.64,
+     "end": 50.06,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 51.2,
+   "end": 54.04,
+   "text": "Toprak nemliyken neredeyse hiç akmıyor.",
+   "kelimeler": [
+    {
+     "w": "Toprak",
+     "start": 51.2,
+     "end": 51.96,
+     "p": 1.0
+    },
+    {
+     "w": "nemliyken",
+     "start": 51.96,
+     "end": 52.5,
+     "p": 0.995
+    },
+    {
+     "w": "neredeyse",
+     "start": 52.5,
+     "end": 53.28,
+     "p": 1.0
+    },
+    {
+     "w": "hiç",
+     "start": 53.28,
+     "end": 53.54,
+     "p": 1.0
+    },
+    {
+     "w": "akmıyor.",
+     "start": 53.54,
+     "end": 54.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 54.66,
+   "end": 56.62,
+   "text": "Gitmeden birkaç gün önce dene.",
+   "kelimeler": [
+    {
+     "w": "Gitmeden",
+     "start": 54.66,
+     "end": 55.42,
+     "p": 0.998
+    },
+    {
+     "w": "birkaç",
+     "start": 55.42,
+     "end": 55.88,
+     "p": 0.987
+    },
+    {
+     "w": "gün",
+     "start": 55.88,
+     "end": 56.04,
+     "p": 1.0
+    },
+    {
+     "w": "önce",
+     "start": 56.04,
+     "end": 56.26,
+     "p": 1.0
+    },
+    {
+     "w": "dene.",
+     "start": 56.26,
+     "end": 56.62,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 57.1,
+   "end": 59.78,
+   "text": "Delik büyükse şişe bir günde biter.",
+   "kelimeler": [
+    {
+     "w": "Delik",
+     "start": 57.1,
+     "end": 57.86,
+     "p": 0.999
+    },
+    {
+     "w": "büyükse",
+     "start": 57.86,
+     "end": 58.26,
+     "p": 1.0
+    },
+    {
+     "w": "şişe",
+     "start": 58.26,
+     "end": 59.0,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 59.0,
+     "end": 59.14,
+     "p": 0.999
+    },
+    {
+     "w": "günde",
+     "start": 59.14,
+     "end": 59.42,
+     "p": 0.987
+    },
+    {
+     "w": "biter.",
+     "start": 59.42,
+     "end": 59.78,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 60.0,
+   "end": 64.4,
+   "text": "Yani bitki ihtiyacı kadar suyu kendisi alıyor.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 60.0,
+     "end": 61.3,
+     "p": 0.991
+    },
+    {
+     "w": "bitki",
+     "start": 61.3,
+     "end": 61.76,
+     "p": 0.998
+    },
+    {
+     "w": "ihtiyacı",
+     "start": 61.76,
+     "end": 62.52,
+     "p": 0.981
+    },
+    {
+     "w": "kadar",
+     "start": 62.52,
+     "end": 62.74,
+     "p": 1.0
+    },
+    {
+     "w": "suyu",
+     "start": 62.74,
+     "end": 63.22,
+     "p": 1.0
+    },
+    {
+     "w": "kendisi",
+     "start": 63.22,
+     "end": 64.02,
+     "p": 1.0
+    },
+    {
+     "w": "alıyor.",
+     "start": 64.02,
+     "end": 64.4,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}

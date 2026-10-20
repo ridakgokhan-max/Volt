@@ -254,7 +254,7 @@ def main(konu):
         sm[i] = env[i] if env[i] > sm[i - 1] else sm[i - 1] * 0.55 + env[i] * 0.45
     data = {"konu": konu, "baslik": K["baslik"], "audio": f"bilim/{konu}/mix.m4a", "sure": round(sure, 3),
             "kelimeler": kel, "satirlar": sat, "sahneler": sc, "agiz": [round(float(v), 2) for v in sm]}
-    for alan in ("seri", "kanca", "dongu", "acilis", "imza"):  # büyüme özellikleri: seri rozeti, kanca, döngü sonu, açılış
+    for alan in ("seri", "kanca", "dongu", "acilis", "imza", "arka"):  # büyüme özellikleri: seri rozeti, kanca, döngü sonu, açılış
         if alan in K:
             data[alan] = dict(K[alan]) if isinstance(K[alan], dict) else K[alan]
     # etkileşim çağrısı (beğen / yorum / takip): {"tur", "kelime" [, "n", "ofset", "yazi"]} ya da {"tur", "son": true}
