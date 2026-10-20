@@ -1,4 +1,4 @@
-kapsayıcı: 17887321749504259
+kapsayıcı: 17887537977504259
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
@@ -7,4 +7,4 @@ durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: FINISHED FINISHED
-DENEME TAMAM: video Instagram tarafından işlendi, yayınlanmadı.
+YAYINLANDI: https://www.instagram.com/reel/DeuYKpAEabk/
