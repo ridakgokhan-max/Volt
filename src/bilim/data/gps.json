@@ -648,7 +648,7 @@
  "sahneler": [
   {
    "id": "giris",
-   "bg": "gece",
+   "bg": "k:#2E5C9A",
    "bas": 0.0,
    "son": 6.046,
    "ev": {},
@@ -656,15 +656,15 @@
   },
   {
    "id": "uydular",
-   "bg": "gece",
+   "bg": "k:#E2733A",
    "bas": 6.046,
    "son": 9.834,
    "ev": {},
-   "gecis": "zoom"
+   "gecis": "perde"
   },
   {
    "id": "yayin",
-   "bg": "devre",
+   "bg": "k:#DDA43C",
    "bas": 9.834,
    "son": 15.314,
    "ev": {},
@@ -672,7 +672,7 @@
   },
   {
    "id": "sure",
-   "bg": "plan",
+   "bg": "k:#6E9E62",
    "bas": 15.314,
    "son": 19.713,
    "ev": {},
@@ -680,7 +680,7 @@
   },
   {
    "id": "dort",
-   "bg": "plan",
+   "bg": "k:#2E5C9A",
    "bas": 19.713,
    "son": 24.169,
    "ev": {},
@@ -688,15 +688,15 @@
   },
   {
    "id": "soru",
-   "bg": "gece",
+   "bg": "k:#8C5BA8",
    "bas": 24.169,
    "son": 26.889,
    "ev": {},
-   "gecis": "zoom"
+   "gecis": "perde"
   },
   {
    "id": "saatler",
-   "bg": "tahta",
+   "bg": "k:#DDA43C",
    "bas": 26.889,
    "son": 34.644,
    "ev": {},
@@ -704,7 +704,7 @@
   },
   {
    "id": "kayma",
-   "bg": "sicak",
+   "bg": "k:#E2733A",
    "bas": 34.644,
    "son": 38.906,
    "ev": {},
@@ -712,11 +712,11 @@
   },
   {
    "id": "sonuc",
-   "bg": "gece",
+   "bg": "k:#6E9E62",
    "bas": 38.906,
    "son": 43.341,
    "ev": {},
-   "gecis": "daire"
+   "gecis": "kaydir"
   }
  ],
  "agiz": [
