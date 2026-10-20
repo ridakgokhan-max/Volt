@@ -21,7 +21,7 @@ type Yon = "alt" | "ust" | "sol" | "sag" | "pop";
 const Parca: React.FC<{ t: number; ad: string; x: number; y: number; w: number; rot?: number; a: number; yon?: Yon; d?: number; cikis?: number; ekstra?: React.CSSProperties }> = ({ t, ad, x, y, w, rot = 0, a, yon = "pop", d = 0.4, cikis, ekstra }) => {
   const tq = adim(t);
   if (tq < a) return null;
-  const k = geri(cl((tq - a) / d));
+  const k = a <= 0 ? 1 : geri(cl((tq - a) / d));
   let dx = 0, dy = 0, s = 1;
   if (yon === "alt") dy = (1 - k) * 1200;
   if (yon === "ust") dy = -(1 - k) * 1200;
@@ -57,7 +57,7 @@ const Serit: React.FC<{ t: number; a: number; text: string; y: number; rot?: num
       <div
         style={{
           transform: `rotate(${rot + jr}deg) scaleX(${Math.max(0, k)})`, background: bg, color, fontFamily, fontWeight: 900, fontSize: size,
-          lineHeight: 1.02, padding: "22px 44px 26px", textAlign: "center", maxWidth: 940, letterSpacing: -0.5,
+          lineHeight: 1.02, padding: "22px 44px 26px", textAlign: "center", maxWidth: 1010, whiteSpace: "nowrap", letterSpacing: -0.5,
           clipPath: "polygon(0 6%, 5% 0, 14% 5%, 26% 1%, 38% 6%, 50% 0, 63% 5%, 75% 1%, 87% 6%, 100% 2%, 98% 94%, 90% 100%, 78% 95%, 66% 100%, 54% 96%, 42% 100%, 30% 95%, 18% 100%, 7% 96%, 1% 100%)",
           filter: "drop-shadow(8px 10px 0 rgba(40,20,0,0.3))",
         }}
@@ -125,7 +125,7 @@ const Sahne1: React.FC<{ t: number }> = ({ t }) => (
   <AbsoluteFill>
     <Zemin renk="#E2733A" daire="#F09A5C" cy={1050} />
     <Parca t={t} ad="piramit" x={520} y={1080} w={1060} a={0} yon="alt" d={0.01} />
-    <Parca t={t} ad="kup2" x={600} y={700} w={380} rot={3} a={0.5} yon="pop" />
+    <Parca t={t} ad="kup2" x={600} y={700} w={380} rot={3} a={0} yon="pop" />
     <Parca t={t} ad="ari" x={-100 + 1300 * cl((t - 1.4) / 3.2)} y={620 + 90 * Math.sin(t * 5)} w={230} rot={-8} a={1.4} yon="pop" d={0.15} />
     <Serit t={t} a={0} sabit text="3000 YILLIK BAL" y={200} size={96} rot={-2.5} />
     <Serit t={t} a={0} sabit text="HÂLÂ YENEBİLİR Mİ?" y={360} size={70} rot={1.5} bg={INK} color={KREM} />
@@ -141,7 +141,7 @@ const Sahne2: React.FC<{ t: number }> = ({ t }) => {
   return (
     <AbsoluteFill>
       <Zemin renk="#DDA43C" daire="#EDC066" cy={1020} />
-      <Parca t={t} ad="mikroskop" x={880} y={1420} w={330} rot={8} a={5.6} yon="sag" />
+      <Parca t={t} ad="mikroskop" x={180} y={470} w={250} rot={-8} a={5.6} yon="sol" />
       <Parca t={t} ad="balkavanoz" x={540} y={500} w={330} a={5.15} yon="alt" />
       <Parca t={t} ad="mikrop" x={20 + mx} y={900} w={330} rot={-10} a={6.0} yon="sol" cikis={7.8} />
       <Parca t={t} ad="mikrop2" x={1060 - mx} y={1150} w={330} rot={12} a={6.1} yon="sag" cikis={7.8} />
@@ -160,10 +160,10 @@ const Sahne3: React.FC<{ t: number }> = ({ t }) => (
     <Parca t={t} ad="kavanoz2" x={500} y={560} w={540} rot={-3} a={10.15} yon="alt" />
     <Parca t={t} ad="kasik" x={870} y={860} w={330} rot={14} a={11.9} yon="sag" />
     <Parca t={t} ad="ari" x={1200 - 1400 * cl((t - 12.6) / 2.4)} y={500 + 70 * Math.sin(t * 6)} w={200} rot={10} a={12.6} yon="pop" d={0.15} />
-    <Serit t={t} a={10.1} text="BALIN ŞEKERLENDİ Mİ?" y={200} size={80} rot={-2} />
+    <Serit t={t} a={10.1} text="BALIN ŞEKERLENDİ Mİ?" y={210} size={66} rot={-2} />
     <Muhur t={t} a={11.0} text="ATMA!" x={300} y={1180} rot={-14} />
     <Serit t={t} a={12.2} text="ILIK SUDA ERİT" y={1460} size={78} rot={1.5} bg={INK} color={KREM} />
-    <Serit t={t} a={12.9} text="BOZULMADI, SADECE ŞEKERİ ÇÖKTÜ" y={1610} size={50} rot={-1.5} />
+    <Serit t={t} a={12.9} text="BOZULMADI, ŞEKERLENDİ" y={1610} size={60} rot={-1.5} />
   </AbsoluteFill>
 );
 
