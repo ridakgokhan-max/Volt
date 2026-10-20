@@ -36,8 +36,8 @@ const Giris: S = ({ t, ws, ses }) => {
       <Parca t={t} ad="uydu" x={780} y={230} w={480} rot={-8} />
       <Parca t={t} ad="telefon" x={420} y={600} w={290} rot={6} />
       <Serit t={t} a={0} text="20.000 KM" x={300} y={330} size={64} rot={-5} bg={INK} color={KREM} />
-      <Muhur t={t} a={ti - 0.1} text="İNTERNET YOK" x={560} y={1180} size={78} rot={-6} />
-      <Merakli x={880} y={1230} s={0.42} t={t} hareket={t > ti ? "sasir" : "isaret"} kostum="kulaklik" agiz={ses(t)} flip />
+      <Muhur t={t} a={ti - 0.1} text="İNTERNET YOK" x={560} y={1090} size={78} rot={-6} />
+      <Merakli x={900} y={1180} s={0.55} t={t} hareket={t > ti ? "sasir" : "isaret"} kostum="kulaklik" agiz={ses(t)} flip />
     </g>
   );
 };
@@ -55,7 +55,7 @@ const Uydular: S = ({ t, ws }) => {
         const y = 760 + Math.sin(aci) * 300;
         return <Parca key={i} t={t} ad="uydu" x={x} y={y - 80} w={230} rot={(i % 2 ? 10 : -10)} a={0.25 + i * 0.12} yon="pop" flip={i % 2 === 1} />;
       })}
-      <Serit t={t} a={ws("30'dan") - 0.1} text="30+ GPS UYDUSU" y={1230} size={70} rot={2} />
+      <Serit t={t} a={ws("30'dan") - 0.1} text="30+ GPS UYDUSU" y={1100} size={70} rot={2} />
     </g>
   );
 };
@@ -67,8 +67,8 @@ const Yayin: S = ({ t, ws }) => (
     <Halka x={540} y={400} t={t} buyuk={330} />
     <Parca t={t} ad="uydu" x={540} y={290} w={620} a={0.05} yon="ust" />
     <Serit t={t} a={ws("buradayım") - 0.15} text="BEN BURADAYIM" x={400} y={880} size={66} rot={-3} bg={INK} color={KREM} />
-    <Parca t={t} ad="saat" x={800} y={860} w={290} rot={8} a={ws("saat") - 0.15} yon="sag" />
-    <Serit t={t} a={ws("saat") + 0.2} text="SAAT TAM OLARAK ŞU" x={480} y={1230} size={60} rot={2} />
+    <Parca t={t} ad="saat" x={800} y={700} w={270} rot={8} a={ws("saat") - 0.15} yon="sag" />
+    <Serit t={t} a={ws("saat") + 0.2} text="SAAT TAM OLARAK ŞU" x={480} y={1100} size={60} rot={2} />
   </g>
 );
 
@@ -82,7 +82,7 @@ const Sure: S = ({ t, ws }) => {
       <Yol x1={800} y1={420} x2={360} y2={700} t={t} />
       <Parca t={t} ad="telefon" x={330} y={560} w={300} rot={-6} a={0.1} yon="sol" />
       <Parca t={t} ad="kronometre" x={760} y={700} w={300} rot={10} a={ws("sürede") - 0.15} yon="pop" />
-      <Serit t={t} a={tu - 0.1} text="SÜRE → UZAKLIK" y={1230} size={72} rot={-2} />
+      <Serit t={t} a={tu - 0.1} text="SÜRE → UZAKLIK" y={1100} size={72} rot={-2} />
     </g>
   );
 };
@@ -90,7 +90,7 @@ const Sure: S = ({ t, ws }) => {
 // 5 — 4 uydu birleşince birkaç metre
 const Dort: S = ({ t, ws }) => {
   const t4 = ws("4");
-  const yerler: [number, number, number][] = [[200, 200, -12], [880, 200, 10], [200, 960, 8], [880, 970, -8]];
+  const yerler: [number, number, number][] = [[200, 200, -12], [880, 200, 10], [200, 880, 8], [880, 890, -8]];
   return (
     <g>
       <KolajDefs />
@@ -99,7 +99,7 @@ const Dort: S = ({ t, ws }) => {
         <Parca key={i} t={t} ad="uydu" x={x} y={y} w={250} rot={r} a={t4 + i * 0.2} yon={i % 2 ? "sag" : "sol"} d={0.3} flip={i % 2 === 1} />
       ))}
       {adim(t) > ws("birleştirince") - 0.1 ? <Igne x={540} y={760} s={1.1} /> : null}
-      <Serit t={t} a={ws("birkaç") - 0.1} text="4 UYDU = BİRKAÇ METRE" y={1230} size={62} rot={2} bg={INK} color={KREM} />
+      <Serit t={t} a={ws("birkaç") - 0.1} text="4 UYDU = BİRKAÇ METRE" y={1110} size={62} rot={2} bg={INK} color={KREM} />
     </g>
   );
 };
@@ -109,7 +109,9 @@ const Soru: S = ({ t, ses }) => (
   <g>
     <KolajDefs />
     <Serit t={t} a={0.05} text="EN ŞAŞIRTICI KISIM?" y={360} size={72} rot={-3} />
-    <Muhur t={t} a={0.6} text="?" x={760} y={760} size={200} rot={10} />
+    <Parca t={t} ad="telefon" x={330} y={560} w={380} rot={-8} a={0.15} yon="sol" />
+    <Parca t={t} ad="uydu" x={720} y={300} w={360} rot={8} a={0.3} yon="sag" />
+    <Muhur t={t} a={0.6} text="?" x={770} y={800} size={200} rot={10} />
     <Merakli x={430} y={1180} s={0.75} t={t} hareket="sasir" kostum="kulaklik" agiz={ses(t)} />
   </g>
 );
@@ -120,12 +122,12 @@ const Saatler: S = ({ t, ws }) => {
   return (
     <g>
       <KolajDefs />
-      <Parca t={t} ad="saat" x={280} y={250} w={300} rot={-6} a={0.05} yon="sol" />
-      <Serit t={t} a={0.3} text="UZAYDA" x={280} y={640} size={52} rot={-3} bg={INK} color={KREM} />
-      <Parca t={t} ad="saat" x={800} y={250} w={300} rot={6} a={0.2} yon="sag" flip />
-      <Serit t={t} a={0.45} text="YERDE" x={800} y={640} size={52} rot={3} />
-      <Parca t={t} ad="einstein" x={540} y={720} w={340} rot={-3} a={te - 0.15} yon="alt" />
-      <Muhur t={t} a={ws("38") - 0.1} text="+38 µs / GÜN" x={540} y={1250} size={74} rot={-4} />
+      <Parca t={t} ad="saat" x={280} y={220} w={280} rot={-6} a={0.05} yon="sol" />
+      <Serit t={t} a={0.3} text="UZAYDA" x={280} y={590} size={52} rot={-3} bg={INK} color={KREM} />
+      <Parca t={t} ad="saat" x={800} y={220} w={280} rot={6} a={0.2} yon="sag" flip />
+      <Serit t={t} a={0.45} text="YERDE" x={800} y={590} size={52} rot={3} />
+      <Parca t={t} ad="einstein" x={540} y={640} w={290} rot={-3} a={te - 0.15} yon="alt" />
+      <Muhur t={t} a={ws("38") - 0.1} text="+38 µs / GÜN" x={540} y={1100} size={74} rot={-4} />
     </g>
   );
 };
@@ -154,7 +156,7 @@ const Sonuc: S = ({ t, ws }) => (
     <KolajDefs />
     <Parca t={t} ad="einstein" x={720} y={300} w={400} rot={4} a={0.05} yon="sag" />
     <Parca t={t} ad="telefon" x={330} y={420} w={320} rot={-8} a={0.2} yon="sol" />
-    <Serit t={t} a={ws("teşekkür") - 0.1} text="TEŞEKKÜRLER EINSTEIN" y={1180} size={62} rot={-2} bg={INK} color={KREM} />
+    <Serit t={t} a={ws("teşekkür") - 0.1} text="TEŞEKKÜRLER EINSTEIN" y={1060} size={62} rot={-2} bg={INK} color={KREM} />
   </g>
 );
 
