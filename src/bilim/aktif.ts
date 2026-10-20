@@ -24,7 +24,7 @@ import * as gokyuzu from "./konular/gokyuzu";
 import gokyuzuData from "./data/gokyuzu.json";
 import * as konserve from "./konular/konserve";
 import konserveData from "./data/konserve.json";
-import * as gps from "./konular/gps";
+import * as gps from "./konular/gpskolaj";
 import gpsData from "./data/gps.json";
 import * as cicek from "./konular/cicek";
 import cicekData from "./data/cicek-sulama.json";

@@ -70,56 +70,56 @@
  "sahneler": [
   {
    "id": "giris",
-   "bg": "gece",
+   "bg": "k:#2E5C9A",
    "ilk": 0
   },
   {
    "id": "uydular",
-   "bg": "gece",
+   "bg": "k:#E2733A",
    "ilk": "dünyanın",
-   "gecis": "zoom"
+   "gecis": "perde"
   },
   {
    "id": "yayin",
-   "bg": "devre",
+   "bg": "k:#DDA43C",
    "ilk": "=her",
    "gecis": "kaydir"
   },
   {
    "id": "sure",
-   "bg": "plan",
+   "bg": "k:#6E9E62",
    "ilk": "=telefon",
    "gecis": "perde"
   },
   {
    "id": "dort",
-   "bg": "plan",
+   "bg": "k:#2E5C9A",
    "ilk": "4",
    "gecis": "kaydir"
   },
   {
    "id": "soru",
-   "bg": "gece",
+   "bg": "k:#8C5BA8",
    "ilk": "peki",
-   "gecis": "zoom"
+   "gecis": "perde"
   },
   {
    "id": "saatler",
-   "bg": "tahta",
+   "bg": "k:#DDA43C",
    "ilk": "uydulardaki",
    "gecis": "kaydir"
   },
   {
    "id": "kayma",
-   "bg": "sicak",
+   "bg": "k:#E2733A",
    "ilk": "=bu",
    "gecis": "perde"
   },
   {
    "id": "sonuc",
-   "bg": "gece",
+   "bg": "k:#6E9E62",
    "ilk": "yani",
-   "gecis": "daire"
+   "gecis": "kaydir"
   }
  ],
  "vurgu": [

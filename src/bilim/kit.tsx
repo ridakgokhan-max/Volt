@@ -28,7 +28,33 @@ export const sp = (t: number, a: number, damping = 11) =>
 export const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 
 // ---------- arka planlar ----------
-export type BgKind = "parsomen" | "gece" | "plan" | "tahta" | "devre" | "sicak" | "yesil" | "gok";
+export type BgKind = "parsomen" | "gece" | "plan" | "tahta" | "devre" | "sicak" | "yesil" | "gok" | `k:${string}`;
+
+/** Kolaj zemini: düz renk + açık daire + nokta deseni + kâğıt dokusu ("k:#E2733A") */
+const acik = (hex: string, k: number) => {
+  const n = parseInt(hex.replace("#", ""), 16);
+  const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => Math.round(v + (255 - v) * k));
+  return `rgb(${c.join(",")})`;
+};
+const KolajZemin: React.FC<{ renk: string; t: number; seed: number }> = ({ renk, t, seed }) => {
+  const cy = [980, 900, 1060, 940, 1020][seed % 5];
+  const tane = Math.floor(t * 12) % 4;
+  return (
+    <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+      <defs>
+        <pattern id="knk" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="3.2" fill="rgba(0,0,0,0.07)" /></pattern>
+        <filter id={`klif${tane}`}>
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={3} seed={tane + 2} />
+          <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0 0.08  0 0 0 0.16 0" />
+        </filter>
+      </defs>
+      <rect width={W} height={H} fill={renk} />
+      <circle cx={540} cy={cy} r={440} fill={acik(renk, 0.22)} />
+      <circle cx={540} cy={cy} r={440} fill="url(#knk)" />
+      <rect width={W} height={H} filter={`url(#klif${tane})`} style={{ mixBlendMode: "multiply" }} />
+    </svg>
+  );
+};
 
 const Stars: React.FC<{ t: number; n?: number; seed?: number }> = ({ t, n = 70, seed = 1 }) => {
   const out = [];
@@ -61,6 +87,7 @@ const Dust: React.FC<{ t: number; color: string; n?: number }> = ({ t, color, n 
 };
 
 export const Bg: React.FC<{ kind: BgKind; t: number; seed?: number }> = ({ kind, t, seed = 3 }) => {
+  if (kind.startsWith("k:")) return <KolajZemin renk={kind.slice(2)} t={t} seed={seed} />;
   if (kind === "parsomen") {
     return (
       <>

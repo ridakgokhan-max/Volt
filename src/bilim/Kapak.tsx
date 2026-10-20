@@ -2,14 +2,17 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
-import { KAPAK, KAPAK_YAZI } from "./aktif";
-import { ACC, Bg, H, INK, W } from "./kit";
+import { data, KAPAK, KAPAK_YAZI } from "./aktif";
+import { ACC, Bg, BgKind, H, INK, W } from "./kit";
+
+const ilkBg = ((data as { sahneler?: { bg: string }[] }).sahneler?.[0]?.bg || "") as string;
+const kapakBg = (ilkBg.startsWith("k:") ? ilkBg : "gece") as BgKind;
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export const BilimKapak: React.FC = () => (
   <AbsoluteFill style={{ ["--font" as string]: fontFamily } as React.CSSProperties}>
-    <Bg kind="gece" t={2} seed={4} />
+    <Bg kind={kapakBg} t={2} seed={4} />
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>
       <KAPAK />
     </svg>

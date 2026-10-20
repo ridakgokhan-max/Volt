@@ -116,7 +116,7 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
       if (dt > 0 && dt < 0.35) shake += Math.sin(dt * 60) * 9 * (1 - dt / 0.35);
     }
   });
-  const ink = sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";
+  const ink = sc.bg.startsWith("k:") || sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";
   if (acilis) outer.transform = `scale(${1.14 - 0.14 * ez(f / 10)})`;
   return (
     <AbsoluteFill style={outer}>
