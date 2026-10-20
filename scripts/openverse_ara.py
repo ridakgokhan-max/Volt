@@ -1,17 +1,21 @@
 """Openverse'ten yalnızca CC0 / kamu malı (pdm) fotoğraf adaylarını indirir.
 Kullanım: python scripts/openverse_ara.py <klasör> "ad|arama terimi" ...
 Çıktı: <klasör>/<ad>_<n>.jpg ve <klasör>/adaylar.json (lisans, sahip, kaynak)."""
-import json, os, sys, urllib.parse, urllib.request
+import json, os, sys, time, urllib.parse, urllib.request
 kl = sys.argv[1]; os.makedirs(kl, exist_ok=True)
 UA = {"User-Agent": "BirDakikadaBilim/1.0 (github.com/ridakgokhan-max/Volt)"}
 kayit = []
 for arg in sys.argv[2:]:
     ad, q = arg.split("|", 1)
     url = "https://api.openverse.org/v1/images/?" + urllib.parse.urlencode({"q": q, "license": "cc0,pdm", "page_size": 12, "mature": "false"})
-    try:
-        veri = json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30))
-    except Exception as e:
-        print("arama hatası", ad, e); continue
+    veri = None
+    for dene in range(5):
+        try:
+            veri = json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30)); break
+        except Exception as e:
+            print("arama hatası", ad, e, "— bekleniyor"); time.sleep(15 * (dene + 1))
+    if veri is None: continue
+    time.sleep(4)
     n = 0
     for r in veri.get("results", []):
         if n >= 6: break
