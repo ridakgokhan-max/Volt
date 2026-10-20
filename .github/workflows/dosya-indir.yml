@@ -29,9 +29,10 @@ jobs:
           mkdir -p "public/bilim/$KONU"
           echo "$LISTE" | tr ';' '\n' | while IFS='|' read -r AD URL; do
             AD=$(echo "$AD" | tr -cd 'a-z0-9-'); [ -z "$AD" ] && continue
-            case "$URL" in https://export-download.canva.com/*|https://media.canva.com/*) ;; *) echo "izin verilmeyen adres: $AD"; continue;; esac
-            curl -sSfL -o /tmp/g.png "$URL"
-            ffmpeg -nostdin -y -loglevel error -i /tmp/g.png -q:v 2 "public/bilim/$KONU/$AD.jpg"
+            case "$URL" in https://export-download.canva.com/*|https://media.canva.com/*|https://storage.googleapis.com/comfy-cloud-assets/*) ;; *) echo "izin verilmeyen adres: $AD"; continue;; esac
+            curl -sSfL -o /tmp/g.bin "$URL"
+            case "$URL" in *.mp4*) cp /tmp/g.bin "public/bilim/$KONU/$AD.mp4";;
+              *) ffmpeg -nostdin -y -loglevel error -i /tmp/g.bin -q:v 2 "public/bilim/$KONU/$AD.jpg";; esac
             echo "indirildi: $AD"
           done
       - name: Kaydet
