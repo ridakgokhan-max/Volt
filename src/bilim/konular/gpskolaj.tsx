@@ -110,8 +110,8 @@ const Soru: S = ({ t, ses }) => (
     <KolajDefs />
     <Serit t={t} a={0.05} text="EN ŞAŞIRTICI KISIM?" y={360} size={72} rot={-3} />
     <Parca t={t} ad="telefon" x={330} y={560} w={380} rot={-8} a={0.15} yon="sol" />
-    <Parca t={t} ad="uydu" x={720} y={300} w={360} rot={8} a={0.3} yon="sag" />
-    <Muhur t={t} a={0.6} text="?" x={770} y={800} size={200} rot={10} />
+    <Parca t={t} ad="uydu" x={760} y={500} w={340} rot={8} a={0.3} yon="sag" />
+    <Muhur t={t} a={0.6} text="?" x={560} y={940} size={180} rot={10} />
     <Merakli x={430} y={1180} s={0.75} t={t} hareket="sasir" kostum="kulaklik" agiz={ses(t)} />
   </g>
 );
@@ -156,7 +156,7 @@ const Sonuc: S = ({ t, ws }) => (
     <KolajDefs />
     <Parca t={t} ad="einstein" x={720} y={300} w={400} rot={4} a={0.05} yon="sag" />
     <Parca t={t} ad="telefon" x={330} y={420} w={320} rot={-8} a={0.2} yon="sol" />
-    <Serit t={t} a={ws("teşekkür") - 0.1} text="TEŞEKKÜRLER EINSTEIN" y={1060} size={62} rot={-2} bg={INK} color={KREM} />
+    <Serit t={t} a={ws("teşekkür") - 0.1} text="TEŞEKKÜRLER EINSTEIN" y={890} size={62} rot={-2} bg={INK} color={KREM} />
   </g>
 );
 
@@ -165,10 +165,10 @@ export const SAHNE: Record<string, S> = { giris: Giris, uydular: Uydular, yayin:
 export const KAPAK: React.FC = () => (
   <g>
     <KolajDefs />
-    <Parca t={0} ad="dunya" x={540} y={1180} w={1150} />
-    <Parca t={0} ad="uydu" x={760} y={960} w={480} rot={-8} />
-    <Parca t={0} ad="telefon" x={330} y={1000} w={300} rot={6} />
-    <Merakli x={880} y={1760} s={0.7} t={0.3} hareket="sasir" kostum="kulaklik" />
+    <Parca t={0} ad="dunya" x={540} y={1330} w={1150} />
+    <Parca t={0} ad="uydu" x={780} y={1130} w={420} rot={-8} />
+    <Parca t={0} ad="telefon" x={270} y={1150} w={260} rot={6} />
+    <Merakli x={900} y={1820} s={0.6} t={0.3} hareket="sasir" kostum="kulaklik" />
   </g>
 );
 export const KAPAK_YAZI = { ust: "İnternet olmadan bile", buyuk: "TELEFONUN UZAYI DİNLİYOR", alt: "GPS'in Einstein sırrı" };
