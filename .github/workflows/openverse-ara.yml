@@ -1,0 +1,36 @@
+name: Telifsiz fotoğraf ara (Openverse CC0/PD)
+
+on:
+  workflow_dispatch:
+    inputs:
+      klasor:
+        description: "public/kolaj altındaki klasör"
+        required: true
+      liste:
+        description: "ad|arama terimi; ad|arama terimi; ..."
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  ara:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ara ve indir
+        env:
+          KL: ${{ github.event.inputs.klasor }}
+          LISTE: ${{ github.event.inputs.liste }}
+        run: |
+          case "$KL" in *[!a-z0-9-]*|"") echo "geçersiz klasör"; exit 1;; esac
+          IFS=';' read -ra ARR <<< "$LISTE"
+          ARGS=(); for a in "${ARR[@]}"; do a="$(echo "$a" | sed 's/^ *//;s/ *$//')"; [ -n "$a" ] && ARGS+=("$a"); done
+          python3 scripts/openverse_ara.py "aday/$KL" "${ARGS[@]}"
+      - name: Kaydet
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add aday/
+          git commit -qm "Openverse adayları [skip ci]" || true
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done
