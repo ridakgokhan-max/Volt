@@ -1,7 +1,7 @@
 {
- "konu": "otomatik-sulama",
+ "konu": "otomatik-sulama-cizim",
  "baslik": "",
- "audio": "bilim/otomatik-sulama/mix.m4a",
+ "audio": "bilim/otomatik-sulama-cizim/mix.m4a",
  "sure": 55.712,
  "kelimeler": [
   {
@@ -918,7 +918,7 @@
  "sahneler": [
   {
    "id": "giris",
-   "bg": "k:#B8865B",
+   "bg": "sicak",
    "bas": 0.0,
    "son": 5.012,
    "ev": {},
@@ -926,15 +926,15 @@
   },
   {
    "id": "soru",
-   "bg": "k:#5E8FB8",
+   "bg": "gece",
    "bas": 5.012,
    "son": 8.461,
    "ev": {},
-   "gecis": "perde"
+   "gecis": "zoom"
   },
   {
    "id": "adim",
-   "bg": "k:#B8865B",
+   "bg": "parsomen",
    "bas": 8.461,
    "son": 18.074,
    "ev": {},
@@ -942,15 +942,15 @@
   },
   {
    "id": "sir",
-   "bg": "k:#6E9E62",
+   "bg": "plan",
    "bas": 18.074,
    "son": 23.075,
    "ev": {},
-   "gecis": "perde"
+   "gecis": "daire"
   },
   {
    "id": "islak",
-   "bg": "k:#5E8FB8",
+   "bg": "yesil",
    "bas": 23.075,
    "son": 27.889,
    "ev": {},
@@ -958,7 +958,7 @@
   },
   {
    "id": "kuru",
-   "bg": "k:#DDA43C",
+   "bg": "sicak",
    "bas": 27.889,
    "son": 34.535,
    "ev": {},
@@ -966,27 +966,27 @@
   },
   {
    "id": "musluk",
-   "bg": "k:#C8402B",
+   "bg": "gece",
    "bas": 34.535,
    "son": 39.055,
    "ev": {},
-   "gecis": "kaydir"
+   "gecis": "zoom"
   },
   {
    "id": "ip",
-   "bg": "k:#6E9E62",
+   "bg": "yesil",
    "bas": 39.055,
    "son": 47.551,
    "ev": {},
-   "gecis": "perde"
+   "gecis": "kaydir"
   },
   {
    "id": "uyari",
-   "bg": "k:#B8865B",
+   "bg": "parsomen",
    "bas": 47.551,
    "son": 55.712,
    "ev": {},
-   "gecis": "kaydir"
+   "gecis": "daire"
   }
  ],
  "agiz": [
@@ -2678,18 +2678,18 @@
   {
    "tur": "begen",
    "bas": 39.218,
-   "kostum": "onluk"
+   "kostum": "baret"
   },
   {
    "tur": "yorum",
    "bas": 47.014,
    "yazi": "Sende kim suluyor?",
-   "kostum": "onluk"
+   "kostum": "baret"
   },
   {
    "tur": "takip",
    "bas": 52.457,
-   "kostum": "onluk"
+   "kostum": "baret"
   }
  ]
 }
