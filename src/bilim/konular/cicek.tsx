@@ -9,7 +9,7 @@ const font = { fontFamily: "var(--font)" };
 const SU = "#5fb8ff";
 
 /** Saksı + bitki; canli 0 = solgun, 1 = canlı */
-const Saksi: React.FC<{ x: number; y: number; s?: number; t: number; canli?: number; nem?: number }> = ({ x, y, s = 1, t, canli = 1, nem = 0 }) => {
+export const Saksi: React.FC<{ x: number; y: number; s?: number; t: number; canli?: number; nem?: number }> = ({ x, y, s = 1, t, canli = 1, nem = 0 }) => {
   const egik = lerp(55, 0, canli);
   const yesil = canli > 0.5 ? GREEN : "#9a8a4a";
   return (
@@ -27,7 +27,7 @@ const Saksi: React.FC<{ x: number; y: number; s?: number; t: number; canli?: num
 };
 
 /** Pet şişe (ters = kapak aşağıda) */
-const Sise: React.FC<{ x: number; y: number; s?: number; dolu?: number; ters?: number; delik?: boolean }> = ({ x, y, s = 1, dolu = 0, ters = 0, delik }) => (
+export const Sise: React.FC<{ x: number; y: number; s?: number; dolu?: number; ters?: number; delik?: boolean }> = ({ x, y, s = 1, dolu = 0, ters = 0, delik }) => (
   <g transform={`translate(${x} ${y}) rotate(${ters * 180}) scale(${s})`}>
     <path d="M -70 -60 L 70 -60 L 70 200 Q 70 230 40 230 L -40 230 Q -70 230 -70 200 Z" fill="#cfeaff" fillOpacity={0.55} stroke={INK} strokeWidth={6} />
     <path d="M -70 -60 Q -70 -120 -30 -150 L -30 -190 L 30 -190 L 30 -150 Q 70 -120 70 -60 Z" fill="#cfeaff" fillOpacity={0.55} stroke={INK} strokeWidth={6} />

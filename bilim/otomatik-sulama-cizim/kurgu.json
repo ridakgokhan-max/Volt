@@ -1,0 +1,136 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 1.0,
+ "kesimler": [
+  [
+   68.1,
+   72.2
+  ]
+ ],
+ "kelime_sil": [
+  38,
+  39,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131
+ ],
+ "kelime_ekle": [
+  {
+   "w": "5-6",
+   "start": 20.62,
+   "end": 21.4
+  }
+ ],
+ "seri": {
+  "no": 9,
+  "toplam": 30,
+  "kategori": "Kendin Yap"
+ },
+ "kanca": {
+  "yazi": "BU ŞİŞE NEDEN AKMIYOR?",
+  "alt": "Ta ki çiçeğin susayana kadar",
+  "sure": 2.0
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "kapatıyor"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "tırmanarak",
+   "yazi": "Sende kim suluyor?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "baret",
+ "vurgu": [
+  "ters",
+  "damla",
+  "susayana",
+  "nasıl",
+  "iğneyle",
+  "5-6",
+  "hava",
+  "tıkalı",
+  "kurudukça",
+  "kabarcıkları",
+  "anlamıyor",
+  "toprak",
+  "pamuklu",
+  "tırmanarak",
+  "günde",
+  "önce"
+ ],
+ "muzik": "neseli",
+ "muzik_parca": "joyinsound-whistle",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "sicak",
+   "ilk": 0
+  },
+  {
+   "id": "soru",
+   "bg": "gece",
+   "ilk": "peki",
+   "gecis": "zoom"
+  },
+  {
+   "id": "adim",
+   "bg": "parsomen",
+   "ilk": "önce",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sir",
+   "bg": "plan",
+   "ilk": "şimdi",
+   "gecis": "daire"
+  },
+  {
+   "id": "islak",
+   "bg": "yesil",
+   "ilk": "toprak",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "kuru",
+   "bg": "sicak",
+   "ilk": [
+    "toprak",
+    1
+   ],
+   "gecis": "perde"
+  },
+  {
+   "id": "musluk",
+   "bg": "gece",
+   "ilk": "yani",
+   "gecis": "zoom"
+  },
+  {
+   "id": "ip",
+   "bg": "yesil",
+   "ilk": "şişen",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "uyari",
+   "bg": "parsomen",
+   "ilk": "son",
+   "gecis": "daire"
+  }
+ ]
+}

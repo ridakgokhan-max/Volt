@@ -30,6 +30,8 @@ import * as pilsarj from "./konular/pilsarj";
 import pilsarjData from "./data/pil-sarj.json";
 import * as otosulama from "./konular/otosulama";
 import otosulamaData from "./data/otomatik-sulama.json";
+import * as otosulamacizim from "./konular/otosulamacizim";
+import otosulamacizimData from "./data/otomatik-sulama-cizim.json";
 import * as cicek from "./konular/cicek";
 import cicekData from "./data/cicek-sulama.json";
 import * as canvademo from "./konular/canvademo";
@@ -54,6 +56,7 @@ const KONULAR: Record<string, Konu> = {
   gps: { data: gpsData as any, ...gps } as Konu,
   "pil-sarj": { data: pilsarjData as any, ...pilsarj } as Konu,
   "otomatik-sulama": { data: otosulamaData as any, ...otosulama } as Konu,
+  "otomatik-sulama-cizim": { data: otosulamacizimData as any, ...otosulamacizim } as Konu,
   "cicek-sulama": { data: cicekData as any, ...cicek } as Konu,
   "canva-demo": { data: canvademoData as any, ...canvademo } as Konu,
   "cicek-3d": { data: cicek3dData as any, ...cicek3d } as Konu,
