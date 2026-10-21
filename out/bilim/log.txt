@@ -1,22 +1,44 @@
 metinle hizalandı: transkript 127 -> metin 130 kelime
-uyarı: vurgu kelimesi yok: %4'ünü
-uyarı: vurgu kelimesi yok: %20
-uyarı: vurgu kelimesi yok: %80
-uyarı: vurgu kelimesi yok: %80'de
 CTA: [{'tur': 'begen', 'bas': 26.643, 'kostum': 'kulaklik'}, {'tur': 'yorum', 'bas': 53.425, 'yazi': 'Seninki kaçta?', 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 66.771, 'kostum': 'kulaklik'}]
-Traceback (most recent call last):
-  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 345, in <module>
-    main(sys.argv[1])
-  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 306, in main
-    mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
-  File "/home/runner/work/Volt/Volt/bilim/pil-sarj/sesler.py", line 12, in cues
-    p(S, ara("%4'ü"), E("bip_iyi"), 0.4)
-         ^^^^^^^^^^^
-  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 306, in <lambda>
-    mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
-                                                                           ^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 218, in ara
-    raise KeyError(f"kelime bulunamadı: {txt}")
-KeyError: "kelime bulunamadı: %4'ü"
-durum: failure
-durum: cancelled
+müzik: teknoloji -> berrydeep-minimal-technology-612982.mp3
+pil-sarj: 80.6 sn kayıt -> 70.8 sn video, 130 kelime, 45 altyazı satırı, 8 sahne
+[90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
+Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 19.1 Mb/98.9 Mb
+Getting Headless Shell - 28.6 Mb/98.9 Mb
+Getting Headless Shell - 38.2 Mb/98.9 Mb
+Getting Headless Shell - 47.7 Mb/98.9 Mb
+Getting Headless Shell - 57.3 Mb/98.9 Mb
+Getting Headless Shell - 66.8 Mb/98.9 Mb
+Getting Headless Shell - 76.4 Mb/98.9 Mb
+Getting Headless Shell - 85.9 Mb/98.9 Mb
+Getting Headless Shell - 95.5 Mb/98.9 Mb
+Got Headless Shell
+Bundling 6%
+Bundling 21%
+Bundling 32%
+Bundling 43%
+Bundling 54%
+Bundling 65%
+Bundling 70%
+Bundling 75%
+Bundling 80%
+Bundling 85%
+Bundling 91%
+Bundling 98%
+Bundling 100%
+Getting composition
+⚡️ Cached bundle. Subsequent renders will be faster.
+[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[90mComposition          Bilim[39m
+[90mCodec                h264[39m
+[90mOutput               out/bilim/pil-sarj.mp4[39m
+[90mConcurrency          2x[39m
+[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/Nunito.mjs:141 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[34m+                    out/bilim/pil-sarj.mp4[39m [90m36.9 MB[39m
+durum: success
