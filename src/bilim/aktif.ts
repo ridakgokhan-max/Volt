@@ -26,6 +26,8 @@ import * as konserve from "./konular/konserve";
 import konserveData from "./data/konserve.json";
 import * as gps from "./konular/gpskolaj";
 import gpsData from "./data/gps.json";
+import * as pilsarj from "./konular/pilsarj";
+import pilsarjData from "./data/pil-sarj.json";
 import * as cicek from "./konular/cicek";
 import cicekData from "./data/cicek-sulama.json";
 import * as canvademo from "./konular/canvademo";
@@ -48,6 +50,7 @@ const KONULAR: Record<string, Konu> = {
   gokyuzu: { data: gokyuzuData as any, ...gokyuzu } as Konu,
   konserve: { data: konserveData as any, ...konserve } as Konu,
   gps: { data: gpsData as any, ...gps } as Konu,
+  "pil-sarj": { data: pilsarjData as any, ...pilsarj } as Konu,
   "cicek-sulama": { data: cicekData as any, ...cicek } as Konu,
   "canva-demo": { data: canvademoData as any, ...canvademo } as Konu,
   "cicek-3d": { data: cicek3dData as any, ...cicek3d } as Konu,

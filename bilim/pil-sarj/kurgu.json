@@ -1,0 +1,103 @@
+{
+ "baslik": "",
+ "temizle": false,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 1.0,
+ "kesimler": [],
+ "kelime_sil": [],
+ "seri": {
+  "no": 12,
+  "toplam": 30,
+  "kategori": "Teknoloji"
+ },
+ "kanca": {
+  "yazi": "HER GECE %100 ŞARJ MI EDİYORSUN?",
+  "alt": "Pilini farkında olmadan yoruyorsun",
+  "sure": 2.0
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "kalıcı"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "rahat",
+   "yazi": "Seninki kaçta?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "kulaklik",
+ "vurgu": [
+  "yüze",
+  "yoruyorsun",
+  "lityum",
+  "balon",
+  "kalıcı",
+  "beşte",
+  "dördünü",
+  "sıcaklık",
+  "yastık",
+  "sıfıra",
+  "yirmi",
+  "seksen",
+  "koruması",
+  "seksende"
+ ],
+ "muzik": "teknoloji",
+ "muzik_parca": "berrydeep-minimal-technology",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "k:#2E5C9A",
+   "ilk": 0
+  },
+  {
+   "id": "iyon",
+   "bg": "k:#E2733A",
+   "ilk": "çünkü",
+   "gecis": "perde"
+  },
+  {
+   "id": "balon",
+   "bg": "k:#DDA43C",
+   "ilk": "yüzde",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "tepkime",
+   "bg": "k:#8C5BA8",
+   "ilk": "=bu",
+   "gecis": "perde"
+  },
+  {
+   "id": "test",
+   "bg": "k:#6E9E62",
+   "ilk": "laboratuvar",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sicak",
+   "bg": "k:#E2733A",
+   "ilk": "işin",
+   "gecis": "perde"
+  },
+  {
+   "id": "sifir",
+   "bg": "k:#2E5C9A",
+   "ilk": "peki",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "ayar",
+   "bg": "k:#6E9E62",
+   "ilk": "=işin",
+   "gecis": "perde"
+  }
+ ]
+}
