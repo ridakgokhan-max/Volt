@@ -1,45 +1,43 @@
-metinle hizalandı: transkript 90 -> metin 87 kelime
-CTA: [{'tur': 'begen', 'bas': 24.489, 'kostum': 'kulaklik'}, {'tur': 'yorum', 'bas': 39.226, 'yazi': 'Biliyor muydun?', 'kostum': 'kulaklik'}]
-müzik: teknoloji -> the_mountain-ambient-technology-151187.mp3
-gps: 58.6 sn kayıt -> 43.3 sn video, 87 kelime, 29 altyazı satırı, 9 sahne
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m○                    out/bilim/gps.mp4[39m [90m34.7 MB[39m
-durum: success
+metinle hizalandı: transkript 106 -> metin 106 kelime
+demo: 50.8 sn kayıt -> 51.5 sn video, 106 kelime, 34 altyazı satırı, 10 sahne
+Bundling 100%
+
+[31mError: Module not found: Error: Can't resolve '../data/pil-kolaj-olcu.json' in '/home/runner/work/Volt/Volt/src/bilim/konular'[39m
+[31mresolve '../data/pil-kolaj-olcu.json' in '/home/runner/work/Volt/Volt/src/bilim/konular'[39m
+[31m  using description file: /home/runner/work/Volt/Volt/package.json (relative path: ./src/bilim/konular)[39m
+[31m    Field 'browser' doesn't contain a valid alias configuration[39m
+[31m    using description file: /home/runner/work/Volt/Volt/package.json (relative path: ./src/bilim/data/pil-kolaj-olcu.json)[39m
+[31m      no extension[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json doesn't exist[39m
+[31m      .ts[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.ts doesn't exist[39m
+[31m      .tsx[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.tsx doesn't exist[39m
+[31m      .web.js[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.web.js doesn't exist[39m
+[31m      .js[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.js doesn't exist[39m
+[31m      .jsx[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.jsx doesn't exist[39m
+[31m      .mjs[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.mjs doesn't exist[39m
+[31m      .cjs[39m
+[31m        Field 'browser' doesn't contain a valid alias configuration[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.cjs doesn't exist[39m
+[31m      as directory[39m
+[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json doesn't exist[39m
+[31m    at runWebpack (/home/runner/work/Volt/Volt/node_modules/@remotion/bundler/dist/bundle.js:236:23)[39m
+[31m    at async Object.internalBundle (/home/runner/work/Volt/Volt/node_modules/@remotion/bundler/dist/bundle.js:240:13)[39m
+[31m    at async bundleOnCli (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/setup-cache.js:153:21)[39m
+[31m    at async bundleOnCliOrTakeServeUrl (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/setup-cache.js:35:21)[39m
+[31m    at async renderVideoFlow (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/render-flows/render.js:180:53)[39m
+[31m    at async render (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/render.js:166:5)[39m
+[31m    at async cli (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/index.js:121:13)[39m
+durum: failure
