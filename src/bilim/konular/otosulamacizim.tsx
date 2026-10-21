@@ -235,7 +235,7 @@ const Uyari: S = ({ t, ws, ses }) => {
         <Txt x={0} y={50} text="TEST" size={70} color={INK} />
       </g>
       <TersSise x={780} y={700} s={0.8} t={t} dolu={0.85 * (1 - bos)} damla={1 - bos * 0.7} />
-      <g transform={`translate(780 1110) scale(${sp(t, tg, 8)})`}>
+      <g transform={`translate(300 920) scale(${sp(t, tg, 8)}) rotate(-4)`}>
         <rect x={-170} y={-50} width={340} height={96} rx={48} fill={RED} stroke={INK} strokeWidth={6} />
         <text x={0} y={16} textAnchor="middle" fontSize={44} fontWeight={900} fill="#fff" style={font}>1 GÜNDE BİTER</text>
       </g>
