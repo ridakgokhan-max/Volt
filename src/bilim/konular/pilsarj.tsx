@@ -133,7 +133,7 @@ const Tepkime: S = ({ t, ws }) => {
 
 // 5 — 1 yıl bekleme testi: dolu %80'e, %40'taki %96'ya
 const Test: S = ({ t, ws }) => {
-  const t1 = ws("beşte"), t2 = ws("dördünü");
+  const t1 = ws("beşte"), t2 = ws("%4'");
   const k1 = cl((adim(t) - (t1 - 0.8)) / 0.9);
   const k2 = cl((adim(t) - (t2 - 0.8)) / 0.9);
   return (
@@ -143,8 +143,8 @@ const Test: S = ({ t, ws }) => {
       <Serit t={t} a={0.3} text="DOLU" x={540} y={470} size={52} rot={-2} />
       <PilIkon x={540} y={600} s={1} dolu={lerp(1, 0.8, k1)} renk={SARI} yazi={`%${Math.round(lerp(100, 80, k1))}`} />
       <Muhur t={t} a={t1 + 0.2} text="-%20" x={860} y={560} size={70} rot={-10} />
-      <Serit t={t} a={ws("yüzde", 0) - 0.1} text="%40'TA" x={540} y={790} size={52} rot={2} />
-      <PilIkon x={540} y={920} s={1} dolu={lerp(1, 0.96, k2)} renk={YESIL} yazi={`%${Math.round(lerp(100, 96, k2))}`} o={adim(t) > ws("yüzde") - 0.1 ? 1 : 0} />
+      <Serit t={t} a={ws("%40") - 0.1} text="%40'TA" x={540} y={790} size={52} rot={2} />
+      <PilIkon x={540} y={920} s={1} dolu={lerp(1, 0.96, k2)} renk={YESIL} yazi={`%${Math.round(lerp(100, 96, k2))}`} o={adim(t) > ws("%40") - 0.1 ? 1 : 0} />
       <Muhur t={t} a={t2 + 0.2} text="-%4" x={860} y={880} size={70} rot={8} />
     </g>
   );
@@ -166,7 +166,7 @@ const Sicak: S = ({ t, ws }) => (
 
 // 7 — Sıfıra kadar bitirmek de yorar; en rahat aralık %20–80
 const Sifir: S = ({ t, ws }) => {
-  const ty = ws("yirmi");
+  const ty = ws("%20");
   const tq = adim(t);
   return (
     <g>
@@ -182,7 +182,7 @@ const Sifir: S = ({ t, ws }) => {
 const Ayar: S = ({ t, ws }) => {
   const ta = ws("ayarlar");
   const tk = ws("koruması");
-  const t80 = ws("seksende");
+  const t80 = ws("%80'");
   return (
     <g>
       <KolajDefs />

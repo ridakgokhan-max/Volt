@@ -40,14 +40,14 @@
   "balon",
   "kalıcı",
   "beşte",
-  "dördünü",
+  "%4'ünü",
   "sıcaklık",
   "yastık",
   "sıfıra",
-  "yirmi",
-  "seksen",
+  "%20",
+  "%80",
   "koruması",
-  "seksende"
+  "%80'de"
  ],
  "muzik": "teknoloji",
  "muzik_parca": "berrydeep-minimal-technology",
