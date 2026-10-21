@@ -133,7 +133,7 @@ const Tepkime: S = ({ t, ws }) => {
 
 // 5 — 1 yıl bekleme testi: dolu %80'e, %40'taki %96'ya
 const Test: S = ({ t, ws }) => {
-  const t1 = ws("beşte"), t2 = ws("%4'");
+  const t1 = ws("beşte"), t2 = ws("%4'ü");
   const k1 = cl((adim(t) - (t1 - 0.8)) / 0.9);
   const k2 = cl((adim(t) - (t2 - 0.8)) / 0.9);
   return (
@@ -182,7 +182,7 @@ const Sifir: S = ({ t, ws }) => {
 const Ayar: S = ({ t, ws }) => {
   const ta = ws("ayarlar");
   const tk = ws("koruması");
-  const t80 = ws("%80'");
+  const t80 = ws("%80'd");
   return (
     <g>
       <KolajDefs />
