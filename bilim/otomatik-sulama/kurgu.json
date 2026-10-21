@@ -1,0 +1,137 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 1.0,
+ "tema": "kendin-yap",
+ "kesimler": [
+  [
+   68.1,
+   72.2
+  ]
+ ],
+ "kelime_sil": [
+  38,
+  39,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131
+ ],
+ "kelime_ekle": [
+  {
+   "w": "5-6",
+   "start": 20.62,
+   "end": 21.4
+  }
+ ],
+ "seri": {
+  "no": 9,
+  "toplam": 30,
+  "kategori": "Kendin Yap"
+ },
+ "kanca": {
+  "yazi": "BU ŞİŞE NEDEN AKMIYOR?",
+  "alt": "Ta ki çiçeğin susayana kadar",
+  "sure": 2.0
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "kapatıyor"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "tırmanarak",
+   "yazi": "Sende kim suluyor?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "onluk",
+ "vurgu": [
+  "ters",
+  "damla",
+  "susayana",
+  "nasıl",
+  "iğneyle",
+  "5-6",
+  "hava",
+  "tıkalı",
+  "kurudukça",
+  "kabarcıkları",
+  "anlamıyor",
+  "toprak",
+  "pamuklu",
+  "tırmanarak",
+  "günde",
+  "önce"
+ ],
+ "muzik": "neseli",
+ "muzik_parca": "joyinsound-whistle",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "k:#B8865B",
+   "ilk": 0
+  },
+  {
+   "id": "soru",
+   "bg": "k:#5E8FB8",
+   "ilk": "peki",
+   "gecis": "perde"
+  },
+  {
+   "id": "adim",
+   "bg": "k:#B8865B",
+   "ilk": "önce",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "sir",
+   "bg": "k:#6E9E62",
+   "ilk": "şimdi",
+   "gecis": "perde"
+  },
+  {
+   "id": "islak",
+   "bg": "k:#5E8FB8",
+   "ilk": "toprak",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "kuru",
+   "bg": "k:#DDA43C",
+   "ilk": [
+    "toprak",
+    1
+   ],
+   "gecis": "perde"
+  },
+  {
+   "id": "musluk",
+   "bg": "k:#C8402B",
+   "ilk": "yani",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "ip",
+   "bg": "k:#6E9E62",
+   "ilk": "şişen",
+   "gecis": "perde"
+  },
+  {
+   "id": "uyari",
+   "bg": "k:#B8865B",
+   "ilk": "son",
+   "gecis": "kaydir"
+  }
+ ]
+}

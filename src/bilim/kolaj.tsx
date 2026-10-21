@@ -113,3 +113,24 @@ export const Halka: React.FC<{ x: number; y: number; t: number; renk?: string; b
     </g>
   );
 };
+
+/** Kendin Yap teması: yarı saydam kâğıt bant (x,y = merkez) */
+export const Bant: React.FC<{ x: number; y: number; w?: number; rot?: number }> = ({ x, y, w = 150, rot = -8 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot})`}>
+    <polygon points={`${-w / 2},-22 ${w / 2},-24 ${w / 2 - 6},-12 ${w / 2},0 ${w / 2 - 5},12 ${w / 2},24 ${-w / 2},22 ${-w / 2 + 6},10 ${-w / 2},0 ${-w / 2 + 5},-12`} fill="rgba(250,240,200,0.72)" stroke="rgba(120,90,40,0.18)" strokeWidth={2} />
+  </g>
+);
+
+/** Kendin Yap teması: numaralı adım rozeti */
+export const AdimNo: React.FC<{ t: number; a: number; n: number; x: number; y: number; renk?: string }> = ({ t, a, n, x, y, renk = KIRMIZI }) => {
+  const tq = adim(t);
+  if (tq < a) return null;
+  const k = geri(cl((tq - a) / 0.3));
+  return (
+    <g transform={`translate(${x} ${y}) scale(${Math.max(0, k)}) rotate(-6)`} filter="url(#kgolge)">
+      <circle r={62} fill={KREM} />
+      <circle r={50} fill={renk} />
+      <text y={22} textAnchor="middle" fontSize={64} fontWeight={900} fill={KREM} style={{ fontFamily: "var(--font)" }}>{n}</text>
+    </g>
+  );
+};
