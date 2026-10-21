@@ -63,7 +63,7 @@ const Giris: S = ({ t, ws, ses }) => {
       <KolajDefs />
       <Parca t={t} ad="sarj" x={760} y={720} w={440} rot={-18} />
       <Parca t={t} ad="telefon" x={420} y={360} w={680} rot={-8} />
-      <PilIkon x={330} y={1010} s={0.7} dolu={1} yazi="%100" />
+      <PilIkon x={290} y={1160} s={0.62} dolu={1} yazi="%100" />
       <Muhur t={t} a={ty - 0.1} text="PİLİ YORUYOR" x={540} y={1090} size={80} rot={-5} />
       <Merakli x={900} y={1180} s={0.5} t={t} hareket={t > ty ? "sasir" : "isaret"} kostum="kulaklik" agiz={ses(t)} flip />
     </g>
