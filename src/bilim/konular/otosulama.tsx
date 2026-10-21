@@ -221,7 +221,7 @@ const Uyari: S = ({ t, ws }) => {
       <SiseKesit x={300} y={240} s={0.85} t={t} seviye={lerp(0.85, 0.08, cl((adim(t) - (tg - 1)) / 1.4))} damla={1} />
       <Muhur t={t} a={tg - 0.1} text="1 GÜNDE BİTER" x={740} y={420} size={60} rot={8} />
       <Parca t={t} ad="bavul" x={780} y={560} w={330} rot={-4} a={0.2} yon="sag" />
-      <Muhur t={t} a={ws("önce") - 0.1} text="1 GÜN ÖNCE DENE" x={540} y={890} size={70} rot={-4} />
+      <Muhur t={t} a={ws("önce") - 0.1} text="1 GÜN ÖNCE DENE" x={540} y={730} size={70} rot={-4} />
     </g>
   );
 };
