@@ -41,3 +41,4 @@ Bundling 100%
 [31m    at async render (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/render.js:166:5)[39m
 [31m    at async cli (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/index.js:121:13)[39m
 durum: failure
+durum: cancelled
