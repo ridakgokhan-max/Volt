@@ -61,9 +61,9 @@ const Giris: S = ({ t, ws, ses }) => {
   return (
     <g>
       <KolajDefs />
-      <Parca t={t} ad="sarj" x={700} y={700} w={420} rot={-18} />
-      <Parca t={t} ad="telefon" x={430} y={330} w={420} rot={-6} />
-      <PilIkon x={790} y={300} s={0.62} dolu={1} yazi="%100" />
+      <Parca t={t} ad="sarj" x={760} y={720} w={440} rot={-18} />
+      <Parca t={t} ad="telefon" x={420} y={360} w={680} rot={-8} />
+      <PilIkon x={330} y={860} s={0.7} dolu={1} yazi="%100" />
       <Muhur t={t} a={ty - 0.1} text="PİLİ YORUYOR" x={540} y={1090} size={80} rot={-5} />
       <Merakli x={900} y={1180} s={0.5} t={t} hareket={t > ty ? "sasir" : "isaret"} kostum="kulaklik" agiz={ses(t)} flip />
     </g>
@@ -97,7 +97,7 @@ const Balon: S = ({ t, ws }) => {
       <KolajDefs />
       <PilIkon x={290} y={560} s={0.9} dolu={1} yazi="%100" />
       <g transform={`translate(780 640) scale(${sis}) translate(-780 -640)`}>
-        <Parca t={t} ad="balon" x={780} y={300} w={400} rot={6} a={tb - 0.9} yon="pop" />
+        <Parca t={t} ad="balon" x={780} y={300} w={400} rot={6} a={0.3} yon="pop" />
       </g>
       <Serit t={t} a={ws("gerilimde") - 0.1} text="EN YÜKSEK GERİLİM" y={1090} size={66} rot={2} bg={INK} color={KREM} />
     </g>
@@ -154,7 +154,7 @@ const Test: S = ({ t, ws }) => {
 const Sicak: S = ({ t, ws }) => (
   <g>
     <KolajDefs />
-    <Parca t={t} ad="termometre" x={230} y={230} w={220} rot={-8} a={ws("sıcaklık") - 0.15} yon="sol" />
+    <Parca t={t} ad="termometre" x={290} y={300} w={420} rot={-8} a={ws("sıcaklık") - 0.15} yon="sol" />
     <Muhur t={t} a={ws("ikiye") - 0.1} text="×2" x={360} y={760} size={120} rot={-8} />
     <Parca t={t} ad="oyun" x={760} y={300} w={420} rot={8} a={ws("oyun") - 0.15} yon="sag" />
     <Parca t={t} ad="yastik" x={740} y={640} w={440} rot={-4} a={ws("yastık") - 0.15} yon="alt" />
@@ -173,7 +173,7 @@ const Sifir: S = ({ t, ws }) => {
       <KolajDefs />
       {tq < ty - 0.1 ? <PilIkon x={540} y={560} s={1.2} dolu={0.04} yazi="%0" /> : <PilIkon x={540} y={560} s={1.2} dolu={0.8} yazi="%20–80" bolge />}
       <Muhur t={t} a={ws("yoruyor") - 0.1} text="O DA YORAR" x={540} y={330} size={84} rot={-6} />
-      <Serit t={t} a={ty - 0.1} text="EN RAHAT BÖLGE" y={1090} size={68} rot={2} bg={INK} color={KREM} />
+      <Serit t={t} a={ty - 0.1} text="EN RAHAT BÖLGE" y={830} size={68} rot={2} bg={INK} color={KREM} />
     </g>
   );
 };
@@ -186,11 +186,12 @@ const Ayar: S = ({ t, ws }) => {
   return (
     <g>
       <KolajDefs />
-      <Parca t={t} ad="telefon" x={300} y={260} w={420} rot={-6} a={0.05} yon="sol" />
-      <Serit t={t} a={ta - 0.1} text="AYARLAR" x={760} y={330} size={54} rot={-2} />
-      <Serit t={t} a={ta + 0.45} text="› PİL" x={760} y={450} size={54} rot={2} />
-      <Serit t={t} a={tk - 0.25} text="› PİL KORUMASI" x={720} y={570} size={54} rot={-2} bg={INK} color={KREM} />
-      <PilIkon x={540} y={850} s={0.95} dolu={0.8} yazi="%80" o={adim(t) > t80 - 0.15 ? 1 : 0} />
+      <Parca t={t} ad="telefon" x={540} y={230} w={680} rot={-5} a={0.05} yon="sol" />
+      <Serit t={t} a={ta - 0.1} text="AYARLAR" x={400} y={700} size={56} rot={-2} />
+      <Serit t={t} a={ta + 0.45} text="› PİL" x={540} y={810} size={56} rot={2} />
+      <Serit t={t} a={tk - 0.25} text="› PİL KORUMASI" x={620} y={920} size={56} rot={-2} bg={INK} color={KREM} />
+      <PilIkon x={800} y={300} s={0.6} dolu={0.8} yazi="%80" o={adim(t) > t80 - 0.15 ? 1 : 0} />
+      <Merakli x={150} y={1180} s={0.5} t={t} hareket={t > ta ? "aha" : "anlat"} kostum="kulaklik" />
       <Muhur t={t} a={t80 + 0.1} text="%80'DE DUR" x={540} y={1090} size={74} rot={-4} />
     </g>
   );
