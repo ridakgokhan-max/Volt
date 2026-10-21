@@ -1,44 +1,22 @@
-metinle hizalandı: transkript 106 -> metin 106 kelime
-demo: 50.8 sn kayıt -> 51.5 sn video, 106 kelime, 34 altyazı satırı, 10 sahne
-Bundling 100%
-
-[31mError: Module not found: Error: Can't resolve '../data/pil-kolaj-olcu.json' in '/home/runner/work/Volt/Volt/src/bilim/konular'[39m
-[31mresolve '../data/pil-kolaj-olcu.json' in '/home/runner/work/Volt/Volt/src/bilim/konular'[39m
-[31m  using description file: /home/runner/work/Volt/Volt/package.json (relative path: ./src/bilim/konular)[39m
-[31m    Field 'browser' doesn't contain a valid alias configuration[39m
-[31m    using description file: /home/runner/work/Volt/Volt/package.json (relative path: ./src/bilim/data/pil-kolaj-olcu.json)[39m
-[31m      no extension[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json doesn't exist[39m
-[31m      .ts[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.ts doesn't exist[39m
-[31m      .tsx[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.tsx doesn't exist[39m
-[31m      .web.js[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.web.js doesn't exist[39m
-[31m      .js[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.js doesn't exist[39m
-[31m      .jsx[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.jsx doesn't exist[39m
-[31m      .mjs[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.mjs doesn't exist[39m
-[31m      .cjs[39m
-[31m        Field 'browser' doesn't contain a valid alias configuration[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json.cjs doesn't exist[39m
-[31m      as directory[39m
-[31m        /home/runner/work/Volt/Volt/src/bilim/data/pil-kolaj-olcu.json doesn't exist[39m
-[31m    at runWebpack (/home/runner/work/Volt/Volt/node_modules/@remotion/bundler/dist/bundle.js:236:23)[39m
-[31m    at async Object.internalBundle (/home/runner/work/Volt/Volt/node_modules/@remotion/bundler/dist/bundle.js:240:13)[39m
-[31m    at async bundleOnCli (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/setup-cache.js:153:21)[39m
-[31m    at async bundleOnCliOrTakeServeUrl (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/setup-cache.js:35:21)[39m
-[31m    at async renderVideoFlow (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/render-flows/render.js:180:53)[39m
-[31m    at async render (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/render.js:166:5)[39m
-[31m    at async cli (/home/runner/work/Volt/Volt/node_modules/@remotion/cli/dist/index.js:121:13)[39m
+metinle hizalandı: transkript 127 -> metin 130 kelime
+uyarı: vurgu kelimesi yok: %4'ünü
+uyarı: vurgu kelimesi yok: %20
+uyarı: vurgu kelimesi yok: %80
+uyarı: vurgu kelimesi yok: %80'de
+CTA: [{'tur': 'begen', 'bas': 26.643, 'kostum': 'kulaklik'}, {'tur': 'yorum', 'bas': 53.425, 'yazi': 'Seninki kaçta?', 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 66.771, 'kostum': 'kulaklik'}]
+Traceback (most recent call last):
+  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 345, in <module>
+    main(sys.argv[1])
+  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 306, in main
+    mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
+  File "/home/runner/work/Volt/Volt/bilim/pil-sarj/sesler.py", line 12, in cues
+    p(S, ara("%4'ü"), E("bip_iyi"), 0.4)
+         ^^^^^^^^^^^
+  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 306, in <lambda>
+    mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
+                                                                           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Volt/Volt/scripts/bilim_kurgu.py", line 218, in ara
+    raise KeyError(f"kelime bulunamadı: {txt}")
+KeyError: "kelime bulunamadı: %4'ü"
 durum: failure
 durum: cancelled
