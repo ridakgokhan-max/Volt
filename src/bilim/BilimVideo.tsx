@@ -180,6 +180,22 @@ const Altyazi: React.FC = () => {
   if (t > lineEnd + 0.45 && t < next) return null;
   const inK = sp(t, K[a].s - 0.12, 18);
   const words = K.slice(a, b + 1);
+  // kart içi satır kırma: tırnak içi bölünmez, kısa bağlaç satır sonunda kalmaz, tek kelimelik dul satır olmaz
+  const KISA = new Set(["bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"]);
+  const uz = (ws2: typeof words) => ws2.reduce((n, k) => n + k.w.length + 1, 0);
+  let kir = -1;
+  if (uz(words) > 22 && words.length > 1) {
+    let best = 1e9;
+    for (let i = 1; i < words.length; i++) {
+      const sol = words.slice(0, i), sag = words.slice(i);
+      const acik = sol.reduce((n, k) => n + (k.w.match(/["“”]/g) || []).length, 0) % 2 === 1;
+      if (acik) continue;
+      let c = Math.max(uz(sol), uz(sag));
+      if (KISA.has(sol[sol.length - 1].w.toLocaleLowerCase("tr-TR").replace(/[.,!?]/g, ""))) c += 40;
+      if (sag.length === 1 || sol.length === 1) c += 12;
+      if (c < best) { best = c; kir = i; }
+    }
+  }
   // takip çağrısında Meraklı alttaki "Takip et" düğmesine yürür: altyazı onun üstüne binmesin diye yukarı kayar
   const takipK = ctaGorunur(t, (D.cta || []).filter((c) => c.tur === "takip"));
   return (
@@ -188,7 +204,7 @@ const Altyazi: React.FC = () => {
       alignContent: "flex-start", rowGap: 4, transform: `translateY(${(1 - inK) * 18 + 0 * takipK}px) scale(${0.94 + 0.06 * inK})`, opacity: 1,
       background: "rgba(18,22,38,0.8)", borderRadius: 34, padding: "14px 18px 18px",
     }}>
-      {words.map((k, j) => {
+      {words.map((k, j) => [j === kir ? <div key={`br${j}`} style={{ flexBasis: "100%", height: 0 }} /> : null, (() => {
         const gi = a + j;
         const active = t >= k.s && (gi === b ? t < k.e + 0.6 : t < K[gi + 1].s);
         const said = t >= k.s;
@@ -204,7 +220,7 @@ const Altyazi: React.FC = () => {
             textShadow: active ? "none" : "0 5px 12px rgba(0,0,0,0.6)", transform: `scale(${pop})`,
           }}>{k.w}</span>
         );
-      })}
+      })()])}
     </div>
   );
 };
@@ -259,7 +275,7 @@ const KancaYazi: React.FC = () => {
         })}
       </div>
       {D.kanca.alt ? (
-        <div style={{ marginTop: 22, opacity: ap(t, 0.15, 0.25), fontFamily, fontWeight: 900, fontSize: 52, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
+        <div style={{ marginTop: 22, opacity: 1, fontFamily, fontWeight: 900, fontSize: 52, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
           {D.kanca.alt}
         </div>
       ) : null}
@@ -375,9 +391,9 @@ export const BilimVideo: React.FC = () => (
     <Imza />
     <Ust />
     <Rozet />
-    <Altyazi />
     <Cta />
     <KancaYazi />
+    <Altyazi />
     <Audio src={staticFile(data.audio)} />
   </AbsoluteFill>
 );

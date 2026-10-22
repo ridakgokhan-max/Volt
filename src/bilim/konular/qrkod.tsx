@@ -74,9 +74,10 @@ const Suz: React.FC<{ t: number; children: React.ReactNode; a?: number; f?: numb
 
 /** Kinetik etiket: zıplayarak gelir, sürekli hafif sallanır, çıkarken küçülür */
 const KTag: React.FC<{ t: number; a: number; b?: number; text: string; y?: number; size?: number; bg?: string; color?: string; rot?: number }> = ({ t, a, b, text, y = 330, size = 52, bg = ACC, color = INK, rot = -2 }) => {
-  const k = sp(t, a, 9);
-  const cik = b === undefined ? 1 : 1 - ap(t, b, 0.15);
-  if (k < 0.01 || cik < 0.01) return null;
+  const g = sp(t, a, 12);
+  const k = 0.75 + 0.25 * g;
+  const cik = (b === undefined ? 1 : 1 - ap(t, b, 0.15)) * cl(g * 3);
+  if (g < 0.01 || cik < 0.01) return null;
   return <g opacity={cik}><Tag x={540 + Math.sin(t * 1.3) * 6} y={y + Math.sin(t * 1.7) * 5} text={text} size={size} k={k} bg={bg} color={color} rot={rot + Math.sin(t * 1.1) * 1.5} /></g>;
 };
 
@@ -316,7 +317,7 @@ const Giris: S = ({ t, d, ws }) => {
           <QR x={470} y={900} s={0.85} yirtik={yirt} rot={-5} t={t} nabiz={ok} />
           {/* yırtılacak çizgi: 0. karede görünür */}
           <g transform="translate(470 900) rotate(-5) scale(0.85)" opacity={1 - yirt}>
-            <line x1={300} y1={-210} x2={-210} y2={300} stroke={RED} strokeWidth={10} strokeDasharray="26 18" strokeDashoffset={-t * 120} />
+            <line x1={300} y1={-210} x2={-210} y2={300} stroke={RED} strokeWidth={16} strokeDasharray="34 20" strokeDashoffset={-t * 120} />
             <text x={250} y={-235} fontSize={70} style={font}>✂️</text>
           </g>
         </Suz>
@@ -337,7 +338,12 @@ const Giris: S = ({ t, d, ws }) => {
           <text x={0} y={34} textAnchor="middle" fontSize={92} fontWeight={900} fill="#fff" style={font}>OKUNDU ✓</text>
         </g>
       ) : null}
-      <KTag t={t} a={tn - 0.15} text="PEKİ NASIL?" size={96} y={560} rot={2} />
+      {t > tn - 0.2 ? (
+        <g transform={`translate(540 640) scale(${sp(t, tn - 0.2, 10)}) rotate(${-3 + Math.sin(t * 3) * 1.5})`}>
+          <rect x={-380} y={-95} width={760} height={190} rx={40} fill={ACC} stroke={INK} strokeWidth={10} />
+          <text x={0} y={42} textAnchor="middle" fontSize={124} fontWeight={900} fill={INK} style={font}>PEKİ NASIL?</text>
+        </g>
+      ) : null}
     </g>
   );
 };
@@ -397,7 +403,7 @@ const Go: S = ({ t, d, ws }) => {
   const tk = ws("kaysa"), tb = ws("birden"), tsil = ws("silinirse"), ttam = ws("tamamlanıyor");
   const ikinci = ap(t, tb - 0.6, 0.6);
   const sil = ap(t, tsil - 0.3, 0.5);
-  const dol = ap(t, tsil + 0.5, Math.max(0.6, ttam - tsil - 1.1));
+  const dol = ap(t, tsil + 0.4, Math.max(0.6, ttam - tsil - 1.4));
   const yedek = ap(t, tb - 0.1, 0.8);
   // taş kayması: "kaysa"da 3 taş 36 px kayar, sonra yaylanarak ızgaraya oturur
   const kayU = t - (tk - 0.1);
@@ -408,7 +414,7 @@ const Go: S = ({ t, d, ws }) => {
       <Kamera t={t} d={d} z0={1.0} z1={1.08} vurus={[tk, tb, tsil, ttam]}>
         <g transform={`translate(${lerp(0, -900, ez(ikinci))} 0)`}>
           {/* Go tahtası alttan dönerek girer, kaymada punch-in */}
-          <g transform={`translate(540 ${760 + (1 - easeOut(t / 0.8)) * 700}) rotate(${(1 - easeOut(t / 0.8)) * -25 + Math.sin(t * 1.4) * 4}) scale(${1 + 0.04 * Math.sin(t * 2.2) + 0.06 * ap(t, tk + 1.6, 1.5) + 0.18 * ap(t, tk - 0.3, 0.3) * (1 - ap(t, tk + 1.4, 0.4))}) translate(-540 -760)`}>
+          <g transform={`translate(${540 + (1 - easeOut(t / 0.8)) * 900} 760) rotate(${(1 - easeOut(t / 0.8)) * 25 + Math.sin(t * 1.4) * 4}) scale(${1 + 0.04 * Math.sin(t * 2.2) + 0.06 * ap(t, tk + 1.6, 1.5) + 0.18 * ap(t, tk - 0.3, 0.3) * (1 - ap(t, tk + 1.4, 0.4))}) translate(-540 -760)`}>
             <GoTahtasi x={540} y={760} s={1.05} t={t} konan={ap(t, 0.25, 2.2)} kay={kay} hayalet={ap(t, tk, 0.3)} />
           </g>
           <g transform="translate(900 0)">
@@ -431,8 +437,9 @@ const Go: S = ({ t, d, ws }) => {
                 <path d="M 0 0 L 150 -10 L 100 130 Z" fill="#fff" stroke={INK} strokeWidth={6} />
               </g>
             ) : null}
+            {dol > 0.95 ? <g transform={`translate(${lerp(1150, 900, easeOut(cl((t - (tsil + 0.4 + Math.max(0.6, ttam - tsil - 1.4))) / 0.4)))} 900)`}><Okut x={0} y={0} t={t} ok={1} s={0.75} /></g> : null}
             {dol > 0.95 ? (
-              <g transform={`translate(540 640) scale(${sp(t, tsil + 0.5 + Math.max(0.6, ttam - tsil - 1.1), 8)}) rotate(-6)`}>
+              <g transform={`translate(540 640) scale(${sp(t, tsil + 0.4 + Math.max(0.6, ttam - tsil - 1.4), 8)}) rotate(-6)`}>
                 <rect x={-220} y={-60} width={440} height={120} rx={26} fill={GREEN} stroke={INK} strokeWidth={8} />
                 <text x={0} y={26} textAnchor="middle" fontSize={68} fontWeight={900} fill="#fff" style={font}>OKUNDU ✓</text>
               </g>
@@ -493,7 +500,7 @@ const Gokdelen: S = ({ t, d, ws }) => {
   const tg = ws("gökdelene"), tsy = ws("sıyrılan"), tu = ws("üç"), tt = ws("ters"), te = ws("eğik"), ta = ws("anda");
   const yavas = ap(t, tg - 1.2, 1.2);
   const gokX = lerp(1100, 455, easeOut(cl((t - (tsy - 0.3)) / 1.4)));
-  const donus = ap(t, tu - 0.5, 0.6);
+  const donus = ap(t, tu - 0.9, 1.0);
   // QR açısı: "ters"te 180°'ye, "eğik"te 205°'ye yaylanarak oturur
   const yay = (u: number) => (u <= 0 ? 0 : 1 - Math.cos(u * 9) * Math.exp(-u * 5));
   const aci = 180 * yay(t - (tt - 0.1)) + 25 * yay(t - (te - 0.1));
@@ -502,17 +509,17 @@ const Gokdelen: S = ({ t, d, ws }) => {
   return (
     <g>
       <Pikseller t={t} n={18} />
-      <Kamera t={t} d={d} z0={1.0} z1={1.1} vurus={[tg, ta]}>
+      <Kamera t={t} d={tg + 0.6} z0={1.0} z1={1.35} x0={60} x1={-50} oy={1000} vurus={[tg, ta]}>
         <g opacity={1 - donus} transform={`translate(540 830) scale(${1 - donus * 0.4}) translate(-540 -790)`}>
-          <g transform={`translate(0 ${Math.sin(t * 22) * 2.5 * (1 - yavas)})`}>
+          <g transform={`translate(${Math.sin(t * 17) * 2 * (1 - yavas)} ${Math.sin(t * 22) * 4 * (1 - yavas)})`}>
             <TrenPenceresi t={t} yavas={yavas} vurgu={ap(t, tg - 0.1, 0.3)} gokX={gokX} />
           </g>
         </g>
         {/* match-cut: parlayan gökdelen küçülüp sol üst köşe karesine oturur */}
         {donus > 0.01 && donus < 0.99 ? (
-          <rect x={lerp(gokX + 20, 400 - 55, ez(donus))} y={lerp(600, 560 - 55, ez(donus))} width={lerp(130, 110, ez(donus))} height={lerp(560, 110, ez(donus))} fill={ACC} stroke={INK} strokeWidth={7} opacity={(1 - ap(t, tu - 0.05, 0.15)) * (1 - cl((donus - 0.6) / 0.3))} />
+          <rect x={lerp(gokX + 20, 400 - 55, ez(cl(donus / 0.7)))} y={lerp(600, 560 - 55, ez(cl(donus / 0.7)))} width={lerp(130, 110, ez(cl(donus / 0.7)))} height={lerp(560, 110, ez(cl(donus / 0.7)))} fill={RED} stroke={INK} strokeWidth={7} opacity={1 - cl((donus - 0.75) / 0.1)} />
         ) : null}
-        <g opacity={donus}>
+        <g opacity={cl((donus - 0.7) / 0.15)} transform={`translate(400 560) scale(${lerp(0.25, 1, ez(cl((donus - 0.7) / 0.3)))}) translate(-400 -560)`}>
           <g transform={`translate(540 700) rotate(${aci}) translate(-540 -700)`}>
             <QR x={540} y={700} s={0.78} t={t} vurgu={1} nabiz={1} />
           </g>
@@ -539,9 +546,9 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
     <g>
       <Pikseller t={t} renk={RED} o={0.1} />
       <g transform={`translate(${titre * Math.sin(t * 60) * 10} 0)`}>
-        <Kamera t={t} d={d} z0={1.0} z1={1.15} y0={0} y1={-40} x0={60} x1={-30} vurus={[tk, td, ts, tok]}>
+        <Kamera t={t} d={Math.min(d, 3.2)} z0={1.0} z1={1.25} y0={0} y1={-60} x0={80} x1={-20} vurus={[tk, td, ts, tok]}>
           <g transform={`translate(${telX} 720) scale(${1 + ez(gir) * 5}) translate(${-telX} -720)`}>
-            <Glow cx={380} cy={420} r={320} id="sl" color="#fff3b0" o={(0.35 + 0.08 * Math.sin(t * 7)) * (Math.sin(t * 23) > 0.85 ? 0.3 : 1)} />
+            <Glow cx={380} cy={420} r={320} id="sl" color="#fff3b0" o={(0.35 + 0.08 * Math.sin(t * 7)) * (t < 3 && (Math.sin(t * 9) > 0.75 || Math.sin(t * 23) > 0.9) ? 0.15 : 1)} />
             <Parkmetre x={380} y={780} t={t} sahte={yapis} />
             <El x={lerp(820, 470, easeOut(cl((t - (td + 0.3)) / 1.2)))} y={620} o={ap(t, td, 0.3) * (1 - ap(t, ts + 0.4, 0.4))} />
             <circle cx={380} cy={700} r={130 + ((t * 1.5) % 1) * 90} fill="none" stroke={RED} strokeWidth={8} opacity={ap(t, ts + 0.3, 0.3) * (1 - ((t * 1.5) % 1))} />
@@ -553,9 +560,9 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
       </g>
       {/* telefonun içine girince: sahte ödeme sayfası tam ekran */}
       {/* "karanlık" kelimesinde ekran kararır */}
-      <rect x={0} y={0} width={1080} height={1920} fill="#000" opacity={0.4 * Math.max(0, 1 - Math.abs(t - tk - 0.2) * 2.2)} />
+      <rect x={0} y={0} width={1080} height={1920} fill="#000" opacity={0.75 * Math.min(1, Math.max(0, 1.4 - Math.abs(t - tk - 0.3) * 2.5))} />
       {gir > 0.55 ? (
-        <g opacity={ap(t, tok + 0.6, 0.2)} transform={`translate(540 740) scale(${0.5 + 0.5 * sp(t, tok + 0.6, 10)}) translate(-540 -740)`}>
+        <g opacity={ap(t, tok + 0.6, 0.2)} transform={`translate(540 740) scale(${(0.5 + 0.5 * sp(t, tok + 0.6, 10)) * (1 + 0.14 * ap(t, tok + 0.9, 1.6))}) translate(${-540 + Math.sin(t * 40) * 5 * Math.max(0, 1 - Math.abs(t - tok - 1.1) * 6)} -700)`}>
           <rect x={0} y={0} width={1080} height={1920} fill="#14101a" opacity={0.9} />
           <rect x={130} y={330} width={820} height={820} rx={50} fill="#fff" stroke={RED} strokeWidth={12} />
           <rect x={130} y={330} width={820} height={130} rx={50} fill={RED} />
@@ -583,19 +590,19 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
 const Cozum: S = ({ t, d, ws }) => {
   const tb = ws("adrese"), ta = ws("açma", 1);
   return (
-    <g>
+    <g opacity={1 - ap(t, d - 0.35, 0.3)}>
       <Pikseller t={t} renk="#2f7a4f" o={0.12} />
       <Kamera t={t} d={d} z0={1.0} z1={1.12} vurus={[tb, ta]}>
-        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(540 ${700 + (1 - easeOut(t / 0.9)) * 900}) scale(${(1 + 0.15 * cl(t / Math.max(tb, 0.5))) * (1 + 1.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.9)) * 30})`}>
+        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(540 ${700 + (1 - easeOut(t / 0.9)) * 900}) scale(${(1 + 0.3 * easeOut(cl(t / Math.max(tb, 0.5)))) * (1 + 0.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.9)) * 30})`}>
           <Telefon x={0} y={0} s={2.5} t={t} ekran="#1d2430" />
           <g opacity={1 - ap(t, tb - 0.4, 0.3)}>
             <QR x={0} y={-40} s={0.34} t={t} />
-            <Isin x={0} y={-40} w={200} h={190} t={t * 1.6} o={ap(t, 0.5, 0.3)} />
+            <Isin x={0} y={-40} w={200} h={190} t={t * 3} o={ap(t, 0.3, 0.3)} />
           </g>
         </g>
         <Adres x={540} y={560} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi t={t} />
-        <Adres x={540} y={770} k={sp(t, tb + 0.6)} text="0dem3-park.xyz ✗" iyi={false} t={t} />
-        <line x1={330} x2={lerp(330, 860, ap(t, ta - 0.25, 0.25))} y1={770} y2={770} stroke={RED} strokeWidth={8} opacity={0.75} />
+        <Adres x={540} y={770} k={sp(t, tb + 0.6)} text="odeme-otopark.xyz ✗" iyi={false} t={t} />
+        <line x1={330} x2={lerp(330, 690, ap(t, ta - 0.25, 0.25))} y1={770} y2={770} stroke={RED} strokeWidth={8} opacity={0.75} />
         <g transform={`translate(930 690) scale(${sp(t, ta - 0.2, 9)})`}><circle r={58} fill={RED} stroke={INK} strokeWidth={6} /><Cross cx={0} cy={0} r={34} k={1} sw={12} /></g>
         <g transform={`translate(930 480) scale(${sp(t, tb + 0.1, 9) * (1 + 0.08 * Math.sin(t * 6))})`}><circle r={52} fill={GREEN} stroke={INK} strokeWidth={6} /><path d="M -22 0 L -6 18 L 24 -18" stroke="#fff" strokeWidth={11} fill="none" strokeLinecap="round" /></g>
       </Kamera>

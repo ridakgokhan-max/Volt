@@ -105,7 +105,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
     flip = dur.x < px;
     hareket = dt < 0.9 ? "yuru" : "isaret";
     if (dt >= 0.75) {
-      const el = { x: x + (flip ? -70 : 70), y: y - 150 };
+      const el = a.tur === "takip" ? { x: x + (flip ? -70 : 70), y: y - 150 } : { x: hd.x + 34, y: hd.y - 300 };
       const git = ez((dt - 0.75) / 0.35);
       const dokun = dt > 1.1 && dt < 1.4 ? Math.sin(((dt - 1.1) / 0.3) * Math.PI) : 0;
       parmak = { x: lerp(el.x, hd.x + 34, git), y: lerp(el.y, hd.y + 50, git), b: dokun };
