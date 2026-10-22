@@ -37,10 +37,10 @@ const Parmak: React.FC<{ x: number; y: number; bas: number }> = ({ x, y, bas }) 
 );
 
 /** Kafa üstü konuşma balonu */
-const Balon: React.FC<{ x: number; y: number; k: number; yazi: string; renk?: string }> = ({ x, y, k, yazi, renk = "#fff" }) => {
+const Balon: React.FC<{ x: number; y: number; k: number; o?: number; yazi: string; renk?: string }> = ({ x, y, k, o = 1, yazi, renk = "#fff" }) => {
   const w = yazi.length * 30 + 70;
-  return k <= 0.01 ? null : (
-    <g transform={`translate(${x} ${y}) scale(${k})`} opacity={cl(k * 1.5)}>
+  return k <= 0.01 || o <= 0.01 ? null : (
+    <g transform={`translate(${x} ${y}) scale(${k})`} opacity={cl(k * 1.5) * o}>
       <path d={`M ${-w / 2} -70 L ${w / 2} -70 Q ${w / 2 + 26} -70 ${w / 2 + 26} -44 L ${w / 2 + 26} 4 Q ${w / 2 + 26} 30 ${w / 2} 30 L 22 30 L 0 58 L -10 30 L ${-w / 2} 30 Q ${-w / 2 - 26} 30 ${-w / 2 - 26} 4 L ${-w / 2 - 26} -44 Q ${-w / 2 - 26} -70 ${-w / 2} -70 Z`}
         fill={renk} stroke={INK} strokeWidth={7} />
       <text x={0} y={-6} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={{ fontFamily: "var(--font)" }}>{yazi}</text>
@@ -88,7 +88,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   let hareket: "dur" | "yuru" | "isaret" | "salla" | "aha" = "salla";
   let flip = false;
   let parmak: { x: number; y: number; b: number } | null = null;
-  let balon: { k: number; yazi: string } | null = null;
+  let balon: { k: number; o: number; yazi: string } | null = null;
   let halka: { x: number; y: number; t: number } | null = null;
   let px = baslangic.x;
   let py = baslangic.y;
@@ -108,10 +108,10 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
       const el = { x: x + (flip ? -70 : 70), y: y - 150 };
       const git = ez((dt - 0.75) / 0.35);
       const dokun = dt > 1.1 && dt < 1.4 ? Math.sin(((dt - 1.1) / 0.3) * Math.PI) : 0;
-      parmak = { x: lerp(el.x, hd.x + 6, git), y: lerp(el.y, hd.y + 50, git), b: dokun };
+      parmak = { x: lerp(el.x, hd.x + 34, git), y: lerp(el.y, hd.y + 50, git), b: dokun };
       if (dt > 1.25) halka = { x: hd.x, y: hd.y, t: dt - 1.25 };
       if (dt > 1.9) parmak = null;
-      balon = { k: sp(t, a.bas + 0.95, 9) * (1 - ap(t, a.bas + 2.4, 0.25)), yazi: yazi || a.yazi || BALON[a.tur] };
+      balon = { k: sp(t, a.bas + 0.95, 9), o: 1 - ap(t, a.bas + 2.4, 0.25), yazi: yazi || a.yazi || BALON[a.tur] };
     }
     px = dur.x;
     py = dur.y;
@@ -119,7 +119,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   return (
     <g>
       <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum={(adimlar[0]?.kostum || "baret") as any} ink="#fff" />
-      {balon ? <Balon x={x > 540 ? Math.max(balon.yazi.length * 15 + 80, x - 150 - balon.yazi.length * 15) : Math.min(1000 - balon.yazi.length * 15 - 60, x + 150 + balon.yazi.length * 15)} y={y - 190} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
+      {balon ? <Balon x={x > 540 ? Math.max(balon.yazi.length * 15 + 80, x - 150 - balon.yazi.length * 15) : Math.min(1000 - balon.yazi.length * 15 - 60, x + 150 + balon.yazi.length * 15)} y={y - 190} k={balon.k} o={balon.o} yazi={balon.yazi} renk={ACC} /> : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}
     </g>

@@ -177,29 +177,29 @@ const Altyazi: React.FC = () => {
   const [a, b] = SAT[li];
   const lineEnd = K[b].e;
   const next = SAT[li + 1] ? K[SAT[li + 1][0]].s - 0.12 : 1e9;
-  if (t > lineEnd + 0.9 && t < next) return null;
-  const inK = sp(t, K[a].s - 0.12, 14);
+  if (t > lineEnd + 0.45 && t < next) return null;
+  const inK = sp(t, K[a].s - 0.12, 18);
   const words = K.slice(a, b + 1);
   // takip çağrısında Meraklı alttaki "Takip et" düğmesine yürür: altyazı onun üstüne binmesin diye yukarı kayar
   const takipK = ctaGorunur(t, (D.cta || []).filter((c) => c.tur === "takip"));
   return (
     <div style={{
       position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexWrap: "wrap", justifyContent: "center",
-      alignContent: "flex-start", rowGap: 4, transform: `translateY(${(1 - inK) * 40 + 0 * takipK}px)`, opacity: cl(inK * 1.4),
-      background: "rgba(18,22,38,0.62)", borderRadius: 34, padding: "14px 18px 18px",
+      alignContent: "flex-start", rowGap: 4, transform: `translateY(${(1 - inK) * 18 + 0 * takipK}px) scale(${0.94 + 0.06 * inK})`, opacity: 1,
+      background: "rgba(18,22,38,0.8)", borderRadius: 34, padding: "14px 18px 18px",
     }}>
       {words.map((k, j) => {
         const gi = a + j;
         const active = t >= k.s && (gi === b ? t < k.e + 0.6 : t < K[gi + 1].s);
         const said = t >= k.s;
-        const big = k.vurgu ? 0.32 : 0.12;
-        const pop = active ? 1 + big * (1 - ez((t - k.s) / (k.vurgu ? 0.35 : 0.18))) + (k.vurgu ? 0.08 : 0) : 1;
+        const big = k.vurgu ? 0.16 : 0.06;
+        const pop = active ? 1 + big * (1 - ez((t - k.s) / (k.vurgu ? 0.35 : 0.18))) + (k.vurgu ? 0.04 : 0) : 1;
         const col = active ? INK : k.vurgu && said ? ACC : "#ffffff";
         return (
           <span key={gi} style={{
-            display: "inline-block", margin: "0 1px", padding: "2px 9px", borderRadius: 18,
+            display: "inline-block", margin: "0 5px", padding: "2px 10px", borderRadius: 18,
             background: active ? ACC : "transparent", boxShadow: active ? "0 6px 0 rgba(0,0,0,0.35)" : "none",
-            fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.82,
+            fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.9,
             WebkitTextStroke: active ? "0px" : "3px #1a1410", paintOrder: "stroke fill",
             textShadow: active ? "none" : "0 5px 12px rgba(0,0,0,0.6)", transform: `scale(${pop})`,
           }}>{k.w}</span>

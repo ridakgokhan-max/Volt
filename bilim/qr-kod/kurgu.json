@@ -22,6 +22,10 @@
    66.95
   ],
   [
+   73.4,
+   73.72
+  ],
+  [
    76.75,
    77.85
   ],
@@ -44,7 +48,7 @@
  "cta": [
   {
    "tur": "yorum",
-   "kelime": "tamamlanıyor",
+   "kelime": "adrese",
    "yazi": "Adrese bakıyor musun? 👇"
   },
   {
@@ -109,7 +113,7 @@
    "id": "karanlik",
    "bg": "devre",
    "ilk": "ama",
-   "gecis": "glitch"
+   "gecis": "zoom"
   },
   {
    "id": "cozum",
@@ -117,5 +121,20 @@
    "ilk": "=o",
    "gecis": "savur"
   }
- ]
+ ],
+ "aralar": [
+  [
+   27.66,
+   0.3
+  ],
+  [
+   66.2,
+   0.3
+  ],
+  [
+   76.6,
+   0.4
+  ]
+ ],
+ "muzik_ses": 0.28
 }

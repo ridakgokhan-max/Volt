@@ -23,6 +23,7 @@ SR = B.SR
 PAD = 0.05
 GAP = {".": 0.30, "?": 0.30, "!": 0.30, ",": 0.17, ":": 0.2, "…": 0.2}
 GAP_DEF = 0.12
+KISA_KELIME = {"bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"}
 
 
 def decode(path):
@@ -129,6 +130,9 @@ def main(konu):
         for w in words:
             if w["start"] < t_end + 0.05:
                 last = w
+        for zt, zg in K.get("aralar", []):  # kurgu.json ile elle zorlanan cümle arası (ham saniye)
+            if abs(zt - t_end) < 0.4:
+                return float(zg)
         if last is None:
             return GAP_DEF
         return GAP.get(last["w"].strip()[-1:], GAP_DEF)
@@ -196,7 +200,10 @@ def main(konu):
         for i in range(a, b + 1):
             acc += len(kel[i]["w"]) + 1
             left_words = b - i
-            if len(sat) < 10 ** 6 and acc >= target * 0.92 and left_words >= 2 and (b - st) > 1:
+            kalan_ok = left_words >= 2 or (left_words == 1 and len(kel[b]["w"]) >= 9)
+            tirnak_acik = sum(z["w"].count('"') + z["w"].count('“') + z["w"].count('”') for z in kel[st:i + 1]) % 2 == 1
+            kisa_son = kel[i]["w"].lower().strip(",") in KISA_KELIME
+            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son:
                 sat.append([st, i])
                 st, acc = i + 1, 0
         if st <= b:

@@ -1,4 +1,4 @@
-Bir QR kodun neredeyse üçte biri yırtılsa bile telefonun onu okur 📱 Peki nasıl?
+Bir QR kodun neredeyse üçte biri yırtılsa bile telefonun onu yine okuyabilir 📱 Peki nasıl?
 
 🇯🇵 QR kodu 1994'te Japonya'da Denso Wave şirketinde mühendis Masahiro Hara geliştirdi; amaç araba fabrikasında parçaları hızlı takip etmekti.
 ⚫⚪ Kare kare görünümün ilhamı Go oyunu tahtası. Dayanıklılığın sırrı ise kodun içine eklenen "yedek bilgi" (hata düzeltme). Bir kısmı silinse bile telefon eksiği bu yedek bilgiden hesaplıyor. En yüksek koruma seviyesinde kodun yaklaşık %30'u hasar görse bile okunabiliyor.
