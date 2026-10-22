@@ -23,7 +23,7 @@ SAHNELER (başlangıç sn):
 
 SES KESİMLERİ (ham kayıt sn): [[0.0, 1.0], [27.75, 28.4], [61.4, 63.5], [66.3, 66.95], [76.75, 77.85], [79.98, 80.55]]
 
-CTA: [{'tur': 'yorum', 'kelime': 'tamamlanıyor', 'yazi': 'Adrese bakıyor musun? 👇'}, {'tur': 'begen', 'kelime': 'tanıyor'}, {'tur': 'takip', 'son': True, 'ofset': -2.2}]
+CTA: [{'tur': 'yorum', 'kelime': 'tamamlanıyor', 'yazi': 'Adrese bakıyor musun? 👇'}, {'tur': 'begen', 'kelime': 'bulmuş'}, {'tur': 'takip', 'son': True, 'ofset': -2.2}]
 
 AÇIKLAMA:
 Bir QR kodun neredeyse üçte biri yırtılsa bile telefonun onu okur 📱 Peki nasıl?
