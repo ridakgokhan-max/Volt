@@ -1,0 +1,12 @@
+SES KURGUSU KANITI
+Ham kayıt analizi (her konuşma bloğu: süre, hece, hece/sn). <3.5 = fazladan konuşma şüphesi.
+Bulunan ve KESİLEN: 61.84-63.50 sn — 'Ama bu sağ-' sonrası yarım kalan 'sağ' + 1.4 sn duraklama; 'sağlamlığın' baştan okunmuş (4 hece tepesi: A-ma-bu-sağ).
+Diğer kesimler sadece sessizlik: 0-1.0, 27.75-28.40, 66.30-66.95, 76.75-77.85, 79.98-80.55
+
+Son miks (videodaki ses) sessizlikleri >=0.45 sn:
+  64.7795-65.6427
+
+Ses yüksekliği (EBU R128):
+[Parsed_ebur128_0 @ 0x55dc6ddcb6c0] t: 65.6       TARGET:-23 LUFS    M: -50.9 S: -16.4     I: -14.1 LUFS       LRA:   1.9 LU
+    I:         -14.1 LUFS
+    LRA:         1.9 LU
