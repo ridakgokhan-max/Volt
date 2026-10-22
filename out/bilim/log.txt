@@ -1,10 +1,10 @@
 metinle hizalandı: transkript 137 -> metin 135 kelime
-CTA: [{'tur': 'begen', 'bas': 28.818, 'kostum': 'kulaklik'}, {'tur': 'yorum', 'bas': 45.965, 'yazi': 'Sen nerede okuttun?', 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 62.39, 'kostum': 'kulaklik'}]
+CTA: [{'tur': 'yorum', 'bas': 28.818, 'yazi': 'Adrese bakıyor musun? 👇', 'kostum': 'kulaklik'}, {'tur': 'begen', 'bas': 45.965, 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 61.82, 'kostum': 'kulaklik'}]
 müzik: teknoloji -> paulyudin-minimal-164833.mp3
-qr-kod: 86.3 sn kayıt -> 65.8 sn video, 135 kelime, 43 altyazı satırı, 7 sahne
+qr-kod: 86.3 sn kayıt -> 64.9 sn video, 135 kelime, 43 altyazı satırı, 7 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -36,9 +36,9 @@ Getting composition
 [90mCodec                h264[39m
 [90mOutput               out/bilim/qr-kod.mp4[39m
 [90mConcurrency          2x[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/qr-kod.mp4[39m [90m40 MB[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[34m○                    out/bilim/qr-kod.mp4[39m [90m36.9 MB[39m
 durum: success
