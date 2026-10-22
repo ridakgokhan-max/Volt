@@ -36,21 +36,33 @@ const Kamera: React.FC<{ t: number; d: number; children: React.ReactNode; z0?: n
     const u = t - v;
     if (u > 0 && u < 0.6) z *= 1 + 0.06 * Math.sin((u / 0.6) * Math.PI) * (1 - u / 0.6 * 0.3);
   });
-  const dx = lerp(x0, x1, k) + Math.sin(t * 0.7) * 8;
-  const dy = lerp(y0, y1, k) + Math.cos(t * 0.55) * 6;
+  const dx = lerp(x0, x1, k) + Math.sin(t * 0.9) * 16;
+  const dy = lerp(y0, y1, k) + Math.cos(t * 0.75) * 12;
   const rot = Math.sin(t * 0.45) * r;
   return <g transform={`translate(${ox + dx} ${oy + dy}) rotate(${rot}) scale(${z}) translate(${-ox} ${-oy})`}>{children}</g>;
 };
 
 /** Arka planda süzülen QR pikselleri (marka motifi) — sürekli hareket */
-const Pikseller: React.FC<{ t: number; renk?: string; n?: number; o?: number }> = ({ t, renk = "#ffffff", n = 26, o = 0.18 }) => (
+const Pikseller: React.FC<{ t: number; renk?: string; n?: number; o?: number }> = ({ t, renk = "#ffffff", n = 30, o = 0.26 }) => (
   <g opacity={o}>
     {Array.from({ length: n }).map((_, i) => {
-      const hz = 18 + rnd(i, 3) * 40;
+      const hz = 40 + rnd(i, 3) * 70;
       const x = ((rnd(i, 1) * 1300 + t * hz * (rnd(i, 5) > 0.5 ? 1 : -1)) % 1300 + 1300) % 1300 - 110;
-      const y = ((rnd(i, 2) * 2100 - t * (10 + rnd(i, 4) * 30)) % 2100 + 2100) % 2100 - 90;
+      const y = ((rnd(i, 2) * 2100 - t * (30 + rnd(i, 4) * 60)) % 2100 + 2100) % 2100 - 90;
       const s = 14 + rnd(i, 6) * 34;
       return <rect key={i} x={x} y={y} width={s} height={s} fill={renk} transform={`rotate(${t * 20 * (rnd(i, 7) - 0.5)} ${x + s / 2} ${y + s / 2})`} />;
+    })}
+  </g>
+);
+
+/** Japon kiraz çiçeği yaprakları: ekran boyunca sürekli süzülür */
+const Yapraklar: React.FC<{ t: number; o?: number }> = ({ t, o = 1 }) => (
+  <g opacity={o}>
+    {Array.from({ length: 16 }).map((_, i) => {
+      const x = ((rnd(i, 21) * 1300 + t * (60 + rnd(i, 22) * 80)) % 1300 + 1300) % 1300 - 110;
+      const y = ((rnd(i, 23) * 2000 + t * (90 + rnd(i, 24) * 90)) % 2000) - 40;
+      const r = t * (90 + rnd(i, 25) * 160) * (rnd(i, 26) > 0.5 ? 1 : -1);
+      return <ellipse key={i} cx={x} cy={y} rx={22} ry={12} fill="#ffc4d6" stroke="#e58aa6" strokeWidth={3} transform={`rotate(${r} ${x} ${y})`} />;
     })}
   </g>
 );
@@ -175,6 +187,7 @@ const GoTahtasi: React.FC<{ x: number; y: number; s?: number; t: number; konan: 
           <g key={k}>
             {hayalet > 0.05 ? <circle cx={j * a} cy={i * a} r={30} fill="none" stroke={GREEN} strokeWidth={5} strokeDasharray="8 6" opacity={hayalet} /> : null}
             <circle cx={j * a + kx} cy={i * a + ky + dus} r={26} fill={c} stroke={INK} strokeWidth={5} opacity={g} />
+            <circle cx={j * a} cy={i * a} r={26 + ((t * 1.3 + k * 0.37) % 1) * 30} fill="none" stroke={INK} strokeWidth={2} opacity={0.25 * (1 - ((t * 1.3 + k * 0.37) % 1)) * cl(g)} />
           </g>
         );
       })}
@@ -310,6 +323,7 @@ const Tarih: S = ({ t, d, ws, ses }) => {
   return (
     <g>
       <Pikseller t={t} renk="#7a5a2e" o={0.12} />
+      <Yapraklar t={t} o={1 - fab * 0.5} />
       <Kamera t={t} d={d} z0={1.08} z1={1.0} y0={-40} y1={40} vurus={[tm, ta]}>
         {/* güneş yükselir */}
         <g transform={`translate(540 ${lerp(760, 560, easeOut(t / 1.2))}) scale(${1 - fab * 0.35})`} opacity={1 - fab * 0.6}>
@@ -319,7 +333,14 @@ const Tarih: S = ({ t, d, ws, ses }) => {
             <line key={i} x1={0} y1={-200} x2={0} y2={-240} stroke={RED} strokeWidth={8} strokeLinecap="round" transform={`rotate(${i * 30 + t * 12})`} />
           ))}
         </g>
-        <g opacity={1 - fab}><Txt x={540} y={1020} text="JAPONYA · 1994" size={60} color={CHALK} stroke={INK} /></g>
+        <g opacity={1 - fab}>
+          <Txt x={540} y={1010} text="JAPONYA" size={60} color={CHALK} stroke={INK} />
+          {/* yıl sayacı: 1980 → 1994 yuvarlanır */}
+          <g transform={`translate(540 1120) scale(${1 + 0.05 * Math.sin(t * 5)})`}>
+            <rect x={-150} y={-62} width={300} height={110} rx={20} fill={INK} />
+            <Txt x={0} y={20} text={String(Math.round(lerp(1980, 1994, easeOut(t / 2.2))))} size={80} color={ACC} />
+          </g>
+        </g>
         {/* fabrika bandı akar */}
         <Bant t={t} y={940} k={fab} />
         <g opacity={fab}>
@@ -348,8 +369,8 @@ const Go: S = ({ t, d, ws, ses }) => {
       {/* kamera Go tahtasından QR'a doğru kayar (sağa pan) */}
       <Kamera t={t} d={d} z0={1.05} z1={1.12} x0={0} x1={0} vurus={[tk, tb, ttam]}>
         <g transform={`translate(${lerp(0, -900, ez(ikinci))} 0)`}>
-          <g transform={`translate(540 760) rotate(${Math.sin(t * 0.8) * 3}) translate(-540 -760)`}>
-            <GoTahtasi x={540} y={760} s={1.05} t={t} konan={ap(t, 0.2, 2.4)} kay={ap(t, tk - 0.3, 0.4) * (1 - ap(t, tk + 1.6, 0.5))} hayalet={ap(t, tk + 0.2, 0.4)} />
+          <g transform={`translate(540 ${760 + (1 - easeOut(t / 0.8)) * 700}) rotate(${Math.sin(t * 1.1) * 5 + (1 - easeOut(t / 0.8)) * -25}) scale(${1 + Math.sin(t * 0.9) * 0.03}) translate(-540 -760)`}>
+            <GoTahtasi x={540} y={760} s={1.05} t={t} konan={ap(t, 0.2, 2.4)} kay={0.25 + 0.75 * ap(t, tk - 0.3, 0.4) * (1 - ap(t, tk + 1.6, 0.5))} hayalet={ap(t, tk + 0.2, 0.4)} />
           </g>
           {/* yan tarafta bekleyen QR'lar (pan ile gelir) */}
           <g transform="translate(900 0)">
@@ -445,6 +466,11 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
           <Glow cx={380} cy={420} r={320} id="sl" color="#fff3b0" o={0.35 + 0.08 * Math.sin(t * 7)} />
           <Parkmetre x={380} y={780} t={t} sahte={yapis} />
           <El x={lerp(820, 470, easeOut(cl((t - (td + 0.3)) / 1.2)))} y={620} o={ap(t, td, 0.3) * (1 - ap(t, ts + 0.4, 0.4))} />
+          {/* telefon sahte QR'a yaklaşıp tarar */}
+          <g opacity={ap(t, ts + 0.6, 0.3)} transform={`translate(${lerp(980, 640, easeOut(cl((t - ts - 0.6) / 1.0)))} ${700 + Math.sin(t * 2) * 20})`}>
+            <Okut x={0} y={0} t={t} ok={0} s={1.2} />
+          </g>
+          <circle cx={380} cy={700} r={130 + ((t * 1.5) % 1) * 90} fill="none" stroke={RED} strokeWidth={8} opacity={ap(t, ts + 0.3, 0.3) * (1 - ((t * 1.5) % 1))} />
           <Adres x={600} y={1110} k={sp(t, to - 0.1)} text="odeme-otopark.xyz ✗" iyi={false} t={t} />
         </Kamera>
       </g>
@@ -463,12 +489,12 @@ const Cozum: S = ({ t, d, ws, ses }) => {
     <g>
       <Pikseller t={t} renk="#2f7a4f" o={0.12} />
       <Kamera t={t} d={d} z0={1.25} z1={1.0} r={0.8} vurus={[tb, ta]}>
-        <g transform={`translate(540 760) rotate(${Math.sin(t * 1.2) * 3})`}>
+        <g transform={`translate(540 ${760 + (1 - easeOut(t / 0.9)) * 900}) rotate(${Math.sin(t * 1.4) * 4 + (1 - easeOut(t / 0.9)) * 30})`}>
           <Telefon x={0} y={0} s={3.1} t={t} ekran="#1d2430" />
           {/* ekranda QR taranıyor */}
           <g opacity={1 - ap(t, tb - 0.4, 0.3)}>
             <QR x={0} y={-60} s={0.42} t={t} />
-            <Isin x={0} y={-60} w={240} h={230} t={t} o={ap(t, tq - 0.2, 0.3)} />
+            <Isin x={0} y={-60} w={240} h={230} t={t * 1.6} o={ap(t, 0.5, 0.3)} />
           </g>
         </g>
         <Adres x={540} y={600} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi t={t} />
