@@ -68,7 +68,7 @@ const QR: React.FC<{ x: number; y: number; s?: number; yirtik?: number; vurgu?: 
 /** Telefonla okutma: telefon + tarama çizgisi + tik */
 const Okut: React.FC<{ x: number; y: number; t: number; k: number; ok?: number }> = ({ x, y, t, k, ok = 0 }) => (
   <g transform={`translate(${x} ${y})`} opacity={k}>
-    <Telefon x={0} y={0} s={0.75} t={t} ekran={ok > 0.5 ? GREEN : BLUE} />
+    <Telefon x={0} y={0} s={1.1} t={t} ekran={ok > 0.5 ? GREEN : BLUE} />
     {ok > 0.5 ? (
       <path d="M -50 -10 L -10 30 L 60 -50" stroke="#fff" strokeWidth={18} fill="none" strokeLinecap="round" strokeLinejoin="round" />
     ) : (
@@ -197,7 +197,7 @@ const Kare: S = ({ t, ws, ses }) => {
   const tu = ws("üç");
   return (
     <g>
-      <QR x={540} y={740} s={1.05} vurgu={ap(t, tu - 0.1, 0.3)} />
+      <QR x={460} y={720} s={1.0} vurgu={ap(t, tu - 0.1, 0.3)} />
       <Tag x={540} y={340} text={'3 KARE = "KOD BURADA"'} size={46} k={sp(t, ws("burada") - 0.2)} bg={ACC} rot={-2} />
       <Merakli x={900} y={1240} s={0.42} t={t} hareket="isaret" kostum="kulaklik" agiz={ses(t)} flip />
     </g>
@@ -247,10 +247,10 @@ const Cozum: S = ({ t, ws, ses }) => {
   const ta = ws("açma", 1);
   return (
     <g>
-      <g transform="translate(540 700)"><Telefon x={0} y={0} s={1.2} t={t} ekran="#1d2430" /></g>
-      <Adres x={540} y={560} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi />
-      <Adres x={540} y={760} k={sp(t, tb + 0.6)} text="0dem3-park.xyz ✗" iyi={false} />
-      <g opacity={ap(t, ta - 0.2, 0.2)}><Cross cx={540} cy={760} r={110} k={ap(t, ta - 0.2, 0.3)} sw={16} /></g>
+      <g transform="translate(540 760)"><Telefon x={0} y={0} s={3.1} t={t} ekran="#1d2430" /></g>
+      <Adres x={540} y={600} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi />
+      <Adres x={540} y={820} k={sp(t, tb + 0.6)} text="0dem3-park.xyz ✗" iyi={false} />
+      <g opacity={ap(t, ta - 0.2, 0.2)}><Cross cx={540} cy={820} r={110} k={ap(t, ta - 0.2, 0.3)} sw={16} /></g>
       <Tag x={540} y={340} text="ÖNCE ADRESE BAK" size={56} k={sp(t, tb - 0.2)} bg={ACC} rot={-2} />
     </g>
   );
