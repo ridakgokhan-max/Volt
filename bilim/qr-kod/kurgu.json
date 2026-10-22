@@ -1,0 +1,96 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 1.0,
+ "kesimler": [],
+ "kelime_sil": [],
+ "seri": {
+  "no": 13,
+  "toplam": 30,
+  "kategori": "Teknoloji"
+ },
+ "kanca": {
+  "yazi": "QR KOD NEDEN BOZULMAZ?",
+  "alt": "Üçte biri yırtılsa bile okunur",
+  "sure": 2.0
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "tamamlanıyor"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "tanıyor",
+   "yazi": "Sen nerede okuttun?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "kulaklik",
+ "vurgu": [
+  "üçte",
+  "yırtılsa",
+  "1994'te",
+  "Masahiro",
+  "Go",
+  "birden",
+  "üç",
+  "gökdelene",
+  "ters",
+  "karanlık",
+  "sahte",
+  "adrese",
+  "açma."
+ ],
+ "muzik": "teknoloji",
+ "muzik_parca": "paulyudin-minimal",
+ "sahneler": [
+  {
+   "id": "giris",
+   "bg": "plan",
+   "ilk": 0
+  },
+  {
+   "id": "tarih",
+   "bg": "parsomen",
+   "ilk": "qr",
+   "gecis": "zoom"
+  },
+  {
+   "id": "go",
+   "bg": "tahta",
+   "ilk": "fikri",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "kare",
+   "bg": "plan",
+   "ilk": "köşedeki",
+   "gecis": "daire"
+  },
+  {
+   "id": "gokdelen",
+   "bg": "gece",
+   "ilk": "hara",
+   "gecis": "perde"
+  },
+  {
+   "id": "karanlik",
+   "bg": "devre",
+   "ilk": "ama",
+   "gecis": "glitch"
+  },
+  {
+   "id": "cozum",
+   "bg": "yesil",
+   "ilk": "=o",
+   "gecis": "kaydir"
+  }
+ ]
+}

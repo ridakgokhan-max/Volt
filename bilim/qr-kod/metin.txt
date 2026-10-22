@@ -1,0 +1,6 @@
+Bu karenin üçte biri yırtılsa bile, telefonun onu yine okur. Peki nasıl?
+QR kodu 1994'te Japonya'da, Masahiro Hara adında bir mühendis buldu. Amaç, araba fabrikasında parçaları daha hızlı takip etmekti.
+Fikri, tahtada oynanan Go oyunundan geldi. Taşlar biraz kaysa bile yerleri hâlâ belli. Hara da bilgiyi kodun içine birden fazla kez yazdı. Bir kısmı silinirse, telefon eksiği diğer kopyalardan tamamlanıyor.
+Köşedeki o üç büyük kare? Onlar telefona "kod burada" diyor. Hara bu fikri trende giderken, etrafındaki binaların arasından sıyrılan bir gökdelene bakarak bulmuş. Üç kare sayesinde telefon kodu ters de dursa, eğik de dursa bir anda tanıyor.
+Ama bu sağlamlığın bir de karanlık tarafı var. Dolandırıcılar otoparklara, gerçek QR'ın üstüne sahte çıkartma yapıştırıyor. Okutan kişi, sahte bir ödeme sayfasına gidiyor.
+O yüzden QR kodu okuttuğunda, açmadan önce adrese bir bak. Tanımadığın bir adres çıkıyorsa, açma.
