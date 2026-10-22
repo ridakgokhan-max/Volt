@@ -1,0 +1,39 @@
+KONU: qr-kod
+SÜRE: 64.9 sn
+
+OKUNAN METİN:
+Bu karenin üçte biri yırtılsa bile, telefonun onu yine okur. Peki nasıl?
+QR kodu 1994'te Japonya'da, Masahiro Hara adında bir mühendis buldu. Amaç, araba fabrikasında parçaları daha hızlı takip etmekti.
+Fikri, tahtada oynanan Go oyunundan geldi. Taşlar biraz kaysa bile yerleri hâlâ belli. Hara da bilgiyi kodun içine birden fazla kez yazdı. Bir kısmı silinirse, telefon eksiği diğer kopyalardan tamamlanıyor.
+Köşedeki o üç büyük kare? Onlar telefona "kod burada" diyor. Hara bu fikri trende giderken, etrafındaki binaların arasından sıyrılan bir gökdelene bakarak bulmuş. Üç kare sayesinde telefon kodu ters de dursa, eğik de dursa bir anda tanıyor.
+Ama bu sağlamlığın bir de karanlık tarafı var. Dolandırıcılar otoparklara, gerçek QR'ın üstüne sahte çıkartma yapıştırıyor. Okutan kişi, sahte bir ödeme sayfasına gidiyor.
+O yüzden QR kodu okuttuğunda, açmadan önce adrese bir bak. Tanımadığın bir adres çıkıyorsa, açma.
+
+
+KANCA: {'yazi': 'QR KOD NEDEN BOZULMAZ?', 'alt': 'Yırtık ama okunuyor', 'sure': 2.0}
+
+SAHNELER (başlangıç sn):
+- giris: 0.0
+- tarih: 5.0
+- go: 14.7
+- kare: 28.6
+- gokdelen: 33.0
+- karanlik: 45.9
+- cozum: 56.7
+
+SES KESİMLERİ (ham kayıt sn): [[0.0, 1.0], [27.75, 28.4], [61.4, 63.5], [66.3, 66.95], [76.75, 77.85], [79.98, 80.55]]
+
+CTA: [{'tur': 'yorum', 'kelime': 'tamamlanıyor', 'yazi': 'Adrese bakıyor musun? 👇'}, {'tur': 'begen', 'kelime': 'tanıyor'}, {'tur': 'takip', 'son': True, 'ofset': -2.2}]
+
+AÇIKLAMA:
+Bir QR kodun neredeyse üçte biri yırtılsa bile telefonun onu okur 📱 Peki nasıl?
+
+🇯🇵 QR kodu 1994'te Japonya'da Denso Wave şirketinde mühendis Masahiro Hara geliştirdi; amaç araba fabrikasında parçaları hızlı takip etmekti.
+⚫⚪ Kare kare görünümün ilhamı Go oyunu tahtası. Dayanıklılığın sırrı ise kodun içine eklenen "yedek bilgi" (hata düzeltme). Bir kısmı silinse bile telefon eksiği bu yedek bilgiden hesaplıyor. En yüksek koruma seviyesinde kodun yaklaşık %30'u hasar görse bile okunabiliyor.
+🏙️ Köşedeki 3 büyük kare telefona "kod burada" diyor. Anlatılana göre Hara bu fikri trende, binaların arasından sıyrılan bir gökdelene bakarken bulmuş. Bu sayede kod ters ya da eğik dursa da bir anda tanınıyor.
+
+⚠️ Karanlık taraf: Kod, sahibini bilmez. Dolandırıcılar otoparklarda gerçek QR'ın üstüne sahte çıkartma yapıştırıyor, okutan kişi sahte bir ödeme sayfasına gidiyor.
+✅ QR okuttuğunda açmadan önce adrese bak. Tanımadığın bir adres çıkıyorsa açma.
+
+QR okutunca adrese bakıyor musun, yoksa direkt açıyor musun? 👇 Her yerde QR okutan birine gönder 📲
+

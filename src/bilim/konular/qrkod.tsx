@@ -319,7 +319,7 @@ const Giris: S = ({ t, d, ws }) => {
       </Kamera>
       {/* OKUNDU damgası */}
       {ok ? (
-        <g transform={`translate(540 760) scale(${sp(t, 2.0, 7)}) rotate(-6)`} opacity={1 - ap(t, tn - 0.4, 0.25)}>
+        <g transform={`translate(540 760) scale(${sp(t, 2.0, 7)}) rotate(-6)`} opacity={1 - ap(t, tn - 0.9, 0.2)}>
           <rect x={-300} y={-80} width={600} height={160} rx={30} fill={GREEN} stroke={INK} strokeWidth={10} />
           <text x={0} y={34} textAnchor="middle" fontSize={92} fontWeight={900} fill="#fff" style={font}>OKUNDU ✓</text>
         </g>
@@ -396,7 +396,7 @@ const Go: S = ({ t, d, ws }) => {
       <Kamera t={t} d={d} z0={1.0} z1={1.08} vurus={[tk, tb, tsil, ttam]}>
         <g transform={`translate(${lerp(0, -900, ez(ikinci))} 0)`}>
           {/* Go tahtası alttan dönerek girer, kaymada punch-in */}
-          <g transform={`translate(540 ${760 + (1 - easeOut(t / 0.8)) * 700}) rotate(${(1 - easeOut(t / 0.8)) * -25 + Math.sin(t * 0.9) * 2}) scale(${1 + 0.18 * ap(t, tk - 0.3, 0.3) * (1 - ap(t, tk + 1.4, 0.4))}) translate(-540 -760)`}>
+          <g transform={`translate(540 ${760 + (1 - easeOut(t / 0.8)) * 700}) rotate(${(1 - easeOut(t / 0.8)) * -25 + Math.sin(t * 1.4) * 4}) scale(${1 + 0.04 * Math.sin(t * 2.2) + 0.06 * ap(t, tk + 1.6, 1.5) + 0.18 * ap(t, tk - 0.3, 0.3) * (1 - ap(t, tk + 1.4, 0.4))}) translate(-540 -760)`}>
             <GoTahtasi x={540} y={760} s={1.05} t={t} konan={ap(t, 0.25, 2.2)} kay={kay} hayalet={ap(t, tk, 0.3)} />
           </g>
           <g transform="translate(900 0)">
@@ -434,7 +434,7 @@ const Go: S = ({ t, d, ws }) => {
 // 4 — Köşedeki üç büyük kare: "kod burada" — kamera köşeleri sırayla, duraklayarak gezer
 const Kare: S = ({ t, d, ws }) => {
   const tu = ws("üç"), tb = ws("burada");
-  const QX = 540, QY = 820, QS = 0.95;
+  const QX = 540, QY = 700, QS = 0.85;
   const kose = (bx: number, by: number): [number, number] => [QX + (bx - W / 2) * QS, QY + (by - W / 2) * QS];
   const hedef: [number, number][] = [[QX, QY], kose(3.5 * M, 3.5 * M), kose((N - 3.5) * M, 3.5 * M), kose(3.5 * M, (N - 3.5) * M), [QX, QY]];
   // her geçiş 0.45 sn (whip), her köşede 0.35 sn bekleme
@@ -446,13 +446,12 @@ const Kare: S = ({ t, d, ws }) => {
   const g = ez(yerel);
   const [hx, hy] = [lerp(hedef[i0][0], hedef[i0 + 1][0], g), lerp(hedef[i0][1], hedef[i0 + 1][1], g)];
   const icerde = u > 0 && i0 < hedef.length - 2 ? 1 : i0 === hedef.length - 2 ? 1 - g : 0;
-  const zz = 1 + 0.35 * icerde * (1 + 0.03 * Math.sin(t * 4));
+  const zz = 1 + 0.2 * icerde * (1 + 0.03 * Math.sin(t * 4));
   const aktif = Math.min(3, i0 + (yerel >= 1 ? 1 : 0));
   return (
     <g>
       <Pikseller t={t} />
-      <g transform={`translate(540 860) scale(${zz}) translate(${-hx} ${-hy + (860 - QY) / zz * 0})`}>
-        <g transform={`translate(0 ${-(860 - QY)})`} />
+      <g transform={`translate(${lerp(540, 540 + (540 - hx) * 0.0, 1)} ${QY}) scale(${zz}) translate(${-(QX + (hx - QX) * 0.55)} ${-(QY + (hy - QY) * 0.55)})`}>
         <Suz t={t} a={4}><QR x={QX} y={QY} s={QS} t={t} vurgu={ap(t, tu - 0.1, 0.3)} nabiz={1} /></Suz>
         {[kose(3.5 * M, 3.5 * M), kose((N - 3.5) * M, 3.5 * M), kose(3.5 * M, (N - 3.5) * M)].map(([cx, cy], k) => (
           <circle key={k} cx={cx} cy={cy} r={110 + 10 * Math.sin(t * 6)} fill="none" stroke={GREEN} strokeWidth={10} opacity={aktif === k + 1 ? 0.9 : 0} />
@@ -526,6 +525,7 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
       {/* telefonun içine girince: sahte ödeme sayfası tam ekran */}
       {gir > 0.6 ? (
         <g opacity={ap(t, to - 0.1, 0.25)}>
+          <rect x={0} y={0} width={1080} height={1920} fill="#14101a" opacity={0.85} />
           <rect x={130} y={330} width={820} height={820} rx={50} fill="#fff" stroke={RED} strokeWidth={12} />
           <rect x={130} y={330} width={820} height={130} rx={50} fill={RED} />
           <Txt x={540} y={418} text="ÖDEME" size={64} color="#fff" />
@@ -553,7 +553,7 @@ const Cozum: S = ({ t, d, ws }) => {
     <g>
       <Pikseller t={t} renk="#2f7a4f" o={0.12} />
       <Kamera t={t} d={d} z0={1.2} z1={1.0} vurus={[tb, ta]}>
-        <g transform={`translate(540 ${700 + (1 - easeOut(t / 0.9)) * 900}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.9)) * 30})`}>
+        <g opacity={1 - 0.85 * ap(t, tb - 0.3, 0.4)} transform={`translate(${540 + 300 * ap(t, tb - 0.3, 0.5)} ${700 + (1 - easeOut(t / 0.9)) * 900 + 380 * ap(t, tb - 0.3, 0.5)}) scale(${1 - 0.45 * ap(t, tb - 0.3, 0.5)}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.9)) * 30})`}>
           <Telefon x={0} y={0} s={2.5} t={t} ekran="#1d2430" />
           <g opacity={1 - ap(t, tb - 0.4, 0.3)}>
             <QR x={0} y={-40} s={0.34} t={t} />

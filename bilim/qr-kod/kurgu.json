@@ -49,7 +49,7 @@
   },
   {
    "tur": "begen",
-   "kelime": "tanıyor"
+   "kelime": "bulmuş"
   },
   {
    "tur": "takip",
@@ -97,7 +97,7 @@
    "id": "kare",
    "bg": "plan",
    "ilk": "köşedeki",
-   "gecis": "zoom"
+   "gecis": "savur"
   },
   {
    "id": "gokdelen",
