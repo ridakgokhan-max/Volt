@@ -515,9 +515,10 @@ const Gokdelen: S = ({ t, d, ws }) => {
             <TrenPenceresi t={t} yavas={yavas} vurgu={ap(t, tg - 0.1, 0.3)} gokX={gokX} />
           </g>
         </g>
-        {/* match-cut: parlayan gökdelen küçülüp sol üst köşe karesine oturur */}
+      </Kamera>
+        {/* match-cut: parlayan gökdelen küçülüp sol üst köşe karesine oturur (kamera dışı: QR sabit kadrajda) */}
         {donus > 0.01 && donus < 0.99 ? (
-          <rect x={lerp(gokX + 20, 400 - 55, ez(cl(donus / 0.7)))} y={lerp(600, 560 - 55, ez(cl(donus / 0.7)))} width={lerp(130, 110, ez(cl(donus / 0.7)))} height={lerp(560, 110, ez(cl(donus / 0.7)))} fill={RED} stroke={INK} strokeWidth={7} opacity={1 - cl((donus - 0.75) / 0.1)} />
+          <rect x={lerp(540 + (gokX + 20 - 540) * 1.35 - 60, 400 - 55, ez(cl(donus / 0.7)))} y={lerp(460, 560 - 55, ez(cl(donus / 0.7)))} width={lerp(175, 110, ez(cl(donus / 0.7)))} height={lerp(756, 110, ez(cl(donus / 0.7)))} fill={RED} stroke={INK} strokeWidth={7} opacity={1 - cl((donus - 0.75) / 0.1)} />
         ) : null}
         <g opacity={cl((donus - 0.7) / 0.15)} transform={`translate(400 560) scale(${lerp(0.25, 1, ez(cl((donus - 0.7) / 0.3)))}) translate(-400 -560)`}>
           <g transform={`translate(540 700) rotate(${aci}) translate(-540 -700)`}>
@@ -526,7 +527,6 @@ const Gokdelen: S = ({ t, d, ws }) => {
           <circle cx={540} cy={700} r={300} fill="none" stroke={GREEN} strokeWidth={14} opacity={cl(flas)} />
           <g transform={`translate(880 990) scale(${1 + 0.12 * (okundu ? Math.sin(Math.PI * cl((t - ta) / 0.4)) : 0)})`}><Okut x={0} y={0} t={t} ok={okundu} s={0.72} /></g>
         </g>
-      </Kamera>
       <KTag t={t} a={0.2} b={tg - 0.4} text="TRENDE GİDERKEN..." size={50} bg={BLUE} color="#fff" />
       <KTag t={t} a={tg - 0.1} b={tu - 0.6} text="GÖKDELEN FİKRİ" size={56} />
       <KTag t={t} a={tu - 0.3} b={tt - 0.3} text="YIRTIK, TERS, EĞİK..." size={50} bg={BLUE} color="#fff" rot={2} />
