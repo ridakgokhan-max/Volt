@@ -4,7 +4,32 @@
  "dongu": true,
  "imza": true,
  "son_bosluk": 1.0,
- "kesimler": [],
+ "kesimler": [
+  [
+   0.0,
+   1.0
+  ],
+  [
+   27.75,
+   28.4
+  ],
+  [
+   61.84,
+   63.5
+  ],
+  [
+   66.3,
+   66.95
+  ],
+  [
+   76.75,
+   77.85
+  ],
+  [
+   79.98,
+   80.55
+  ]
+ ],
  "kelime_sil": [],
  "seri": {
   "no": 13,
@@ -60,25 +85,25 @@
    "id": "tarih",
    "bg": "parsomen",
    "ilk": "qr",
-   "gecis": "zoom"
+   "gecis": "savur"
   },
   {
    "id": "go",
    "bg": "tahta",
    "ilk": "fikri",
-   "gecis": "kaydir"
+   "gecis": "savur"
   },
   {
    "id": "kare",
    "bg": "plan",
    "ilk": "köşedeki",
-   "gecis": "daire"
+   "gecis": "zoom"
   },
   {
    "id": "gokdelen",
    "bg": "gece",
    "ilk": "hara",
-   "gecis": "perde"
+   "gecis": "savur"
   },
   {
    "id": "karanlik",
@@ -90,7 +115,7 @@
    "id": "cozum",
    "bg": "yesil",
    "ilk": "=o",
-   "gecis": "kaydir"
+   "gecis": "savur"
   }
  ]
 }

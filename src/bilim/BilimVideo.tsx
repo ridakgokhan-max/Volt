@@ -11,7 +11,7 @@ import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, lerp, sp
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
-export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas";
+export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas" | "savur";
 export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string; video?: string; video_kutu?: [number, number, number, number]; derinlik?: boolean };
 /** w(i): i. kelimenin sahneye göre saniyesi; ws("kelime", n): sahne başından sonra o kelimenin n. geçişi */
 /** ses(t): o andaki ses şiddeti 0..1 (Meraklı'nın dudak senkronu için: <Merakli agiz={ses(t)} />) */
@@ -107,6 +107,11 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
       outer.opacity = f % 3 === 1 ? 0.35 : 1;
     }
     if (g === "flas") flash = r;
+    if (g === "savur") {
+      // hızlı kamera savurma: yandan kayarak gelir, hareket bulanıklığı ve eğim
+      outer.transform = `translateX(${r * 110}%) skewX(${-r * 18}deg)`;
+      outer.filter = `blur(${r * 14}px)`;
+    }
   }
   // vuruş anlarında küçük sarsıntı
   let shake = 0;
