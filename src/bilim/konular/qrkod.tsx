@@ -397,7 +397,7 @@ const Go: S = ({ t, d, ws }) => {
   const tk = ws("kaysa"), tb = ws("birden"), tsil = ws("silinirse"), ttam = ws("tamamlanıyor");
   const ikinci = ap(t, tb - 0.6, 0.6);
   const sil = ap(t, tsil - 0.3, 0.5);
-  const dol = ap(t, ttam - 1.3, 1.3);
+  const dol = ap(t, tsil + 0.5, Math.max(0.6, ttam - tsil - 1.1));
   const yedek = ap(t, tb - 0.1, 0.8);
   // taş kayması: "kaysa"da 3 taş 36 px kayar, sonra yaylanarak ızgaraya oturur
   const kayU = t - (tk - 0.1);
@@ -432,7 +432,7 @@ const Go: S = ({ t, d, ws }) => {
               </g>
             ) : null}
             {dol > 0.95 ? (
-              <g transform={`translate(540 380) scale(${sp(t, ttam - 0.05, 8)}) rotate(-6)`}>
+              <g transform={`translate(540 640) scale(${sp(t, tsil + 0.5 + Math.max(0.6, ttam - tsil - 1.1), 8)}) rotate(-6)`}>
                 <rect x={-220} y={-60} width={440} height={120} rx={26} fill={GREEN} stroke={INK} strokeWidth={8} />
                 <text x={0} y={26} textAnchor="middle" fontSize={68} fontWeight={900} fill="#fff" style={font}>OKUNDU ✓</text>
               </g>
@@ -444,8 +444,8 @@ const Go: S = ({ t, d, ws }) => {
       <KTag t={t} a={0.2} b={tk - 0.4} text="GO OYUNU" size={58} />
       <KTag t={t} a={tk - 0.1} b={tb - 0.5} text="BOZULSA DA ANLAŞILIR" size={46} bg={GREEN} color="#fff" rot={2} />
       <KTag t={t} a={tb - 0.1} b={tsil - 0.4} text="KODA YEDEK BİLGİ EKLENİR" size={44} bg={BLUE} color="#fff" />
-      <KTag t={t} a={tsil - 0.1} b={ttam - 0.3} text="YIRTILSA BİLE..." size={54} bg={RED} color="#fff" rot={2} />
-      <KTag t={t} a={ttam - 0.1} b={d - 0.35} text="EKSİK HESAPLANIR" size={50} bg={GREEN} color="#fff" />
+      <KTag t={t} a={tsil - 0.1} b={tsil + 0.55} text="YIRTILSA BİLE..." size={54} bg={RED} color="#fff" rot={2} />
+      <KTag t={t} a={tsil + 0.6} b={d - 0.35} text="EKSİK HESAPLANIR" size={50} bg={GREEN} color="#fff" />
     </g>
   );
 };
@@ -510,7 +510,7 @@ const Gokdelen: S = ({ t, d, ws }) => {
         </g>
         {/* match-cut: parlayan gökdelen küçülüp sol üst köşe karesine oturur */}
         {donus > 0.01 && donus < 0.99 ? (
-          <rect x={lerp(gokX + 20, 400 - 55, ez(donus))} y={lerp(600, 560 - 55, ez(donus))} width={lerp(130, 110, ez(donus))} height={lerp(560, 110, ez(donus))} fill={ACC} stroke={INK} strokeWidth={7} opacity={1 - ap(t, tu - 0.05, 0.15)} />
+          <rect x={lerp(gokX + 20, 400 - 55, ez(donus))} y={lerp(600, 560 - 55, ez(donus))} width={lerp(130, 110, ez(donus))} height={lerp(560, 110, ez(donus))} fill={ACC} stroke={INK} strokeWidth={7} opacity={(1 - ap(t, tu - 0.05, 0.15)) * (1 - cl((donus - 0.6) / 0.3))} />
         ) : null}
         <g opacity={donus}>
           <g transform={`translate(540 700) rotate(${aci}) translate(-540 -700)`}>
