@@ -185,7 +185,8 @@ const Altyazi: React.FC = () => {
   return (
     <div style={{
       position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexWrap: "wrap", justifyContent: "center",
-      alignContent: "flex-start", rowGap: 6, transform: `translateY(${(1 - inK) * 40 - 330 * takipK}px)`, opacity: cl(inK * 1.4),
+      alignContent: "flex-start", rowGap: 4, transform: `translateY(${(1 - inK) * 40 + 0 * takipK}px)`, opacity: cl(inK * 1.4),
+      background: "rgba(18,22,38,0.62)", borderRadius: 34, padding: "14px 18px 18px",
     }}>
       {words.map((k, j) => {
         const gi = a + j;
@@ -196,9 +197,9 @@ const Altyazi: React.FC = () => {
         const col = active ? INK : k.vurgu && said ? ACC : "#ffffff";
         return (
           <span key={gi} style={{
-            display: "inline-block", margin: "0 7px", padding: "2px 14px", borderRadius: 18,
+            display: "inline-block", margin: "0 1px", padding: "2px 9px", borderRadius: 18,
             background: active ? ACC : "transparent", boxShadow: active ? "0 6px 0 rgba(0,0,0,0.35)" : "none",
-            fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.55,
+            fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.82,
             WebkitTextStroke: active ? "0px" : "3px #1a1410", paintOrder: "stroke fill",
             textShadow: active ? "none" : "0 5px 12px rgba(0,0,0,0.6)", transform: `scale(${pop})`,
           }}>{k.w}</span>
@@ -242,9 +243,9 @@ const KancaYazi: React.FC = () => {
   const tit = Math.sin(t * 40) * 3 * (1 - cl(t / 0.6));
   const kel = D.kanca.yazi.split(" ");
   return (
-    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: cikis, pointerEvents: "none" }}>
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: 210, opacity: cikis, pointerEvents: "none" }}>
       <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 45%, rgba(0,0,0,0) 30%, rgba(0,0,0,${0.55 * cikis}) 100%)` }} />
-      <div style={{ transform: `translateY(-220px) scale(${0.6 + 0.4 * giris}) rotate(${tit - 2}deg)`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 22px", padding: "0 70px" }}>
+      <div style={{ transform: `scale(${0.6 + 0.4 * giris}) rotate(${tit - 2}deg)`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 22px", padding: "26px 40px 34px", margin: "0 50px", background: "rgba(16,20,34,0.86)", borderRadius: 40, border: "6px solid #1a1410", boxShadow: "0 14px 0 rgba(0,0,0,0.35)" }}>
         {kel.map((w, i) => {
           const k = sp(t + 0.9, 0.06 * i, 8);
           const vur = i === kel.length - 1;
@@ -258,7 +259,7 @@ const KancaYazi: React.FC = () => {
         })}
       </div>
       {D.kanca.alt ? (
-        <div style={{ transform: `translateY(-110px)`, opacity: ap(t, 0.15, 0.25), fontFamily, fontWeight: 900, fontSize: 46, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
+        <div style={{ marginTop: 22, opacity: ap(t, 0.15, 0.25), fontFamily, fontWeight: 900, fontSize: 52, color: INK, background: ACC, padding: "8px 28px", borderRadius: 30, border: `5px solid ${INK}` }}>
           {D.kanca.alt}
         </div>
       ) : null}

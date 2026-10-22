@@ -3,7 +3,7 @@
  "temizle": true,
  "dongu": true,
  "imza": true,
- "son_bosluk": 1.0,
+ "son_bosluk": 0.7,
  "kesimler": [
   [
    0.0,
@@ -14,7 +14,7 @@
    28.4
   ],
   [
-   61.84,
+   61.4,
    63.5
   ],
   [
@@ -38,18 +38,18 @@
  },
  "kanca": {
   "yazi": "QR KOD NEDEN BOZULMAZ?",
-  "alt": "Üçte biri yırtılsa bile okunur",
+  "alt": "Yırtık ama okunuyor",
   "sure": 2.0
  },
  "cta": [
   {
-   "tur": "begen",
-   "kelime": "tamamlanıyor"
+   "tur": "yorum",
+   "kelime": "tamamlanıyor",
+   "yazi": "Adrese bakıyor musun? 👇"
   },
   {
-   "tur": "yorum",
-   "kelime": "tanıyor",
-   "yazi": "Sen nerede okuttun?"
+   "tur": "begen",
+   "kelime": "tanıyor"
   },
   {
    "tur": "takip",

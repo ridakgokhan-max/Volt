@@ -95,7 +95,8 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   for (const a of adimlar) {
     const hd = IG[a.tur];
     // Meraklı'nın duracağı yer (düğmenin solunda / üstünde)
-    const dur = a.tur === "takip" ? { x: hd.x - 150, y: hd.y - 120 } : { x: hd.x - 170, y: hd.y + 70 };
+    // Meraklı her zaman altyazı bandının ALTINDA (ayak y≈1800) yürür; eli düğmeye uzanır
+    const dur = a.tur === "takip" ? { x: hd.x - 180, y: 1800 } : { x: hd.x - 190, y: 1800 };
     const dt = t - a.bas;
     if (dt < 0) break;
     const yur = ez(dt / 0.9);
@@ -118,7 +119,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   return (
     <g>
       <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum={(adimlar[0]?.kostum || "baret") as any} ink="#fff" />
-      {balon ? <Balon x={Math.max(balon.yazi.length * 15 + 80, Math.min(1000 - balon.yazi.length * 15 - 60, x))} y={y - 280} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
+      {balon ? <Balon x={x > 540 ? Math.max(balon.yazi.length * 15 + 80, x - 150 - balon.yazi.length * 15) : Math.min(1000 - balon.yazi.length * 15 - 60, x + 150 + balon.yazi.length * 15)} y={y - 190} k={balon.k} yazi={balon.yazi} renk={ACC} /> : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}
     </g>
@@ -176,7 +177,7 @@ export const CtaVideo: React.FC<{ t: number; adimlar: CtaAdim[] }> = ({ t, adiml
   return (
     <MerakliGorunur.Provider value={1}>
       <g opacity={v}>
-        <CtaKatman t={t} adimlar={[a]} baslangic={a.tur === "takip" ? { x: 540, y: 1560 } : { x: 600, y: 1240 }} yazi={a.yazi} />
+        <CtaKatman t={t} adimlar={[a]} baslangic={a.tur === "takip" ? { x: 640, y: 1800 } : { x: 640, y: 1800 }} yazi={a.yazi} />
         {begendi > 0 && begendi < 1
           ? Array.from({ length: 8 }).map((_, i) => {
               const an = (i / 8) * Math.PI * 2;

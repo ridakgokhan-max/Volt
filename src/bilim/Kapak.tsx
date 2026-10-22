@@ -6,7 +6,7 @@ import { data, KAPAK, KAPAK_YAZI } from "./aktif";
 import { ACC, Bg, BgKind, H, INK, W } from "./kit";
 
 const ilkBg = ((data as { sahneler?: { bg: string }[] }).sahneler?.[0]?.bg || "") as string;
-const kapakBg = (ilkBg.startsWith("k:") ? ilkBg : "gece") as BgKind;
+const kapakBg = (ilkBg || "gece") as BgKind;
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
