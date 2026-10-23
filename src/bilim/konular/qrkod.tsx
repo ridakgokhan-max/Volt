@@ -437,7 +437,7 @@ const Go: S = ({ t, d, ws }) => {
                 <path d="M 0 0 L 150 -10 L 100 130 Z" fill="#fff" stroke={INK} strokeWidth={6} />
               </g>
             ) : null}
-            {dol > 0.95 ? <g transform={`translate(${lerp(1150, 900, easeOut(cl((t - (tsil + 0.4 + Math.max(0.6, ttam - tsil - 1.4))) / 0.4)))} 900)`}><Okut x={0} y={0} t={t} ok={1} s={0.75} /></g> : null}
+            {dol > 0.95 ? <g transform={`translate(${lerp(1150, 880, easeOut(cl((t - (tsil + 0.4 + Math.max(0.6, ttam - tsil - 1.4))) / 0.22)))} 900)`}><Okut x={0} y={0} t={t} ok={1} s={0.75} /></g> : null}
             {dol > 0.95 ? (
               <g transform={`translate(540 640) scale(${sp(t, tsil + 0.4 + Math.max(0.6, ttam - tsil - 1.4), 8)}) rotate(-6)`}>
                 <rect x={-220} y={-60} width={440} height={120} rx={26} fill={GREEN} stroke={INK} strokeWidth={8} />
@@ -590,10 +590,10 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
 const Cozum: S = ({ t, d, ws }) => {
   const tb = ws("adrese"), ta = ws("açma", 1);
   return (
-    <g opacity={1 - ap(t, d - 0.35, 0.3)}>
+    <g opacity={1 - ap(t, d - 0.75, 0.3)}>
       <Pikseller t={t} renk="#2f7a4f" o={0.12} />
       <Kamera t={t} d={d} z0={1.0} z1={1.12} vurus={[tb, ta]}>
-        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(540 ${700 + (1 - easeOut(t / 0.9)) * 900}) scale(${(1 + 0.3 * easeOut(cl(t / Math.max(tb, 0.5)))) * (1 + 0.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.9)) * 30})`}>
+        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(${540 + (1 - easeOut(t / 0.7)) * 900} 700) scale(${(1 + 0.3 * easeOut(cl(t / Math.max(tb, 0.5)))) * (1 + 0.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.7)) * 30})`}>
           <Telefon x={0} y={0} s={2.5} t={t} ekran="#1d2430" />
           <g opacity={1 - ap(t, tb - 0.4, 0.3)}>
             <QR x={0} y={-40} s={0.34} t={t} />

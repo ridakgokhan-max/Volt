@@ -23,7 +23,7 @@ const Halka: React.FC<{ x: number; y: number; t: number }> = ({ x, y, t }) =>
     <g>
       {[0, 0.18].map((g, i) => {
         const u = cl((t - g) / 0.55);
-        return u > 0 && u < 1 ? <circle key={i} cx={x} cy={y} r={20 + u * 70} fill="none" stroke={ACC} strokeWidth={10 * (1 - u)} opacity={1 - u} /> : null;
+        return u > 0 && u < 1 ? <circle key={i} cx={x} cy={y} r={20 + u * 45} fill="none" stroke={ACC} strokeWidth={10 * (1 - u)} opacity={1 - u} /> : null;
       })}
     </g>
   );
@@ -38,12 +38,12 @@ const Parmak: React.FC<{ x: number; y: number; bas: number }> = ({ x, y, bas }) 
 
 /** Kafa üstü konuşma balonu */
 const Balon: React.FC<{ x: number; y: number; k: number; o?: number; yazi: string; renk?: string }> = ({ x, y, k, o = 1, yazi, renk = "#fff" }) => {
-  const w = yazi.length * 30 + 70;
+  const w = yazi.length * 26 + 70;
   return k <= 0.01 || o <= 0.01 ? null : (
     <g transform={`translate(${x} ${y}) scale(${k})`} opacity={cl(k * 1.5) * o}>
       <path d={`M ${-w / 2} -70 L ${w / 2} -70 Q ${w / 2 + 26} -70 ${w / 2 + 26} -44 L ${w / 2 + 26} 4 Q ${w / 2 + 26} 30 ${w / 2} 30 L 22 30 L 0 58 L -10 30 L ${-w / 2} 30 Q ${-w / 2 - 26} 30 ${-w / 2 - 26} 4 L ${-w / 2 - 26} -44 Q ${-w / 2 - 26} -70 ${-w / 2} -70 Z`}
         fill={renk} stroke={INK} strokeWidth={7} />
-      <text x={0} y={-6} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={{ fontFamily: "var(--font)" }}>{yazi}</text>
+      <text x={0} y={-6} textAnchor="middle" fontSize={44} fontWeight={900} fill={INK} style={{ fontFamily: "var(--font)" }}>{yazi}</text>
     </g>
   );
 };
@@ -119,7 +119,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
   return (
     <g>
       <Merakli x={x} y={y} s={0.6} t={t} hareket={hareket} flip={flip} kostum={(adimlar[0]?.kostum || "baret") as any} ink="#fff" />
-      {balon ? <Balon x={x > 540 ? Math.max(balon.yazi.length * 15 + 80, x - 150 - balon.yazi.length * 15) : Math.min(1000 - balon.yazi.length * 15 - 60, x + 150 + balon.yazi.length * 15)} y={y - 190} k={balon.k} o={balon.o} yazi={balon.yazi} renk={ACC} /> : null}
+      {balon ? <Balon x={Math.min(1040 - (balon.yazi.length * 13 + 61), Math.max(balon.yazi.length * 13 + 101, x > 540 ? x - 60 - balon.yazi.length * 13 : x + 60 + balon.yazi.length * 13))} y={y - 240} k={balon.k} o={balon.o} yazi={balon.yazi} renk={ACC} /> : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}
     </g>

@@ -113,7 +113,7 @@
    "id": "karanlik",
    "bg": "devre",
    "ilk": "ama",
-   "gecis": "zoom"
+   "gecis": "savur"
   },
   {
    "id": "cozum",
@@ -144,5 +144,12 @@
    0.45
   ]
  ],
- "muzik_ses": 0.5
+ "muzik_ses": 0.5,
+ "baglar": [
+  "birden fazla",
+  "karanlık tarafı",
+  "sahte çıkartma",
+  "adrese bir",
+  "önce adrese"
+ ]
 }

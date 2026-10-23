@@ -184,7 +184,7 @@ const Altyazi: React.FC = () => {
   const KISA = new Set(["bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"]);
   const uz = (ws2: typeof words) => ws2.reduce((n, k) => n + k.w.length + 1, 0);
   let kir = -1;
-  if (uz(words) > 22 && words.length > 1) {
+  if (uz(words) > 23 && words.length > 1) {
     let best = 1e9;
     for (let i = 1; i < words.length; i++) {
       const sol = words.slice(0, i), sag = words.slice(i);
@@ -192,7 +192,8 @@ const Altyazi: React.FC = () => {
       if (acik) continue;
       let c = Math.max(uz(sol), uz(sag));
       if (KISA.has(sol[sol.length - 1].w.toLocaleLowerCase("tr-TR").replace(/[.,!?]/g, ""))) c += 40;
-      if (sag.length === 1 || sol.length === 1) c += 12;
+      if (sag.length === 1) c += 100;
+      if (sol.length === 1) c += 30;
       if (c < best) { best = c; kir = i; }
     }
   }
@@ -208,12 +209,12 @@ const Altyazi: React.FC = () => {
         const gi = a + j;
         const active = t >= k.s && (gi === b ? t < k.e + 0.6 : t < K[gi + 1].s);
         const said = t >= k.s;
-        const big = k.vurgu ? 0.16 : 0.06;
-        const pop = active ? 1 + big * (1 - ez((t - k.s) / (k.vurgu ? 0.35 : 0.18))) + (k.vurgu ? 0.04 : 0) : 1;
+        const big = k.vurgu ? 0.06 : 0.03;
+        const pop = active ? 1 + big * (1 - ez((t - k.s) / (k.vurgu ? 0.35 : 0.18))) + 0 : 1;
         const col = active ? INK : k.vurgu && said ? ACC : "#ffffff";
         return (
           <span key={gi} style={{
-            display: "inline-block", margin: "0 5px", padding: "2px 10px", borderRadius: 18,
+            display: "inline-block", margin: "0 8px", padding: "2px 10px", borderRadius: 18,
             background: active ? ACC : "transparent", boxShadow: active ? "0 6px 0 rgba(0,0,0,0.35)" : "none",
             fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.9,
             WebkitTextStroke: active ? "0px" : "3px #1a1410", paintOrder: "stroke fill",
@@ -240,7 +241,7 @@ const Rozet: React.FC = () => {
         <circle cx={62} cy={62} r={44} fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth={8} />
         <circle cx={62} cy={62} r={44} fill="none" stroke="#fff" strokeWidth={8} strokeLinecap="round"
           strokeDasharray={`${2 * Math.PI * 44 * halka * ez((t - KANCA_SURE - 0.3) / 0.8)} 999`} transform="rotate(-90 62 62)" />
-        <text x={62} y={72} textAnchor="middle" fontFamily={fontFamily} fontWeight={900} fontSize={30} fill="#fff">{no}/{toplam}</text>
+        <text x={62} y={72} textAnchor="middle" fontFamily={fontFamily} fontWeight={900} fontSize={25} fill="#fff">{no}/{toplam}</text>
       </svg>
       <div style={{ marginTop: -10, fontFamily, fontWeight: 900, fontSize: 22, letterSpacing: 1.5, color: "#fff", background: INK, padding: "4px 12px", borderRadius: 14, border: `3px solid ${renk}` }}>
         {kategori.toLocaleUpperCase("tr-TR")}
@@ -344,7 +345,7 @@ const Ust: React.FC = () => {
         <div style={{ width: `${prog * 100}%`, height: "100%", background: ACC }} />
       </div>
       <div style={{ position: "absolute", top: A.ustTop, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-        <div style={{ fontFamily, fontWeight: 900, fontSize: 34, letterSpacing: 3, color: INK, background: ACC, padding: "8px 26px", borderRadius: 40, border: `4px solid ${INK}`, transform: `scale(${logoK})`, opacity: cl(logoK * 2) }}>
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 34, letterSpacing: 3, color: INK, background: ACC, padding: "8px 26px", borderRadius: 40, border: `4px solid ${INK}`, transform: `scale(${D.kanca ? sp(t, t0, 12) : 1})`, opacity: cl(logoK * 2) }}>
           BİR DAKİKADA BİLİM
         </div>
         {titleK > 0.01 && data.baslik ? (

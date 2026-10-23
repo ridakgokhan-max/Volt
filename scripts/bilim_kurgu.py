@@ -192,6 +192,7 @@ def main(konu):
                 st = i + 1
         parts.append((st, b))
     sat = []
+    BAGLAR = {x.lower() for x in K.get("baglar", [])}
     for a, b in parts:
         n = max(1, -(-chars(a, b) // 25))
         n = min(n, b - a + 1)
@@ -203,7 +204,13 @@ def main(konu):
             kalan_ok = left_words >= 2 or (left_words == 1 and len(kel[b]["w"]) >= 9)
             tirnak_acik = sum(z["w"].count('"') + z["w"].count('“') + z["w"].count('”') for z in kel[st:i + 1]) % 2 == 1
             kisa_son = kel[i]["w"].lower().strip(",") in KISA_KELIME
-            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son:
+            bagli = i < b and f'{kel[i]["w"].lower().strip(",.")} {kel[i + 1]["w"].lower().strip(",.")}' in BAGLAR
+            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son and bagli and i - 1 > st:
+                # öbek bölünmesin: bir kelime önce böl
+                sat.append([st, i - 1])
+                st, acc = i, len(kel[i]["w"]) + 1
+                continue
+            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son and not bagli:
                 sat.append([st, i])
                 st, acc = i + 1, 0
         if st <= b:
