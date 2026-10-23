@@ -42,3 +42,4 @@ Getting composition
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [34m○                    out/bilim/qr-kod.mp4[39m [90m36.1 MB[39m
 durum: success
+durum: cancelled
