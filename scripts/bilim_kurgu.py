@@ -23,7 +23,7 @@ SR = B.SR
 PAD = 0.05
 GAP = {".": 0.30, "?": 0.30, "!": 0.30, ",": 0.17, ":": 0.2, "…": 0.2}
 GAP_DEF = 0.12
-KISA_KELIME = {"bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"}
+KISA_KELIME = {"bir", "ve", "bu", "o", "şu", "ile", "ya", "ne", "iki", "üç", "dört", "beş"}
 
 
 def decode(path):
@@ -219,6 +219,31 @@ def main(konu):
                 st, acc = i + 1, 0
         if st <= b:
             sat.append([st, b])
+
+    # göz kırpan kartları birleştir: tek kelimelik ya da 0,7 sn'den kısa kart, aynı cümledeki komşusuyla (en fazla ~40 harf)
+    def ksure(seg):
+        return kel[seg[1]].get("e", kel[seg[1]]["s"] + 0.3) - kel[seg[0]]["s"]
+    birlesti = True
+    while birlesti:
+        birlesti = False
+        for idx, (x0, y0) in enumerate(sat):
+            if not (y0 == x0 or ksure((x0, y0)) < 0.7):
+                continue
+            aday = []
+            if idx > 0 and kel[sat[idx - 1][1]]["w"][-1:] not in ".?!":
+                aday.append(idx - 1)
+            if idx + 1 < len(sat) and kel[y0]["w"][-1:] not in ".?!":
+                aday.append(idx + 1)
+            aday.sort(key=lambda c: chars(min(sat[c][0], x0), max(sat[c][1], y0)))
+            for c in aday:
+                a2, b2 = min(sat[c][0], x0), max(sat[c][1], y0)
+                if chars(a2, b2) <= 40:
+                    sat[min(c, idx)] = [a2, b2]
+                    del sat[max(c, idx)]
+                    birlesti = True
+                    break
+            if birlesti:
+                break
 
     # kelimeyi metinle bul: ara("daire") -> ilk geçen kelimenin indeksi (sonra=saniye sınırı)
     def norm(x):

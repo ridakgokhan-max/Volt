@@ -594,18 +594,18 @@ const Cozum: S = ({ t, d, ws }) => {
     <g opacity={1 - ap(t, d - 0.75, 0.3)}>
       <Pikseller t={t} renk="#2f7a4f" o={0.12} />
       <Kamera t={t} d={d} z0={1.0} z1={1.12} vurus={[tb, ta]}>
-        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(${540 + (1 - easeOut(t / 0.7)) * 900} 700) scale(${(1 + 0.3 * easeOut(cl(t / Math.max(tb, 0.5)))) * (1 + 0.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.7)) * 30})`}>
+        <g opacity={1 - ap(t, tb - 0.3, 0.35)} transform={`translate(${540 + (1 - easeOut(t / 0.45)) * 900} 700) scale(${(1 + 0.3 * easeOut(cl(t / Math.max(tb, 0.5)))) * (1 + 0.5 * ez(ap(t, tb - 0.3, 0.35)))}) rotate(${Math.sin(t * 1.4) * 3 + (1 - easeOut(t / 0.45)) * 30})`}>
           <Telefon x={0} y={0} s={2.5} t={t} ekran="#1d2430" />
           <g opacity={1 - ap(t, tb - 0.4, 0.3)}>
             <QR x={0} y={-40} s={0.34} t={t} />
             <Isin x={0} y={-40} w={200} h={190} t={t * 3} o={ap(t, 0.3, 0.3)} />
           </g>
         </g>
-        <Adres x={540} y={560} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi t={t} />
-        <Adres x={540} y={770} k={sp(t, tb + 0.6)} text="odeme-otopark.xyz ✗" iyi={false} t={t} />
-        <line x1={330} x2={lerp(330, 690, ap(t, ta - 0.25, 0.25))} y1={770} y2={770} stroke={RED} strokeWidth={8} opacity={0.75} />
-        <g transform={`translate(940 770) scale(${Math.min(1.05, sp(t, ta - 0.2, 9))})`}><circle r={52} fill={RED} stroke={INK} strokeWidth={6} /><path d="M -18 -18 L 18 18 M 18 -18 L -18 18" stroke="#fff" strokeWidth={11} strokeLinecap="round" /></g>
-        <g transform={`translate(940 560) scale(${sp(t, tb + 0.1, 9) * (1 + 0.08 * Math.sin(t * 6))})`}><circle r={52} fill={GREEN} stroke={INK} strokeWidth={6} /><path d="M -22 0 L -6 18 L 24 -18" stroke="#fff" strokeWidth={11} fill="none" strokeLinecap="round" /></g>
+        <Adres x={540} y={660} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi t={t} />
+        <Adres x={540} y={890} k={sp(t, tb + 0.6)} text="odeme-otopark.xyz ✗" iyi={false} t={t} />
+        <line x1={330} x2={lerp(330, 690, ap(t, ta - 0.25, 0.25))} y1={890} y2={890} stroke={RED} strokeWidth={8} opacity={0.75} />
+        <g transform={`translate(940 890) scale(${Math.min(1.05, sp(t, ta - 0.2, 9))})`}><circle r={52} fill={RED} stroke={INK} strokeWidth={6} /><path d="M -18 -18 L 18 18 M 18 -18 L -18 18" stroke="#fff" strokeWidth={11} strokeLinecap="round" /></g>
+        <g transform={`translate(940 660) scale(${sp(t, tb + 0.1, 9) * (1 + 0.08 * Math.sin(t * 6))})`}><circle r={52} fill={GREEN} stroke={INK} strokeWidth={6} /><path d="M -22 0 L -6 18 L 24 -18" stroke="#fff" strokeWidth={11} fill="none" strokeLinecap="round" /></g>
       </Kamera>
       <KTag t={t} a={tb - 0.2} text="ÖNCE ADRESE BAK" size={58} />
     </g>

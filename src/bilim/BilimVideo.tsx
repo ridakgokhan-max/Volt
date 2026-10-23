@@ -181,10 +181,11 @@ const Altyazi: React.FC = () => {
   const inK = sp(t, K[a].s - 0.12, 18);
   const words = K.slice(a, b + 1);
   // kart içi satır kırma (piksel ölçümüyle): tırnak içi ve öbekler bölünmez, kısa bağlaç satır sonunda kalmaz, tek kelimelik satır olmaz
-  const KISA = new Set(["bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"]);
+  const KISA = new Set(["bir", "ve", "bu", "o", "şu", "ile", "ya", "ne"]);
+  const ENKLITIK = new Set(["de", "da", "ki"]);
   const OBEK = new Set(["sahte çıkartma", "karanlık tarafı", "birden fazla", "adrese bir", "bir anda", "kod burada", "üçte biri", "go oyunundan", "masahiro hara"]);
   const nrm = (w: string) => w.toLocaleLowerCase("tr-TR").replace(/[.,!?"“”:]/g, "");
-  const FS = 70, KENAR = 30; // kelime başına iç+dış boşluk
+  const FS = 70, KENAR = 26; // kelime başına iç+dış boşluk
   const GEN = W - A.sol - A.sag - 36;
   const olc = (w: string) => {
     try {
@@ -197,7 +198,7 @@ const Altyazi: React.FC = () => {
   };
   const gw = (ws2: typeof words) => ws2.reduce((n, k) => n + olc(k.w), 0);
   let satirlar: (typeof words)[] = [words];
-  if (gw(words) > GEN && words.length > 1) {
+  if (gw(words) > GEN / 0.9 && words.length > 1) {
     let best = 1e9, kir = 1;
     for (let i = 1; i < words.length; i++) {
       const sol = words.slice(0, i), sag = words.slice(i);
@@ -205,6 +206,7 @@ const Altyazi: React.FC = () => {
       if (sol.reduce((n, k) => n + (k.w.match(/["“”]/g) || []).length, 0) % 2 === 1) c += 5000;
       if (OBEK.has(`${nrm(sol[sol.length - 1].w)} ${nrm(sag[0].w)}`)) c += 1000;
       if (KISA.has(nrm(sol[sol.length - 1].w))) c += 2000;
+      if (ENKLITIK.has(nrm(sag[0].w))) c += 2000;
       if (words.length > 2 && (sol.length === 1 || sag.length === 1)) c += 1500;
       if (c < best) { best = c; kir = i; }
     }
@@ -219,7 +221,7 @@ const Altyazi: React.FC = () => {
       background: "rgba(18,22,38,0.8)", borderRadius: 34, padding: "14px 18px 18px",
     }}>
       {satirlar.map((sat, si) => {
-        const olcek = Math.min(1, GEN / gw(sat));
+        const olcek = Math.max(0.86, Math.min(1, GEN / gw(sat)));
         const bas = satirlar.slice(0, si).reduce((n, x) => n + x.length, 0);
         return (
           <div key={si} style={{ display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap", justifyContent: "center" }}>
@@ -233,7 +235,7 @@ const Altyazi: React.FC = () => {
         const col = active ? INK : k.vurgu && said ? ACC : "#ffffff";
         return (
           <span key={gi} style={{
-            display: "inline-block", margin: "0 5px", padding: "2px 10px", borderRadius: 18,
+            display: "inline-block", margin: "0 3px", padding: "2px 10px", borderRadius: 18,
             background: active ? ACC : "transparent", boxShadow: active ? "0 6px 0 rgba(0,0,0,0.35)" : "none",
             fontFamily, fontWeight: 900, fontSize: FS * olcek, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.9,
             WebkitTextStroke: active ? "0px" : "3px #1a1410", paintOrder: "stroke fill",

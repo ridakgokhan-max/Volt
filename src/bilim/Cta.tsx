@@ -125,7 +125,7 @@ export const CtaKatman: React.FC<{ t: number; adimlar: CtaAdim[]; baslangic?: { 
         let bx = x > 540 ? x - 70 - yarim : x + 70 + yarim;
         bx = Math.min(1040 - yarim, Math.max(40 + yarim, bx));
         const tx = Math.max(-yarim + 50, Math.min(yarim - 50, x - bx));
-        return <Balon x={bx} y={y - 200} k={balon.k} o={balon.o} yazi={balon.yazi} renk={ACC} tx={tx} />;
+        return <Balon x={bx} y={y - 160} k={balon.k} o={balon.o} yazi={balon.yazi} renk={ACC} tx={tx} />;
       })() : null}
       {halka ? <Halka x={halka.x} y={halka.y} t={halka.t} /> : null}
       {parmak ? <Parmak x={parmak.x} y={parmak.y} bas={parmak.b} /> : null}
