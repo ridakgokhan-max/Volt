@@ -180,32 +180,51 @@ const Altyazi: React.FC = () => {
   if (t > lineEnd + 0.45 && t < next) return null;
   const inK = sp(t, K[a].s - 0.12, 18);
   const words = K.slice(a, b + 1);
-  // kart içi satır kırma: tırnak içi bölünmez, kısa bağlaç satır sonunda kalmaz, tek kelimelik dul satır olmaz
+  // kart içi satır kırma (piksel ölçümüyle): tırnak içi ve öbekler bölünmez, kısa bağlaç satır sonunda kalmaz, tek kelimelik satır olmaz
   const KISA = new Set(["bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"]);
-  const uz = (ws2: typeof words) => ws2.reduce((n, k) => n + k.w.length + 1, 0);
-  let kir = -1;
-  if (uz(words) > 28 && words.length > 1) {
-    let best = 1e9;
+  const OBEK = new Set(["sahte çıkartma", "karanlık tarafı", "birden fazla", "adrese bir", "bir anda", "kod burada", "üçte biri", "go oyunundan", "masahiro hara", "ödeme sayfasına"]);
+  const nrm = (w: string) => w.toLocaleLowerCase("tr-TR").replace(/[.,!?"“”:]/g, "");
+  const FS = 70, KENAR = 30; // kelime başına iç+dış boşluk
+  const GEN = W - A.sol - A.sag - 36;
+  const olc = (w: string) => {
+    try {
+      const c = (olc as any).c || ((olc as any).c = document.createElement("canvas").getContext("2d"));
+      c.font = `900 ${FS}px ${fontFamily}`;
+      return c.measureText(w).width + KENAR;
+    } catch {
+      return w.length * FS * 0.6 + KENAR;
+    }
+  };
+  const gw = (ws2: typeof words) => ws2.reduce((n, k) => n + olc(k.w), 0);
+  let satirlar: (typeof words)[] = [words];
+  if (gw(words) > GEN && words.length > 1) {
+    let best = 1e9, kir = 1;
     for (let i = 1; i < words.length; i++) {
       const sol = words.slice(0, i), sag = words.slice(i);
-      const acik = sol.reduce((n, k) => n + (k.w.match(/["“”]/g) || []).length, 0) % 2 === 1;
-      if (acik) continue;
-      let c = Math.max(uz(sol), uz(sag));
-      if (KISA.has(sol[sol.length - 1].w.toLocaleLowerCase("tr-TR").replace(/[.,!?]/g, ""))) c += 40;
-      if (sag.length === 1) c += 100;
-      if (sol.length === 1) c += 30;
+      let c = Math.max(gw(sol), gw(sag));
+      if (sol.reduce((n, k) => n + (k.w.match(/["“”]/g) || []).length, 0) % 2 === 1) c += 5000;
+      if (OBEK.has(`${nrm(sol[sol.length - 1].w)} ${nrm(sag[0].w)}`)) c += 3000;
+      if (KISA.has(nrm(sol[sol.length - 1].w))) c += 2000;
+      if (words.length > 2 && (sol.length === 1 || sag.length === 1)) c += 1500;
       if (c < best) { best = c; kir = i; }
     }
+    satirlar = [words.slice(0, kir), words.slice(kir)];
   }
   // takip çağrısında Meraklı alttaki "Takip et" düğmesine yürür: altyazı onun üstüne binmesin diye yukarı kayar
   const takipK = ctaGorunur(t, (D.cta || []).filter((c) => c.tur === "takip"));
   return (
     <div style={{
-      position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexWrap: "wrap", justifyContent: "center",
-      alignContent: "flex-start", rowGap: 4, transform: `translateY(${(1 - inK) * 18 + 0 * takipK}px) scale(${0.94 + 0.06 * inK})`, opacity: 1,
+      position: "absolute", top: A.altyaziTop, left: A.sol, right: A.sag, display: "flex", flexDirection: "column", alignItems: "center",
+      rowGap: 4, transform: `translateY(${(1 - inK) * 18 + 0 * takipK}px) scale(${0.94 + 0.06 * inK})`, opacity: 1,
       background: "rgba(18,22,38,0.8)", borderRadius: 34, padding: "14px 18px 18px",
     }}>
-      {words.map((k, j) => [j === kir ? <div key={`br${j}`} style={{ flexBasis: "100%", height: 0 }} /> : null, (() => {
+      {satirlar.map((sat, si) => {
+        const olcek = Math.min(1, GEN / gw(sat));
+        const bas = satirlar.slice(0, si).reduce((n, x) => n + x.length, 0);
+        return (
+          <div key={si} style={{ display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap", justifyContent: "center" }}>
+            {sat.map((k, jj) => (() => {
+        const j = bas + jj;
         const gi = a + j;
         const active = t >= k.s && (gi === b ? t < k.e + 0.6 : t < K[gi + 1].s);
         const said = t >= k.s;
@@ -214,14 +233,17 @@ const Altyazi: React.FC = () => {
         const col = active ? INK : k.vurgu && said ? ACC : "#ffffff";
         return (
           <span key={gi} style={{
-            display: "inline-block", margin: "0 8px", padding: "2px 10px", borderRadius: 18,
+            display: "inline-block", margin: "0 5px", padding: "2px 10px", borderRadius: 18,
             background: active ? ACC : "transparent", boxShadow: active ? "0 6px 0 rgba(0,0,0,0.35)" : "none",
-            fontFamily, fontWeight: 900, fontSize: 70, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.9,
+            fontFamily, fontWeight: 900, fontSize: FS * olcek, lineHeight: 1.12, color: col, opacity: said ? 1 : 0.9,
             WebkitTextStroke: active ? "0px" : "3px #1a1410", paintOrder: "stroke fill",
             textShadow: active ? "none" : "0 5px 12px rgba(0,0,0,0.6)", transform: `scale(${pop})`,
           }}>{k.w}</span>
         );
-      })()])}
+            })())}
+          </div>
+        );
+      })}
     </div>
   );
 };
