@@ -237,7 +237,7 @@ def main(konu):
             aday.sort(key=lambda c: chars(min(sat[c][0], x0), max(sat[c][1], y0)))
             for c in aday:
                 a2, b2 = min(sat[c][0], x0), max(sat[c][1], y0)
-                if chars(a2, b2) <= 40:
+                if chars(a2, b2) <= 48:
                     sat[min(c, idx)] = [a2, b2]
                     del sat[max(c, idx)]
                     birlesti = True
