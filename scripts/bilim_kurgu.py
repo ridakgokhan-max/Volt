@@ -205,11 +205,15 @@ def main(konu):
             tirnak_acik = sum(z["w"].count('"') + z["w"].count('“') + z["w"].count('”') for z in kel[st:i + 1]) % 2 == 1
             kisa_son = kel[i]["w"].lower().strip(",") in KISA_KELIME
             bagli = i < b and f'{kel[i]["w"].lower().strip(",.")} {kel[i + 1]["w"].lower().strip(",.")}' in BAGLAR
-            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son and bagli and i - 1 > st:
-                # öbek bölünmesin: bir kelime önce böl
-                sat.append([st, i - 1])
-                st, acc = i, len(kel[i]["w"]) + 1
-                continue
+            if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and bagli:
+                # öbek bölünmesin: geriye doğru kısa kelime olmayan ilk yerde böl
+                j = i - 1
+                while j > st and kel[j]["w"].lower().strip(",") in KISA_KELIME:
+                    j -= 1
+                if j > st:
+                    sat.append([st, j])
+                    st, acc = j + 1, sum(len(z["w"]) + 1 for z in kel[j + 1:i + 1])
+                    continue
             if acc >= target * 0.92 and kalan_ok and (b - st) > 1 and not tirnak_acik and not kisa_son and not bagli:
                 sat.append([st, i])
                 st, acc = i + 1, 0
