@@ -182,7 +182,7 @@ const Altyazi: React.FC = () => {
   const words = K.slice(a, b + 1);
   // kart içi satır kırma (piksel ölçümüyle): tırnak içi ve öbekler bölünmez, kısa bağlaç satır sonunda kalmaz, tek kelimelik satır olmaz
   const KISA = new Set(["bir", "de", "da", "ve", "ki", "bu", "o", "şu", "ile", "ya", "ne"]);
-  const OBEK = new Set(["sahte çıkartma", "karanlık tarafı", "birden fazla", "adrese bir", "bir anda", "kod burada", "üçte biri", "go oyunundan", "masahiro hara", "ödeme sayfasına"]);
+  const OBEK = new Set(["sahte çıkartma", "karanlık tarafı", "birden fazla", "adrese bir", "bir anda", "kod burada", "üçte biri", "go oyunundan", "masahiro hara"]);
   const nrm = (w: string) => w.toLocaleLowerCase("tr-TR").replace(/[.,!?"“”:]/g, "");
   const FS = 70, KENAR = 30; // kelime başına iç+dış boşluk
   const GEN = W - A.sol - A.sag - 36;
@@ -203,7 +203,7 @@ const Altyazi: React.FC = () => {
       const sol = words.slice(0, i), sag = words.slice(i);
       let c = Math.max(gw(sol), gw(sag));
       if (sol.reduce((n, k) => n + (k.w.match(/["“”]/g) || []).length, 0) % 2 === 1) c += 5000;
-      if (OBEK.has(`${nrm(sol[sol.length - 1].w)} ${nrm(sag[0].w)}`)) c += 3000;
+      if (OBEK.has(`${nrm(sol[sol.length - 1].w)} ${nrm(sag[0].w)}`)) c += 1000;
       if (KISA.has(nrm(sol[sol.length - 1].w))) c += 2000;
       if (words.length > 2 && (sol.length === 1 || sag.length === 1)) c += 1500;
       if (c < best) { best = c; kir = i; }
