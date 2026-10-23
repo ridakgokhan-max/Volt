@@ -347,7 +347,7 @@ def main(konu):
     fc = ("[0:a]loudnorm=I=-16:TP=-2:LRA=9,"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
           f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
-          "[m][vk]sidechaincompress=threshold=0.03:ratio={K.get("sc_ratio", 5)}:attack=20:release={K.get("sc_release", 400)}[md];"
+          f"[m][vk]sidechaincompress=threshold=0.03:ratio={K.get('sc_ratio', 5)}:attack=20:release={K.get('sc_release', 400)}[md];"
           "[2:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.62[s];"
           "[v][md][s]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.8:level=false[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/voice.wav", "-i", f"{tmp}/music.wav", "-i", f"{tmp}/sfx.wav",
