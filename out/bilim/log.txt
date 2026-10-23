@@ -1,10 +1,10 @@
 metinle hizalandı: transkript 137 -> metin 135 kelime
-CTA: [{'tur': 'yorum', 'bas': 61.692, 'yazi': 'Adrese bakıyor musun?', 'kostum': 'kulaklik'}, {'tur': 'begen', 'bas': 40.706, 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 62.118, 'kostum': 'kulaklik'}]
+CTA: [{'tur': 'yorum', 'bas': 61.693, 'yazi': 'Adrese bakıyor musun?', 'kostum': 'kulaklik'}, {'tur': 'begen', 'bas': 40.707, 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 62.118, 'kostum': 'kulaklik'}]
 müzik: teknoloji -> paulyudin-minimal-164833.mp3
-qr-kod: 86.3 sn kayıt -> 65.0 sn video, 135 kelime, 45 altyazı satırı, 7 sahne
+qr-kod: 86.3 sn kayıt -> 65.0 sn video, 135 kelime, 40 altyazı satırı, 7 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
