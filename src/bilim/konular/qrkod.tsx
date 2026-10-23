@@ -352,7 +352,8 @@ const Giris: S = ({ t, d, ws }) => {
 const Tarih: S = ({ t, d, ws, ses }) => {
   const ty = ws("1994"), tm = ws("masahiro"), ta = ws("araba");
   const fab = ap(t, ta - 0.4, 0.5);
-    const kartK = sp(t, tm - 0.2, 12) * (1 - ap(t, ta - 0.5, 0.3));
+    const kartK = sp(t, tm - 0.2, 12);
+    const kartCik = ap(t, ta - 0.6, 0.25);
   return (
     <g>
       <Pikseller t={t} renk="#7a5a2e" o={0.12} />
@@ -376,7 +377,7 @@ const Tarih: S = ({ t, d, ws, ses }) => {
           </g>
         </g>
         {/* Hara kartı: yandan yaylanarak girer */}
-        <g transform={`translate(${lerp(-400, 540, kartK)} 1080) rotate(${(1 - kartK) * -12})`} opacity={cl(kartK * 1.5)}>
+        <g transform={`translate(${lerp(-400, 540, kartK)} 1080) rotate(${(1 - kartK) * -12})`} opacity={cl(kartK * 1.5) * (1 - kartCik)}>
           <rect x={-300} y={-80} width={600} height={160} rx={28} fill="#fff" stroke={INK} strokeWidth={8} />
           <circle cx={-210} cy={0} r={52} fill="#f2c9a0" stroke={INK} strokeWidth={6} />
           <path d="M -262 -10 Q -210 -80 -158 -10 Z" fill={INK} />
@@ -547,7 +548,7 @@ const Karanlik: S = ({ t, d, ws, ses }) => {
       <Pikseller t={t} renk={RED} o={0.1} />
       <g transform={`translate(${titre * Math.sin(t * 60) * 10} 0)`}>
         <Kamera t={t} d={Math.min(d, 3.2)} z0={1.0} z1={1.25} y0={0} y1={-60} x0={80} x1={-20} vurus={[tk, td, ts, tok]}>
-          <g transform={`translate(${telX} 720) scale(${1 + ez(gir) * 5}) translate(${-telX} -720)`}>
+          <g opacity={1 - ap(t, tok + 0.65, 0.15)} transform={`translate(${telX} 720) scale(${1 + ez(gir) * 5}) translate(${-telX} -720)`}>
             <Glow cx={380} cy={420} r={320} id="sl" color="#fff3b0" o={(0.35 + 0.08 * Math.sin(t * 7)) * (t < 3 && (Math.sin(t * 9) > 0.75 || Math.sin(t * 23) > 0.9) ? 0.15 : 1)} />
             <Parkmetre x={380} y={780} t={t} sahte={yapis} />
             <El x={lerp(820, 470, easeOut(cl((t - (td + 0.3)) / 1.2)))} y={620} o={ap(t, td, 0.3) * (1 - ap(t, ts + 0.4, 0.4))} />
@@ -603,8 +604,8 @@ const Cozum: S = ({ t, d, ws }) => {
         <Adres x={540} y={560} k={sp(t, tb - 0.1)} text="belediye.gov.tr ✓" iyi t={t} />
         <Adres x={540} y={770} k={sp(t, tb + 0.6)} text="odeme-otopark.xyz ✗" iyi={false} t={t} />
         <line x1={330} x2={lerp(330, 690, ap(t, ta - 0.25, 0.25))} y1={770} y2={770} stroke={RED} strokeWidth={8} opacity={0.75} />
-        <g transform={`translate(930 690) scale(${sp(t, ta - 0.2, 9)})`}><circle r={58} fill={RED} stroke={INK} strokeWidth={6} /><Cross cx={0} cy={0} r={34} k={1} sw={12} /></g>
-        <g transform={`translate(930 480) scale(${sp(t, tb + 0.1, 9) * (1 + 0.08 * Math.sin(t * 6))})`}><circle r={52} fill={GREEN} stroke={INK} strokeWidth={6} /><path d="M -22 0 L -6 18 L 24 -18" stroke="#fff" strokeWidth={11} fill="none" strokeLinecap="round" /></g>
+        <g transform={`translate(940 770) scale(${Math.min(1.05, sp(t, ta - 0.2, 9))})`}><circle r={52} fill={RED} stroke={INK} strokeWidth={6} /><path d="M -18 -18 L 18 18 M 18 -18 L -18 18" stroke="#fff" strokeWidth={11} strokeLinecap="round" /></g>
+        <g transform={`translate(940 560) scale(${sp(t, tb + 0.1, 9) * (1 + 0.08 * Math.sin(t * 6))})`}><circle r={52} fill={GREEN} stroke={INK} strokeWidth={6} /><path d="M -22 0 L -6 18 L 24 -18" stroke="#fff" strokeWidth={11} fill="none" strokeLinecap="round" /></g>
       </Kamera>
       <KTag t={t} a={tb - 0.2} text="ÖNCE ADRESE BAK" size={58} />
     </g>
