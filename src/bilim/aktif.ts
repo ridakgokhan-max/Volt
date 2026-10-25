@@ -40,6 +40,8 @@ import * as canvademo from "./konular/canvademo";
 import * as cicek3d from "./konular/cicek3d";
 import cicek3dData from "./data/cicek-3d.json";
 import canvademoData from "./data/canva-demo.json";
+import * as sogan from "./konular/sogan";
+import soganData from "./data/sogan.json";
 
 type Konu = { data: typeof parmakIziData; SAHNE: Record<string, any>; KAPAK: React.FC; KAPAK_YAZI: { ust: string; buyuk: string; alt: string } };
 const KONULAR: Record<string, Konu> = {
@@ -63,6 +65,7 @@ const KONULAR: Record<string, Konu> = {
   "cicek-sulama": { data: cicekData as any, ...cicek } as Konu,
   "canva-demo": { data: canvademoData as any, ...canvademo } as Konu,
   "cicek-3d": { data: cicek3dData as any, ...cicek3d } as Konu,
+  sogan: { data: soganData as any, ...sogan } as Konu,
 };
 const secilen = (getInputProps() as { konu?: string }).konu || "demo";
 const k = KONULAR[secilen] || KONULAR["demo"];

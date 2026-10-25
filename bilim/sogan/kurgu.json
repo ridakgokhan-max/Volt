@@ -1,0 +1,36 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 0.7,
+ "kesimler": [[33.4, 38.15], [42.6, 46.25], [48.5, 51.6], [66.9, 75.0]],
+ "kelime_sil": [60, 61, 62, 63, 64, 65, 76, 77, 78, 79, 80, 81, 88, 89, 90, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132],
+ "seri": {"no": 14, "toplam": 30, "kategori": "Bilim"},
+ "kanca": {"yazi": "SUÇLU: BIÇAK!", "alt": "Soğan neden ağlatır?", "sure": 2.0},
+ "cta": [
+  {"tur": "begen", "kelime": "kazandı"},
+  {"tur": "yorum", "kelime": "keskin", "yazi": "Bıçağın keskin mi?"},
+  {"tur": "takip", "son": true, "ofset": -2.2}
+ ],
+ "cta_kostum": "onluk",
+ "vurgu": ["suçlu", "bıçak.", "savunuyor.", "ayrı", "karışıyor", "yakıcı", "yanıyor!\"", "\"Yıka!\"", "Japon", "enzim", "Ig", "yüksek", "bastırıyor.", "fışkırtıyor.", "140", "keskin", "yavaş", "ulaşamıyor.", "Bıçağa"],
+ "muzik": "merak",
+ "sahneler": [
+  {"id": "giris", "bg": "k:#E2733A", "ilk": 0},
+  {"id": "savunma", "bg": "k:#7FB069", "ilk": "ama", "gecis": "savur"},
+  {"id": "hucre", "bg": "k:#6C8EBF", "ilk": "soğanın", "gecis": "savur"},
+  {"id": "gaz", "bg": "k:#C9A227", "ilk": "=bıçak", "gecis": "savur"},
+  {"id": "goz", "bg": "k:#E58A9A", "ilk": "=bu", "gecis": "savur"},
+  {"id": "japon", "bg": "k:#F2E3C6", "ilk": "işin", "gecis": "savur"},
+  {"id": "cornell", "bg": "k:#B31B1B", "ilk": "peki", "gecis": "savur"},
+  {"id": "kor", "bg": "k:#3D5A80", "ilk": "kör", "gecis": "savur"},
+  {"id": "keskin", "bg": "k:#3FAE6A", "ilk": "=ama", "gecis": "savur"},
+  {"id": "son", "bg": "k:#E2733A", "ilk": "yani", "gecis": "savur"}
+ ],
+ "aralar": [[5.56, 0.4], [10.7, 0.35], [33.03, 0.45], [59.1, 0.45], [66.4, 0.4], [93.86, 0.45], [98.64, 0.35]],
+ "muzik_ses": 0.5,
+ "baglar": ["ayrı odalarda", "yakıcı bir", "gözyaşı bezlerine", "ig nobel", "yüksek hızlı", "140 kilometreyi", "göz hizasına", "keskin bir", "kör bıçak", "bir dahaki"],
+ "sc_release": 220,
+ "sc_ratio": 3
+}
