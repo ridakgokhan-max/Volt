@@ -3,7 +3,7 @@ ses başlangıcına oturtulan kelime: 44
 CTA: [{'tur': 'begen', 'bas': 41.327, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 62.648, 'yazi': 'Bıçağın keskin mi?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 67.313, 'kostum': 'onluk'}]
 müzik: merak -> sonican-sneaky-curious-jazzy-506460.mp3
 sogan: 100.4 sn kayıt -> 70.8 sn video, 148 kelime, 49 altyazı satırı, 10 sahne
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -43,7 +43,7 @@ Getting composition
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [34m○                    out/bilim/sogan.mp4[39m [90m48.4 MB[39m
-[0;93m2026-10-25 20:46:32.186574036 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[0;93m2026-10-25 21:08:16.802119807 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
 [BİLGİ] Söz: duyulan konuşma metinle %98 uyumlu
 SONUÇ: GEÇTİ
 durum: success
