@@ -497,7 +497,7 @@ const Japon: S = ({ t, d, ws }) => {
           </g>
         </g>
         {/* laboratuvar: büyüteç gizli enzimi bulur */}
-        <g transform={`translate(${(1 - gec) * 1100 - odul * 1100} 0) translate(540 760) scale(1.3) translate(-540 -760)`}>
+        <g transform={`translate(${(1 - gec) * 1500 - odul * 1500} 0) translate(540 760) scale(1.3) translate(-540 -760)`}>
           {Array.from({ length: 7 }).map((_, i) => {
             const x = 170 + i * 125, y = 760 + Math.sin(adim(t) * 3 + i) * 18;
             const gizli = i === 4;
@@ -660,7 +660,7 @@ const Keskin: S = ({ t, d, ws }) => {
         {/* birkaç küçük damla: göz hizasına varamadan geri düşer */}
         <Fiskir t={t} t0={tdm - 0.2} x={540} y={850} n={8} hiz={0.42} yay={40} s={0.6} />
         <Fiskir t={t} t0={tdm + 0.5} x={540} y={850} n={6} hiz={0.4} yay={40} s={0.55} />
-        {t > tdm ? <g transform={`translate(780 ${600 + Math.sin(t * 3) * 6}) rotate(4)`} opacity={ap(t, tdm, 0.25)}><rect x={-200} y={-40} width={400} height={74} rx={14} fill={KREM} stroke={INK} strokeWidth={4} /><text x={0} y={12} textAnchor="middle" fontSize={38} fontWeight={900} fill={GREEN} style={font}>ÇOK DAHA AZ DAMLA</text></g> : null}
+        {t > tdm ? <g transform={`translate(830 ${560 + Math.sin(t * 3) * 6}) rotate(4)`} opacity={ap(t, tdm, 0.25)}><rect x={-180} y={-38} width={360} height={70} rx={14} fill={KREM} stroke={INK} strokeWidth={4} /><text x={0} y={11} textAnchor="middle" fontSize={34} fontWeight={900} fill={GREEN} style={font}>ÇOK DAHA AZ DAMLA</text></g> : null}
         <g transform={`translate(880 760) scale(${Math.min(1.05, sp(t, tu - 0.1, 9))})`}>
           <circle r={64} fill={GREEN} stroke={INK} strokeWidth={7} />
           <path d="M -28 0 L -8 22 L 30 -22" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" />
