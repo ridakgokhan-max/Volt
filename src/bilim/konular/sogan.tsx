@@ -672,7 +672,7 @@ const Keskin: S = ({ t, d, ws }) => {
           <path d="M -28 0 L -8 22 L 30 -22" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" />
         </g>
       </Kamera>
-      <Serit t={t} a={tdm - 0.05} text="ÇOK DAHA AZ DAMLA" x={540} y={325} size={42} rot={-1} bg={GREEN} color="#fff" />
+      <Serit t={t} a={tdm - 0.05} text="ÇOK DAHA AZ DAMLA" x={540} y={325} size={46} rot={-1} bg={INK} color={KREM} />
       <Serit t={t} a={tk - 0.05} text="KESKİN" x={250} y={420} size={64} rot={-3} bg={GREEN} color="#fff" />
       <Serit t={t} a={tyv - 0.05} text="+ YAVAŞ" x={820} y={420} size={64} rot={3} bg={KREM} color={INK} />
     </g>
