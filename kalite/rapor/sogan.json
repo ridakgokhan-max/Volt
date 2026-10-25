@@ -1,20 +1,15 @@
 {
  "konu": "sogan",
- "sonuc": "UYARI",
- "sure": 70.0,
- "lufs": -14.2,
- "tepe_dbtp": -2.6,
- "hareket_ortalama": 4.45,
+ "sonuc": "GEÇTİ",
+ "sure": 70.13,
+ "lufs": -14.1,
+ "tepe_dbtp": -2.8,
+ "hareket_ortalama": 4.64,
  "bulgular": [
-  {
-   "seviye": "UYARI",
-   "alan": "Söz",
-   "mesaj": "metinde olmayan fazladan söz: 'kmdir o' (~56.4 sn)"
-  },
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %93 uyumlu"
+   "mesaj": "duyulan konuşma metinle %97 uyumlu"
   }
  ]
 }

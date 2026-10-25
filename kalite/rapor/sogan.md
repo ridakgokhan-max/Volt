@@ -1,8 +1,7 @@
 # Otomatik kalite kontrolü — sogan
 
-**Sonuç: UYARI**
+**Sonuç: GEÇTİ**
 
-- Süre: 70.0 sn · Ses: -14.2 LUFS, tepe -2.6 dBTP · Ortalama hareket: 4.45
+- Süre: 70.1 sn · Ses: -14.1 LUFS, tepe -2.8 dBTP · Ortalama hareket: 4.64
 
-- **UYARI** · Söz: metinde olmayan fazladan söz: 'kmdir o' (~56.4 sn)
-- **BİLGİ** · Söz: duyulan konuşma metinle %93 uyumlu
+- **BİLGİ** · Söz: duyulan konuşma metinle %97 uyumlu
