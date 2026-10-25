@@ -16,7 +16,7 @@ def cues(B, S, wt, st, sure, ara):
     p(S, ara("2002"), E("dijital"), 0.35)
     p(S, ara("enzim"), E("anahtar"), 0.4)
     p(S, ara("nobel"), E("jingle_basari"), 0.3)
-    p(S, ara("peki"), E("bong"), 0.35)
+    p(S, ara("peki"), E("bong"), 0.2)
     p(S, ara("kamerayla"), E("kart"), 0.4)
     p(S, ara("bastırıyor"), E("darbe_hafif"), 0.4)
     p(S, ara("fışkırtıyor"), E("patlama"), 0.25)

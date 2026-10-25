@@ -3,7 +3,7 @@
  "temizle": true,
  "dongu": true,
  "imza": true,
- "son_bosluk": 0.7,
+ "son_bosluk": 1.0,
  "kesimler": [
   [
    3.1,
@@ -68,11 +68,11 @@
  "cta": [
   {
    "tur": "begen",
-   "kelime": "kazandı"
+   "kelime": "çıktı"
   },
   {
    "tur": "yorum",
-   "kelime": "keskin",
+   "kelime": "kesersen",
    "yazi": "Bıçağın keskin mi?"
   },
   {
@@ -193,9 +193,13 @@
   [
    98.64,
    0.35
+  ],
+  [
+   57.12,
+   0.45
   ]
  ],
- "muzik_ses": 0.5,
+ "muzik_ses": 0.38,
  "baglar": [
   "ayrı odalarda",
   "yakıcı bir",
@@ -215,7 +219,23 @@
   "japon bilim",
   "beynine \"yanıyor!\""
  ],
- "sc_release": 450,
- "sc_ratio": 3,
- "gecis_ses": 0.28
+ "sc_release": 900,
+ "sc_ratio": 2,
+ "gecis_ses": 0.28,
+ "kir_sonra": [
+  "an",
+  "karışıyor",
+  "uçan",
+  "üreten",
+  [
+   "insanları",
+   1
+  ],
+  "kesmeyi",
+  "aşan",
+  "ilginci",
+  "üniversitesi'nde",
+  "ağlatırsa"
+ ],
+ "cta_ses": 0.5
 }

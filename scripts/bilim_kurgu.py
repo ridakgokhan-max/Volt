@@ -157,19 +157,21 @@ def main(konu):
     voice = np.concatenate(out)
     sure = len(voice) / SR
 
-    def remap(t):
+    def remap(t, bas=False):
+        # bas=True (kelime başı): sessizlik/kesim içine düşen başlangıç bir SONRAKİ parçanın başına gider
+        # (whisper kesim sonrası ilk kelimeyi erken başlatır); kelime sonu ise önceki parçanın sonunda kalır
         best = None
         for a0, b0, n0 in mapping:
             if a0 <= t <= b0:
                 return n0 + (t - a0)
             if t < a0:
-                return n0 if best is None else best
+                return n0 if (best is None or bas) else best
             best = n0 + (b0 - a0)
         return best
 
     kel = []
     for i, w in enumerate(words):
-        s, e = remap(w["start"]), remap(w["end"])
+        s, e = remap(w["start"], bas=True), remap(w["end"])
         kel.append({"w": w["w"], "s": round(s, 3), "e": round(max(e, s + 0.08), 3), "vurgu": i in vurgu})
     # ses başlangıcına oturtma: kelime başı sessizliğe düşüyorsa 0,7 sn içindeki ilk ses başlangıcına kaydır
     hop10 = SR // 100
@@ -179,11 +181,31 @@ def main(konu):
     oturan = 0
     for k in kel:
         i0 = int(k["s"] * 100)
+        # kelime başından sonraki 0,45 sn içinde ≥150 ms sessizlik varsa kelime aslında o sessizlikten sonra başlıyor
+        # (whisper başlangıcı bir önceki kelimenin kuyruğuna koymuş)
+        if 0 <= i0 < nz and zarf[max(0, i0 - 2):i0 + 3].max() >= esik:
+            j, sus = i0, 0
+            while j < min(nz, i0 + 60):
+                sus = sus + 1 if zarf[j] < esik else 0
+                if sus >= 15:
+                    break
+                j += 1
+            if sus >= 15:
+                sus_bas = j - 15
+                while j < min(nz, i0 + 120) and zarf[j] < esik:
+                    j += 1
+                # yalnızca kelimenin (whisper) sonu sessizliğin içine taşıyorsa: gerçek başlangıç sessizlikten sonradır
+                if j < min(nz, i0 + 120) and k["e"] * 100 > sus_bas + 5:
+                    yeni = round(j / 100 - 0.02, 3)
+                    k["e"] = max(k["e"], yeni + 0.15)
+                    k["s"] = yeni
+                    oturan += 1
+                    continue
         if 0 <= i0 < nz and zarf[max(0, i0 - 2):i0 + 3].max() < esik:
             j = i0
-            while j < min(nz, i0 + 70) and zarf[j] < esik:
+            while j < min(nz, i0 + 120) and zarf[j] < esik:
                 j += 1
-            if j < min(nz, i0 + 70):
+            if j < min(nz, i0 + 120):
                 yeni = round(j / 100 - 0.02, 3)
                 k["e"] = max(k["e"], yeni + 0.12)
                 k["s"] = yeni
@@ -211,6 +233,16 @@ def main(konu):
         parts.append((st, b))
     sat = []
     BAGLAR = {x.lower() for x in K.get("baglar", [])}
+    # elle zorunlu satır sonu: kurgu.json "kir_sonra": ["kelime", ["kelime", n], ...] (n. geçişinden sonra)
+    ZORUNLU = set()
+    for z in K.get("kir_sonra", []):
+        hedef, sira = (z[0], z[1]) if isinstance(z, list) else (z, 0)
+        c = 0
+        for ii, kk in enumerate(kel):
+            if kk["w"].lower().strip(",.!?:;\"") == hedef.lower():
+                if c == sira:
+                    ZORUNLU.add(ii); break
+                c += 1
     for a, b in parts:
         n = max(1, -(-chars(a, b) // 25))
         n = min(n, b - a + 1)
@@ -218,6 +250,10 @@ def main(konu):
         st, acc = a, 0
         for i in range(a, b + 1):
             acc += len(kel[i]["w"]) + 1
+            if i in ZORUNLU and i < b:
+                sat.append([st, i])
+                st, acc = i + 1, 0
+                continue
             left_words = b - i
             kalan_ok = left_words >= 2 or (left_words == 1 and len(kel[b]["w"]) >= 9)
             tirnak_acik = sum(z["w"].count('"') + z["w"].count('“') + z["w"].count('”') for z in kel[st:i + 1]) % 2 == 1
@@ -248,9 +284,10 @@ def main(konu):
             if not (y0 == x0 or ksure((x0, y0)) < 0.7):
                 continue
             aday = []
-            if idx > 0 and kel[sat[idx - 1][1]]["w"][-1:] not in ".?!":
+            son_harf = lambda w: w.rstrip('"”’\'')[-1:]
+            if idx > 0 and son_harf(kel[sat[idx - 1][1]]["w"]) not in ".?!" and sat[idx - 1][1] not in ZORUNLU:
                 aday.append(idx - 1)
-            if idx + 1 < len(sat) and kel[y0]["w"][-1:] not in ".?!":
+            if idx + 1 < len(sat) and son_harf(kel[y0]["w"]) not in ".?!" and y0 not in ZORUNLU:
                 aday.append(idx + 1)
             aday.sort(key=lambda c: chars(min(sat[c][0], x0), max(sat[c][1], y0)))
             for c in aday:
@@ -356,12 +393,13 @@ def main(konu):
             B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), float(K.get("gecis_ses", 0.55)))
     if AC:  # açılış vuruşu
         B.put(sfx, 0.0, B.katman(B.efekt("vurus", yedek=B.boom), B.riser(max(0.4, AC))), 0.6)
+    cs = float(K.get("cta_ses", 1.0))
     for c in data.get("cta", []):  # CTA: yürüyüş, balon pıtı, dokunuş
-        B.put(sfx, c["bas"] + 0.05, B.whoosh(0.5), 0.3)
-        B.put(sfx, c["bas"] + 0.95, B.pop(), 0.45)
-        B.put(sfx, c["bas"] + 1.25, B.katman(B.efekt("tik"), B.blip(1200, 0.08)), 0.55)
+        B.put(sfx, c["bas"] + 0.05, B.whoosh(0.5), 0.3 * cs)
+        B.put(sfx, c["bas"] + 0.95, B.pop(), 0.45 * cs)
+        B.put(sfx, c["bas"] + 1.25, B.katman(B.efekt("tik"), B.blip(1200, 0.08)), 0.55 * cs)
         if c["tur"] == "begen":
-            B.put(sfx, c["bas"] + 1.3, B.chime_up(), 0.3)
+            B.put(sfx, c["bas"] + 1.3, B.chime_up(), 0.3 * cs)
     import inspect
     if "ara" in inspect.signature(mod.cues).parameters:
         mod.cues(B, sfx, wt, starts, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])

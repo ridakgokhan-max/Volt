@@ -405,7 +405,7 @@ const GazS: S = ({ t, d, ws }) => {
       <Kirpinti t={t} renk="#f5ebc4" />
       <Kamera t={t} d={d} z0={1.05} z1={1.0 + 0.05} y0={0} y1={-120} vurus={[tp, tk, ty]}>
         <Hucre t={t} x={540} y={900} s={1} kirik={kir} karis={kar} />
-        <Gaz t={t} t0={th - 0.6} x={540} y={820} n={14} yukseklik={430} o={ap(t, th - 0.6, 0.5)} />
+        <Gaz t={t} t0={th - 0.6} x={540} y={820} n={14} yukseklik={330} o={ap(t, th - 0.6, 0.5)} />
         {/* bıçak yukarıdan iner, duvarı keser, yukarı çıkar */}
         <defs><clipPath id="gaz-ust"><rect x={-200} y={240} width={1480} height={1700} /></clipPath></defs>
         <g clipPath="url(#gaz-ust)">
@@ -417,7 +417,7 @@ const GazS: S = ({ t, d, ws }) => {
       <Serit t={t} a={tp - 0.05} cikis={tk - 0.2} text="TETİĞİ BIÇAK ÇEKER" x={540} y={1170} size={56} rot={-2} bg={INK} color={KREM} />
       <Serit t={t} a={tk - 0.05} cikis={th - 0.15} text="KARIŞIYOR!" x={540} y={1170} size={66} rot={2} bg={ACC} />
       <Serit t={t} a={th - 0.05} text="YAKICI GAZ" x={540} y={370} size={76} rot={-3} bg={KIRMIZI} color={KREM} />
-      {t > th + 0.3 ? <text x={540} y={470} textAnchor="middle" fontSize={40} fontWeight={900} fill={INK} opacity={ap(t, th + 0.3, 0.3) * 0.85} style={font}>(propantiyal S-oksit)</text> : null}
+      {t > th + 0.3 ? <g opacity={ap(t, th + 0.3, 0.3)}><rect x={330} y={438} width={420} height={50} rx={12} fill={KREM} stroke={INK} strokeWidth={3} /><text x={540} y={474} textAnchor="middle" fontSize={34} fontWeight={900} fill={INK} style={font}>(propantiyal S-oksit)</text></g> : null}
     </g>
   );
 };
@@ -489,7 +489,7 @@ const Japon: S = ({ t, d, ws }) => {
             <rect x={-330} y={-230} width={660} height={460} rx={14} fill={KREM} />
             <path d={`M -310 -210 Q -150 ${-225 + Math.sin(t * 3) * 14} 0 -210 T 310 -210 L 310 210 Q 150 ${195 + Math.sin(t * 3 + 1) * 14} 0 210 T -310 210 Z`} fill="#fff" stroke={INK} strokeWidth={5} />
             <circle r={130 + 6 * Math.sin(t * 2)} fill={KIRMIZI} />
-            <text x={0} y={300} textAnchor="middle" fontSize={56} fontWeight={900} fill={INK} style={font}>JAPONYA</text>
+            <text x={0} y={-255} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={font}>JAPONYA</text>
           </g>
           <g transform={`translate(540 1060) scale(${sp(t, t02 - 0.15, 9)}) rotate(-4)`} filter="url(#kgolge)">
             <rect x={-190} y={-75} width={380} height={140} rx={24} fill={INK} />
@@ -535,12 +535,19 @@ const Japon: S = ({ t, d, ws }) => {
       <Serit t={t} a={tgu - 0.05} cikis={tdu - 0.15} text="ÖNCE GÜLDÜREN..." x={540} y={1150} size={56} rot={-2} />
       <Serit t={t} a={tdu - 0.05} text="...SONRA DÜŞÜNDÜREN" x={540} y={1150} size={56} rot={2} bg={BLUE} color="#fff" />
       <Muhur t={t} a={tdu + 0.25} text="2013" x={850} y={500} size={80} rot={12} />
-      {/* şüpheli bıçak: hikâyenin ipi ortada da görünsün */}
-      <g opacity={ap(t, 0.4, 0.4) * 0.95} transform={`translate(${880 + Math.sin(t * 1.7) * 6} ${1520}) rotate(${-30 + Math.sin(t * 2) * 4})`} filter="url(#kgolge)">
-        <g transform="translate(-200 -60)"><Parca t={t} ad="bicak" x={200} y={0} w={300} a={-1} /></g>
-        <circle cx={120} cy={-90} r={44} fill={ACC} stroke={INK} strokeWidth={5} />
-        <text x={120} y={-72} textAnchor="middle" fontSize={56} fontWeight={900} fill={INK} style={font}>?</text>
-      </g>
+      {/* şüpheli bıçak: hikâyenin ipi ortada da görünsün; sahne sonunda ortaya gelip büyür (Cornell'deki bıçağa devreder) */}
+      {(() => {
+        const dev = ez(ap(t, d - 0.9, 0.8));
+        return (
+          <g opacity={ap(t, 0.4, 0.4)} transform={`translate(${lerp(820, 540, dev) + Math.sin(t * 1.7) * 6} ${lerp(1620, 800, dev)}) rotate(${lerp(-18, -20, dev) + Math.sin(t * 2) * 3}) scale(${lerp(1, 2.6, dev)})`} filter="url(#kgolge)">
+            <g transform="translate(-160 -50)"><Parca t={t} ad="bicak" x={160} y={0} w={320} a={-1} /></g>
+            <g opacity={1 - dev}>
+              <rect x={-130} y={-150} width={260} height={64} rx={14} fill={KIRMIZI} stroke={INK} strokeWidth={4} />
+              <text x={0} y={-106} textAnchor="middle" fontSize={40} fontWeight={900} fill="#fff" style={font}>ŞÜPHELİ ?</text>
+            </g>
+          </g>
+        );
+      })()}
       <Merakli x={150} y={1840} s={0.55} t={t} hareket={t > tdu - 0.1 ? "dusun" : t > tgu - 0.3 ? "kahkaha" : "anlat"} kostum="onluk" />
     </g>
   );
@@ -549,7 +556,7 @@ const Japon: S = ({ t, d, ws }) => {
 // 7 — Peki bıçak nereden çıktı? 2025, ABD, Cornell; soğan kesmeyi yüksek hızlı kamerayla çektiler
 const Cornell: S = ({ t, d, ws }) => {
   const tb = ws("bıçak"), t25 = ws("2025"), tc = ws("cornell"), ty = ws("yüksek"), tk = ws("kamerayla");
-  const ts2 = ws("soğan"); const kam = ap(t, ts2 - 0.3, 0.45);
+  const ts2 = ws("bilim"); const kam = ap(t, ts2 - 0.3, 0.45);
   return (
     <g>
       <KolajDefs />
@@ -561,7 +568,7 @@ const Cornell: S = ({ t, d, ws }) => {
           <Bant x={840} y={790} w={130} rot={-28} />
         </g>
         {/* Cornell kulesi fotoğrafı */}
-        <Foto t={t} ad="cornellf" id="c1" x={350} y={790} w={400} rot={-4} a={t25 + 0.25} zoom={1 + 0.25 * cl((t - t25) / 5)} />
+        {(() => { const kc = ez(ap(t, ws("üniversitesi") + 0.5, 0.5)); return <Foto t={t} ad="cornellf" id="c1" x={lerp(350, 230, kc)} y={lerp(790, 640, kc)} w={lerp(400, 280, kc)} rot={-4} a={t25 + 0.25} zoom={1 + 0.4 * cl((t - t25) / 4)} />; })()}
         <circle cx={350} cy={790} r={360 + ((t * 1.2) % 1) * 140} fill="none" stroke={KREM} strokeWidth={10} opacity={ap(t, t25 + 0.4, 0.3) * (1 - ((t * 1.2) % 1)) * 0.6} />
         <g transform={`translate(800 600) scale(${sp(t, t25 - 0.1, 9)}) rotate(5)`} filter="url(#kgolge)">
           <rect x={-150} y={-62} width={300} height={124} rx={22} fill={INK} />
@@ -606,7 +613,7 @@ const Kor: S = ({ t, d, ws }) => {
   const hizli = ap(t, th - 0.1, 0.4);
   const bicakY = lerp(640, 862, ez(bas)) + (kir ? lerp(0, 150, ap(t, tf - 0.05, 0.2)) : 0) + hizli * Math.max(0, Math.sin((t - th) * 9)) * -160;
   const yuk = ap(t, t140 - 0.6, 0.8);
-  const deger = yuk < 1 ? 145 * ez(yuk) : 142 + 3 * Math.exp(-(t - t140 - 0.2) * 3) + Math.sin(t * 30) * 1.2;
+  const deger = yuk < 1 ? 145 * ez(yuk) : 142 + 3 * Math.exp(-(t - t140 - 0.2) * 6) + Math.sin(t * 30) * 0.4;
   return (
     <g>
       <KolajDefs />
@@ -622,7 +629,7 @@ const Kor: S = ({ t, d, ws }) => {
         <SoganKesit x={540} y={1110} t={t} ez={ez(bas) * (1 - kir * 0.4)} kesik={kir * 0.6} />
         {/* kör bıçak giremiyor: ileri-geri zorlanır, titrer (bekleme anı canlı kalsın) */}
         <CizimBicak x={540 + (t > tbs - 0.3 && !kir ? Math.sin(t * 11) * 26 : 0)} y={bicakY + (t > tbs - 0.3 && !kir ? Math.abs(Math.sin(t * 11)) * 14 : 0)} kor={1} s={0.75} rot={t > tbs - 0.3 && !kir ? Math.sin(t * 11) * 3 : 0} />
-        {t > tbs - 0.3 && !kir ? <g transform={`translate(${830 + Math.sin(t * 30) * 4} 640) rotate(6)`}><rect x={-190} y={-52} width={380} height={90} rx={18} fill={KIRMIZI} stroke={INK} strokeWidth={5} /><text x={0} y={14} textAnchor="middle" fontSize={50} fontWeight={900} fill="#fff" style={font}>ZORLANIYOR!</text></g> : null}
+        {t > tbs - 0.3 && !kir ? <g transform={`translate(${790 + Math.sin(t * 30) * 4} 640) rotate(6)`}><rect x={-165} y={-48} width={330} height={84} rx={18} fill={KIRMIZI} stroke={INK} strokeWidth={5} /><text x={0} y={13} textAnchor="middle" fontSize={44} fontWeight={900} fill="#fff" style={font}>ZORLANIYOR!</text></g> : null}
         {/* basınç okları */}
         <g opacity={ap(t, tbs - 0.4, 0.3) * (1 - kir)}>
           {[-1, 1].map((sg) => <path key={sg} d={`M ${540 + sg * 230} ${700 + Math.sin(t * 9) * 8} L ${540 + sg * 140} ${800} M ${540 + sg * 140} 800 l ${sg * 40} -6 M ${540 + sg * 140} 800 l ${sg * 6} -40`} stroke={KIRMIZI} strokeWidth={14} strokeLinecap="round" fill="none" />)}
@@ -660,12 +667,12 @@ const Keskin: S = ({ t, d, ws }) => {
         {/* birkaç küçük damla: göz hizasına varamadan geri düşer */}
         <Fiskir t={t} t0={tdm - 0.2} x={540} y={850} n={8} hiz={0.42} yay={40} s={0.6} />
         <Fiskir t={t} t0={tdm + 0.5} x={540} y={850} n={6} hiz={0.4} yay={40} s={0.55} />
-        {t > tdm ? <g transform={`translate(830 ${560 + Math.sin(t * 3) * 6}) rotate(4)`} opacity={ap(t, tdm, 0.25)}><rect x={-180} y={-38} width={360} height={70} rx={14} fill={KREM} stroke={INK} strokeWidth={4} /><text x={0} y={11} textAnchor="middle" fontSize={34} fontWeight={900} fill={GREEN} style={font}>ÇOK DAHA AZ DAMLA</text></g> : null}
         <g transform={`translate(880 760) scale(${Math.min(1.05, sp(t, tu - 0.1, 9))})`}>
           <circle r={64} fill={GREEN} stroke={INK} strokeWidth={7} />
           <path d="M -28 0 L -8 22 L 30 -22" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" />
         </g>
       </Kamera>
+      <Serit t={t} a={tdm - 0.05} text="ÇOK DAHA AZ DAMLA" x={540} y={325} size={42} rot={-1} bg={GREEN} color="#fff" />
       <Serit t={t} a={tk - 0.05} text="KESKİN" x={250} y={420} size={64} rot={-3} bg={GREEN} color="#fff" />
       <Serit t={t} a={tyv - 0.05} text="+ YAVAŞ" x={820} y={420} size={64} rot={3} bg={KREM} color={INK} />
     </g>
@@ -681,7 +688,7 @@ const Son: S = ({ t, d, ws }) => {
       <KolajDefs />
       <Kirpinti t={t} />
       <Kamera t={t} d={d} z0={1.0} z1={1.12} vurus={[tsg, tkz, tb]}>
-        <Foto t={t} ad="halka" id="s1" x={540} y={780} w={800} rot={2} a={-1} cikis={tb - 0.3} />
+        <Foto t={t} ad="halka" id="s1" x={540} y={780} w={800} rot={2} a={-1} cikis={tb - 0.6} />
         <g transform={`translate(${lerp(0, -170, ap(t, tb - 0.3, 0.4))} 0)`}>
           <Suz t={t} a={6}>
             <Parca t={t} ad="sogan" x={540} y={470} w={400} rot={-4} a={tsg - 0.2} yon="alt" />
@@ -699,7 +706,7 @@ const Son: S = ({ t, d, ws }) => {
       </Kamera>
       <Serit t={t} a={0.1} cikis={ws("ağlatırsa") - 0.1} text="GAZI SOĞAN YAPAR" x={540} y={400} size={56} rot={-2} bg={INK} color={KREM} />
       <Serit t={t} a={ws("ağlatırsa")} text="MİKTARINI BIÇAK BELİRLER" x={540} y={400} size={48} rot={2} bg={KIRMIZI} color={KREM} />
-      <Serit t={t} a={tkz - 0.05} cikis={tb - 0.2} text="ONA KIZMA" x={540} y={1150} size={68} rot={-3} bg={GREEN} color="#fff" />
+      <Serit t={t} a={tkz - 0.05} cikis={tb - 0.45} text="ONA KIZMA" x={540} y={1150} size={68} rot={-3} bg={GREEN} color="#fff" />
       <Muhur t={t} a={tb + 0.15} text="SUÇLU" x={760} y={980} size={96} rot={-10} />
     </g>
   );
