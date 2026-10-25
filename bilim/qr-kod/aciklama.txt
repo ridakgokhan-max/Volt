@@ -1,10 +1,18 @@
-Bir QR kodun neredeyse üçte biri yırtılsa bile telefonun onu yine okuyabilir 📱 Peki nasıl?
+Bir QR kodu yırt, telefonun yine okur. Ama bu sağlamlığın bilmen gereken karanlık bir tarafı var 👇
 
-🇯🇵 QR kodu 1994'te Japonya'da Denso Wave şirketinde mühendis Masahiro Hara geliştirdi; amaç araba fabrikasında parçaları hızlı takip etmekti.
-⚫⚪ İlham Go oyunundan: taş biraz kaysa da yeri bulunabiliyor. Dayanıklılığın sırrı ise kodun içine eklenen "yedek bilgi" (hata düzeltme). Bir kısmı silinse bile telefon eksiği bu yedek bilgiden hesaplıyor. En yüksek koruma seviyesinde kodun yaklaşık %30'u hasar görse bile okunabiliyor.
+Selam, ben Meraklı Gözlüklü 🤓 Bugün hepimizin her gün okuttuğu o küçük kareye bakıyoruz.
+
+🇯🇵 QR kodu 1994'te Japonya'da, Denso Wave şirketinde mühendis Masahiro Hara geliştirdi. Amaç, araba fabrikasında parçaları hızlı takip etmekti.
+
+⚫⚪ İlham Go oyunundan geldi: taş biraz kaysa da yeri belli. Sır ise kodun içine eklenen "yedek bilgi" (hata düzeltme). Bir kısmı silinse bile telefon eksiği bu yedekten hesaplıyor. En yüksek koruma seviyesinde kodun yaklaşık %30'u, yani neredeyse üçte biri hasar görse bile okunabiliyor.
+
 🏙️ Köşedeki 3 büyük kare telefona "kod burada" diyor. Anlatılana göre Hara bu fikri trende, binaların arasından sıyrılan bir gökdelene bakarken bulmuş. Bu sayede kod ters ya da eğik dursa da bir anda tanınıyor.
 
-⚠️ Karanlık taraf: Kod, sahibini bilmez. Dolandırıcılar otoparklarda gerçek QR'ın üstüne sahte çıkartma yapıştırıyor, okutan kişi sahte bir ödeme sayfasına gidiyor.
-✅ QR okuttuğunda açmadan önce adrese bak. Tanımadığın bir adres çıkıyorsa açma.
+⚠️ Karanlık taraf: Kod, sahibini bilmez. Dolandırıcılar otoparklarda gerçek QR'ın üstüne sahte çıkartma yapıştırıyor. Okutan kişi sahte bir ödeme sayfasına gidiyor.
+✅ Okuttuğunda açmadan önce adrese bak. Tanımadığın bir adres çıkıyorsa açma.
 
-QR okutunca adrese bakıyor musun, yoksa direkt açıyor musun? 👇 Her yerde QR okutan birine gönder 📲
+Sen hangisisin: adrese bakan mı, direkt açan mı? Yorumlara yaz 👇
+Her yerde QR okutan o arkadaşına gönder 📲
+Her videoda bir merakı bir dakikada çözüyoruz. Kaçırmamak için takip et 🔔
+
+#qrkod #bilim #teknoloji #dolandırıcılık #birdakikadabilim
