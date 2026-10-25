@@ -1,0 +1,1276 @@
+{
+ "model": "large-v3",
+ "sure": 100.416,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 5.56,
+   "text": "Soğan doğrarken ağlıyorsan, şu suçlu soğan değil, elindeki bıçak.",
+   "kelimeler": [
+    {
+     "w": "Soğan",
+     "start": 0.0,
+     "end": 1.1,
+     "p": 0.988
+    },
+    {
+     "w": "doğrarken",
+     "start": 1.1,
+     "end": 1.6,
+     "p": 0.982
+    },
+    {
+     "w": "ağlıyorsan,",
+     "start": 1.6,
+     "end": 2.52,
+     "p": 0.999
+    },
+    {
+     "w": "şu",
+     "start": 2.52,
+     "end": 3.18,
+     "p": 0.961
+    },
+    {
+     "w": "suçlu",
+     "start": 3.18,
+     "end": 3.92,
+     "p": 0.999
+    },
+    {
+     "w": "soğan",
+     "start": 3.92,
+     "end": 4.22,
+     "p": 1.0
+    },
+    {
+     "w": "değil,",
+     "start": 4.22,
+     "end": 4.46,
+     "p": 0.999
+    },
+    {
+     "w": "elindeki",
+     "start": 4.62,
+     "end": 5.14,
+     "p": 1.0
+    },
+    {
+     "w": "bıçak.",
+     "start": 5.14,
+     "end": 5.56,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 6.22,
+   "end": 10.7,
+   "text": "Ama önce şunu bil. O soğan sana karşı kendini savunuyor.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 6.22,
+     "end": 7.04,
+     "p": 1.0
+    },
+    {
+     "w": "önce",
+     "start": 7.04,
+     "end": 7.36,
+     "p": 1.0
+    },
+    {
+     "w": "şunu",
+     "start": 7.36,
+     "end": 7.76,
+     "p": 1.0
+    },
+    {
+     "w": "bil.",
+     "start": 7.76,
+     "end": 7.96,
+     "p": 1.0
+    },
+    {
+     "w": "O",
+     "start": 8.12,
+     "end": 8.68,
+     "p": 0.999
+    },
+    {
+     "w": "soğan",
+     "start": 8.68,
+     "end": 9.1,
+     "p": 1.0
+    },
+    {
+     "w": "sana",
+     "start": 9.1,
+     "end": 9.32,
+     "p": 0.939
+    },
+    {
+     "w": "karşı",
+     "start": 9.32,
+     "end": 9.66,
+     "p": 1.0
+    },
+    {
+     "w": "kendini",
+     "start": 9.66,
+     "end": 10.24,
+     "p": 1.0
+    },
+    {
+     "w": "savunuyor.",
+     "start": 10.24,
+     "end": 10.7,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 11.26,
+   "end": 15.94,
+   "text": "Soğanın hücrelerinde iki madde var. Normalde ayrı odalarda dururlar.",
+   "kelimeler": [
+    {
+     "w": "Soğanın",
+     "start": 11.26,
+     "end": 12.08,
+     "p": 0.998
+    },
+    {
+     "w": "hücrelerinde",
+     "start": 12.08,
+     "end": 12.68,
+     "p": 0.928
+    },
+    {
+     "w": "iki",
+     "start": 12.68,
+     "end": 12.92,
+     "p": 0.994
+    },
+    {
+     "w": "madde",
+     "start": 12.92,
+     "end": 13.32,
+     "p": 1.0
+    },
+    {
+     "w": "var.",
+     "start": 13.32,
+     "end": 13.48,
+     "p": 1.0
+    },
+    {
+     "w": "Normalde",
+     "start": 13.82,
+     "end": 14.64,
+     "p": 1.0
+    },
+    {
+     "w": "ayrı",
+     "start": 14.64,
+     "end": 15.08,
+     "p": 1.0
+    },
+    {
+     "w": "odalarda",
+     "start": 15.08,
+     "end": 15.5,
+     "p": 1.0
+    },
+    {
+     "w": "dururlar.",
+     "start": 15.5,
+     "end": 15.94,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 17.0,
+   "end": 22.26,
+   "text": "Bıçak hücreyi parçaladığı an ikisi karışıyor ve havaya uçan yakıcı bir gaz oluşuyor.",
+   "kelimeler": [
+    {
+     "w": "Bıçak",
+     "start": 16.79,
+     "end": 17.2,
+     "p": 1.0
+    },
+    {
+     "w": "hücreyi",
+     "start": 17.2,
+     "end": 17.6,
+     "p": 0.993
+    },
+    {
+     "w": "parçaladığı",
+     "start": 17.6,
+     "end": 18.18,
+     "p": 1.0
+    },
+    {
+     "w": "an",
+     "start": 18.18,
+     "end": 18.36,
+     "p": 1.0
+    },
+    {
+     "w": "ikisi",
+     "start": 18.36,
+     "end": 19.14,
+     "p": 0.911
+    },
+    {
+     "w": "karışıyor",
+     "start": 19.14,
+     "end": 19.7,
+     "p": 1.0
+    },
+    {
+     "w": "ve",
+     "start": 19.7,
+     "end": 19.98,
+     "p": 1.0
+    },
+    {
+     "w": "havaya",
+     "start": 19.98,
+     "end": 20.76,
+     "p": 1.0
+    },
+    {
+     "w": "uçan",
+     "start": 20.76,
+     "end": 21.12,
+     "p": 0.999
+    },
+    {
+     "w": "yakıcı",
+     "start": 21.12,
+     "end": 21.44,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 21.44,
+     "end": 21.6,
+     "p": 1.0
+    },
+    {
+     "w": "gaz",
+     "start": 21.6,
+     "end": 21.84,
+     "p": 1.0
+    },
+    {
+     "w": "oluşuyor.",
+     "start": 21.84,
+     "end": 22.26,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 23.8,
+   "end": 28.74,
+   "text": "Bu gaz gözüne ulaşınca gözündeki sinirler beynine yanıyor diye haber veriyor.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 23.45,
+     "end": 23.86,
+     "p": 1.0
+    },
+    {
+     "w": "gaz",
+     "start": 23.86,
+     "end": 24.1,
+     "p": 1.0
+    },
+    {
+     "w": "gözüne",
+     "start": 24.1,
+     "end": 24.7,
+     "p": 0.955
+    },
+    {
+     "w": "ulaşınca",
+     "start": 24.7,
+     "end": 25.2,
+     "p": 1.0
+    },
+    {
+     "w": "gözündeki",
+     "start": 25.2,
+     "end": 25.88,
+     "p": 0.998
+    },
+    {
+     "w": "sinirler",
+     "start": 25.88,
+     "end": 26.28,
+     "p": 0.998
+    },
+    {
+     "w": "beynine",
+     "start": 26.28,
+     "end": 26.8,
+     "p": 1.0
+    },
+    {
+     "w": "yanıyor",
+     "start": 26.8,
+     "end": 27.68,
+     "p": 0.996
+    },
+    {
+     "w": "diye",
+     "start": 27.68,
+     "end": 27.98,
+     "p": 1.0
+    },
+    {
+     "w": "haber",
+     "start": 27.98,
+     "end": 28.34,
+     "p": 1.0
+    },
+    {
+     "w": "veriyor.",
+     "start": 28.34,
+     "end": 28.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 28.74,
+   "end": 32.04,
+   "text": "Beyin de hemen gözyaşı bezlerine emir veriyor",
+   "kelimeler": [
+    {
+     "w": "Beyin",
+     "start": 28.74,
+     "end": 30.1,
+     "p": 0.767
+    },
+    {
+     "w": "de",
+     "start": 30.1,
+     "end": 30.14,
+     "p": 0.999
+    },
+    {
+     "w": "hemen",
+     "start": 30.14,
+     "end": 30.38,
+     "p": 0.999
+    },
+    {
+     "w": "gözyaşı",
+     "start": 30.38,
+     "end": 31.0,
+     "p": 0.968
+    },
+    {
+     "w": "bezlerine",
+     "start": 31.0,
+     "end": 31.42,
+     "p": 0.998
+    },
+    {
+     "w": "emir",
+     "start": 31.42,
+     "end": 31.76,
+     "p": 0.999
+    },
+    {
+     "w": "veriyor",
+     "start": 31.76,
+     "end": 32.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.04,
+   "end": 32.78,
+   "text": "Yıka",
+   "kelimeler": [
+    {
+     "w": "Yıka",
+     "start": 32.04,
+     "end": 32.78,
+     "p": 0.606
+    }
+   ]
+  },
+  {
+   "start": 32.78,
+   "end": 35.98,
+   "text": "İşin ilginci bu tepkimenin sırrı",
+   "kelimeler": [
+    {
+     "w": "İşin",
+     "start": 32.78,
+     "end": 34.32,
+     "p": 0.973
+    },
+    {
+     "w": "ilginci",
+     "start": 34.32,
+     "end": 34.72,
+     "p": 0.999
+    },
+    {
+     "w": "bu",
+     "start": 34.72,
+     "end": 34.98,
+     "p": 0.861
+    },
+    {
+     "w": "tepkimenin",
+     "start": 34.98,
+     "end": 35.58,
+     "p": 0.989
+    },
+    {
+     "w": "sırrı",
+     "start": 35.58,
+     "end": 35.98,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 35.98,
+   "end": 36.88,
+   "text": "2002'de",
+   "kelimeler": [
+    {
+     "w": "2002'de",
+     "start": 35.98,
+     "end": 36.88,
+     "p": 0.952
+    }
+   ]
+  },
+  {
+   "start": 36.88,
+   "end": 39.96,
+   "text": "İşin ilginci bu tepkimenin sırrı",
+   "kelimeler": [
+    {
+     "w": "İşin",
+     "start": 36.88,
+     "end": 38.4,
+     "p": 0.562
+    },
+    {
+     "w": "ilginci",
+     "start": 38.4,
+     "end": 38.86,
+     "p": 1.0
+    },
+    {
+     "w": "bu",
+     "start": 38.86,
+     "end": 39.08,
+     "p": 0.991
+    },
+    {
+     "w": "tepkimenin",
+     "start": 39.08,
+     "end": 39.62,
+     "p": 1.0
+    },
+    {
+     "w": "sırrı",
+     "start": 39.62,
+     "end": 39.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 39.96,
+   "end": 42.34,
+   "text": "2002'de Japon bilim insanları çözdü",
+   "kelimeler": [
+    {
+     "w": "2002'de",
+     "start": 39.96,
+     "end": 40.72,
+     "p": 0.998
+    },
+    {
+     "w": "Japon",
+     "start": 40.72,
+     "end": 41.2,
+     "p": 0.985
+    },
+    {
+     "w": "bilim",
+     "start": 41.2,
+     "end": 41.5,
+     "p": 0.982
+    },
+    {
+     "w": "insanları",
+     "start": 41.5,
+     "end": 41.9,
+     "p": 1.0
+    },
+    {
+     "w": "çözdü",
+     "start": 41.9,
+     "end": 42.34,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 42.34,
+   "end": 45.18,
+   "text": "Gazı üreten gizli bir enzim buldu",
+   "kelimeler": [
+    {
+     "w": "Gazı",
+     "start": 42.34,
+     "end": 43.6,
+     "p": 0.957
+    },
+    {
+     "w": "üreten",
+     "start": 43.6,
+     "end": 43.82,
+     "p": 0.999
+    },
+    {
+     "w": "gizli",
+     "start": 43.82,
+     "end": 44.3,
+     "p": 0.997
+    },
+    {
+     "w": "bir",
+     "start": 44.3,
+     "end": 44.46,
+     "p": 0.997
+    },
+    {
+     "w": "enzim",
+     "start": 44.46,
+     "end": 44.88,
+     "p": 0.963
+    },
+    {
+     "w": "buldu",
+     "start": 44.88,
+     "end": 45.18,
+     "p": 0.708
+    }
+   ]
+  },
+  {
+   "start": 45.18,
+   "end": 48.12,
+   "text": "Gazı üreten gizli bir enzim buldular",
+   "kelimeler": [
+    {
+     "w": "Gazı",
+     "start": 45.18,
+     "end": 46.64,
+     "p": 0.956
+    },
+    {
+     "w": "üreten",
+     "start": 46.64,
+     "end": 46.84,
+     "p": 1.0
+    },
+    {
+     "w": "gizli",
+     "start": 46.84,
+     "end": 47.26,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 47.26,
+     "end": 47.42,
+     "p": 0.999
+    },
+    {
+     "w": "enzim",
+     "start": 47.42,
+     "end": 47.8,
+     "p": 1.0
+    },
+    {
+     "w": "buldular",
+     "start": 47.8,
+     "end": 48.12,
+     "p": 0.99
+    }
+   ]
+  },
+  {
+   "start": 48.12,
+   "end": 49.68,
+   "text": "Bu buluş onlara",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 48.12,
+     "end": 48.98,
+     "p": 0.996
+    },
+    {
+     "w": "buluş",
+     "start": 48.98,
+     "end": 49.28,
+     "p": 1.0
+    },
+    {
+     "w": "onlara",
+     "start": 49.28,
+     "end": 49.68,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 49.68,
+   "end": 52.36,
+   "text": "Bu buluş onlara",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 49.68,
+     "end": 50.22,
+     "p": 0.831
+    },
+    {
+     "w": "buluş",
+     "start": 50.22,
+     "end": 52.0,
+     "p": 1.0
+    },
+    {
+     "w": "onlara",
+     "start": 52.0,
+     "end": 52.36,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 52.36,
+   "end": 54.06,
+   "text": "İnsanı önce güldüren",
+   "kelimeler": [
+    {
+     "w": "İnsanı",
+     "start": 52.36,
+     "end": 53.26,
+     "p": 0.769
+    },
+    {
+     "w": "önce",
+     "start": 53.26,
+     "end": 53.6,
+     "p": 0.999
+    },
+    {
+     "w": "güldüren",
+     "start": 53.6,
+     "end": 54.06,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 54.06,
+   "end": 55.18,
+   "text": "Sonra düşündüren",
+   "kelimeler": [
+    {
+     "w": "Sonra",
+     "start": 54.06,
+     "end": 54.54,
+     "p": 0.431
+    },
+    {
+     "w": "düşündüren",
+     "start": 54.54,
+     "end": 55.18,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 55.18,
+   "end": 56.84,
+   "text": "A.C. Nobel ödülünü kazandı",
+   "kelimeler": [
+    {
+     "w": "A",
+     "start": 55.18,
+     "end": 55.72,
+     "p": 0.264
+    },
+    {
+     "w": ".C.",
+     "start": 55.72,
+     "end": 55.86,
+     "p": 0.802
+    },
+    {
+     "w": "Nobel",
+     "start": 55.9,
+     "end": 56.08,
+     "p": 0.997
+    },
+    {
+     "w": "ödülünü",
+     "start": 56.08,
+     "end": 56.46,
+     "p": 0.953
+    },
+    {
+     "w": "kazandı",
+     "start": 56.46,
+     "end": 56.84,
+     "p": 0.97
+    }
+   ]
+  },
+  {
+   "start": 56.84,
+   "end": 59.06,
+   "text": "Peki bıçak nereden çıktı?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 56.84,
+     "end": 57.78,
+     "p": 0.926
+    },
+    {
+     "w": "bıçak",
+     "start": 57.78,
+     "end": 58.36,
+     "p": 0.996
+    },
+    {
+     "w": "nereden",
+     "start": 58.36,
+     "end": 58.82,
+     "p": 0.991
+    },
+    {
+     "w": "çıktı?",
+     "start": 58.82,
+     "end": 59.06,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 59.68,
+   "end": 66.38,
+   "text": "2025'te ABD'deki Cornell Üniversitesi'nde bilim insanları soğan kesmeyi yüksek hızlı kamerayla çekti.",
+   "kelimeler": [
+    {
+     "w": "2025'te",
+     "start": 59.68,
+     "end": 60.68,
+     "p": 0.873
+    },
+    {
+     "w": "ABD'deki",
+     "start": 60.68,
+     "end": 61.42,
+     "p": 0.996
+    },
+    {
+     "w": "Cornell",
+     "start": 61.42,
+     "end": 61.74,
+     "p": 0.996
+    },
+    {
+     "w": "Üniversitesi",
+     "start": 61.74,
+     "end": 62.3,
+     "p": 0.955
+    },
+    {
+     "w": "'nde",
+     "start": 62.3,
+     "end": 62.48,
+     "p": 0.999
+    },
+    {
+     "w": "bilim",
+     "start": 62.48,
+     "end": 63.36,
+     "p": 0.969
+    },
+    {
+     "w": "insanları",
+     "start": 63.36,
+     "end": 63.86,
+     "p": 1.0
+    },
+    {
+     "w": "soğan",
+     "start": 63.86,
+     "end": 64.38,
+     "p": 0.997
+    },
+    {
+     "w": "kesmeyi",
+     "start": 64.38,
+     "end": 64.9,
+     "p": 0.929
+    },
+    {
+     "w": "yüksek",
+     "start": 64.9,
+     "end": 65.3,
+     "p": 0.999
+    },
+    {
+     "w": "hızlı",
+     "start": 65.3,
+     "end": 65.66,
+     "p": 1.0
+    },
+    {
+     "w": "kamerayla",
+     "start": 65.66,
+     "end": 66.08,
+     "p": 0.976
+    },
+    {
+     "w": "çekti.",
+     "start": 66.08,
+     "end": 66.38,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 67.76,
+   "end": 70.26,
+   "text": "Kör bıçak soğana daha çok bastırıyor.",
+   "kelimeler": [
+    {
+     "w": "Kör",
+     "start": 67.4,
+     "end": 67.9,
+     "p": 0.998
+    },
+    {
+     "w": "bıçak",
+     "start": 67.9,
+     "end": 68.36,
+     "p": 1.0
+    },
+    {
+     "w": "soğana",
+     "start": 68.36,
+     "end": 68.94,
+     "p": 0.991
+    },
+    {
+     "w": "daha",
+     "start": 68.94,
+     "end": 69.44,
+     "p": 1.0
+    },
+    {
+     "w": "çok",
+     "start": 69.44,
+     "end": 69.66,
+     "p": 1.0
+    },
+    {
+     "w": "bastırıyor.",
+     "start": 69.66,
+     "end": 70.26,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 71.18,
+   "end": 73.74,
+   "text": "Daha çok hücreyi ezip suyunu fışkırtıyor.",
+   "kelimeler": [
+    {
+     "w": "Daha",
+     "start": 70.7,
+     "end": 71.2,
+     "p": 0.999
+    },
+    {
+     "w": "çok",
+     "start": 71.2,
+     "end": 71.46,
+     "p": 1.0
+    },
+    {
+     "w": "hücreyi",
+     "start": 71.46,
+     "end": 72.24,
+     "p": 0.979
+    },
+    {
+     "w": "ezip",
+     "start": 72.24,
+     "end": 72.56,
+     "p": 0.999
+    },
+    {
+     "w": "suyunu",
+     "start": 72.56,
+     "end": 73.0,
+     "p": 0.95
+    },
+    {
+     "w": "fışkırtıyor.",
+     "start": 73.0,
+     "end": 73.74,
+     "p": 0.978
+    }
+   ]
+  },
+  {
+   "start": 75.06,
+   "end": 77.54,
+   "text": "Kör bıçak soğana daha çok bastırıyor.",
+   "kelimeler": [
+    {
+     "w": "Kör",
+     "start": 74.76,
+     "end": 75.26,
+     "p": 0.97
+    },
+    {
+     "w": "bıçak",
+     "start": 75.26,
+     "end": 75.74,
+     "p": 1.0
+    },
+    {
+     "w": "soğana",
+     "start": 75.74,
+     "end": 76.5,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 76.5,
+     "end": 76.78,
+     "p": 1.0
+    },
+    {
+     "w": "çok",
+     "start": 76.78,
+     "end": 77.02,
+     "p": 1.0
+    },
+    {
+     "w": "bastırıyor.",
+     "start": 77.02,
+     "end": 77.54,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 78.66,
+   "end": 80.94,
+   "text": "Daha çok hücreyi ezip suyunu fışkırtıyor.",
+   "kelimeler": [
+    {
+     "w": "Daha",
+     "start": 78.18,
+     "end": 78.68,
+     "p": 0.999
+    },
+    {
+     "w": "çok",
+     "start": 78.68,
+     "end": 78.94,
+     "p": 1.0
+    },
+    {
+     "w": "hücreyi",
+     "start": 78.94,
+     "end": 79.44,
+     "p": 0.999
+    },
+    {
+     "w": "ezip",
+     "start": 79.44,
+     "end": 79.82,
+     "p": 1.0
+    },
+    {
+     "w": "suyunu",
+     "start": 79.82,
+     "end": 80.38,
+     "p": 1.0
+    },
+    {
+     "w": "fışkırtıyor.",
+     "start": 80.38,
+     "end": 80.94,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 80.94,
+   "end": 87.7,
+   "text": "Hızlı kesince bu damlalar saatte 140 km'yi aşan hızla tavaya saçıyor.",
+   "kelimeler": [
+    {
+     "w": "Hızlı",
+     "start": 80.94,
+     "end": 82.3,
+     "p": 0.938
+    },
+    {
+     "w": "kesince",
+     "start": 82.3,
+     "end": 82.7,
+     "p": 0.971
+    },
+    {
+     "w": "bu",
+     "start": 82.7,
+     "end": 82.88,
+     "p": 0.96
+    },
+    {
+     "w": "damlalar",
+     "start": 82.88,
+     "end": 83.3,
+     "p": 0.991
+    },
+    {
+     "w": "saatte",
+     "start": 83.3,
+     "end": 84.22,
+     "p": 0.93
+    },
+    {
+     "w": "140",
+     "start": 84.22,
+     "end": 84.6,
+     "p": 0.985
+    },
+    {
+     "w": "km",
+     "start": 84.6,
+     "end": 85.04,
+     "p": 0.412
+    },
+    {
+     "w": "'yi",
+     "start": 85.04,
+     "end": 85.42,
+     "p": 0.963
+    },
+    {
+     "w": "aşan",
+     "start": 85.42,
+     "end": 85.74,
+     "p": 0.998
+    },
+    {
+     "w": "hızla",
+     "start": 85.74,
+     "end": 86.44,
+     "p": 0.993
+    },
+    {
+     "w": "tavaya",
+     "start": 86.44,
+     "end": 87.28,
+     "p": 0.727
+    },
+    {
+     "w": "saçıyor.",
+     "start": 87.28,
+     "end": 87.7,
+     "p": 0.987
+    }
+   ]
+  },
+  {
+   "start": 88.38,
+   "end": 93.86,
+   "text": "Ama keskin bir bıçakla yavaş kesersem damlalar göz hizasına bile ulaşamıyor.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 88.38,
+     "end": 89.22,
+     "p": 0.99
+    },
+    {
+     "w": "keskin",
+     "start": 89.22,
+     "end": 89.72,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 89.72,
+     "end": 89.82,
+     "p": 0.998
+    },
+    {
+     "w": "bıçakla",
+     "start": 89.82,
+     "end": 90.28,
+     "p": 0.997
+    },
+    {
+     "w": "yavaş",
+     "start": 90.28,
+     "end": 91.06,
+     "p": 0.998
+    },
+    {
+     "w": "kesersem",
+     "start": 91.06,
+     "end": 91.64,
+     "p": 0.809
+    },
+    {
+     "w": "damlalar",
+     "start": 91.64,
+     "end": 92.42,
+     "p": 0.979
+    },
+    {
+     "w": "göz",
+     "start": 92.42,
+     "end": 92.68,
+     "p": 0.995
+    },
+    {
+     "w": "hizasına",
+     "start": 92.68,
+     "end": 93.1,
+     "p": 0.768
+    },
+    {
+     "w": "bile",
+     "start": 93.1,
+     "end": 93.24,
+     "p": 0.999
+    },
+    {
+     "w": "ulaşamıyor.",
+     "start": 93.24,
+     "end": 93.86,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 94.76,
+   "end": 98.62,
+   "text": "Yani bir dahaki sefere soğan seni ağlatırsa ona kızma.",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 94.48,
+     "end": 94.9,
+     "p": 0.996
+    },
+    {
+     "w": "bir",
+     "start": 94.9,
+     "end": 95.14,
+     "p": 0.996
+    },
+    {
+     "w": "dahaki",
+     "start": 95.14,
+     "end": 95.44,
+     "p": 0.993
+    },
+    {
+     "w": "sefere",
+     "start": 95.44,
+     "end": 95.84,
+     "p": 0.998
+    },
+    {
+     "w": "soğan",
+     "start": 95.84,
+     "end": 96.86,
+     "p": 0.988
+    },
+    {
+     "w": "seni",
+     "start": 96.86,
+     "end": 97.06,
+     "p": 1.0
+    },
+    {
+     "w": "ağlatırsa",
+     "start": 97.06,
+     "end": 97.62,
+     "p": 0.999
+    },
+    {
+     "w": "ona",
+     "start": 97.62,
+     "end": 98.18,
+     "p": 0.997
+    },
+    {
+     "w": "kızma.",
+     "start": 98.18,
+     "end": 98.62,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 98.7,
+   "end": 99.58,
+   "text": "Bıçağa bak.",
+   "kelimeler": [
+    {
+     "w": "Bıçağa",
+     "start": 98.7,
+     "end": 99.42,
+     "p": 0.995
+    },
+    {
+     "w": "bak.",
+     "start": 99.42,
+     "end": 99.58,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}
