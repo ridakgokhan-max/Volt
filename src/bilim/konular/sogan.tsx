@@ -321,7 +321,7 @@ const Giris: S = ({ t, d, ws }) => {
           </Suz>
         </g>
         {/* bıçak: yukarıdan inip keser, sonra sağa çekilir */}
-        <g transform={`translate(${lerp(0, 230, ayril)} ${lerp(-120, 0, kes)}) rotate(${lerp(-38, 0, kes) + lerp(0, -70, ayril)} ${lerp(560, 760, ayril)} ${lerp(760, 780, ayril)})`}>
+        <g transform={`translate(${lerp(0, 200, ayril)} ${lerp(-120, 0, kes) + lerp(0, 120, ayril)}) rotate(${lerp(-38, 0, kes) + lerp(0, -22, ayril)} 560 760)`}>
           <Parca t={t} ad="bicak" x={560} y={560} w={820} rot={-24} />
           <Bant x={860} y={760} w={130} rot={-30} />
         </g>
@@ -335,8 +335,8 @@ const Giris: S = ({ t, d, ws }) => {
 
 // 2 — Ama önce şunu bil: o soğan sana karşı kendini savunuyor.
 const Savunma: S = ({ t, d, ws }) => {
-  const tsg = ws("soğan"), tsv = ws("savunuyor");
-  const kalkan = sp(t, tsv - 0.25, 10);
+  const tsg = ws("soğan"), tsv = ws("savunuyor"), tkd = ws("kendini");
+  const kalkan = sp(t, tkd - 0.2, 10);
   return (
     <g>
       <KolajDefs />
@@ -360,8 +360,8 @@ const Savunma: S = ({ t, d, ws }) => {
           </g>
         ) : null}
       </Kamera>
-      <Serit t={t} a={0.15} cikis={tsv - 0.4} text="ÖNCE ŞUNU BİL" x={540} y={420} size={60} rot={-3} bg={INK} color={KREM} />
-      <Serit t={t} a={tsv - 0.1} text="KENDİNİ SAVUNUYOR" x={540} y={1170} size={64} rot={2} bg={KIRMIZI} color={KREM} />
+      <Serit t={t} a={0.15} cikis={tkd - 0.3} text="ÖNCE ŞUNU BİL" x={540} y={420} size={60} rot={-3} bg={INK} color={KREM} />
+      <Serit t={t} a={tkd - 0.05} text="KENDİNİ SAVUNUYOR" x={540} y={1170} size={64} rot={2} bg={KIRMIZI} color={KREM} />
     </g>
   );
 };
@@ -420,8 +420,8 @@ const GazS: S = ({ t, d, ws }) => {
 // 5 — Gaz göze ulaşınca sinirler beyne "yanıyor!" der; beyin gözyaşı bezlerine "Yıka!" emri verir.
 const GozS: S = ({ t, d, ws }) => {
   const tu = ws("ulaşınca"), tsn = ws("sinirler"), tyn = ws("yanıyor"), tb = ws("beyin"), tgz = ws("gözyaşı"), tyk = ws("yıka");
-  const GX = 420, GY = 760; // göz merkezi
-  const BX = 820, BY = 470; // beyin
+  const GX = 420, GY = 880; // göz merkezi
+  const BX = 810, BY = 600; // beyin
   const sinyal1 = ap(t, tsn - 0.1, Math.max(0.4, tyn - tsn));
   const sinyal2 = ap(t, tb + 0.2, Math.max(0.4, tyk - tb - 0.5));
   const alarm = ap(t, tyn - 0.1, 0.2) * (1 - ap(t, tb + 0.3, 0.4));
@@ -436,7 +436,7 @@ const GozS: S = ({ t, d, ws }) => {
         <Foto t={t} ad="goz" id="g1" x={GX} y={GY} w={660} rot={-3} a={0.05} />
         {/* yanma: göz kızarır */}
         <ellipse cx={GX} cy={GY} rx={300} ry={160} fill={RED} opacity={0.28 * yanma * (0.7 + 0.3 * Math.sin(t * 12))} />
-        <Gaz t={t} t0={-0.6} x={GX} y={1150} hedef={[GX, GY]} n={12} o={1 - ap(t, tyk + 0.3, 0.4)} yikanma={yas} />
+        <Gaz t={t} t0={-0.6} x={GX} y={1200} hedef={[GX, GY]} n={12} o={1 - ap(t, tyk + 0.3, 0.4)} yikanma={yas} />
         {/* sinir yolu */}
         <path d={`M ${yol(0)[0]} ${yol(0)[1]} Q ${(GX + BX) / 2 + 30} ${Math.min(GY, BY) - 150} ${yol(1)[0]} ${yol(1)[1]}`} stroke={INK} strokeWidth={8} fill="none" strokeDasharray="18 14" opacity={ap(t, tsn - 0.3, 0.3)} />
         {sinyal1 > 0 && sinyal1 < 1 ? <circle cx={yol(sinyal1)[0]} cy={yol(sinyal1)[1]} r={26} fill={ACC} stroke={INK} strokeWidth={5} /> : null}
@@ -444,7 +444,7 @@ const GozS: S = ({ t, d, ws }) => {
         <g opacity={ap(t, tsn - 0.2, 0.3)}><Beyin x={BX} y={BY} t={t} alarm={alarm} s={0.85} /></g>
         {/* alarm balonu */}
         {alarm > 0.02 ? (
-          <g transform={`translate(${BX - 30} ${BY - 210}) scale(${sp(t, tyn - 0.1, 9) * (1 + 0.05 * Math.sin(t * 14))}) rotate(-4)`} filter="url(#kgolge)">
+          <g transform={`translate(${BX - 40} ${BY - 190}) scale(${sp(t, tyn - 0.1, 9) * (1 + 0.05 * Math.sin(t * 14))}) rotate(-4)`} filter="url(#kgolge)">
             <rect x={-200} y={-62} width={400} height={124} rx={30} fill={KIRMIZI} stroke={INK} strokeWidth={7} />
             <text x={0} y={22} textAnchor="middle" fontSize={64} fontWeight={900} fill="#fff" style={font}>YANIYOR!</text>
           </g>
@@ -458,10 +458,10 @@ const GozS: S = ({ t, d, ws }) => {
         {yas > 0 ? Array.from({ length: 16 }).map((_, i) => {
           const u = ((t - tyk) * 0.9 + rnd(i, 71)) % 1;
           const x = GX - 120 + rnd(i, 72) * 240;
-          return <Damla key={i} x={x + Math.sin(u * 6 + i) * 10} y={GY + 40 + u * 520} s={0.9 + rnd(i, 73) * 0.5} o={yas * (1 - u * 0.6)} />;
+          return <Damla key={i} x={x + Math.sin(u * 6 + i) * 10} y={GY + 40 + u * 330} s={0.9 + rnd(i, 73) * 0.5} o={yas * (1 - u * 0.6)} />;
         }) : null}
       </Kamera>
-      <Serit t={t} a={tyk - 0.05} text={'"YIKA!"'} x={540} y={1170} size={84} rot={-3} bg={BLUE} color="#fff" />
+      <Serit t={t} a={tyk - 0.05} text={'"YIKA!"'} x={720} y={400} size={84} rot={-3} bg={BLUE} color="#fff" />
     </g>
   );
 };
@@ -546,12 +546,13 @@ const Cornell: S = ({ t, d, ws }) => {
       <Kirpinti t={t} renk="#f0b4b4" o={0.3} />
       <Kamera t={t} d={d} z0={1.0} z1={1.1} vurus={[tb, t25, tc, tk]}>
         {/* bıçak döne döne gelir (kancaya dönüş) */}
-        <g opacity={1 - ap(t, t25 - 0.2, 0.3)} transform={`translate(540 780) rotate(${(1 - easeOut(ap(t, 0, 0.6))) * 360 + Math.sin(t * 2) * 4}) scale(${0.4 + 0.6 * easeOut(ap(t, 0, 0.6))}) translate(-540 -780)`}>
+        <g opacity={1 - ap(t, t25 + 0.1, 0.3)} transform={`translate(540 780) rotate(${(1 - easeOut(ap(t, 0, 0.6))) * 360 + Math.sin(t * 2) * 4}) scale(${0.4 + 0.6 * easeOut(ap(t, 0, 0.6))}) translate(-540 -780)`}>
           <Parca t={t} ad="bicak" x={540} y={600} w={820} rot={-20} />
           <Bant x={840} y={790} w={130} rot={-28} />
         </g>
         {/* Cornell kulesi fotoğrafı */}
-        <Foto t={t} ad="cornellf" id="c1" x={350} y={790} w={430} rot={-4} a={tc - 0.15} />
+        <Foto t={t} ad="cornellf" id="c1" x={350} y={790} w={430} rot={-4} a={t25 + 0.25} />
+        <circle cx={350} cy={790} r={360 + ((t * 1.2) % 1) * 140} fill="none" stroke={KREM} strokeWidth={10} opacity={ap(t, t25 + 0.4, 0.3) * (1 - ((t * 1.2) % 1)) * 0.6} />
         <g transform={`translate(800 600) scale(${sp(t, t25 - 0.1, 9)}) rotate(5)`} filter="url(#kgolge)">
           <rect x={-150} y={-62} width={300} height={124} rx={22} fill={INK} />
           <text x={0} y={30} textAnchor="middle" fontSize={84} fontWeight={900} fill={ACC} style={font}>2025</text>
@@ -581,7 +582,7 @@ const Cornell: S = ({ t, d, ws }) => {
         </g>
       </Kamera>
       <Serit t={t} a={0.05} cikis={t25 - 0.3} text="PEKİ BIÇAK?" x={540} y={420} size={92} rot={-3} bg={ACC} />
-      <Serit t={t} a={tc - 0.05} text="CORNELL ÜNİVERSİTESİ · ABD" x={540} y={400} size={46} rot={2} bg={KIRMIZI} color={KREM} />
+      <Serit t={t} a={t25 + 0.6} text="CORNELL ÜNİVERSİTESİ · ABD" x={540} y={400} size={46} rot={2} bg={KIRMIZI} color={KREM} />
       <Serit t={t} a={ty - 0.05} cikis={d - 0.3} text="YÜKSEK HIZLI KAMERA" x={700} y={1060} size={44} rot={-2} bg={INK} color={KREM} />
     </g>
   );
@@ -593,7 +594,7 @@ const Kor: S = ({ t, d, ws }) => {
   const bas = ap(t, 0.5, Math.max(0.6, tbs + 0.4 - 0.5)); // bastırma
   const kir = t > tf - 0.05 ? 1 : 0;
   const hizli = ap(t, th - 0.1, 0.4);
-  const bicakY = lerp(300, 548, ez(bas)) + (kir ? lerp(0, 150, ap(t, tf - 0.05, 0.2)) : 0) + hizli * Math.max(0, Math.sin((t - th) * 9)) * -160;
+  const bicakY = lerp(600, 862, ez(bas)) + (kir ? lerp(0, 150, ap(t, tf - 0.05, 0.2)) : 0) + hizli * Math.max(0, Math.sin((t - th) * 9)) * -160;
   const deger = 180 * 0.78 * ez(ap(t, t140 - 0.6, 0.8)) + (t > t140 ? Math.sin(t * 30) * 2 : 0);
   return (
     <g>
@@ -611,11 +612,11 @@ const Kor: S = ({ t, d, ws }) => {
         <CizimBicak x={540} y={bicakY} kor={1} s={1} />
         {/* basınç okları */}
         <g opacity={ap(t, tbs - 0.4, 0.3) * (1 - kir)}>
-          {[-1, 1].map((sg) => <path key={sg} d={`M ${540 + sg * 200} ${600 + Math.sin(t * 9) * 8} L ${540 + sg * 120} ${720} M ${540 + sg * 120} 720 l ${sg * 40} -6 M ${540 + sg * 120} 720 l ${sg * 6} -40`} stroke={KIRMIZI} strokeWidth={14} strokeLinecap="round" fill="none" />)}
+          {[-1, 1].map((sg) => <path key={sg} d={`M ${540 + sg * 230} ${700 + Math.sin(t * 9) * 8} L ${540 + sg * 140} ${800} M ${540 + sg * 140} 800 l ${sg * 40} -6 M ${540 + sg * 140} 800 l ${sg * 6} -40`} stroke={KIRMIZI} strokeWidth={14} strokeLinecap="round" fill="none" />)}
         </g>
-        <Fiskir t={t} t0={tf - 0.05} x={540} y={800} n={20} hiz={1.05} yay={60} />
-        <Fiskir t={t} t0={th + 0.25} x={540} y={800} n={14} hiz={1.35} yay={50} />
-        <Fiskir t={t} t0={th + 1.1} x={540} y={800} n={14} hiz={1.4} yay={55} />
+        <Fiskir t={t} t0={tf - 0.05} x={540} y={860} n={20} hiz={1.05} yay={60} />
+        <Fiskir t={t} t0={th + 0.25} x={540} y={860} n={14} hiz={1.35} yay={50} />
+        <Fiskir t={t} t0={th + 1.1} x={540} y={860} n={14} hiz={1.4} yay={55} />
         {/* hız çizgileri */}
         {t > th ? Array.from({ length: 6 }).map((_, i) => {
           const u = ((t - th) * 2 + i / 6) % 1;
@@ -634,19 +635,19 @@ const Kor: S = ({ t, d, ws }) => {
 const Keskin: S = ({ t, d, ws }) => {
   const tk = ws("keskin"), tyv = ws("yavaş"), tdm = ws("damlalar"), tu = ws("ulaşamıyor");
   const kes = ap(t, tyv - 0.2, Math.max(0.8, tu - tyv));
-  const by = lerp(300, 830, ez(kes));
+  const by = lerp(600, 1060, ez(kes));
   return (
     <g>
       <KolajDefs />
       <Kirpinti t={t} renk="#d9f1e1" o={0.3} />
       <Kamera t={t} d={d} z0={1.0} z1={1.08} oy={900} vurus={[tk, tu]}>
-        <GozHizasi y={560} k={ap(t, tdm - 0.4, 0.3)} t={t} />
+        <GozHizasi y={660} k={ap(t, tdm - 0.4, 0.3)} t={t} />
         <SoganKesit x={540} y={1110} t={t} kesik={ez(kes)} />
         <CizimBicak x={540} y={by} kor={0} />
         {/* birkaç küçük damla: göz hizasına varamadan geri düşer */}
-        <Fiskir t={t} t0={tdm - 0.2} x={540} y={820} n={8} hiz={0.42} yay={40} s={0.6} />
-        <Fiskir t={t} t0={tdm + 0.5} x={540} y={820} n={6} hiz={0.4} yay={40} s={0.55} />
-        <g transform={`translate(860 560) scale(${Math.min(1.05, sp(t, tu - 0.1, 9))})`}>
+        <Fiskir t={t} t0={tdm - 0.2} x={540} y={850} n={8} hiz={0.42} yay={40} s={0.6} />
+        <Fiskir t={t} t0={tdm + 0.5} x={540} y={850} n={6} hiz={0.4} yay={40} s={0.55} />
+        <g transform={`translate(880 760) scale(${Math.min(1.05, sp(t, tu - 0.1, 9))})`}>
           <circle r={64} fill={GREEN} stroke={INK} strokeWidth={7} />
           <path d="M -28 0 L -8 22 L 30 -22" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" />
         </g>
