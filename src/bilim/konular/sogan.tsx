@@ -607,9 +607,11 @@ const Kor: S = ({ t, d, ws }) => {
       </g>
       <circle cx={130} cy={370} r={14} fill={RED} opacity={Math.sin(t * 8) > 0 ? 1 : 0.2} />
       <text x={155} y={382} fontSize={32} fontWeight={900} fill={KREM} style={font}>REC · AĞIR ÇEKİM</text>
-      <Kamera t={t} d={d} z0={1.0} z1={1.12} oy={900} vurus={[tbs, tf, t140]}>
+      <Kamera t={t} d={d} z0={1.0} z1={1.12} oy={900} vurus={[tbs, tez, tf, t140]}>
         <SoganKesit x={540} y={1110} t={t} ez={ez(bas) * (1 - kir * 0.4)} kesik={kir * 0.6} />
-        <CizimBicak x={540} y={bicakY} kor={1} s={1} />
+        {/* kör bıçak giremiyor: ileri-geri zorlanır, titrer (bekleme anı canlı kalsın) */}
+        <CizimBicak x={540 + (t > tbs - 0.3 && !kir ? Math.sin(t * 11) * 26 : 0)} y={bicakY + (t > tbs - 0.3 && !kir ? Math.abs(Math.sin(t * 11)) * 14 : 0)} kor={1} s={1} rot={t > tbs - 0.3 && !kir ? Math.sin(t * 11) * 3 : 0} />
+        {t > tbs - 0.3 && !kir ? <text x={540 + Math.sin(t * 30) * 4} y={690} textAnchor="middle" fontSize={64} fontWeight={900} fill={KREM} stroke={INK} strokeWidth={3} style={font} opacity={0.6 + 0.4 * Math.sin(t * 9)}>ZORLANIYOR!</text> : null}
         {/* basınç okları */}
         <g opacity={ap(t, tbs - 0.4, 0.3) * (1 - kir)}>
           {[-1, 1].map((sg) => <path key={sg} d={`M ${540 + sg * 230} ${700 + Math.sin(t * 9) * 8} L ${540 + sg * 140} ${800} M ${540 + sg * 140} 800 l ${sg * 40} -6 M ${540 + sg * 140} 800 l ${sg * 6} -40`} stroke={KIRMIZI} strokeWidth={14} strokeLinecap="round" fill="none" />)}
