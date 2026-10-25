@@ -4,22 +4,22 @@
  "sure": 70.0,
  "lufs": -14.2,
  "tepe_dbtp": -2.6,
- "hareket_ortalama": 4.26,
+ "hareket_ortalama": 4.37,
  "bulgular": [
-  {
-   "seviye": "KALDI",
-   "alan": "Hareket",
-   "mesaj": "ölü an 41.5–43.0 sn (ekran neredeyse duruyor)"
-  },
   {
    "seviye": "KALDI",
    "alan": "Hareket",
    "mesaj": "ölü an 51.0–52.0 sn (ekran neredeyse duruyor)"
   },
   {
+   "seviye": "UYARI",
+   "alan": "Söz",
+   "mesaj": "metinde olmayan fazladan söz: 'kmdir o' (~56.4 sn)"
+  },
+  {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %95 uyumlu"
+   "mesaj": "duyulan konuşma metinle %93 uyumlu"
   }
  ]
 }

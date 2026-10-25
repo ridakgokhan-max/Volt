@@ -34,17 +34,17 @@ Getting composition
 [90mCodec                h264[39m
 [90mOutput               out/bilim/sogan.mp4[39m
 [90mConcurrency          2x[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m+                    out/bilim/sogan.mp4[39m [90m44.4 MB[39m
-[KALDI] Hareket: ölü an 41.5–43.0 sn (ekran neredeyse duruyor)
+[34m○                    out/bilim/sogan.mp4[39m [90m45.2 MB[39m
 [KALDI] Hareket: ölü an 51.0–52.0 sn (ekran neredeyse duruyor)
-[0;93m2026-10-25 18:41:26.356708169 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-[BİLGİ] Söz: duyulan konuşma metinle %95 uyumlu
+[0;93m2026-10-25 19:02:48.243898022 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[UYARI] Söz: metinde olmayan fazladan söz: 'kmdir o' (~56.4 sn)
+[BİLGİ] Söz: duyulan konuşma metinle %93 uyumlu
 SONUÇ: KALDI
 durum: success
