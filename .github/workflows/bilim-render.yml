@@ -95,12 +95,25 @@ jobs:
           if [ -f "out/bilim/$K.mp4" ]; then
             ffmpeg -y -loglevel error -i "out/bilim/$K.mp4" -vf "fps=1/2,scale=216:384,tile=6x4" -frames:v 1 "out/bilim/$K-kareler.jpg" || true
           fi
+      - name: Whisper model önbelleği
+        if: github.event.inputs.taslak != 'evet'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-large-v3
+      - name: Otomatik kalite kontrolü (video kendini izler ve dinler)
+        if: always() && github.event.inputs.taslak != 'evet'
+        continue-on-error: true
+        run: |
+          pip install -q faster-whisper
+          K="${{ steps.konu.outputs.konu }}"
+          timeout 900 python kalite/oto_kontrol.py "$K" --whisper 2>&1 | tee -a out/bilim/log.txt || python kalite/oto_kontrol.py "$K" | tee -a out/bilim/log.txt
       - name: Sonucu depoya kaydet
         if: always()
         run: |
           git config user.name "volt-render-bot"
           git config user.email "volt-render-bot@users.noreply.github.com"
           echo "durum: ${{ job.status }}" >> out/bilim/log.txt
-          git add out/bilim public/bilim src/bilim/data || true
+          git add out/bilim public/bilim src/bilim/data kalite/rapor || true
           git commit -m "Bilim videosu üretildi [skip ci]" || echo "Değişiklik yok"
           git pull --rebase && git push

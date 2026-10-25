@@ -1,0 +1,53 @@
+name: Bilim - açık arşivden gerçek görüntü ara
+
+# Wikimedia Commons + NASA + Openverse'ten yalnızca serbest (CC0 / kamu malı) fotoğraf ve kısa klip adayları indirir.
+on:
+  workflow_dispatch:
+    inputs:
+      klasor:
+        description: "aday/ altındaki klasör (ör. sogan)"
+        required: true
+      liste:
+        description: "ad|arama terimi; ad|arama terimi; ..."
+        required: true
+      video:
+        description: "evet = kısa video klip ara, hayir = fotoğraf"
+        required: false
+        default: "hayir"
+      ccby:
+        description: "evet = atıf isteyen CC BY dosyaları da al"
+        required: false
+        default: "hayir"
+
+permissions:
+  contents: write
+
+jobs:
+  ara:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Araçlar
+        run: |
+          command -v ffmpeg >/dev/null || (timeout 300 sudo apt-get install -y -qq ffmpeg > /dev/null)
+          pip install -q pillow
+      - name: Ara ve indir
+        env:
+          KL: ${{ github.event.inputs.klasor }}
+          LISTE: ${{ github.event.inputs.liste }}
+          VID: ${{ github.event.inputs.video }}
+          CCBY: ${{ github.event.inputs.ccby }}
+        run: |
+          case "$KL" in *[!a-z0-9-]*|"") echo "geçersiz klasör"; exit 1;; esac
+          IFS=';' read -ra ARR <<< "$LISTE"
+          ARGS=(); for a in "${ARR[@]}"; do a="$(echo "$a" | sed 's/^ *//;s/ *$//')"; [ -n "$a" ] && ARGS+=("$a"); done
+          EK=(); [ "$VID" = "evet" ] && EK+=(--video); [ "$CCBY" = "evet" ] && EK+=(--ccby)
+          python3 scripts/arsiv_ara.py "aday/$KL" "${EK[@]}" "${ARGS[@]}"
+      - name: Kaydet
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add aday/
+          git commit -qm "Arşiv adayları [skip ci]" || true
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done
