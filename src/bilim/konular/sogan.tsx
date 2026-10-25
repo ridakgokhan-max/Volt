@@ -466,7 +466,7 @@ const GozS: S = ({ t, d, ws }) => {
           return <Damla key={i} x={x + Math.sin(u * 6 + i) * 10} y={GY + 40 + u * 330} s={0.9 + rnd(i, 73) * 0.5} o={yas * (1 - u * 0.6)} />;
         }) : null}
       </Kamera>
-      <Serit t={t} a={tyk - 0.05} text={'"YIKA!"'} x={540} y={420} size={84} rot={-3} bg={BLUE} color="#fff" />
+      <Serit t={t} a={tyk - 0.3} text={'"YIKA!"'} x={540} y={420} rot={-2} size={84} rot={-3} bg={BLUE} color="#fff" />
     </g>
   );
 };
@@ -563,7 +563,7 @@ const Cornell: S = ({ t, d, ws }) => {
       <Kirpinti t={t} renk="#f0b4b4" o={0.3} />
       <Kamera t={t} d={d} z0={1.0} z1={1.1} vurus={[tb, t25, tc, tk]}>
         {/* bıçak döne döne gelir (kancaya dönüş) */}
-        <g opacity={1 - ap(t, t25 + 0.1, 0.3)} transform={`translate(540 780) rotate(${(1 - easeOut(ap(t, 0, 0.6))) * 360 + Math.sin(t * 2) * 4}) scale(${0.4 + 0.6 * easeOut(ap(t, 0, 0.6))}) translate(-540 -780)`}>
+        <g opacity={1 - ap(t, t25 + 0.1, 0.3)} transform={`translate(540 780) rotate(${(1 - easeOut(ap(t, 0, 0.6))) * 25 + Math.sin(t * 2) * 4}) scale(${1.15 - 0.15 * easeOut(ap(t, 0, 0.6))}) translate(-540 -780)`}>
           <Parca t={t} ad="bicak" x={540} y={600} w={820} rot={-20} />
           <Bant x={840} y={790} w={130} rot={-28} />
         </g>
