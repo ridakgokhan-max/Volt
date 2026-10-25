@@ -78,7 +78,7 @@
   {
    "tur": "takip",
    "son": true,
-   "ofset": -2.2
+   "ofset": -2.1
   }
  ],
  "cta_kostum": "onluk",
@@ -219,7 +219,7 @@
   "japon bilim",
   "beynine \"yanıyor!\""
  ],
- "sc_release": 1200,
+ "sc_release": 1800,
  "sc_ratio": 2,
  "gecis_ses": 0.28,
  "kir_sonra": [
