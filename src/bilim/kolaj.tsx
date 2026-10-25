@@ -55,9 +55,9 @@ export const Serit: React.FC<{ t: number; a?: number; text: string; x?: number; 
 }) => {
   const tq = adim(t);
   if (tq < a) return null;
-  let k = a <= 0 ? 1 : geri(cl((tq - a) / 0.3));
-  if (cikis !== undefined && tq > cikis) k *= 1 - cl((tq - cikis) / 0.25);
-  if (k <= 0.001) return null;
+  const k = a <= 0 ? 1 : geri(cl((tq - a) / 0.3));
+  const sonum = cikis !== undefined && tq > cikis ? 1 - cl((tq - cikis) / 0.18) : 1; // çıkış: ölçek değil opaklık
+  if (k <= 0.001 || sonum <= 0.001) return null;
   const n = Math.floor(t * 12);
   const jr = (random(`s${text}${n}`) - 0.5) * 0.8;
   const w = Math.min(1040, text.length * size * 0.66 + 90);
@@ -67,7 +67,7 @@ export const Serit: React.FC<{ t: number; a?: number; text: string; x?: number; 
   for (let i = 0; i <= adimS; i++) pts.push(`${-w / 2 + (w * i) / adimS},${-h / 2 + (i % 2 ? 6 : -2) + random(`u${text}${i}`) * 5}`);
   for (let i = adimS; i >= 0; i--) pts.push(`${-w / 2 + (w * i) / adimS},${h / 2 + (i % 2 ? -5 : 3) - random(`a${text}${i}`) * 5}`);
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot + jr}) scale(${Math.max(0, k)} 1)`} filter="url(#kgolge)">
+    <g transform={`translate(${x} ${y}) rotate(${rot + jr}) scale(${Math.max(0, k)} 1)`} filter="url(#kgolge)" opacity={sonum}>
       <polygon points={pts.join(" ")} fill={bg} />
       <text x={0} y={size * 0.36} textAnchor="middle" fontSize={size} fontWeight={900} fill={color} style={{ fontFamily: "var(--font)", letterSpacing: -0.5 }}>
         {text}

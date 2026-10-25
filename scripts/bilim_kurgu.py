@@ -171,6 +171,24 @@ def main(konu):
     for i, w in enumerate(words):
         s, e = remap(w["start"]), remap(w["end"])
         kel.append({"w": w["w"], "s": round(s, 3), "e": round(max(e, s + 0.08), 3), "vurgu": i in vurgu})
+    # ses başlangıcına oturtma: kelime başı sessizliğe düşüyorsa 0,7 sn içindeki ilk ses başlangıcına kaydır
+    hop10 = SR // 100
+    nz = len(voice) // hop10
+    zarf = np.sqrt(np.mean(voice[:nz * hop10].reshape(nz, hop10) ** 2, axis=1))
+    esik = np.percentile(zarf[zarf > 1e-5], 60) * 0.12 if np.any(zarf > 1e-5) else 0.0
+    oturan = 0
+    for k in kel:
+        i0 = int(k["s"] * 100)
+        if 0 <= i0 < nz and zarf[max(0, i0 - 2):i0 + 3].max() < esik:
+            j = i0
+            while j < min(nz, i0 + 70) and zarf[j] < esik:
+                j += 1
+            if j < min(nz, i0 + 70):
+                yeni = round(j / 100 - 0.02, 3)
+                k["e"] = max(k["e"], yeni + 0.12)
+                k["s"] = yeni
+                oturan += 1
+    print(f"ses başlangıcına oturtulan kelime: {oturan}")
     for i in range(len(kel) - 1):  # sıralı ve çakışmasız
         kel[i + 1]["s"] = max(kel[i + 1]["s"], kel[i]["s"] + 0.05)
 
@@ -180,7 +198,7 @@ def main(konu):
 
     sents, a = [], 0
     for i, k in enumerate(kel):
-        if k["w"][-1:] in ".?!" or i == len(kel) - 1:
+        if k["w"].rstrip('"”’\'')[-1:] in ".?!" or i == len(kel) - 1:
             sents.append((a, i))
             a = i + 1
     parts = []
@@ -335,7 +353,7 @@ def main(konu):
     starts = {s["id"]: s["bas"] for s in sc}
     for i, s in enumerate(sc):
         if i > 0 or AC:
-            B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), 0.55)
+            B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), float(K.get("gecis_ses", 0.55)))
     if AC:  # açılış vuruşu
         B.put(sfx, 0.0, B.katman(B.efekt("vurus", yedek=B.boom), B.riser(max(0.4, AC))), 0.6)
     for c in data.get("cta", []):  # CTA: yürüyüş, balon pıtı, dokunuş
