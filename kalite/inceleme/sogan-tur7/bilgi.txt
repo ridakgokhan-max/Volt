@@ -1,0 +1,59 @@
+KONU: sogan
+SÜRE: 70.8 sn
+
+OKUNAN METİN:
+Soğan doğrarken ağlıyorsan, suçlu soğan değil, elindeki bıçak.
+Ama önce şunu bil. O soğan sana karşı kendini savunuyor.
+Soğanın hücrelerinde iki madde var. Normalde ayrı odalarda dururlar.
+Bıçak hücreyi parçaladığı an ikisi karışıyor ve havaya uçan yakıcı bir gaz oluşuyor.
+Bu gaz gözüne ulaşınca gözündeki sinirler beynine "yanıyor!" diye haber veriyor.
+Beyin de hemen gözyaşı bezlerine emir veriyor: "Yıka!"
+İşin ilginci, bu tepkimenin sırrını 2002'de Japon bilim insanları çözdü.
+Gazı üreten gizli bir enzim buldular.
+Bu buluş onlara, insanı önce güldüren, sonra düşündüren Ig Nobel ödülünü kazandı.
+Peki bıçak nereden çıktı?
+2025'te ABD'deki Cornell Üniversitesi'nde bilim insanları soğan kesmeyi yüksek hızlı kamerayla çekti.
+Kör bıçak soğana daha çok bastırıyor. Daha çok hücreyi ezip suyunu fışkırtıyor.
+Hızlı kesince bu damlalar saatte 140 kilometreyi aşan hızla havaya sıçrıyor.
+Ama keskin bir bıçakla yavaş kesersen, damlalar göz hizasına bile ulaşamıyor.
+Yani bir dahaki sefere soğan seni ağlatırsa, ona kızma. Bıçağa bak.
+
+
+KANCA: {'yazi': 'SUÇLU: BIÇAK?', 'alt': 'Soğan neden ağlatır?', 'sure': 2.0}
+
+SAHNELER (başlangıç sn):
+- giris: 0.0
+- savunma: 4.5
+- hucre: 8.4
+- gaz: 12.9
+- goz: 18.3
+- japon: 27.2
+- cornell: 39.8
+- kor: 48.8
+- keskin: 60.0
+- son: 64.9
+
+SES KESİMLERİ (ham kayıt sn): [[3.1, 3.48], [33.4, 38.15], [42.6, 46.25], [48.5, 51.6], [66.9, 75.0]]
+
+CTA: [{'tur': 'begen', 'kelime': 'çıktı'}, {'tur': 'yorum', 'kelime': 'kesersen', 'yazi': 'Bıçağın keskin mi?'}, {'tur': 'takip', 'son': True, 'ofset': -2.2}]
+
+AÇIKLAMA:
+Soğan doğrarken ne kadar ağlayacağını büyük ölçüde elindeki bıçak belirliyor 🔪 Peki nasıl?
+
+Selam, ben Meraklı Gözlüklü 🤓 Bugün mutfaktaki en eski gizemi çözüyoruz.
+
+🧅 Soğanın hücrelerinde iki madde ayrı odalarda duruyor: kükürtlü bir madde ve bir enzim. Bıçak hücreyi parçalayınca ikisi karışıyor ve havaya uçan yakıcı bir gaz oluşuyor (propantiyal S-oksit). Bilim insanlarına göre bu, soğanın kendini savunma yolu.
+
+👁️ Gaz gözüne ulaşınca sinirler beynine "yanıyor!" diye haber veriyor, beyin de gözyaşı bezlerine "yıka!" emrini gönderiyor. O gözyaşları aslında bir temizlik.
+
+🇯🇵 Gazı üreten gizli enzimi 2002'de Japon bilim insanları buldu. Bu buluş 2013'te, insanı önce güldüren sonra düşündüren Ig Nobel ödülünü kazandı.
+
+🎥 2025'te Cornell Üniversitesi'nde soğan kesmeyi yüksek hızlı kamerayla çektiler. Kör bıçak daha çok bastırıyor, daha çok hücreyi ezip suyu fışkırtıyor. Kör bıçakla hızlı kesince, bıçak kabuğu deldiği an fışkıran damlalar saatte 140 km'ye yaklaşabiliyor.
+✅ Keskin bıçakla yavaş kesersen çok daha az damla sıçrıyor; deneyde damlalar göz hizasına bile ulaşmadı. Yani gaz yine oluşuyor ama gözüne çok daha azı geliyor.
+
+Senin bıçağın keskin mi, yoksa her seferinde ağlıyor musun? 👇 Mutfakta hep ağlayan o arkadaşına gönder 📲
+Her videoda bir merakı bir dakikada çözüyoruz. Kaçırmamak için takip et 🔔
+
+Kaynaklar: Imai vd., Nature 2002 · Wu vd. (Cornell), PNAS 2025
+Görseller: Wikimedia Commons, Openverse (CC0 / kamu malı)
+
