@@ -179,7 +179,13 @@ def main(konu):
     zarf = np.sqrt(np.mean(voice[:nz * hop10].reshape(nz, hop10) ** 2, axis=1))
     esik = np.percentile(zarf[zarf > 1e-5], 60) * 0.12 if np.any(zarf > 1e-5) else 0.0
     oturan = 0
-    for k in kel:
+    def it_sonraki(ix):  # kaydırılan kelimenin ardından gelen kelime en az kelime süresi kadar sonra başlasın
+        if ix + 1 < len(kel):
+            k0, k1 = kel[ix], kel[ix + 1]
+            k1["s"] = max(k1["s"], round(k0["s"] + max(0.15, 0.06 * len(k0["w"])), 3))
+            k1["e"] = max(k1["e"], k1["s"] + 0.1)
+            k0["e"] = min(k0["e"], k1["s"]) if k0["e"] > k1["s"] else k0["e"]
+    for ix, k in enumerate(kel):
         i0 = int(k["s"] * 100)
         # kelime başından sonraki 0,45 sn içinde ≥150 ms sessizlik varsa kelime aslında o sessizlikten sonra başlıyor
         # (whisper başlangıcı bir önceki kelimenin kuyruğuna koymuş)
@@ -200,6 +206,7 @@ def main(konu):
                     k["e"] = max(k["e"], yeni + 0.15)
                     k["s"] = yeni
                     oturan += 1
+                    it_sonraki(ix)
                     continue
         if 0 <= i0 < nz and zarf[max(0, i0 - 2):i0 + 3].max() < esik:
             j = i0
@@ -210,9 +217,13 @@ def main(konu):
                 k["e"] = max(k["e"], yeni + 0.12)
                 k["s"] = yeni
                 oturan += 1
+                it_sonraki(ix)
     print(f"ses başlangıcına oturtulan kelime: {oturan}")
     for i in range(len(kel) - 1):  # sıralı ve çakışmasız
         kel[i + 1]["s"] = max(kel[i + 1]["s"], kel[i]["s"] + 0.05)
+        if kel[i]["e"] > kel[i + 1]["s"]:
+            kel[i]["e"] = kel[i + 1]["s"]
+        kel[i + 1]["e"] = max(kel[i + 1]["e"], kel[i + 1]["s"] + 0.08)
 
     # --- altyazı satırları: cümleyi dengeli parçalara böl (satır başına ~24 harf, tek kelime kalmasın) ---
     def chars(a, b):
@@ -364,6 +375,13 @@ def main(konu):
                 bas = son_kelime + float(c.get("ofset", 0.15))
             else:
                 bas = kel[ara(c["kelime"], 0, c.get("n", 0))]["e"] + float(c.get("ofset", 0.1))
+            if not c.get("son") and K.get("cta_bosluk", False):
+                # dokunuş (bas+1.25) bir konuşma boşluğuna (≥0,3 sn) denk gelecek şekilde kaydır
+                bos = [((kel[i]["e"] + kel[i + 1]["s"]) / 2) for i in range(len(kel) - 1) if kel[i + 1]["s"] - kel[i]["e"] >= 0.3]
+                aday = [m for m in bos if m - 1.25 >= bas - 1.0]
+                if aday:
+                    m = min(aday, key=lambda m: abs(m - (bas + 1.25)))
+                    bas = m - 1.25
             d = {"tur": c["tur"], "bas": round(bas, 3)}
             for alan in ("yazi", "kostum"):
                 if c.get(alan) or K.get("cta_kostum") and alan == "kostum":
@@ -432,7 +450,7 @@ def main(konu):
     fc = ("[0:a]loudnorm=I=-16:TP=-2:LRA=9,"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
           f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
-          f"[m][vk]sidechaincompress=threshold=0.03:ratio={K.get('sc_ratio', 5)}:attack=20:release={K.get('sc_release', 400)}[md];"
+          f"[m][vk]sidechaincompress=threshold={K.get('sc_threshold', 0.03)}:ratio={K.get('sc_ratio', 5)}:attack=20:release={K.get('sc_release', 400)}[md];"
           "[2:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.62[s];"
           "[v][md][s]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.8:level=false[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/voice.wav", "-i", f"{tmp}/music.wav", "-i", f"{tmp}/sfx.wav",

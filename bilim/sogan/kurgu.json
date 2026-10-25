@@ -199,7 +199,7 @@
    0.45
   ]
  ],
- "muzik_ses": 0.38,
+ "muzik_ses": 0.3,
  "baglar": [
   "ayrı odalarda",
   "yakıcı bir",
@@ -219,7 +219,7 @@
   "japon bilim",
   "beynine \"yanıyor!\""
  ],
- "sc_release": 900,
+ "sc_release": 1200,
  "sc_ratio": 2,
  "gecis_ses": 0.28,
  "kir_sonra": [
@@ -238,5 +238,7 @@
   "ağlatırsa",
   "onlara"
  ],
- "cta_ses": 0.5
+ "cta_ses": 0.5,
+ "sc_threshold": 0.09,
+ "cta_bosluk": true
 }
