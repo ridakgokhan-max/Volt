@@ -1,16 +1,11 @@
 {
  "konu": "sogan",
- "sonuc": "KALDI",
+ "sonuc": "UYARI",
  "sure": 70.0,
  "lufs": -14.2,
  "tepe_dbtp": -2.6,
- "hareket_ortalama": 4.37,
+ "hareket_ortalama": 4.45,
  "bulgular": [
-  {
-   "seviye": "KALDI",
-   "alan": "Hareket",
-   "mesaj": "ölü an 51.0–52.0 sn (ekran neredeyse duruyor)"
-  },
   {
    "seviye": "UYARI",
    "alan": "Söz",
