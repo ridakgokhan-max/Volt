@@ -1,15 +1,15 @@
 {
  "konu": "sogan",
  "sonuc": "GEÇTİ",
- "sure": 70.13,
- "lufs": -14.1,
- "tepe_dbtp": -2.8,
- "hareket_ortalama": 4.61,
+ "sure": 70.77,
+ "lufs": -14.2,
+ "tepe_dbtp": -4.4,
+ "hareket_ortalama": 4.68,
  "bulgular": [
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %96 uyumlu"
+   "mesaj": "duyulan konuşma metinle %98 uyumlu"
   }
  ]
 }
