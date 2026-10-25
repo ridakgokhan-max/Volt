@@ -7,7 +7,7 @@ kaynak/sahip bilgisi açıklamaya yazılmak üzere kaydedilir):
   - Openverse (fotoğraf)
 
 Kullanım:
-  python scripts/arsiv_ara.py <klasör> [--video] [--ccby] [--adet N] "ad|arama terimi" ...
+  python scripts/arsiv_ara.py <klasör> [--video] [--ccby] [--nasa] [--adet N] "ad|arama terimi" ...
 Çıktı:
   <klasör>/<ad>_<n>.jpg  (fotoğraf)  veya  <klasör>/<ad>_<n>.mp4 (≤8 sn, 1080 genişlik, sessiz klip)
   <klasör>/adaylar.json  (dosya, kaynak, lisans, sahip, bağlantı)
@@ -166,20 +166,26 @@ def main():
     arg = sys.argv[1:]
     if not arg:
         print(__doc__); sys.exit(1)
-    kl = arg.pop(0); video = "--video" in arg; ccby = "--ccby" in arg
+    kl = arg.pop(0); video = "--video" in arg; ccby = "--ccby" in arg; nasa_ac = "--nasa" in arg
     adet = 4
     if "--adet" in arg:
         i = arg.index("--adet"); adet = int(arg[i + 1]); del arg[i:i + 2]
-    arg = [a for a in arg if a not in ("--video", "--ccby")]
+    arg = [a for a in arg if a not in ("--video", "--ccby", "--nasa")]
     os.makedirs(kl, exist_ok=True)
     yol_json = os.path.join(kl, "adaylar.json")
     kayit = json.load(open(yol_json)) if os.path.exists(yol_json) else []
     for a in arg:
         ad, q = a.split("|", 1)
         ad = re.sub(r"[^a-z0-9-]", "-", ad.lower())
-        adaylar = commons(q, video, ccby, adet) + nasa(q, video, adet)
+        # NASA yalnızca uzay konularında (--nasa ya da arama terimi uzayla ilgiliyse); yoksa alakasız sonuç getiriyor
+        uzay = nasa_ac or any(w in q.lower() for w in ("space", "nasa", "planet", "galaxy", "astronaut", "moon", "mars", "rocket", "earth from", "star", "nebula", "black hole"))
+        adaylar = commons(q, video, ccby, adet) + (nasa(q, video, adet) if uzay else [])
         if not video:
             adaylar += openverse(q, ccby, adet)
+        # alaka sıralaması: başlığında arama kelimeleri geçenler öne
+        kelimeler = [w for w in re.findall(r"[a-z]+", q.lower()) if len(w) > 2]
+        skor = lambda c: -sum(w in (c.get("baslik") or "").lower() for w in kelimeler)
+        adaylar.sort(key=skor)
         n = 0
         for c in adaylar:
             if n >= adet:
