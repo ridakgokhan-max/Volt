@@ -1,10 +1,8 @@
-metinle hizalandı: transkript 137 -> metin 135 kelime
-CTA: [{'tur': 'yorum', 'bas': 61.692, 'yazi': 'Adrese bakıyor musun?', 'kostum': 'kulaklik'}, {'tur': 'begen', 'bas': 40.706, 'kostum': 'kulaklik'}, {'tur': 'takip', 'bas': 62.118, 'kostum': 'kulaklik'}]
-müzik: teknoloji -> paulyudin-minimal-164833.mp3
-qr-kod: 86.3 sn kayıt -> 65.0 sn video, 135 kelime, 39 altyazı satırı, 7 sahne
-[90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
-Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+metinle hizalandı: transkript 152 -> metin 148 kelime
+CTA: [{'tur': 'begen', 'bas': 39.122, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 60.378, 'yazi': 'Bıçağın keskin mi?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 66.856, 'kostum': 'onluk'}]
+müzik: merak -> sonican-sneaky-curious-jazzy-506460.mp3
+sogan: 100.4 sn kayıt -> 70.0 sn video, 148 kelime, 48 altyazı satırı, 10 sahne
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -34,11 +32,19 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/qr-kod.mp4[39m
+[90mOutput               out/bilim/sogan.mp4[39m
 [90mConcurrency          2x[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/qr-kod.mp4[39m [90m35.6 MB[39m
+[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
+[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
+[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
+[34m+                    out/bilim/sogan.mp4[39m [90m44.4 MB[39m
+[KALDI] Hareket: ölü an 41.5–43.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 51.0–52.0 sn (ekran neredeyse duruyor)
+[0;93m2026-10-25 18:41:26.356708169 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[BİLGİ] Söz: duyulan konuşma metinle %95 uyumlu
+SONUÇ: KALDI
 durum: success
