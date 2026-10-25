@@ -3,13 +3,13 @@
  "sonuc": "GEÇTİ",
  "sure": 70.77,
  "lufs": -14.2,
- "tepe_dbtp": -4.4,
- "hareket_ortalama": 4.69,
+ "tepe_dbtp": -4.5,
+ "hareket_ortalama": 4.66,
  "bulgular": [
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %98 uyumlu"
+   "mesaj": "duyulan konuşma metinle %97 uyumlu"
   }
  ]
 }
