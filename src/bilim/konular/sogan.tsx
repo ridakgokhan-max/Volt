@@ -289,12 +289,12 @@ const SoganKesit: React.FC<{ x: number; y: number; t: number; ez?: number; kesik
 /** Göz hizası çizgisi */
 const GozHizasi: React.FC<{ y: number; k: number; t: number }> = ({ y, k, t }) => (
   <g opacity={k}>
-    <line x1={70} x2={1010} y1={y} y2={y} stroke={RED} strokeWidth={8} strokeDasharray="30 18" strokeDashoffset={-t * 60} />
-    <g transform={`translate(110 ${y - 60})`}>
+    <line x1={120} x2={960} y1={y} y2={y} stroke={RED} strokeWidth={8} strokeDasharray="30 18" strokeDashoffset={-t * 60} />
+    <g transform={`translate(175 ${y - 60})`}>
       <ellipse cx={0} cy={0} rx={52} ry={30} fill="#fff" stroke={INK} strokeWidth={6} />
       <circle cx={4} cy={0} r={16} fill={INK} />
     </g>
-    <text x={190} y={y - 32} fontSize={44} fontWeight={900} fill={RED} style={font}>GÖZ HİZASI</text>
+    <text x={250} y={y - 32} fontSize={44} fontWeight={900} fill={RED} style={font}>GÖZ HİZASI</text>
   </g>
 );
 
@@ -405,7 +405,7 @@ const GazS: S = ({ t, d, ws }) => {
       <Kirpinti t={t} renk="#f5ebc4" />
       <Kamera t={t} d={d} z0={1.05} z1={1.0 + 0.05} y0={0} y1={-120} vurus={[tp, tk, ty]}>
         <Hucre t={t} x={540} y={900} s={1} kirik={kir} karis={kar} />
-        <Gaz t={t} t0={th - 0.6} x={540} y={820} n={14} yukseklik={330} o={ap(t, th - 0.6, 0.5)} />
+        <Gaz t={t} t0={th - 0.6} x={540} y={690} n={14} yukseklik={240} o={ap(t, th - 0.6, 0.5)} />
         {/* bıçak yukarıdan iner, duvarı keser, yukarı çıkar */}
         <defs><clipPath id="gaz-ust"><rect x={-200} y={240} width={1480} height={1700} /></clipPath></defs>
         <g clipPath="url(#gaz-ust)">
@@ -417,7 +417,7 @@ const GazS: S = ({ t, d, ws }) => {
       <Serit t={t} a={tp - 0.05} cikis={tk - 0.2} text="TETİĞİ BIÇAK ÇEKER" x={540} y={1170} size={56} rot={-2} bg={INK} color={KREM} />
       <Serit t={t} a={tk - 0.05} cikis={th - 0.15} text="KARIŞIYOR!" x={540} y={1170} size={66} rot={2} bg={ACC} />
       <Serit t={t} a={th - 0.05} text="YAKICI GAZ" x={540} y={370} size={76} rot={-3} bg={KIRMIZI} color={KREM} />
-      {t > th + 0.3 ? <g opacity={ap(t, th + 0.3, 0.3)}><rect x={330} y={438} width={420} height={50} rx={12} fill={KREM} stroke={INK} strokeWidth={3} /><text x={540} y={474} textAnchor="middle" fontSize={34} fontWeight={900} fill={INK} style={font}>(propantiyal S-oksit)</text></g> : null}
+      {t > th - 0.2 ? <g opacity={ap(t, th - 0.2, 0.25)}><rect x={330} y={438} width={420} height={50} rx={12} fill={KREM} stroke={INK} strokeWidth={3} /><text x={540} y={474} textAnchor="middle" fontSize={34} fontWeight={900} fill={INK} style={font}>(propantiyal S-oksit)</text></g> : null}
     </g>
   );
 };
@@ -537,13 +537,13 @@ const Japon: S = ({ t, d, ws }) => {
       <Muhur t={t} a={tdu + 0.25} text="2013" x={850} y={500} size={80} rot={12} />
       {/* şüpheli bıçak: hikâyenin ipi ortada da görünsün; sahne sonunda ortaya gelip büyür (Cornell'deki bıçağa devreder) */}
       {(() => {
-        const dev = ez(ap(t, d - 0.9, 0.8));
+        const dev = ez(ap(t, d - 0.75, 0.6));
         return (
-          <g opacity={ap(t, 0.4, 0.4)} transform={`translate(${lerp(820, 540, dev) + Math.sin(t * 1.7) * 6} ${lerp(1620, 800, dev)}) rotate(${lerp(-18, -20, dev) + Math.sin(t * 2) * 3}) scale(${lerp(1, 2.6, dev)})`} filter="url(#kgolge)">
+          <g opacity={ap(t, 0.4, 0.4)} transform={`translate(${lerp(760, 540, dev) + Math.sin(t * 1.7) * 6} ${lerp(1600, 1520, dev)}) rotate(${lerp(-18, -20, dev) + Math.sin(t * 2) * 3}) scale(${lerp(1.4, 2.4, dev)})`} filter="url(#kgolge)">
             <g transform="translate(-160 -50)"><Parca t={t} ad="bicak" x={160} y={0} w={320} a={-1} /></g>
             <g opacity={1 - dev}>
-              <rect x={-130} y={-150} width={260} height={64} rx={14} fill={KIRMIZI} stroke={INK} strokeWidth={4} />
-              <text x={0} y={-106} textAnchor="middle" fontSize={40} fontWeight={900} fill="#fff" style={font}>ŞÜPHELİ ?</text>
+              <rect x={-120} y={-140} width={240} height={58} rx={14} fill={KIRMIZI} stroke={INK} strokeWidth={4} />
+              <text x={0} y={-99} textAnchor="middle" fontSize={36} fontWeight={900} fill="#fff" style={font}>ŞÜPHELİ ?</text>
             </g>
           </g>
         );
@@ -568,14 +568,14 @@ const Cornell: S = ({ t, d, ws }) => {
           <Bant x={840} y={790} w={130} rot={-28} />
         </g>
         {/* Cornell kulesi fotoğrafı */}
-        {(() => { const kc = ez(ap(t, ws("üniversitesi") + 0.5, 0.5)); return <Foto t={t} ad="cornellf" id="c1" x={lerp(350, 230, kc)} y={lerp(790, 640, kc)} w={lerp(400, 280, kc)} rot={-4} a={t25 + 0.25} zoom={1 + 0.4 * cl((t - t25) / 4)} />; })()}
+        {(() => { const kc = ez(ap(t, ws("üniversitesi") + 0.5, 0.5)); return <Foto t={t} ad="cornellf" id="c1" x={lerp(350, 280, kc)} y={lerp(790, 640, kc)} w={lerp(400, 280, kc)} rot={-4} a={t25 + 0.25} zoom={1 + 0.4 * cl((t - t25) / 4)} />; })()}
         <circle cx={350} cy={790} r={360 + ((t * 1.2) % 1) * 140} fill="none" stroke={KREM} strokeWidth={10} opacity={ap(t, t25 + 0.4, 0.3) * (1 - ((t * 1.2) % 1)) * 0.6} />
         <g transform={`translate(800 600) scale(${sp(t, t25 - 0.1, 9)}) rotate(5)`} filter="url(#kgolge)">
           <rect x={-150} y={-62} width={300} height={124} rx={22} fill={INK} />
           <text x={0} y={30} textAnchor="middle" fontSize={84} fontWeight={900} fill={ACC} style={font}>2025</text>
         </g>
         {/* yüksek hızlı kamera */}
-        <g transform={`translate(${lerp(1300, 770, ez(kam))} 880) rotate(${-6 + Math.sin(t * 1.5) * 2})`} filter="url(#kgolge)">
+        <g transform={`translate(${lerp(1300, 720, ez(kam))} 880) rotate(${-6 + Math.sin(t * 1.5) * 2})`} filter="url(#kgolge)">
           <rect x={-170} y={-110} width={300} height={220} rx={26} fill={KREM} />
           <rect x={-155} y={-95} width={270} height={190} rx={20} fill="#2a3140" stroke={INK} strokeWidth={6} />
           <rect x={115} y={-60} width={90} height={120} rx={14} fill="#3b4456" stroke={INK} strokeWidth={6} />
@@ -600,7 +600,7 @@ const Cornell: S = ({ t, d, ws }) => {
       </Kamera>
       <Serit t={t} a={0.05} cikis={t25 - 0.3} text="PEKİ BIÇAK?" x={540} y={420} size={92} rot={-3} bg={ACC} />
       <Serit t={t} a={t25 + 0.6} text="CORNELL ÜNİVERSİTESİ · ABD" x={540} y={400} size={46} rot={2} bg={KIRMIZI} color={KREM} />
-      <Serit t={t} a={ty - 0.05} cikis={d - 0.3} text="YÜKSEK HIZLI KAMERA" x={700} y={1000} size={44} rot={-2} bg={INK} color={KREM} />
+      <Serit t={t} a={ty - 0.05} cikis={d - 0.3} text="YÜKSEK HIZLI KAMERA" x={620} y={1000} size={44} rot={-2} bg={INK} color={KREM} />
     </g>
   );
 };
@@ -682,7 +682,7 @@ const Keskin: S = ({ t, d, ws }) => {
 // 10 — Bir dahaki sefere soğan seni ağlatırsa ona kızma: bıçağına bak. (döngü: açılışa geri döner)
 const Son: S = ({ t, d, ws }) => {
   const tsg = ws("soğan"), tkz = ws("kızma"), tb = ws("bıçağa");
-  const cik = 1 - ap(t, d - 0.75, 0.3);
+  const cik = 1 - ap(t, d - 0.22, 0.2);
   return (
     <g opacity={cik}>
       <KolajDefs />
@@ -701,11 +701,11 @@ const Son: S = ({ t, d, ws }) => {
           </g>
         ) : null}
         <g transform={`translate(${lerp(700, 230, ez(ap(t, tb - 0.3, 0.4)))} 0) rotate(${lerp(30, 0, ez(ap(t, tb - 0.3, 0.4)))} 560 760)`} opacity={ap(t, tb - 0.3, 0.2)}>
-          <Parca t={t} ad="bicak" x={560} y={560} w={820} rot={-94} a={tb - 0.3} yon="sag" />
+          <Parca t={t} ad="bicak" x={560} y={640} w={720} rot={-94} a={tb - 0.3} yon="sag" />
         </g>
       </Kamera>
-      <Serit t={t} a={0.1} cikis={ws("ağlatırsa") - 0.1} text="GAZI SOĞAN YAPAR" x={540} y={400} size={56} rot={-2} bg={INK} color={KREM} />
-      <Serit t={t} a={ws("ağlatırsa")} text="MİKTARINI BIÇAK BELİRLER" x={540} y={400} size={48} rot={2} bg={KIRMIZI} color={KREM} />
+      <Serit t={t} a={0.1} cikis={ws("ağlatırsa") - 0.1} text="GAZI SOĞAN YAPAR" x={540} y={340} size={56} rot={-2} bg={INK} color={KREM} />
+      <Serit t={t} a={ws("ağlatırsa")} text="MİKTARINI BIÇAK BELİRLER" x={540} y={340} size={48} rot={2} bg={KIRMIZI} color={KREM} />
       <Serit t={t} a={tkz - 0.05} cikis={tb - 0.45} text="ONA KIZMA" x={540} y={1150} size={68} rot={-3} bg={GREEN} color="#fff" />
       <Muhur t={t} a={tb + 0.15} text="SUÇLU" x={760} y={980} size={96} rot={-10} />
     </g>
