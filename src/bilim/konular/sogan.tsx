@@ -426,7 +426,7 @@ const GazS: S = ({ t, d, ws }) => {
 const GozS: S = ({ t, d, ws }) => {
   const tu = ws("ulaşınca"), tsn = ws("sinirler"), tyn = ws("yanıyor"), tb = ws("beyin"), tgz = ws("gözyaşı"), tyk = ws("yıka");
   const GX = 420, GY = 880; // göz merkezi
-  const BX = 810, BY = 600; // beyin
+  const BX = 785, BY = 600; // beyin
   const sinyal1 = ap(t, tsn - 0.1, Math.max(0.4, tyn - tsn));
   const sinyal2 = ap(t, tb + 0.2, Math.max(0.4, tyk - tb - 0.5));
   const alarm = ap(t, tyn - 0.1, 0.2) * (1 - ap(t, tb + 0.3, 0.4));
@@ -564,11 +564,11 @@ const Cornell: S = ({ t, d, ws }) => {
       <Kamera t={t} d={d} z0={1.0} z1={1.1} vurus={[tb, t25, tc, tk]}>
         {/* bıçak döne döne gelir (kancaya dönüş) */}
         <g opacity={1 - ap(t, t25 + 0.1, 0.3)} transform={`translate(540 780) rotate(${(1 - easeOut(ap(t, 0, 0.6))) * 25 + Math.sin(t * 2) * 4}) scale(${1.15 - 0.15 * easeOut(ap(t, 0, 0.6))}) translate(-540 -780)`}>
-          <Parca t={t} ad="bicak" x={540} y={600} w={820} rot={-20} />
+          <Parca t={t} ad="bicak" x={540} y={600} w={820} rot={-20} a={-1} />
           <Bant x={840} y={790} w={130} rot={-28} />
         </g>
         {/* Cornell kulesi fotoğrafı */}
-        {(() => { const kc = ez(ap(t, ws("üniversitesi") + 0.5, 0.5)); return <Foto t={t} ad="cornellf" id="c1" x={lerp(350, 280, kc)} y={lerp(790, 640, kc)} w={lerp(400, 280, kc)} rot={-4} a={t25 + 0.25} zoom={1 + 0.4 * cl((t - t25) / 4)} />; })()}
+        {(() => { const kc = ez(ap(t, ws("üniversitesi") + 0.5, 0.5)); return <Foto t={t} ad="cornellf" id="c1" x={lerp(350, 300, kc)} y={lerp(790, 640, kc)} w={lerp(400, 280, kc)} rot={-4} a={t25 + 0.25} zoom={1 + 0.4 * cl((t - t25) / 4)} />; })()}
         <circle cx={350} cy={790} r={360 + ((t * 1.2) % 1) * 140} fill="none" stroke={KREM} strokeWidth={10} opacity={ap(t, t25 + 0.4, 0.3) * (1 - ((t * 1.2) % 1)) * 0.6} />
         <g transform={`translate(800 600) scale(${sp(t, t25 - 0.1, 9)}) rotate(5)`} filter="url(#kgolge)">
           <rect x={-150} y={-62} width={300} height={124} rx={22} fill={INK} />
@@ -644,9 +644,9 @@ const Kor: S = ({ t, d, ws }) => {
         }) : null}
       </Kamera>
       <g opacity={ap(t, t140 - 0.7, 0.3)}><Gosterge x={540} y={1610} deger={deger} t={t} k={sp(t, t140 - 0.7, 10)} /></g>
-      <Serit t={t} a={0.15} cikis={tez - 0.2} text="KÖR BIÇAK" x={250} y={480} size={56} rot={-3} bg={KIRMIZI} color={KREM} />
-      <Serit t={t} a={tez - 0.05} cikis={th - 0.2} text="EZER!" x={250} y={480} size={64} rot={2} bg={ACC} />
-      <Serit t={t} a={th - 0.05} cikis={ts + 0.6} text="HIZLI KESİNCE" x={265} y={480} size={44} rot={-2} bg={INK} color={KREM} />
+      <Serit t={t} a={0.15} cikis={tez - 0.2} text="KÖR BIÇAK" x={285} y={480} size={54} rot={-3} bg={KIRMIZI} color={KREM} />
+      <Serit t={t} a={tez - 0.05} cikis={th - 0.2} text="EZER!" x={285} y={480} size={64} rot={2} bg={ACC} />
+      <Serit t={t} a={th - 0.05} cikis={ts + 0.6} text="HIZLI KESİNCE" x={290} y={480} size={44} rot={-2} bg={INK} color={KREM} />
     </g>
   );
 };
