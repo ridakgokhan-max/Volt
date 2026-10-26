@@ -1,20 +1,15 @@
 {
  "konu": "sogan",
- "sonuc": "UYARI",
+ "sonuc": "GEÇTİ",
  "sure": 77.2,
  "lufs": -14.2,
  "tepe_dbtp": -3.5,
- "hareket_ortalama": 5.17,
+ "hareket_ortalama": 5.21,
  "bulgular": [
-  {
-   "seviye": "UYARI",
-   "alan": "Söz",
-   "mesaj": "metinde olmayan fazladan söz: 'ahtapotların tam 3 kalbi var neyse boş ver ahtapotu asıl önemlisi şu' (~0.0 sn)"
-  },
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %93 uyumlu"
+   "mesaj": "duyulan konuşma metinle %97 uyumlu"
   }
  ]
 }

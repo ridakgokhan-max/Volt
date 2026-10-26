@@ -4,7 +4,7 @@ ses başlangıcına oturtulan kelime: 47
 CTA: [{'tur': 'begen', 'bas': 46.808, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 70.053, 'yazi': 'Bıçağın keskin mi?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 73.89, 'kostum': 'onluk'}]
 müzik: merak -> sonican-sneaky-curious-jazzy-506460.mp3
 sogan: 100.4 sn kayıt -> 77.2 sn video, 160 kelime, 54 altyazı satırı, 11 sahne
-Getting Headless Shell - 9.6 Mb/98.9 Mb
+Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -37,15 +37,14 @@ Getting composition
 [90mOutput               out/bilim/sogan.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
 [40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m○                    out/bilim/sogan.mp4[39m [90m53.4 MB[39m
-[0;93m2026-10-26 11:57:15.293755716 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-[UYARI] Söz: metinde olmayan fazladan söz: 'ahtapotların tam 3 kalbi var neyse boş ver ahtapotu asıl önemlisi şu' (~0.0 sn)
-[BİLGİ] Söz: duyulan konuşma metinle %93 uyumlu
-SONUÇ: UYARI
+[34m○                    out/bilim/sogan.mp4[39m [90m53.6 MB[39m
+[0;93m2026-10-26 12:17:55.237419189 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[BİLGİ] Söz: duyulan konuşma metinle %97 uyumlu
+SONUÇ: GEÇTİ
 durum: success
