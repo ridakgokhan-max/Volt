@@ -301,6 +301,65 @@ const GozHizasi: React.FC<{ y: number; k: number; t: number }> = ({ y, k, t }) =
 
 // ---------------------------------------------------------------- sahneler
 
+// 0 — SAÇMA GİRİŞ (desen kırıcı): "Ahtapotların tam üç kalbi var. Neyse, boş ver ahtapotu. Asıl önemlisi şu."
+//     Doğru ama alakasız bir bilgi → plak cızırtısı, görüntü donar/bozulur → Meraklı "boş ver" der, ahtapotu süpürür
+//     → ekran kararır ve şimşek kancası başlar.
+const Sacma: S = ({ t, d, ws }) => {
+  const tu = ws("üç"), tv = ws("var"), tn = ws("neyse"), tah = ws("ahtapotu"), tas = ws("asıl");
+  const don = t > tn - 0.05 && t < tn + 0.35; // cızırtı anı: görüntü donar
+  const tq = don ? tn - 0.05 : t;
+  const supur = ez(ap(t, tah - 0.15, 0.45));
+  const gl = don ? 1 : Math.max(0, 1 - (t - tn - 0.35) / 0.25) * (t > tn ? 1 : 0);
+  const kara = ap(t, d - 0.35, 0.3);
+  const mk = sp(t, tn + 0.05, 10);
+  return (
+    <g>
+      <KolajDefs />
+      <Kirpinti t={tq} renk="#cfe8ff" o={0.4} />
+      <g transform={`translate(${(don ? (Math.sin(t * 90) * 14) : 0)} 0) rotate(${don ? -3 : 0} 540 900)`}>
+        <Kamera t={tq} d={Math.min(d, 3)} z0={1.0} z1={1.12}>
+          {/* ahtapot: 0. karede hazır; "ahtapotu"da sola savrulur */}
+          <g transform={`translate(${-supur * 1100} ${-supur * 200}) rotate(${-supur * 70} 540 820)`}>
+            <Suz t={tq} a={8} f={1.4}>
+              <Foto t={tq} ad="ahtapot" id="ah1" x={540} y={820} w={700} rot={-3} a={-1} />
+            </Suz>
+            {/* üç kalp */}
+            {[0, 1, 2].map((i) => {
+              const g = sp(tq, tu - 0.15 + i * 0.12, 9);
+              const atis = 1 + 0.12 * Math.max(0, Math.sin((tq - tu) * 9 - i));
+              return g > 0.01 ? (
+                <g key={i} transform={`translate(${330 + i * 210} ${470 + (i === 1 ? -40 : 0)}) scale(${g * atis})`} filter="url(#kgolge)">
+                  <path d="M 0 40 C -90 -20 -60 -95 0 -50 C 60 -95 90 -20 0 40 Z" fill={KIRMIZI} stroke={INK} strokeWidth={6} />
+                </g>
+              ) : null;
+            })}
+          </g>
+        </Kamera>
+      </g>
+      <Serit t={tq} a={-1} cikis={tn - 0.05} text="AHTAPOTUN 3 KALBİ VAR" x={540} y={330} size={58} rot={-2} bg={INK} color={KREM} />
+      <Muhur t={tq} a={tv} text="GERÇEK!" x={800} y={1120} size={70} rot={-8} />
+      {/* plak cızırtısı anı: RGB kayma şeritleri */}
+      {gl > 0 ? Array.from({ length: 7 }).map((_, i) => {
+        const y = (rnd(i, Math.floor(t * 30)) * 1700) + 100;
+        return <rect key={i} x={-20 + (rnd(Math.floor(t * 30), i) - 0.5) * 80} y={y} width={1120} height={20 + rnd(i, 3) * 60} fill={i % 2 ? "#ff3b5c" : "#29d3ff"} opacity={0.35 * gl} style={{ mixBlendMode: "screen" }} />;
+      }) : null}
+      {/* Meraklı: "boş ver" der, ahtapotu eliyle süpürür, sonra ileriyi işaret eder */}
+      {t > tn ? (
+        <g transform={`translate(${lerp(1300, 820, ez(mk))} 0)`}>
+          <Merakli x={0} y={1830} s={0.95} t={t} hareket={t > tas - 0.1 ? "isaret" : "salla"} kostum="onluk" flip />
+          <g transform={`translate(-150 1240) scale(${Math.min(1.05, sp(t, tn + 0.15, 10))})`} opacity={1 - ap(t, tas - 0.2, 0.2)}>
+            <rect x={-230} y={-62} width={360} height={110} rx={30} fill="#fff" stroke={INK} strokeWidth={6} />
+            <path d="M 90 48 L 130 90 L 60 48 Z" fill="#fff" stroke={INK} strokeWidth={6} />
+            <text x={-50} y={12} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={font}>BOŞ VER 🙄</text>
+          </g>
+        </g>
+      ) : null}
+      <Serit t={t} a={tas - 0.05} text="ASIL ÖNEMLİSİ ŞU..." x={540} y={420} size={62} rot={2} bg={KIRMIZI} color={KREM} />
+      <rect x={-50} y={-50} width={1180} height={2020} fill="#05070f" opacity={kara * 0.92} />
+    </g>
+  );
+};
+
 // 1 — Soğan doğrarken ağlıyorsan, suçlu soğan değil, elindeki bıçak.
 //     0. kare: bıçak soğanı keser, damlalar fışkırır → sabıka çizelgesi → "SUÇLU" mührü bıçağa
 const Giris: S = ({ t, d, ws }) => {
@@ -718,11 +777,12 @@ const Son: S = ({ t, d, ws }) => {
       <Serit t={t} a={ws("ağlatırsa")} text="MİKTARINI BIÇAK BELİRLER" x={540} y={340} size={48} rot={2} bg={KIRMIZI} color={KREM} />
       <Serit t={t} a={tkz - 0.05} cikis={tb - 0.45} text="ONA KIZMA" x={540} y={1150} size={68} rot={-3} bg={GREEN} color="#fff" />
       <Muhur t={t} a={tb + 0.15} text="SUÇLU" x={760} y={980} size={96} rot={-10} />
+      <Serit t={t} a={tb + 0.45} text="P.S. AHTAPOT BİLGİSİ DE DOĞRUYDU" x={540} y={1180} size={38} rot={-1} bg="#3b8fd0" color="#fff" />
     </g>
   );
 };
 
-export const SAHNE: Record<string, S> = { giris: Giris, savunma: Savunma, hucre: HucreS, gaz: GazS, goz: GozS, japon: Japon, cornell: Cornell, kor: Kor, keskin: Keskin, son: Son };
+export const SAHNE: Record<string, S> = { sacma: Sacma, giris: Giris, savunma: Savunma, hucre: HucreS, gaz: GazS, goz: GozS, japon: Japon, cornell: Cornell, kor: Kor, keskin: Keskin, son: Son };
 
 export const KAPAK: React.FC = () => (
   <g>

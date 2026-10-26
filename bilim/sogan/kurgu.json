@@ -101,9 +101,15 @@
  "muzik": "merak",
  "sahneler": [
   {
+   "id": "sacma",
+   "bg": "k:#3b8fd0",
+   "ilk": 0
+  },
+  {
    "id": "giris",
    "bg": "k:#b78457",
-   "ilk": 0
+   "ilk": "=soğan",
+   "gecis": "flas"
   },
   {
    "id": "savunma",
@@ -235,5 +241,86 @@
  ],
  "cta_ses": 0.5,
  "sc_threshold": 0.09,
- "cta_bosluk": true
+ "cta_bosluk": true,
+ "on_kayit": {
+  "ses": "/tmp/gizli/klon/sogan-giris/klon.m4a",
+  "metin": "bilim/sogan-giris/metin.txt",
+  "bosluk": 0.3,
+  "parcalar": [
+   [
+    0.0,
+    2.12
+   ],
+   [
+    4.72,
+    6.68
+   ],
+   [
+    11.68,
+    13.28
+   ]
+  ],
+  "kelimeler": [
+   [
+    "Ahtapotların",
+    0.0,
+    0.78
+   ],
+   [
+    "tam",
+    0.78,
+    1.12
+   ],
+   [
+    "üç",
+    1.12,
+    1.4
+   ],
+   [
+    "kalbi",
+    1.4,
+    1.92
+   ],
+   [
+    "var.",
+    1.92,
+    2.04
+   ],
+   [
+    "Neyse,",
+    4.78,
+    5.26
+   ],
+   [
+    "boş",
+    5.36,
+    5.66
+   ],
+   [
+    "ver",
+    5.66,
+    6.02
+   ],
+   [
+    "ahtapotu.",
+    6.02,
+    6.6
+   ],
+   [
+    "Asıl",
+    11.74,
+    12.22
+   ],
+   [
+    "önemlisi",
+    12.22,
+    12.7
+   ],
+   [
+    "şu.",
+    12.7,
+    13.2
+   ]
+  ]
+ }
 }

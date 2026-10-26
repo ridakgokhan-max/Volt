@@ -6,9 +6,14 @@ def cues(B, S, wt, st, sure, ara):
     import numpy as np
     g = E("thunder")[: int(2.2 * 48000)]  # şimşek kancası: ilk çakış (gürleme konuşmayı boğmasın diye 2,2 sn'de söner)
     g = g * np.minimum(1, np.linspace(2.2, 0, len(g)) / 1.2)
-    p(S, 0.06, g, 0.45)
-    p(S, 0.1, E("zap"), 0.3)
-    p(S, 0.42, E("zap"), 0.2)
+    p(S, st["giris"] + 0.06, g, 0.45)
+    p(S, st["giris"] + 0.1, E("zap"), 0.3)
+    p(S, st["giris"] + 0.42, E("zap"), 0.2)
+    # saçma giriş: kalp atışları, "gerçek" damgası, plak cızırtısı, süpürme
+    p(S, ara("üç"), E("pop"), 0.35)
+    p(S, ara("var"), E("darbe_hafif"), 0.35)
+    p(S, ara("neyse") - 0.05, E("cizik"), 0.6)
+    p(S, ara("ahtapotu") - 0.1, E("kaydir"), 0.45)
     p(S, ara("suçlu"), E("darbe"), 0.4)
     p(S, ara("bıçak."), E("zap"), 0.35)
     p(S, ara("bıçak."), E("bong"), 0.25)

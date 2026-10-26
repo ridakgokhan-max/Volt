@@ -7,7 +7,7 @@ Kullanım: python scripts/bilim_kurgu.py <konu>
 """
 import glob
 import importlib.util
-import json
+import json, re
 import os
 import subprocess
 import sys
@@ -95,6 +95,64 @@ def main(konu):
             # "delete": metinde olmayan konuşma (kekeleme vb.) altyazıya girmez
         print(f"metinle hizalandı: transkript {len(words)} -> metin {len(out_w)} kelime")
         words = out_w
+    # --- ön kayıt (ör. "saçma giriş" cümlesi, ayrı kayıt/klon): sesin başına eklenir ---
+    on_ses, on_kel = None, []
+    OK = K.get("on_kayit")
+    if OK and os.path.exists(OK["ses"]):
+        on_ses = decode(OK["ses"])
+        on_parca_bl = None
+        if OK.get("parcalar"):  # klonun yalnızca temiz parçalarını al (aradaki anlamsız sesleri at)
+            yeni, on_parca_bl, tt = [], [], 0.0
+            for j, (pa, pb) in enumerate(OK["parcalar"]):
+                seg = on_ses[int(pa * SR):int(pb * SR)].copy()
+                n = len(seg); f = np.minimum(1, np.minimum(np.arange(n) / (0.01 * SR), (n - np.arange(n)) / (0.03 * SR)))
+                yeni.append(seg * f); on_parca_bl.append((tt, tt + n / SR)); tt += n / SR
+                if j < len(OK["parcalar"]) - 1:
+                    gg = float(OK.get("parca_bosluk", 0.22)); yeni.append(np.zeros(int(gg * SR))); tt += gg
+            on_ses = np.concatenate(yeni)
+        # baş/son sessizliği kırp
+        e = np.abs(on_ses) > 0.02
+        if e.any() and on_parca_bl is None:
+            i0, i1 = np.argmax(e), len(e) - np.argmax(e[::-1])
+            on_ses = on_ses[max(0, i0 - int(0.03 * SR)):min(len(on_ses), i1 + int(0.08 * SR))]
+        # ses yüksekliğini ana kayda eşitle (konuşma RMS)
+        ana = x[np.abs(x) > 0.02]; onk = on_ses[np.abs(on_ses) > 0.02]
+        if len(ana) and len(onk):
+            on_ses = on_ses * float(np.sqrt(np.mean(ana ** 2)) / np.sqrt(np.mean(onk ** 2)))
+        # kelime zamanları: enerji bloklarını cümle sayısına göre grupla, kelimeleri harf payına göre dağıt
+        hop = SR // 100
+        nz = len(on_ses) // hop
+        zr = np.sqrt(np.mean(on_ses[:nz * hop].reshape(nz, hop) ** 2, axis=1))
+        th = max(zr.max() * 0.06, 1e-4)
+        bl, bas = [], None
+        for j, v in enumerate(list(zr > th) + [False]):
+            if v and bas is None: bas = j
+            if not v and bas is not None:
+                if bl and j / 100 - bl[-1][1] < 0.12: bl[-1] = (bl[-1][0], j / 100)
+                else: bl.append((bas / 100, j / 100))
+                bas = None
+        if on_parca_bl is not None:
+            kay = (np.argmax(np.abs(decode(OK["ses"])) > 0.02) / SR) if False else 0.0
+            bl = on_parca_bl
+        cum = [c.strip() for c in re.split(r"(?<=[.!?])\s+", open(OK["metin"], encoding="utf-8").read().strip()) if c.strip()]
+        while len(bl) > len(cum):  # en kısa aralığı birleştir
+            k = min(range(len(bl) - 1), key=lambda q: bl[q + 1][0] - bl[q][1])
+            bl[k:k + 2] = [(bl[k][0], bl[k + 1][1])]
+        if len(bl) < len(cum):  # yetersiz blok: tek blok kabul et, süreyi harfe göre böl
+            bl = [(bl[0][0] if bl else 0.0, bl[-1][1] if bl else len(on_ses) / SR)]; cum = [" ".join(cum)]
+        if OK.get("kelimeler") and on_parca_bl is not None:  # bilinen (whisper) kelime zamanları: klon zamanını yeni zamana çevir
+            for w, ws_, we_ in OK["kelimeler"]:
+                for (pa, pb), (na, nb) in zip(OK["parcalar"], on_parca_bl):
+                    if pa - 0.05 <= ws_ <= pb:
+                        on_kel.append({"w": w, "start": -1000 + na + (ws_ - pa), "end": -1000 + na + (min(we_, pb) - pa)}); break
+            cum = []
+        for (ba, bb), c in zip(bl, cum):
+            ks = c.split(); top = sum(len(k) for k in ks); t0 = ba
+            for k in ks:
+                d = (bb - ba) * len(k) / top
+                on_kel.append({"w": k, "start": -1000 + t0, "end": -1000 + t0 + d * 0.92}); t0 += d
+        words = on_kel + words
+        print(f"ön kayıt: {len(on_ses) / SR:.2f} sn, {len(on_kel)} kelime")
     for i, txt in K.get("duzelt", {}).items():
         words[int(i)]["w"] = txt
     vurgu = set(v for v in K.get("vurgu", []) if isinstance(v, int))
@@ -141,6 +199,9 @@ def main(konu):
     AC = float(K["acilis"]["sure"]) if K.get("acilis") else 0.0
     out, mapping, tnew = [], [], 0.12 + AC
     out.append(np.zeros(int((0.12 + AC) * SR)))
+    if on_ses is not None:
+        out.append(on_ses); mapping.append((-1000.0, -1000.0 + len(on_ses) / SR, tnew)); tnew += len(on_ses) / SR
+        g = float(OK.get("bosluk", 0.35)); out.append(np.zeros(int(g * SR))); tnew += g
     for i, (a, b) in enumerate(pieces):
         a0, b0 = max(0, a - PAD), min(total, b + PAD)
         seg = x[int(a0 * SR):int(b0 * SR)].copy()
