@@ -872,7 +872,9 @@ const Beyit: S = ({ t, d, ws }) => {
 /** 16 · Her şey o sabahki gürleme ile başladı. Belki de ödenmemiş bir maaşla. — açılışa döner (döngü) */
 const Son: S = ({ t, d, ws }) => {
   const tg = sonra(ws, "gürleme", 0.5), tm = ws("maaşla");
-  const kam = kamYol(t, [[0, 520, 1540, 1.2], [Math.max(0.5, tm - 0.4), 600, 1440, 0.8], [d, 560, 1440, 1.0]]);
+  // geniş plandan açılış kadrajına doğrusal ileri itme (döngü: son kare = ilk kare)
+  const kk = cl(t / d);
+  const kam: Kam = { x: lerp(640, 560, kk) + Math.sin(t * 1.3) * 12 * (1 - kk), y: lerp(1480, 1440, kk), z: lerp(0.72, 1.0, kk) };
   const D: Dunya = { t, h: lerp(0.45, 0.32, cl(t / d)), ates: 1, ordu: lerp(1, 0.35, cl((t - tm) / Math.max(0.3, d - tm))), fitil: -1 };
   return (
     <g>

@@ -207,7 +207,7 @@ def cues(B, S, wt, st, sure, ara):
     for k in range(6):
         p(S, t_haf + 0.4 + k * 1.05, Y("cannon_blast_distant_565794.mp3"), 0.35 - k * 0.03)
     p(S, ara("indiriyor") + 0.35, E("su_sicrama"), 0.28)
-    p(S, ara("teslim") - 0.35, E("kitap_ac"), 0.35)
+    p(S, ara("teslim") - 0.7, E("kitap_ac"), 0.18)
     p(S, ara("ölmeye"), E("metal"), 0.3)
     p(S, ara("ayasofya'da") - 0.1, E("zil"), 0.18)
     # son saldırı
