@@ -1,0 +1,54 @@
+KONU: istanbul-fethi
+SÜRE: 100.4 sn
+
+OKUNAN METİN:
+Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. Sonra her şey susuyor. Kuşlar bile. Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor. Toz bulutunun içinde Osmanlı ordusu görünüyor. Başında 21 yaşında bir sultan: Mehmed. O topu döken adam şimdi topun yanında: Urban. Bir yıl önce Bizans'a çalışmak istemişti. Ama imparator küçük maaşını bile ödeyemedi. Urban da Sultan'a gitti. Sultan, bu surları yıkacak bir top dökebilir mi diye sordu. Urban: "Topumun taşları Babil'in surlarını bile toz eder." Haftalar geçiyor. Gündüz gülleler, gece Bizanslılar yıkılan yerleri elleriyle örüyor. Bir gece Osmanlı gemileri karadan yürütüp Haliç'e indiriyor. Sultan son bir teklif gönderiyor: "Teslim olun, canınız bağışlansın." Konstantin'in cevabı: "Şehri teslim etmek ne benim elimde, ne de burada yaşayan hiç kimsenin. Hepimiz kendi isteğimizle ölmeye hazırız." 28 Mayıs gecesi. Ayasofya'da son ayin. İnsanlar ağlayarak dua ediyor. Gece yarısı davullar başlıyor. Kilise çanları karşılık veriyor. Son saldırı. 29 Mayıs sabahı surlarda Osmanlı sancağı dalgalanıyor. Anlatılanlara göre son imparator savaşarak ölüyor. Genç sultan harap sarayda bir beyit mırıldanıyor: "Kayser'in sarayında perdeyi örümcek tutuyor." Her şey o sabahki gürleme ile başladı. Belki de ödenmemiş bir maaşla.
+
+
+KANCA: None
+
+SAHNELER (başlangıç sn):
+- acilis: 0.0
+- sessiz: 7.2
+- gurleme: 11.3
+- ordu: 17.1
+- urban: 25.1
+- gecmis: 28.1
+- soru: 35.3
+- haftalar: 43.1
+- gemiler: 49.0
+- teklif: 53.3
+- cevap: 58.1
+- ayin: 67.4
+- saldiri: 73.3
+- fetih: 79.8
+- beyit: 87.5
+- son: 94.3
+
+SES KESİMLERİ (ham kayıt sn): [[49.15, 49.7], [64.3, 68.7], [100.13, 102.73], [113.5, 118.72]]
+
+CTA: [{'tur': 'begen', 'kelime': 'gemileri'}, {'tur': 'yorum', 'kelime': 'maaşını', 'yazi': 'Maaşı ödeseydi?'}, {'tur': 'takip', 'son': True, 'ofset': -2.2}]
+
+AÇIKLAMA:
+1453'te İstanbul'un surlarını döven dev topu, Bizans'ın parasını ödeyemediği bir usta dökmüştü 💣
+
+Selam, ben Meraklı Gözlüklü 🤓 Bugün tarihin en büyük kuşatmalarından birini bir film gibi izliyoruz.
+
+🔥 Nisan 1453: Osmanlı ordusu Konstantinopolis surlarının önünde. Başında 21 yaşındaki II. Mehmed var.
+
+⚙️ Urban adlı top dökümcüsü önce Bizans'a çalışmak istedi. Ama imparator ona verilen küçük maaşı bile ödeyemedi. Urban da Sultan'a gitti. Bizanslı tarihçi Dukas'a göre Urban, topunun "Babil'in surlarını bile" toz edeceğini söyledi. Döktüğü dev top yarım tona yakın taş gülleler atıyordu ama günde ancak birkaç kez ateşlenebiliyordu.
+
+🌙 Bizanslılar gündüz yıkılan surları her gece yeniden ördü. Haliç'in girişi zincirle kapalıydı, bu yüzden Osmanlı gemileri karadan yürütülüp Haliç'e indirildi.
+
+📜 Sultan teslim olma teklifi gönderdi. Konstantin, şehri teslim etmenin kimsenin elinde olmadığını, hepsinin ölmeye hazır olduğunu söyledi (Dukas aktarıyor).
+
+🕯️ 28 Mayıs gecesi Ayasofya'da son ayin yapıldı. 29 Mayıs sabahı şehir fethedildi. Son imparatorun ölümü kesin olarak bilinmiyor; kaynaklar onun savaşarak öldüğünü anlatıyor.
+
+🕸️ Tursun Bey'in kaydına göre Fatih, harap imparator sarayında Farsça bir beyit okudu: "Kayser'in sarayında perdeyi örümcek tutuyor."
+
+Sence imparator o maaşı ödeseydi İstanbul yine düşer miydi? 👇 Tarih tartışmayı seven arkadaşına gönder 📲
+Her videoda bir merakı bir dakikada çözüyoruz. Kaçırmamak için takip et 🔔
+
+Kaynaklar: Dukas, Historia Turco-Byzantina · Tursun Bey, Târîh-i Ebü'l-Feth · S. Runciman, The Fall of Constantinople 1453
+Görseller: tamamı çizim · Sesler: Freesound (CC0)
+

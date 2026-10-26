@@ -343,7 +343,9 @@ const ACILIS_KAM: [number, number, number, number][] = [[0, 620, 1520, 0.78], [8
 
 /** 1 · Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. */
 const Acilis: S = ({ t, d, ws }) => {
-  const kam = kamYol(t, ACILIS_KAM);
+  // açılış: itme ilk 3 sn'de yoğun (easeOut) — ilk andan itibaren hareket
+  const k = easeOut(t / 6.5);
+  const kam: Kam = { x: lerp(ACILIS_KAM[0][1], ACILIS_KAM[1][1], k), y: lerp(ACILIS_KAM[0][2], ACILIS_KAM[1][2], k), z: lerp(ACILIS_KAM[0][3], ACILIS_KAM[1][3], k) };
   const ta = ws("binlerce");
   const D: Dunya = { t, h: 0.32, ates: 1, ordu: 0.35 + 0.65 * ap(t, ta, 1.4), fitil: -1, toz: 0 };
   return (
