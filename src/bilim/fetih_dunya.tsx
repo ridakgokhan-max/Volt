@@ -143,6 +143,7 @@ export const Ayasofya: React.FC<{ x: number; y: number; c: string; isik: number;
     <path d="M 190 -40 A 70 46 0 0 0 60 -60 L 60 0 L 190 0 Z" fill={c} />
     <rect x={-84} y={-150} width={168} height={40} fill={c} />
     <path d="M -96 -150 A 96 78 0 0 1 96 -150 Z" fill={c} />
+    {isik > 0.01 && <path d="M -96 -150 A 96 78 0 0 1 96 -150" fill="none" stroke="#ffb54a" strokeWidth={3} opacity={0.7 * isik} />}
     <rect x={-4} y={-246} width={8} height={18} fill={c} />
     {/* kubbe kasnağı pencereleri — son ayinde mum ışığı */}
     {Array.from({ length: 9 }).map((_, i) => {
@@ -235,6 +236,7 @@ export const Sehir: React.FC<{ D: Dunya }> = ({ D }) => {
   const cKoyu = renk(h, [[0, "#181834"], [0.5, "#241d39"], [1, "#4a3040"], [2, "#a4937a"]]);
   return (
     <g>
+      <rect x={-800} y={1008} width={2400} height={500} fill={cKoyu} />
       {EV.map((e, i) => (
         <g key={i} transform={`translate(${e.x} 1012)`}>
           <rect x={0} y={-e.hh} width={e.w} height={e.hh} fill={i % 2 ? c : cKoyu} />
@@ -396,9 +398,9 @@ export const Zemin: React.FC<{ D: Dunya }> = ({ D }) => {
         </linearGradient>
       </defs>
       <rect x={-1200} y={1210} width={5200} height={1700} fill="url(#zm)" />
-      {/* Galata sırtı: gemilerin aştığı tepe */}
-      <path d="M 1440 1240 Q 1700 1060 2000 1090 Q 2300 1110 2900 1280 L 2900 1500 L 1440 1500 Z" fill={tepe} />
-      <path d="M 1500 1080 Q 1580 1060 1700 1070 L 1700 1100 Z" fill={tepe} />
+      {/* Galata sırtı: gemilerin aştığı tepe (yalnızca gemiler sahnesinde) */}
+      {(D.gemi ?? -1) >= 0 && <path d="M 1440 1240 Q 1700 1060 2000 1090 Q 2300 1110 2900 1280 L 2900 1500 L 1440 1500 Z" fill={tepe} />}
+      {(D.gemi ?? -1) >= 0 && <path d="M 1500 1080 Q 1580 1060 1700 1070 L 1700 1100 Z" fill={tepe} />}
     </g>
   );
 };

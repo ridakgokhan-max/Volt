@@ -3,7 +3,7 @@
  "temizle": true,
  "dongu": true,
  "imza": true,
- "son_bosluk": 1.2,
+ "son_bosluk": 0.85,
  "kesimler": [
   [
    49.15,
@@ -14,11 +14,11 @@
    68.7
   ],
   [
-   100.13,
+   100.11,
    102.73
   ],
   [
-   113.5,
+   113.6,
    118.72
   ]
  ],
@@ -105,10 +105,6 @@
    0.55
   ],
   [
-   93.94,
-   1.1
-  ],
-  [
    104.4,
    0.9
   ],
@@ -117,12 +113,20 @@
    0.5
   ],
   [
-   113.5,
-   1.05
-  ],
-  [
    120.96,
    0.5
+  ],
+  [
+   113.6,
+   1.0
+  ],
+  [
+   93.94,
+   1.45
+  ],
+  [
+   100.11,
+   0.02
   ]
  ],
  "seri": {
@@ -133,17 +137,12 @@
  "cta": [
   {
    "tur": "begen",
-   "kelime": "gemileri"
-  },
-  {
-   "tur": "yorum",
-   "kelime": "maaşını",
-   "yazi": "Maaşı ödeseydi?"
+   "kelime": "örüyor"
   },
   {
    "tur": "takip",
    "son": true,
-   "ofset": -2.2
+   "ofset": -1.4
   }
  ],
  "cta_kostum": "kasif",
@@ -238,6 +237,10 @@
   [
    "maaşla",
    1.5
+  ],
+  [
+   "indiriyor",
+   2
   ]
  ],
  "baglar": [
@@ -270,7 +273,9 @@
   "harap sarayda",
   "bir beyit",
   "kayser'in sarayında",
-  "ödenmemiş bir"
+  "ödenmemiş bir",
+  "dökebilir mi diye sordu.",
+  "hepimiz kendi isteğimizle ölmeye hazırız.\""
  ],
  "muzik_ses": 0.55,
  "sc_ratio": 2.5,
@@ -359,7 +364,7 @@
    "id": "fetih",
    "bg": "k:#070a1c",
    "ilk": "29",
-   "gecis": "flas"
+   "gecis": "karar"
   },
   {
    "id": "beyit",
@@ -380,6 +385,22 @@
   "gönderiyor:",
   "cevabı:",
   "elimde,",
+  "kimsenin.",
+  "yıkacak",
   "mırıldanıyor:"
- ]
+ ],
+ "ses_hp": 90,
+ "efekt_ses": 0.95,
+ "iki_gecis": true,
+ "acilis": {
+  "sahne": "gurleme",
+  "kelime": "gürleme",
+  "ofset": 0.12,
+  "sure": 0.7
+ },
+ "kanca": {
+  "yazi": "BU TOPU BİZANS DA ALABİLİRDİ",
+  "alt": "",
+  "sure": 2.2
+ }
 }
