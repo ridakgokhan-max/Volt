@@ -1,25 +1,50 @@
 {
  "konu": "istanbul-fethi",
  "sonuc": "KALDI",
- "sure": 100.43,
- "lufs": -14.2,
- "tepe_dbtp": -2.0,
- "hareket_ortalama": 5.0,
+ "sure": 101.07,
+ "lufs": -14.0,
+ "tepe_dbtp": -1.9,
+ "hareket_ortalama": 4.71,
  "bulgular": [
   {
    "seviye": "UYARI",
    "alan": "Teknik",
-   "mesaj": "süre 100.4 sn (Reels için 15–90 önerilir)"
+   "mesaj": "süre 101.1 sn (Reels için 15–90 önerilir)"
   },
   {
    "seviye": "KALDI",
    "alan": "Hareket",
-   "mesaj": "ölü an 0.5–2.5 sn (ekran neredeyse duruyor)"
+   "mesaj": "ölü an 0.5–2.0 sn (ekran neredeyse duruyor)"
   },
   {
-   "seviye": "UYARI",
-   "alan": "Söz",
-   "mesaj": "farklı duyuluyor: metin 'haliçe indiriyor' ↔ duyulan 'haliç e iniliyor' (~51.9 sn)"
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 3.0–5.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 20.0–21.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 40.0–41.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 63.0–64.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 70.5–71.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 92.5–93.5 sn (ekran neredeyse duruyor)"
   },
   {
    "seviye": "BİLGİ",
