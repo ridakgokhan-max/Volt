@@ -4,7 +4,7 @@
  "sure": 100.43,
  "lufs": -14.2,
  "tepe_dbtp": -2.0,
- "hareket_ortalama": 4.9,
+ "hareket_ortalama": 5.0,
  "bulgular": [
   {
    "seviye": "UYARI",
@@ -14,22 +14,7 @@
   {
    "seviye": "KALDI",
    "alan": "Hareket",
-   "mesaj": "ölü an 0.5–4.5 sn (ekran neredeyse duruyor)"
-  },
-  {
-   "seviye": "KALDI",
-   "alan": "Hareket",
-   "mesaj": "ölü an 31.0–32.0 sn (ekran neredeyse duruyor)"
-  },
-  {
-   "seviye": "KALDI",
-   "alan": "Hareket",
-   "mesaj": "ölü an 37.0–38.5 sn (ekran neredeyse duruyor)"
-  },
-  {
-   "seviye": "KALDI",
-   "alan": "Hareket",
-   "mesaj": "ölü an 91.5–92.5 sn (ekran neredeyse duruyor)"
+   "mesaj": "ölü an 0.5–2.5 sn (ekran neredeyse duruyor)"
   },
   {
    "seviye": "UYARI",

@@ -2,7 +2,7 @@ metinle hizalandı: transkript 191 -> metin 186 kelime
 ses başlangıcına oturtulan kelime: 59
 CTA: [{'tur': 'begen', 'bas': 51.888, 'kostum': 'kasif'}, {'tur': 'yorum', 'bas': 32.371, 'yazi': 'Maaşı ödeseydi?', 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 96.816, 'kostum': 'kasif'}]
 ses vurgusu: 16 yer
-istanbul-fethi: 124.4 sn kayıt -> 100.4 sn video, 186 kelime, 54 altyazı satırı, 16 sahne
+istanbul-fethi: 124.4 sn kayıt -> 100.4 sn video, 186 kelime, 55 altyazı satırı, 16 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
 Getting Headless Shell - 9.5 Mb/98.9 Mb
@@ -38,16 +38,13 @@ Getting composition
 [90mOutput               out/bilim/istanbul-fethi.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m+                    out/bilim/istanbul-fethi.mp4[39m [90m47.8 MB[39m
+[34m○                    out/bilim/istanbul-fethi.mp4[39m [90m48.5 MB[39m
 [UYARI] Teknik: süre 100.4 sn (Reels için 15–90 önerilir)
-[KALDI] Hareket: ölü an 0.5–4.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 31.0–32.0 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 37.0–38.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 91.5–92.5 sn (ekran neredeyse duruyor)
-[0;93m2026-10-26 16:43:07.289179704 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[KALDI] Hareket: ölü an 0.5–2.5 sn (ekran neredeyse duruyor)
+[0;93m2026-10-26 17:14:40.427138055 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
 [UYARI] Söz: farklı duyuluyor: metin 'haliçe indiriyor' ↔ duyulan 'haliç e iniliyor' (~51.9 sn)
 [BİLGİ] Söz: duyulan konuşma metinle %94 uyumlu
 SONUÇ: KALDI
