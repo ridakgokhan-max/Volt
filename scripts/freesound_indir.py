@@ -29,7 +29,13 @@ def main(aramalar, adet=4):
     kayit_yolu = os.path.join(OUT, "kaynaklar.json")
     kayit = json.load(open(kayit_yolu)) if os.path.exists(kayit_yolu) else {}
     for q in aramalar:
-        prm = urllib.parse.urlencode({"query": q, "filter": 'license:"Creative Commons 0" duration:[0.1 TO 6]',
+        sure = "0.1 TO 6"
+        if "|" in q:  # "arama|5-60" → uzun sesler (ortam, müzik)
+            q, ar = q.split("|", 1)
+            a, b = ar.split("-")
+            sure = f"{a} TO {b}"
+        q = q.strip()
+        prm = urllib.parse.urlencode({"query": q, "filter": f'license:"Creative Commons 0" duration:[{sure}]',
                                       "fields": "id,name,username,license,url,previews", "page_size": adet, "sort": "rating_desc"})
         for s in api(f"https://freesound.org/apiv2/search/text/?{prm}")["results"]:
             if "publicdomain/zero" not in s["license"]:
