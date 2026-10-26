@@ -1,15 +1,30 @@
 {
  "konu": "istanbul-fethi",
- "sonuc": "UYARI",
- "sure": 101.07,
+ "sonuc": "KALDI",
+ "sure": 101.63,
  "lufs": -14.0,
- "tepe_dbtp": -1.9,
- "hareket_ortalama": 5.12,
+ "tepe_dbtp": -2.0,
+ "hareket_ortalama": 4.56,
  "bulgular": [
   {
    "seviye": "UYARI",
    "alan": "Teknik",
-   "mesaj": "süre 101.1 sn (Reels için 15–90 önerilir)"
+   "mesaj": "süre 101.6 sn (Reels için 15–90 önerilir)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 95.5–96.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "UYARI",
+   "alan": "Söz",
+   "mesaj": "farklı duyuluyor: metin 'canınız' ↔ duyulan 'canınıza allah ımız' (~57.8 sn)"
+  },
+  {
+   "seviye": "BİLGİ",
+   "alan": "Söz",
+   "mesaj": "duyulan konuşma metinle %93 uyumlu"
   }
  ]
 }

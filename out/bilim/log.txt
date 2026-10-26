@@ -1,12 +1,12 @@
 metinle hizalandı: transkript 191 -> metin 186 kelime
 ses başlangıcına oturtulan kelime: 59
-CTA: [{'tur': 'begen', 'bas': 50.3, 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 98.596, 'kostum': 'kasif'}]
-ses vurgusu: 17 yer
-iki geçişli yükseklik: -15.81 LUFS, LRA 3.60
-istanbul-fethi: 124.4 sn kayıt -> 101.1 sn video, 186 kelime, 54 altyazı satırı, 16 sahne
+CTA: [{'tur': 'begen', 'bas': 47.13, 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 99.726, 'kostum': 'kasif'}]
+ses vurgusu: 16 yer
+iki geçişli yükseklik: -15.65 LUFS, LRA 3.80
+istanbul-fethi: 124.4 sn kayıt -> 101.6 sn video, 186 kelime, 54 altyazı satırı, 16 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.5 Mb/98.9 Mb
+Getting Headless Shell - 9.6 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -42,17 +42,11 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/istanbul-fethi.mp4[39m [90m53.4 MB[39m
-Traceback (most recent call last):
-  File "/home/runner/work/Volt/Volt/kalite/oto_kontrol.py", line 38, in <module>
-    pr = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", V],
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 548, in run
-    with Popen(*popenargs, **kwargs) as process:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1026, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1955, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe'
+[34m○                    out/bilim/istanbul-fethi.mp4[39m [90m54.6 MB[39m
+[UYARI] Teknik: süre 101.6 sn (Reels için 15–90 önerilir)
+[KALDI] Hareket: ölü an 95.5–96.5 sn (ekran neredeyse duruyor)
+[0;93m2026-10-26 21:21:48.792297914 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[UYARI] Söz: farklı duyuluyor: metin 'canınız' ↔ duyulan 'canınıza allah ımız' (~57.8 sn)
+[BİLGİ] Söz: duyulan konuşma metinle %93 uyumlu
+SONUÇ: KALDI
 durum: success
