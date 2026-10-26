@@ -62,22 +62,42 @@ const Gren: React.FC<{ o?: number }> = ({ o = 0.25 }) => {
   );
 };
 
+/** Yazı bandı: koyu, %78 opak, kenarları yumuşak (kartların her zeminde ≥4,5:1 okunması için) */
+const Bant: React.FC<{ y0: number; y1: number; x0?: number; x1?: number; yatay?: "sag" | "sol" }> = ({ y0, y1, x0 = 0, x1 = 1080, yatay }) => {
+  const id = `bant${Math.round(y0)}${Math.round(y1)}${yatay || ""}`;
+  const h = y1 - y0;
+  return (
+    <g>
+      <defs>
+        {yatay ? (
+          <linearGradient id={id} x1={yatay === "sol" ? "0" : "1"} y1="0" x2={yatay === "sol" ? "1" : "0"} y2="0">
+            <stop offset="0" stopColor="#0b0a14" stopOpacity="0.8" />
+            <stop offset="0.75" stopColor="#0b0a14" stopOpacity="0.78" />
+            <stop offset="1" stopColor="#0b0a14" stopOpacity="0" />
+          </linearGradient>
+        ) : (
+          <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#0b0a14" stopOpacity="0" />
+            <stop offset={40 / h} stopColor="#0b0a14" stopOpacity="0.78" />
+            <stop offset={1 - 40 / h} stopColor="#0b0a14" stopOpacity="0.78" />
+            <stop offset="1" stopColor="#0b0a14" stopOpacity="0" />
+          </linearGradient>
+        )}
+      </defs>
+      <rect x={x0} y={y0} width={x1 - x0} height={h} fill={`url(#${id})`} />
+    </g>
+  );
+};
+
 /** Bölüm kartı: "NİSAN 1453" — harfler aralığı açılarak gelir, sönerek gider */
 const Bolum: React.FC<{ t: number; a: number; ust: string; alt?: string; sure?: number; y?: number }> = ({ t, a, ust, alt, sure = 2.6, y = 520 }) => {
   const g = ap(t, a, 0.6) * (1 - ap(t, a + sure, 0.5));
   if (g < 0.01) return null;
   const ls = lerp(18, 10, easeOut((t - a) / 1.6));
-  const fs = Math.min(92, (800 / ust.length - ls) / 0.78); // kenar rozetlerine taşmasın
+  const fs = Math.min(92, (720 / ust.length - ls) / 0.78); // kenar rozetlerine taşmasın
   return (
     <g opacity={g}>
-      <defs>
-        <linearGradient id="bolumzemin" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#000" stopOpacity="0" />
-          <stop offset="0.5" stopColor="#000" stopOpacity="0.62" />
-          <stop offset="1" stopColor="#000" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <rect x={0} y={y - 120} width={1080} height={alt ? 260 : 190} fill="url(#bolumzemin)" />
+      <Bant y0={y - fs * 0.8 - 64} y1={y + (alt ? 92 : 30) + 64} />
       <line x1={540 - 170 * g} x2={540 + 170 * g} y1={y + 34} y2={y + 34} stroke={ALTIN} strokeWidth={3} />
       <text x={540} y={y} textAnchor="middle" fontFamily={CINZEL} fontWeight={900} fontSize={fs} letterSpacing={ls} fill="#f6ead0" stroke="#120d08" strokeWidth={6} paintOrder="stroke fill">{ust}</text>
       {alt && <text x={540} y={y + 92} textAnchor="middle" fontFamily={CINZEL} fontWeight={700} fontSize={44} letterSpacing={6} fill={ALTIN} stroke="#120d08" strokeWidth={6} paintOrder="stroke fill">{BUYUK(alt)}</text>}
@@ -94,13 +114,7 @@ const IsimKarti: React.FC<{ t: number; a: number; ad: string; rol: string; sure?
   const cizgi = lerp(0, 380, easeOut((t - a) / 0.5));
   return (
     <g opacity={g} transform={`translate(${(1 - easeOut((t - a) / 0.45)) * (sag ? 40 : -40)} 0)`}>
-      <defs>
-        <linearGradient id={sag ? "iksag" : "iksol"} x1={sag ? "1" : "0"} y1="0" x2={sag ? "0" : "1"} y2="0">
-          <stop offset="0" stopColor="#000" stopOpacity="0.6" />
-          <stop offset="1" stopColor="#000" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <rect x={sag ? 340 : 0} y={1030} width={740} height={170} fill={`url(#${sag ? "iksag" : "iksol"})`} />
+      <Bant y0={1036} y1={1196} x0={sag ? 300 : 0} x1={sag ? 1080 : 780} yatay={sag ? "sag" : "sol"} />
       <rect x={sag ? x - cizgi : x} y={1122} width={cizgi} height={4} fill={ALTIN} />
       <text x={x} y={1106} textAnchor={anc} fontFamily={CINZEL} fontWeight={900} fontSize={58} letterSpacing={4} fill="#fbf2dc" stroke="#0e0a07" strokeWidth={6} paintOrder="stroke fill">{ad}</text>
       <text x={x} y={1168} textAnchor={anc} fontFamily={CINZEL} fontWeight={700} fontSize={36} letterSpacing={2} fill={ALTIN} stroke="#0e0a07" strokeWidth={7} paintOrder="stroke fill">{BUYUK(rol)}</text>
@@ -386,6 +400,7 @@ const Sayac: React.FC<{ t: number; a: number; b: number; deger: number }> = ({ t
   if (g < 0.01) return null;
   return (
     <g opacity={g}>
+      <Bant y0={290} y1={540} />
       <text x={540} y={430} textAnchor="middle" fontFamily={CINZEL} fontWeight={900} fontSize={120} letterSpacing={6} fill="#fbf2dc" stroke="#0e0a07" strokeWidth={7} paintOrder="stroke fill">{`${Math.max(1, Math.round(deger))}. GÜN`}</text>
       <text x={540} y={490} textAnchor="middle" fontFamily={CINZEL} fontWeight={700} fontSize={34} letterSpacing={6} fill={ALTIN} stroke="#0e0a07" strokeWidth={4} paintOrder="stroke fill">KUŞATMA SÜRÜYOR</text>
     </g>
@@ -443,7 +458,7 @@ const Harabe: React.FC<{ t: number }> = ({ t }) => (
       <rect x={-34} y={-60} width={300} height={14} fill="#5c5056" />
     </g>
     {/* genç sultan, arkadan: büyük beyaz kavuk, kırmızı kaftan; hafif nefes */}
-    <g transform={`translate(250 ${1930 + Math.sin(t * 1.6) * 3}) scale(2.1)`}>
+    <g transform={`translate(230 ${2055 + Math.sin(t * 1.6) * 3}) scale(2.1)`}>
       <path d="M -70 0 L -58 -150 Q 0 -178 58 -150 L 70 0 Z" fill="#7a1a14" />
       <path d="M -58 -150 Q 0 -178 58 -150 L 50 -120 Q 0 -140 -50 -120 Z" fill="#5a120e" />
       <rect x={-14} y={-196} width={28} height={30} fill="#c9a07a" />
@@ -524,13 +539,13 @@ const Sessiz: S = ({ t, d, ws }) => {
 
 /** 3 · Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor. — ağır çekim gülle */
 const Gurleme: S = ({ t, d, ws }) => {
-  const tg = ws("gürleme"), tc = ws("çarpıyor"), ty = ws("yarım");
+  const tg = ws("yer") - 0.6, tc = ws("çarpıyor"), ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
   const ucus = cl((t - tg) / Math.max(0.5, tc - tg)); // gülle tam "çarpıyor"da varır
   const bx = lerp(NAMLU.x, HEDEF.x, easeIO(ucus) * 0.15 + ucus * 0.85);
   const by = lerp(NAMLU.y, HEDEF.y, ucus) - Math.sin(ucus * Math.PI) * 160;
   let kam: Kam;
   const ilk: Kam = { x: 600, y: 1490, z: lerp(1.6, 1.75, cl(t / Math.max(0.1, tg + 0.3))) };
-  const takip: Kam = { x: lerp(560, bx, 0.85), y: lerp(1500, by + 40, 0.85), z: lerp(1.4, 1.75, ucus) };
+  const takip: Kam = { x: lerp(560, bx, 0.85), y: lerp(1500, by + 40, 0.85), z: lerp(1.9, 2.3, ucus) }; // namlu altyazı bandının altına iner
   const gk = easeIO((t - tg - 0.15) / 0.7); // ilk plandan gülle takibine yumuşak geçiş (sıçrama yok)
   if (t < tc) kam = { x: lerp(ilk.x, takip.x, gk), y: lerp(ilk.y, takip.y, gk), z: lerp(ilk.z, takip.z, gk) };
   else kam = { x: HEDEF.x, y: HEDEF.y + 40, z: lerp(1.7, 1.95, cl((t - tc) / 1.5)) };
@@ -619,7 +634,7 @@ const UrbanS: S = ({ t, d, ws }) => {
       <Kul t={t} o={0.3} n={12} renk="#ffd9a0" />
       <OnPlan t={t} o={0.3} renk="#ffd9a0" />
       <Vinyet g={0.7} />
-      <IsimKarti t={t} a={Math.min(ws("adam"), tu - 0.6)} ad="URBAN" rol="top dökümcüsü · Macar asıllı" sure={Math.max(1.6, d - Math.min(ws("adam"), tu - 0.6) - 0.45)} />
+      <IsimKarti t={t} a={Math.max(0.15, ws("topu") - 0.1)} ad="URBAN" rol="top dökümcüsü · Macar asıllı" sure={Math.max(1.9, d - Math.max(0.15, ws("topu") - 0.1) - 0.4)} />
     </g>
   );
 };
@@ -637,7 +652,7 @@ const Ani: React.FC<{ t: number; children: React.ReactNode; yil?: boolean; ust?:
     <Gren o={0.28} />
     <Vinyet g={0.95} />
     {ust}
-    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={250} />}
+    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={380} />}
   </g>
 );
 
@@ -735,7 +750,7 @@ const Gemiler: S = ({ t, d, ws }) => {
 /** 10 · Sultan son bir teklif gönderiyor: "Teslim olun, canınız bağışlansın." */
 const Teklif: S = ({ t, d, ws }) => {
   const tts = sonra(ws, "teslim", 0.5);
-  const kam: Kam = { x: lerp(1100, 940, ak(t / d)), y: lerp(1420, 1250, ak(t / d)), z: lerp(0.95, 1.35, ak(t / d)) };
+  const kam: Kam = { x: lerp(860, 800, ak(t / d)), y: lerp(1400, 1250, ak(t / d)), z: lerp(1.08, 1.42, ak(t / d)) }; // sağda dünyanın kenarı görünmesin
   const D: Dunya = { t, h: 1.85, ates: 0, ordu: 0.6, hasar: 1, gedikler: 4, onarim: 1, elci: cl(t / (d - 0.2)) };
   return (
     <g>
@@ -745,7 +760,7 @@ const Teklif: S = ({ t, d, ws }) => {
       </DunyaSahne>
       <OnPlan t={t} o={0.25} renk="#f4e4c0" />
       <Vinyet g={0.65} />
-      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(1.2, tts - 0.9)} y={340} />
+      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(1.2, tts - 0.9)} y={380} />
       <Ferman t={t} a={tts - 0.35} b={d - 0.15} />
     </g>
   );
@@ -795,7 +810,7 @@ const Ayin: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.45} renk="#ffc861" />
       <OnMum t={t} />
       <Vinyet g={0.88} />
-      <Bolum t={t} a={0.1} ust="28 MAYIS" alt="GECE" sure={ta - 0.2} y={330} />
+      <Bolum t={t} a={0.1} ust="28 MAYIS" alt="GECE" sure={ta - 0.2} y={380} />
     </g>
   );
 };
@@ -844,7 +859,7 @@ const Fetih: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.35} renk="#ffd9a0" />
       <OnBayrak t={t} renk="#8a1c14" sag y={220} boy={600} o={cl((t - ta + 0.3) / 0.5)} />
       <Vinyet g={0.7} />
-      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={300} />
+      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={380} />
     </g>
   );
 };
@@ -872,7 +887,7 @@ const Beyit: S = ({ t, d, ws }) => {
 
 /** 16 · Her şey o sabahki gürleme ile başladı. Belki de ödenmemiş bir maaşla. — açılışa döner (döngü) */
 const Son: S = ({ t, d, ws }) => {
-  const tg = sonra(ws, "gürleme", 0.5), tm = ws("maaşla");
+  const tg = sonra(ws, "başladı", 0.5) + 0.35, tm = ws("maaşla"); // uzak top yankısı cümleden sonra
   // geniş plandan açılış kadrajına doğrusal ileri itme (döngü: son kare = ilk kare)
   const kk = cl(t / d);
   const kam: Kam = { x: lerp(640, 540, kk) + Math.sin(t * 1.3) * 12 * (1 - kk), y: lerp(1480, 1450, kk), z: lerp(0.85, 1.25, kk) };
@@ -890,7 +905,7 @@ const Son: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.65} n={26} />
       <OnBayrak t={t} renk="#7a1a14" y={250} boy={480} />
       <Vinyet g={0.85} />
-      <Sikke t={t} a={tm - 0.45} />
+      <Sikke t={t} a={tm + 0.05} />
     </g>
   );
 };

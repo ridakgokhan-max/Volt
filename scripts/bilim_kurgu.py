@@ -534,20 +534,20 @@ def main(konu):
     hp = f"highpass=f={K['ses_hp']}," if K.get("ses_hp") else ""  # ör. 90: "B" patlaması / uğultu
     on = (f"[0:a]{hp}loudnorm=I=-16:TP=-2:LRA=9,"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
-          f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
+          f"[1:a]{'highpass=f=%s,' % K['muzik_hp'] if K.get('muzik_hp') else ''}aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
           f"[m][vk]sidechaincompress=threshold={K.get('sc_threshold', 0.03)}:ratio={K.get('sc_ratio', 5)}:attack=20:release={K.get('sc_release', 400)}[md];"
           f"[2:a]{'highpass=f=%s,' % K['efekt_hp'] if K.get('efekt_hp') else ''}{'alimiter=limit=0.9:attack=2:release=60:level=false,' if K.get('efekt_sabit') else ''}aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('efekt_ses', 0.62)}[s];"
           "[v][md][s]amix=inputs=3:normalize=0:duration=first")
     girdiler = ["-i", f"{tmp}/voice.wav", "-i", f"{tmp}/music.wav"] + (
         ["-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", f"{tmp}/sfx.f32"] if K.get("efekt_sabit") else ["-i", f"{tmp}/sfx.wav"])
     son = "loudnorm=I=-14:TP=-2:LRA=11"
-    if K.get("iki_gecis"):  # dinamiği koru: önce ölç, sonra doğrusal (linear) yükseklik ayarı
-        r = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner"] + girdiler + ["-filter_complex", on + ",loudnorm=I=-14:TP=-2:LRA=20:print_format=json[o]", "-map", "[o]", "-f", "null", "-"],
+    if K.get("iki_gecis"):  # gerçek doğrusal: önce ölç, sonra sabit kazanç + tepe sınırlayıcı (vuruşlar ezilmez)
+        r = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner"] + girdiler + ["-filter_complex", on + ",ebur128=framelog=quiet[o]", "-map", "[o]", "-f", "null", "-"],
                            capture_output=True, text=True)
-        js = json.loads(r.stderr[r.stderr.rindex("{"):r.stderr.rindex("}") + 1])
-        son = (f"loudnorm=I=-14:TP=-2:LRA=20:linear=true:measured_I={js['input_i']}:measured_TP={js['input_tp']}:"
-               f"measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}")
-        print("iki geçişli yükseklik:", js["input_i"], "LUFS, LRA", js["input_lra"])
+        I_olc = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)[-1])
+        kaz = -14.0 - I_olc
+        son = f"volume={kaz:.2f}dB,alimiter=limit=0.75:attack=1:release=50:level=false"
+        print(f"doğrusal yükseklik: ölçülen {I_olc:.2f} LUFS, kazanç {kaz:+.2f} dB")
     fc = on + f",{son},alimiter=limit=0.8:level=false[out]"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error"] + girdiler +
                    ["-filter_complex", fc, "-map", "[out]", "-ar", "48000", "-c:a", "aac", "-b:a", "192k", os.path.join(pub, "mix.m4a")], check=True)

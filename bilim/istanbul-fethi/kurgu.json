@@ -146,11 +146,11 @@
   {
    "tur": "takip",
    "son": true,
-   "ofset": -0.85
+   "ofset": -0.6
   }
  ],
  "cta_kostum": "kasif",
- "cta_ses": 0.35,
+ "cta_ses": 0.6,
  "cta_bosluk": true,
  "vurgu": [
   "gürleme.",
@@ -203,7 +203,7 @@
   ],
   [
    "babil'in",
-   2.5,
+   1.0,
    5
   ],
   [
@@ -281,7 +281,7 @@
   "isteğimizle ölmeye",
   "kendi isteğimizle"
  ],
- "muzik_ses": 0.85,
+ "muzik_ses": 1.0,
  "sc_ratio": 2.5,
  "sc_threshold": 0.05,
  "sc_release": 600,
@@ -398,8 +398,8 @@
  "iki_gecis": true,
  "acilis": {
   "sahne": "gurleme",
-  "kelime": "gürleme",
-  "ofset": 0.03,
+  "kelime": "yer",
+  "ofset": -0.57,
   "sure": 0.7
  },
  "kanca": {
@@ -408,5 +408,6 @@
   "sure": 1.6
  },
  "efekt_hp": 40,
- "efekt_sabit": 0.55
+ "efekt_sabit": 0.55,
+ "muzik_hp": 45
 }

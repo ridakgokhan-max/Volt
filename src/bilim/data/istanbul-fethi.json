@@ -4532,10 +4532,10 @@
  "dongu": true,
  "acilis": {
   "sahne": "gurleme",
-  "kelime": "gürleme",
-  "ofset": 0.03,
+  "kelime": "yer",
+  "ofset": -0.57,
   "sure": 0.7,
-  "an": 0.45
+  "an": 1.2
  },
  "imza": true,
  "cta": [
@@ -4546,7 +4546,7 @@
   },
   {
    "tur": "takip",
-   "bas": 99.725,
+   "bas": 99.975,
    "kostum": "kasif"
   }
  ]
