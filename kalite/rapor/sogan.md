@@ -1,7 +1,8 @@
 # Otomatik kalite kontrolü — sogan
 
-**Sonuç: GEÇTİ**
+**Sonuç: UYARI**
 
-- Süre: 70.8 sn · Ses: -14.3 LUFS, tepe -4.1 dBTP · Ortalama hareket: 5.01
+- Süre: 77.2 sn · Ses: -14.2 LUFS, tepe -3.5 dBTP · Ortalama hareket: 5.17
 
-- **BİLGİ** · Söz: duyulan konuşma metinle %96 uyumlu
+- **UYARI** · Söz: metinde olmayan fazladan söz: 'ahtapotların tam 3 kalbi var neyse boş ver ahtapotu asıl önemlisi şu' (~0.0 sn)
+- **BİLGİ** · Söz: duyulan konuşma metinle %93 uyumlu
