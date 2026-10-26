@@ -1,0 +1,302 @@
+[
+ {
+  "aralik": [
+   47.6,
+   50.2
+  ],
+  "kelimeler": [
+   {
+    "w": "İzlediğiniz",
+    "start": 50.04,
+    "end": 50.08,
+    "p": 0.76
+   },
+   {
+    "w": "için",
+    "start": 50.08,
+    "end": 50.12,
+    "p": 0.99
+   },
+   {
+    "w": "teşekkür",
+    "start": 50.12,
+    "end": 50.14,
+    "p": 1.0
+   },
+   {
+    "w": "ederim.",
+    "start": 50.14,
+    "end": 50.16,
+    "p": 0.84
+   }
+  ],
+  "metin": "İzlediğiniz için teşekkür ederim."
+ },
+ {
+  "aralik": [
+   63.4,
+   70.2
+  ],
+  "kelimeler": [
+   {
+    "w": "Örnekli",
+    "start": 63.4,
+    "end": 63.42,
+    "p": 0.24
+   },
+   {
+    "w": "gönderiyor.",
+    "start": 63.42,
+    "end": 64.04,
+    "p": 0.89
+   },
+   {
+    "w": "Teslim",
+    "start": 64.64,
+    "end": 65.08,
+    "p": 0.94
+   },
+   {
+    "w": "olun,",
+    "start": 65.08,
+    "end": 65.24,
+    "p": 1.0
+   },
+   {
+    "w": "canınızı",
+    "start": 65.4,
+    "end": 66.38,
+    "p": 0.99
+   },
+   {
+    "w": "bağışlansın.",
+    "start": 66.38,
+    "end": 67.08,
+    "p": 1.0
+   },
+   {
+    "w": "Teslim",
+    "start": 68.58,
+    "end": 69.02,
+    "p": 1.0
+   },
+   {
+    "w": "olun,",
+    "start": 69.02,
+    "end": 69.22,
+    "p": 1.0
+   },
+   {
+    "w": "canınız",
+    "start": 69.34,
+    "end": 69.96,
+    "p": 1.0
+   },
+   {
+    "w": "bağış",
+    "start": 69.96,
+    "end": 70.18,
+    "p": 0.83
+   },
+   {
+    "w": "-",
+    "start": 70.18,
+    "end": 70.18,
+    "p": 0.03
+   }
+  ],
+  "metin": "Örnekli gönderiyor. Teslim olun, canınızı bağışlansın. Teslim olun, canınız bağış -"
+ },
+ {
+  "aralik": [
+   95.0,
+   98.2
+  ],
+  "kelimeler": [
+   {
+    "w": "29",
+    "start": 95.0,
+    "end": 95.66,
+    "p": 0.93
+   },
+   {
+    "w": "Mayıs",
+    "start": 95.66,
+    "end": 96.08,
+    "p": 0.99
+   },
+   {
+    "w": "sabahı",
+    "start": 96.08,
+    "end": 96.44,
+    "p": 0.99
+   },
+   {
+    "w": "surlularda",
+    "start": 96.44,
+    "end": 97.06,
+    "p": 0.74
+   },
+   {
+    "w": "Osmanlı",
+    "start": 97.06,
+    "end": 97.6,
+    "p": 1.0
+   },
+   {
+    "w": "sancağı",
+    "start": 97.6,
+    "end": 98.04,
+    "p": 0.99
+   }
+  ],
+  "metin": "29 Mayıs sabahı surlularda Osmanlı sancağı"
+ },
+ {
+  "aralik": [
+   100.4,
+   104.6
+  ],
+  "kelimeler": [
+   {
+    "w": "Son",
+    "start": 100.4,
+    "end": 102.76,
+    "p": 0.6
+   },
+   {
+    "w": "imparator",
+    "start": 102.76,
+    "end": 103.4,
+    "p": 0.86
+   },
+   {
+    "w": "savaşarak",
+    "start": 103.4,
+    "end": 104.1,
+    "p": 0.97
+   },
+   {
+    "w": "ölüyor.",
+    "start": 104.1,
+    "end": 104.4,
+    "p": 0.98
+   }
+  ],
+  "metin": "Son imparator savaşarak ölüyor."
+ },
+ {
+  "aralik": [
+   110.4,
+   112.4
+  ],
+  "kelimeler": [
+   {
+    "w": "Kayseri",
+    "start": 111.04,
+    "end": 111.6,
+    "p": 0.74
+   },
+   {
+    "w": "'nin",
+    "start": 111.6,
+    "end": 111.72,
+    "p": 0.99
+   },
+   {
+    "w": "sarayında,",
+    "start": 111.72,
+    "end": 112.16,
+    "p": 0.99
+   }
+  ],
+  "metin": "Kayseri 'nin sarayında,"
+ },
+ {
+  "aralik": [
+   113.4,
+   121.2
+  ],
+  "kelimeler": [
+   {
+    "w": "Ve",
+    "start": 113.4,
+    "end": 114.56,
+    "p": 0.47
+   },
+   {
+    "w": "her",
+    "start": 114.56,
+    "end": 115.12,
+    "p": 0.99
+   },
+   {
+    "w": "şey",
+    "start": 115.12,
+    "end": 115.4,
+    "p": 0.97
+   },
+   {
+    "w": "o",
+    "start": 115.4,
+    "end": 115.78,
+    "p": 0.95
+   },
+   {
+    "w": "sabahki",
+    "start": 115.78,
+    "end": 116.28,
+    "p": 0.95
+   },
+   {
+    "w": "gürlemeye",
+    "start": 116.28,
+    "end": 116.78,
+    "p": 0.94
+   },
+   {
+    "w": "başladı.",
+    "start": 116.78,
+    "end": 117.32,
+    "p": 1.0
+   }
+  ],
+  "metin": "Ve her şey o sabahki gürlemeye başladı."
+ },
+ {
+  "aralik": [
+   0.0,
+   2.6
+  ],
+  "kelimeler": [
+   {
+    "w": "Nisan",
+    "start": 0.0,
+    "end": 1.48,
+    "p": 1.0
+   },
+   {
+    "w": "1453",
+    "start": 1.48,
+    "end": 2.22,
+    "p": 1.0
+   }
+  ],
+  "metin": "Nisan 1453"
+ },
+ {
+  "aralik": [
+   86.2,
+   88.2
+  ],
+  "kelimeler": [
+   {
+    "w": "Ayrılıyor.",
+    "start": 86.2,
+    "end": 86.54,
+    "p": 0.44
+   }
+  ],
+  "metin": "Ayrılıyor."
+ }
+]
