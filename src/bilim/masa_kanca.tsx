@@ -107,3 +107,85 @@ export const Hap: React.FC<{ t: number; a: number; text: string; sag?: number; y
     </g>
   );
 };
+
+// ---------------------------------------------------------------- ŞİMŞEK kancası (ilk 3 saniye)
+/** Şimşek: karanlık sahne → çift çakış (0.12 sn ve 0.44 sn) → ışıklar yavaşça geri gelir.
+ *  hedef: şimşeğin vurduğu nokta. ek: sonradan küçük çakışların saniyeleri (vurgu kelimeleri) */
+const CAKIS = [0.12, 0.44];
+export const simsekParlak = (t: number, ek: number[] = []) => {
+  let p = 0;
+  [...CAKIS, ...ek].forEach((c, i) => {
+    const u = t - c;
+    if (u >= 0 && u < 0.3) p = Math.max(p, (i === 1 ? 0.7 : i >= 2 ? 0.55 : 1) * Math.exp(-u * 16));
+  });
+  return p;
+};
+export const simsekKaranlik = (t: number) => (t < 0.12 ? 0.6 : 0.6 * (1 - easeOut((t - 0.12) / 1.0)));
+export const simsekSarsinti = (t: number, ek: number[] = []): [number, number] => {
+  let a = 0;
+  [...CAKIS, ...ek].forEach((c, i) => { const u = t - c; if (u >= 0 && u < 0.45) a = Math.max(a, (i === 0 ? 22 : 12) * Math.exp(-u * 9)); });
+  return [Math.sin(t * 91) * a, Math.cos(t * 77) * a * 0.7];
+};
+
+/** Zikzak şimşek çizgisi (deterministik), dallarıyla */
+const zikzak = (x0: number, y0: number, x1: number, y1: number, n: number, sapma: number, tohum: number) => {
+  const p: string[] = [`M ${x0} ${y0}`];
+  for (let i = 1; i < n; i++) {
+    const k = i / n;
+    p.push(`L ${x0 + (x1 - x0) * k + (rnd(i, tohum) - 0.5) * sapma} ${y0 + (y1 - y0) * k + (rnd(tohum, i) - 0.5) * sapma * 0.3}`);
+  }
+  p.push(`L ${x1} ${y1}`);
+  return p.join(" ");
+};
+
+export const Simsek: React.FC<{ t: number; hedef: [number, number]; ek?: number[] }> = ({ t, hedef, ek = [] }) => {
+  const parlak = simsekParlak(t, ek);
+  const cizgiK = (() => {
+    let k = 0;
+    [...CAKIS, ...ek].forEach((c, i) => { const u = t - c; if (u >= -0.02 && u < 0.16) k = Math.max(k, i >= 2 ? 0.8 : 1); });
+    return k;
+  })();
+  const tohum = Math.floor(t * 30) % 3 + 1; // her karede biraz titreşir
+  const [hx, hy] = hedef;
+  const ana = zikzak(hx + 160, -80, hx, hy, 14, 120, tohum);
+  const dal1 = zikzak(hx + 120, hy * 0.35, hx - 220, hy * 0.6, 6, 70, tohum + 4);
+  const dal2 = zikzak(hx + 60, hy * 0.62, hx + 260, hy * 0.82, 5, 60, tohum + 7);
+  return (
+    <g pointerEvents="none">
+      <defs>
+        <filter id="sm-parilti" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
+      </defs>
+      {/* sahne karanlığı + çakış anı beyaz patlama */}
+      <rect x={-300} y={-300} width={1680} height={2520} fill="#05070f" opacity={simsekKaranlik(t) * (1 - parlak)} />
+      {cizgiK > 0 ? (
+        <g opacity={cizgiK}>
+          {[ana, dal1, dal2].map((d, i) => (
+            <g key={i}>
+              <path d={d} stroke="#8fc7ff" strokeWidth={i ? 20 : 38} fill="none" filter="url(#sm-parilti)" opacity={0.9} />
+              <path d={d} stroke="#ffffff" strokeWidth={i ? 5 : 11} fill="none" strokeLinejoin="round" strokeLinecap="round" />
+            </g>
+          ))}
+          <circle cx={hx} cy={hy} r={150} fill="#cfe6ff" filter="url(#sm-parilti)" opacity={0.85} />
+        </g>
+      ) : null}
+      <rect x={-300} y={-300} width={1680} height={2520} fill="#eef6ff" opacity={parlak * 0.85} />
+    </g>
+  );
+};
+
+/** Çarpılan nesnenin etrafında elektrik kıvılcımları (çakıştan ~1.4 sn sonra söner) */
+export const Kivilcim: React.FC<{ t: number; x: number; y: number; r?: number; bas?: number; sure?: number }> = ({ t, x, y, r = 170, bas = 0.12, sure = 1.4 }) => {
+  const u = t - bas;
+  if (u < 0 || u > sure) return null;
+  const sonum = 1 - u / sure;
+  const kare = Math.floor(t * 20);
+  return (
+    <g opacity={sonum}>
+      {Array.from({ length: 7 }).map((_, i) => {
+        const a = rnd(i, kare) * Math.PI * 2, rr = r * (0.6 + rnd(kare, i) * 0.6);
+        const x0 = x + Math.cos(a) * rr * 0.4, y0 = y + Math.sin(a) * rr * 0.4;
+        return <path key={i} d={zikzak(x0, y0, x + Math.cos(a) * rr, y + Math.sin(a) * rr, 4, 30, kare + i)} stroke={i % 2 ? "#ffffff" : "#9fd3ff"} strokeWidth={4} fill="none" strokeLinecap="round" />;
+      })}
+    </g>
+  );
+};

@@ -8,7 +8,7 @@ import type { SceneProps } from "../BilimVideo";
 import { ACC, ap, BLUE, cl, ez, GREEN, INK, lerp, RED, sp } from "../kit";
 import { adim, Bant, geri, KolajDefs, KREM, KIRMIZI, Muhur, Serit, yap } from "../kolaj";
 import { Merakli } from "../merakli";
-import { Hap, MasaKamera, MasaZemin, PencereIsigi } from "../masa_kanca";
+import { Hap, Kivilcim, MasaKamera, MasaZemin, PencereIsigi, Simsek, simsekSarsinti } from "../masa_kanca";
 import olcu from "../data/sogan-olcu.json";
 
 type S = React.FC<SceneProps>;
@@ -307,10 +307,14 @@ const Giris: S = ({ t, d, ws }) => {
   const ts = ws("suçlu"), tsg = ws("soğan", 1), tb = ws("bıçak");
   const kes = ez(cl(0.55 + t / 0.5));
   const ayril = ez(ap(t, ts - 0.2, 0.5));
+  const ek = [tb - 0.05]; // "bıçak" kelimesinde küçük bir çakış daha
+  const [sx, sy] = simsekSarsinti(t, ek);
+  const slam = 1 + 0.28 * Math.max(0, 1 - Math.abs(t - 0.14) / 0.12) * (t > 0.08 ? 1 : 0);
   return (
     <g>
       <KolajDefs />
-      {/* masa üstü kanca şablonu: ahşap + kesim matı, çapraz pencere ışığı, mesaj hapları */}
+      {/* ŞİMŞEK KANCASI: karanlık masa → çift şimşek bıçağa çarpar, ekran sarsılır, ışıklar geri gelir */}
+      <g transform={`translate(${sx} ${sy})`}>
       <MasaKamera t={t}>
         <MasaZemin t={t} />
         <g transform={`translate(${lerp(0, -170, ayril)} 60)`}>
@@ -327,9 +331,13 @@ const Giris: S = ({ t, d, ws }) => {
         <Fiskir t={t} t0={-0.35} x={560} y={820} n={18} hiz={1.0} s={1.05} />
         <Fiskir t={t} t0={0.6} x={560} y={820} n={10} hiz={0.8} />
         <PencereIsigi t={t} />
+        <Kivilcim t={t} x={lerp(600, 760, ayril)} y={lerp(800, 930, ayril)} r={210} />
+        <Kivilcim t={t} x={lerp(600, 760, ayril)} y={lerp(800, 930, ayril)} r={190} bas={tb - 0.05} sure={0.9} />
       </MasaKamera>
+      <Simsek t={t} hedef={[lerp(620, 780, ayril), lerp(820, 940, ayril)]} ek={ek} />
+      </g>
       {/* mesaj hapları: kırmızı (iddia) 0. karede okunur, beyaz (soru) yazılarak gelir */}
-      <Hap t={t} a={-1} text="SUÇLU: BIÇAK?" y={330} boy={60} />
+      <g transform={`translate(${990 + sx * 0.6} ${330 + sy * 0.6}) scale(${slam}) translate(-990 -330)`}><Hap t={t} a={-1} text="SUÇLU: BIÇAK?" y={330} boy={60} /></g>
       <Hap t={t} a={0.35} text="Soğan neden ağlatır?" y={455} boy={46} renk="#f6f3ec" yazi={INK} cikis={tb - 0.3} />
       <Serit t={t} a={tsg - 0.05} cikis={d - 0.3} text="MASUM" x={340} y={1150} size={60} rot={-4} bg={GREEN} color="#fff" />
       <Muhur t={t} a={tb - 0.05} text="SUÇLU" x={760} y={1020} size={96} rot={-10} />
