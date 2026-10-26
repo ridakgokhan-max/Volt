@@ -11,7 +11,7 @@ import { ACC, ap, Bg, BgKind, BLUE, cl, ez, FPS, H, INK, KATEGORI_RENK, lerp, sp
 const { fontFamily } = loadFont("normal", { weights: ["700", "900"], subsets: ["latin", "latin-ext"] });
 
 export type Kelime = { w: string; s: number; e: number; vurgu?: boolean };
-export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas" | "savur";
+export type Gecis = "daire" | "kaydir" | "zoom" | "glitch" | "perde" | "flas" | "savur" | "kes" | "karar";
 export type Sahne = { id: string; bg: BgKind; bas: number; son: number; ev: Record<string, number>; gecis?: Gecis; gorsel?: string; video?: string; video_kutu?: [number, number, number, number]; derinlik?: boolean };
 /** w(i): i. kelimenin sahneye göre saniyesi; ws("kelime", n): sahne başından sonra o kelimenin n. geçişi */
 /** ses(t): o andaki ses şiddeti 0..1 (Meraklı'nın dudak senkronu için: <Merakli agiz={ses(t)} />) */
@@ -69,7 +69,7 @@ type WrapProps = { sc: Sahne; idx: number; lead: number; donus?: boolean; sabitT
 /** Geçiş karelerinde sinema kamerası gibi hareket bulanıklığı (motion blur) */
 const SceneWrap: React.FC<WrapProps> = (p) => {
   const f = useCurrentFrame();
-  const gecisVar = !p.acilis && (p.idx > 0 || !!AC || p.donus) && f < (p.donus ? DONGU : OV);
+  const gecisVar = !p.acilis && (p.idx > 0 || !!AC || p.donus) && f < (p.donus ? DONGU : OV) && p.sc.gecis !== "kes";
   return gecisVar ? (
     <CameraMotionBlur shutterAngle={200} samples={5}>
       <SceneIc {...p} />
@@ -107,6 +107,7 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
       outer.opacity = f % 3 === 1 ? 0.35 : 1;
     }
     if (g === "flas") flash = r;
+    if (g === "karar") outer.filter = `brightness(${rev})`; // film: karartmadan açılış
     if (g === "savur") {
       // hızlı kamera savurma: yandan kayarak gelir, hareket bulanıklığı ve eğim
       outer.transform = `translateX(${r * 110}%) skewX(${-r * 18}deg)`;

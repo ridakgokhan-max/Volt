@@ -1,0 +1,377 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": true,
+ "son_bosluk": 1.2,
+ "kesimler": [
+  [
+   49.15,
+   49.7
+  ],
+  [
+   64.3,
+   68.7
+  ],
+  [
+   100.13,
+   102.73
+  ],
+  [
+   113.5,
+   118.72
+  ]
+ ],
+ "kelime_sil": [
+  85,
+  110,
+  111,
+  112,
+  113,
+  168,
+  169,
+  184,
+  185,
+  186,
+  187,
+  188,
+  189,
+  190,
+  191
+ ],
+ "kelime_ekle": [
+  {
+   "w": "imparator",
+   "start": 102.77,
+   "end": 103.38
+  },
+  {
+   "w": "savaşarak",
+   "start": 103.4,
+   "end": 104.06
+  }
+ ],
+ "aralar": [
+  [
+   2.24,
+   0.55
+  ],
+  [
+   7.9,
+   0.45
+  ],
+  [
+   10.9,
+   0.5
+  ],
+  [
+   12.5,
+   1.05
+  ],
+  [
+   18.98,
+   0.7
+  ],
+  [
+   27.52,
+   0.45
+  ],
+  [
+   37.65,
+   0.45
+  ],
+  [
+   48.0,
+   0.6
+  ],
+  [
+   55.76,
+   0.4
+  ],
+  [
+   60.84,
+   0.45
+  ],
+  [
+   80.18,
+   0.95
+  ],
+  [
+   86.34,
+   0.85
+  ],
+  [
+   89.72,
+   0.55
+  ],
+  [
+   93.94,
+   1.1
+  ],
+  [
+   104.4,
+   0.9
+  ],
+  [
+   109.46,
+   0.5
+  ],
+  [
+   113.5,
+   1.05
+  ],
+  [
+   120.96,
+   0.5
+  ]
+ ],
+ "seri": {
+  "no": 15,
+  "toplam": 30,
+  "kategori": "Tarih"
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "gemileri"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "maaşını",
+   "yazi": "Maaşı ödeseydi?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -2.2
+  }
+ ],
+ "cta_kostum": "kasif",
+ "cta_ses": 0.35,
+ "cta_bosluk": true,
+ "vurgu": [
+  "gürleme.",
+  "sarsılıyor.",
+  "çarpıyor.",
+  "Mehmed.",
+  "Urban.",
+  "maaşını",
+  "Babil'in",
+  "toz",
+  "elleriyle",
+  "karadan",
+  "ölmeye",
+  "Ayasofya'da",
+  "davullar",
+  "saldırı.",
+  "sancağı",
+  "örümcek",
+  "maaşla."
+ ],
+ "ses_vurgu": [
+  [
+   "susuyor",
+   -2.5,
+   3
+  ],
+  [
+   "gürleme",
+   3.5
+  ],
+  [
+   "sarsılıyor",
+   2.5
+  ],
+  [
+   "çarpıyor",
+   2.5
+  ],
+  [
+   "ordusu",
+   1.5
+  ],
+  [
+   "mehmed",
+   2
+  ],
+  [
+   "urban",
+   2
+  ],
+  [
+   "ödeyemedi",
+   2
+  ],
+  [
+   "babil'in",
+   2.5,
+   5
+  ],
+  [
+   "ölmeye",
+   2.5,
+   2
+  ],
+  [
+   "ayasofya'da",
+   -2.5,
+   7
+  ],
+  [
+   "davullar",
+   2
+  ],
+  [
+   "saldırı",
+   3.5
+  ],
+  [
+   "sancağı",
+   2,
+   2
+  ],
+  [
+   "kayser'in",
+   -1.5,
+   5
+  ],
+  [
+   "maaşla",
+   1.5
+  ]
+ ],
+ "baglar": [
+  "binlerce asker",
+  "yarım tonluk",
+  "taş gülle",
+  "osmanlı ordusu",
+  "21 yaşında",
+  "bir sultan:",
+  "bir yıl önce",
+  "küçük maaşını",
+  "bir top",
+  "babil'in surlarını",
+  "toz eder.\"",
+  "osmanlı gemileri",
+  "haliç'e indiriyor.",
+  "teslim olun,",
+  "canınız bağışlansın.\"",
+  "konstantin'in cevabı:",
+  "hiç kimsenin.",
+  "ölmeye hazırız.\"",
+  "28 mayıs",
+  "29 mayıs",
+  "son ayin.",
+  "dua ediyor.",
+  "kilise çanları",
+  "son saldırı.",
+  "osmanlı sancağı",
+  "son imparator",
+  "harap sarayda",
+  "bir beyit",
+  "kayser'in sarayında",
+  "ödenmemiş bir"
+ ],
+ "muzik_ses": 0.55,
+ "sc_ratio": 2.5,
+ "sc_threshold": 0.05,
+ "sc_release": 600,
+ "gecis_ses": 0.0,
+ "sahneler": [
+  {
+   "id": "acilis",
+   "bg": "k:#070a1c",
+   "ilk": 0
+  },
+  {
+   "id": "sessiz",
+   "bg": "k:#070a1c",
+   "ilk": "sonra",
+   "gecis": "kes"
+  },
+  {
+   "id": "gurleme",
+   "bg": "k:#070a1c",
+   "ilk": "=ve",
+   "gecis": "kes"
+  },
+  {
+   "id": "ordu",
+   "bg": "k:#070a1c",
+   "ilk": "toz",
+   "gecis": "kes"
+  },
+  {
+   "id": "urban",
+   "bg": "k:#070a1c",
+   "ilk": "=o",
+   "gecis": "kes"
+  },
+  {
+   "id": "gecmis",
+   "bg": "k:#2b2016",
+   "ilk": "=bir",
+   "gecis": "flas"
+  },
+  {
+   "id": "soru",
+   "bg": "k:#2b2016",
+   "ilk": "=sultan",
+   "gecis": "kes"
+  },
+  {
+   "id": "haftalar",
+   "bg": "k:#070a1c",
+   "ilk": "haftalar",
+   "gecis": "flas"
+  },
+  {
+   "id": "gemiler",
+   "bg": "k:#070a1c",
+   "ilk": "=bir",
+   "gecis": "karar"
+  },
+  {
+   "id": "teklif",
+   "bg": "k:#070a1c",
+   "ilk": "=sultan",
+   "gecis": "kes"
+  },
+  {
+   "id": "cevap",
+   "bg": "k:#070a1c",
+   "ilk": "konstantin",
+   "gecis": "kes"
+  },
+  {
+   "id": "ayin",
+   "bg": "k:#070a1c",
+   "ilk": "28",
+   "gecis": "karar"
+  },
+  {
+   "id": "saldiri",
+   "bg": "k:#070a1c",
+   "ilk": "=gece",
+   "gecis": "kes"
+  },
+  {
+   "id": "fetih",
+   "bg": "k:#070a1c",
+   "ilk": "29",
+   "gecis": "flas"
+  },
+  {
+   "id": "beyit",
+   "bg": "k:#070a1c",
+   "ilk": "genç",
+   "gecis": "kes"
+  },
+  {
+   "id": "son",
+   "bg": "k:#070a1c",
+   "ilk": "=her",
+   "gecis": "kes"
+  }
+ ]
+}

@@ -459,6 +459,20 @@ def main(konu):
     os.makedirs(os.path.join(ROOT, "src", "bilim", "data"), exist_ok=True)
     json.dump(data, open(os.path.join(ROOT, "src", "bilim", "data", f"{konu}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
+    # --- anlatım dinamiği: vurgulu sözleri yükselt, içten anları alçalt (kurgu.json "ses_vurgu") ---
+    # [["kelime", dB, kelime_sayisi(1), n.gecis(0)], ...]  ör. ["gürleme", 3], ["ayasofya'da", -2, 7]
+    if K.get("ses_vurgu"):
+        kaz = np.zeros(len(voice))
+        for v in K["ses_vurgu"]:
+            i0 = ara(v[0], 0.0, v[3] if len(v) > 3 else 0)
+            i1 = min(len(kel) - 1, i0 + (v[2] if len(v) > 2 else 1) - 1)
+            a0, a1 = int(max(0, kel[i0]["s"] - 0.03) * SR), int((kel[i1]["e"] + 0.06) * SR)
+            kaz[a0:a1] = np.where(np.abs(kaz[a0:a1]) < abs(v[1]), v[1], kaz[a0:a1])
+        r = int(0.04 * SR)  # 40 ms yumuşak geçiş (tık sesi olmasın)
+        kaz = np.convolve(kaz, np.ones(r) / r, mode="same")
+        voice = voice * (10 ** (kaz / 20))
+        print("ses vurgusu:", len(K["ses_vurgu"]), "yer")
+
     # --- efekt + müzik ---
     spec = importlib.util.spec_from_file_location("sesler", os.path.join(D, "sesler.py"))
     mod = importlib.util.module_from_spec(spec)
@@ -468,7 +482,7 @@ def main(konu):
     wt = lambda i: kel[i]["s"]  # noqa: E731
     starts = {s["id"]: s["bas"] for s in sc}
     for i, s in enumerate(sc):
-        if i > 0 or AC:
+        if (i > 0 or AC) and s.get("gecis") not in ("kes", "karar"):  # film kesmesinde hışırtı yok
             B.put(sfx, s["bas"] - 0.25, B.whoosh(0.55), float(K.get("gecis_ses", 0.55)))
     if AC:  # açılış vuruşu
         B.put(sfx, 0.0, B.katman(B.efekt("vurus", yedek=B.boom), B.riser(max(0.4, AC))), 0.6)
@@ -485,9 +499,15 @@ def main(konu):
     else:
         mod.cues(B, sfx, wt, starts, sure)
     mus = None
-    if K.get("muzik"):  # kurgu.json: "muzik": "merak" | "nostalji" | "teknoloji" | "neseli" | "duygusal"
+    if hasattr(mod, "muzik"):  # konuya özel film müziği (sesler.py içinde muzik(B, sure, ara) -> dizi)
+        mus = mod.muzik(B, sure, ara=lambda txt, sonra=0.0, n=0: kel[ara(txt, sonra, n)]["s"])
+    if mus is None and K.get("muzik"):  # kurgu.json: "muzik": "merak" | "nostalji" | "teknoloji" | "neseli" | "duygusal"
         mus = B.muzik_dosyadan(sure, K["muzik"], anahtar=konu, parca=K.get("muzik_parca"))
     gercek_muzik = mus is not None
+    if mus is not None and K.get("muzik_otomasyon"):  # [[kelime|saniye, kazanç], ...] doğrusal ses eğrisi
+        nok = sorted((kel[ara(x)]["s"] if isinstance(x, str) else float(x), g) for x, g in K["muzik_otomasyon"])
+        tt = np.arange(len(mus)) / SR
+        mus = mus * np.interp(tt, [x for x, _ in nok], [g for _, g in nok])
     if mus is None:
         mus = B.music(sure, full_from=sc[1]["bas"] if len(sc) > 1 else 3.0, outro_at=max(sure - 2.6, 5))
 
