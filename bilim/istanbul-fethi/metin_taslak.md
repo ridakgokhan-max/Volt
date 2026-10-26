@@ -1,21 +1,21 @@
-Nisan 1453. / Bir sabah. / Surlardaki nöbetçiler / önce bir **sessizlik** duydu. //
+Nisan 1453. / Şafak henüz sökmemiş. / Surların önünde / binlerce ateş / karanlıkta **titriyor**. //
 
-Sonra yer **sarsıldı**. / Yarım tonluk bir taş gülle / surlara **çarptı**. //
+Sonra / her şey **susuyor**. / Kuşlar bile. //
 
-Surların önünde / göz alabildiğine **Osmanlı ordusu**. / On binlerce asker. / Başlarında / yirmi bir yaşında bir sultan: / **Mehmed**. //
+Ve bir **gürleme**. / Yer **sarsılıyor**. / Yarım tonluk bir taş gülle / surlara **çarpıyor**. / Toz bulutunun içinden / **Osmanlı ordusu** görünüyor. / Başında / yirmi bir yaşında bir sultan: / **Mehmed**. //
 
-O dev topu döken adam da oradaydı: / **Urban**. / Ve bu top / aslında **Bizans'ın** olabilirdi. //
+O topu döken adam / şimdi topun yanında: / **Urban**. / Bir yıl önce / Bizans'a çalışmak istemişti. / Ama imparator / küçük **maaşını** bile ödeyemedi. / Urban da / Sultan'a gitti. / Sultan, / bu surları yıkacak bir top / dökebilir mi diye sordu. / Urban: / "Topumun taşları / **Babil'in surlarını** bile toz eder." //
 
-Bir yıl önce / imparatorun kapısını çalmıştı. / Ama imparator / küçük **maaşını** bile ödeyemedi. //
+Haftalar geçiyor. / Gündüz gülleler, / gece Bizanslılar / yıkılan yerleri **elleriyle** örüyor. / Bir gece / Osmanlı gemileri / **karadan** yürüyüp / Haliç'e iniyor. //
 
-Urban, Sultan'a gitti. / Sultan, / surları yıkacak bir top / dökebilir mi diye sordu. / Urban: / "Topumun taşları / sadece bu surları değil, / **Babil'in surlarını** bile toz eder." //
+Sultan / son bir teklif gönderiyor: / Teslim olun, / canınız bağışlansın. / **Konstantin'in** cevabı: / "Şehri teslim etmek / ne **benim** elimde, / ne de burada yaşayan **hiç kimsenin**. / Hepimiz / kendi isteğimizle / **ölmeye** hazırız." //
 
-Dev top / günde ancak birkaç kez ateşlenebiliyordu. / Savunanlar her gece / gedikleri **yeniden** kapatıyordu. //
+28 Mayıs gecesi. / **Ayasofya'da** / son ayin. / İnsanlar / ağlayarak dua ediyor. //
 
-Haftalar geçti. / Sultan son bir teklif gönderdi: / Teslim olun, / canınız bağışlansın. / Konstantin'in cevabı: / "Şehri teslim etmek / ne **benim** elimde, / ne de burada yaşayan **hiç kimsenin**. / Hepimiz / kendi isteğimizle / **ölmeye** hazırız." //
+Gece yarısı / **davullar** başlıyor. / Kilise çanları / karşılık veriyor. / Son saldırı. //
 
-**29 Mayıs**. / Şafaktan önce / son saldırı başladı. / Anlatılana göre / son imparator / surlarda savaşarak düştü. / Ve şehir / **fethedildi**. //
+**29 Mayıs** sabahı / surlarda / Osmanlı **sancağı** dalgalanıyor. / Anlatılana göre / son imparator / savaşarak düşüyor. //
 
-Genç sultan / harap imparator sarayında / Farsça bir beyit okudu: / "**Kayser'in** sarayında / perdeyi **örümcek** tutuyor." //
+Genç sultan / harap sarayda / bir beyit mırıldanıyor: / "**Kayser'in** sarayında / perdeyi **örümcek** tutuyor." //
 
-Ve o sabahki **gürleme**, / belki de / **ödenmemiş bir maaşla** başlamıştı.
+Ve her şey / o sabahki **gürlemeyle** başladı. / Belki de / **ödenmemiş bir maaşla**.
