@@ -2,6 +2,6 @@
 
 **Sonuç: GEÇTİ**
 
-- Süre: 70.8 sn · Ses: -14.2 LUFS, tepe -4.5 dBTP · Ortalama hareket: 4.56
+- Süre: 70.8 sn · Ses: -14.3 LUFS, tepe -4.1 dBTP · Ortalama hareket: 5.01
 
-- **BİLGİ** · Söz: duyulan konuşma metinle %97 uyumlu
+- **BİLGİ** · Söz: duyulan konuşma metinle %96 uyumlu
