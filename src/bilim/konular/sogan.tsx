@@ -337,7 +337,7 @@ const Sacma: S = ({ t, d, ws }) => {
         </Kamera>
       </g>
       <Serit t={tq} a={-1} cikis={tn - 0.05} text="AHTAPOTUN 3 KALBİ VAR" x={540} y={330} size={58} rot={-2} bg={INK} color={KREM} />
-      <Muhur t={tq} a={tv} text="GERÇEK!" x={800} y={1120} size={70} rot={-8} />
+      <g opacity={1 - ap(t, tah - 0.25, 0.2)}><Muhur t={tq} a={tv} text="GERÇEK!" x={820} y={1080} size={64} rot={-8} /></g>
       {/* plak cızırtısı anı: RGB kayma şeritleri */}
       {gl > 0 ? Array.from({ length: 7 }).map((_, i) => {
         const y = (rnd(i, Math.floor(t * 30)) * 1700) + 100;
@@ -347,13 +347,20 @@ const Sacma: S = ({ t, d, ws }) => {
       {t > tn ? (
         <g transform={`translate(${lerp(1300, 820, ez(mk))} 0)`}>
           <Merakli x={0} y={1830} s={0.95} t={t} hareket={t > tas - 0.1 ? "isaret" : "salla"} kostum="onluk" flip />
-          <g transform={`translate(-150 1240) scale(${Math.min(1.05, sp(t, tn + 0.15, 10))})`} opacity={1 - ap(t, tas - 0.2, 0.2)}>
+          <g transform={`translate(-170 1520) scale(${Math.min(1.05, sp(t, tn + 0.15, 10))})`} opacity={1 - ap(t, tas - 0.2, 0.2)}>
             <rect x={-230} y={-62} width={360} height={110} rx={30} fill="#fff" stroke={INK} strokeWidth={6} />
             <path d="M 90 48 L 130 90 L 60 48 Z" fill="#fff" stroke={INK} strokeWidth={6} />
             <text x={-50} y={12} textAnchor="middle" fontSize={50} fontWeight={900} fill={INK} style={font}>BOŞ VER 🙄</text>
           </g>
         </g>
       ) : null}
+      {/* sıradaki konunun karanlık silueti: soğan büyüyerek gelir (merak) */}
+      {t > tah ? (
+        <g style={{ filter: "brightness(0)" }} opacity={0.88 * ap(t, tah + 0.1, 0.3)} transform={`translate(540 820) scale(${lerp(0.35, 1.0, ez(ap(t, tah + 0.1, d - tah - 0.2)))}) rotate(${Math.sin(t * 3) * 4}) translate(-540 -820)`}>
+          <Parca t={t} ad="sogan" x={540} y={470} w={380} rot={-4} a={-1} />
+        </g>
+      ) : null}
+      {t > tah + 0.2 ? <text x={540} y={880} textAnchor="middle" fontSize={200} fontWeight={900} fill={ACC} stroke={INK} strokeWidth={8} opacity={ap(t, tah + 0.3, 0.2) * (0.8 + 0.2 * Math.sin(t * 8))} style={font}>?</text> : null}
       <Serit t={t} a={tas - 0.05} text="ASIL ÖNEMLİSİ ŞU..." x={540} y={420} size={62} rot={2} bg={KIRMIZI} color={KREM} />
       <rect x={-50} y={-50} width={1180} height={2020} fill="#05070f" opacity={kara * 0.92} />
     </g>

@@ -121,7 +121,13 @@ if WHISPER and os.path.exists(metin_p):
         return re.sub(r"[^\wçğıöşü0-9]", "", x.lower().replace("İ", "i").replace("I", "ı"))
 
     hk = [(norm(w), t) for w, t in duyulan if norm(w)]
-    bk = [norm(w) for w in open(metin_p).read().split() if norm(w)]
+    _metin = open(metin_p).read()
+    _kp = f"bilim/{konu}/kurgu.json"
+    if os.path.exists(_kp):  # ön kayıt (ör. saçma giriş) metni de beklenen konuşmaya eklenir
+        _ok = json.load(open(_kp)).get("on_kayit")
+        if _ok and os.path.exists(_ok.get("metin", "")):
+            _metin = open(_ok["metin"]).read() + " " + _metin
+    bk = [norm(w) for w in _metin.split() if norm(w)]
     # kalan tekrar: aynı 3+ kelimelik öbek arka arkaya iki kez
     for n in (5, 4, 3):
         i = 0
