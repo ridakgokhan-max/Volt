@@ -127,7 +127,7 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
     }
   });
   const ink = sc.bg.startsWith("k:") || sc.bg === "parsomen" || sc.bg === "sicak" || sc.bg === "yesil" || sc.bg === "gok" ? INK : "#f4efe2";
-  if (acilis) outer.transform = `scale(${1.14 - 0.14 * ez(f / 10)})`;
+  if (acilis) outer.transform = `scale(${1 + 0.06 * ez(f / 21)})`; // açılış anı: ileri itme (geri çekilme yok)
   return (
     <AbsoluteFill style={outer}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${shake * 0.4}px)` }}>

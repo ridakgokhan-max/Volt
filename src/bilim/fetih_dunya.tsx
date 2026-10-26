@@ -677,7 +677,7 @@ export const Atis: React.FC<{ u: number; t: number; hedef?: { x: number; y: numb
         const a = ((TOP.ag + (rnd(i, 1) - 0.5) * 60) * Math.PI) / 180;
         const d = 40 + k * (120 + rnd(i, 2) * 220);
         return <circle key={i} cx={n.x + Math.cos(a) * d} cy={n.y + Math.sin(a) * d - k * 220} r={50 + k * (110 + rnd(i, 3) * 90)}
-          fill="url(#duman)" opacity={(1 - cl(u / 2.4)) * 0.5} />;
+          fill="url(#duman)" opacity={(1 - cl(u / 2.4)) * 0.3} />;
       })}
       {/* gülle */}
       {namluVar && carpVar && ucus < 1 && (

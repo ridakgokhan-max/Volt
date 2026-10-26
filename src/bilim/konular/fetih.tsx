@@ -436,12 +436,12 @@ const Sikke: React.FC<{ t: number; a: number }> = ({ t, a }) => {
 const YerSikke: React.FC<{ t: number }> = ({ t }) => {
   const p = Math.max(0, Math.sin(t * 2.1)) ** 8;
   return (
-    <g transform="translate(300 1652)">
+    <g transform="translate(560 1685)">
       <ellipse cx={0} cy={0} rx={32} ry={12} fill={ALTIN} stroke="#6a4a14" strokeWidth={3} />
       <ellipse cx={0} cy={-2} rx={20} ry={6} fill="none" stroke="#8a6a1c" strokeWidth={2} />
       <circle cx={0} cy={0} r={46} fill="#ffd36b" opacity={0.18 + 0.25 * p} />
       <path d="M -26 -6 A 30 10 0 0 1 22 -9" stroke="#fff6d0" strokeWidth={3} fill="none" opacity={0.4 + 0.6 * p} />
-      <path d={`M 18 -22 l ${3 * p} ${-10 * p} l ${3 * p} ${10 * p} l ${10 * p} ${3 * p} l ${-10 * p} ${3 * p} l ${-3 * p} ${10 * p} l ${-3 * p} ${-10 * p} l ${-10 * p} ${-3 * p} Z`} fill="#fffbe8" opacity={p} />
+      <ellipse cx={-24 + ((t * 0.9) % 1) * 48} cy={-3} rx={6} ry={4} fill="#fffbe8" opacity={0.3 + 0.6 * p} />
     </g>
   );
 };
@@ -470,7 +470,7 @@ const Harabe: React.FC<{ t: number }> = ({ t }) => (
 );
 
 // ---------------------------------------------------------------- SAHNELER
-const ACILIS_KAM: [number, number, number, number][] = [[0, 540, 1450, 1.25], [8, 440, 1390, 1.6]];
+const ACILIS_KAM: [number, number, number, number][] = [[0, 520, 1480, 1.5], [8, 430, 1420, 1.85]];
 
 /** 1 · Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. */
 const Acilis: S = ({ t, d, ws }) => {
@@ -582,7 +582,8 @@ const Gurleme: S = ({ t, d, ws }) => {
         {carp > 0 && <Atis u={0.55 + carp} t={t} sadece="carpma" />}
       </DunyaSahne>
       <Kul t={t} o={0.6} n={18} />
-      <Parlama t={t} a={tg} d={0.35} g={0.85} />
+      <Parlama t={t} a={tg} d={0.2} g={1} />
+      <Parlama t={t} a={tg + 0.05} d={0.45} g={0.35} renk="#ff9a4a" />
       <Parlama t={t} a={tc} d={0.5} g={0.7} renk="#ffe2b0" />
       <Vinyet g={0.8} />
     </g>
@@ -890,7 +891,7 @@ const Son: S = ({ t, d, ws }) => {
   const tg = sonra(ws, "başladı", 0.5) + 0.35, tm = ws("maaşla"); // uzak top yankısı cümleden sonra
   // geniş plandan açılış kadrajına doğrusal ileri itme (döngü: son kare = ilk kare)
   const kk = cl(t / d);
-  const kam: Kam = { x: lerp(640, 540, kk) + Math.sin(t * 1.3) * 12 * (1 - kk), y: lerp(1480, 1450, kk), z: lerp(0.85, 1.25, kk) };
+  const kam: Kam = { x: lerp(640, 520, kk) + Math.sin(t * 1.3) * 12 * (1 - kk), y: lerp(1490, 1480, kk), z: lerp(1.0, 1.5, kk) };
   const D: Dunya = { t, h: lerp(0.45, 0.32, cl(t / d)), ates: 1, ordu: lerp(1, 0.35, cl((t - tm) / Math.max(0.3, d - tm))), fitil: -1 };
   return (
     <g>

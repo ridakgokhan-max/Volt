@@ -166,8 +166,8 @@ def cues(B, S, wt, st, sure, ara):
     p(S, 0.05, Y("stone_impact_debris_569501.mp3"), 1.2)
     p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(2.6 * SR)] * np.linspace(1, 0, int(2.6 * SR)), 0.9)
     p(S, 0.0, B.boom(f=48, d=1.4), 0.8)  # 40–70 Hz gövde
-    p(S, 2.2, Y("war_drums_468903.mp3"), 2.2)  # bölüm kartı girişine davul (sessiz delik kalmasın)
-    p(S, 2.2, B.boom(f=60, d=0.8), 0.7)
+    p(S, 2.25, Y("war_drums_468903.mp3"), 2.2)  # bölüm kartı girişine davul (sessiz delik kalmasın)
+    p(S, 2.25, B.boom(f=60, d=0.8), 0.7)
     # fitil cızırtısı: "Sonra"dan gürlemeye kadar (sessizlikte tek ses o)
     p(S, t_son - 0.2, _cizirti(B, t_gur - t_son + 0.15), 0.16)
     p(S, t_kus + 1.2, E("kalp"), 0.6)
