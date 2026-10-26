@@ -1,9 +1,10 @@
-metinle hizalandı: transkript 152 -> metin 148 kelime
-ön kayıt: 6.12 sn, 12 kelime
-ses başlangıcına oturtulan kelime: 47
-CTA: [{'tur': 'begen', 'bas': 46.808, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 70.053, 'yazi': 'Bıçağın keskin mi?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 73.89, 'kostum': 'onluk'}]
-müzik: merak -> sonican-sneaky-curious-jazzy-506460.mp3
-sogan: 100.4 sn kayıt -> 77.2 sn video, 160 kelime, 54 altyazı satırı, 11 sahne
+metinle hizalandı: transkript 191 -> metin 186 kelime
+ses başlangıcına oturtulan kelime: 59
+CTA: [{'tur': 'begen', 'bas': 51.888, 'kostum': 'kasif'}, {'tur': 'yorum', 'bas': 32.371, 'yazi': 'Maaşı ödeseydi?', 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 96.816, 'kostum': 'kasif'}]
+ses vurgusu: 16 yer
+istanbul-fethi: 124.4 sn kayıt -> 100.4 sn video, 186 kelime, 54 altyazı satırı, 16 sahne
+[90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
 Getting Headless Shell - 9.5 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
@@ -21,11 +22,11 @@ Bundling 32%
 Bundling 43%
 Bundling 54%
 Bundling 65%
-Bundling 71%
-Bundling 76%
-Bundling 81%
-Bundling 87%
-Bundling 92%
+Bundling 70%
+Bundling 75%
+Bundling 80%
+Bundling 85%
+Bundling 91%
 Bundling 98%
 Bundling 100%
 Getting composition
@@ -34,17 +35,20 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/sogan.mp4[39m
+[90mOutput               out/bilim/istanbul-fethi.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[40m Tab 0, node_modules/react-dom/cjs/react-dom.production.min.js:23 [49m 
-[34m○                    out/bilim/sogan.mp4[39m [90m53.6 MB[39m
-[0;93m2026-10-26 12:17:55.237419189 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-[BİLGİ] Söz: duyulan konuşma metinle %97 uyumlu
-SONUÇ: GEÇTİ
+[34m+                    out/bilim/istanbul-fethi.mp4[39m [90m47.8 MB[39m
+[UYARI] Teknik: süre 100.4 sn (Reels için 15–90 önerilir)
+[KALDI] Hareket: ölü an 0.5–4.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 31.0–32.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 37.0–38.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 91.5–92.5 sn (ekran neredeyse duruyor)
+[0;93m2026-10-26 16:43:07.289179704 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[UYARI] Söz: farklı duyuluyor: metin 'haliçe indiriyor' ↔ duyulan 'haliç e iniliyor' (~51.9 sn)
+[BİLGİ] Söz: duyulan konuşma metinle %94 uyumlu
+SONUÇ: KALDI
 durum: success
