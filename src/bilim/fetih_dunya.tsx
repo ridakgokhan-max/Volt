@@ -210,7 +210,7 @@ export const Ag: React.FC<{ cx: number; cy: number; r: number; k: number; t: num
   const tel = cl(k * 1.6);
   const halka = cl(k * 1.6 - 0.5);
   return (
-    <g transform={`translate(${cx} ${cy}) rotate(${Math.sin(t * 0.9) * 2})`} stroke="#f2ecdc" fill="none" strokeLinecap="round">
+    <g transform={`translate(${cx} ${cy}) rotate(${Math.sin(t * 1.4) * 5}) scale(${1 + 0.03 * Math.sin(t * 2.1)})`} stroke="#f2ecdc" fill="none" strokeLinecap="round">
       {Array.from({ length: kol }).map((_, i) => {
         const a = (i / kol) * Math.PI * 2;
         return <line key={i} x1={0} y1={0} x2={Math.cos(a) * r * tel} y2={Math.sin(a) * r * tel} strokeWidth={r * 0.025} opacity={0.85} />;
@@ -224,7 +224,7 @@ export const Ag: React.FC<{ cx: number; cy: number; r: number; k: number; t: num
         });
         return <polyline key={j} points={pts.join(" ")} strokeWidth={r * 0.018} opacity={0.75} />;
       })}
-      {k > 0.8 && <circle cx={r * 0.18} cy={r * 0.12 + Math.sin(t * 2) * r * 0.03} r={r * 0.07} fill="#1b1b1b" stroke="none" />}
+      {k > 0.8 && <circle cx={r * 0.18 + Math.sin(t * 1.1) * r * 0.25} cy={r * 0.12 + Math.cos(t * 0.9) * r * 0.25} r={r * 0.07} fill="#1b1b1b" stroke="none" />}
     </g>
   );
 };
@@ -860,7 +860,7 @@ export const DunyaSahne: React.FC<{ D: Dunya; kam: Kam; children?: React.ReactNo
     return <g transform={`translate(${ox} ${oy})`}>{node}</g>;
   };
   const ust = (
-    <g transform={`translate(${540 + sallanti[0]} ${960 + sallanti[1]}) rotate(${kam.r || 0}) scale(${kam.z}) translate(${-kam.x} ${-kam.y})`}>
+    <g transform={`translate(${540 + sallanti[0] + Math.sin(D.t * 0.9) * 5} ${960 + sallanti[1] + Math.cos(D.t * 0.7) * 4}) rotate(${(kam.r || 0) + Math.sin(D.t * 0.4) * 0.35}) scale(${kam.z * (1 + 0.008 * Math.sin(D.t * 0.6))}) translate(${-kam.x} ${-kam.y})`}>
       <defs>
         <radialGradient id="duman">
           <stop offset="0" stopColor="#e2d8c8" stopOpacity="0.75" />
