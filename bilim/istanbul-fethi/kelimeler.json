@@ -1,0 +1,1426 @@
+{
+ "model": "large-v3",
+ "sure": 124.373,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 18.98,
+   "text": "Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. Sonra her şey susuyor. Kuşlar bile. Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor.",
+   "kelimeler": [
+    {
+     "w": "Nisan",
+     "start": 0.0,
+     "end": 1.46,
+     "p": 0.993
+    },
+    {
+     "w": "1453.",
+     "start": 1.46,
+     "end": 2.24,
+     "p": 0.999
+    },
+    {
+     "w": "Şafak",
+     "start": 2.46,
+     "end": 3.38,
+     "p": 0.998
+    },
+    {
+     "w": "henüz",
+     "start": 3.38,
+     "end": 3.68,
+     "p": 0.998
+    },
+    {
+     "w": "sökmemiş.",
+     "start": 3.68,
+     "end": 4.3,
+     "p": 0.971
+    },
+    {
+     "w": "Surların",
+     "start": 4.36,
+     "end": 5.28,
+     "p": 0.991
+    },
+    {
+     "w": "önünde",
+     "start": 5.28,
+     "end": 5.74,
+     "p": 1.0
+    },
+    {
+     "w": "binlerce",
+     "start": 5.74,
+     "end": 6.58,
+     "p": 1.0
+    },
+    {
+     "w": "asker",
+     "start": 6.58,
+     "end": 7.02,
+     "p": 1.0
+    },
+    {
+     "w": "karanlıkta",
+     "start": 7.02,
+     "end": 7.56,
+     "p": 1.0
+    },
+    {
+     "w": "titriyor.",
+     "start": 7.56,
+     "end": 7.98,
+     "p": 0.999
+    },
+    {
+     "w": "Sonra",
+     "start": 8.36,
+     "end": 9.28,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 9.28,
+     "end": 10.14,
+     "p": 0.999
+    },
+    {
+     "w": "şey",
+     "start": 10.14,
+     "end": 10.4,
+     "p": 0.998
+    },
+    {
+     "w": "susuyor.",
+     "start": 10.4,
+     "end": 10.84,
+     "p": 1.0
+    },
+    {
+     "w": "Kuşlar",
+     "start": 11.2,
+     "end": 12.12,
+     "p": 1.0
+    },
+    {
+     "w": "bile.",
+     "start": 12.12,
+     "end": 12.3,
+     "p": 1.0
+    },
+    {
+     "w": "Ve",
+     "start": 12.5,
+     "end": 13.34,
+     "p": 0.992
+    },
+    {
+     "w": "bir",
+     "start": 13.34,
+     "end": 13.46,
+     "p": 1.0
+    },
+    {
+     "w": "gürleme.",
+     "start": 13.46,
+     "end": 13.82,
+     "p": 0.897
+    },
+    {
+     "w": "Yer",
+     "start": 14.04,
+     "end": 14.92,
+     "p": 1.0
+    },
+    {
+     "w": "sarsılıyor.",
+     "start": 14.92,
+     "end": 15.5,
+     "p": 1.0
+    },
+    {
+     "w": "Yarım",
+     "start": 15.64,
+     "end": 16.26,
+     "p": 0.999
+    },
+    {
+     "w": "tonluk",
+     "start": 16.26,
+     "end": 16.72,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 16.72,
+     "end": 16.88,
+     "p": 1.0
+    },
+    {
+     "w": "taş",
+     "start": 16.88,
+     "end": 17.18,
+     "p": 1.0
+    },
+    {
+     "w": "gülle",
+     "start": 17.18,
+     "end": 17.54,
+     "p": 0.985
+    },
+    {
+     "w": "surlara",
+     "start": 17.54,
+     "end": 18.5,
+     "p": 0.999
+    },
+    {
+     "w": "çarpıyor.",
+     "start": 18.5,
+     "end": 18.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 19.96,
+   "end": 23.56,
+   "text": "Toz bulutunun içinde Osmanlı ordusu görünüyor.",
+   "kelimeler": [
+    {
+     "w": "Toz",
+     "start": 19.82,
+     "end": 20.18,
+     "p": 0.975
+    },
+    {
+     "w": "bulutunun",
+     "start": 20.18,
+     "end": 20.52,
+     "p": 0.991
+    },
+    {
+     "w": "içinde",
+     "start": 20.52,
+     "end": 20.78,
+     "p": 0.998
+    },
+    {
+     "w": "Osmanlı",
+     "start": 20.78,
+     "end": 21.9,
+     "p": 0.997
+    },
+    {
+     "w": "ordusu",
+     "start": 21.9,
+     "end": 22.52,
+     "p": 0.999
+    },
+    {
+     "w": "görünüyor.",
+     "start": 22.52,
+     "end": 23.56,
+     "p": 0.993
+    }
+   ]
+  },
+  {
+   "start": 24.08,
+   "end": 27.52,
+   "text": "Başında 21 yaşında bir sultan, Mehmet.",
+   "kelimeler": [
+    {
+     "w": "Başında",
+     "start": 24.08,
+     "end": 24.8,
+     "p": 0.999
+    },
+    {
+     "w": "21",
+     "start": 24.8,
+     "end": 25.16,
+     "p": 0.967
+    },
+    {
+     "w": "yaşında",
+     "start": 25.16,
+     "end": 25.66,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 25.66,
+     "end": 25.88,
+     "p": 1.0
+    },
+    {
+     "w": "sultan,",
+     "start": 25.88,
+     "end": 26.28,
+     "p": 0.97
+    },
+    {
+     "w": "Mehmet.",
+     "start": 26.46,
+     "end": 27.52,
+     "p": 0.937
+    }
+   ]
+  },
+  {
+   "start": 28.5,
+   "end": 30.4,
+   "text": "O topu döken adam şimdi topun yanında.",
+   "kelimeler": [
+    {
+     "w": "O",
+     "start": 28.16,
+     "end": 28.52,
+     "p": 0.999
+    },
+    {
+     "w": "topu",
+     "start": 28.52,
+     "end": 28.78,
+     "p": 1.0
+    },
+    {
+     "w": "döken",
+     "start": 28.78,
+     "end": 29.06,
+     "p": 0.999
+    },
+    {
+     "w": "adam",
+     "start": 29.06,
+     "end": 29.3,
+     "p": 1.0
+    },
+    {
+     "w": "şimdi",
+     "start": 29.3,
+     "end": 29.68,
+     "p": 0.984
+    },
+    {
+     "w": "topun",
+     "start": 29.68,
+     "end": 30.08,
+     "p": 0.999
+    },
+    {
+     "w": "yanında.",
+     "start": 30.08,
+     "end": 30.4,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 31.14,
+   "end": 34.22,
+   "text": "Urban bir yıl önce Bizans'a çalışmak istemişti.",
+   "kelimeler": [
+    {
+     "w": "Urban",
+     "start": 30.96,
+     "end": 31.32,
+     "p": 0.922
+    },
+    {
+     "w": "bir",
+     "start": 31.32,
+     "end": 31.94,
+     "p": 0.649
+    },
+    {
+     "w": "yıl",
+     "start": 31.94,
+     "end": 32.16,
+     "p": 1.0
+    },
+    {
+     "w": "önce",
+     "start": 32.16,
+     "end": 32.4,
+     "p": 1.0
+    },
+    {
+     "w": "Bizans",
+     "start": 32.4,
+     "end": 33.2,
+     "p": 0.991
+    },
+    {
+     "w": "'a",
+     "start": 33.2,
+     "end": 33.34,
+     "p": 0.948
+    },
+    {
+     "w": "çalışmak",
+     "start": 33.34,
+     "end": 33.74,
+     "p": 1.0
+    },
+    {
+     "w": "istemişti.",
+     "start": 33.74,
+     "end": 34.22,
+     "p": 0.997
+    }
+   ]
+  },
+  {
+   "start": 34.36,
+   "end": 37.5,
+   "text": "Ama imparator küçük maaşını bile ödeyemedi.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 34.36,
+     "end": 35.08,
+     "p": 1.0
+    },
+    {
+     "w": "imparator",
+     "start": 35.08,
+     "end": 35.58,
+     "p": 0.973
+    },
+    {
+     "w": "küçük",
+     "start": 35.58,
+     "end": 36.26,
+     "p": 0.996
+    },
+    {
+     "w": "maaşını",
+     "start": 36.26,
+     "end": 36.78,
+     "p": 1.0
+    },
+    {
+     "w": "bile",
+     "start": 36.78,
+     "end": 36.92,
+     "p": 1.0
+    },
+    {
+     "w": "ödeyemedi.",
+     "start": 36.92,
+     "end": 37.5,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 37.62,
+   "end": 38.98,
+   "text": "Urban da sultana gitti.",
+   "kelimeler": [
+    {
+     "w": "Urban",
+     "start": 37.62,
+     "end": 38.26,
+     "p": 0.999
+    },
+    {
+     "w": "da",
+     "start": 38.26,
+     "end": 38.44,
+     "p": 0.999
+    },
+    {
+     "w": "sultana",
+     "start": 38.44,
+     "end": 38.8,
+     "p": 0.999
+    },
+    {
+     "w": "gitti.",
+     "start": 38.8,
+     "end": 38.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 39.5,
+   "end": 43.04,
+   "text": "Sultan bu surları yıkacak bir top dökebilir mi diye sordu.",
+   "kelimeler": [
+    {
+     "w": "Sultan",
+     "start": 39.5,
+     "end": 40.22,
+     "p": 0.997
+    },
+    {
+     "w": "bu",
+     "start": 40.22,
+     "end": 40.84,
+     "p": 0.645
+    },
+    {
+     "w": "surları",
+     "start": 40.84,
+     "end": 41.18,
+     "p": 0.997
+    },
+    {
+     "w": "yıkacak",
+     "start": 41.18,
+     "end": 41.46,
+     "p": 0.996
+    },
+    {
+     "w": "bir",
+     "start": 41.46,
+     "end": 41.66,
+     "p": 1.0
+    },
+    {
+     "w": "top",
+     "start": 41.66,
+     "end": 41.88,
+     "p": 1.0
+    },
+    {
+     "w": "dökebilir",
+     "start": 41.88,
+     "end": 42.32,
+     "p": 1.0
+    },
+    {
+     "w": "mi",
+     "start": 42.32,
+     "end": 42.52,
+     "p": 1.0
+    },
+    {
+     "w": "diye",
+     "start": 42.52,
+     "end": 42.68,
+     "p": 0.983
+    },
+    {
+     "w": "sordu.",
+     "start": 42.68,
+     "end": 43.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 44.02,
+   "end": 48.0,
+   "text": "Urban topumun taşları Babel'in surlarını bile toz eder.",
+   "kelimeler": [
+    {
+     "w": "Urban",
+     "start": 43.84,
+     "end": 44.2,
+     "p": 0.997
+    },
+    {
+     "w": "topumun",
+     "start": 44.2,
+     "end": 45.48,
+     "p": 0.905
+    },
+    {
+     "w": "taşları",
+     "start": 45.48,
+     "end": 46.04,
+     "p": 1.0
+    },
+    {
+     "w": "Babel",
+     "start": 46.04,
+     "end": 46.84,
+     "p": 0.766
+    },
+    {
+     "w": "'in",
+     "start": 46.84,
+     "end": 46.96,
+     "p": 1.0
+    },
+    {
+     "w": "surlarını",
+     "start": 46.96,
+     "end": 47.38,
+     "p": 0.999
+    },
+    {
+     "w": "bile",
+     "start": 47.38,
+     "end": 47.58,
+     "p": 1.0
+    },
+    {
+     "w": "toz",
+     "start": 47.58,
+     "end": 47.92,
+     "p": 1.0
+    },
+    {
+     "w": "eder.",
+     "start": 47.92,
+     "end": 48.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 48.98,
+   "end": 55.76,
+   "text": "Dedi. Haftalar geçiyor. Gündüz gülleler, gece Bizanslılar yıkılan yerleri elleriyle örüyor.",
+   "kelimeler": [
+    {
+     "w": "Dedi.",
+     "start": 48.98,
+     "end": 49.4,
+     "p": 0.758
+    },
+    {
+     "w": "Haftalar",
+     "start": 49.7,
+     "end": 50.48,
+     "p": 0.993
+    },
+    {
+     "w": "geçiyor.",
+     "start": 50.48,
+     "end": 50.98,
+     "p": 0.989
+    },
+    {
+     "w": "Gündüz",
+     "start": 51.2,
+     "end": 51.98,
+     "p": 1.0
+    },
+    {
+     "w": "gülleler,",
+     "start": 51.98,
+     "end": 52.32,
+     "p": 0.936
+    },
+    {
+     "w": "gece",
+     "start": 52.48,
+     "end": 53.02,
+     "p": 0.997
+    },
+    {
+     "w": "Bizanslılar",
+     "start": 53.02,
+     "end": 53.7,
+     "p": 0.984
+    },
+    {
+     "w": "yıkılan",
+     "start": 53.7,
+     "end": 54.0,
+     "p": 0.999
+    },
+    {
+     "w": "yerleri",
+     "start": 54.0,
+     "end": 54.8,
+     "p": 0.999
+    },
+    {
+     "w": "elleriyle",
+     "start": 54.8,
+     "end": 55.5,
+     "p": 0.999
+    },
+    {
+     "w": "örüyor.",
+     "start": 55.5,
+     "end": 55.76,
+     "p": 0.995
+    }
+   ]
+  },
+  {
+   "start": 56.7,
+   "end": 60.84,
+   "text": "Bir gece Osmanlı gemileri karadan yürütüp Haliç'e indiriyor.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 56.37,
+     "end": 56.76,
+     "p": 1.0
+    },
+    {
+     "w": "gece",
+     "start": 56.76,
+     "end": 57.0,
+     "p": 1.0
+    },
+    {
+     "w": "Osmanlı",
+     "start": 57.0,
+     "end": 57.78,
+     "p": 0.999
+    },
+    {
+     "w": "gemileri",
+     "start": 57.78,
+     "end": 58.12,
+     "p": 1.0
+    },
+    {
+     "w": "karadan",
+     "start": 58.12,
+     "end": 58.92,
+     "p": 0.998
+    },
+    {
+     "w": "yürütüp",
+     "start": 58.92,
+     "end": 59.46,
+     "p": 1.0
+    },
+    {
+     "w": "Haliç",
+     "start": 59.46,
+     "end": 60.48,
+     "p": 0.942
+    },
+    {
+     "w": "'e",
+     "start": 60.48,
+     "end": 60.5,
+     "p": 1.0
+    },
+    {
+     "w": "indiriyor.",
+     "start": 60.5,
+     "end": 60.84,
+     "p": 0.97
+    }
+   ]
+  },
+  {
+   "start": 61.9,
+   "end": 64.04,
+   "text": "Sultan son bir teklif gönderiyor.",
+   "kelimeler": [
+    {
+     "w": "Sultan",
+     "start": 61.75,
+     "end": 62.14,
+     "p": 0.999
+    },
+    {
+     "w": "son",
+     "start": 62.14,
+     "end": 62.7,
+     "p": 0.985
+    },
+    {
+     "w": "bir",
+     "start": 62.7,
+     "end": 63.06,
+     "p": 1.0
+    },
+    {
+     "w": "teklif",
+     "start": 63.06,
+     "end": 63.54,
+     "p": 1.0
+    },
+    {
+     "w": "gönderiyor.",
+     "start": 63.54,
+     "end": 64.04,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 64.8,
+   "end": 67.08,
+   "text": "Teslim olun, canınızı bağışlansın.",
+   "kelimeler": [
+    {
+     "w": "Teslim",
+     "start": 64.67,
+     "end": 65.06,
+     "p": 0.989
+    },
+    {
+     "w": "olun,",
+     "start": 65.06,
+     "end": 65.26,
+     "p": 1.0
+    },
+    {
+     "w": "canınızı",
+     "start": 65.42,
+     "end": 66.36,
+     "p": 0.874
+    },
+    {
+     "w": "bağışlansın.",
+     "start": 66.36,
+     "end": 67.08,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 68.22,
+   "end": 70.76,
+   "text": "Teslim olun, canınız bağışlansın.",
+   "kelimeler": [
+    {
+     "w": "Teslim",
+     "start": 68.22,
+     "end": 69.0,
+     "p": 0.971
+    },
+    {
+     "w": "olun,",
+     "start": 69.0,
+     "end": 69.2,
+     "p": 1.0
+    },
+    {
+     "w": "canınız",
+     "start": 69.34,
+     "end": 69.96,
+     "p": 1.0
+    },
+    {
+     "w": "bağışlansın.",
+     "start": 69.96,
+     "end": 70.76,
+     "p": 0.964
+    }
+   ]
+  },
+  {
+   "start": 71.08,
+   "end": 77.26,
+   "text": "Konstantin'in cevabı, şehri teslim etmek ne benim elimde ne de burada yaşayan hiç kimsenin.",
+   "kelimeler": [
+    {
+     "w": "Konstantin",
+     "start": 71.08,
+     "end": 71.86,
+     "p": 0.907
+    },
+    {
+     "w": "'in",
+     "start": 71.86,
+     "end": 71.96,
+     "p": 0.686
+    },
+    {
+     "w": "cevabı,",
+     "start": 71.96,
+     "end": 72.62,
+     "p": 1.0
+    },
+    {
+     "w": "şehri",
+     "start": 72.64,
+     "end": 73.46,
+     "p": 0.956
+    },
+    {
+     "w": "teslim",
+     "start": 73.46,
+     "end": 73.74,
+     "p": 1.0
+    },
+    {
+     "w": "etmek",
+     "start": 73.74,
+     "end": 74.0,
+     "p": 1.0
+    },
+    {
+     "w": "ne",
+     "start": 74.0,
+     "end": 74.4,
+     "p": 0.995
+    },
+    {
+     "w": "benim",
+     "start": 74.4,
+     "end": 74.7,
+     "p": 1.0
+    },
+    {
+     "w": "elimde",
+     "start": 74.7,
+     "end": 75.08,
+     "p": 1.0
+    },
+    {
+     "w": "ne",
+     "start": 75.08,
+     "end": 75.4,
+     "p": 0.998
+    },
+    {
+     "w": "de",
+     "start": 75.4,
+     "end": 75.5,
+     "p": 1.0
+    },
+    {
+     "w": "burada",
+     "start": 75.5,
+     "end": 75.7,
+     "p": 1.0
+    },
+    {
+     "w": "yaşayan",
+     "start": 75.7,
+     "end": 76.2,
+     "p": 1.0
+    },
+    {
+     "w": "hiç",
+     "start": 76.2,
+     "end": 76.68,
+     "p": 0.994
+    },
+    {
+     "w": "kimsenin.",
+     "start": 76.68,
+     "end": 77.26,
+     "p": 0.995
+    }
+   ]
+  },
+  {
+   "start": 78.06,
+   "end": 80.18,
+   "text": "Hepimiz kendi isteğimizle ölmeye hazırız.",
+   "kelimeler": [
+    {
+     "w": "Hepimiz",
+     "start": 77.9,
+     "end": 78.38,
+     "p": 0.945
+    },
+    {
+     "w": "kendi",
+     "start": 78.38,
+     "end": 78.64,
+     "p": 0.983
+    },
+    {
+     "w": "isteğimizle",
+     "start": 78.64,
+     "end": 79.36,
+     "p": 0.999
+    },
+    {
+     "w": "ölmeye",
+     "start": 79.36,
+     "end": 79.66,
+     "p": 0.996
+    },
+    {
+     "w": "hazırız.",
+     "start": 79.66,
+     "end": 80.18,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 81.26,
+   "end": 84.08,
+   "text": "28 Mayıs gecesi Ayasofya'da son ayin.",
+   "kelimeler": [
+    {
+     "w": "28",
+     "start": 80.94,
+     "end": 81.42,
+     "p": 0.986
+    },
+    {
+     "w": "Mayıs",
+     "start": 81.42,
+     "end": 81.98,
+     "p": 0.998
+    },
+    {
+     "w": "gecesi",
+     "start": 81.98,
+     "end": 82.52,
+     "p": 0.993
+    },
+    {
+     "w": "Ayasofya'da",
+     "start": 82.52,
+     "end": 83.2,
+     "p": 0.996
+    },
+    {
+     "w": "son",
+     "start": 83.2,
+     "end": 83.38,
+     "p": 0.999
+    },
+    {
+     "w": "ayin.",
+     "start": 83.38,
+     "end": 84.08,
+     "p": 0.962
+    }
+   ]
+  },
+  {
+   "start": 84.9,
+   "end": 86.34,
+   "text": "İnsanlar ağlayarak dua ediyor.",
+   "kelimeler": [
+    {
+     "w": "İnsanlar",
+     "start": 84.84,
+     "end": 85.32,
+     "p": 0.998
+    },
+    {
+     "w": "ağlayarak",
+     "start": 85.32,
+     "end": 85.78,
+     "p": 0.999
+    },
+    {
+     "w": "dua",
+     "start": 85.78,
+     "end": 86.02,
+     "p": 1.0
+    },
+    {
+     "w": "ediyor.",
+     "start": 86.02,
+     "end": 86.34,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 88.16,
+   "end": 89.72,
+   "text": "Gece yarısı davullar başlıyor.",
+   "kelimeler": [
+    {
+     "w": "Gece",
+     "start": 87.86,
+     "end": 88.34,
+     "p": 0.999
+    },
+    {
+     "w": "yarısı",
+     "start": 88.34,
+     "end": 88.62,
+     "p": 1.0
+    },
+    {
+     "w": "davullar",
+     "start": 88.62,
+     "end": 89.26,
+     "p": 0.998
+    },
+    {
+     "w": "başlıyor.",
+     "start": 89.26,
+     "end": 89.72,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 90.96,
+   "end": 92.76,
+   "text": "Kilise çanları karşılık veriyor.",
+   "kelimeler": [
+    {
+     "w": "Kilise",
+     "start": 90.74,
+     "end": 91.22,
+     "p": 0.999
+    },
+    {
+     "w": "çanları",
+     "start": 91.22,
+     "end": 91.64,
+     "p": 0.998
+    },
+    {
+     "w": "karşılık",
+     "start": 91.64,
+     "end": 92.44,
+     "p": 1.0
+    },
+    {
+     "w": "veriyor.",
+     "start": 92.44,
+     "end": 92.76,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 92.86,
+   "end": 93.94,
+   "text": "Son saldırı.",
+   "kelimeler": [
+    {
+     "w": "Son",
+     "start": 92.86,
+     "end": 93.32,
+     "p": 0.995
+    },
+    {
+     "w": "saldırı.",
+     "start": 93.32,
+     "end": 93.94,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 95.4,
+   "end": 98.56,
+   "text": "29 Mayıs sabahı surlularda Osmanlı sancağı dalgalanıyor.",
+   "kelimeler": [
+    {
+     "w": "29",
+     "start": 95.1,
+     "end": 95.58,
+     "p": 0.998
+    },
+    {
+     "w": "Mayıs",
+     "start": 95.58,
+     "end": 96.08,
+     "p": 1.0
+    },
+    {
+     "w": "sabahı",
+     "start": 96.08,
+     "end": 96.42,
+     "p": 0.996
+    },
+    {
+     "w": "surlularda",
+     "start": 96.42,
+     "end": 97.06,
+     "p": 0.816
+    },
+    {
+     "w": "Osmanlı",
+     "start": 97.06,
+     "end": 97.58,
+     "p": 1.0
+    },
+    {
+     "w": "sancağı",
+     "start": 97.58,
+     "end": 97.98,
+     "p": 0.998
+    },
+    {
+     "w": "dalgalanıyor.",
+     "start": 97.98,
+     "end": 98.56,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 98.78,
+   "end": 104.4,
+   "text": "Anlatılanlara göre son imparator savaşarak ölüyor.",
+   "kelimeler": [
+    {
+     "w": "Anlatılanlara",
+     "start": 98.78,
+     "end": 99.66,
+     "p": 0.999
+    },
+    {
+     "w": "göre",
+     "start": 99.66,
+     "end": 99.9,
+     "p": 1.0
+    },
+    {
+     "w": "son",
+     "start": 99.9,
+     "end": 100.2,
+     "p": 0.994
+    },
+    {
+     "w": "imparator",
+     "start": 100.2,
+     "end": 100.78,
+     "p": 0.996
+    },
+    {
+     "w": "savaşarak",
+     "start": 100.78,
+     "end": 104.04,
+     "p": 0.995
+    },
+    {
+     "w": "ölüyor.",
+     "start": 104.04,
+     "end": 104.4,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 106.28,
+   "end": 109.46,
+   "text": "Genç sultan harap sarayda bir beyt mırıldanıyor",
+   "kelimeler": [
+    {
+     "w": "Genç",
+     "start": 106.28,
+     "end": 107.12,
+     "p": 0.946
+    },
+    {
+     "w": "sultan",
+     "start": 107.12,
+     "end": 107.46,
+     "p": 0.832
+    },
+    {
+     "w": "harap",
+     "start": 107.46,
+     "end": 108.16,
+     "p": 0.898
+    },
+    {
+     "w": "sarayda",
+     "start": 108.16,
+     "end": 108.5,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 108.5,
+     "end": 108.68,
+     "p": 0.997
+    },
+    {
+     "w": "beyt",
+     "start": 108.68,
+     "end": 108.92,
+     "p": 0.9
+    },
+    {
+     "w": "mırıldanıyor",
+     "start": 108.92,
+     "end": 109.46,
+     "p": 0.983
+    }
+   ]
+  },
+  {
+   "start": 110.74,
+   "end": 113.74,
+   "text": "Kayseri'nin sarayında perdeyi örümcek tutuyor",
+   "kelimeler": [
+    {
+     "w": "Kayseri",
+     "start": 110.74,
+     "end": 111.58,
+     "p": 0.458
+    },
+    {
+     "w": "'nin",
+     "start": 111.58,
+     "end": 111.7,
+     "p": 0.979
+    },
+    {
+     "w": "sarayında",
+     "start": 111.7,
+     "end": 112.14,
+     "p": 0.997
+    },
+    {
+     "w": "perdeyi",
+     "start": 112.14,
+     "end": 112.92,
+     "p": 0.98
+    },
+    {
+     "w": "örümcek",
+     "start": 112.92,
+     "end": 113.38,
+     "p": 0.998
+    },
+    {
+     "w": "tutuyor",
+     "start": 113.38,
+     "end": 113.74,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 113.74,
+   "end": 117.3,
+   "text": "Ve her şey o sabahki gürlemeye başladı",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 113.74,
+     "end": 114.88,
+     "p": 0.705
+    },
+    {
+     "w": "her",
+     "start": 114.88,
+     "end": 115.14,
+     "p": 0.998
+    },
+    {
+     "w": "şey",
+     "start": 115.14,
+     "end": 115.42,
+     "p": 0.984
+    },
+    {
+     "w": "o",
+     "start": 115.42,
+     "end": 115.78,
+     "p": 0.99
+    },
+    {
+     "w": "sabahki",
+     "start": 115.78,
+     "end": 116.26,
+     "p": 0.98
+    },
+    {
+     "w": "gürlemeye",
+     "start": 116.26,
+     "end": 116.78,
+     "p": 0.939
+    },
+    {
+     "w": "başladı",
+     "start": 116.78,
+     "end": 117.3,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 117.3,
+   "end": 120.96,
+   "text": "Ve her şey o sabahki gürleme ile başladı",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 117.3,
+     "end": 118.76,
+     "p": 0.219
+    },
+    {
+     "w": "her",
+     "start": 118.76,
+     "end": 118.98,
+     "p": 0.999
+    },
+    {
+     "w": "şey",
+     "start": 118.98,
+     "end": 119.26,
+     "p": 1.0
+    },
+    {
+     "w": "o",
+     "start": 119.26,
+     "end": 119.48,
+     "p": 0.999
+    },
+    {
+     "w": "sabahki",
+     "start": 119.48,
+     "end": 119.94,
+     "p": 1.0
+    },
+    {
+     "w": "gürleme",
+     "start": 119.94,
+     "end": 120.36,
+     "p": 0.993
+    },
+    {
+     "w": "ile",
+     "start": 120.36,
+     "end": 120.54,
+     "p": 0.78
+    },
+    {
+     "w": "başladı",
+     "start": 120.54,
+     "end": 120.96,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 120.96,
+   "end": 123.58,
+   "text": "Belki de ödenmemiş bir maaşla",
+   "kelimeler": [
+    {
+     "w": "Belki",
+     "start": 120.96,
+     "end": 122.3,
+     "p": 0.986
+    },
+    {
+     "w": "de",
+     "start": 122.3,
+     "end": 122.4,
+     "p": 0.999
+    },
+    {
+     "w": "ödenmemiş",
+     "start": 122.4,
+     "end": 122.98,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 122.98,
+     "end": 123.1,
+     "p": 1.0
+    },
+    {
+     "w": "maaşla",
+     "start": 123.1,
+     "end": 123.58,
+     "p": 0.999
+    }
+   ]
+  }
+ ]
+}
