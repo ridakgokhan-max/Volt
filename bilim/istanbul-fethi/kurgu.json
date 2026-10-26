@@ -127,6 +127,10 @@
   [
    100.11,
    0.02
+  ],
+  [
+   14.11,
+   0.7
   ]
  ],
  "seri": {
@@ -142,7 +146,7 @@
   {
    "tur": "takip",
    "son": true,
-   "ofset": -1.4
+   "ofset": -0.85
   }
  ],
  "cta_kostum": "kasif",
@@ -172,10 +176,6 @@
    "susuyor",
    -2.5,
    3
-  ],
-  [
-   "gürleme",
-   3.5
   ],
   [
    "sarsılıyor",
@@ -281,7 +281,7 @@
   "isteğimizle ölmeye",
   "kendi isteğimizle"
  ],
- "muzik_ses": 0.55,
+ "muzik_ses": 0.85,
  "sc_ratio": 2.5,
  "sc_threshold": 0.05,
  "sc_release": 600,
@@ -394,7 +394,7 @@
   "surları"
  ],
  "ses_hp": 90,
- "efekt_ses": 0.95,
+ "efekt_ses": 1.0,
  "iki_gecis": true,
  "acilis": {
   "sahne": "gurleme",
@@ -406,5 +406,7 @@
   "yazi": "BU TOPU BİZANS DA ALABİLİRDİ",
   "alt": "ama bir maaşı ödemedi",
   "sure": 1.6
- }
+ },
+ "efekt_hp": 40,
+ "efekt_sabit": 0.55
 }

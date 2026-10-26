@@ -116,29 +116,29 @@ def muzik(B, sure, ara):
     Y(t_haf - 0.1, t_gem + 0.3, DAVUL[int(20 * SR):], 0.4, fi=0.6, fo=0.8)
     Y(t_haf - 0.1, t_gem + 0.4, ORK[int(26 * SR):], 0.45, fi=0.8, fo=0.8)
     # 6) gemiler: gece, gıcırtı, rüzgâr
-    Y(t_gem, t_tek + 0.3, DRONE[int(12 * SR):], 0.3, fi=0.8, fo=0.6)
+    Y(t_gem, t_tek + 0.3, DRONE[int(12 * SR):], 0.5, fi=0.8, fo=0.6)
     Y(t_gem, t_tek + 0.3, GICIR, 0.32, fi=0.6, fo=0.6)
     Y(t_gem, t_tek + 0.3, RUZ, 0.1, fi=0.6, fo=0.6)
     # 7) teklif: gerilim (rüzgârlı bayraklar)
     Y(t_tek, t_kon + 0.2, RUZ[int(8 * SR):], 0.24, fi=0.6, fo=0.5)
     Y(t_tek, t_kon + 0.3, SUB, 0.22, fi=0.8, fo=0.6)
     # 8) Konstantin'in cevabı: koro + alçak orkestra
-    Y(t_kon - 0.2, t_28 + 0.2, KORO7[int(14 * SR):], 0.34, fi=1.0, fo=1.2)
-    Y(t_kon - 0.2, t_28 + 0.2, ORK[int(50 * SR):], 0.26, fi=1.5, fo=1.2)
+    Y(t_kon - 0.2, t_28 + 0.7, KORO7[int(14 * SR):], 0.6, fi=1.0, fo=0.8)
+    Y(t_kon - 0.2, t_28 + 0.7, ORK[int(50 * SR):], 0.5, fi=1.5, fo=0.8)
     # 9) Ayasofya: hüzünlü koro + uzak çan
-    Y(t_28 - 0.4, t_dav + 0.1, KORO_F, 0.4, fi=1.0, fo=0.4)
-    Y(t_28 - 0.2, t_dav + 0.1, CAN2, 0.22, fi=0.8, fo=0.4)
+    Y(t_28 - 0.9, t_dav + 0.1, KORO_F, 0.45, fi=0.4, fo=0.4)
+    Y(t_28 - 0.7, t_dav + 0.1, CAN2, 0.28, fi=0.2, fo=0.4)
     # 10) son saldırı: davul + çan + savaş çığlığı + orkestra
-    Y(t_dav - 0.05, t_29 - 0.2, DAVUL[int(40 * SR):], 0.75, fi=0.05, fo=0.4)
+    Y(t_dav - 0.05, t_29 - 0.2, DAVUL[int(40 * SR):], 0.95, fi=0.05, fo=0.4)
     Y(t_kil - 0.05, t_29 - 0.2, CAN, 0.5, fi=0.1, fo=0.4)
-    Y(t_sal - 0.3, t_29 - 0.2, SAVAS, 0.8, fi=0.2, fo=0.4)
-    Y(t_sal + 0.6, t_29 - 0.2, SAVAS2, 0.55, fi=0.4, fo=0.4)
+    Y(t_sal - 0.3, t_29 - 0.2, SAVAS[int(0.85 * SR):], 0.6, fi=0.2, fo=0.4)
+    Y(t_sal + 0.3, t_29 - 0.2, SAVAS2[int(1.0 * SR):], 0.45, fi=0.3, fo=0.4)
     Y(t_dav, t_29 - 0.2, ORK[int(70 * SR):], 0.4, fi=1.2, fo=0.4)
     # 11) 29 Mayıs sabahı: orkestra yükselir, sonra alçalır (anlatılanlara göre…)
-    Y(t_29 - 0.1, t_gen + 0.2, ORK[int(80 * SR):], 0.55, fi=0.8, fo=0.8)
+    Y(t_29 - 0.6, t_gen + 0.2, ORK[int(80 * SR):], 0.95, fi=0.4, fo=0.8)
     Y(t_29, t_gen + 0.2, RUZ[int(20 * SR):], 0.18, fi=1.0, fo=0.8)
     # 12) beyit: boş saray, rüzgâr + tek koro
-    Y(t_gen - 0.2, t_her + 0.3, RUZ, 0.3, fi=0.6, fo=0.5)
+    Y(t_gen - 0.8, t_her + 0.3, RUZ, 0.4, fi=0.5, fo=0.5)
     Y(t_gen - 0.1, t_her + 0.3, KORO_A[int(3 * SR):], 0.25, fi=1.0, fo=0.6)
     # 13) son: açılışın ortamına dönüş (döngü)
     Y(t_her - 0.2, sure, DRONE, 0.3, fi=0.8, fo=1.2)
@@ -156,27 +156,31 @@ def cues(B, S, wt, st, sure, ara):
     t_gur = ara("gürleme")
     t_car = ara("çarpıyor")
     # açılış (geleceğe sıçrama): videonun ilk karesinde top ateşi
-    p(S, 0.0, Y("cannon_fire_853281.mp3"), 1.0)
-    p(S, 0.0, Y("cannon_fire_186930.mp3"), 0.6)
+    p(S, 0.0, Y("cannon_fire_853281.mp3"), 2.0)
+    p(S, 0.0, Y("cannon_fire_186930.mp3"), 2.0)
+    p(S, 0.0, E("patlama"), 2.0)  # orta frekans patlama (telefon hoparlörü)
+    p(S, 0.05, Y("stone_impact_debris_569501.mp3"), 1.2)
     p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(2.6 * SR)] * np.linspace(1, 0, int(2.6 * SR)), 0.9)
     p(S, 0.0, B.boom(f=48, d=1.4), 0.8)  # 40–70 Hz gövde
     p(S, 2.15, Y("war_drums_468903.mp3"), 0.4)  # bölüm kartı girişine davul (sessiz delik kalmasın)
     # fitil cızırtısı: "Sonra"dan gürlemeye kadar (sessizlikte tek ses o)
     p(S, t_son - 0.2, _cizirti(B, t_gur - t_son + 0.15), 0.16)
-    p(S, t_kus + 0.75, E("kalp"), 0.4)  # sessizlikte tek kalp atışı
+    p(S, t_kus + 1.2, E("kalp"), 0.6)  # sessizlikte tek kalp atışı ("bile."den sonra)
     for k in range(3):
-        p(S, t_kus + k * 0.12, E("kumas"), 0.22)  # kuşların kanat çırpışı
+        p(S, t_kus + 0.75 + k * 0.12, E("kumas"), 0.22)  # kuşların kanat çırpışı
     # GÜRLEME: katmanlı top sesi
-    p(S, t_gur - 0.04, Y("cannon_fire_853281.mp3"), 1.0)
+    p(S, t_gur - 0.04, Y("cannon_fire_853281.mp3"), 2.0)
+    p(S, t_gur - 0.02, E("patlama"), 1.2)
     p(S, t_gur - 0.02, Y("low_boom_cinematic_856174.mp3"), 0.85)
-    p(S, t_gur, Y("cannon_fire_186930.mp3"), 0.55)
+    p(S, t_gur, Y("cannon_fire_186930.mp3"), 2.0)  # orta frekans çatlama: telefonda duyulsun
     p(S, t_gur + 0.35, B.whoosh(max(1.0, t_car - t_gur - 0.3)), 0.25)  # ağır çekim gülle
     # ÇARPMA
     p(S, t_car - 0.03, E("darbe_agir"), 0.8)
     p(S, t_car, B.boom(f=55, d=1.0), 0.85)  # yarım tonluk gülle: tok gövde
-    p(S, t_car, Y("stone_impact_debris_569501.mp3"), 0.75)
+    p(S, t_car, Y("stone_impact_debris_569501.mp3"), 1.6)
+    p(S, t_car, E("patlama"), 0.9)
     p(S, t_car + 0.08, Y("stone_impact_debris_569506.mp3"), 0.6)
-    p(S, t_car + 0.2, Y("rubble_falling_462690.mp3"), 0.55)
+    p(S, t_car + 0.15, Y("rubble_falling_462690.mp3", 0.85), 0.7)
     p(S, t_car, E("vurus"), 0.5)
     # ordu / isimler
     p(S, ara("mehmed") - 0.05, Y("war_drums_468903.mp3"), 0.45)
@@ -192,8 +196,11 @@ def cues(B, S, wt, st, sure, ara):
     t_urb = ara("urban", sonra=ara("ödeyemedi"))
     for k in range(5):
         p(S, t_urb + 0.1 + k * 0.33, E("adim"), 0.22)
-    p(S, ara("toz", sonra=ara("babil'in")), Y("rubble_falling_462690.mp3"), 0.35)
-    p(S, ara("toz", sonra=ara("babil'in")), Y("low_boom_cinematic_263895.mp3"), 0.4)
+    t_toz = ara("toz", sonra=ara("babil'in"))
+    p(S, t_toz, Y("rubble_falling_462690.mp3", 0.85), 0.4)
+    lb0 = Y("low_boom_cinematic_856174.mp3")[: int(1.2 * SR)]
+    lb0[-int(0.6 * SR):] *= np.linspace(1, 0, int(0.6 * SR))
+    p(S, t_toz, lb0, 0.45)
     # haftalar: uzak top atışları
     t_haf = ara("haftalar")
     p(S, t_haf - 0.3, B.whoosh(0.5), 0.3)
@@ -208,9 +215,14 @@ def cues(B, S, wt, st, sure, ara):
     p(S, ara("kilise") - 0.05, E("metal_agir"), 0.4)
     t_sal = ara("saldırı")
     p(S, t_sal, E("patlama"), 0.5)
-    sv = Y("battle_crowd_764046.mp3")[: int(1.9 * SR)]
-    sv[-int(0.5 * SR):] *= np.linspace(1, 0, int(0.5 * SR))
-    p(S, t_sal + 0.55, sv, 0.45)  # savaş çığlığı: konuşma bittikten sonra öne çıkar
+    t_29s = ara("29")
+    uz = max(1.0, t_29s - t_sal - 0.2)
+    sv = Y("battle_crowd_764046.mp3", 0.85)[: int(uz * SR)]
+    sv[-int(0.4 * SR):] *= np.linspace(1, 0, int(0.4 * SR))
+    p(S, t_sal + 0.15, sv, 0.75)  # savaş çığlığı (efekt kanalında, kısılmaz): doruk
+    sv2 = Y("battle_crowd_764047.mp3", 1.0)[: int(uz * SR)]
+    sv2[-int(0.4 * SR):] *= np.linspace(1, 0, int(0.4 * SR))
+    p(S, t_sal + 0.4, sv2, 0.5)
     for k, ad in enumerate(["sword_clash_326787.mp3", "sword_clash_326795.mp3", "sword_clash_326841.mp3", "sword_clash_326862.mp3"]):
         p(S, t_sal + 0.75 + k * 0.38, Y(ad), 0.32)
     # 29 Mayıs
@@ -221,13 +233,11 @@ def cues(B, S, wt, st, sure, ara):
     p(S, ara("örümcek"), E("sihir"), 0.18)
     # son: uzak top yankısı + sikke
     t_g2 = ara("gürleme", sonra=ara("genç"))
-    p(S, t_g2, Y("cannon_blast_distant_565794.mp3")[: int(2.0 * SR)] * np.linspace(1, 0, int(2.0 * SR)), 0.55)
-    lb = Y("low_boom_cinematic_263895.mp3")[: int(1.2 * SR)]
-    lb[-int(0.6 * SR):] *= np.linspace(1, 0, int(0.6 * SR))
-    p(S, t_g2, lb, 0.3)
+    t_bas = ara("başladı", sonra=t_g2)
+    p(S, t_bas + 0.45, Y("cannon_blast_distant_565794.mp3")[: int(2.0 * SR)] * np.linspace(1, 0, int(2.0 * SR)), 0.7)  # cümleden sonraki boşlukta yankı
     t_m = ara("maaşla")
-    p(S, t_m - 0.02, E("para"), 0.6)
-    p(S, t_m + 0.03, E("metal"), 0.25)
+    p(S, t_m + 0.1, E("para"), 0.6)  # sikke yere değer
+    p(S, t_m + 0.13, E("metal"), 0.25)
     # döngü dikişi: son 0,45 sn'de fitil cızırtısı yükselir → videonun başındaki patlamaya bağlanır
     cz = _cizirti(B, 0.45) * np.linspace(0.2, 1, int(0.45 * SR))
     p(S, sure - 0.47, cz, 0.3)
