@@ -60,11 +60,6 @@
   "toplam": 30,
   "kategori": "Bilim"
  },
- "kanca": {
-  "yazi": "SUÇLU: BIÇAK?",
-  "alt": "Soğan neden ağlatır?",
-  "sure": 2.0
- },
  "cta": [
   {
    "tur": "begen",
@@ -107,7 +102,7 @@
  "sahneler": [
   {
    "id": "giris",
-   "bg": "k:#E2733A",
+   "bg": "k:#b78457",
    "ilk": 0
   },
   {

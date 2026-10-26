@@ -8,6 +8,7 @@ import type { SceneProps } from "../BilimVideo";
 import { ACC, ap, BLUE, cl, ez, GREEN, INK, lerp, RED, sp } from "../kit";
 import { adim, Bant, geri, KolajDefs, KREM, KIRMIZI, Muhur, Serit, yap } from "../kolaj";
 import { Merakli } from "../merakli";
+import { Hap, MasaKamera, MasaZemin, PencereIsigi } from "../masa_kanca";
 import olcu from "../data/sogan-olcu.json";
 
 type S = React.FC<SceneProps>;
@@ -305,32 +306,33 @@ const GozHizasi: React.FC<{ y: number; k: number; t: number }> = ({ y, k, t }) =
 const Giris: S = ({ t, d, ws }) => {
   const ts = ws("suçlu"), tsg = ws("soğan", 1), tb = ws("bıçak");
   const kes = ez(cl(0.55 + t / 0.5));
-  const sabika = ap(t, ts - 0.3, 0.3);
   const ayril = ez(ap(t, ts - 0.2, 0.5));
   return (
     <g>
       <KolajDefs />
-      <Kirpinti t={t} />
-      <Kamera t={t} d={d} z0={1.0} z1={1.1} vurus={[0.45, ts, tb]}>
-        <Sabika t={t} k={sabika} />
-        {/* soğan: ortadan sola geçer */}
-        <g transform={`translate(${lerp(0, -170, ayril)} 0)`}>
+      {/* masa üstü kanca şablonu: ahşap + kesim matı, çapraz pencere ışığı, mesaj hapları */}
+      <MasaKamera t={t}>
+        <MasaZemin t={t} />
+        <g transform={`translate(${lerp(0, -170, ayril)} 60)`}>
           <Suz t={t} a={5}>
-            <Parca t={t} ad="sogan" x={540} y={470} w={400} rot={-4} />
-            <Gozler x={540} y={900} t={t} kizgin={0} mutlu={ap(t, tsg, 0.3)} s={0.9} />
-            {t < tsg ? <Damla x={592} y={950 + ((t * 1.6) % 1) * 120} s={0.8} o={1 - ((t * 1.6) % 1) * 0.7} /> : null}
+            <Parca t={t} ad="sogan" x={540} y={470} w={380} rot={-4} a={-1} />
+            <Gozler x={540} y={880} t={t} kizgin={0} mutlu={ap(t, tsg, 0.3)} s={0.85} />
+            {t < tsg ? <Damla x={590} y={930 + ((t * 1.6) % 1) * 120} s={0.8} o={1 - ((t * 1.6) % 1) * 0.7} /> : null}
           </Suz>
         </g>
-        {/* bıçak: yukarıdan inip keser, sonra sağa çekilir */}
-        <g transform={`translate(${lerp(0, 200, ayril)} ${lerp(-120, 0, kes) + lerp(0, 120, ayril)}) rotate(${lerp(-38, 0, kes) + lerp(0, -22, ayril)} 560 760)`}>
-          <Parca t={t} ad="bicak" x={560} y={560} w={820} rot={-24} />
-          <Bant x={860} y={760} w={130} rot={-30} />
+        <g transform={`translate(${lerp(0, 200, ayril)} ${lerp(-120, 0, kes) + lerp(60, 180, ayril)}) rotate(${lerp(-38, 0, kes) + lerp(0, -22, ayril)} 560 760)`}>
+          <Parca t={t} ad="bicak" x={560} y={560} w={800} rot={-24} a={-1} />
+          <Bant x={850} y={760} w={130} rot={-30} />
         </g>
-        <Fiskir t={t} t0={-0.35} x={560} y={760} n={18} hiz={1.0} s={1.05} />
-        <Fiskir t={t} t0={0.6} x={560} y={760} n={10} hiz={0.8} />
-      </Kamera>
-      <Serit t={t} a={tsg - 0.05} cikis={d - 0.3} text="MASUM" x={360} y={1150} size={60} rot={-4} bg={GREEN} color="#fff" />
-      <Muhur t={t} a={tb - 0.05} text="SUÇLU" x={760} y={980} size={96} rot={-10} />
+        <Fiskir t={t} t0={-0.35} x={560} y={820} n={18} hiz={1.0} s={1.05} />
+        <Fiskir t={t} t0={0.6} x={560} y={820} n={10} hiz={0.8} />
+        <PencereIsigi t={t} />
+      </MasaKamera>
+      {/* mesaj hapları: kırmızı (iddia) 0. karede okunur, beyaz (soru) yazılarak gelir */}
+      <Hap t={t} a={-1} text="SUÇLU: BIÇAK?" y={330} boy={60} />
+      <Hap t={t} a={0.35} text="Soğan neden ağlatır?" y={455} boy={46} renk="#f6f3ec" yazi={INK} cikis={tb - 0.3} />
+      <Serit t={t} a={tsg - 0.05} cikis={d - 0.3} text="MASUM" x={340} y={1150} size={60} rot={-4} bg={GREEN} color="#fff" />
+      <Muhur t={t} a={tb - 0.05} text="SUÇLU" x={760} y={1020} size={96} rot={-10} />
     </g>
   );
 };
