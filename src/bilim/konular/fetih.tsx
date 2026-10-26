@@ -123,6 +123,22 @@ const Kul: React.FC<{ t: number; renk?: string; o?: number; n?: number; yukari?:
   </g>
 );
 
+/** Ekranda yavaşça kayan sis/duman perdeleri — ekran asla durmasın */
+const Sis: React.FC<{ t: number; renk?: string; o?: number; y?: number; hiz?: number }> = ({ t, renk: r = "#cfc6b8", o = 0.18, y = 900, hiz = 45 }) => (
+  <g opacity={o} pointerEvents="none">
+    <defs>
+      <radialGradient id={`sis${r.slice(1)}`}>
+        <stop offset="0" stopColor={r} stopOpacity="0.9" />
+        <stop offset="1" stopColor={r} stopOpacity="0" />
+      </radialGradient>
+    </defs>
+    {Array.from({ length: 6 }).map((_, i) => {
+      const x = ((rnd(i, 1) * 1800 + t * hiz * (0.7 + rnd(i, 2) * 0.6)) % 1800) - 360;
+      return <ellipse key={i} cx={x} cy={y + (rnd(i, 3) - 0.5) * 700 + Math.sin(t * 0.5 + i) * 30} rx={300 + rnd(i, 4) * 200} ry={90 + rnd(i, 5) * 70} fill={`url(#sis${r.slice(1)})`} />;
+    })}
+  </g>
+);
+
 // ---------------------------------------------------------------- ortak yardımcılar
 /** Otağ: Sultan'ın kırmızı-altın çadırı */
 const Otag: React.FC<{ h: number; t: number }> = ({ h, t }) => {
@@ -214,7 +230,7 @@ const Kese: React.FC<{ t: number; a: number; muhur: number; b: number }> = ({ t,
   const ters = easeOut((t - a - 0.4) / 0.6);
   const m = t - muhur;
   return (
-    <g opacity={g} transform={`translate(540 430) scale(${s})`}>
+    <g opacity={g} transform={`translate(800 360) scale(${s * 0.72})`}>
       <g transform={`rotate(${180 * ters})`}>
         <path d="M -90 -40 Q -130 80 0 100 Q 130 80 90 -40 Q 40 -70 0 -60 Q -40 -70 -90 -40 Z" fill="#8a6038" stroke="#3a2614" strokeWidth={6} />
         <path d="M -70 -50 Q 0 -30 70 -50" stroke="#3a2614" strokeWidth={8} fill="none" />
@@ -323,7 +339,7 @@ const Sikke: React.FC<{ t: number; a: number }> = ({ t, a }) => {
 };
 
 // ---------------------------------------------------------------- SAHNELER
-const ACILIS_KAM: [number, number, number, number][] = [[0, 620, 1520, 0.78], [9, 580, 1480, 0.9]];
+const ACILIS_KAM: [number, number, number, number][] = [[0, 620, 1520, 0.78], [8, 540, 1460, 1.02]];
 
 /** 1 · Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. */
 const Acilis: S = ({ t, d, ws }) => {
@@ -337,7 +353,8 @@ const Acilis: S = ({ t, d, ws }) => {
         <Top D={D} />
         <Urban x={200} y={1700} s={1.3} t={t} />
       </DunyaSahne>
-      <Kul t={t} o={0.7} />
+      <Sis t={t} o={0.22} y={1150} hiz={70} renk="#8a7a9a" />
+      <Kul t={t} o={0.85} n={40} />
       <Vinyet g={0.85} />
       <Bolum t={t} a={0.05} ust="NİSAN 1453" alt="KONSTANTİNOPOLİS ÖNLERİ" sure={Math.max(2.4, ws("şafak") + 0.6)} />
     </g>
@@ -479,7 +496,7 @@ const Ani: React.FC<{ t: number; children: React.ReactNode; yil?: boolean; ust?:
     <Gren o={0.28} />
     <Vinyet g={0.95} />
     {ust}
-    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={470} />}
+    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={300} />}
   </g>
 );
 
@@ -490,11 +507,11 @@ const Gecmis: S = ({ t, d, ws }) => {
   const yuru = cl((t - turb) / Math.max(0.6, d - turb));
   const ux = lerp(930, 1060, yuru), uy = lerp(1262, 1600, yuru);
   const kam: Kam = t < turb - 0.05
-    ? { x: lerp(900, 885, cl(t / turb)), y: lerp(1120, 1105, cl(t / turb)), z: lerp(2.3, 2.7, cl(t / turb)) }
+    ? { x: lerp(930, 860, cl(t / turb)), y: lerp(1130, 1095, cl(t / turb)), z: lerp(2.2, 3.0, cl(t / turb)) }
     : { x: lerp(990, 1080, yuru), y: lerp(1330, 1520, yuru), z: lerp(1.9, 2.1, yuru) };
   const D: Dunya = { t, h: 1.7, ates: 0, ordu: 0, konstantin: 1, kartal: 1, sepya: true };
   return (
-    <Ani t={t} yil ust={<Kese t={t} a={tmaas - 0.2} muhur={tode} b={turb - 0.1} />}>
+    <Ani t={t} yil ust={<g><Sis t={t} o={0.3} y={1000} hiz={60} renk="#e8d8b4" /><Kul t={t} o={0.5} n={30} renk="#f0e2c0" yukari={false} /><Kese t={t} a={tmaas - 0.2} muhur={tode} b={turb - 0.1} /></g>}>
       <DunyaSahne D={D} kam={kam}>
         <Otag h={D.h} t={t} />
         <Urban x={ux} y={uy} s={0.75} t={t} yuru={t > turb ? 1 : 0} flip={t < turb} />
@@ -507,11 +524,11 @@ const Gecmis: S = ({ t, d, ws }) => {
 const Soru: S = ({ t, d, ws }) => {
   const tu = sonra(ws, "urban", 1.0), tb = ws("babil'in"), tt = sonra(ws, "toz", 1.0);
   const kam: Kam = t < tu - 0.05
-    ? { x: lerp(1100, 1090, cl(t / tu)), y: lerp(1530, 1515, cl(t / tu)), z: lerp(2.4, 2.75, easeOut(t / tu)) }
+    ? { x: lerp(1130, 1080, cl(t / tu)), y: lerp(1540, 1505, cl(t / tu)), z: lerp(2.3, 3.1, cl(t / tu)) }
     : { x: lerp(960, 900, cl((t - tu) / (d - tu))), y: lerp(1320, 1260, cl((t - tu) / (d - tu))), z: lerp(0.9, 1.0, cl((t - tu) / (d - tu))) };
   const D: Dunya = { t, h: 1.75, ates: 0, ordu: 0, sepya: true };
   return (
-    <Ani t={t} ust={<Babil t={t} a={tb - 0.5} toz={tt} />}>
+    <Ani t={t} ust={<g><Sis t={t} o={0.3} y={1100} hiz={60} renk="#e8d8b4" /><Kul t={t} o={0.5} n={30} renk="#f0e2c0" yukari={false} /><Babil t={t} a={tb - 0.5} toz={tt} /></g>}>
       <DunyaSahne D={D} kam={kam}>
         <Otag h={D.h} t={t} />
         <Sultan x={1010} y={1600} s={0.8} t={t} />
@@ -634,9 +651,9 @@ const Saldiri: S = ({ t, d, ws }) => {
   let kam: Kam;
   if (t < tk - 0.05) kam = { x: 640, y: lerp(1640, 1620, cl(t / tk)), z: lerp(1.25, 1.45, cl(t / tk)) }; // davullar (ordugâh)
   else if (t < ts - 0.3) kam = { ...pk(380, 880, 0.75), z: lerp(2.2, 2.5, cl((t - tk) / (ts - tk))) }; // çan kulesi
-  else kam = { x: 620, y: lerp(1260, 1200, cl((t - ts) / 2)), z: lerp(0.7, 0.85, easeOut((t - ts) / 1.6)) }; // saldırı geniş
+  else kam = { x: 640, y: lerp(1230, 1160, cl((t - ts) / 2)), z: lerp(0.95, 1.15, easeOut((t - ts) / 1.6)) }; // saldırı
   const D: Dunya = {
-    t, h: 0.02, kanlik: t > ts - 0.3 ? 0.85 : 0.35, ates: 1, ordu: t > ts - 0.3 ? 1 : 0.4, hasar: 1, gedikler: 4, onarim: 1,
+    t, h: 0.02, kanlik: t > ts - 0.3 ? 1 : 0.35, ates: 1, ordu: t > ts - 0.3 ? 1 : 0.4, hasar: 1, gedikler: 4, onarim: 1,
     can: ap(t, tk, 0.4), saldiri: t > ts - 0.3 ? cl((t - ts + 0.3) / 2.2) : 0,
   };
   const vur = ap(t, tdv, 0.2);
@@ -679,12 +696,13 @@ const Beyit: S = ({ t, d, ws }) => {
   const tk = ws("kayser'in"), to = ws("örümcek");
   const hedef = pk(1010, 978, 0.75);
   const z = lerp(4, 15, easeIO(cl(t / (tk + 0.4))));
-  const kam: Kam = { x: hedef.x, y: hedef.y + lerp(30, 0, cl(t / (tk + 0.4))), z: t < tk + 0.4 ? z : lerp(15, 16.5, cl((t - tk) / (d - tk))) };
+  const kam: Kam = { x: hedef.x + (t > tk + 0.4 ? lerp(0, -3, cl((t - tk) / (d - tk))) : 0), y: hedef.y + lerp(30, 0, cl(t / (tk + 0.4))), z: t < tk + 0.4 ? z : lerp(15, 19, cl((t - tk) / (d - tk))) };
   const D: Dunya = { t, h: 1.5, ates: 0, ordu: 0, hasar: 1, gedikler: 4, onarim: 0.6, sancak: 1, kartal: 0, ag: ap(t, to - 0.3, 1.6) };
   return (
     <g>
-      <DunyaSahne D={D} kam={kam} />
-      <Kul t={t} o={0.35} n={18} renk="#e8dcc0" yukari={false} />
+      <DunyaSahne D={D} kam={kam} sadeceSehir />
+      <Sis t={t} o={0.25} y={1000} hiz={55} renk="#e8dcc0" />
+      <Kul t={t} o={0.6} n={36} renk="#e8dcc0" yukari={false} />
       <Vinyet g={0.9} />
       <IsimKarti t={t} a={tk - 0.1} ad="FARSÇA BEYİT" rol="Tursun Bey'in kaydı" sure={d - tk - 0.1} />
     </g>

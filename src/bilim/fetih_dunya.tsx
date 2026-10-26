@@ -358,9 +358,6 @@ const Gedik: React.FC<{ x: number; y: number; k: number; onarim: number; tas: st
         const hh = 46 + rnd(i, 7) * 14;
         return <path key={i} d={`M ${xx} ${y + 40} L ${xx} ${y + 40 - hh * g} L ${xx + 4.5} ${y + 34 - hh * g} L ${xx + 9} ${y + 40 - hh * g} L ${xx + 9} ${y + 40} Z`} fill="#4a3220" stroke="#20140a" strokeWidth={1.5} />;
       })}
-      {onarim > 0.3 && [-0.5, 0, 0.5].map((k, i) => (
-        <ellipse key={"f" + i} cx={x + k * w} cy={y + 46} rx={12} ry={15} fill="#5a3c22" stroke="#20140a" strokeWidth={2} opacity={cl((onarim - 0.3) * 3)} />
-      ))}
       {onarim > 0.5 && <circle cx={x} cy={y - 10} r={4 + Math.sin(t * 10) * 1} fill="#ffcf73" opacity={0.9} />}
     </g>
   );
@@ -389,7 +386,7 @@ export const Zemin: React.FC<{ D: Dunya }> = ({ D }) => {
   const { h } = D;
   const z1 = renk(h, [[0, "#141225"], [0.5, "#1f1a2c"], [1, "#4a3428"], [2, "#a8915f"]]);
   const z2 = renk(h, [[0, "#0d0c18"], [0.5, "#16121f"], [1, "#33241c"], [2, "#7d6a45"]]);
-  const tepe = renk(h, [[0, "#131226"], [0.5, "#1d182b"], [1, "#3e2c27"], [2, "#958457"]]);
+  const tepe = renk(h, [[0, "#2c2a4e"], [0.5, "#2a2238"], [1, "#3e2c27"], [2, "#958457"]]);
   return (
     <g>
       <defs>
@@ -525,6 +522,7 @@ export const Sultan: React.FC<{ x: number; y: number; s?: number; t: number; o?:
 
 export const Urban: React.FC<{ x: number; y: number; s?: number; t: number; o?: number; yuru?: number; flip?: boolean }> = ({ x, y, s = 1, t, o = 1, yuru = 0, flip }) => {
   const ad = yuru ? Math.sin(t * 9) * 10 : 0;
+  const kol = yuru ? ad * 0.3 : Math.sin(t * 2.6) * 10; // konuşurken el hareketi
   return (
     <g transform={`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`} opacity={o}>
       <path d={`M -8 0 L ${-6 + ad * 0.4} -50 L 0 -50 Z`} fill="#2b2420" />
@@ -534,7 +532,7 @@ export const Urban: React.FC<{ x: number; y: number; s?: number; t: number; o?: 
       <circle cx={0} cy={-130} r={14} fill="#d8b08a" />
       <path d="M -12 -126 Q 0 -100 12 -126 L 10 -118 Q 0 -108 -10 -118 Z" fill="#6e5a48" />
       <path d="M -16 -136 Q 0 -160 18 -136 Z" fill="#3a2a20" />
-      <path d={`M 16 -104 L ${30 + ad * 0.3} -76`} stroke="#5a3d26" strokeWidth={8} strokeLinecap="round" />
+      <path d={`M 16 -104 L ${30 + kol} ${-76 - Math.abs(kol) * 0.8}`} stroke="#5a3d26" strokeWidth={8} strokeLinecap="round" />
     </g>
   );
 };
@@ -800,6 +798,10 @@ export const Saldiri: React.FC<{ D: Dunya }> = ({ D }) => {
           </g>
         );
       })}
+      {/* surlarda yangınlar */}
+      {[120, 330, 560, 700, 900, 1150].map((x, i) => (
+        <Ates key={"y" + i} x={x} y={1034} s={0.9 + rnd(i, 9) * 0.6} t={t * 1.2 + i} o={cl(k * 2 - i * 0.1)} gece={1} />
+      ))}
       {/* ok yağmuru */}
       {Array.from({ length: 24 }).map((_, i) => {
         const u = (t * 0.9 + rnd(i, 6)) % 1;
@@ -849,7 +851,7 @@ export const Kuslar: React.FC<{ u: number }> = ({ u }) => {
 export type Kam = { x: number; y: number; z: number; r?: number };
 
 /** Kamera: dünya noktası (x,y) ekran merkezine, z yakınlaştırma. Paralaks: uzak katmanlar daha az kayar. */
-export const DunyaSahne: React.FC<{ D: Dunya; kam: Kam; children?: React.ReactNode; on?: React.ReactNode; sallanti?: [number, number] }> = ({ D, kam, children, on, sallanti = [0, 0] }) => {
+export const DunyaSahne: React.FC<{ D: Dunya; kam: Kam; children?: React.ReactNode; on?: React.ReactNode; sallanti?: [number, number]; sadeceSehir?: boolean }> = ({ D, kam, children, on, sallanti = [0, 0], sadeceSehir }) => {
   const kat = (p: number, node: React.ReactNode) => {
     const ox = (kam.x - 1000) * (1 - p);
     const oy = (kam.y - 1200) * (1 - p) * 0.5;
@@ -867,13 +869,17 @@ export const DunyaSahne: React.FC<{ D: Dunya; kam: Kam; children?: React.ReactNo
       {kat(0.25, <Gok D={D} />)}
       {kat(0.75, <Sehir D={D} />)}
       {kat(0.75, <Kuslar u={D.kus ?? -1} />)}
-      {kat(1, <Surlar D={D} />)}
-      {kat(1, <Zemin D={D} />)}
-      {kat(1, <TozBulutu k={D.toz || 0} t={D.t} h={D.h} />)}
-      {kat(1, <Ordu D={D} />)}
-      {kat(1, <Gemiler D={D} />)}
-      {kat(1, <Saldiri D={D} />)}
-      {kat(1, <Cadirlar D={D} />)}
+      {!sadeceSehir && (
+        <g>
+          {kat(1, <Surlar D={D} />)}
+          {kat(1, <Zemin D={D} />)}
+          {kat(1, <TozBulutu k={D.toz || 0} t={D.t} h={D.h} />)}
+          {kat(1, <Ordu D={D} />)}
+          {kat(1, <Gemiler D={D} />)}
+          {kat(1, <Saldiri D={D} />)}
+          {kat(1, <Cadirlar D={D} />)}
+        </g>
+      )}
       {kat(1, children)}
     </g>
   );
