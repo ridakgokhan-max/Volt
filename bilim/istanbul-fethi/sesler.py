@@ -156,8 +156,11 @@ def cues(B, S, wt, st, sure, ara):
     t_gur = ara("gürleme")
     t_car = ara("çarpıyor")
     # açılış (geleceğe sıçrama): videonun ilk karesinde top ateşi
-    p(S, 0.0, Y("cannon_fire_853281.mp3"), 0.85)
-    p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(1.6 * SR)] * np.linspace(1, 0, int(1.6 * SR)), 0.6)
+    p(S, 0.0, Y("cannon_fire_853281.mp3"), 1.0)
+    p(S, 0.0, Y("cannon_fire_186930.mp3"), 0.6)
+    p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(2.6 * SR)] * np.linspace(1, 0, int(2.6 * SR)), 0.9)
+    p(S, 0.0, B.boom(f=48, d=1.4), 0.8)  # 40–70 Hz gövde
+    p(S, 2.15, Y("war_drums_468903.mp3"), 0.4)  # bölüm kartı girişine davul (sessiz delik kalmasın)
     # fitil cızırtısı: "Sonra"dan gürlemeye kadar (sessizlikte tek ses o)
     p(S, t_son - 0.2, _cizirti(B, t_gur - t_son + 0.15), 0.16)
     p(S, t_kus + 0.75, E("kalp"), 0.4)  # sessizlikte tek kalp atışı
@@ -170,6 +173,7 @@ def cues(B, S, wt, st, sure, ara):
     p(S, t_gur + 0.35, B.whoosh(max(1.0, t_car - t_gur - 0.3)), 0.25)  # ağır çekim gülle
     # ÇARPMA
     p(S, t_car - 0.03, E("darbe_agir"), 0.8)
+    p(S, t_car, B.boom(f=55, d=1.0), 0.85)  # yarım tonluk gülle: tok gövde
     p(S, t_car, Y("stone_impact_debris_569501.mp3"), 0.75)
     p(S, t_car + 0.08, Y("stone_impact_debris_569506.mp3"), 0.6)
     p(S, t_car + 0.2, Y("rubble_falling_462690.mp3"), 0.55)
@@ -224,4 +228,7 @@ def cues(B, S, wt, st, sure, ara):
     t_m = ara("maaşla")
     p(S, t_m - 0.02, E("para"), 0.6)
     p(S, t_m + 0.03, E("metal"), 0.25)
-    _ = (wt, st, sure, SR)
+    # döngü dikişi: son 0,45 sn'de fitil cızırtısı yükselir → videonun başındaki patlamaya bağlanır
+    cz = _cizirti(B, 0.45) * np.linspace(0.2, 1, int(0.45 * SR))
+    p(S, sure - 0.47, cz, 0.3)
+    _ = (wt, st, SR)

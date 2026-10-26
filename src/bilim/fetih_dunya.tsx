@@ -26,6 +26,9 @@ export const renk = (h: number, d: [number, string][]) => {
   return mixc(d[d.length - 1][1], d[d.length - 1][1], 0);
 };
 
+/** renge bağlı benzersiz SVG kimliği: geçişte üst üste binen iki sahnenin degradeleri karışmasın */
+export const rid = (on: string, ...r: string[]) => on + r.join("").replace(/[^0-9]/g, "");
+
 export const KOR = "#ff8a2a";
 export const ALTIN = "#f2c14e";
 export const KAN = "#a8231c";
@@ -72,7 +75,7 @@ export const Gok: React.FC<{ D: Dunya }> = ({ D }) => {
   return (
     <g>
       <defs>
-        <linearGradient id="gk" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={rid("gk", ust, orta, alt)} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={ust} />
           <stop offset="0.62" stopColor={orta} />
           <stop offset="1" stopColor={alt} />
@@ -87,7 +90,7 @@ export const Gok: React.FC<{ D: Dunya }> = ({ D }) => {
           <stop offset="1" stopColor="#7a0f0a" stopOpacity="0" />
         </radialGradient>
       </defs>
-      <rect x={-1200} y={-900} width={5200} height={2000} fill="url(#gk)" />
+      <rect x={-1200} y={-900} width={5200} height={2000} fill={`url(#${rid("gk", ust, orta, alt)})`} />
       {yildiz > 0.01 && (
         <g opacity={yildiz}>
           {Array.from({ length: 90 }).map((_, i) => (
@@ -206,24 +209,29 @@ export const Saray: React.FC<{ x: number; y: number; c: string; ag: number; t: n
 
 /** Örümcek ağı — kendini çizer */
 export const Ag: React.FC<{ cx: number; cy: number; r: number; k: number; t: number }> = ({ cx, cy, r, k, t }) => {
-  const kol = 9;
+  const kol = 16;
   const tel = cl(k * 1.6);
-  const halka = cl(k * 1.6 - 0.5);
+  const sarmal = cl(k * 1.4 - 0.3);
+  // sarmal ip: merkezden dışa, her kolda biraz sarkarak
+  const nok: string[] = [];
+  const tur = 7;
+  const N = Math.floor(kol * tur * sarmal);
+  for (let i = 0; i <= N; i++) {
+    const a = (i / kol) * Math.PI * 2;
+    const rr = r * (0.12 + 0.88 * (i / (kol * tur)));
+    const sark = 1 - 0.06 * Math.sin(((i % kol) / kol) * Math.PI);
+    nok.push(`${(Math.cos(a) * rr * sark).toFixed(2)},${(Math.sin(a) * rr * sark).toFixed(2)}`);
+  }
   return (
     <g transform={`translate(${cx} ${cy}) rotate(${Math.sin(t * 1.4) * 5}) scale(${1 + 0.03 * Math.sin(t * 2.1)})`} stroke="#f2ecdc" fill="none" strokeLinecap="round">
       {Array.from({ length: kol }).map((_, i) => {
-        const a = (i / kol) * Math.PI * 2;
-        return <line key={i} x1={0} y1={0} x2={Math.cos(a) * r * tel} y2={Math.sin(a) * r * tel} strokeWidth={r * 0.025} opacity={0.85} />;
+        const a = (i / kol) * Math.PI * 2 + (i % 2) * 0.05;
+        return <line key={i} x1={0} y1={0} x2={Math.cos(a) * r * 1.05 * tel} y2={Math.sin(a) * r * 1.05 * tel} strokeWidth={r * 0.02} opacity={0.85} />;
       })}
-      {Array.from({ length: 6 }).map((_, j) => {
-        const rr = (r * (j + 1)) / 6.5;
-        if ((j + 1) / 6 > halka) return null;
-        const pts = Array.from({ length: kol + 1 }).map((_, i) => {
-          const a = (i / kol) * Math.PI * 2;
-          return `${Math.cos(a) * rr},${Math.sin(a) * rr}`;
-        });
-        return <polyline key={j} points={pts.join(" ")} strokeWidth={r * 0.018} opacity={0.75} />;
-      })}
+      {nok.length > 1 && <polyline points={nok.join(" ")} strokeWidth={r * 0.014} opacity={0.8} />}
+      {k > 0.6 && Array.from({ length: 10 }).map((_, i) => (
+        <circle key={"c" + i} cx={Math.cos(i * 2.3) * r * (0.3 + 0.06 * i)} cy={Math.sin(i * 2.3) * r * (0.3 + 0.06 * i)} r={r * 0.018} fill="#fff" stroke="none" opacity={0.5 + 0.5 * Math.sin(t * 3 + i)} />
+      ))}
       {k > 0.8 && <circle cx={r * 0.18 + Math.sin(t * 1.1) * r * 0.25} cy={r * 0.12 + Math.cos(t * 0.9) * r * 0.25} r={r * 0.07} fill="#1b1b1b" stroke="none" />}
     </g>
   );
@@ -392,12 +400,12 @@ export const Zemin: React.FC<{ D: Dunya }> = ({ D }) => {
   return (
     <g>
       <defs>
-        <linearGradient id="zm" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={rid("zm", z1, z2)} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={z1} />
           <stop offset="1" stopColor={z2} />
         </linearGradient>
       </defs>
-      <rect x={-1200} y={1210} width={5200} height={1700} fill="url(#zm)" />
+      <rect x={-1200} y={1210} width={5200} height={1700} fill={`url(#${rid("zm", z1, z2)})`} />
       {/* Galata sırtı: gemilerin aştığı tepe (yalnızca gemiler sahnesinde) */}
       {(D.gemi ?? -1) >= 0 && <path d="M 1440 1240 Q 1700 1060 2000 1090 Q 2300 1110 2900 1280 L 2900 1500 L 1440 1500 Z" fill={tepe} />}
       {(D.gemi ?? -1) >= 0 && <path d="M 1500 1080 Q 1580 1060 1700 1070 L 1700 1100 Z" fill={tepe} />}
@@ -567,13 +575,13 @@ export const Top: React.FC<{ D: Dunya; geri?: number }> = ({ D, geri = 0 }) => {
   return (
     <g transform={`translate(${TOP.x - geri * 26} ${TOP.y}) `}>
       <defs>
-        <linearGradient id="namlu" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={rid("nm", koyu, orta, parla)} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={koyu} />
           <stop offset="0.28" stopColor={parla} />
           <stop offset="0.45" stopColor={orta} />
           <stop offset="1" stopColor={koyu} />
         </linearGradient>
-        <radialGradient id="gulle" cx="0.35" cy="0.3" r="0.75">
+        <radialGradient id={rid("gl", parla, tas)} cx="0.35" cy="0.3" r="0.75">
           <stop offset="0" stopColor={parla} stopOpacity="0.5" />
           <stop offset="0.25" stopColor={tas} />
           <stop offset="1" stopColor="#0e0c0a" />
@@ -589,19 +597,19 @@ export const Top: React.FC<{ D: Dunya; geri?: number }> = ({ D, geri = 0 }) => {
       <path d="M 260 -40 L 330 -60 L 360 30 L 300 40 Z" fill={tahta} />
       <g transform={`rotate(${TOP.ag})`}>
         {/* kuyruk (dip) */}
-        <ellipse cx={-34} cy={0} rx={30} ry={40} fill="url(#namlu)" />
+        <ellipse cx={-34} cy={0} rx={30} ry={40} fill={`url(#${rid("nm", koyu, orta, parla)})`} />
         <circle cx={-66} cy={0} r={12} fill={orta} />
         {/* gövde: hafif konik silindir */}
-        <path d="M -34 -40 L 380 -50 L 380 50 L -34 40 Z" fill="url(#namlu)" />
+        <path d="M -34 -40 L 380 -50 L 380 50 L -34 40 Z" fill={`url(#${rid("nm", koyu, orta, parla)})`} />
         {/* takviye halkaları */}
         {[20, 110, 200, 290].map((x, i) => (
           <g key={i}>
-            <rect x={x} y={-47 - i * 0.4} width={18} height={94 + i * 0.8} rx={4} fill="url(#namlu)" stroke={koyu} strokeWidth={2} />
+            <rect x={x} y={-47 - i * 0.4} width={18} height={94 + i * 0.8} rx={4} fill={`url(#${rid("nm", koyu, orta, parla)})`} stroke={koyu} strokeWidth={2} />
             <rect x={x + 2} y={-40} width={4} height={60} fill={parla} opacity={0.35} />
           </g>
         ))}
         {/* ağız: genişleyen çan + karanlık namlu deliği */}
-        <path d="M 380 -50 L 420 -64 L 420 64 L 380 50 Z" fill="url(#namlu)" />
+        <path d="M 380 -50 L 420 -64 L 420 64 L 380 50 Z" fill={`url(#${rid("nm", koyu, orta, parla)})`} />
         <ellipse cx={420} cy={0} rx={16} ry={64} fill={orta} />
         <ellipse cx={421} cy={0} rx={11} ry={44} fill="#0a0806" />
         {/* fitil deliği */}
@@ -610,7 +618,7 @@ export const Top: React.FC<{ D: Dunya; geri?: number }> = ({ D, geri = 0 }) => {
       </g>
       {/* yanındaki taş gülle yığını */}
       {[[-130, 120], [-70, 126], [-100, 82], [-10, 132]].map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r={34} fill="url(#gulle)" />
+        <circle key={i} cx={x} cy={y} r={34} fill={`url(#${rid("gl", parla, tas)})`} />
       ))}
     </g>
   );
@@ -668,8 +676,8 @@ export const Atis: React.FC<{ u: number; t: number; hedef?: { x: number; y: numb
         const k = cl(u * 1.2 - i * 0.03);
         const a = ((TOP.ag + (rnd(i, 1) - 0.5) * 60) * Math.PI) / 180;
         const d = 40 + k * (120 + rnd(i, 2) * 220);
-        return <circle key={i} cx={n.x + Math.cos(a) * d} cy={n.y + Math.sin(a) * d - k * 60} r={50 + k * (110 + rnd(i, 3) * 90)}
-          fill="url(#duman)" opacity={(1 - cl(u / 5)) * 0.55} />;
+        return <circle key={i} cx={n.x + Math.cos(a) * d} cy={n.y + Math.sin(a) * d - k * 220} r={50 + k * (110 + rnd(i, 3) * 90)}
+          fill="url(#duman)" opacity={(1 - cl(u / 2.4)) * 0.5} />;
       })}
       {/* gülle */}
       {namluVar && carpVar && ucus < 1 && (
@@ -839,11 +847,11 @@ export const Kuslar: React.FC<{ u: number }> = ({ u }) => {
   if (u < 0 || u > 4) return null;
   return (
     <g>
-      {Array.from({ length: 18 }).map((_, i) => {
-        const x = 300 + rnd(i, 1) * 900 + u * (120 + rnd(i, 2) * 260) * (rnd(i, 3) > 0.5 ? 1 : -1);
+      {Array.from({ length: 9 }).map((_, i) => {
+        const x = 400 + rnd(i, 1) * 700 + u * (120 + rnd(i, 2) * 260) * (rnd(i, 3) > 0.5 ? 1 : -1);
         const y = 985 - u * (180 + rnd(i, 4) * 300);
         const k = Math.sin(u * 18 + i) * 7;
-        return <path key={i} d={`M ${x - 10} ${y + k} Q ${x - 4} ${y - 2} ${x} ${y} Q ${x + 4} ${y - 2} ${x + 10} ${y + k}`} stroke="#0c0a12" strokeWidth={3} fill="none" opacity={cl(1 - u / 4)} />;
+        return <path key={i} d={`M ${x - 26} ${y + k * 2.4} Q ${x - 10} ${y - 5} ${x} ${y} Q ${x + 10} ${y - 5} ${x + 26} ${y + k * 2.4}`} stroke="#0c0a12" strokeWidth={6} fill="none" opacity={cl(1 - u / 4)} />;
       })}
     </g>
   );

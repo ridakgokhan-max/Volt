@@ -137,7 +137,7 @@
  "cta": [
   {
    "tur": "begen",
-   "kelime": "örüyor"
+   "kelime": "gündüz"
   },
   {
    "tur": "takip",
@@ -275,7 +275,11 @@
   "kayser'in sarayında",
   "ödenmemiş bir",
   "dökebilir mi diye sordu.",
-  "hepimiz kendi isteğimizle ölmeye hazırız.\""
+  "hepimiz kendi isteğimizle ölmeye hazırız.\"",
+  "dökebilir mi",
+  "mi diye",
+  "isteğimizle ölmeye",
+  "kendi isteğimizle"
  ],
  "muzik_ses": 0.55,
  "sc_ratio": 2.5,
@@ -386,8 +390,8 @@
   "cevabı:",
   "elimde,",
   "kimsenin.",
-  "yıkacak",
-  "mırıldanıyor:"
+  "mırıldanıyor:",
+  "surları"
  ],
  "ses_hp": 90,
  "efekt_ses": 0.95,
@@ -395,12 +399,12 @@
  "acilis": {
   "sahne": "gurleme",
   "kelime": "gürleme",
-  "ofset": 0.12,
+  "ofset": 0.25,
   "sure": 0.7
  },
  "kanca": {
   "yazi": "BU TOPU BİZANS DA ALABİLİRDİ",
-  "alt": "",
-  "sure": 2.2
+  "alt": "ama bir maaşı ödemedi",
+  "sure": 1.6
  }
 }

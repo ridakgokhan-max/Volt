@@ -106,8 +106,12 @@ const SceneIc: React.FC<WrapProps> = ({ sc, idx, lead, donus, sabitT, acilis }) 
       outer.filter = `drop-shadow(${14 * r}px 0 0 rgba(255,0,80,0.8)) drop-shadow(${-14 * r}px 0 0 rgba(0,240,255,0.8))`;
       outer.opacity = f % 3 === 1 ? 0.35 : 1;
     }
-    if (g === "flas") flash = r;
-    if (g === "karar") outer.filter = `brightness(${rev})`; // film: karartmadan açılış
+    if (g === "flas") flash = Math.pow(r, 3) * 0.7; // kısa, sıcak parlama (göz yormasın)
+    if (g === "karar") {
+      // film: koyulaşarak çapraz geçiş (siyaha sert kesme yok)
+      outer.opacity = rev;
+      outer.filter = `brightness(${0.55 + 0.45 * rev})`;
+    }
     if (g === "savur") {
       // hızlı kamera savurma: yandan kayarak gelir, hareket bulanıklığı ve eğim
       outer.transform = `translateX(${r * 110}%) skewX(${-r * 18}deg)`;
