@@ -3,7 +3,7 @@ ses başlangıcına oturtulan kelime: 59
 CTA: [{'tur': 'begen', 'bas': 47.13, 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 99.976, 'kostum': 'kasif'}]
 ses vurgusu: 14 yer
 anlatım doğrusal: -14.70 LUFS → -16
-doğrusal yükseklik: ölçülen -14.90 LUFS, kazanç +0.90 dB
+doğrusal yükseklik: ölçülen -15.00 LUFS, kazanç +1.00 dB
 istanbul-fethi: 124.4 sn kayıt -> 101.6 sn video, 186 kelime, 55 altyazı satırı, 16 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
@@ -40,15 +40,20 @@ Getting composition
 [90mOutput               out/bilim/istanbul-fethi.mp4[39m
 [90mConcurrency          2x[39m
 [40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [34m○                    out/bilim/istanbul-fethi.mp4[39m [90m48.4 MB[39m
-[UYARI] Teknik: süre 101.7 sn (Reels için 15–90 önerilir)
-[0;93m2026-10-27 05:47:55.405255120 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-[UYARI] Söz: metinde olup duyulmayan: 'yer sarsılıyor' (~14.2 sn)
-[UYARI] Söz: farklı duyuluyor: metin 'haliçe indiriyor' ↔ duyulan 'haliç e iniliyor' (~53.1 sn)
-[UYARI] Söz: farklı duyuluyor: metin 'örümcek tutuyor' ↔ duyulan 'örünecek tüm ve' (~94.4 sn)
-[BİLGİ] Söz: duyulan konuşma metinle %91 uyumlu
-SONUÇ: UYARI
+Traceback (most recent call last):
+  File "/home/runner/work/Volt/Volt/kalite/oto_kontrol.py", line 38, in <module>
+    pr = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", V],
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe'
 durum: success
