@@ -1,15 +1,20 @@
 {
  "konu": "istanbul-fethi",
  "sonuc": "UYARI",
- "sure": 101.63,
+ "sure": 101.65,
  "lufs": -14.1,
  "tepe_dbtp": -1.4,
- "hareket_ortalama": 4.63,
+ "hareket_ortalama": 5.31,
  "bulgular": [
   {
    "seviye": "UYARI",
    "alan": "Teknik",
-   "mesaj": "süre 101.6 sn (Reels için 15–90 önerilir)"
+   "mesaj": "süre 101.7 sn (Reels için 15–90 önerilir)"
+  },
+  {
+   "seviye": "UYARI",
+   "alan": "Söz",
+   "mesaj": "metinde olup duyulmayan: 'yer sarsılıyor' (~14.2 sn)"
   },
   {
    "seviye": "UYARI",
@@ -19,12 +24,12 @@
   {
    "seviye": "UYARI",
    "alan": "Söz",
-   "mesaj": "metinde olmayan fazladan söz: 'canınızı alın' (~58.0 sn)"
+   "mesaj": "farklı duyuluyor: metin 'örümcek tutuyor' ↔ duyulan 'örünecek tüm ve' (~94.4 sn)"
   },
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %93 uyumlu"
+   "mesaj": "duyulan konuşma metinle %91 uyumlu"
   }
  ]
 }
