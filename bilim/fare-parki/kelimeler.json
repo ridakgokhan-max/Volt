@@ -1,0 +1,1231 @@
+{
+ "model": "large-v3",
+ "sure": 106.347,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 3.2,
+   "text": "Bağımlılığın sebebi uyuşturucunun kendisi mi?",
+   "kelimeler": [
+    {
+     "w": "Bağımlılığın",
+     "start": 0.0,
+     "end": 1.22,
+     "p": 0.99
+    },
+    {
+     "w": "sebebi",
+     "start": 1.22,
+     "end": 1.68,
+     "p": 0.999
+    },
+    {
+     "w": "uyuşturucunun",
+     "start": 1.68,
+     "end": 2.6,
+     "p": 0.999
+    },
+    {
+     "w": "kendisi",
+     "start": 2.6,
+     "end": 3.04,
+     "p": 1.0
+    },
+    {
+     "w": "mi?",
+     "start": 3.04,
+     "end": 3.2,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 3.36,
+   "end": 7.78,
+   "text": "Bir psikolog fareler için bir park kurdu ve cevabı herkese şaşırttı.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 3.36,
+     "end": 4.1,
+     "p": 0.998
+    },
+    {
+     "w": "psikolog",
+     "start": 4.1,
+     "end": 4.54,
+     "p": 1.0
+    },
+    {
+     "w": "fareler",
+     "start": 4.54,
+     "end": 5.06,
+     "p": 0.997
+    },
+    {
+     "w": "için",
+     "start": 5.06,
+     "end": 5.3,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 5.3,
+     "end": 5.46,
+     "p": 1.0
+    },
+    {
+     "w": "park",
+     "start": 5.46,
+     "end": 5.72,
+     "p": 0.999
+    },
+    {
+     "w": "kurdu",
+     "start": 5.72,
+     "end": 6.08,
+     "p": 0.998
+    },
+    {
+     "w": "ve",
+     "start": 6.08,
+     "end": 6.56,
+     "p": 0.986
+    },
+    {
+     "w": "cevabı",
+     "start": 6.56,
+     "end": 6.88,
+     "p": 0.893
+    },
+    {
+     "w": "herkese",
+     "start": 6.88,
+     "end": 7.22,
+     "p": 0.827
+    },
+    {
+     "w": "şaşırttı.",
+     "start": 7.22,
+     "end": 7.78,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 9.28,
+   "end": 15.28,
+   "text": "1970'ler, o yıllarda yapılan deneylerde bir fare küçük bir kafese tek başına konuyordu.",
+   "kelimeler": [
+    {
+     "w": "1970",
+     "start": 9.28,
+     "end": 10.02,
+     "p": 0.995
+    },
+    {
+     "w": "'ler,",
+     "start": 10.02,
+     "end": 10.58,
+     "p": 0.998
+    },
+    {
+     "w": "o",
+     "start": 10.62,
+     "end": 10.98,
+     "p": 1.0
+    },
+    {
+     "w": "yıllarda",
+     "start": 10.98,
+     "end": 11.42,
+     "p": 1.0
+    },
+    {
+     "w": "yapılan",
+     "start": 11.42,
+     "end": 11.9,
+     "p": 1.0
+    },
+    {
+     "w": "deneylerde",
+     "start": 11.9,
+     "end": 12.46,
+     "p": 0.998
+    },
+    {
+     "w": "bir",
+     "start": 12.46,
+     "end": 13.0,
+     "p": 0.948
+    },
+    {
+     "w": "fare",
+     "start": 13.0,
+     "end": 13.36,
+     "p": 0.995
+    },
+    {
+     "w": "küçük",
+     "start": 13.36,
+     "end": 13.56,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 13.56,
+     "end": 13.88,
+     "p": 1.0
+    },
+    {
+     "w": "kafese",
+     "start": 13.88,
+     "end": 14.22,
+     "p": 0.993
+    },
+    {
+     "w": "tek",
+     "start": 14.22,
+     "end": 14.38,
+     "p": 1.0
+    },
+    {
+     "w": "başına",
+     "start": 14.38,
+     "end": 14.76,
+     "p": 1.0
+    },
+    {
+     "w": "konuyordu.",
+     "start": 14.76,
+     "end": 15.28,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 16.96,
+   "end": 18.74,
+   "text": "Önünde iki su şişesi vardı.",
+   "kelimeler": [
+    {
+     "w": "Önünde",
+     "start": 16.96,
+     "end": 17.7,
+     "p": 1.0
+    },
+    {
+     "w": "iki",
+     "start": 17.7,
+     "end": 17.94,
+     "p": 0.993
+    },
+    {
+     "w": "su",
+     "start": 17.94,
+     "end": 18.12,
+     "p": 0.992
+    },
+    {
+     "w": "şişesi",
+     "start": 18.12,
+     "end": 18.44,
+     "p": 0.85
+    },
+    {
+     "w": "vardı.",
+     "start": 18.44,
+     "end": 18.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 19.04,
+   "end": 24.98,
+   "text": "Biri normal su, diğeri uyuşturucu katılmış su.",
+   "kelimeler": [
+    {
+     "w": "Biri",
+     "start": 19.04,
+     "end": 19.6,
+     "p": 0.998
+    },
+    {
+     "w": "normal",
+     "start": 19.6,
+     "end": 19.82,
+     "p": 1.0
+    },
+    {
+     "w": "su,",
+     "start": 19.82,
+     "end": 20.12,
+     "p": 1.0
+    },
+    {
+     "w": "diğeri",
+     "start": 20.26,
+     "end": 21.02,
+     "p": 1.0
+    },
+    {
+     "w": "uyuşturucu",
+     "start": 21.02,
+     "end": 21.58,
+     "p": 1.0
+    },
+    {
+     "w": "katılmış",
+     "start": 21.58,
+     "end": 22.44,
+     "p": 0.998
+    },
+    {
+     "w": "su.",
+     "start": 22.44,
+     "end": 24.98,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 26.48,
+   "end": 28.48,
+   "text": "Fare uyuşturucu suyu içiyor.",
+   "kelimeler": [
+    {
+     "w": "Fare",
+     "start": 26.48,
+     "end": 27.22,
+     "p": 0.99
+    },
+    {
+     "w": "uyuşturucu",
+     "start": 27.22,
+     "end": 27.86,
+     "p": 0.987
+    },
+    {
+     "w": "suyu",
+     "start": 27.86,
+     "end": 28.12,
+     "p": 1.0
+    },
+    {
+     "w": "içiyor.",
+     "start": 28.12,
+     "end": 28.48,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 29.46,
+   "end": 32.4,
+   "text": "İçiyor ve bazen ölene kadar içmeye devam ediyordu.",
+   "kelimeler": [
+    {
+     "w": "İçiyor",
+     "start": 29.28,
+     "end": 29.7,
+     "p": 0.986
+    },
+    {
+     "w": "ve",
+     "start": 29.7,
+     "end": 29.9,
+     "p": 0.997
+    },
+    {
+     "w": "bazen",
+     "start": 29.9,
+     "end": 30.74,
+     "p": 0.999
+    },
+    {
+     "w": "ölene",
+     "start": 30.74,
+     "end": 31.0,
+     "p": 0.994
+    },
+    {
+     "w": "kadar",
+     "start": 31.0,
+     "end": 31.2,
+     "p": 1.0
+    },
+    {
+     "w": "içmeye",
+     "start": 31.2,
+     "end": 31.64,
+     "p": 1.0
+    },
+    {
+     "w": "devam",
+     "start": 31.64,
+     "end": 31.94,
+     "p": 1.0
+    },
+    {
+     "w": "ediyordu.",
+     "start": 31.94,
+     "end": 32.4,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 32.84,
+   "end": 34.7,
+   "text": "Sonuç açık görünüyordu.",
+   "kelimeler": [
+    {
+     "w": "Sonuç",
+     "start": 32.84,
+     "end": 33.68,
+     "p": 1.0
+    },
+    {
+     "w": "açık",
+     "start": 33.68,
+     "end": 34.14,
+     "p": 0.987
+    },
+    {
+     "w": "görünüyordu.",
+     "start": 34.14,
+     "end": 34.7,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 35.12,
+   "end": 36.74,
+   "text": "Uyuşturucu bağımlılık yapar.",
+   "kelimeler": [
+    {
+     "w": "Uyuşturucu",
+     "start": 35.12,
+     "end": 35.96,
+     "p": 0.999
+    },
+    {
+     "w": "bağımlılık",
+     "start": 35.96,
+     "end": 36.42,
+     "p": 0.999
+    },
+    {
+     "w": "yapar.",
+     "start": 36.42,
+     "end": 36.74,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 36.8,
+   "end": 37.38,
+   "text": "Nokta.",
+   "kelimeler": [
+    {
+     "w": "Nokta.",
+     "start": 36.8,
+     "end": 37.38,
+     "p": 0.987
+    }
+   ]
+  },
+  {
+   "start": 38.82,
+   "end": 42.66,
+   "text": "Ama Kanadalı psikolog Bruce Alexander bir şeyi merak etti.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 38.54,
+     "end": 38.96,
+     "p": 0.999
+    },
+    {
+     "w": "Kanadalı",
+     "start": 38.96,
+     "end": 39.44,
+     "p": 0.997
+    },
+    {
+     "w": "psikolog",
+     "start": 39.44,
+     "end": 40.12,
+     "p": 0.998
+    },
+    {
+     "w": "Bruce",
+     "start": 40.12,
+     "end": 40.52,
+     "p": 0.999
+    },
+    {
+     "w": "Alexander",
+     "start": 40.52,
+     "end": 41.1,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 41.1,
+     "end": 41.84,
+     "p": 0.996
+    },
+    {
+     "w": "şeyi",
+     "start": 41.84,
+     "end": 42.08,
+     "p": 0.999
+    },
+    {
+     "w": "merak",
+     "start": 42.08,
+     "end": 42.34,
+     "p": 1.0
+    },
+    {
+     "w": "etti.",
+     "start": 42.34,
+     "end": 42.66,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 43.54,
+   "end": 45.62,
+   "text": "Ya sorun uyuşturucu değil de kafeste?",
+   "kelimeler": [
+    {
+     "w": "Ya",
+     "start": 43.16,
+     "end": 43.58,
+     "p": 0.997
+    },
+    {
+     "w": "sorun",
+     "start": 43.58,
+     "end": 44.02,
+     "p": 0.983
+    },
+    {
+     "w": "uyuşturucu",
+     "start": 44.02,
+     "end": 44.68,
+     "p": 1.0
+    },
+    {
+     "w": "değil",
+     "start": 44.68,
+     "end": 44.86,
+     "p": 0.999
+    },
+    {
+     "w": "de",
+     "start": 44.86,
+     "end": 45.02,
+     "p": 1.0
+    },
+    {
+     "w": "kafeste?",
+     "start": 45.02,
+     "end": 45.62,
+     "p": 0.787
+    }
+   ]
+  },
+  {
+   "start": 46.74,
+   "end": 49.02,
+   "text": "Ve fareler için de bir park kurdu.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 46.74,
+     "end": 47.58,
+     "p": 1.0
+    },
+    {
+     "w": "fareler",
+     "start": 47.58,
+     "end": 48.02,
+     "p": 0.997
+    },
+    {
+     "w": "için",
+     "start": 48.02,
+     "end": 48.2,
+     "p": 0.531
+    },
+    {
+     "w": "de",
+     "start": 48.2,
+     "end": 48.34,
+     "p": 0.997
+    },
+    {
+     "w": "bir",
+     "start": 48.34,
+     "end": 48.42,
+     "p": 1.0
+    },
+    {
+     "w": "park",
+     "start": 48.42,
+     "end": 48.72,
+     "p": 1.0
+    },
+    {
+     "w": "kurdu.",
+     "start": 48.72,
+     "end": 49.02,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 49.76,
+   "end": 50.34,
+   "text": "Fare parkı.",
+   "kelimeler": [
+    {
+     "w": "Fare",
+     "start": 49.48,
+     "end": 49.9,
+     "p": 0.997
+    },
+    {
+     "w": "parkı.",
+     "start": 49.9,
+     "end": 50.34,
+     "p": 0.866
+    }
+   ]
+  },
+  {
+   "start": 51.38,
+   "end": 53.98,
+   "text": "Normal kafeslerden yaklaşık 200 kat büyüktü.",
+   "kelimeler": [
+    {
+     "w": "Normal",
+     "start": 51.12,
+     "end": 51.54,
+     "p": 0.998
+    },
+    {
+     "w": "kafeslerden",
+     "start": 51.54,
+     "end": 52.24,
+     "p": 1.0
+    },
+    {
+     "w": "yaklaşık",
+     "start": 52.24,
+     "end": 52.74,
+     "p": 1.0
+    },
+    {
+     "w": "200",
+     "start": 52.74,
+     "end": 53.06,
+     "p": 0.979
+    },
+    {
+     "w": "kat",
+     "start": 53.06,
+     "end": 53.48,
+     "p": 1.0
+    },
+    {
+     "w": "büyüktü.",
+     "start": 53.48,
+     "end": 53.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 54.32,
+   "end": 58.22,
+   "text": "İçinde oyuncaklar, tüneller, saklanacak yerler vardı.",
+   "kelimeler": [
+    {
+     "w": "İçinde",
+     "start": 54.32,
+     "end": 55.16,
+     "p": 1.0
+    },
+    {
+     "w": "oyuncaklar,",
+     "start": 55.16,
+     "end": 55.86,
+     "p": 1.0
+    },
+    {
+     "w": "tüneller,",
+     "start": 55.94,
+     "end": 56.58,
+     "p": 0.988
+    },
+    {
+     "w": "saklanacak",
+     "start": 56.8,
+     "end": 57.6,
+     "p": 0.992
+    },
+    {
+     "w": "yerler",
+     "start": 57.6,
+     "end": 57.98,
+     "p": 1.0
+    },
+    {
+     "w": "vardı.",
+     "start": 57.98,
+     "end": 58.22,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 58.48,
+   "end": 60.62,
+   "text": "Ve en önemlisi diğer fareler.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 58.48,
+     "end": 59.1,
+     "p": 0.79
+    },
+    {
+     "w": "en",
+     "start": 59.1,
+     "end": 59.26,
+     "p": 0.998
+    },
+    {
+     "w": "önemlisi",
+     "start": 59.26,
+     "end": 59.74,
+     "p": 1.0
+    },
+    {
+     "w": "diğer",
+     "start": 59.74,
+     "end": 60.12,
+     "p": 0.995
+    },
+    {
+     "w": "fareler.",
+     "start": 60.12,
+     "end": 60.62,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 62.44,
+   "end": 65.48,
+   "text": "Oynayabilecekleri yuva kurabilecekleri arkadaşları.",
+   "kelimeler": [
+    {
+     "w": "Oynayabilecekleri",
+     "start": 62.44,
+     "end": 63.48,
+     "p": 0.997
+    },
+    {
+     "w": "yuva",
+     "start": 63.48,
+     "end": 64.0,
+     "p": 0.91
+    },
+    {
+     "w": "kurabilecekleri",
+     "start": 64.0,
+     "end": 64.8,
+     "p": 1.0
+    },
+    {
+     "w": "arkadaşları.",
+     "start": 64.8,
+     "end": 65.48,
+     "p": 0.983
+    }
+   ]
+  },
+  {
+   "start": 67.0,
+   "end": 70.72,
+   "text": "Aynı iki şişe buraya da kondu.",
+   "kelimeler": [
+    {
+     "w": "Aynı",
+     "start": 66.72,
+     "end": 67.24,
+     "p": 1.0
+    },
+    {
+     "w": "iki",
+     "start": 67.24,
+     "end": 67.4,
+     "p": 0.969
+    },
+    {
+     "w": "şişe",
+     "start": 67.4,
+     "end": 69.74,
+     "p": 0.972
+    },
+    {
+     "w": "buraya",
+     "start": 69.74,
+     "end": 70.26,
+     "p": 0.997
+    },
+    {
+     "w": "da",
+     "start": 70.26,
+     "end": 70.44,
+     "p": 1.0
+    },
+    {
+     "w": "kondu.",
+     "start": 70.44,
+     "end": 70.72,
+     "p": 0.993
+    }
+   ]
+  },
+  {
+   "start": 71.42,
+   "end": 76.02,
+   "text": "Ve fare parkında fareler uyuşturucu suya neredeyse hiç dokunmadı.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 70.92,
+     "end": 71.44,
+     "p": 0.997
+    },
+    {
+     "w": "fare",
+     "start": 71.44,
+     "end": 71.74,
+     "p": 0.988
+    },
+    {
+     "w": "parkında",
+     "start": 71.74,
+     "end": 72.28,
+     "p": 0.998
+    },
+    {
+     "w": "fareler",
+     "start": 72.28,
+     "end": 73.16,
+     "p": 0.998
+    },
+    {
+     "w": "uyuşturucu",
+     "start": 73.16,
+     "end": 73.8,
+     "p": 1.0
+    },
+    {
+     "w": "suya",
+     "start": 73.8,
+     "end": 74.74,
+     "p": 1.0
+    },
+    {
+     "w": "neredeyse",
+     "start": 74.74,
+     "end": 75.38,
+     "p": 1.0
+    },
+    {
+     "w": "hiç",
+     "start": 75.38,
+     "end": 75.5,
+     "p": 1.0
+    },
+    {
+     "w": "dokunmadı.",
+     "start": 75.5,
+     "end": 76.02,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 77.48,
+   "end": 85.98,
+   "text": "Daha da şaşırtıcısı kafeste uzun süre uyuşturucu içi bağımlı olmuş fareler parka taşındığında çoğu normal suya geri döndü.",
+   "kelimeler": [
+    {
+     "w": "Daha",
+     "start": 77.04,
+     "end": 77.56,
+     "p": 1.0
+    },
+    {
+     "w": "da",
+     "start": 77.56,
+     "end": 77.72,
+     "p": 1.0
+    },
+    {
+     "w": "şaşırtıcısı",
+     "start": 77.72,
+     "end": 78.28,
+     "p": 0.987
+    },
+    {
+     "w": "kafeste",
+     "start": 78.28,
+     "end": 79.58,
+     "p": 0.953
+    },
+    {
+     "w": "uzun",
+     "start": 79.58,
+     "end": 80.02,
+     "p": 1.0
+    },
+    {
+     "w": "süre",
+     "start": 80.02,
+     "end": 80.18,
+     "p": 0.811
+    },
+    {
+     "w": "uyuşturucu",
+     "start": 80.18,
+     "end": 80.78,
+     "p": 0.999
+    },
+    {
+     "w": "içi",
+     "start": 80.78,
+     "end": 80.96,
+     "p": 0.902
+    },
+    {
+     "w": "bağımlı",
+     "start": 80.96,
+     "end": 81.48,
+     "p": 1.0
+    },
+    {
+     "w": "olmuş",
+     "start": 81.48,
+     "end": 81.74,
+     "p": 1.0
+    },
+    {
+     "w": "fareler",
+     "start": 81.74,
+     "end": 82.46,
+     "p": 1.0
+    },
+    {
+     "w": "parka",
+     "start": 82.46,
+     "end": 83.16,
+     "p": 0.995
+    },
+    {
+     "w": "taşındığında",
+     "start": 83.16,
+     "end": 83.74,
+     "p": 0.977
+    },
+    {
+     "w": "çoğu",
+     "start": 83.74,
+     "end": 84.66,
+     "p": 0.999
+    },
+    {
+     "w": "normal",
+     "start": 84.66,
+     "end": 84.94,
+     "p": 1.0
+    },
+    {
+     "w": "suya",
+     "start": 84.94,
+     "end": 85.34,
+     "p": 1.0
+    },
+    {
+     "w": "geri",
+     "start": 85.34,
+     "end": 85.52,
+     "p": 1.0
+    },
+    {
+     "w": "döndü.",
+     "start": 85.52,
+     "end": 85.98,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 85.98,
+   "end": 91.16,
+   "text": "Bu sonuçlar o dönem büyük bilim dergilerinde yayınlanmadı",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 85.98,
+     "end": 87.38,
+     "p": 0.992
+    },
+    {
+     "w": "sonuçlar",
+     "start": 87.38,
+     "end": 87.96,
+     "p": 1.0
+    },
+    {
+     "w": "o",
+     "start": 87.96,
+     "end": 88.14,
+     "p": 0.992
+    },
+    {
+     "w": "dönem",
+     "start": 88.14,
+     "end": 88.56,
+     "p": 1.0
+    },
+    {
+     "w": "büyük",
+     "start": 88.56,
+     "end": 89.68,
+     "p": 0.938
+    },
+    {
+     "w": "bilim",
+     "start": 89.68,
+     "end": 90.02,
+     "p": 0.999
+    },
+    {
+     "w": "dergilerinde",
+     "start": 90.02,
+     "end": 90.52,
+     "p": 0.992
+    },
+    {
+     "w": "yayınlanmadı",
+     "start": 90.52,
+     "end": 91.16,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 91.16,
+   "end": 94.84,
+   "text": "Sonraki denemelerde de aynı güçlü etki her zaman çıkmadı",
+   "kelimeler": [
+    {
+     "w": "Sonraki",
+     "start": 91.16,
+     "end": 92.26,
+     "p": 0.5
+    },
+    {
+     "w": "denemelerde",
+     "start": 92.26,
+     "end": 92.8,
+     "p": 0.999
+    },
+    {
+     "w": "de",
+     "start": 92.8,
+     "end": 92.94,
+     "p": 0.991
+    },
+    {
+     "w": "aynı",
+     "start": 92.94,
+     "end": 93.18,
+     "p": 0.999
+    },
+    {
+     "w": "güçlü",
+     "start": 93.18,
+     "end": 93.52,
+     "p": 1.0
+    },
+    {
+     "w": "etki",
+     "start": 93.52,
+     "end": 93.78,
+     "p": 1.0
+    },
+    {
+     "w": "her",
+     "start": 93.78,
+     "end": 94.1,
+     "p": 0.988
+    },
+    {
+     "w": "zaman",
+     "start": 94.1,
+     "end": 94.4,
+     "p": 1.0
+    },
+    {
+     "w": "çıkmadı",
+     "start": 94.4,
+     "end": 94.84,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 94.84,
+   "end": 98.54,
+   "text": "Ama sorduğu soru bağımlılığa bakışı değiştirdi",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 94.84,
+     "end": 95.8,
+     "p": 0.982
+    },
+    {
+     "w": "sorduğu",
+     "start": 95.8,
+     "end": 96.36,
+     "p": 1.0
+    },
+    {
+     "w": "soru",
+     "start": 96.36,
+     "end": 96.72,
+     "p": 1.0
+    },
+    {
+     "w": "bağımlılığa",
+     "start": 96.72,
+     "end": 97.72,
+     "p": 0.988
+    },
+    {
+     "w": "bakışı",
+     "start": 97.72,
+     "end": 98.02,
+     "p": 1.0
+    },
+    {
+     "w": "değiştirdi",
+     "start": 98.02,
+     "end": 98.54,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 98.54,
+   "end": 105.72,
+   "text": "Yani o sorunun cevabı belki de bağımlılığın tersi temiz kalmak değil bağ kurmak",
+   "kelimeler": [
+    {
+     "w": "Yani",
+     "start": 98.54,
+     "end": 99.7,
+     "p": 0.995
+    },
+    {
+     "w": "o",
+     "start": 99.7,
+     "end": 100.28,
+     "p": 0.999
+    },
+    {
+     "w": "sorunun",
+     "start": 100.28,
+     "end": 100.64,
+     "p": 1.0
+    },
+    {
+     "w": "cevabı",
+     "start": 100.64,
+     "end": 101.24,
+     "p": 1.0
+    },
+    {
+     "w": "belki",
+     "start": 101.24,
+     "end": 102.02,
+     "p": 0.641
+    },
+    {
+     "w": "de",
+     "start": 102.02,
+     "end": 102.22,
+     "p": 1.0
+    },
+    {
+     "w": "bağımlılığın",
+     "start": 102.22,
+     "end": 102.72,
+     "p": 0.999
+    },
+    {
+     "w": "tersi",
+     "start": 102.72,
+     "end": 103.24,
+     "p": 1.0
+    },
+    {
+     "w": "temiz",
+     "start": 103.24,
+     "end": 104.0,
+     "p": 0.997
+    },
+    {
+     "w": "kalmak",
+     "start": 104.0,
+     "end": 104.38,
+     "p": 1.0
+    },
+    {
+     "w": "değil",
+     "start": 104.38,
+     "end": 104.62,
+     "p": 1.0
+    },
+    {
+     "w": "bağ",
+     "start": 104.62,
+     "end": 105.28,
+     "p": 0.571
+    },
+    {
+     "w": "kurmak",
+     "start": 105.28,
+     "end": 105.72,
+     "p": 0.984
+    }
+   ]
+  }
+ ]
+}
