@@ -150,7 +150,7 @@
   }
  ],
  "cta_kostum": "kasif",
- "cta_ses": 0.6,
+ "cta_ses": 0.35,
  "cta_bosluk": true,
  "vurgu": [
   "gürleme.",
@@ -179,11 +179,7 @@
   ],
   [
    "sarsılıyor",
-   2.5
-  ],
-  [
-   "çarpıyor",
-   2.5
+   1
   ],
   [
    "ordusu",
@@ -202,11 +198,6 @@
    2
   ],
   [
-   "babil'in",
-   1.0,
-   5
-  ],
-  [
    "ölmeye",
    2.5,
    2
@@ -217,12 +208,8 @@
    7
   ],
   [
-   "davullar",
-   2
-  ],
-  [
    "saldırı",
-   3.5
+   1
   ],
   [
    "sancağı",
@@ -241,6 +228,12 @@
   [
    "indiriyor",
    2
+  ],
+  [
+   "toz",
+   2.5,
+   2,
+   1
   ]
  ],
  "baglar": [
@@ -282,9 +275,9 @@
   "kendi isteğimizle"
  ],
  "muzik_ses": 1.0,
- "sc_ratio": 2.5,
- "sc_threshold": 0.05,
- "sc_release": 600,
+ "sc_ratio": 2,
+ "sc_threshold": 0.12,
+ "sc_release": 300,
  "gecis_ses": 0.0,
  "sahneler": [
   {
@@ -408,6 +401,7 @@
   "sure": 1.6
  },
  "efekt_hp": 40,
- "efekt_sabit": 0.55,
- "muzik_hp": 45
+ "efekt_sabit": 0.75,
+ "muzik_hp": 45,
+ "ses_dogrusal": true
 }

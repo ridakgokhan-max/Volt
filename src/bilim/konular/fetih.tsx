@@ -538,7 +538,7 @@ const Sessiz: S = ({ t, d, ws }) => {
 
 /** 3 · Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor. — ağır çekim gülle */
 const Gurleme: S = ({ t, d, ws }) => {
-  const tg = ws("yer") - 0.25, tc = ws("çarpıyor"), ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
+  const tg = ws("yer") - 0.25, tc = ws("çarpıyor") + 0.42, ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
   const ucus = cl((t - tg) / Math.max(0.5, tc - tg)); // gülle tam "çarpıyor"da varır
   // gülle namlu ekseninde çıkar, eğri çizip surlara iner (ikinci derece Bezier)
   const ax = Math.cos((TOP.ag * Math.PI) / 180), ay = Math.sin((TOP.ag * Math.PI) / 180);
@@ -675,7 +675,7 @@ const Gecmis: S = ({ t, d, ws }) => {
   const kam: Kam = { x: lerp(k1.x, k2.x, bg), y: lerp(k1.y, k2.y, bg), z: lerp(k1.z, k2.z, bg) };
   const D: Dunya = { t, h: 1.7, ates: 0, ordu: 0, konstantin: 1, kartal: 1, sepya: true };
   return (
-    <Ani t={t} yil ust={<g><OnPlan t={t} o={0.45} n={20} renk="#f0e2c0" /><Sis t={t} o={0.3} y={1000} hiz={60} renk="#e8d8b4" /><Kul t={t} o={0.5} n={30} renk="#f0e2c0" yukari={false} /><Kese t={t} a={tmaas - 0.2} muhur={tode} b={Math.max(tode + 1.6, turb + 0.4)} /></g>}>
+    <Ani t={t} yil ust={<g><OnPlan t={t} o={0.45} n={20} renk="#f0e2c0" /><Sis t={t} o={0.3} y={1000} hiz={60} renk="#e8d8b4" /><Kul t={t} o={0.5} n={30} renk="#f0e2c0" yukari={false} /><Kese t={t} a={tmaas - 0.2} muhur={turb - 0.42} b={Math.max(tode + 1.6, turb + 1.2)} /></g>}>
       <DunyaSahne D={D} kam={kam}>
         <Otag h={D.h} t={t} />
         <Urban x={ux} y={uy} s={0.75} t={t} yuru={t > turb ? 1 : 0} flip={t < turb} />
@@ -686,7 +686,7 @@ const Gecmis: S = ({ t, d, ws }) => {
 
 /** 7 · Sultan, bu surları yıkacak bir top dökebilir mi diye sordu. Urban: "Topumun taşları Babil'in surlarını bile toz eder." */
 const Soru: S = ({ t, d, ws }) => {
-  const tu = sonra(ws, "urban", 1.0), tb = ws("babil'in"), tt = sonra(ws, "toz", 1.0);
+  const tu = sonra(ws, "urban", 1.0), tb = ws("babil'in"), tt = sonra(ws, "eder", 1.0) + 0.4; // surlar "toz eder."den sonra dağılır (ses de aynı anda)
   const kam: Kam = t < tu - 0.05
     ? { x: lerp(1140, 1075, cl(t / tu)), y: lerp(1545, 1500, cl(t / tu)), z: lerp(2.1, 3.3, ak(t / tu)) }
     : { x: lerp(980, 880, cl((t - tu) / (d - tu))), y: lerp(1330, 1250, cl((t - tu) / (d - tu))), z: lerp(0.88, 1.15, cl((t - tu) / (d - tu))) };
@@ -894,7 +894,7 @@ const Beyit: S = ({ t, d, ws }) => {
 
 /** 16 · Her şey o sabahki gürleme ile başladı. Belki de ödenmemiş bir maaşla. — açılışa döner (döngü) */
 const Son: S = ({ t, d, ws }) => {
-  const tg = sonra(ws, "başladı", 0.5) + 0.35, tm = ws("maaşla"); // uzak top yankısı cümleden sonra
+  const tg = sonra(ws, "belki", 0.5) - 0.55, tm = ws("maaşla"); // uzak top yankısı cümleden sonra
   // geniş plandan açılış kadrajına doğrusal ileri itme (döngü: son kare = ilk kare)
   const kk = cl(t / d);
   const kam: Kam = { x: lerp(640, 520, kk) + Math.sin(t * 1.3) * 12 * (1 - kk), y: lerp(1490, 1480, kk), z: lerp(1.0, 1.5, kk) };
@@ -912,7 +912,7 @@ const Son: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.65} n={26} />
       <OnBayrak t={t} renk="#7a1a14" y={250} boy={480} />
       <Vinyet g={0.85} />
-      <Sikke t={t} a={tm - 0.25} />
+      <Sikke t={t} a={tm - 0.1} />
     </g>
   );
 };

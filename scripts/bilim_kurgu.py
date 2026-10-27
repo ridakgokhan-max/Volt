@@ -532,7 +532,14 @@ def main(konu):
         save(f"{tmp}/sfx.wav", B.norm(sfx, 0.8))
     save(f"{tmp}/music.wav", B.norm(mus, 0.8))
     hp = f"highpass=f={K['ses_hp']}," if K.get("ses_hp") else ""  # ör. 90: "B" patlaması / uğultu
-    on = (f"[0:a]{hp}loudnorm=I=-16:TP=-2:LRA=9,"
+    ses_asama = "loudnorm=I=-16:TP=-2:LRA=9"
+    if K.get("ses_dogrusal"):  # anlatımı da doğrusal ayarla (vurgu dinamiği ezilmesin)
+        r0 = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner", "-i", f"{tmp}/voice.wav", "-af", f"{hp}ebur128=framelog=quiet", "-f", "null", "-"],
+                            capture_output=True, text=True)
+        Iv = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r0.stderr)[-1])
+        ses_asama = f"volume={-16.0 - Iv:.2f}dB,alimiter=limit=0.9:attack=3:release=80:level=false"
+        print(f"anlatım doğrusal: {Iv:.2f} LUFS → -16")
+    on = (f"[0:a]{hp}{ses_asama},"
           "aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][vk];"
           f"[1:a]{'highpass=f=%s,' % K['muzik_hp'] if K.get('muzik_hp') else ''}aformat=sample_rates=48000:channel_layouts=stereo,volume={K.get('muzik_ses', 0.22 if gercek_muzik else 0.30)}[m];"
           f"[m][vk]sidechaincompress=threshold={K.get('sc_threshold', 0.03)}:ratio={K.get('sc_ratio', 5)}:attack=20:release={K.get('sc_release', 400)}[md];"
