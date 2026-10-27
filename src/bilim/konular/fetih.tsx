@@ -538,7 +538,7 @@ const Sessiz: S = ({ t, d, ws }) => {
 
 /** 3 · Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor. — ağır çekim gülle */
 const Gurleme: S = ({ t, d, ws }) => {
-  const tg = ws("yer") - 0.25, tc = ws("çarpıyor") + 0.42, ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
+  const tg = ws("yer") - 0.72, tc = ws("çarpıyor") + 0.42, ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
   const ucus = cl((t - tg) / Math.max(0.5, tc - tg)); // gülle tam "çarpıyor"da varır
   // gülle namlu ekseninde çıkar, eğri çizip surlara iner (ikinci derece Bezier)
   const ax = Math.cos((TOP.ag * Math.PI) / 180), ay = Math.sin((TOP.ag * Math.PI) / 180);

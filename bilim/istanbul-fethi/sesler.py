@@ -66,7 +66,7 @@ def muzik(B, sure, ara):
     m = np.zeros(int(sure * SR))
     # ---- zaman çizelgesi (kurgu sonrası saniye) ----
     t_sus = ara("susuyor")
-    t_gur = ara("yer") - 0.25  # top gürlemesi: "gürleme." sözünden sonraki dramatik boşlukta
+    t_gur = ara("yer") - 0.72  # top gürlemesi: "gürleme." sözünden hemen sonra
     t_toz = ara("toz")
     t_bir = ara("yıl") - 0.6  # "Bir yıl önce" — geri dönüş
     t_bab = ara("babil'in")
@@ -156,7 +156,7 @@ def cues(B, S, wt, st, sure, ara):
     SR = B.SR
     t_son = ara("sonra")
     t_kus = ara("kuşlar")
-    t_gur = ara("yer") - 0.25  # sözden sonra, boşlukta patlar (görüntü de aynı ana bağlı)
+    t_gur = ara("yer") - 0.72  # "gürleme." biter bitmez, "Yer"den önce patlar (anlatımı örtmesin)
     t_car = ara("çarpıyor") + 0.42  # çarpma sözden sonra, boşlukta (görüntü de aynı ana bağlı)
     # açılış (geleceğe sıçrama): videonun ilk karesinde top ateşi
     def vurus(x, tut=0.12, sonum=0.35):  # keskin geçici vuruş: kısa tut, sonra hızlı sön (yatak boğmasın)
@@ -178,11 +178,14 @@ def cues(B, S, wt, st, sure, ara):
     for k in range(3):
         p(S, t_kus + 0.75 + k * 0.12, E("kumas"), 0.35)  # kuşların kanat çırpışı
     # GÜRLEME: katmanlı top sesi
-    p(S, t_gur - 0.04, Y("cannon_fire_853281.mp3"), 2.0)
-    p(S, t_gur - 0.02, E("patlama"), 2.0)
-    p(S, t_gur, Y("cannon_fire_186930.mp3", af="highpass=f=300"), 3.6)
-    p(S, t_gur - 0.02, Y("low_boom_cinematic_856174.mp3")[: int(0.8 * SR)] * np.linspace(1, 0, int(0.8 * SR)), 0.85)
-    p(S, t_gur, Y("cannon_fire_186930.mp3"), 2.0)  # orta frekans çatlama: telefonda duyulsun
+    def vur2(x, tut=0.15, sonum=0.22):  # "Yer sarsılıyor"u örtmesin: kısa tut, hızlı sön
+        tt = np.arange(len(x)) / SR
+        return x * np.where(tt < tut, 1.0, np.exp(-(tt - tut) / sonum))
+    p(S, t_gur - 0.04, vur2(Y("cannon_fire_853281.mp3")), 2.0)
+    p(S, t_gur - 0.02, vur2(E("patlama")), 2.0)
+    p(S, t_gur, vur2(Y("cannon_fire_186930.mp3", af="highpass=f=300")), 3.6)
+    p(S, t_gur - 0.02, Y("low_boom_cinematic_856174.mp3")[: int(0.6 * SR)] * np.linspace(1, 0, int(0.6 * SR)) ** 2, 0.85)
+    p(S, t_gur, vur2(Y("cannon_fire_186930.mp3")), 2.0)  # orta frekans çatlama: telefonda duyulsun
     p(S, t_gur + 0.35, B.whoosh(max(1.0, t_car - t_gur - 0.3)), 0.25)  # ağır çekim gülle
     # ÇARPMA
     p(S, t_car - 0.03, E("darbe_agir"), 2.0)
@@ -249,7 +252,7 @@ def cues(B, S, wt, st, sure, ara):
     p(S, t_29 - 0.9, B.riser(0.9), 0.25)
     p(S, ara("sancağı"), E("kumas"), 0.4)
     p(S, ara("anlatılanlara") + 0.4, E("zil"), 0.15)
-    p(S, ara("örümcek"), E("sihir"), 0.18)
+    p(S, ara("örümcek"), E("sihir"), 0.08)
     # son: uzak top yankısı + sikke
     t_g2 = ara("gürleme", sonra=ara("genç"))
     t_bas = ara("başladı", sonra=t_g2)
