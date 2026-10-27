@@ -4,7 +4,7 @@
  "sure": 101.63,
  "lufs": -14.1,
  "tepe_dbtp": -1.4,
- "hareket_ortalama": 4.6,
+ "hareket_ortalama": 4.63,
  "bulgular": [
   {
    "seviye": "UYARI",
@@ -24,7 +24,7 @@
   {
    "seviye": "BİLGİ",
    "alan": "Söz",
-   "mesaj": "duyulan konuşma metinle %94 uyumlu"
+   "mesaj": "duyulan konuşma metinle %93 uyumlu"
   }
  ]
 }
