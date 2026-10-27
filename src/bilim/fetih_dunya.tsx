@@ -672,12 +672,15 @@ export const Atis: React.FC<{ u: number; t: number; hedef?: { x: number; y: numb
         </g>
       )}
       {/* namlu dumanı */}
-      {namluVar && Array.from({ length: 14 }).map((_, i) => {
-        const k = cl(u * 1.2 - i * 0.03);
-        const a = ((TOP.ag + (rnd(i, 1) - 0.5) * 60) * Math.PI) / 180;
-        const d = 40 + k * (120 + rnd(i, 2) * 220);
-        return <circle key={i} cx={n.x + Math.cos(a) * d} cy={n.y + Math.sin(a) * d - k * 220} r={50 + k * (110 + rnd(i, 3) * 90)}
-          fill="url(#duman)" opacity={(1 - cl(u / 2.4)) * 0.3} />;
+      {namluVar && Array.from({ length: 12 }).map((_, i) => {
+        // namlu ağzından eksen boyunca çıkan, kabaran ve yükselerek dağılan duman topakları
+        const dog = i * 0.06;
+        const k = cl((u - dog) / 2.2);
+        if (u < dog) return null;
+        const a = ((TOP.ag + (rnd(i, 1) - 0.5) * 30) * Math.PI) / 180;
+        const d = 30 + Math.sqrt(k) * (160 + rnd(i, 2) * 200);
+        return <circle key={i} cx={n.x + Math.cos(a) * d + k * 40} cy={n.y + Math.sin(a) * d - k * (120 + rnd(i, 4) * 120)} r={24 + k * (70 + rnd(i, 3) * 60)}
+          fill="url(#duman)" opacity={(1 - k) * 0.55} />;
       })}
       {/* gülle */}
       {namluVar && carpVar && ucus < 1 && (

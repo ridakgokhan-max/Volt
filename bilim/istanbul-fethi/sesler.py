@@ -66,7 +66,7 @@ def muzik(B, sure, ara):
     m = np.zeros(int(sure * SR))
     # ---- zaman çizelgesi (kurgu sonrası saniye) ----
     t_sus = ara("susuyor")
-    t_gur = ara("yer") - 0.6  # top gürlemesi: "gürleme." sözünden sonraki dramatik boşlukta
+    t_gur = ara("yer") - 0.25  # top gürlemesi: "gürleme." sözünden sonraki dramatik boşlukta
     t_toz = ara("toz")
     t_bir = ara("yıl") - 0.6  # "Bir yıl önce" — geri dönüş
     t_bab = ara("babil'in")
@@ -156,7 +156,7 @@ def cues(B, S, wt, st, sure, ara):
     SR = B.SR
     t_son = ara("sonra")
     t_kus = ara("kuşlar")
-    t_gur = ara("yer") - 0.6  # sözden sonra, boşlukta patlar (görüntü de aynı ana bağlı)
+    t_gur = ara("yer") - 0.25  # sözden sonra, boşlukta patlar (görüntü de aynı ana bağlı)
     t_car = ara("çarpıyor")
     # açılış (geleceğe sıçrama): videonun ilk karesinde top ateşi
     def vurus(x, tut=0.12, sonum=0.35):  # keskin geçici vuruş: kısa tut, sonra hızlı sön (yatak boğmasın)
@@ -251,8 +251,8 @@ def cues(B, S, wt, st, sure, ara):
     yk *= np.linspace(1, 0, len(yk))
     p(S, t_bas + 0.35, yk, 1.4)  # cümleden sonraki boşlukta yankılı uzak top
     t_m = ara("maaşla")
-    p(S, t_m + 0.6, E("para"), 0.8)  # sikke yere değer ("maaşla" bittikten sonra)
-    p(S, t_m + 0.63, E("metal"), 0.35)
+    p(S, t_m + 0.3, E("para"), 0.8)  # sikke yere değer
+    p(S, t_m + 0.33, E("metal"), 0.35)
     # döngü dikişi: son 0,45 sn'de fitil cızırtısı yükselir → videonun başındaki patlamaya bağlanır
     cz = _cizirti(B, 0.45) * np.linspace(0.2, 1, int(0.45 * SR))
     p(S, sure - 0.47, cz, 0.3)

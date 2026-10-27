@@ -235,7 +235,6 @@ const Otag: React.FC<{ h: number; t: number }> = ({ h, t }) => {
       <path d="M 0 -190 L 150 -70 L 180 0 L 60 0 Z" fill="#000" opacity={0.2} />
       <path d="M -30 0 L 0 -60 L 30 0 Z" fill="#1a0806" />
       <rect x={-3} y={-250} width={6} height={62} fill="#2a1f18" />
-      <circle cx={0} cy={-254} r={10} fill={ALTIN} />
       <Bayrak x={0} y={-188} renk={KAN} k={1} t={t} buyuk />
     </g>
   );
@@ -427,7 +426,7 @@ const Sikke: React.FC<{ t: number; a: number }> = ({ t, a }) => {
         <ellipse cx={0} cy={0} rx={70 * Math.max(0.12, don)} ry={ry} fill={ALTIN} stroke="#8a6a1c" strokeWidth={6} />
         <ellipse cx={0} cy={0} rx={48 * Math.max(0.1, don)} ry={ry * 0.68} fill="none" stroke="#8a6a1c" strokeWidth={4} />
       </g>
-      {v > 0 && v < 1.0 && <ellipse cx={540} cy={zemin + 20} rx={70 + v * 360} ry={(70 + v * 360) * 0.3} fill="none" stroke="#ffe7a0" strokeWidth={4} opacity={1 - v} />}
+      {v > 0 && v < 1.0 && <ellipse cx={540} cy={zemin + 20} rx={70 + v * 120} ry={(70 + v * 120) * 0.3} fill="none" stroke="#ffe7a0" strokeWidth={4} opacity={1 - v} />}
     </g>
   );
 };
@@ -458,7 +457,7 @@ const Harabe: React.FC<{ t: number }> = ({ t }) => (
       <rect x={-34} y={-60} width={300} height={14} fill="#5c5056" />
     </g>
     {/* genç sultan, arkadan: büyük beyaz kavuk, kırmızı kaftan; hafif nefes */}
-    <g transform={`translate(230 ${2055 + Math.sin(t * 1.6) * 3}) scale(2.1)`}>
+    <g transform={`translate(${230 - t * 4} ${2055 + Math.sin(t * 1.6) * 3 - t * 6}) scale(${2.1 * (1 + t * 0.022)})`}>
       <path d="M -70 0 L -58 -150 Q 0 -178 58 -150 L 70 0 Z" fill="#7a1a14" />
       <path d="M -58 -150 Q 0 -178 58 -150 L 50 -120 Q 0 -140 -50 -120 Z" fill="#5a120e" />
       <rect x={-14} y={-196} width={28} height={30} fill="#c9a07a" />
@@ -539,10 +538,16 @@ const Sessiz: S = ({ t, d, ws }) => {
 
 /** 3 · Ve bir gürleme. Yer sarsılıyor. Yarım tonluk bir taş gülle surlara çarpıyor. — ağır çekim gülle */
 const Gurleme: S = ({ t, d, ws }) => {
-  const tg = ws("yer") - 0.6, tc = ws("çarpıyor"), ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
+  const tg = ws("yer") - 0.25, tc = ws("çarpıyor"), ty = ws("yarım"); // top, "gürleme." sözünden sonraki boşlukta patlar
   const ucus = cl((t - tg) / Math.max(0.5, tc - tg)); // gülle tam "çarpıyor"da varır
-  const bx = lerp(NAMLU.x, HEDEF.x, easeIO(ucus) * 0.15 + ucus * 0.85);
-  const by = lerp(NAMLU.y, HEDEF.y, ucus) - Math.sin(ucus * Math.PI) * 160;
+  // gülle namlu ekseninde çıkar, eğri çizip surlara iner (ikinci derece Bezier)
+  const ax = Math.cos((TOP.ag * Math.PI) / 180), ay = Math.sin((TOP.ag * Math.PI) / 180);
+  const yol = (u: number): [number, number] => {
+    const c1x = NAMLU.x + ax * 380, c1y = NAMLU.y + ay * 380 - 120;
+    const q = 1 - u;
+    return [q * q * NAMLU.x + 2 * q * u * c1x + u * u * HEDEF.x, q * q * NAMLU.y + 2 * q * u * c1y + u * u * HEDEF.y];
+  };
+  const [bx, by] = yol(ucus);
   let kam: Kam;
   const ilk: Kam = { x: 600, y: 1490, z: lerp(1.6, 1.75, cl(t / Math.max(0.1, tg + 0.3))) };
   const takip: Kam = { x: lerp(560, bx, 0.85), y: lerp(1500, by + 10, 0.85), z: lerp(1.9, 2.3, ucus) }; // namlu altyazı bandının altına iner
@@ -564,11 +569,12 @@ const Gurleme: S = ({ t, d, ws }) => {
         <Atis u={t > tg ? t - tg : -1} t={t} sadece="namlu" />
         {t > tg && ucus < 1 && (
           <g>
-            {Array.from({ length: 8 }).map((_, i) => {
-              const k = cl(ucus - i * 0.02);
-              const x = lerp(NAMLU.x, HEDEF.x, easeIO(k) * 0.15 + k * 0.85), y = lerp(NAMLU.y, HEDEF.y, k) - Math.sin(k * Math.PI) * 160;
-              return <circle key={i} cx={x} cy={y} r={20 - i * 2} fill="#fff1b0" opacity={0.25 - i * 0.03} />;
-            })}
+            {(() => {
+              // incelen tek iz (sıra sıra daire değil)
+              const nk = Array.from({ length: 10 }).map((_, i) => yol(cl(ucus - i * 0.03)));
+              const sol = nk.map(([x, y], i) => `${x - (10 - i) * 1.2},${y}`), sag = nk.map(([x, y], i) => `${x + (10 - i) * 1.2},${y}`).reverse();
+              return <polygon points={[...sol, ...sag].join(" ")} fill="#fff1b0" opacity={0.35} />;
+            })()}
             <circle cx={bx} cy={by} r={22 * (1 + 1.5 * Math.pow(ucus, 4))} fill="#3a342e" stroke="#120e0a" strokeWidth={3} />
             <circle cx={bx - 6} cy={by - 7} r={6} fill="#8a7f72" />
             {etiket > 0.01 && (
@@ -702,7 +708,7 @@ const Haftalar: S = ({ t, d, ws }) => {
   // gün-gece döngüsü: "gündüz"de gün ortası, "gece"de gece; sonra hızlanan döngü
   const P = 2 * Math.max(0.8, tgc - tg); // bir gün-gece: "gündüz" sözünde öğle, "gece" sözünde gece yarısı
   const h = 1 + Math.cos((2 * Math.PI * (t - tg)) / P);
-  const gun = lerp(2, 17, cl(t / Math.max(0.5, d - 0.5))); // 6 Nisan = 1. gün → 22 Nisan = 17. gün
+  const gun = lerp(2, 17, cl(t / Math.max(0.5, d - 1.0))); // 6 Nisan = 1. gün → 22 Nisan = 17. gün
   const kam: Kam = { ...pk(HEDEF.x, 1080, 1), z: lerp(0.95, 1.15, cl(t / d)) };
   const gece = cl(1 - h);
   const atisAn = Math.floor(t / 0.9) * 0.9;
@@ -906,7 +912,7 @@ const Son: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.65} n={26} />
       <OnBayrak t={t} renk="#7a1a14" y={250} boy={480} />
       <Vinyet g={0.85} />
-      <Sikke t={t} a={tm + 0.05} />
+      <Sikke t={t} a={tm - 0.25} />
     </g>
   );
 };

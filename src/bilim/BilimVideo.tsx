@@ -401,7 +401,7 @@ export const BilimVideo: React.FC = () => (
     ) : null}
     {SC.map((sc, idx) => {
       const real = Math.round(sc.bas * FPS);
-      const from = Math.max(0, real - (idx === 0 && !AC ? 0 : OV));
+      const from = Math.max(0, real - (idx === 0 && !AC ? 0 : sc.gecis === "kes" ? 0 : OV)); // film kesmesi: üst üste binme yok, sahne kesme anında başlar (donma yok)
       const dur = Math.round(sc.son * FPS) - from + (idx === SC.length - 1 ? 30 : OV);
       return (
         <Sequence key={sc.id} from={from} durationInFrames={dur}>
