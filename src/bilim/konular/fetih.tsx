@@ -453,7 +453,7 @@ const Harabe: React.FC<{ t: number }> = ({ t }) => (
     {Array.from({ length: 9 }).map((_, i) => (
       <path key={i} d={`M ${i * 130 - 20} ${1500 + (i % 3) * 60} l 120 -10 l 10 60 l -125 12 Z`} fill="#3a3036" stroke="#1a1418" strokeWidth={3} />
     ))}
-    <g transform="translate(720 1440) rotate(-8)">
+    <g transform="translate(780 1530) rotate(-8)">
       <rect x={-34} y={-60} width={300} height={68} rx={10} fill="#4a3e44" stroke="#1a1418" strokeWidth={4} />
       <rect x={-34} y={-60} width={300} height={14} fill="#5c5056" />
     </g>
@@ -545,7 +545,7 @@ const Gurleme: S = ({ t, d, ws }) => {
   const by = lerp(NAMLU.y, HEDEF.y, ucus) - Math.sin(ucus * Math.PI) * 160;
   let kam: Kam;
   const ilk: Kam = { x: 600, y: 1490, z: lerp(1.6, 1.75, cl(t / Math.max(0.1, tg + 0.3))) };
-  const takip: Kam = { x: lerp(560, bx, 0.85), y: lerp(1500, by + 40, 0.85), z: lerp(1.9, 2.3, ucus) }; // namlu altyazı bandının altına iner
+  const takip: Kam = { x: lerp(560, bx, 0.85), y: lerp(1500, by + 10, 0.85), z: lerp(1.9, 2.3, ucus) }; // namlu altyazı bandının altına iner
   const gk = easeIO((t - tg - 0.15) / 0.7); // ilk plandan gülle takibine yumuşak geçiş (sıçrama yok)
   if (t < tc) kam = { x: lerp(ilk.x, takip.x, gk), y: lerp(ilk.y, takip.y, gk), z: lerp(ilk.z, takip.z, gk) };
   else kam = { x: HEDEF.x, y: HEDEF.y + 40, z: lerp(1.7, 1.95, cl((t - tc) / 1.5)) };
@@ -761,7 +761,7 @@ const Teklif: S = ({ t, d, ws }) => {
       </DunyaSahne>
       <OnPlan t={t} o={0.25} renk="#f4e4c0" />
       <Vinyet g={0.65} />
-      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(1.2, tts - 0.9)} y={380} />
+      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(1.2, tts - 0.9)} y={420} />
       <Ferman t={t} a={tts - 0.35} b={d - 0.15} />
     </g>
   );
@@ -860,7 +860,7 @@ const Fetih: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.35} renk="#ffd9a0" />
       <OnBayrak t={t} renk="#8a1c14" sag y={220} boy={600} o={cl((t - ta + 0.3) / 0.5)} />
       <Vinyet g={0.7} />
-      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={380} />
+      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={420} />
     </g>
   );
 };
@@ -881,7 +881,7 @@ const Beyit: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.8} n={32} renk="#efe2c8" yon={-1} />
       <Harabe t={t} />
       <Vinyet g={0.9} />
-      <IsimKarti t={t} a={tk - 0.1} ad="FARSÇA BEYİT" rol="Tursun Bey'in kaydı" sure={d - tk - 0.1} />
+      <IsimKarti t={t} a={tk - 0.1} ad="FARSÇA BEYİT" rol="Tursun Bey'in kaydı" sure={Math.max(1.5, d - tk - 1.3)} />
     </g>
   );
 };

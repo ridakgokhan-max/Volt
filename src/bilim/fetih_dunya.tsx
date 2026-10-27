@@ -825,18 +825,27 @@ export const Saldiri: React.FC<{ D: Dunya }> = ({ D }) => {
 
 // ---------------------------------------------------------------- KÖS (davul) — ordugâhta
 export const Kos: React.FC<{ x: number; y: number; s?: number; vur: number; t: number; h: number }> = ({ x, y, s = 1, vur, t, h }) => {
-  const c = renk(h, [[0, "#3a1a10"], [1, "#7a3a1c"], [2, "#8a4a24"]]);
+  // yandan görünen kös (büyük kazan davul): bakır gövde, çapraz gergi ipleri, ince deri, ayaklık
+  const c = renk(h, [[0, "#5a2a12"], [1, "#9a5a26"], [2, "#b06a2e"]]);
+  const c2 = renk(h, [[0, "#3a1a0a"], [1, "#6a3a18"], [2, "#7a4420"]]);
   const sop = Math.sin(t * Math.PI * 2 * 1.6) * 0.5 + 0.5;
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <path d="M -70 0 Q -70 60 0 70 Q 70 60 70 0 Z" fill={c} />
-      <ellipse cx={0} cy={0} rx={70} ry={20} fill="#d9c49a" />
-      <ellipse cx={0} cy={0} rx={70} ry={20} fill="#fff" opacity={vur * (1 - sop) * 0.5} />
-      <line x1={-40} y1={-80 + sop * 60} x2={-10} y2={-6 + sop * 6} stroke="#5a3a22" strokeWidth={7} strokeLinecap="round" />
-      <line x1={40} y1={-20 - sop * 60} x2={14} y2={-6} stroke="#5a3a22" strokeWidth={7} strokeLinecap="round" />
+      <path d="M -30 70 L -46 120 M 30 70 L 46 120 M 0 72 L 0 122" stroke="#2a1a0e" strokeWidth={8} />
+      <path d="M -78 -6 L 78 -6 Q 74 60 0 78 Q -74 60 -78 -6 Z" fill={c} />
+      <path d="M -78 -6 L 78 -6 Q 74 60 0 78 Z" fill={c2} opacity={0.5} />
+      {Array.from({ length: 7 }).map((_, i) => {
+        const xa = -70 + i * 23.3;
+        return <path key={i} d={`M ${xa} -4 L ${xa + 11} 60 L ${xa + 23} -4`} stroke="#e8d6a8" strokeWidth={2.5} fill="none" opacity={0.85} />;
+      })}
+      <rect x={-82} y={-10} width={164} height={8} rx={4} fill="#c9a24e" />
+      <ellipse cx={0} cy={-10} rx={80} ry={9} fill="#e6d4a8" />
+      <ellipse cx={0} cy={-10} rx={80} ry={9} fill="#fff" opacity={vur * (1 - sop) * 0.6} />
+      <path d={`M -96 ${-90 + sop * 72} L -24 -14`} stroke="#4a2c16" strokeWidth={9} strokeLinecap="round" />
+      <path d={`M 96 ${-18 - sop * 72} L 26 -14`} stroke="#4a2c16" strokeWidth={9} strokeLinecap="round" />
       {vur > 0 && [0, 1].map((k) => {
         const u = (t * 1.6 + k * 0.5) % 1;
-        return <ellipse key={k} cx={0} cy={0} rx={70 + u * 160} ry={20 + u * 50} fill="none" stroke="#ffd9a0" strokeWidth={3} opacity={(1 - u) * 0.5 * vur} />;
+        return <ellipse key={k} cx={0} cy={-10} rx={80 + u * 170} ry={9 + u * 40} fill="none" stroke="#ffd9a0" strokeWidth={3} opacity={(1 - u) * 0.5 * vur} />;
       })}
     </g>
   );
