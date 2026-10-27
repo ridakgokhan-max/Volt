@@ -184,7 +184,7 @@ const Soru: S = ({ t, d }) => {
       <g transform={`translate(${lerp(-300, 330, ap(t, 2.2, 0.8))} 1110)`}><Fare x={0} y={0} s={1.1} t={t} mood="merak" walk={t < 3 ? t : 0} /></g>
       <Sise x={810} y={1130} s={0.7} dolu={0.8} renk={MOR} etiket="?" parilti={1} t={t} k={sp(t, 1.1)} />
       <g opacity={park} transform={`translate(0 ${(1 - park) * 40})`}>
-        <Tag x={540} y={300} text="BİR PSİKOLOG + BİR PARK" size={46} k={park} bg={GREEN} color="#fff" rot={-2} />
+        <Tag x={540} y={360} text="BİR PSİKOLOG + BİR PARK" size={46} k={park} bg={GREEN} color="#fff" rot={-2} />
       </g>
     </Kam>
   );
@@ -198,7 +198,7 @@ const KafesSahne: S = ({ t, d, ws }) => {
   return (
     <Kam t={t} d={d} z0={1} z1={1.16} oy={900}>
       <Zerre t={t} renk={GRI} o={0.25} />
-      <g transform={`translate(540 ${lerp(-120, 330, sp(t, 0.1, 10))})`}>
+      <g transform={`translate(540 ${lerp(-120, 450, sp(t, 0.1, 10))})`}>
         <text textAnchor="middle" fontSize={170} fontWeight={900} fill={KREM} stroke={INK} strokeWidth={16} paintOrder="stroke" style={font} opacity={0.95}>1970'ler</text>
       </g>
       {/* lamba konisi */}
@@ -225,7 +225,7 @@ const Siseler: S = ({ t, d, ws }) => {
       <Sise x={340} y={960} s={1.05} dolu={0.85} renk={SU} etiket="SU" t={t} k={sp(t, tn - 0.25)} />
       <Sise x={740} y={960} s={1.05} dolu={0.85} renk={MOR} etiket="UYUŞTURUCU" parilti={ap(t, tu, 0.6)} t={t} k={sp(t, tu - 0.25)} />
       <Fare x={540} y={1170} s={0.6} t={t} mood="merak" flip={t > tu + 0.3} />
-      <Baslik y={400} text="İKİ ŞİŞE" k={sp(t, 0.2)} size={110} renk={KREM} />
+      <Baslik y={470} text="İKİ ŞİŞE" k={sp(t, 0.2)} size={110} renk={KREM} />
     </Kam>
   );
 };
@@ -273,7 +273,7 @@ const Merak: S = ({ t, d, ws }) => {
     <Kam t={t} d={d} z0={1} z1={1.1} oy={820}>
       <Zerre t={t} renk={ACC} o={0.18} />
       {/* bilim insanı (silüet, kimseye benzetilmez) */}
-      <g transform={`translate(${lerp(-200, 260, sp(t, tb - 0.4, 12))} 1240)`}>
+      <g transform={`translate(${lerp(-200, 260, sp(t, tb - 0.4, 12))} 1160)`}>
         <path d="M -120 0 C -120 -170 120 -170 120 0 Z" fill="#f4efe2" stroke={INK} strokeWidth={8} />
         <path d="M -20 -150 L 0 -60 L 20 -150" fill="none" stroke={INK} strokeWidth={6} />
         <circle cx={0} cy={-235} r={80} fill="#e8c6a0" stroke={INK} strokeWidth={8} />
@@ -282,7 +282,7 @@ const Merak: S = ({ t, d, ws }) => {
         <path d={t > tk ? "M -22 -190 Q 0 -178 22 -190" : "M -20 -190 L 20 -190"} stroke={INK} strokeWidth={6} fill="none" strokeLinecap="round" />
         <g transform={`translate(110 -110) rotate(${-30 + W(t, 2) * 5})`}><rect x={-14} y={-90} width={28} height={90} rx={12} fill="#e8c6a0" stroke={INK} strokeWidth={6} /></g>
       </g>
-      <Tag x={300} y={1290} text="BRUCE ALEXANDER" size={36} k={sp(t, tb)} bg={KREM} rot={2} />
+      <Tag x={290} y={1200} text="BRUCE ALEXANDER" size={36} k={sp(t, tb)} bg={KREM} rot={2} />
       {/* düşünce balonu */}
       <g opacity={ap(t, tm - 0.3, 0.5)}>
         <circle cx={430} cy={940} r={18} fill={KREM} stroke={INK} strokeWidth={5} />
@@ -296,7 +296,7 @@ const Merak: S = ({ t, d, ws }) => {
           {kafesVurgu > 0.01 && <circle cx={0} cy={0} r={300 * kafesVurgu} fill="none" stroke={RED} strokeWidth={14} strokeDasharray="30 18" transform={`rotate(${t * 40})`} />}
         </g>
       </g>
-      <Baslik y={260} text="YA SORUN KAFESSE?" k={sp(t, tk - 0.3, 9)} size={86} />
+      <Baslik y={390} text="YA SORUN KAFESSE?" k={sp(t, tk - 0.3, 9)} size={86} />
     </Kam>
   );
 };
@@ -319,7 +319,7 @@ const ParkSahne: S = ({ t, d, ws }) => {
   return (
     <Kam t={t} d={d} z0={1.12} z1={1.0} oy={1000}>
       <rect x={-60} y={-60} width={1200} height={2100} fill="#9ad1f0" opacity={ac} />
-      <circle cx={930} cy={700} r={80} fill="#ffe066" stroke={INK} strokeWidth={7} opacity={ac} />
+      <circle cx={170} cy={700} r={80} fill="#ffe066" stroke={INK} strokeWidth={7} opacity={ac} />
       <Zerre t={t} renk="#fff" o={0.3 * ac} yukari />
       <Park t={t} k={ac} />
       <Kafes x={330} y={780} w={420} h={400} patla={ap(t, tp - 0.35, 0.7)} o={1 - ap(t, tp + 0.2, 0.3)} />
@@ -333,12 +333,12 @@ const ParkSahne: S = ({ t, d, ws }) => {
         const u = (t - ta + 0.2 - i * 0.25) % 2.2;
         return u > 0 ? <Kalp key={i} x={[420, 640, 300, 820][i]} y={1000 - u * 160} s={0.9 + u * 0.3} o={1 - u / 2.2} /> : null;
       })}
-      <Baslik y={250} text="FARE PARKI" k={sp(t, tp - 0.1, 9)} size={120} renk={ACC} />
-      <Tag x={540} y={400} text="200 KAT BÜYÜK" size={50} k={sp(t, t200 - 0.15)} bg="#fff" rot={2} />
+      <Baslik y={400} text="FARE PARKI" k={sp(t, tp - 0.1, 9)} size={120} renk={ACC} />
+      <Tag x={540} y={530} text="200 KAT BÜYÜK" size={50} k={sp(t, t200 - 0.15)} bg="#fff" rot={2} />
       <g opacity={ap(t, to - 0.2, 0.3) * (1 - ap(t, tf - 0.3, 0.3))}>
-        <Tag x={540} y={530} text="OYUNCAK · TÜNEL · SAKLANMA YERİ" size={34} k={sp(t, to - 0.1)} bg={KREM} rot={-1} />
+        <Tag x={540} y={650} text="OYUNCAK · TÜNEL · SAKLANMA YERİ" size={34} k={sp(t, to - 0.1)} bg={KREM} rot={-1} />
       </g>
-      <Tag x={540} y={530} text="VE ARKADAŞLAR" size={52} k={sp(t, tf)} bg="#ff8fab" rot={-2} />
+      <Tag x={540} y={650} text="VE ARKADAŞLAR" size={52} k={sp(t, tf)} bg="#ff8fab" rot={-2} />
     </Kam>
   );
 };
@@ -364,7 +364,7 @@ const Sonuc: S = ({ t, d, ws }) => {
         <circle r={140} fill="none" stroke={RED} strokeWidth={16} />
         <line x1={-100} y1={100} x2={100} y2={-100} stroke={RED} strokeWidth={16} />
       </g>
-      <Baslik y={300} text="NEREDEYSE HİÇ DOKUNMADILAR" k={sp(t, tn - 0.15, 10)} size={66} renk={ACC} />
+      <Baslik y={420} text="NEREDEYSE HİÇ DOKUNMADILAR" k={sp(t, tn - 0.15, 10)} size={66} renk={ACC} />
     </Kam>
   );
 };
@@ -389,9 +389,9 @@ const Donus: S = ({ t, d, ws }) => {
         <Fare x={0} y={0} s={0.6} t={t} mood={yol > 0.95 ? "mutlu" : "sersem"} walk={yol > 0 && yol < 1 ? t : 0} />
       </g>
       <Sise x={880} y={760} s={0.5} dolu={0.8} renk={SU} etiket="SU" t={t} k={sp(t, tg - 0.6)} />
-      <Txt x={270} y={420} text="KAFES" size={72} color={GRI} stroke={INK} />
-      <Txt x={810} y={420} text="PARK" size={72} color={ACC} stroke={INK} />
-      <Baslik y={260} text="ÇOĞU SUYA DÖNDÜ" k={sp(t, tg - 0.2, 9)} size={84} renk={KREM} />
+      <Txt x={270} y={520} text="KAFES" size={72} color={GRI} stroke={INK} />
+      <Txt x={810} y={520} text="PARK" size={72} color={ACC} stroke={INK} />
+      <Baslik y={330} text="ÇOĞU SUYA DÖNDÜ" k={sp(t, tg - 0.2, 9)} size={84} renk={KREM} />
     </Kam>
   );
 };
@@ -441,7 +441,7 @@ const Dipnot: S = ({ t, d, ws }) => {
           <text textAnchor="middle" y={-30} fontSize={190} fontWeight={900} fill={INK} style={font}>?</text>
         </g>
       )}
-      <Baslik y={300} text="AMA SORU HER ŞEYİ DEĞİŞTİRDİ" k={sp(t, td - 0.4, 10)} size={60} renk={ACC} rot={0} />
+      <Baslik y={400} text="AMA SORU HER ŞEYİ DEĞİŞTİRDİ" k={sp(t, td - 0.4, 10)} size={60} renk={ACC} rot={0} />
     </Kam>
   );
 };
@@ -460,12 +460,12 @@ const Final: S = ({ t, d, ws }) => {
       <Fare x={lerp(850, 700, yak)} y={1120} s={0.8} t={t} mood={yak > 0.6 ? "mutlu" : "merak"} flip renk="#e6d9c4" ph={1.5} />
       <Kalp x={540} y={900} s={3.2 * k2 * (1 + 0.05 * W(t, 6))} />
       <g opacity={ap(t, tt - 0.3, 0.4)}>
-        <Txt x={540} y={330} text="BAĞIMLILIĞIN TERSİ" size={70} color={KREM} stroke={INK} />
+        <Txt x={540} y={400} text="BAĞIMLILIĞIN TERSİ" size={70} color={KREM} stroke={INK} />
         <g opacity={1 - ap(t, tb - 0.3, 0.3)}>
-          <Txt x={540} y={470} text="TEMİZ KALMAK DEĞİL…" size={56} color={KREM} stroke={INK} />
+          <Txt x={540} y={530} text="TEMİZ KALMAK DEĞİL…" size={56} color={KREM} stroke={INK} />
         </g>
       </g>
-      <Baslik y={490} text="BAĞ KURMAK" k={k2} size={130} renk={ACC} />
+      <Baslik y={560} text="BAĞ KURMAK" k={k2} size={130} renk={ACC} />
     </Kam>
   );
 };
