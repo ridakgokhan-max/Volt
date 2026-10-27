@@ -4,12 +4,17 @@
  "sure": 79.25,
  "lufs": -14.2,
  "tepe_dbtp": -2.2,
- "hareket_ortalama": 2.82,
+ "hareket_ortalama": 2.87,
  "bulgular": [
   {
    "seviye": "KALDI",
    "alan": "Hareket",
    "mesaj": "ölü an 3.0–4.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 13.5–14.5 sn (ekran neredeyse duruyor)"
   },
   {
    "seviye": "KALDI",
@@ -75,6 +80,11 @@
    "seviye": "KALDI",
    "alan": "Hareket",
    "mesaj": "ölü an 73.0–75.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 75.5–76.5 sn (ekran neredeyse duruyor)"
   },
   {
    "seviye": "BİLGİ",
