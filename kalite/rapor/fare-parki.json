@@ -1,0 +1,85 @@
+{
+ "konu": "fare-parki",
+ "sonuc": "KALDI",
+ "sure": 79.25,
+ "lufs": -14.2,
+ "tepe_dbtp": -2.2,
+ "hareket_ortalama": 2.82,
+ "bulgular": [
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 3.0–4.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 17.5–20.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 21.5–22.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 23.0–24.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 26.5–28.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 30.5–32.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 38.5–39.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 49.0–50.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 51.0–52.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 56.0–58.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 59.0–60.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 61.0–62.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 67.0–69.5 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "KALDI",
+   "alan": "Hareket",
+   "mesaj": "ölü an 73.0–75.0 sn (ekran neredeyse duruyor)"
+  },
+  {
+   "seviye": "BİLGİ",
+   "alan": "Söz",
+   "mesaj": "duyulan konuşma metinle %95 uyumlu"
+  }
+ ]
+}

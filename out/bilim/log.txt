@@ -1,13 +1,14 @@
-metinle hizalandı: transkript 191 -> metin 186 kelime
-ses başlangıcına oturtulan kelime: 59
-CTA: [{'tur': 'begen', 'bas': 47.13, 'kostum': 'kasif'}, {'tur': 'takip', 'bas': 99.976, 'kostum': 'kasif'}]
-ses vurgusu: 14 yer
-anlatım doğrusal: -14.70 LUFS → -16
-doğrusal yükseklik: ölçülen -15.00 LUFS, kazanç +1.00 dB
-istanbul-fethi: 124.4 sn kayıt -> 101.6 sn video, 186 kelime, 55 altyazı satırı, 16 sahne
+metinle hizalandı: transkript 175 -> metin 173 kelime
+ses başlangıcına oturtulan kelime: 52
+CTA: [{'tur': 'begen', 'bas': 55.576, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 71.427, 'yazi': 'Sence asıl sebep ne?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 77.323, 'kostum': 'onluk'}]
+ses vurgusu: 13 yer
+müzik: duygusal -> echoes_of_lumen-hope-music-hopeful-piano-586991.mp3
+anlatım doğrusal: -18.60 LUFS → -16
+doğrusal yükseklik: ölçülen -16.10 LUFS, kazanç +2.10 dB
+fare-parki: 106.3 sn kayıt -> 79.2 sn video, 173 kelime, 48 altyazı satırı, 10 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.5 Mb/98.9 Mb
+Getting Headless Shell - 9.6 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -24,11 +25,11 @@ Bundling 32%
 Bundling 43%
 Bundling 54%
 Bundling 65%
-Bundling 70%
-Bundling 75%
-Bundling 80%
-Bundling 85%
-Bundling 91%
+Bundling 71%
+Bundling 76%
+Bundling 81%
+Bundling 87%
+Bundling 92%
 Bundling 98%
 Bundling 100%
 Getting composition
@@ -37,23 +38,28 @@ Getting composition
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [90mComposition          Bilim[39m
 [90mCodec                h264[39m
-[90mOutput               out/bilim/istanbul-fethi.mp4[39m
+[90mOutput               out/bilim/fare-parki.mp4[39m
 [90mConcurrency          2x[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/istanbul-fethi.mp4[39m [90m48.4 MB[39m
-Traceback (most recent call last):
-  File "/home/runner/work/Volt/Volt/kalite/oto_kontrol.py", line 38, in <module>
-    pr = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", V],
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 548, in run
-    with Popen(*popenargs, **kwargs) as process:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1026, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1955, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe'
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[34m+                    out/bilim/fare-parki.mp4[39m [90m27.3 MB[39m
+[KALDI] Hareket: ölü an 3.0–4.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 17.5–20.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 21.5–22.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 23.0–24.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 26.5–28.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 30.5–32.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 38.5–39.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 49.0–50.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 51.0–52.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 56.0–58.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 59.0–60.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 61.0–62.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 67.0–69.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 73.0–75.0 sn (ekran neredeyse duruyor)
+[0;93m2026-10-27 22:49:12.671781612 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[BİLGİ] Söz: duyulan konuşma metinle %95 uyumlu
+SONUÇ: KALDI
 durum: success
