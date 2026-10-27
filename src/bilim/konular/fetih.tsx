@@ -71,8 +71,8 @@ const Bant: React.FC<{ y0: number; y1: number; x0?: number; x1?: number; yatay?:
       <defs>
         {yatay ? (
           <linearGradient id={id} x1={yatay === "sol" ? "0" : "1"} y1="0" x2={yatay === "sol" ? "1" : "0"} y2="0">
-            <stop offset="0" stopColor="#0b0a14" stopOpacity="0.8" />
-            <stop offset="0.75" stopColor="#0b0a14" stopOpacity="0.78" />
+            <stop offset="0" stopColor="#0b0a14" stopOpacity="0.82" />
+            <stop offset="0.88" stopColor="#0b0a14" stopOpacity="0.8" />
             <stop offset="1" stopColor="#0b0a14" stopOpacity="0" />
           </linearGradient>
         ) : (
@@ -97,7 +97,7 @@ const Bolum: React.FC<{ t: number; a: number; ust: string; alt?: string; sure?: 
   const fs = Math.min(92, (720 / ust.length - ls) / 0.78); // kenar rozetlerine taşmasın
   return (
     <g opacity={g}>
-      <Bant y0={y - fs * 0.8 - 64} y1={y + (alt ? 92 : 30) + 64} />
+      <Bant y0={y - fs * 0.8 - 48} y1={y + (alt ? 92 : 30) + 56} />
       <line x1={540 - 170 * g} x2={540 + 170 * g} y1={y + 34} y2={y + 34} stroke={ALTIN} strokeWidth={3} />
       <text x={540} y={y} textAnchor="middle" fontFamily={CINZEL} fontWeight={900} fontSize={fs} letterSpacing={ls} fill="#f6ead0" stroke="#120d08" strokeWidth={6} paintOrder="stroke fill">{ust}</text>
       {alt && <text x={540} y={y + 92} textAnchor="middle" fontFamily={CINZEL} fontWeight={700} fontSize={44} letterSpacing={6} fill={ALTIN} stroke="#120d08" strokeWidth={6} paintOrder="stroke fill">{BUYUK(alt)}</text>}
@@ -114,7 +114,7 @@ const IsimKarti: React.FC<{ t: number; a: number; ad: string; rol: string; sure?
   const cizgi = lerp(0, 380, easeOut((t - a) / 0.5));
   return (
     <g opacity={g} transform={`translate(${(1 - easeOut((t - a) / 0.45)) * (sag ? 40 : -40)} 0)`}>
-      <Bant y0={1036} y1={1196} x0={sag ? 300 : 0} x1={sag ? 1080 : 780} yatay={sag ? "sag" : "sol"} />
+      <Bant y0={1036} y1={1196} x0={sag ? 120 : 0} x1={sag ? 1080 : 900} yatay={sag ? "sag" : "sol"} />
       <rect x={sag ? x - cizgi : x} y={1122} width={cizgi} height={4} fill={ALTIN} />
       <text x={x} y={1106} textAnchor={anc} fontFamily={CINZEL} fontWeight={900} fontSize={58} letterSpacing={4} fill="#fbf2dc" stroke="#0e0a07" strokeWidth={6} paintOrder="stroke fill">{ad}</text>
       <text x={x} y={1168} textAnchor={anc} fontFamily={CINZEL} fontWeight={700} fontSize={36} letterSpacing={2} fill={ALTIN} stroke="#0e0a07" strokeWidth={7} paintOrder="stroke fill">{BUYUK(rol)}</text>
@@ -288,7 +288,7 @@ const Ferman: React.FC<{ t: number; a: number; b: number }> = ({ t, a, b }) => {
   const ac = easeOut((t - a) / 0.8);
   const w = 560 * ac;
   return (
-    <g opacity={g} transform={`translate(540 560) rotate(${-3 + Math.sin(t) * 0.6})`}>
+    <g opacity={g} transform={`translate(540 800) rotate(${-3 + Math.sin(t) * 0.6})`}>
       <rect x={-w / 2} y={-170} width={w} height={340} fill="#efe1bd" stroke="#6b4a2b" strokeWidth={4} />
       <rect x={-w / 2 - 22} y={-186} width={22} height={372} rx={11} fill="#8a5a32" />
       <rect x={w / 2} y={-186} width={22} height={372} rx={11} fill="#8a5a32" />
@@ -506,7 +506,7 @@ const Acilis: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.65} n={26} />
       <OnBayrak t={t} renk="#7a1a14" y={250} boy={480} />
       <Vinyet g={0.85} />
-      <Bolum t={t} a={1.5} ust="NİSAN 1453" alt="KONSTANTİNOPOLİS ÖNLERİ" sure={Math.max(2.6, ws("binlerce") - 1.2)} y={430} />
+      <Bolum t={t} a={1.5} ust="NİSAN 1453" alt="KONSTANTİNOPOLİS ÖNLERİ" sure={Math.max(2.6, ws("binlerce") - 1.2)} y={460} />
     </g>
   );
 };
@@ -659,7 +659,7 @@ const Ani: React.FC<{ t: number; children: React.ReactNode; yil?: boolean; ust?:
     <Gren o={0.28} />
     <Vinyet g={0.95} />
     {ust}
-    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={380} />}
+    {yil && <Bolum t={t} a={0.1} ust="1452" alt="BİR YIL ÖNCE" sure={1.9} y={460} />}
   </g>
 );
 
@@ -743,8 +743,9 @@ const Gemiler: S = ({ t, d, ws }) => {
       <DunyaSahne D={D} kam={kam} />
       {etiket > 0.01 && (
         <g opacity={etiket}>
+          <Bant y0={548} y1={740} />
           <text x={540} y={640} textAnchor="middle" fontFamily={CINZEL} fontWeight={900} fontSize={84} letterSpacing={14} fill="#fbf2dc" stroke="#0e0a07" strokeWidth={6} paintOrder="stroke fill">HALİÇ</text>
-          <text x={540} y={696} textAnchor="middle" fontFamily={CINZEL} fontWeight={700} fontSize={30} letterSpacing={4} fill={ALTIN} stroke="#0e0a07" strokeWidth={5} paintOrder="stroke fill">22 NİSAN · ZİNCİR AŞILMADAN, KARADAN</text>
+          <text x={540} y={696} textAnchor="middle" fontFamily={CINZEL} fontWeight={700} fontSize={33} letterSpacing={3} fill={ALTIN} stroke="#0e0a07" strokeWidth={5} paintOrder="stroke fill">22 NİSAN · ZİNCİR AŞILMADAN, KARADAN</text>
         </g>
       )}
       <Gren o={0.12} />
@@ -767,7 +768,7 @@ const Teklif: S = ({ t, d, ws }) => {
       </DunyaSahne>
       <OnPlan t={t} o={0.25} renk="#f4e4c0" />
       <Vinyet g={0.65} />
-      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(1.2, tts - 0.9)} y={420} />
+      <Bolum t={t} a={0.05} ust="MAYIS 1453" alt="son teklif" sure={Math.max(2.2, tts - 0.9)} y={460} />
       <Ferman t={t} a={tts - 0.35} b={d - 0.15} />
     </g>
   );
@@ -817,7 +818,7 @@ const Ayin: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.45} renk="#ffc861" />
       <OnMum t={t} />
       <Vinyet g={0.88} />
-      <Bolum t={t} a={0.1} ust="28 MAYIS" alt="GECE" sure={ta - 0.2} y={380} />
+      <Bolum t={t} a={0.1} ust="28 MAYIS" alt="GECE" sure={Math.max(2.1, ta + 0.6)} y={460} />
     </g>
   );
 };
@@ -866,7 +867,7 @@ const Fetih: S = ({ t, d, ws }) => {
       <OnPlan t={t} o={0.35} renk="#ffd9a0" />
       <OnBayrak t={t} renk="#8a1c14" sag y={220} boy={600} o={cl((t - ta + 0.3) / 0.5)} />
       <Vinyet g={0.7} />
-      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={420} />
+      <Bolum t={t} a={0.25} ust="29 MAYIS" alt="1453 · SABAH" sure={Math.max(2.5, Math.min(3, ts - 0.2))} y={460} />
     </g>
   );
 };

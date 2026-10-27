@@ -2,7 +2,7 @@
  "baslik": "",
  "temizle": true,
  "dongu": true,
- "imza": true,
+ "imza": false,
  "son_bosluk": 0.85,
  "kesimler": [
   [
@@ -384,7 +384,9 @@
   "elimde,",
   "kimsenin.",
   "mırıldanıyor:",
-  "surları"
+  "surları",
+  "gülle",
+  "başında"
  ],
  "ses_hp": 90,
  "efekt_ses": 1.0,
