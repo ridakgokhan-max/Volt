@@ -11,6 +11,14 @@ on:
         description: "cek veya yanitla"
         required: true
         default: "cek"
+      yorum_id:
+        description: "yanitla: cevaplanacak yorum id (isteğe bağlı)"
+        required: false
+        default: ""
+      metin:
+        description: "yanitla: Kadir'in onayladığı cevap metni (isteğe bağlı)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -28,8 +36,19 @@ jobs:
         env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
           ISTATISTIK_KLASOR: /tmp/gizli
+          YID: ${{ github.event.inputs.yorum_id }}
+          METIN: ${{ github.event.inputs.metin }}
         run: |
           I="${{ github.event.inputs.islem }}"; [ -z "$I" ] && I=cek
+          if [ "$I" = yanitla ] && [ -n "$YID" ] && [ -n "$METIN" ]; then
+            python3 - <<'PY'
+          import json, os
+          yol = os.path.join(os.environ["ISTATISTIK_KLASOR"], "yanitlar.json")
+          l = json.load(open(yol, encoding="utf-8")) if os.path.exists(yol) else []
+          l.append({"yorum_id": os.environ["YID"], "metin": os.environ["METIN"], "onay": True})
+          json.dump(l, open(yol, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          PY
+          fi
           python3 scripts/instagram_yorum.py "$I" 2>&1 | sed -E 's/access_token=[^&" ]+/access_token=***/g'
       - name: Gizli depoya kaydet
         if: always()
