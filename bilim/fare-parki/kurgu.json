@@ -1,0 +1,213 @@
+{
+ "baslik": "",
+ "temizle": true,
+ "dongu": true,
+ "imza": false,
+ "son_bosluk": 1.2,
+ "kesimler": [
+  [
+   20.3,
+   23.7
+  ]
+ ],
+ "kelime_sil": [
+  38,
+  39,
+  40,
+  41
+ ],
+ "kelime_ekle": [
+  {
+   "w": "diğeri",
+   "start": 23.75,
+   "end": 24.05
+  },
+  {
+   "w": "uyuşturucu",
+   "start": 24.05,
+   "end": 24.45
+  },
+  {
+   "w": "katılmış",
+   "start": 24.45,
+   "end": 24.78
+  },
+  {
+   "w": "su.",
+   "start": 24.78,
+   "end": 25.1
+  }
+ ],
+ "seri": {
+  "no": 16,
+  "toplam": 30,
+  "kategori": "Bilim"
+ },
+ "kanca": {
+  "yazi": "BAĞIMLILIK UYUŞTURUCUDAN MI?",
+  "alt": "bir fare parkı cevap verdi",
+  "sure": 1.6
+ },
+ "cta": [
+  {
+   "tur": "begen",
+   "kelime": "dokunmadı"
+  },
+  {
+   "tur": "yorum",
+   "kelime": "çıkmadı",
+   "yazi": "Sence asıl sebep ne?"
+  },
+  {
+   "tur": "takip",
+   "son": true,
+   "ofset": -0.6
+  }
+ ],
+ "cta_kostum": "onluk",
+ "cta_ses": 0.4,
+ "cta_bosluk": true,
+ "sahneler": [
+  {
+   "id": "soru",
+   "bg": "k:#2c2340",
+   "ilk": 0
+  },
+  {
+   "id": "kafes",
+   "bg": "k:#2c3446",
+   "ilk": "1970",
+   "gecis": "perde"
+  },
+  {
+   "id": "siseler",
+   "bg": "k:#2c3446",
+   "ilk": "önünde",
+   "gecis": "zoom"
+  },
+  {
+   "id": "icme",
+   "bg": "k:#33264a",
+   "ilk": "=fare",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "merak",
+   "bg": "k:#3a4a6b",
+   "ilk": "=ama",
+   "gecis": "daire"
+  },
+  {
+   "id": "park",
+   "bg": "k:#3a4a6b",
+   "ilk": "=ve",
+   "gecis": "flas"
+  },
+  {
+   "id": "sonuc",
+   "bg": "k:#9ad1f0",
+   "ilk": "aynı",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "donus",
+   "bg": "k:#2c3446",
+   "ilk": "=daha",
+   "gecis": "perde"
+  },
+  {
+   "id": "dipnot",
+   "bg": "k:#3a4a6b",
+   "ilk": "=bu",
+   "gecis": "kaydir"
+  },
+  {
+   "id": "final",
+   "bg": "k:#E8A15A",
+   "ilk": "yani",
+   "gecis": "daire"
+  }
+ ],
+ "vurgu": [
+  "şaşırttı.",
+  "tek",
+  "uyuşturucu",
+  "ölene",
+  "Nokta.",
+  "kafesse?",
+  "200",
+  "arkadaşları.",
+  "dokunmadı.",
+  "geri",
+  "değiştirdi.",
+  "bağ",
+  "kurmak."
+ ],
+ "ses_vurgu": [
+  [
+   "şaşırttı",
+   1.5
+  ],
+  [
+   "ölene",
+   2,
+   2
+  ],
+  [
+   "nokta",
+   3
+  ],
+  [
+   "kafesse",
+   3
+  ],
+  [
+   "park",
+   1.5,
+   2,
+   1
+  ],
+  [
+   "200",
+   2
+  ],
+  [
+   "önemlisi",
+   1.5,
+   3
+  ],
+  [
+   "dokunmadı",
+   2
+  ],
+  [
+   "şaşırtıcısı",
+   2
+  ],
+  [
+   "döndü",
+   1.5
+  ],
+  [
+   "değiştirdi",
+   1.5
+  ],
+  [
+   "tersi",
+   -1.5,
+   4
+  ],
+  [
+   "=bağ",
+   3,
+   2
+  ]
+ ],
+ "muzik": "duygusal",
+ "muzik_parca": "hope-music-hopeful-piano",
+ "muzik_ses": 0.28,
+ "gecis_ses": 0.25,
+ "iki_gecis": true,
+ "ses_dogrusal": true,
+ "ses_hp": 90
+}

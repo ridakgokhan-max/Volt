@@ -42,6 +42,8 @@ import cicek3dData from "./data/cicek-3d.json";
 import canvademoData from "./data/canva-demo.json";
 import * as sogan from "./konular/sogan";
 import soganData from "./data/sogan.json";
+import * as fareparki from "./konular/fareparki";
+import fareparkiData from "./data/fare-parki.json";
 import * as fetih from "./konular/fetih";
 import fetihData from "./data/istanbul-fethi.json";
 
@@ -68,6 +70,7 @@ const KONULAR: Record<string, Konu> = {
   "canva-demo": { data: canvademoData as any, ...canvademo } as Konu,
   "cicek-3d": { data: cicek3dData as any, ...cicek3d } as Konu,
   sogan: { data: soganData as any, ...sogan } as Konu,
+  "fare-parki": { data: fareparkiData as any, ...fareparki } as Konu,
   "istanbul-fethi": { data: fetihData as any, ...fetih } as Konu,
 };
 const secilen = (getInputProps() as { konu?: string }).konu || "demo";
