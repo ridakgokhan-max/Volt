@@ -159,13 +159,16 @@ def cues(B, S, wt, st, sure, ara):
     t_gur = ara("yer") - 0.6  # sözden sonra, boşlukta patlar (görüntü de aynı ana bağlı)
     t_car = ara("çarpıyor")
     # açılış (geleceğe sıçrama): videonun ilk karesinde top ateşi
-    p(S, 0.0, Y("cannon_fire_853281.mp3"), 2.0)
-    p(S, 0.0, Y("cannon_fire_186930.mp3"), 2.0)
-    p(S, 0.0, Y("cannon_fire_186930.mp3", af="highpass=f=300"), 3.6)  # orta bant çatlama
-    p(S, 0.0, E("patlama"), 2.4)  # orta frekans patlama (telefon hoparlörü)
-    p(S, 0.05, Y("stone_impact_debris_569501.mp3"), 1.2)
-    p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(2.6 * SR)] * np.linspace(1, 0, int(2.6 * SR)), 0.9)
-    p(S, 0.0, B.boom(f=48, d=1.4), 0.8)  # 40–70 Hz gövde
+    def vurus(x, tut=0.12, sonum=0.35):  # keskin geçici vuruş: kısa tut, sonra hızlı sön (yatak boğmasın)
+        n = len(x); tt = np.arange(n) / SR
+        return x * np.where(tt < tut, 1.0, np.exp(-(tt - tut) / sonum))
+    p(S, 0.0, vurus(Y("cannon_fire_853281.mp3")), 2.0)
+    p(S, 0.0, vurus(Y("cannon_fire_186930.mp3")), 2.0)
+    p(S, 0.0, vurus(Y("cannon_fire_186930.mp3", af="highpass=f=300")), 3.6)  # orta bant çatlama
+    p(S, 0.0, vurus(E("patlama")), 2.4)  # orta frekans patlama (telefon hoparlörü)
+    p(S, 0.05, vurus(Y("stone_impact_debris_569501.mp3")), 1.2)
+    p(S, 0.01, Y("low_boom_cinematic_856174.mp3")[: int(2.6 * SR)] * np.linspace(1, 0, int(2.6 * SR)) ** 2, 0.5)
+    p(S, 0.0, B.boom(f=48, d=0.9), 0.6)  # 40–70 Hz gövde
     p(S, 2.25, Y("war_drums_468903.mp3"), 2.2)  # bölüm kartı girişine davul (sessiz delik kalmasın)
     p(S, 2.25, B.boom(f=60, d=0.8), 0.7)
     # fitil cızırtısı: "Sonra"dan gürlemeye kadar (sessizlikte tek ses o)

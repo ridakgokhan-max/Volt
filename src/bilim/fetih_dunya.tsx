@@ -666,9 +666,9 @@ export const Atis: React.FC<{ u: number; t: number; hedef?: { x: number; y: numb
       {/* namlu alevi */}
       {namluVar && u < 0.35 && (
         <g transform={`translate(${n.x} ${n.y}) rotate(${TOP.ag})`} opacity={1 - u / 0.35}>
-          <ellipse cx={90} cy={0} rx={160} ry={70} fill="#fff1b0" />
-          <ellipse cx={60} cy={0} rx={110} ry={50} fill="#ffd36b" />
-          <ellipse cx={30} cy={0} rx={60} ry={34} fill="#fff" />
+          <ellipse cx={150} cy={0} rx={100} ry={44} fill="#fff1b0" />
+          <ellipse cx={125} cy={0} rx={70} ry={32} fill="#ffd36b" />
+          <ellipse cx={100} cy={0} rx={38} ry={22} fill="#fff" />
         </g>
       )}
       {/* namlu dumanı */}

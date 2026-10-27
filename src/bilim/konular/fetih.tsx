@@ -436,7 +436,7 @@ const Sikke: React.FC<{ t: number; a: number }> = ({ t, a }) => {
 const YerSikke: React.FC<{ t: number }> = ({ t }) => {
   const p = Math.max(0, Math.sin(t * 2.1)) ** 8;
   return (
-    <g transform="translate(560 1685)">
+    <g transform="translate(560 1630)">
       <ellipse cx={0} cy={0} rx={32} ry={12} fill={ALTIN} stroke="#6a4a14" strokeWidth={3} />
       <ellipse cx={0} cy={-2} rx={20} ry={6} fill="none" stroke="#8a6a1c" strokeWidth={2} />
       <circle cx={0} cy={0} r={46} fill="#ffd36b" opacity={0.18 + 0.25 * p} />
@@ -470,7 +470,7 @@ const Harabe: React.FC<{ t: number }> = ({ t }) => (
 );
 
 // ---------------------------------------------------------------- SAHNELER
-const ACILIS_KAM: [number, number, number, number][] = [[0, 520, 1480, 1.5], [8, 430, 1420, 1.85]];
+const ACILIS_KAM: [number, number, number, number][] = [[0, 520, 1480, 1.5], [8, 430, 1500, 1.85]];
 
 /** 1 · Nisan 1453. Şafak henüz sökmemiş. Surların önünde binlerce asker karanlıkta titriyor. */
 const Acilis: S = ({ t, d, ws }) => {
@@ -499,7 +499,7 @@ const Acilis: S = ({ t, d, ws }) => {
             </radialGradient>
           </defs>
           {Array.from({ length: 7 }).map((_, i) => (
-            <ellipse key={i} cx={-200 + i * 190 + t * 520} cy={700 + rnd(i, 3) * 700} rx={380 + rnd(i, 4) * 200} ry={220 + rnd(i, 5) * 120} fill="url(#supurme)" opacity={1 - t / 2.2} />
+            <ellipse key={i} cx={-200 + i * 190 + t * 520} cy={420 + rnd(i, 3) * 420} rx={380 + rnd(i, 4) * 200} ry={220 + rnd(i, 5) * 120} fill="url(#supurme)" opacity={1 - t / 2.2} />
           ))}
         </g>
       )}
@@ -582,10 +582,10 @@ const Gurleme: S = ({ t, d, ws }) => {
         {carp > 0 && <Atis u={0.55 + carp} t={t} sadece="carpma" />}
       </DunyaSahne>
       <Kul t={t} o={0.6} n={18} />
-      <Parlama t={t} a={tg} d={0.2} g={1} />
-      <Parlama t={t} a={tg + 0.05} d={0.45} g={0.35} renk="#ff9a4a" />
+      <Parlama t={t} a={tg + 0.04} d={0.3} g={0.2} renk="#ff9a4a" />
       <Parlama t={t} a={tc} d={0.5} g={0.7} renk="#ffe2b0" />
       <Vinyet g={0.8} />
+      <Parlama t={t} a={tg} d={0.13} g={1} renk="#fffaf0" />
     </g>
   );
 };
