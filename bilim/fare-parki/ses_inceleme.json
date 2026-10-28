@@ -1,48 +1,93 @@
 [
  {
   "aralik": [
-   22.3,
-   27.2
+   66.5,
+   67.7
   ],
   "kelimeler": [
    {
-    "w": "Diğeri",
-    "start": 23.2,
-    "end": 23.88,
-    "p": 0.61
+    "w": "Aynı",
+    "start": 66.88,
+    "end": 67.24,
+    "p": 0.97
    },
    {
-    "w": "uyuşturucu",
-    "start": 23.88,
-    "end": 24.42,
-    "p": 0.99
+    "w": "iki",
+    "start": 67.24,
+    "end": 67.42,
+    "p": 0.81
    },
    {
-    "w": "katılmış",
-    "start": 24.42,
-    "end": 24.76,
-    "p": 1.0
+    "w": "şi",
+    "start": 67.42,
+    "end": 67.6,
+    "p": 0.19
    },
    {
-    "w": "su.",
-    "start": 24.76,
-    "end": 24.98,
-    "p": 0.93
+    "w": "-",
+    "start": 67.6,
+    "end": 67.62,
+    "p": 0.07
    }
   ],
-  "metin": "Diğeri uyuşturucu katılmış su."
+  "metin": "Aynı iki şi -"
  },
  {
   "aralik": [
-   66.6,
+   68.9,
    70.6
   ],
   "kelimeler": [
    {
     "w": "Aynı",
-    "start": 66.6,
+    "start": 68.9,
+    "end": 69.24,
+    "p": 0.94
+   },
+   {
+    "w": "iki",
+    "start": 69.24,
+    "end": 69.4,
+    "p": 0.78
+   },
+   {
+    "w": "şişi",
+    "start": 69.4,
+    "end": 69.88,
+    "p": 0.95
+   },
+   {
+    "w": "buraya",
+    "start": 69.88,
+    "end": 70.24,
+    "p": 0.97
+   },
+   {
+    "w": "da",
+    "start": 70.24,
+    "end": 70.46,
+    "p": 1.0
+   },
+   {
+    "w": "koyuyoruz.",
+    "start": 70.46,
+    "end": 70.58,
+    "p": 0.75
+   }
+  ],
+  "metin": "Aynı iki şişi buraya da koyuyoruz."
+ },
+ {
+  "aralik": [
+   66.5,
+   70.6
+  ],
+  "kelimeler": [
+   {
+    "w": "Aynı",
+    "start": 66.5,
     "end": 67.24,
-    "p": 0.93
+    "p": 0.95
    },
    {
     "w": "iki",
@@ -54,17 +99,17 @@
     "w": "şişi",
     "start": 67.4,
     "end": 69.76,
-    "p": 0.87
+    "p": 0.91
    },
    {
     "w": "buraya",
     "start": 69.76,
-    "end": 70.22,
-    "p": 0.91
+    "end": 70.2,
+    "p": 0.9
    },
    {
     "w": "da",
-    "start": 70.22,
+    "start": 70.2,
     "end": 70.44,
     "p": 1.0
    },
@@ -72,105 +117,9 @@
     "w": "koyalım.",
     "start": 70.44,
     "end": 70.58,
-    "p": 0.57
+    "p": 0.58
    }
   ],
   "metin": "Aynı iki şişi buraya da koyalım."
- },
- {
-  "aralik": [
-   77.0,
-   80.6
-  ],
-  "kelimeler": [
-   {
-    "w": "Daha",
-    "start": 77.0,
-    "end": 77.56,
-    "p": 0.94
-   },
-   {
-    "w": "da",
-    "start": 77.56,
-    "end": 77.72,
-    "p": 1.0
-   },
-   {
-    "w": "şaşırtıcısı,",
-    "start": 77.72,
-    "end": 78.3,
-    "p": 0.94
-   },
-   {
-    "w": "kafeste",
-    "start": 78.44,
-    "end": 79.6,
-    "p": 1.0
-   },
-   {
-    "w": "uzun",
-    "start": 79.6,
-    "end": 80.06,
-    "p": 1.0
-   },
-   {
-    "w": "süre",
-    "start": 80.06,
-    "end": 80.22,
-    "p": 0.99
-   },
-   {
-    "w": "uyuşturduğu",
-    "start": 80.22,
-    "end": 80.58,
-    "p": 0.71
-   },
-   {
-    "w": "için,",
-    "start": 80.58,
-    "end": 80.58,
-    "p": 0.64
-   }
-  ],
-  "metin": "Daha da şaşırtıcısı, kafeste uzun süre uyuşturduğu için,"
- },
- {
-  "aralik": [
-   53.3,
-   56.0
-  ],
-  "kelimeler": [
-   {
-    "w": "300",
-    "start": 53.3,
-    "end": 53.32,
-    "p": 0.01
-   },
-   {
-    "w": "kat",
-    "start": 53.32,
-    "end": 53.48,
-    "p": 0.96
-   },
-   {
-    "w": "büyüktü.",
-    "start": 53.48,
-    "end": 54.02,
-    "p": 0.99
-   },
-   {
-    "w": "İçinde",
-    "start": 54.86,
-    "end": 55.18,
-    "p": 0.95
-   },
-   {
-    "w": "oyuncaklar.",
-    "start": 55.18,
-    "end": 55.8,
-    "p": 0.99
-   }
-  ],
-  "metin": "300 kat büyüktü. İçinde oyuncaklar."
  }
 ]
