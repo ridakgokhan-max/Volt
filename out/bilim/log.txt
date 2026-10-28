@@ -1,14 +1,14 @@
 metinle hizalandı: transkript 175 -> metin 173 kelime
-ses başlangıcına oturtulan kelime: 52
-CTA: [{'tur': 'begen', 'bas': 55.576, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 71.427, 'yazi': 'Sence asıl sebep ne?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 77.323, 'kostum': 'onluk'}]
+ses başlangıcına oturtulan kelime: 49
+CTA: [{'tur': 'begen', 'bas': 54.737, 'kostum': 'onluk'}, {'tur': 'yorum', 'bas': 70.594, 'yazi': 'Sence asıl sebep ne?', 'kostum': 'onluk'}, {'tur': 'takip', 'bas': 76.486, 'kostum': 'onluk'}]
 ses vurgusu: 13 yer
 müzik: duygusal -> echoes_of_lumen-hope-music-hopeful-piano-586991.mp3
 anlatım doğrusal: -18.60 LUFS → -16
 doğrusal yükseklik: ölçülen -16.10 LUFS, kazanç +2.10 dB
-fare-parki: 106.3 sn kayıt -> 79.2 sn video, 173 kelime, 48 altyazı satırı, 10 sahne
+fare-parki: 106.3 sn kayıt -> 78.4 sn video, 173 kelime, 48 altyazı satırı, 10 sahne
 [90mDownloading Chrome Headless Shell https://www.remotion.dev/chrome-headless-shell[39m
 Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-157.0.8080.0.zip?clear
-Getting Headless Shell - 9.5 Mb/98.9 Mb
+Getting Headless Shell - 9.6 Mb/98.9 Mb
 Getting Headless Shell - 19.1 Mb/98.9 Mb
 Getting Headless Shell - 28.6 Mb/98.9 Mb
 Getting Headless Shell - 38.2 Mb/98.9 Mb
@@ -40,11 +40,11 @@ Getting composition
 [90mCodec                h264[39m
 [90mOutput               out/bilim/fare-parki.mp4[39m
 [90mConcurrency          2x[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
 [40m Tab 0, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
-[34m○                    out/bilim/fare-parki.mp4[39m [90m27.7 MB[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 40 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[40m Tab 1, node_modules/@remotion/google-fonts/dist/esm/ABeeZee-ay08gs2s.mjs:159 [49m [33mMade 80 network requests to load fonts for Nunito. Consider loading fewer weights and subsets by passing options to loadFont(). Disable this warning by passing "ignoreTooManyRequestsWarning: true" to "options".[39m
+[34m○                    out/bilim/fare-parki.mp4[39m [90m27.4 MB[39m
 [KALDI] Hareket: ölü an 3.0–4.5 sn (ekran neredeyse duruyor)
 [KALDI] Hareket: ölü an 13.5–14.5 sn (ekran neredeyse duruyor)
 [KALDI] Hareket: ölü an 17.5–20.0 sn (ekran neredeyse duruyor)
@@ -53,15 +53,15 @@ Getting composition
 [KALDI] Hareket: ölü an 26.5–28.0 sn (ekran neredeyse duruyor)
 [KALDI] Hareket: ölü an 30.5–32.0 sn (ekran neredeyse duruyor)
 [KALDI] Hareket: ölü an 38.5–39.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 49.0–50.0 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 51.0–52.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 56.0–58.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 59.0–60.0 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 61.0–62.0 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 67.0–69.5 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 73.0–75.0 sn (ekran neredeyse duruyor)
-[KALDI] Hareket: ölü an 75.5–76.5 sn (ekran neredeyse duruyor)
-[0;93m2026-10-27 22:58:11.994516913 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[KALDI] Hareket: ölü an 50.5–51.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 55.0–57.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 58.0–59.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 60.0–61.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 63.5–65.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 66.0–69.0 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 72.0–74.5 sn (ekran neredeyse duruyor)
+[KALDI] Hareket: ölü an 75.0–76.0 sn (ekran neredeyse duruyor)
+[0;93m2026-10-28 14:58:47.876964936 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
 [BİLGİ] Söz: duyulan konuşma metinle %95 uyumlu
 SONUÇ: KALDI
 durum: success
