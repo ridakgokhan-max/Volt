@@ -65,3 +65,5 @@ Getting composition
 [BİLGİ] Söz: duyulan konuşma metinle %95 uyumlu
 SONUÇ: KALDI
 durum: success
+[KALDI] Teknik: out/bilim/.mp4 bulunamadı — render başarısız
+durum: cancelled
