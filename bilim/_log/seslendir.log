@@ -1,16 +1,19 @@
-[0;93m2026-10-14 08:08:43.552353975 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-demo2 seslendirildi: dfki hız 0.95 -> /home/runner/work/Volt/Volt/bilim/demo2/ses.wav
-[  0.00-  2.64] Bir videoya ilk iki saniyede nasıl bağlanırsın?
-[  2.74-  3.46] İşte böyle.
-[  3.70-  7.62] Artık her videonun köşesinde seri numarası ve kategori rengi var.
-[  7.82-  9.66] Meraklı da konuya göre giyiniyor.
-[  9.80- 12.74] Tarihte şapka, bilimde önlük, kendin yap tabaret.
-[ 12.94- 16.12] Ve ben konuştukça meraklı da benimle birlikte konuşuyor.
-[ 16.34- 19.14] Yapay zeka görselleri artık derinlik kazanıyor.
-[ 20.10- 21.88] Kamera resmin içinde geziniyor.
-[ 21.98- 25.26] Gerektiğinde blenderda üç boyutlu sahneler hazırlanıyor.
-[ 25.56- 29.42] Hazır nesne kütüphanesi sayesinde her konu çok daha hızlı çiziliyor.
-[ 29.42- 34.38] Aynı video Instagram, TikTok ve YouTube'e sorts için ayrı ayrı ayarlanıyor.
-[ 34.56- 37.80] Hender almadan önce sahneleri senin onayına sunuyorum.
-[ 37.88- 40.98] Ve video bittiğinde fark ettirmeden başa dönüyor.
-demo2 tamam: 91 kelime
+[0;93m2026-10-29 18:32:02.235075238 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+tanitim3 seslendirildi: dfki hız 0.88 -> /home/runner/work/Volt/Volt/bilim/tanitim3/ses.wav
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[  0.00-  1.12] Bunları biliyor muydun?
+[  1.14-  2.90] Bir dakikada bilime hoş geldin.
+[  3.06-  4.18] Bağımlılığın tersine.
+[  4.36-  6.60] İstanbul'u yıkan topun maaş hikayesi.
+[  6.70-  8.24] Gökyüzü neden aslında mor?
+[  8.44- 10.10] Soğanı aslında ne ağlatıyor?
+[ 10.38- 12.20] Yırtık kare kod nasıl okunuyor?
+[ 12.36- 14.14] Eski telefonun bedava kamera.
+[ 14.38- 15.78] Telefonun uzayı dinliyor.
+[ 16.18- 18.36] Konservenin açacağı 50 yıl gecikti.
+[ 18.40- 19.72] Her gün tek bir merak.
+[ 19.88- 21.12] Sadece bir dakika.
+[ 21.38- 22.50] Hepsi kaynaklı.
+[ 22.70- 24.10] Kaçırmamak için takip et.
+[ 24.30- 26.14] Yarın yeni bir merak seni bekliyor.
+tanitim3 tamam: 61 kelime
