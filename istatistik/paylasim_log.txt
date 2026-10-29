@@ -1,8 +1,6 @@
-kapsayıcı: 17890100094504259
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
+kapsayıcı: 17890103043504259
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
 durum: FINISHED FINISHED
-YAYINLANDI: https://www.instagram.com/reel/DfFpDlBDE5b/
+YAYINLANDI: https://www.instagram.com/reel/DfFqrhGIFHO/
