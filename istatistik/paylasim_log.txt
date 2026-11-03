@@ -1,5 +1,11 @@
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
 kaynak: https://www.instagram.com/reel/DfP-g8Nt4Wi/ VIDEO
-kapsayıcı: 17891399493504259
+kapsayıcı: 17891399820504259
 durum: IN_PROGRESS IN_PROGRESS
 durum: ERROR ERROR
-Instagram videoyu işleyemedi: {"status_code": "ERROR", "status": "ERROR", "id": "17891399493504259"}
+Instagram videoyu işleyemedi: {"status_code": "ERROR", "status": "ERROR", "id": "17891399820504259"}
