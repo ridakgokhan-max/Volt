@@ -1,0 +1,34 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files:  42%|████▏     | 8/19 [00:00<00:00, 70.05it/s]Fetching 19 files:  84%|████████▍ | 16/19 [00:06<00:01,  2.05it/s]Fetching 19 files:  95%|█████████▍| 18/19 [00:19<00:00,  2.05it/s]Fetching 19 files: 100%|██████████| 19/19 [00:24<00:00,  1.81s/it]Fetching 19 files: 100%|██████████| 19/19 [00:24<00:00,  1.30s/it]
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  26%|██▋       | 136/517 [00:00<00:00, 1357.33it/s][A
+Loading weights:  54%|█████▍    | 280/517 [00:00<00:00, 1365.73it/s][A
+Loading weights:  81%|████████  | 417/517 [00:00<00:00, 1268.30it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 1210.88it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:01,  2.85it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:  73%|███████▎  | 144/196 [00:00<00:00, 1376.97it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 1659.17it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  5.03it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:09<00:05,  2.56s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:10<00:02,  2.26s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:10<00:00,  1.63s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:10<00:00,  1.54s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 74.2 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (136 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (136 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+karakter-11 201.8 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+karakter-23 199.4 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', whole body visible from head to shoes , centered , small margin around , plain flat light beige background , character sheet , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+karakter-37 196.7 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette']
+arkaplan-5 195.1 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['comic style , sepia and grey - blue palette']
+arkaplan-8 188.5 sn
