@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "gulumseme",
+   "mode": "inpaint",
+   "image": "out/assets/kukla1/karakter-23.png",
+   "mask": "assets/masks/kukla1-yuz.png",
+   "prompt": "bald old man with white beard and white mustache, rectangular dark glasses, warm happy smile, cheerful smiling eyes, raised cheeks, joyful expression",
+   "seed": 7,
+   "strength": 0.62,
+   "steps": 8
+  },
+  {
+   "name": "gulumseme-b",
+   "mode": "inpaint",
+   "image": "out/assets/kukla1/karakter-23.png",
+   "mask": "assets/masks/kukla1-yuz.png",
+   "prompt": "bald old man with white beard and white mustache, rectangular dark glasses, big friendly grin, eyes squinting with joy, laughing",
+   "seed": 19,
+   "strength": 0.7,
+   "steps": 8
+  },
+  {
+   "name": "goz-kapali",
+   "mode": "inpaint",
+   "image": "out/assets/kukla1/karakter-23.png",
+   "mask": "assets/masks/kukla1-gozler.png",
+   "prompt": "bald old man with white beard and white mustache, rectangular dark glasses, eyes closed, closed eyelids, blinking",
+   "seed": 3,
+   "strength": 0.9,
+   "steps": 8
+  }
+ ]
+}
