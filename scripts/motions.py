@@ -98,7 +98,8 @@ def isaret_et(rig, tau, dur, side="R", a=None):
     up = -12 + 4 * np.sin(2 * np.pi * 0.5 * tau)
     d = _mir(side, 180 - up)
     return {"aim": {"uarm" + side: d, "farm" + side: d, "hand" + side: d},
-            "add": {"head": (-5 if side == "L" else 5)}, "sprite": {"isaret" + side: 1.0, "acik" + side: 1.0}}
+            "add": {"head": (-5 if side == "L" else 5)},
+            "sprite": {("isaret" if "isaret" + side in rig.p.sprites else "acik") + side: 1.0}}
 
 
 def evet(rig, tau, dur, side=None, a=None):
