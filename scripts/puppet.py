@@ -39,24 +39,36 @@ class Bone:
     spring: dict | None = None  # sarkan parça ise yay ayarları {"k":..,"c":..,"follow":..}
     angle: float = 0.0  # yerel ek açı (radyan, görüntüde + saat yönü)
     stretch: float = 1.0  # kemik ekseni boyunca ölçek (nefes vb.)
+    width: float = 1.0  # kemiğe dik yönde ölçek (baş sallarken hafif daralma vb.)
     _phi: float = 0.0
     _vel: float = 0.0
 
 
-def _rot_about(theta, c, stretch=1.0, axis=None):
-    """c etrafında döndürme (+ isteğe bağlı eksen boyunca esneme) için 3x3 matris."""
+def _rot_about(theta, c, stretch=1.0, axis=None, width=1.0):
+    """c etrafında döndürme (+ eksen boyunca / eksene dik esneme) için 3x3 matris."""
     cx, cy = c
     T1 = np.array([[1, 0, -cx], [0, 1, -cy], [0, 0, 1.0]])
     T2 = np.array([[1, 0, cx], [0, 1, cy], [0, 0, 1.0]])
     S = np.eye(3)
-    if stretch != 1.0 and axis is not None:
+    if (stretch != 1.0 or width != 1.0) and axis is not None:
         a = np.array(axis, float)
         a /= np.linalg.norm(a) + 1e-9
-        P = np.outer(a, a)
-        S[:2, :2] = np.eye(2) + (stretch - 1) * P
+        n = np.array([-a[1], a[0]])
+        S[:2, :2] = np.eye(2) + (stretch - 1) * np.outer(a, a) + (width - 1) * np.outer(n, n)
     c_, s_ = np.cos(theta), np.sin(theta)
     R = np.array([[c_, -s_, 0], [s_, c_, 0], [0, 0, 1.0]])
     return T2 @ R @ S @ T1
+
+
+@dataclass
+class Sprite:
+    """Bir kemiğe takılan ayrı çizim (ör. açık avuç el). Kemiğin baş→uç doğrultusuna hizalanır."""
+    rgba: np.ndarray  # h x w x 4 (renk 0..255, alfa 0..1)
+    pivot: tuple  # çizimde kemiğin başına (bilek) gelecek nokta
+    tip: tuple  # çizimde kemiğin ucuna (parmak ucu) doğru giden nokta
+    bone: str
+    hide: np.ndarray | None = None  # dinlenme uzayında, bu çizim görünürken gizlenecek orijinal bölge (H x W, 0..1)
+    scale: float = 1.0
 
 
 @dataclass
@@ -68,11 +80,13 @@ class Puppet:
     blend: float = 14.0  # eklem çevresindeki yumuşak geçiş genişliği (px)
     textures: dict = field(default_factory=dict)  # ifade varyantları: ad -> rgba
     part_polys: dict = field(default_factory=dict)  # parça adı -> çokgen (x,y listesi); içindeki noktalar o parçaya ait
+    sprites: dict = field(default_factory=dict)  # takılabilir parçalar (el değiştirme): ad -> Sprite
+    part_masks: dict = field(default_factory=dict)  # parça adı -> piksel maskesi (HxW); çokgen yerine kullanılabilir
 
     def __post_init__(self):
         self.B = {b.name: b for b in self.bones}
         self.H, self.W = self.rgba.shape[:2]
-        if self.part_polys:
+        if self.part_polys or self.part_masks:
             self._build_per_part()
         else:
             self._build_single()
@@ -111,6 +125,10 @@ class Puppet:
         for name, poly in self.part_polys.items():
             m = np.zeros((self.H, self.W), np.uint8)
             cv2.fillPoly(m, [np.round(np.array(poly)).astype(np.int32)], 1)
+            masks[name] = m
+            union |= m
+        for name, m in self.part_masks.items():
+            m = (m > 0).astype(np.uint8)
             masks[name] = m
             union |= m
         self.part_alpha = {}
@@ -203,26 +221,57 @@ class Puppet:
         for b in self.bones:
             P = M[b.parent] if b.parent else np.eye(3)
             axis = (b.tail[0] - b.head[0], b.tail[1] - b.head[1])
-            M[b.name] = P @ _rot_about(b.angle, b.head, b.stretch, axis)
+            M[b.name] = P @ _rot_about(b.angle, b.head, b.stretch, axis, b.width)
         return M
 
-    def deformed(self):
-        M = self.matrices()
+    def deformed(self, M=None):
+        M = M if M is not None else self.matrices()
         Vh = np.column_stack([self.V, np.ones(len(self.V))])
         out = np.zeros((len(self.V), 2))
         for i, b in enumerate(self.bones):
             out += self.Wt[:, i:i + 1] * (Vh @ M[b.name].T)[:, :2]
         return out
 
-    def render(self, tex_mix=None):
-        """Deforme olmuş kuklayı çizer. tex_mix: {varyant_adı: karışım 0..1} (ör. gülümseme, göz kırpma)."""
+    def world_angles(self):
+        return self._world_angles()
+
+    def bone_pos(self, name, M=None):
+        """Kemiğin şu anki (deforme) baş ve uç noktaları."""
+        M = M or self.matrices()
+        b = self.B[name]
+        h = M[name] @ np.array([b.head[0], b.head[1], 1.0])
+        t = M[name] @ np.array([b.tail[0], b.tail[1], 1.0])
+        return h[:2], t[:2]
+
+    def _draw_sprite(self, out, sp, a, M):
+        h, t = self.bone_pos(sp.bone, M)
+        vs = np.array(sp.tip, float) - np.array(sp.pivot, float)
+        vd = t - h
+        b = self.B[sp.bone]
+        rest_len = np.hypot(b.tail[0] - b.head[0], b.tail[1] - b.head[1])
+        s = rest_len / (np.linalg.norm(vs) + 1e-9) * sp.scale
+        ang = np.arctan2(vd[1], vd[0]) - np.arctan2(vs[1], vs[0])
+        c, si = np.cos(ang) * s, np.sin(ang) * s
+        R = np.array([[c, -si], [si, c]])
+        off = h - R @ np.array(sp.pivot, float)
+        Mx = np.hstack([R, off[:, None]]).astype(np.float32)
+        lay = cv2.warpAffine(sp.rgba, Mx, (self.W, self.H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+        la = lay[..., 3:4] * a
+        out[..., :3] = out[..., :3] * (1 - la) + lay[..., :3] * la
+        out[..., 3:4] = out[..., 3:4] * (1 - la) + la
+
+    def render(self, tex_mix=None, sprite_mix=None):
+        """Deforme olmuş kuklayı çizer. tex_mix: {varyant_adı: 0..1} (gülümseme, göz kırpma),
+        sprite_mix: {takılı_parça_adı: 0..1} (el değiştirme)."""
+        sprite_mix = {k: v for k, v in (sprite_mix or {}).items() if v > 0.001 and k in self.sprites}
+        M = self.matrices()
         src = self.rgba
         if tex_mix:
             src = src.copy()
             for name, m in tex_mix.items():
                 if m > 0:
                     src = src * (1 - m) + self.textures[name] * m
-        D = self.deformed().astype(np.float32)
+        D = self.deformed(M).astype(np.float32)
         out = np.zeros((self.H, self.W, 4), np.float32)
         for part in self.part_order:
             idx = np.nonzero(self.tri_part == part)[0]
@@ -251,10 +300,18 @@ class Puppet:
             my = np.full(ib.shape, -10, np.float32)
             mx[yy, xx] = sp[:, 0]
             my[yy, xx] = sp[:, 1]
-            psrc = np.dstack([src[..., :3], self.part_alpha[part]])
+            pal = self.part_alpha[part]
+            for nm, a_ in sprite_mix.items():
+                sp = self.sprites[nm]
+                if sp.hide is not None and self.B[sp.bone].part == part:
+                    pal = pal * (1 - a_ * sp.hide)
+            psrc = np.dstack([src[..., :3], pal])
             layer = cv2.remap(psrc, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
             a = layer[..., 3:4]
             reg = out[y0:y1, x0:x1]
             reg[..., :3] = reg[..., :3] * (1 - a) + layer[..., :3] * a
             reg[..., 3:4] = reg[..., 3:4] * (1 - a) + a
+            for nm, a_ in sprite_mix.items():
+                if self.B[self.sprites[nm].bone].part == part:
+                    self._draw_sprite(out, self.sprites[nm], a_, M)
         return out
