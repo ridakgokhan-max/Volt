@@ -95,7 +95,7 @@ def el_salla(rig, tau, dur, side="R", a=None):
 
 
 def isaret_et(rig, tau, dur, side="R", a=None):
-    up = -12 + 4 * np.sin(2 * np.pi * 0.5 * tau)
+    up = -30 + 4 * np.sin(2 * np.pi * 0.5 * tau)
     d = _mir(side, 180 - up)
     return {"aim": {"uarm" + side: d, "farm" + side: d, "hand" + side: d},
             "add": {"head": (-5 if side == "L" else 5)},

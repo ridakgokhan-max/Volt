@@ -17,6 +17,7 @@ hikaye.json:
   "gecis_sn": 0.35, "efekt_ses": 0.22, "altyazi_kelime": 4
 }
 """
+import hashlib
 import json
 import os
 import re
@@ -127,7 +128,8 @@ def main(cfg_path, dst, only=None, preview=False):
     ends = starts[1:] + [total_audio + 0.6]
     print("sahne süreleri:", [round(e - s, 2) for s, e in zip(starts, ends)], flush=True)
 
-    tmp = tempfile.mkdtemp(prefix="hikaye_")
+    tmp = os.path.join(os.path.dirname(os.path.abspath(cfg_path)), "_sahneler")  # önbellek: ayar değişmedikçe yeniden çizilmez
+    os.makedirs(tmp, exist_ok=True)
     outs = []
     for k, sc in enumerate(scenes):
         dur = ends[k] - starts[k] + (xf if k < len(scenes) - 1 else 0)
@@ -138,9 +140,16 @@ def main(cfg_path, dst, only=None, preview=False):
         if cfg.get("karakter"):
             cfg["hareket"] = anchor_motions(cfg.get("hareket", ""), words, starts[k], alive_t0) or "gulumse@999/0.1"
         cfg.pop("altyazi", None)
-        path = os.path.join(tmp, f"sahne{k + 1:02d}.mp4")
+        key = json.dumps(cfg, sort_keys=True, ensure_ascii=False)
+        for fp in [v for v in cfg.values() if isinstance(v, str) and os.path.exists(v)]:
+            key += f"|{fp}:{os.path.getmtime(fp)}"
+        h = hashlib.md5((key + open("scripts/kukla_sahne.py").read() + open("scripts/motions.py").read()).encode()).hexdigest()[:10]
+        path = os.path.join(tmp, f"sahne{k + 1:02d}-{h}.mp4")
         outs.append(path)
         if only and (k + 1) not in only:
+            continue
+        if os.path.exists(path) and not preview:
+            print(f"== sahne {k + 1}: önbellekten", flush=True)
             continue
         print(f"== sahne {k + 1}/{len(scenes)}  {starts[k]:.2f}-{ends[k]:.2f} sn  hareket: {cfg.get('hareket', '-')}", flush=True)
         if preview:
@@ -150,6 +159,9 @@ def main(cfg_path, dst, only=None, preview=False):
     if preview or only:
         print("sahneler:", tmp)
         return tmp
+    missing = [p for p in outs if not os.path.exists(p)]
+    if missing:
+        raise SystemExit("eksik sahne: " + ", ".join(missing))
 
     # 1) sahneleri yumuşak geçişle birleştir (görüntü)
     inputs, filt, prev, acc = [], [], "[0:v]", 0.0
@@ -160,7 +172,7 @@ def main(cfg_path, dst, only=None, preview=False):
         lab = f"[v{k}]"
         filt.append(f"{prev}[{k}:v]xfade=transition=fade:duration={xf}:offset={acc - 0.0:.3f}{lab}")
         prev = lab
-    joined = os.path.join(tmp, "birlesik.mp4")
+    joined = os.path.join(tmp, "_birlesik.mp4")
     cmd = ["ffmpeg", "-v", "error", "-y"] + inputs
     if filt:
         cmd += ["-filter_complex", ";".join(filt), "-map", prev]
@@ -181,7 +193,7 @@ def main(cfg_path, dst, only=None, preview=False):
     mix = fx[:n_total] * C.get("efekt_ses", 0.22)
     mix[:len(narr)] += narr[:n_total]
     mix = mix / max(1.0, np.abs(mix).max() / 0.95)
-    wav = os.path.join(tmp, "karisim.wav")
+    wav = os.path.join(tmp, "_karisim.wav")
     with wave.open(wav, "wb") as wv:
         wv.setnchannels(1)
         wv.setsampwidth(2)

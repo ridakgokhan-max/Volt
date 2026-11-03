@@ -1,0 +1,101 @@
+{
+ "ses": "hikaye/kedi/temiz.wav",
+ "kelimeler": "hikaye/kedi/temiz.kelimeler.json",
+ "varsayilan": {
+  "cizim_sn": 2.2,
+  "boyama_sn": 0.9,
+  "ayak_y": 1770,
+  "boy": 1220
+ },
+ "gecis_sn": 0.35,
+ "efekt_ses": 0.22,
+ "altyazi_kelime": 4,
+ "sahneler": [
+  {
+   "arkaplan": "out/assets/kedi-a/bg1-sokak.png"
+  },
+  {
+   "basla": "Yüzyıllar önce bazı insanlar",
+   "arkaplan": "out/assets/kedi-a/bg2-meydan.png",
+   "karakter": "out/assets/kedi-c/koylu-31.png",
+   "poz": "out/rig/kedi/koylu-31.json",
+   "eller": {
+    "acik": "out/assets/kukla2-eller/el-acik-14.png",
+    "yumruk": "out/assets/kukla2-isaret/el-isaret-33.png"
+   },
+   "el_tarafi": "R",
+   "el_olcek": {
+    "acik": 1.15,
+    "yumruk": 0.62
+   },
+   "hareket": "isaret_et:R@\"şeytanla\"/2.4, hayir@\"cadıların\"/1.4"
+  },
+  {
+   "basla": "Hikayenin en dikkat çekici",
+   "arkaplan": "out/assets/kedi-a/bg3-oda.png",
+   "karakter": "out/assets/kedi-c/papa-31.png",
+   "poz": "out/rig/kedi-papa/papa-31.json",
+   "sakal": true,
+   "eller": {
+    "acik": "out/assets/kukla2-eller/el-acik-14.png",
+    "yumruk": "out/assets/kukla2-isaret/el-isaret-33.png"
+   },
+   "el_tarafi": "R",
+   "el_olcek": {
+    "acik": 1.15,
+    "yumruk": 0.62
+   },
+   "hareket": "dusun:L@\"Papa\"/3.2, isaret_et:R@\"şeytana tapan\"/2.4"
+  },
+  {
+   "basla": "Bu ayin tasvirinde",
+   "arkaplan": "out/assets/kedi-a/bg4-golge.png"
+  },
+  {
+   "basla": "Zamanla kediler",
+   "arkaplan": "out/assets/kedi-b/bg5-harita.png"
+  },
+  {
+   "basla": "Hatta 1730'lu",
+   "arkaplan": "out/assets/kedi-b/bg6-matbaa.png"
+  },
+  {
+   "karakter": "out/assets/kedi-d/cirak-47.png",
+   "poz": "out/rig/kedi/cirak-47.json",
+   "eller": {
+    "acik": "out/assets/kukla2-eller/el-acik-14.png",
+    "yumruk": "out/assets/kukla2-isaret/el-isaret-33.png"
+   },
+   "el_tarafi": "R",
+   "el_olcek": {
+    "acik": 1.15,
+    "yumruk": 0.62
+   },
+   "basla": "Bir matbaada çalışan",
+   "arkaplan": "out/assets/kedi-b/bg6-matbaa.png",
+   "hareket": "isaret_et:R@\"patronlarının\"/2.2, hayir@\"öfkeliydi\"/1.4"
+  },
+  {
+   "basla": "Önce mahalledeki kedileri",
+   "arkaplan": "out/assets/kedi-b/bg7-catilar.png"
+  },
+  {
+   "karakter": "out/assets/kukla1/karakter-23.png",
+   "poz": "out/rig/kukla1/karakter-23.json",
+   "sakal": true,
+   "gulumseme": "out/assets/kukla1-yuz/gulumseme.png",
+   "arkaplan": "out/assets/kukla1/arkaplan-5.png",
+   "eller": {
+    "acik": "out/assets/kukla2-eller/el-acik-14.png",
+    "yumruk": "out/assets/kukla2-isaret/el-isaret-33.png"
+   },
+   "el_tarafi": "R",
+   "el_olcek": {
+    "acik": 1.15,
+    "yumruk": 0.62
+   },
+   "basla": "Evet yanlış duymadınız",
+   "hareket": "omuz_silk@\"duymadınız\"/1.8, hayir@\"Başka bir dönemde\"/1.4, dusun:R@\"en korkutucu\"/4.0, isaret_et:L@\"Peki sen\"/3.4, gulumse@\"korkar\"/2.2"
+  }
+ ]
+}

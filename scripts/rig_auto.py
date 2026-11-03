@@ -72,7 +72,12 @@ def _arm_mask(bgr, mask, chain, torso_poly, radius):
 
 
 def auto_rig(bgr, mask, pose_path, beard=False):
-    P = json.load(open(pose_path))["people"][0]
+    people = json.load(open(pose_path))["people"]
+
+    def area(pp):  # gövde noktalarının kapladığı alan: en büyük kişi = asıl karakter
+        k_ = np.array(pp["keypoints"])[:17]
+        return np.ptp(k_[:, 0]) * np.ptp(k_[:, 1]) * float(np.mean(pp["scores"][:17]) > 0.3)
+    P = max(people, key=area)
     k = np.array(P["keypoints"], np.float32)
     s = np.array(P["scores"], np.float32)
     h, w = mask.shape
