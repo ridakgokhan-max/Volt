@@ -29,14 +29,27 @@ def istek(yol, veri=None):
 
 
 if konu.startswith("medya:"):
-    # hesaptaki mevcut bir Reels'i aynen yeniden paylaş: video, açıklama ve kapak Instagram'dan alınır
-    m = istek(f"GET {konu[6:]}", {"fields": "media_type,media_url,caption,thumbnail_url,permalink"})
+    # hesaptaki mevcut bir Reels'i aynen yeniden paylaş: video, açıklama ve kapak Instagram'dan indirilir,
+    # depoya konur (Instagram kendi CDN adresini kabul etmiyor) ve oradan yeniden yayınlanır
+    import subprocess
+    mid = konu[6:]
+    m = istek(f"GET {mid}", {"fields": "media_type,media_url,caption,thumbnail_url,permalink"})
     print("kaynak:", m.get("permalink"), m.get("media_type"))
     if m.get("media_type") != "VIDEO" or not m.get("media_url"):
         sys.exit("Bu gönderi video değil ya da video adresi alınamadı")
-    veri = {"media_type": "REELS", "video_url": m["media_url"], "caption": m.get("caption", ""), "share_to_feed": "true"}
+    ad = f"yeniden-{mid}"
+    os.makedirs(f"bilim/{ad}", exist_ok=True)
+    urllib.request.urlretrieve(m["media_url"], f"out/bilim/{ad}.mp4")
     if m.get("thumbnail_url"):
-        veri["cover_url"] = m["thumbnail_url"]
+        urllib.request.urlretrieve(m["thumbnail_url"], f"out/bilim/{ad}-kapak.jpg")
+    open(f"bilim/{ad}/aciklama.txt", "w", encoding="utf-8").write(m.get("caption", ""))
+    subprocess.run("git config user.name volt-render-bot && git config user.email volt-render-bot@users.noreply.github.com && "
+                   f"git add out/bilim/{ad}.mp4 out/bilim/{ad}-kapak.jpg bilim/{ad} 2>/dev/null; git commit -qm 'Yeniden paylaşım için Reels indirildi [skip ci]' && "
+                   "for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 4; done", shell=True, check=True)
+    time.sleep(15)
+    veri = {"media_type": "REELS", "video_url": f"{HAM}/out/bilim/{ad}.mp4", "caption": m.get("caption", ""), "share_to_feed": "true"}
+    if os.path.exists(f"out/bilim/{ad}-kapak.jpg"):
+        veri["cover_url"] = f"{HAM}/out/bilim/{ad}-kapak.jpg"
 else:
     aciklama = open(f"bilim/{konu}/aciklama.txt", encoding="utf-8").read().strip()
     veri = {"media_type": "REELS", "video_url": f"{HAM}/out/bilim/{konu}.mp4", "caption": aciklama, "share_to_feed": "true"}
