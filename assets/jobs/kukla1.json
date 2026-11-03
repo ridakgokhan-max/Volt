@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "name": "karakter-11",
+   "prompt": "full body character design of a friendly old inventor with a long white beard, round glasses, bald head with white hair on the sides, a long red scarf around the neck, white shirt with rolled sleeves, brown waistcoat and dark trousers, brown shoes, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets",
+   "seed": 11,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "karakter-23",
+   "prompt": "full body character design of a friendly old inventor with a long white beard, round glasses, bald head with white hair on the sides, a long red scarf around the neck, white shirt with rolled sleeves, brown waistcoat and dark trousers, brown shoes, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets",
+   "seed": 23,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "karakter-37",
+   "prompt": "full body character design of a friendly old inventor with a long white beard, round glasses, bald head with white hair on the sides, a long red scarf around the neck, white shirt with rolled sleeves, brown waistcoat and dark trousers, brown shoes, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets",
+   "seed": 37,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "arkaplan-5",
+   "prompt": "interior of a cozy old inventor workshop, wooden shelves with books, jars and brass gears on the walls, a round window with soft daylight, a workbench on the side, empty wooden floor in the center, wide view, no people",
+   "neg": "people, person, character",
+   "seed": 5,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "arkaplan-8",
+   "prompt": "interior of a cozy old inventor workshop, wooden shelves with books, jars and brass gears on the walls, a round window with soft daylight, a workbench on the side, empty wooden floor in the center, wide view, no people",
+   "neg": "people, person, character",
+   "seed": 8,
+   "w": 640,
+   "h": 1136
+  }
+ ]
+}
