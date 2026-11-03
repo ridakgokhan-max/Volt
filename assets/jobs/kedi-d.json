@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "name": "cirak-12",
+   "prompt": "full body character design of a young 18th century French printing apprentice with messy dark hair, white shirt with rolled sleeves, ink-stained leather apron, brown breeches, white stockings and black shoes, angry frown, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 12,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "cirak-31",
+   "prompt": "full body character design of a young 18th century French printing apprentice with messy dark hair, white shirt with rolled sleeves, ink-stained leather apron, brown breeches, white stockings and black shoes, angry frown, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 31,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "cirak-47",
+   "prompt": "full body character design of a young 18th century French printing apprentice with messy dark hair, white shirt with rolled sleeves, ink-stained leather apron, brown breeches, white stockings and black shoes, angry frown, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 47,
+   "w": 640,
+   "h": 1136
+  }
+ ]
+}
