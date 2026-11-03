@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "bg1-sokak",
+   "prompt": "a narrow medieval European town street at night with cobblestones and half-timbered houses, a crescent moon, a black cat sitting on a low stone wall, eerie quiet mood, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 3,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "bg2-meydan",
+   "prompt": "a medieval village square with a stone well, wooden houses and a church tower in the distance, overcast sky, empty ground in the center, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 5,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "bg3-oda",
+   "prompt": "interior of a medieval papal chamber with tall gothic windows, a wooden writing desk with parchment scrolls, a quill and a wax seal, candles, empty floor in the center, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 7,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "bg4-golge",
+   "prompt": "a dark medieval stone chamber lit by candles, a huge shadow of a black cat cast on the stone wall, mysterious carved symbols, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 9,
+   "w": 640,
+   "h": 1136
+  }
+ ]
+}
