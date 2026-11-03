@@ -1,0 +1,44 @@
+name: İskelet çıkar
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/rig/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rig:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/rtmlib
+          key: rtmlib-wholebody-v1
+      - name: Paketleri kur
+        run: pip install -q rtmlib onnxruntime opencv-python-headless
+      - name: Değişen işleri çalıştır
+        run: |
+          for f in $(git diff --name-only HEAD~1 HEAD -- assets/rig/ | grep '\.json$'); do
+            [ -f "$f" ] || continue
+            n=$(basename "$f" .json); mkdir -p out/rig/$n
+            python scripts/detect_pose.py "$f" 2>&1 | tail -n 30 | tee out/rig/$n/log.txt
+          done
+      - name: Sonucu depoya kaydet
+        if: always()
+        run: |
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add out/rig || true
+          git commit -m "İskelet sonucu [skip ci]" || echo "Değişiklik yok"
+          git pull --rebase -q && git push

@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "name": "el-acik-3",
+   "prompt": "a single cartoon hand of a friendly old man, warm skin tone, open palm facing the viewer, five fingers spread and pointing straight up, waving hello, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, same style as anime storybook character",
+   "neg": "two hands, extra fingers, six fingers, missing fingers, arm, body, face, background objects",
+   "seed": 3,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-acik-14",
+   "prompt": "a single cartoon hand of a friendly old man, warm skin tone, open palm facing the viewer, five fingers spread and pointing straight up, waving hello, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, same style as anime storybook character",
+   "neg": "two hands, extra fingers, six fingers, missing fingers, arm, body, face, background objects",
+   "seed": 14,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-acik-29",
+   "prompt": "a single cartoon hand of a friendly old man, warm skin tone, open palm facing the viewer, five fingers spread and pointing straight up, waving hello, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, same style as anime storybook character",
+   "neg": "two hands, extra fingers, six fingers, missing fingers, arm, body, face, background objects",
+   "seed": 29,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-isaret-5",
+   "prompt": "a single cartoon hand of a friendly old man, warm skin tone, back of the hand facing the viewer, index finger pointing straight up, other fingers curled, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, same style as anime storybook character",
+   "neg": "two hands, extra fingers, six fingers, missing fingers, arm, body, face, background objects",
+   "seed": 5,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-isaret-21",
+   "prompt": "a single cartoon hand of a friendly old man, warm skin tone, back of the hand facing the viewer, index finger pointing straight up, other fingers curled, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, same style as anime storybook character",
+   "neg": "two hands, extra fingers, six fingers, missing fingers, arm, body, face, background objects",
+   "seed": 21,
+   "w": 768,
+   "h": 768
+  }
+ ]
+}
