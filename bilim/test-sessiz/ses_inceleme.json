@@ -1,0 +1,890 @@
+[
+ {
+  "aralik": [
+   0.0,
+   30.0
+  ],
+  "kelimeler": [
+   {
+    "w": "Bir",
+    "start": 0.0,
+    "end": 0.66,
+    "p": 0.99
+   },
+   {
+    "w": "çiftçi",
+    "start": 0.66,
+    "end": 1.14,
+    "p": 1.0
+   },
+   {
+    "w": "onlarca",
+    "start": 1.14,
+    "end": 1.76,
+    "p": 0.99
+   },
+   {
+    "w": "fareyi",
+    "start": 1.76,
+    "end": 2.12,
+    "p": 1.0
+   },
+   {
+    "w": "öldürmek",
+    "start": 2.12,
+    "end": 2.52,
+    "p": 1.0
+   },
+   {
+    "w": "için",
+    "start": 2.52,
+    "end": 2.74,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 2.74,
+    "end": 2.88,
+    "p": 1.0
+   },
+   {
+    "w": "tuzak",
+    "start": 2.88,
+    "end": 3.22,
+    "p": 1.0
+   },
+   {
+    "w": "kurdu.",
+    "start": 3.22,
+    "end": 3.46,
+    "p": 1.0
+   },
+   {
+    "w": "Ama",
+    "start": 3.56,
+    "end": 4.08,
+    "p": 1.0
+   },
+   {
+    "w": "asıl",
+    "start": 4.08,
+    "end": 4.34,
+    "p": 1.0
+   },
+   {
+    "w": "korkunç",
+    "start": 4.34,
+    "end": 4.74,
+    "p": 1.0
+   },
+   {
+    "w": "olan",
+    "start": 4.74,
+    "end": 4.94,
+    "p": 1.0
+   },
+   {
+    "w": "farelerin",
+    "start": 4.94,
+    "end": 5.58,
+    "p": 1.0
+   },
+   {
+    "w": "nasıl",
+    "start": 5.58,
+    "end": 5.76,
+    "p": 1.0
+   },
+   {
+    "w": "öldüğü",
+    "start": 5.76,
+    "end": 6.22,
+    "p": 1.0
+   },
+   {
+    "w": "değildi,",
+    "start": 6.22,
+    "end": 6.56,
+    "p": 0.98
+   },
+   {
+    "w": "birbirlerini",
+    "start": 6.58,
+    "end": 7.26,
+    "p": 1.0
+   },
+   {
+    "w": "nasıl",
+    "start": 7.26,
+    "end": 7.44,
+    "p": 1.0
+   },
+   {
+    "w": "öldürdükleriydi.",
+    "start": 7.44,
+    "end": 8.22,
+    "p": 0.99
+   },
+   {
+    "w": "Çiftçi",
+    "start": 8.48,
+    "end": 9.16,
+    "p": 1.0
+   },
+   {
+    "w": "ölü",
+    "start": 9.16,
+    "end": 9.46,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 9.46,
+    "end": 9.56,
+    "p": 1.0
+   },
+   {
+    "w": "koyunu",
+    "start": 9.56,
+    "end": 9.92,
+    "p": 1.0
+   },
+   {
+    "w": "alıp",
+    "start": 9.92,
+    "end": 10.24,
+    "p": 1.0
+   },
+   {
+    "w": "eski",
+    "start": 10.24,
+    "end": 10.58,
+    "p": 1.0
+   },
+   {
+    "w": "ve",
+    "start": 10.58,
+    "end": 10.66,
+    "p": 0.99
+   },
+   {
+    "w": "derin",
+    "start": 10.66,
+    "end": 10.88,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 10.88,
+    "end": 10.98,
+    "p": 1.0
+   },
+   {
+    "w": "kuyunun",
+    "start": 10.98,
+    "end": 11.3,
+    "p": 1.0
+   },
+   {
+    "w": "dibine",
+    "start": 11.3,
+    "end": 11.62,
+    "p": 1.0
+   },
+   {
+    "w": "attı.",
+    "start": 11.62,
+    "end": 12.0,
+    "p": 1.0
+   },
+   {
+    "w": "Koyunun",
+    "start": 12.16,
+    "end": 12.7,
+    "p": 0.99
+   },
+   {
+    "w": "kokusunu",
+    "start": 12.7,
+    "end": 13.16,
+    "p": 1.0
+   },
+   {
+    "w": "alan",
+    "start": 13.16,
+    "end": 13.32,
+    "p": 1.0
+   },
+   {
+    "w": "fareler",
+    "start": 13.32,
+    "end": 13.9,
+    "p": 1.0
+   },
+   {
+    "w": "birer",
+    "start": 13.9,
+    "end": 14.36,
+    "p": 0.98
+   },
+   {
+    "w": "birer",
+    "start": 14.36,
+    "end": 14.7,
+    "p": 1.0
+   },
+   {
+    "w": "kuyuya",
+    "start": 14.7,
+    "end": 14.98,
+    "p": 0.94
+   },
+   {
+    "w": "inmeye",
+    "start": 14.98,
+    "end": 15.24,
+    "p": 1.0
+   },
+   {
+    "w": "başladı.",
+    "start": 15.24,
+    "end": 15.62,
+    "p": 1.0
+   },
+   {
+    "w": "Aşağıda",
+    "start": 15.9,
+    "end": 16.44,
+    "p": 1.0
+   },
+   {
+    "w": "yiyecek",
+    "start": 16.44,
+    "end": 16.82,
+    "p": 1.0
+   },
+   {
+    "w": "vardı,",
+    "start": 16.82,
+    "end": 17.02,
+    "p": 1.0
+   },
+   {
+    "w": "hem",
+    "start": 17.2,
+    "end": 17.68,
+    "p": 1.0
+   },
+   {
+    "w": "de",
+    "start": 17.68,
+    "end": 17.84,
+    "p": 1.0
+   },
+   {
+    "w": "herkese",
+    "start": 17.84,
+    "end": 18.18,
+    "p": 1.0
+   },
+   {
+    "w": "yetecek",
+    "start": 18.18,
+    "end": 18.48,
+    "p": 1.0
+   },
+   {
+    "w": "kadar.",
+    "start": 18.48,
+    "end": 18.68,
+    "p": 1.0
+   },
+   {
+    "w": "Fareler",
+    "start": 18.9,
+    "end": 19.54,
+    "p": 1.0
+   },
+   {
+    "w": "mutluydu",
+    "start": 19.54,
+    "end": 19.92,
+    "p": 1.0
+   },
+   {
+    "w": "çünkü",
+    "start": 19.92,
+    "end": 20.42,
+    "p": 0.37
+   },
+   {
+    "w": "sonunda",
+    "start": 20.42,
+    "end": 20.84,
+    "p": 1.0
+   },
+   {
+    "w": "aç",
+    "start": 20.84,
+    "end": 21.0,
+    "p": 1.0
+   },
+   {
+    "w": "kalmayacaklarını",
+    "start": 21.0,
+    "end": 21.6,
+    "p": 1.0
+   },
+   {
+    "w": "düşünüyorlardı.",
+    "start": 21.6,
+    "end": 22.2,
+    "p": 1.0
+   },
+   {
+    "w": "Ama",
+    "start": 22.28,
+    "end": 22.82,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 22.82,
+    "end": 23.0,
+    "p": 1.0
+   },
+   {
+    "w": "şeyi",
+    "start": 23.0,
+    "end": 23.2,
+    "p": 0.3
+   },
+   {
+    "w": "fark",
+    "start": 23.2,
+    "end": 23.38,
+    "p": 1.0
+   },
+   {
+    "w": "etmemişlerdi.",
+    "start": 23.38,
+    "end": 24.06,
+    "p": 1.0
+   },
+   {
+    "w": "Aşağı",
+    "start": 24.26,
+    "end": 24.76,
+    "p": 1.0
+   },
+   {
+    "w": "inmek",
+    "start": 24.76,
+    "end": 25.0,
+    "p": 0.99
+   },
+   {
+    "w": "kolaydı,",
+    "start": 25.0,
+    "end": 25.5,
+    "p": 1.0
+   },
+   {
+    "w": "yukarı",
+    "start": 25.56,
+    "end": 26.08,
+    "p": 1.0
+   },
+   {
+    "w": "çıkmak",
+    "start": 26.08,
+    "end": 26.44,
+    "p": 1.0
+   },
+   {
+    "w": "imkansızdı.",
+    "start": 26.44,
+    "end": 27.04,
+    "p": 1.0
+   },
+   {
+    "w": "Günler",
+    "start": 27.16,
+    "end": 27.84,
+    "p": 1.0
+   },
+   {
+    "w": "geçti,",
+    "start": 27.84,
+    "end": 28.2,
+    "p": 1.0
+   },
+   {
+    "w": "koyunun",
+    "start": 28.24,
+    "end": 28.92,
+    "p": 1.0
+   },
+   {
+    "w": "eti",
+    "start": 28.92,
+    "end": 29.12,
+    "p": 1.0
+   },
+   {
+    "w": "tükendi.",
+    "start": 29.12,
+    "end": 29.44,
+    "p": 1.0
+   },
+   {
+    "w": "Altyazı",
+    "start": 29.44,
+    "end": 29.56,
+    "p": 0.89
+   },
+   {
+    "w": "M",
+    "start": 29.56,
+    "end": 29.6,
+    "p": 1.0
+   },
+   {
+    "w": ".K.",
+    "start": 29.6,
+    "end": 29.82,
+    "p": 1.0
+   }
+  ],
+  "metin": "Bir çiftçi onlarca fareyi öldürmek için bir tuzak kurdu. Ama asıl korkunç olan farelerin nasıl öldüğü değildi, birbirlerini nasıl öldürdükleriydi. Çiftçi ölü bir koyunu alıp eski ve derin bir kuyunun dibine attı. Koyunun kokusunu alan fareler birer birer kuyuya inmeye başladı. Aşağıda yiyecek vardı, hem de herkese yetecek kadar. Fareler mutluydu çünkü sonunda aç kalmayacaklarını düşünüyorlardı. Ama bir şeyi fark etmemişlerdi. Aşağı inmek kolaydı, yukarı çıkmak imkansızdı. Günler geçti, koyunun eti tükendi. Altyazı M .K."
+ },
+ {
+  "aralik": [
+   60.0,
+   90.0
+  ],
+  "kelimeler": [
+   {
+    "w": "Ama",
+    "start": 60.98,
+    "end": 61.64,
+    "p": 0.08
+   },
+   {
+    "w": "fare",
+    "start": 61.64,
+    "end": 62.26,
+    "p": 0.97
+   },
+   {
+    "w": "artık",
+    "start": 62.26,
+    "end": 62.48,
+    "p": 0.99
+   },
+   {
+    "w": "eskisi",
+    "start": 62.48,
+    "end": 62.9,
+    "p": 1.0
+   },
+   {
+    "w": "gibi",
+    "start": 62.9,
+    "end": 63.08,
+    "p": 0.99
+   },
+   {
+    "w": "değildi,",
+    "start": 63.08,
+    "end": 63.46,
+    "p": 1.0
+   },
+   {
+    "w": "korkmuştu,",
+    "start": 63.48,
+    "end": 64.34,
+    "p": 0.97
+   },
+   {
+    "w": "güvensizdi,",
+    "start": 64.42,
+    "end": 65.22,
+    "p": 1.0
+   },
+   {
+    "w": "kendi",
+    "start": 65.28,
+    "end": 65.84,
+    "p": 0.99
+   },
+   {
+    "w": "türüne",
+    "start": 65.84,
+    "end": 66.24,
+    "p": 1.0
+   },
+   {
+    "w": "bile",
+    "start": 66.24,
+    "end": 66.4,
+    "p": 0.99
+   },
+   {
+    "w": "düşman",
+    "start": 66.4,
+    "end": 66.8,
+    "p": 1.0
+   },
+   {
+    "w": "olmuştu.",
+    "start": 66.8,
+    "end": 67.14,
+    "p": 1.0
+   },
+   {
+    "w": "Çiftçi",
+    "start": 67.5,
+    "end": 68.16,
+    "p": 1.0
+   },
+   {
+    "w": "ise",
+    "start": 68.16,
+    "end": 68.32,
+    "p": 1.0
+   },
+   {
+    "w": "istediğini",
+    "start": 68.32,
+    "end": 68.92,
+    "p": 1.0
+   },
+   {
+    "w": "elde",
+    "start": 68.92,
+    "end": 69.12,
+    "p": 1.0
+   },
+   {
+    "w": "etmişti.",
+    "start": 69.12,
+    "end": 69.46,
+    "p": 1.0
+   },
+   {
+    "w": "Şimdi",
+    "start": 69.8,
+    "end": 70.1,
+    "p": 0.98
+   },
+   {
+    "w": "sana",
+    "start": 70.1,
+    "end": 70.3,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 70.3,
+    "end": 70.48,
+    "p": 1.0
+   },
+   {
+    "w": "soru,",
+    "start": 70.48,
+    "end": 70.78,
+    "p": 1.0
+   },
+   {
+    "w": "kuyuyu",
+    "start": 70.8,
+    "end": 71.38,
+    "p": 0.98
+   },
+   {
+    "w": "kim",
+    "start": 71.38,
+    "end": 71.56,
+    "p": 1.0
+   },
+   {
+    "w": "kazdı?",
+    "start": 71.56,
+    "end": 71.96,
+    "p": 1.0
+   },
+   {
+    "w": "Birbirini",
+    "start": 72.12,
+    "end": 72.78,
+    "p": 1.0
+   },
+   {
+    "w": "yiyen",
+    "start": 72.78,
+    "end": 73.0,
+    "p": 1.0
+   },
+   {
+    "w": "fareler",
+    "start": 73.0,
+    "end": 73.34,
+    "p": 1.0
+   },
+   {
+    "w": "mi,",
+    "start": 73.34,
+    "end": 73.5,
+    "p": 1.0
+   },
+   {
+    "w": "yoksa",
+    "start": 73.58,
+    "end": 74.18,
+    "p": 1.0
+   },
+   {
+    "w": "onları",
+    "start": 74.18,
+    "end": 74.46,
+    "p": 1.0
+   },
+   {
+    "w": "aynı",
+    "start": 74.46,
+    "end": 74.7,
+    "p": 1.0
+   },
+   {
+    "w": "kuyuya",
+    "start": 74.7,
+    "end": 75.06,
+    "p": 0.99
+   },
+   {
+    "w": "indiren",
+    "start": 75.06,
+    "end": 75.34,
+    "p": 1.0
+   },
+   {
+    "w": "çiftçi",
+    "start": 75.34,
+    "end": 75.74,
+    "p": 1.0
+   },
+   {
+    "w": "mi?",
+    "start": 75.74,
+    "end": 75.82,
+    "p": 1.0
+   },
+   {
+    "w": "Unutma,",
+    "start": 76.1,
+    "end": 76.76,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 76.82,
+    "end": 77.3,
+    "p": 1.0
+   },
+   {
+    "w": "topluluğu",
+    "start": 77.3,
+    "end": 77.8,
+    "p": 1.0
+   },
+   {
+    "w": "yok",
+    "start": 77.8,
+    "end": 77.9,
+    "p": 1.0
+   },
+   {
+    "w": "etmek",
+    "start": 77.9,
+    "end": 78.04,
+    "p": 1.0
+   },
+   {
+    "w": "için",
+    "start": 78.04,
+    "end": 78.36,
+    "p": 1.0
+   },
+   {
+    "w": "bazen",
+    "start": 78.36,
+    "end": 78.84,
+    "p": 1.0
+   },
+   {
+    "w": "onunla",
+    "start": 78.84,
+    "end": 79.1,
+    "p": 1.0
+   },
+   {
+    "w": "savaşmana",
+    "start": 79.1,
+    "end": 79.52,
+    "p": 1.0
+   },
+   {
+    "w": "gerek",
+    "start": 79.52,
+    "end": 79.68,
+    "p": 1.0
+   },
+   {
+    "w": "yoktur.",
+    "start": 79.68,
+    "end": 80.12,
+    "p": 1.0
+   },
+   {
+    "w": "Sadece",
+    "start": 80.24,
+    "end": 80.88,
+    "p": 1.0
+   },
+   {
+    "w": "birbirlerine",
+    "start": 80.88,
+    "end": 81.36,
+    "p": 1.0
+   },
+   {
+    "w": "düşmelerini",
+    "start": 81.36,
+    "end": 81.86,
+    "p": 1.0
+   },
+   {
+    "w": "sağlarsın.",
+    "start": 81.86,
+    "end": 82.44,
+    "p": 1.0
+   },
+   {
+    "w": "Çünkü",
+    "start": 82.48,
+    "end": 82.96,
+    "p": 1.0
+   },
+   {
+    "w": "birbirlerine",
+    "start": 82.96,
+    "end": 83.46,
+    "p": 0.99
+   },
+   {
+    "w": "düşman",
+    "start": 83.46,
+    "end": 83.8,
+    "p": 1.0
+   },
+   {
+    "w": "olan",
+    "start": 83.8,
+    "end": 83.9,
+    "p": 1.0
+   },
+   {
+    "w": "insanlar,",
+    "start": 83.9,
+    "end": 84.24,
+    "p": 1.0
+   },
+   {
+    "w": "düşmanlarının",
+    "start": 84.46,
+    "end": 85.4,
+    "p": 1.0
+   },
+   {
+    "w": "kim",
+    "start": 85.4,
+    "end": 85.5,
+    "p": 1.0
+   },
+   {
+    "w": "olduğunu",
+    "start": 85.5,
+    "end": 85.72,
+    "p": 1.0
+   },
+   {
+    "w": "unuturlar.",
+    "start": 85.72,
+    "end": 86.22,
+    "p": 0.99
+   },
+   {
+    "w": "Peki",
+    "start": 86.4,
+    "end": 86.96,
+    "p": 1.0
+   },
+   {
+    "w": "sence",
+    "start": 86.96,
+    "end": 87.28,
+    "p": 0.98
+   },
+   {
+    "w": "bu",
+    "start": 87.28,
+    "end": 87.44,
+    "p": 1.0
+   },
+   {
+    "w": "hikayede",
+    "start": 87.44,
+    "end": 87.92,
+    "p": 1.0
+   },
+   {
+    "w": "asıl",
+    "start": 87.92,
+    "end": 88.52,
+    "p": 0.99
+   },
+   {
+    "w": "suçlu",
+    "start": 88.52,
+    "end": 88.86,
+    "p": 0.95
+   },
+   {
+    "w": "kim?",
+    "start": 88.86,
+    "end": 88.94,
+    "p": 1.0
+   },
+   {
+    "w": "Altyazı",
+    "start": 88.94,
+    "end": 89.98,
+    "p": 0.8
+   },
+   {
+    "w": "M",
+    "start": 89.98,
+    "end": 89.98,
+    "p": 0.99
+   },
+   {
+    "w": ".K.",
+    "start": 89.98,
+    "end": 89.98,
+    "p": 1.0
+   }
+  ],
+  "metin": "Ama fare artık eskisi gibi değildi, korkmuştu, güvensizdi, kendi türüne bile düşman olmuştu. Çiftçi ise istediğini elde etmişti. Şimdi sana bir soru, kuyuyu kim kazdı? Birbirini yiyen fareler mi, yoksa onları aynı kuyuya indiren çiftçi mi? Unutma, bir topluluğu yok etmek için bazen onunla savaşmana gerek yoktur. Sadece birbirlerine düşmelerini sağlarsın. Çünkü birbirlerine düşman olan insanlar, düşmanlarının kim olduğunu unuturlar. Peki sence bu hikayede asıl suçlu kim? Altyazı M .K."
+ }
+]
