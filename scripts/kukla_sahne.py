@@ -97,93 +97,96 @@ def hand_sprite(path, mirror=False):
 
 
 def main(cfg_path, dst, preview=None):
-    C = json.load(open(cfg_path, encoding="utf-8"))
+    C = cfg_path if isinstance(cfg_path, dict) else json.load(open(cfg_path, encoding="utf-8"))
     total = int(round(C.get("sure", 10.0) * FPS))
     draw_end = int(round(C.get("cizim_sn", 2.6) * FPS))
     fill_end = draw_end + int(round(C.get("boyama_sn", 1.0) * FPS))
     feet_y, char_h = C.get("ayak_y", 1795), C.get("boy", 1380)
 
-    bgr = cv2.imread(C["karakter"])
-    m = segment_plain(bgr)
-    R = auto_rig(bgr, m, C["poz"], beard=C.get("sakal", False))
-    J = R["joints"]
-    bgr_f = cv2.inpaint(bgr, cv2.bitwise_not(cv2.erode(m, np.ones((3, 3), np.uint8))), 5, cv2.INPAINT_TELEA)
-
-    ys = np.nonzero(m.any(1))[0]
-    sc = char_h / (ys.max() - ys.min())
-    ox = W / 2 - J["hip"][0] * sc
-    oy = feet_y - ys.max() * sc
-    Mp = np.float32([[sc, 0, ox], [0, sc, oy]])
-
-    def place(img_bgr, alpha):
-        col = cv2.warpAffine(cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB), Mp, (W, H), flags=cv2.INTER_LANCZOS4,
-                             borderMode=cv2.BORDER_REPLICATE)
-        a = cv2.warpAffine(alpha, Mp, (W, H), flags=cv2.INTER_LINEAR)
-        return np.dstack([grade(col.astype(np.float32)), a])
-
-    def P(name):
-        x, y = J[name]
-        return (x * sc + ox, y * sc + oy)
-
-    alpha = cv2.GaussianBlur(m, (3, 3), 0).astype(np.float32) / 255
-    base = place(bgr_f, alpha)
-    tex = {"blink": place(closed_eyes(bgr_f, R["eyes"]), alpha)}
-    if C.get("gulumseme"):
-        sm = cv2.imread(C["gulumseme"])
-        if sm is not None:
-            # sadece yüz bölgesini al; gözlük gibi koyu çizgileri orijinalden koru
-            face = np.zeros(m.shape, np.uint8)
-            (mx, my), mw, mh = R["mouth"]
-            e0, e1 = R["eyes"][0], R["eyes"][-1]
-            cx, cy = (e0[0][0] + e1[0][0]) / 2, (e0[0][1] + my) / 2
-            ax = int(abs(e1[0][0] - e0[0][0]) * 1.25 + 10)
-            ay = int((my - e0[0][1]) * 1.25 + 20)
-            cv2.ellipse(face, (int(cx), int(cy)), (ax, ay), 0, 0, 360, 255, -1)
-            fm = cv2.GaussianBlur(face, (21, 21), 0).astype(np.float32)[..., None] / 255
-            sm = (bgr_f * (1 - fm) + sm * fm).astype(np.uint8)
-            gray = cv2.cvtColor(bgr_f, cv2.COLOR_BGR2GRAY)
-            gm = ((gray < 80) & (face > 0)).astype(np.uint8)
-            for (ex, ey), rx, ry in R["eyes"]:
-                cv2.ellipse(gm, (ex, ey), (rx + 4, ry + 4), 0, 0, 360, 0, -1)
-            (mx_, my_), mw_, mh_ = R["mouth"]
-            cv2.ellipse(gm, (int(mx_), int(my_)), (int(mw_ * 0.8) + 4, int(mh_ * 1.2) + 6), 0, 0, 360, 0, -1)
-            gm = cv2.GaussianBlur(gm * 255, (3, 3), 0).astype(np.float32)[..., None] / 255
-            sm = (sm * (1 - gm) + bgr_f * gm).astype(np.uint8)
-            tex["smile"] = place(sm, alpha)
-
-    masks = {n: cv2.warpAffine(v * 255, Mp, (W, H), flags=cv2.INTER_NEAREST) for n, v in R["masks"].items()}
-    bones = [
-        Bone("legs", None, P("hip"), P("feet"), "body"),
-        Bone("spine", "legs", P("hip"), P("neck"), "body"),
-        Bone("head", "spine", P("neck"), P("headtop"), "head"),
-    ]
-    if C.get("sakal"):
-        bones.append(Bone("beard", "head", P("chin"), P("beardtip"), "head", spring={"k": 55, "c": 5.5, "follow": 0.55}))
-    for S in ("L", "R"):
-        bones += [Bone("uarm" + S, "spine", P("sh" + S), P("el" + S), "arm" + S),
-                  Bone("farm" + S, "uarm" + S, P("el" + S), P("wr" + S), "arm" + S),
-                  Bone("hand" + S, "farm" + S, P("wr" + S), P("hd" + S), "arm" + S)]
-
-    # el değiştirme çizimleri: orijinal el (bilekten öte) gizlenir
-    sprites = {}
     Y, X = np.mgrid[0:H, 0:W].astype(np.float32)
-    for S in ("L", "R"):
-        e, wr = np.array(P("el" + S)), np.array(P("wr" + S))
-        ax = wr - e
-        t = ((X - e[0]) * ax[0] + (Y - e[1]) * ax[1]) / (ax @ ax)
-        hide = ((t > 0.97) & (masks["arm" + S] > 0)).astype(np.float32)
-        hide = cv2.GaussianBlur(hide, (9, 9), 0)
-        for kind, path in C.get("eller", {}).items():
-            # "el_tarafi": çizimin doğrudan uyduğu kol (görüntüde L/R); diğer kol için aynalanır
-            rgba, piv, tip = hand_sprite(path, mirror=(S != C.get("el_tarafi", "R")))
-            olc = C.get("el_olcek", {})
-            olc = olc.get(kind, 1.15) if isinstance(olc, dict) else olc
-            sprites[kind + S] = Sprite(rgba, piv, tip, "hand" + S, hide=hide, scale=olc)
+    has_char = bool(C.get("karakter"))
+    pup = tl = base = bgr_f = Mp = None
+    if has_char:
+        bgr = cv2.imread(C["karakter"])
+        m = segment_plain(bgr)
+        R = auto_rig(bgr, m, C["poz"], beard=C.get("sakal", False))
+        J = R["joints"]
+        bgr_f = cv2.inpaint(bgr, cv2.bitwise_not(cv2.erode(m, np.ones((3, 3), np.uint8))), 5, cv2.INPAINT_TELEA)
 
-    pup = Puppet(base, bones, ["body", "head", "armR", "armL"], spacing=16, blend=16, textures=tex,
-                 part_masks=masks, sprites=sprites)
-    tl = Timeline(pup, C["hareket"])
-    print("kukla:", len(pup.V), "nokta,", len(pup.T), "üçgen; el çizimleri:", list(sprites), flush=True)
+        ys = np.nonzero(m.any(1))[0]
+        sc = char_h / (ys.max() - ys.min())
+        ox = W / 2 - J["hip"][0] * sc
+        oy = feet_y - ys.max() * sc
+        Mp = np.float32([[sc, 0, ox], [0, sc, oy]])
+
+        def place(img_bgr, alpha):
+            col = cv2.warpAffine(cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB), Mp, (W, H), flags=cv2.INTER_LANCZOS4,
+                                 borderMode=cv2.BORDER_REPLICATE)
+            a = cv2.warpAffine(alpha, Mp, (W, H), flags=cv2.INTER_LINEAR)
+            return np.dstack([grade(col.astype(np.float32)), a])
+
+        def P(name):
+            x, y = J[name]
+            return (x * sc + ox, y * sc + oy)
+
+        alpha = cv2.GaussianBlur(m, (3, 3), 0).astype(np.float32) / 255
+        base = place(bgr_f, alpha)
+        tex = {"blink": place(closed_eyes(bgr_f, R["eyes"]), alpha)}
+        if C.get("gulumseme"):
+            sm = cv2.imread(C["gulumseme"])
+            if sm is not None:
+                # sadece yüz bölgesini al; gözlük gibi koyu çizgileri orijinalden koru
+                face = np.zeros(m.shape, np.uint8)
+                (mx, my), mw, mh = R["mouth"]
+                e0, e1 = R["eyes"][0], R["eyes"][-1]
+                cx, cy = (e0[0][0] + e1[0][0]) / 2, (e0[0][1] + my) / 2
+                ax = int(abs(e1[0][0] - e0[0][0]) * 1.25 + 10)
+                ay = int((my - e0[0][1]) * 1.25 + 20)
+                cv2.ellipse(face, (int(cx), int(cy)), (ax, ay), 0, 0, 360, 255, -1)
+                fm = cv2.GaussianBlur(face, (21, 21), 0).astype(np.float32)[..., None] / 255
+                sm = (bgr_f * (1 - fm) + sm * fm).astype(np.uint8)
+                gray = cv2.cvtColor(bgr_f, cv2.COLOR_BGR2GRAY)
+                gm = ((gray < 80) & (face > 0)).astype(np.uint8)
+                for (ex, ey), rx, ry in R["eyes"]:
+                    cv2.ellipse(gm, (ex, ey), (rx + 4, ry + 4), 0, 0, 360, 0, -1)
+                (mx_, my_), mw_, mh_ = R["mouth"]
+                cv2.ellipse(gm, (int(mx_), int(my_)), (int(mw_ * 0.8) + 4, int(mh_ * 1.2) + 6), 0, 0, 360, 0, -1)
+                gm = cv2.GaussianBlur(gm * 255, (3, 3), 0).astype(np.float32)[..., None] / 255
+                sm = (sm * (1 - gm) + bgr_f * gm).astype(np.uint8)
+                tex["smile"] = place(sm, alpha)
+
+        masks = {n: cv2.warpAffine(v * 255, Mp, (W, H), flags=cv2.INTER_NEAREST) for n, v in R["masks"].items()}
+        bones = [
+            Bone("legs", None, P("hip"), P("feet"), "body"),
+            Bone("spine", "legs", P("hip"), P("neck"), "body"),
+            Bone("head", "spine", P("neck"), P("headtop"), "head"),
+        ]
+        if C.get("sakal"):
+            bones.append(Bone("beard", "head", P("chin"), P("beardtip"), "head", spring={"k": 55, "c": 5.5, "follow": 0.55}))
+        for S in ("L", "R"):
+            bones += [Bone("uarm" + S, "spine", P("sh" + S), P("el" + S), "arm" + S),
+                      Bone("farm" + S, "uarm" + S, P("el" + S), P("wr" + S), "arm" + S),
+                      Bone("hand" + S, "farm" + S, P("wr" + S), P("hd" + S), "arm" + S)]
+
+        # el değiştirme çizimleri: orijinal el (bilekten öte) gizlenir
+        sprites = {}
+        for S in ("L", "R"):
+            e, wr = np.array(P("el" + S)), np.array(P("wr" + S))
+            ax = wr - e
+            t = ((X - e[0]) * ax[0] + (Y - e[1]) * ax[1]) / (ax @ ax)
+            hide = ((t > 0.97) & (masks["arm" + S] > 0)).astype(np.float32)
+            hide = cv2.GaussianBlur(hide, (9, 9), 0)
+            for kind, path in C.get("eller", {}).items():
+                # "el_tarafi": çizimin doğrudan uyduğu kol (görüntüde L/R); diğer kol için aynalanır
+                rgba, piv, tip = hand_sprite(path, mirror=(S != C.get("el_tarafi", "R")))
+                olc = C.get("el_olcek", {})
+                olc = olc.get(kind, 1.15) if isinstance(olc, dict) else olc
+                sprites[kind + S] = Sprite(rgba, piv, tip, "hand" + S, hide=hide, scale=olc)
+
+        pup = Puppet(base, bones, ["body", "head", "armR", "armL"], spacing=16, blend=16, textures=tex,
+                     part_masks=masks, sprites=sprites)
+        tl = Timeline(pup, C["hareket"])
+        print("kukla:", len(pup.V), "nokta,", len(pup.T), "üçgen; el çizimleri:", list(sprites), flush=True)
 
     bg = grade(cover_up(cv2.cvtColor(cv2.imread(C["arkaplan"]), cv2.COLOR_BGR2RGB)).astype(np.float32))
     shadow_base = np.exp(-(((X - W / 2) / 260) ** 2 + ((Y - feet_y + 6) / 34) ** 2))
@@ -205,6 +208,11 @@ def main(cfg_path, dst, preview=None):
     alive_frames = total - fill_end
 
     def compose(f, t, amp, physics=True):
+        if not has_char:  # sadece arka plan: daha belirgin kamera hareketi
+            p = smooth(max(0, f - fill_end) / alive_frames)
+            zoom = 1 + 0.09 * p
+            M = np.float32([[zoom, 0, (1 - zoom) * W / 2 - 40 * p], [0, zoom, (1 - zoom) * H * 0.5]])
+            return finish(cv2.warpAffine(bg, M, (W, H), borderMode=cv2.BORDER_REFLECT)), np.zeros(2)
         texm, sprm, off = tl.apply(t, amp)
         if physics:
             pup.step_physics(1 / FPS)
@@ -232,7 +240,7 @@ def main(cfg_path, dst, preview=None):
 
     still, off0 = compose(fill_end, 0.0, 0.0, physics=False)
     raw = cover_up(cv2.cvtColor(cv2.imread(C["arkaplan"]), cv2.COLOR_BGR2RGB)).astype(np.float32)
-    if abs(off0[0]) < 50:  # karakter başta sahnedeyse çizime dahil
+    if has_char and abs(off0[0]) < 50:  # karakter başta sahnedeyse çizime dahil
         craw = cv2.warpAffine(cv2.cvtColor(bgr_f, cv2.COLOR_BGR2RGB), Mp, (W, H), flags=cv2.INTER_LANCZOS4).astype(np.float32)
         raw = raw * (1 - base[..., 3:4]) + craw * base[..., 3:4]
     lm = line_mask(Image.fromarray(raw.clip(0, 255).astype(np.uint8)))
