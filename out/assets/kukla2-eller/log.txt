@@ -1,0 +1,40 @@
+Loading weights:  11%|█         | 56/517 [00:00<00:01, 233.52it/s][A
+Loading weights:  16%|█▋        | 85/517 [00:00<00:01, 221.06it/s][A
+Loading weights:  21%|██▏       | 110/517 [00:00<00:02, 172.18it/s][A
+Loading weights:  26%|██▋       | 136/517 [00:00<00:02, 175.97it/s][A
+Loading weights:  30%|███       | 156/517 [00:00<00:02, 175.93it/s][A
+Loading weights:  36%|███▌      | 184/517 [00:01<00:02, 161.39it/s][A
+Loading weights:  42%|████▏     | 216/517 [00:01<00:01, 164.75it/s][A
+Loading weights:  45%|████▌     | 234/517 [00:01<00:01, 150.24it/s][A
+Loading weights:  51%|█████     | 264/517 [00:01<00:01, 166.33it/s][A
+Loading weights:  57%|█████▋    | 296/517 [00:01<00:01, 162.41it/s][A
+Loading weights:  61%|██████    | 314/517 [00:01<00:01, 165.34it/s][A
+Loading weights:  65%|██████▌   | 337/517 [00:01<00:01, 179.73it/s][A
+Loading weights:  70%|██████▉   | 360/517 [00:02<00:00, 158.10it/s][A
+Loading weights:  75%|███████▍  | 386/517 [00:02<00:00, 176.16it/s][A
+Loading weights:  79%|███████▉  | 408/517 [00:02<00:00, 167.59it/s][A
+Loading weights:  85%|████████▌ | 440/517 [00:02<00:00, 163.92it/s][A
+Loading weights:  89%|████████▊ | 458/517 [00:02<00:00, 165.88it/s][A
+Loading weights:  94%|█████████▍| 488/517 [00:02<00:00, 160.95it/s][ALoading weights: 100%|██████████| 517/517 [00:02<00:00, 172.60it/s]
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:21<00:06,  3.20s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:22<00:02,  2.49s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:22<00:00,  3.21s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 65.8 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (109 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (109 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-acik-3 145.2 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-acik-14 153.2 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-acik-29 148.3 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-5 152.3 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-21 153.1 sn
