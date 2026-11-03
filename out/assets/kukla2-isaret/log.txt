@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 2/517 [00:01<05:52,  1.46it/s][A
+Loading weights:  20%|██        | 104/517 [00:01<00:04, 92.09it/s][A
+Loading weights:  27%|██▋       | 141/517 [00:01<00:03, 101.20it/s][A
+Loading weights:  32%|███▏      | 167/517 [00:02<00:03, 109.74it/s][A
+Loading weights:  37%|███▋      | 189/517 [00:02<00:03, 95.30it/s] [A
+Loading weights:  40%|███▉      | 206/517 [00:02<00:03, 92.23it/s][A
+Loading weights:  43%|████▎     | 220/517 [00:02<00:03, 92.26it/s][A
+Loading weights:  45%|████▌     | 233/517 [00:02<00:02, 96.04it/s][A
+Loading weights:  48%|████▊     | 248/517 [00:02<00:02, 99.76it/s][A
+Loading weights:  51%|█████     | 264/517 [00:03<00:02, 100.07it/s][A
+Loading weights:  54%|█████▍    | 280/517 [00:03<00:02, 99.57it/s] [A
+Loading weights:  57%|█████▋    | 296/517 [00:03<00:02, 107.75it/s][A
+Loading weights:  60%|██████    | 312/517 [00:03<00:01, 107.48it/s][A
+Loading weights:  67%|██████▋   | 344/517 [00:03<00:01, 139.84it/s][A
+Loading weights:  73%|███████▎  | 376/517 [00:03<00:00, 161.56it/s][A
+Loading weights:  79%|███████▉  | 408/517 [00:03<00:00, 178.78it/s][A
+Loading weights:  85%|████████▌ | 440/517 [00:04<00:00, 194.72it/s][A
+Loading weights:  89%|████████▉ | 460/517 [00:04<00:00, 186.69it/s][A
+Loading weights:  93%|█████████▎| 479/517 [00:04<00:00, 75.12it/s] [A
+Loading weights:  95%|█████████▌| 493/517 [00:05<00:00, 57.62it/s][A
+Loading weights:  97%|█████████▋| 504/517 [00:05<00:00, 47.10it/s][ALoading weights: 100%|██████████| 517/517 [00:05<00:00, 88.20it/s]
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:15<00:07,  3.71s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:18<00:03,  3.42s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:18<00:00,  2.51s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:18<00:00,  2.64s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 74.4 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (121 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (121 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-2 70.6 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-9 81.1 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-33 72.9 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['d character design , anime storybook style , 2 d cartoon illustration , hand drawn , bold clean black ink outlines , flat muted colors with soft simple shading , simple shapes , storybook comic style , sepia and grey - blue palette']
+el-isaret-41 73.1 sn
