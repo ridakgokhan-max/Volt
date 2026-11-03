@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "name": "bg5-harita",
+   "prompt": "an old hand drawn map of medieval Europe on aged parchment with small black cat drawings scattered over different regions, a compass rose, top-down view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 4,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "bg6-matbaa",
+   "prompt": "interior of an 18th century Paris printing workshop with a wooden printing press, stacks of paper and ink pots, a fat pampered cat sleeping on a velvet cushion on a high shelf, empty floor in the center, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 6,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "bg7-catilar",
+   "prompt": "rooftops of 18th century Paris at night under a full moon, chimneys and slate roofs, a few black cats running away across the rooftops, wide view, no people",
+   "neg": "people, person, character, text, letters",
+   "seed": 8,
+   "w": 640,
+   "h": 1136
+  }
+ ]
+}
