@@ -1,0 +1,40 @@
+Loading weights:  42%|████▏     | 219/517 [00:01<00:01, 163.14it/s][A
+Loading weights:  46%|████▋     | 240/517 [00:01<00:01, 162.66it/s][A
+Loading weights:  50%|█████     | 259/517 [00:01<00:01, 140.74it/s][A
+Loading weights:  53%|█████▎    | 275/517 [00:01<00:01, 139.25it/s][A
+Loading weights:  56%|█████▋    | 291/517 [00:01<00:01, 132.19it/s][A
+Loading weights:  59%|█████▉    | 305/517 [00:02<00:01, 131.49it/s][A
+Loading weights:  62%|██████▏   | 319/517 [00:02<00:01, 110.58it/s][A
+Loading weights:  64%|██████▍   | 331/517 [00:02<00:01, 107.93it/s][A
+Loading weights:  67%|██████▋   | 344/517 [00:02<00:01, 103.45it/s][A
+Loading weights:  70%|██████▉   | 360/517 [00:02<00:01, 104.47it/s][A
+Loading weights:  73%|███████▎  | 376/517 [00:02<00:01, 111.61it/s][A
+Loading weights:  76%|███████▌  | 392/517 [00:02<00:01, 120.37it/s][A
+Loading weights:  82%|████████▏ | 424/517 [00:03<00:00, 161.51it/s][A
+Loading weights:  88%|████████▊ | 456/517 [00:03<00:00, 182.69it/s][A
+Loading weights:  94%|█████████▍| 488/517 [00:03<00:00, 193.53it/s][ALoading weights: 100%|██████████| 517/517 [00:03<00:00, 152.67it/s]
+Loading pipeline components...:  86%|████████▌ | 6/7 [00:23<00:04,  4.90s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:   1%|          | 2/196 [00:00<00:33,  5.86it/s][A
+Loading weights:  73%|███████▎  | 144/196 [00:00<00:00, 422.17it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 374.55it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:24<00:00,  3.73s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:24<00:00,  3.51s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 57.8 sn
+There are modules in UNet2DConditionModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+gulumseme 114.5 sn
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+gulumseme-b 136.6 sn
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+goz-kapali 156.7 sn
