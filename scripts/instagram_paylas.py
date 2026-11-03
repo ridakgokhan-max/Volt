@@ -2,6 +2,7 @@
 Kullanım: INSTAGRAM_TOKEN=... python scripts/instagram_paylas.py <konu>
 Video: out/bilim/<konu>.mp4 (herkese açık GitHub adresinden Instagram çeker)
 Açıklama: bilim/<konu>/aciklama.txt   Kapak: out/bilim/<konu>-kapak.png
+Ya da: <konu> = "medya:<instagram medya id>" -> hesaptaki o Reels aynı açıklamayla yeniden paylaşılır
 """
 import json
 import os
@@ -27,10 +28,20 @@ def istek(yol, veri=None):
     return json.loads(r.read())
 
 
-aciklama = open(f"bilim/{konu}/aciklama.txt", encoding="utf-8").read().strip()
-veri = {"media_type": "REELS", "video_url": f"{HAM}/out/bilim/{konu}.mp4", "caption": aciklama, "share_to_feed": "true"}
-if os.path.exists(f"out/bilim/{konu}-kapak.png"):
-    veri["cover_url"] = f"{HAM}/out/bilim/{konu}-kapak.png"
+if konu.startswith("medya:"):
+    # hesaptaki mevcut bir Reels'i aynen yeniden paylaş: video, açıklama ve kapak Instagram'dan alınır
+    m = istek(f"GET {konu[6:]}", {"fields": "media_type,media_url,caption,thumbnail_url,permalink"})
+    print("kaynak:", m.get("permalink"), m.get("media_type"))
+    if m.get("media_type") != "VIDEO" or not m.get("media_url"):
+        sys.exit("Bu gönderi video değil ya da video adresi alınamadı")
+    veri = {"media_type": "REELS", "video_url": m["media_url"], "caption": m.get("caption", ""), "share_to_feed": "true"}
+    if m.get("thumbnail_url"):
+        veri["cover_url"] = m["thumbnail_url"]
+else:
+    aciklama = open(f"bilim/{konu}/aciklama.txt", encoding="utf-8").read().strip()
+    veri = {"media_type": "REELS", "video_url": f"{HAM}/out/bilim/{konu}.mp4", "caption": aciklama, "share_to_feed": "true"}
+    if os.path.exists(f"out/bilim/{konu}-kapak.png"):
+        veri["cover_url"] = f"{HAM}/out/bilim/{konu}-kapak.png"
 kap = istek("me/media", veri)["id"]
 print("kapsayıcı:", kap)
 for _ in range(60):
