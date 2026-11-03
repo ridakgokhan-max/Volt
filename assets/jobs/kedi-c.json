@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "koylu-12",
+   "prompt": "full body character design of a medieval European peasant man with brown hair and a short brown beard, simple brown tunic with a rope belt, green hood on the shoulders, grey trousers, leather boots, worried expression, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 12,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "koylu-31",
+   "prompt": "full body character design of a medieval European peasant man with brown hair and a short brown beard, simple brown tunic with a rope belt, green hood on the shoulders, grey trousers, leather boots, worried expression, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 31,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "papa-12",
+   "prompt": "full body character design of an old medieval pope with a short white beard, tall white and gold mitre hat, long white robe with a red and gold cape, red shoes, stern expression, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 12,
+   "w": 640,
+   "h": 1136
+  },
+  {
+   "name": "papa-31",
+   "prompt": "full body character design of an old medieval pope with a short white beard, tall white and gold mitre hat, long white robe with a red and gold cape, red shoes, stern expression, standing straight facing the viewer in A-pose, arms hanging slightly away from the body, open empty hands, feet slightly apart, whole body visible from head to shoes, centered, small margin around, plain flat light beige background, character sheet, bold clean black ink outlines",
+   "neg": "cropped, cut off, multiple characters, two people, background scenery, shadow on floor, crossed arms, hands in pockets, holding objects, staff, book, scroll, weapon",
+   "seed": 31,
+   "w": 640,
+   "h": 1136
+  }
+ ]
+}
