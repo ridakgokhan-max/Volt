@@ -1,0 +1,14 @@
+[0;93m2026-11-03 17:13:55.371787568 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Downloading: "https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/onnx_sdk/yolox_m_8xb8-300e_humanart-c2c7a14a.zip" to /home/runner/.cache/rtmlib/hub/checkpoints/yolox_m_8xb8-300e_humanart-c2c7a14a.zip
+  0%|          | 0.00/89.9M [00:00<?, ?B/s] 11%|█         | 10.0M/89.9M [00:00<00:00, 105MB/s] 39%|███▉      | 35.4M/89.9M [00:00<00:00, 200MB/s] 68%|██████▊   | 61.2M/89.9M [00:00<00:00, 231MB/s] 93%|█████████▎| 83.2M/89.9M [00:00<00:00, 231MB/s]100%|██████████| 89.9M/89.9M [00:00<00:00, 219MB/s]
+Downloading: "https://download.openmmlab.com/mmpose/v1/projects/rtmw/onnx_sdk/rtmw-dw-x-l_simcc-cocktail14_270e-384x288_20231122.zip" to /home/runner/.cache/rtmlib/hub/checkpoints/rtmw-dw-x-l_simcc-cocktail14_270e-384x288_20231122.zip
+load /home/runner/.cache/rtmlib/hub/checkpoints/yolox_m_8xb8-300e_humanart-c2c7a14a.onnx with onnxruntime backend
+  0%|          | 0.00/204M [00:00<?, ?B/s]  3%|▎         | 6.30M/204M [00:00<00:03, 66.1MB/s] 13%|█▎        | 27.4M/204M [00:00<00:01, 157MB/s]  24%|██▎       | 48.3M/204M [00:00<00:00, 185MB/s] 33%|███▎      | 67.8M/204M [00:00<00:00, 191MB/s] 42%|████▏     | 86.0M/204M [00:00<00:00, 191MB/s] 53%|█████▎    | 107M/204M [00:00<00:00, 200MB/s]  63%|██████▎   | 128M/204M [00:00<00:00, 206MB/s] 72%|███████▏  | 148M/204M [00:00<00:00, 206MB/s] 82%|████████▏ | 167M/204M [00:00<00:00, 203MB/s] 93%|█████████▎| 189M/204M [00:01<00:00, 211MB/s]100%|██████████| 204M/204M [00:01<00:00, 199MB/s]
+[0;93m2026-11-03 17:13:59.545572776 [W:onnxruntime:, graph.cc:5777 CleanUnusedInitializersAndNodeArgs] Removing initializer '1701'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-11-03 17:13:59.545599015 [W:onnxruntime:, graph.cc:5777 CleanUnusedInitializersAndNodeArgs] Removing initializer '1706'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-11-03 17:13:59.545616057 [W:onnxruntime:, graph.cc:5777 CleanUnusedInitializersAndNodeArgs] Removing initializer '1709'. It is not used by any node and should be removed from the model.[m
+load /home/runner/.cache/rtmlib/hub/checkpoints/rtmw-dw-x-l_simcc-cocktail14_270e-384x288_20231122.onnx with onnxruntime backend
+karakter-23 kişi: 1 gövde güveni: 5.41
+karakter-11 kişi: 1 gövde güveni: 5.18
+karakter-37 kişi: 1 gövde güveni: 5.89
+03-saatci kişi: 1 gövde güveni: 4.33
