@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "el-isaret-2",
+   "prompt": "a single cartoon hand of a friendly old man making a pointing gesture, only the index finger extended straight up, thumb and the other three fingers folded tightly into the palm like a fist, palm facing the viewer, warm skin tone, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, anime storybook style",
+   "neg": "face, person, body, head, two hands, open hand, spread fingers, extra fingers, background objects",
+   "seed": 2,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-isaret-9",
+   "prompt": "a single cartoon hand of a friendly old man making a pointing gesture, only the index finger extended straight up, thumb and the other three fingers folded tightly into the palm like a fist, palm facing the viewer, warm skin tone, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, anime storybook style",
+   "neg": "face, person, body, head, two hands, open hand, spread fingers, extra fingers, background objects",
+   "seed": 9,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-isaret-33",
+   "prompt": "a single cartoon hand of a friendly old man making a pointing gesture, only the index finger extended straight up, thumb and the other three fingers folded tightly into the palm like a fist, palm facing the viewer, warm skin tone, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, anime storybook style",
+   "neg": "face, person, body, head, two hands, open hand, spread fingers, extra fingers, background objects",
+   "seed": 33,
+   "w": 768,
+   "h": 768
+  },
+  {
+   "name": "el-isaret-41",
+   "prompt": "a single cartoon hand of a friendly old man making a pointing gesture, only the index finger extended straight up, thumb and the other three fingers folded tightly into the palm like a fist, palm facing the viewer, warm skin tone, a white shirt sleeve cuff at the wrist at the bottom of the image, isolated, centered, nothing else, plain flat light gray background, 2d character design, anime storybook style",
+   "neg": "face, person, body, head, two hands, open hand, spread fingers, extra fingers, background objects",
+   "seed": 41,
+   "w": 768,
+   "h": 768
+  }
+ ]
+}
