@@ -1,0 +1,1367 @@
+{
+ "model": "large-v3",
+ "sure": 120.213,
+ "segmentler": [
+  {
+   "start": 0.0,
+   "end": 5.24,
+   "text": "Bir zamanlar Avrupa'da siyahi bir kedi görmek, insanlara göre kötü bir şeyin habercisiydi.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 0.0,
+     "end": 0.52,
+     "p": 0.99
+    },
+    {
+     "w": "zamanlar",
+     "start": 0.52,
+     "end": 1.06,
+     "p": 0.999
+    },
+    {
+     "w": "Avrupa'da",
+     "start": 1.06,
+     "end": 1.62,
+     "p": 0.996
+    },
+    {
+     "w": "siyahi",
+     "start": 1.62,
+     "end": 1.98,
+     "p": 0.991
+    },
+    {
+     "w": "bir",
+     "start": 1.98,
+     "end": 2.18,
+     "p": 0.999
+    },
+    {
+     "w": "kedi",
+     "start": 2.18,
+     "end": 2.48,
+     "p": 1.0
+    },
+    {
+     "w": "görmek,",
+     "start": 2.48,
+     "end": 2.82,
+     "p": 1.0
+    },
+    {
+     "w": "insanlara",
+     "start": 2.88,
+     "end": 3.76,
+     "p": 0.984
+    },
+    {
+     "w": "göre",
+     "start": 3.76,
+     "end": 3.9,
+     "p": 1.0
+    },
+    {
+     "w": "kötü",
+     "start": 3.9,
+     "end": 4.14,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 4.14,
+     "end": 4.32,
+     "p": 1.0
+    },
+    {
+     "w": "şeyin",
+     "start": 4.32,
+     "end": 4.6,
+     "p": 0.998
+    },
+    {
+     "w": "habercisiydi.",
+     "start": 4.6,
+     "end": 5.24,
+     "p": 0.963
+    }
+   ]
+  },
+  {
+   "start": 6.02,
+   "end": 7.82,
+   "text": "Ama mesele sadece uğursuzluk değildi.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 5.77,
+     "end": 6.14,
+     "p": 0.999
+    },
+    {
+     "w": "mesele",
+     "start": 6.14,
+     "end": 6.52,
+     "p": 1.0
+    },
+    {
+     "w": "sadece",
+     "start": 6.52,
+     "end": 6.7,
+     "p": 1.0
+    },
+    {
+     "w": "uğursuzluk",
+     "start": 6.7,
+     "end": 7.4,
+     "p": 0.999
+    },
+    {
+     "w": "değildi.",
+     "start": 7.4,
+     "end": 7.82,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 7.9,
+   "end": 14.24,
+   "text": "Yüzyıllar önce bazı insanlar, kedilerin şeytanla işbirliği yaptığına, cadıların gizli yardımcısı olduğuna inanıyordu.",
+   "kelimeler": [
+    {
+     "w": "Yüzyıllar",
+     "start": 7.9,
+     "end": 8.64,
+     "p": 0.996
+    },
+    {
+     "w": "önce",
+     "start": 8.64,
+     "end": 8.84,
+     "p": 1.0
+    },
+    {
+     "w": "bazı",
+     "start": 8.84,
+     "end": 9.3,
+     "p": 0.998
+    },
+    {
+     "w": "insanlar,",
+     "start": 9.3,
+     "end": 9.64,
+     "p": 0.999
+    },
+    {
+     "w": "kedilerin",
+     "start": 9.78,
+     "end": 10.58,
+     "p": 0.998
+    },
+    {
+     "w": "şeytanla",
+     "start": 10.58,
+     "end": 11.04,
+     "p": 0.999
+    },
+    {
+     "w": "işbirliği",
+     "start": 11.04,
+     "end": 11.48,
+     "p": 0.887
+    },
+    {
+     "w": "yaptığına,",
+     "start": 11.48,
+     "end": 11.9,
+     "p": 0.999
+    },
+    {
+     "w": "cadıların",
+     "start": 12.06,
+     "end": 12.88,
+     "p": 0.999
+    },
+    {
+     "w": "gizli",
+     "start": 12.88,
+     "end": 13.16,
+     "p": 1.0
+    },
+    {
+     "w": "yardımcısı",
+     "start": 13.16,
+     "end": 13.5,
+     "p": 0.899
+    },
+    {
+     "w": "olduğuna",
+     "start": 13.5,
+     "end": 13.86,
+     "p": 0.999
+    },
+    {
+     "w": "inanıyordu.",
+     "start": 13.86,
+     "end": 14.24,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 14.98,
+   "end": 18.24,
+   "text": "Hikayenin en dikkat çekici noktası ise 1233 yılına uzanıyor.",
+   "kelimeler": [
+    {
+     "w": "Hikayenin",
+     "start": 14.98,
+     "end": 15.64,
+     "p": 0.997
+    },
+    {
+     "w": "en",
+     "start": 15.64,
+     "end": 15.76,
+     "p": 1.0
+    },
+    {
+     "w": "dikkat",
+     "start": 15.76,
+     "end": 16.08,
+     "p": 1.0
+    },
+    {
+     "w": "çekici",
+     "start": 16.08,
+     "end": 16.3,
+     "p": 1.0
+    },
+    {
+     "w": "noktası",
+     "start": 16.3,
+     "end": 16.7,
+     "p": 1.0
+    },
+    {
+     "w": "ise",
+     "start": 16.7,
+     "end": 16.9,
+     "p": 1.0
+    },
+    {
+     "w": "1233",
+     "start": 16.9,
+     "end": 17.58,
+     "p": 0.977
+    },
+    {
+     "w": "yılına",
+     "start": 17.58,
+     "end": 17.92,
+     "p": 1.0
+    },
+    {
+     "w": "uzanıyor.",
+     "start": 17.92,
+     "end": 18.24,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 19.88,
+   "end": 26.44,
+   "text": "Papa Altıncı Gregor, o yıl yayınladığı bir mektupta, şeytana tapan bir grubun ayinlerini anlatıyordu.",
+   "kelimeler": [
+    {
+     "w": "Papa",
+     "start": 19.88,
+     "end": 20.62,
+     "p": 0.993
+    },
+    {
+     "w": "Altıncı",
+     "start": 20.62,
+     "end": 21.14,
+     "p": 0.819
+    },
+    {
+     "w": "Gregor,",
+     "start": 21.14,
+     "end": 21.58,
+     "p": 0.998
+    },
+    {
+     "w": "o",
+     "start": 21.66,
+     "end": 22.34,
+     "p": 0.994
+    },
+    {
+     "w": "yıl",
+     "start": 22.34,
+     "end": 22.58,
+     "p": 1.0
+    },
+    {
+     "w": "yayınladığı",
+     "start": 22.58,
+     "end": 23.12,
+     "p": 0.996
+    },
+    {
+     "w": "bir",
+     "start": 23.12,
+     "end": 23.22,
+     "p": 1.0
+    },
+    {
+     "w": "mektupta,",
+     "start": 23.22,
+     "end": 23.64,
+     "p": 1.0
+    },
+    {
+     "w": "şeytana",
+     "start": 23.76,
+     "end": 24.3,
+     "p": 0.997
+    },
+    {
+     "w": "tapan",
+     "start": 24.3,
+     "end": 24.58,
+     "p": 0.994
+    },
+    {
+     "w": "bir",
+     "start": 24.58,
+     "end": 24.76,
+     "p": 1.0
+    },
+    {
+     "w": "grubun",
+     "start": 24.76,
+     "end": 25.2,
+     "p": 0.997
+    },
+    {
+     "w": "ayinlerini",
+     "start": 25.2,
+     "end": 25.9,
+     "p": 0.895
+    },
+    {
+     "w": "anlatıyordu.",
+     "start": 25.9,
+     "end": 26.44,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 26.44,
+   "end": 34.54,
+   "text": "Bu ayin tasvirinde şeytana temsil eden korkunç bir kara kedi de vardı.",
+   "kelimeler": [
+    {
+     "w": "Bu",
+     "start": 26.44,
+     "end": 27.34,
+     "p": 0.844
+    },
+    {
+     "w": "ayin",
+     "start": 27.34,
+     "end": 27.7,
+     "p": 0.897
+    },
+    {
+     "w": "tasvirinde",
+     "start": 27.7,
+     "end": 28.24,
+     "p": 0.993
+    },
+    {
+     "w": "şeytana",
+     "start": 28.24,
+     "end": 28.86,
+     "p": 0.887
+    },
+    {
+     "w": "temsil",
+     "start": 28.86,
+     "end": 29.28,
+     "p": 0.995
+    },
+    {
+     "w": "eden",
+     "start": 29.28,
+     "end": 31.58,
+     "p": 0.978
+    },
+    {
+     "w": "korkunç",
+     "start": 31.58,
+     "end": 33.62,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 33.62,
+     "end": 33.78,
+     "p": 1.0
+    },
+    {
+     "w": "kara",
+     "start": 33.78,
+     "end": 33.98,
+     "p": 0.987
+    },
+    {
+     "w": "kedi",
+     "start": 33.98,
+     "end": 34.22,
+     "p": 0.877
+    },
+    {
+     "w": "de",
+     "start": 34.22,
+     "end": 34.3,
+     "p": 0.994
+    },
+    {
+     "w": "vardı.",
+     "start": 34.3,
+     "end": 34.54,
+     "p": 0.992
+    }
+   ]
+  },
+  {
+   "start": 35.1,
+   "end": 40.22,
+   "text": "Zamanla kediler özellikle de siyah kediler cadılık ve karanlık güçlerle özdeştirildi.",
+   "kelimeler": [
+    {
+     "w": "Zamanla",
+     "start": 35.1,
+     "end": 35.92,
+     "p": 0.999
+    },
+    {
+     "w": "kediler",
+     "start": 35.92,
+     "end": 36.32,
+     "p": 0.998
+    },
+    {
+     "w": "özellikle",
+     "start": 36.32,
+     "end": 36.94,
+     "p": 0.873
+    },
+    {
+     "w": "de",
+     "start": 36.94,
+     "end": 37.08,
+     "p": 0.97
+    },
+    {
+     "w": "siyah",
+     "start": 37.08,
+     "end": 37.42,
+     "p": 0.998
+    },
+    {
+     "w": "kediler",
+     "start": 37.42,
+     "end": 37.82,
+     "p": 1.0
+    },
+    {
+     "w": "cadılık",
+     "start": 37.82,
+     "end": 38.52,
+     "p": 0.998
+    },
+    {
+     "w": "ve",
+     "start": 38.52,
+     "end": 38.58,
+     "p": 1.0
+    },
+    {
+     "w": "karanlık",
+     "start": 38.58,
+     "end": 39.06,
+     "p": 1.0
+    },
+    {
+     "w": "güçlerle",
+     "start": 39.06,
+     "end": 39.48,
+     "p": 1.0
+    },
+    {
+     "w": "özdeştirildi.",
+     "start": 39.48,
+     "end": 40.22,
+     "p": 0.982
+    }
+   ]
+  },
+  {
+   "start": 40.38,
+   "end": 45.04,
+   "text": "Bazıları onları uğursuz saydı bazıları ise cadıların yardımcıları olduklarına inanıyordu.",
+   "kelimeler": [
+    {
+     "w": "Bazıları",
+     "start": 40.38,
+     "end": 41.18,
+     "p": 1.0
+    },
+    {
+     "w": "onları",
+     "start": 41.18,
+     "end": 41.48,
+     "p": 0.997
+    },
+    {
+     "w": "uğursuz",
+     "start": 41.48,
+     "end": 41.82,
+     "p": 0.845
+    },
+    {
+     "w": "saydı",
+     "start": 41.82,
+     "end": 42.24,
+     "p": 0.955
+    },
+    {
+     "w": "bazıları",
+     "start": 42.24,
+     "end": 43.06,
+     "p": 0.777
+    },
+    {
+     "w": "ise",
+     "start": 43.06,
+     "end": 43.18,
+     "p": 0.997
+    },
+    {
+     "w": "cadıların",
+     "start": 43.18,
+     "end": 43.58,
+     "p": 0.999
+    },
+    {
+     "w": "yardımcıları",
+     "start": 43.58,
+     "end": 44.16,
+     "p": 0.997
+    },
+    {
+     "w": "olduklarına",
+     "start": 44.16,
+     "end": 44.6,
+     "p": 0.999
+    },
+    {
+     "w": "inanıyordu.",
+     "start": 44.6,
+     "end": 45.04,
+     "p": 0.999
+    }
+   ]
+  },
+  {
+   "start": 45.22,
+   "end": 49.78,
+   "text": "Ve kedilere yönelik zalimler Avrupa'nın farklı bölgelerinde yüzyıllarca devam etti.",
+   "kelimeler": [
+    {
+     "w": "Ve",
+     "start": 45.22,
+     "end": 46.04,
+     "p": 0.995
+    },
+    {
+     "w": "kedilere",
+     "start": 46.04,
+     "end": 46.46,
+     "p": 0.99
+    },
+    {
+     "w": "yönelik",
+     "start": 46.46,
+     "end": 46.78,
+     "p": 1.0
+    },
+    {
+     "w": "zalimler",
+     "start": 46.78,
+     "end": 47.24,
+     "p": 0.998
+    },
+    {
+     "w": "Avrupa",
+     "start": 47.24,
+     "end": 47.66,
+     "p": 0.99
+    },
+    {
+     "w": "'nın",
+     "start": 47.66,
+     "end": 47.78,
+     "p": 1.0
+    },
+    {
+     "w": "farklı",
+     "start": 47.78,
+     "end": 48.0,
+     "p": 1.0
+    },
+    {
+     "w": "bölgelerinde",
+     "start": 48.0,
+     "end": 48.64,
+     "p": 1.0
+    },
+    {
+     "w": "yüzyıllarca",
+     "start": 48.64,
+     "end": 49.26,
+     "p": 0.979
+    },
+    {
+     "w": "devam",
+     "start": 49.26,
+     "end": 49.52,
+     "p": 1.0
+    },
+    {
+     "w": "etti.",
+     "start": 49.52,
+     "end": 49.78,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 50.68,
+   "end": 56.78,
+   "text": "Hatta 1730'lu yıllarında Paris'te yaşanan gerçek bir olay, tarihe büyük kedi katliamı olarak geçti.",
+   "kelimeler": [
+    {
+     "w": "Hatta",
+     "start": 50.55,
+     "end": 51.0,
+     "p": 0.978
+    },
+    {
+     "w": "1730",
+     "start": 51.0,
+     "end": 51.7,
+     "p": 0.983
+    },
+    {
+     "w": "'lu",
+     "start": 51.7,
+     "end": 51.84,
+     "p": 0.991
+    },
+    {
+     "w": "yıllarında",
+     "start": 51.84,
+     "end": 52.3,
+     "p": 0.999
+    },
+    {
+     "w": "Paris'te",
+     "start": 52.3,
+     "end": 53.32,
+     "p": 0.981
+    },
+    {
+     "w": "yaşanan",
+     "start": 53.32,
+     "end": 53.64,
+     "p": 0.993
+    },
+    {
+     "w": "gerçek",
+     "start": 53.64,
+     "end": 53.98,
+     "p": 0.999
+    },
+    {
+     "w": "bir",
+     "start": 53.98,
+     "end": 54.26,
+     "p": 1.0
+    },
+    {
+     "w": "olay,",
+     "start": 54.26,
+     "end": 54.58,
+     "p": 1.0
+    },
+    {
+     "w": "tarihe",
+     "start": 54.64,
+     "end": 55.24,
+     "p": 0.976
+    },
+    {
+     "w": "büyük",
+     "start": 55.24,
+     "end": 55.48,
+     "p": 0.852
+    },
+    {
+     "w": "kedi",
+     "start": 55.48,
+     "end": 55.74,
+     "p": 0.996
+    },
+    {
+     "w": "katliamı",
+     "start": 55.74,
+     "end": 56.12,
+     "p": 0.996
+    },
+    {
+     "w": "olarak",
+     "start": 56.12,
+     "end": 56.32,
+     "p": 1.0
+    },
+    {
+     "w": "geçti.",
+     "start": 56.32,
+     "end": 56.78,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "start": 57.32,
+   "end": 64.94,
+   "text": "Bir matbaada çalışan çıraklar, kötü çalışma koşullarına ve kendilerinden daha iyi beslenen patronlarının kedilerine öfkeliydi.",
+   "kelimeler": [
+    {
+     "w": "Bir",
+     "start": 57.32,
+     "end": 57.66,
+     "p": 0.987
+    },
+    {
+     "w": "matbaada",
+     "start": 57.66,
+     "end": 58.12,
+     "p": 0.651
+    },
+    {
+     "w": "çalışan",
+     "start": 58.12,
+     "end": 58.66,
+     "p": 1.0
+    },
+    {
+     "w": "çıraklar,",
+     "start": 58.66,
+     "end": 59.1,
+     "p": 0.999
+    },
+    {
+     "w": "kötü",
+     "start": 59.2,
+     "end": 59.86,
+     "p": 1.0
+    },
+    {
+     "w": "çalışma",
+     "start": 59.86,
+     "end": 60.34,
+     "p": 1.0
+    },
+    {
+     "w": "koşullarına",
+     "start": 60.34,
+     "end": 60.88,
+     "p": 0.99
+    },
+    {
+     "w": "ve",
+     "start": 60.88,
+     "end": 60.98,
+     "p": 1.0
+    },
+    {
+     "w": "kendilerinden",
+     "start": 60.98,
+     "end": 61.9,
+     "p": 1.0
+    },
+    {
+     "w": "daha",
+     "start": 61.9,
+     "end": 62.24,
+     "p": 1.0
+    },
+    {
+     "w": "iyi",
+     "start": 62.24,
+     "end": 62.48,
+     "p": 1.0
+    },
+    {
+     "w": "beslenen",
+     "start": 62.48,
+     "end": 62.96,
+     "p": 1.0
+    },
+    {
+     "w": "patronlarının",
+     "start": 62.96,
+     "end": 63.68,
+     "p": 0.974
+    },
+    {
+     "w": "kedilerine",
+     "start": 63.68,
+     "end": 64.5,
+     "p": 0.997
+    },
+    {
+     "w": "öfkeliydi.",
+     "start": 64.5,
+     "end": 64.94,
+     "p": 0.994
+    }
+   ]
+  },
+  {
+   "start": 65.74,
+   "end": 70.74,
+   "text": "Önce mahalledeki kedileri yakaladılar. Ardından onları sahte mahkemelerde yargılayıp astılar.",
+   "kelimeler": [
+    {
+     "w": "Önce",
+     "start": 65.45,
+     "end": 65.9,
+     "p": 1.0
+    },
+    {
+     "w": "mahalledeki",
+     "start": 65.9,
+     "end": 66.44,
+     "p": 0.995
+    },
+    {
+     "w": "kedileri",
+     "start": 66.44,
+     "end": 66.98,
+     "p": 0.982
+    },
+    {
+     "w": "yakaladılar.",
+     "start": 66.98,
+     "end": 67.42,
+     "p": 1.0
+    },
+    {
+     "w": "Ardından",
+     "start": 67.58,
+     "end": 68.46,
+     "p": 1.0
+    },
+    {
+     "w": "onları",
+     "start": 68.46,
+     "end": 68.9,
+     "p": 1.0
+    },
+    {
+     "w": "sahte",
+     "start": 68.9,
+     "end": 69.22,
+     "p": 1.0
+    },
+    {
+     "w": "mahkemelerde",
+     "start": 69.22,
+     "end": 69.86,
+     "p": 1.0
+    },
+    {
+     "w": "yargılayıp",
+     "start": 69.86,
+     "end": 70.36,
+     "p": 1.0
+    },
+    {
+     "w": "astılar.",
+     "start": 70.36,
+     "end": 70.74,
+     "p": 0.991
+    }
+   ]
+  },
+  {
+   "start": 70.74,
+   "end": 83.94,
+   "text": "Evet yanlış duymadınız. İnsanlar bir dönem kedileri şeytanla ilişkilendirdi. Başka bir dönemde ise kendi öfkelerinin hedefi haline getirdi.",
+   "kelimeler": [
+    {
+     "w": "Evet",
+     "start": 70.74,
+     "end": 71.66,
+     "p": 0.968
+    },
+    {
+     "w": "yanlış",
+     "start": 71.66,
+     "end": 72.22,
+     "p": 0.697
+    },
+    {
+     "w": "duymadınız.",
+     "start": 72.22,
+     "end": 72.8,
+     "p": 1.0
+    },
+    {
+     "w": "İnsanlar",
+     "start": 73.2,
+     "end": 74.08,
+     "p": 0.997
+    },
+    {
+     "w": "bir",
+     "start": 74.08,
+     "end": 74.2,
+     "p": 0.999
+    },
+    {
+     "w": "dönem",
+     "start": 74.2,
+     "end": 74.64,
+     "p": 1.0
+    },
+    {
+     "w": "kedileri",
+     "start": 74.64,
+     "end": 78.46,
+     "p": 0.793
+    },
+    {
+     "w": "şeytanla",
+     "start": 78.46,
+     "end": 79.0,
+     "p": 0.998
+    },
+    {
+     "w": "ilişkilendirdi.",
+     "start": 79.0,
+     "end": 79.76,
+     "p": 1.0
+    },
+    {
+     "w": "Başka",
+     "start": 79.86,
+     "end": 80.68,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 80.68,
+     "end": 80.8,
+     "p": 1.0
+    },
+    {
+     "w": "dönemde",
+     "start": 80.8,
+     "end": 81.14,
+     "p": 0.999
+    },
+    {
+     "w": "ise",
+     "start": 81.14,
+     "end": 81.32,
+     "p": 0.999
+    },
+    {
+     "w": "kendi",
+     "start": 81.32,
+     "end": 81.98,
+     "p": 0.999
+    },
+    {
+     "w": "öfkelerinin",
+     "start": 81.98,
+     "end": 82.58,
+     "p": 0.996
+    },
+    {
+     "w": "hedefi",
+     "start": 82.58,
+     "end": 83.44,
+     "p": 1.0
+    },
+    {
+     "w": "haline",
+     "start": 83.44,
+     "end": 83.62,
+     "p": 0.997
+    },
+    {
+     "w": "getirdi.",
+     "start": 83.62,
+     "end": 83.94,
+     "p": 0.998
+    }
+   ]
+  },
+  {
+   "start": 84.48,
+   "end": 94.42,
+   "text": "Ama belki de en korkutucu şey kedilerden duyulan korku değildi. İnsanların kendi inandıkları şeyler uğruna masum canlara neler yapabileceği idi.",
+   "kelimeler": [
+    {
+     "w": "Ama",
+     "start": 84.48,
+     "end": 84.9,
+     "p": 0.998
+    },
+    {
+     "w": "belki",
+     "start": 84.9,
+     "end": 85.2,
+     "p": 0.999
+    },
+    {
+     "w": "de",
+     "start": 85.2,
+     "end": 85.34,
+     "p": 0.998
+    },
+    {
+     "w": "en",
+     "start": 85.34,
+     "end": 85.44,
+     "p": 1.0
+    },
+    {
+     "w": "korkutucu",
+     "start": 85.44,
+     "end": 86.06,
+     "p": 0.999
+    },
+    {
+     "w": "şey",
+     "start": 86.06,
+     "end": 86.28,
+     "p": 1.0
+    },
+    {
+     "w": "kedilerden",
+     "start": 86.28,
+     "end": 87.32,
+     "p": 0.994
+    },
+    {
+     "w": "duyulan",
+     "start": 87.32,
+     "end": 87.7,
+     "p": 1.0
+    },
+    {
+     "w": "korku",
+     "start": 87.7,
+     "end": 88.1,
+     "p": 1.0
+    },
+    {
+     "w": "değildi.",
+     "start": 88.1,
+     "end": 88.44,
+     "p": 0.999
+    },
+    {
+     "w": "İnsanların",
+     "start": 88.9,
+     "end": 89.78,
+     "p": 1.0
+    },
+    {
+     "w": "kendi",
+     "start": 89.78,
+     "end": 90.24,
+     "p": 1.0
+    },
+    {
+     "w": "inandıkları",
+     "start": 90.24,
+     "end": 90.88,
+     "p": 1.0
+    },
+    {
+     "w": "şeyler",
+     "start": 90.88,
+     "end": 91.22,
+     "p": 0.999
+    },
+    {
+     "w": "uğruna",
+     "start": 91.22,
+     "end": 91.94,
+     "p": 0.999
+    },
+    {
+     "w": "masum",
+     "start": 91.94,
+     "end": 92.48,
+     "p": 0.982
+    },
+    {
+     "w": "canlara",
+     "start": 92.48,
+     "end": 92.82,
+     "p": 0.955
+    },
+    {
+     "w": "neler",
+     "start": 92.82,
+     "end": 93.64,
+     "p": 0.996
+    },
+    {
+     "w": "yapabileceği",
+     "start": 93.64,
+     "end": 94.28,
+     "p": 0.876
+    },
+    {
+     "w": "idi.",
+     "start": 94.28,
+     "end": 94.42,
+     "p": 0.878
+    }
+   ]
+  },
+  {
+   "start": 94.42,
+   "end": 100.04,
+   "text": "Peki sen yüzyıllar önce yaşasaydın siyah bir kedi gördüğünde korkar mıydın?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 94.42,
+     "end": 95.24,
+     "p": 0.994
+    },
+    {
+     "w": "sen",
+     "start": 95.24,
+     "end": 95.48,
+     "p": 0.99
+    },
+    {
+     "w": "yüzyıllar",
+     "start": 95.48,
+     "end": 96.6,
+     "p": 0.939
+    },
+    {
+     "w": "önce",
+     "start": 96.6,
+     "end": 96.82,
+     "p": 1.0
+    },
+    {
+     "w": "yaşasaydın",
+     "start": 96.82,
+     "end": 97.68,
+     "p": 0.999
+    },
+    {
+     "w": "siyah",
+     "start": 97.68,
+     "end": 98.52,
+     "p": 0.936
+    },
+    {
+     "w": "bir",
+     "start": 98.52,
+     "end": 98.64,
+     "p": 1.0
+    },
+    {
+     "w": "kedi",
+     "start": 98.64,
+     "end": 98.94,
+     "p": 1.0
+    },
+    {
+     "w": "gördüğünde",
+     "start": 98.94,
+     "end": 99.32,
+     "p": 1.0
+    },
+    {
+     "w": "korkar",
+     "start": 99.32,
+     "end": 99.76,
+     "p": 0.999
+    },
+    {
+     "w": "mıydın?",
+     "start": 99.76,
+     "end": 100.04,
+     "p": 0.996
+    }
+   ]
+  },
+  {
+   "start": 100.8,
+   "end": 113.44,
+   "text": "İnsanlar kendi inandıkları şeyler uğruna masum canlılara neler yapabildiydi?",
+   "kelimeler": [
+    {
+     "w": "İnsanlar",
+     "start": 100.8,
+     "end": 101.74,
+     "p": 0.991
+    },
+    {
+     "w": "kendi",
+     "start": 101.74,
+     "end": 102.58,
+     "p": 0.999
+    },
+    {
+     "w": "inandıkları",
+     "start": 102.58,
+     "end": 103.4,
+     "p": 0.999
+    },
+    {
+     "w": "şeyler",
+     "start": 103.4,
+     "end": 103.68,
+     "p": 0.971
+    },
+    {
+     "w": "uğruna",
+     "start": 103.68,
+     "end": 111.06,
+     "p": 0.995
+    },
+    {
+     "w": "masum",
+     "start": 111.06,
+     "end": 111.66,
+     "p": 0.981
+    },
+    {
+     "w": "canlılara",
+     "start": 111.66,
+     "end": 112.52,
+     "p": 0.999
+    },
+    {
+     "w": "neler",
+     "start": 112.52,
+     "end": 112.84,
+     "p": 1.0
+    },
+    {
+     "w": "yapabildiydi?",
+     "start": 112.84,
+     "end": 113.44,
+     "p": 0.902
+    }
+   ]
+  },
+  {
+   "start": 114.9,
+   "end": 119.66,
+   "text": "Peki sen yüzyıllar önce yaşasaydın siyah bir kedi gördüğünde korkar mıydın?",
+   "kelimeler": [
+    {
+     "w": "Peki",
+     "start": 114.55,
+     "end": 115.02,
+     "p": 1.0
+    },
+    {
+     "w": "sen",
+     "start": 115.02,
+     "end": 115.26,
+     "p": 1.0
+    },
+    {
+     "w": "yüzyıllar",
+     "start": 115.26,
+     "end": 115.88,
+     "p": 1.0
+    },
+    {
+     "w": "önce",
+     "start": 115.88,
+     "end": 116.1,
+     "p": 1.0
+    },
+    {
+     "w": "yaşasaydın",
+     "start": 116.1,
+     "end": 116.82,
+     "p": 1.0
+    },
+    {
+     "w": "siyah",
+     "start": 116.82,
+     "end": 117.58,
+     "p": 1.0
+    },
+    {
+     "w": "bir",
+     "start": 117.58,
+     "end": 117.72,
+     "p": 1.0
+    },
+    {
+     "w": "kedi",
+     "start": 117.72,
+     "end": 118.06,
+     "p": 1.0
+    },
+    {
+     "w": "gördüğünde",
+     "start": 118.06,
+     "end": 118.52,
+     "p": 1.0
+    },
+    {
+     "w": "korkar",
+     "start": 118.52,
+     "end": 119.36,
+     "p": 1.0
+    },
+    {
+     "w": "mıydın?",
+     "start": 119.36,
+     "end": 119.66,
+     "p": 1.0
+    }
+   ]
+  }
+ ]
+}
