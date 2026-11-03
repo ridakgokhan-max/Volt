@@ -1,5 +1,6 @@
-kapsayıcı: 17891400495504259
+kapsayıcı: 17891400777504259
 durum: IN_PROGRESS IN_PROGRESS
 durum: IN_PROGRESS IN_PROGRESS
-durum: ERROR ERROR
-Instagram videoyu işleyemedi: {"status_code": "ERROR", "status": "ERROR", "id": "17891400495504259"}
+durum: IN_PROGRESS IN_PROGRESS
+durum: FINISHED FINISHED
+DENEME TAMAM: video Instagram tarafından işlendi, yayınlanmadı.
