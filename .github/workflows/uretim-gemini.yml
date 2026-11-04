@@ -1,0 +1,50 @@
+name: Üretim - Gemini seslendirme (gizli depoya)
+
+# uretim/<konu>/gemini/ayar.json push edilince Gemini TTS ile seslendirir; çıktılar GİZLİ depoya
+# (volt-istatistik/uretim/<konu>/gemini/<etiket>/) yazılır. Gerekli secret: GEMINI_API_KEY
+on:
+  push:
+    branches: [main]
+    paths:
+      - "uretim/*/gemini/ayar.json"
+
+permissions:
+  contents: read
+
+jobs:
+  gemini:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Konu
+        id: k
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'uretim/*/gemini/ayar.json' | head -1)
+          echo "konu=$(basename $(dirname $(dirname $f)))" >> $GITHUB_OUTPUT
+          echo "etiket=$(python -c "import json;print(json.load(open('$f')).get('etiket','test'))")" >> $GITHUB_OUTPUT
+      - name: Seslendir
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install -q requests
+          [ -n "$GEMINI_API_KEY" ] || { echo "GEMINI_API_KEY secret'ı yok"; mkdir -p /tmp/out; echo "GEMINI_API_KEY secret yok" > /tmp/out/HATA.txt; exit 0; }
+          python scripts/gemini_tts.py uretim/${{ steps.k.outputs.konu }}/gemini/ayar.json /tmp/out
+      - name: Gizli depoya kaydet
+        if: always()
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: |
+          K="${{ steps.k.outputs.konu }}"; E="${{ steps.k.outputs.etiket }}"
+          git clone -q "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+          mkdir -p /tmp/gizli/uretim/$K/gemini/$E
+          cp /tmp/out/* /tmp/gizli/uretim/$K/gemini/$E/ 2>/dev/null || echo "çıktı yok" > /tmp/gizli/uretim/$K/gemini/$E/HATA.txt
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Gemini ses: $K/$E" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 7; done
