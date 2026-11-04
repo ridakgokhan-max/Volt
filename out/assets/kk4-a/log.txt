@@ -1,0 +1,26 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 4512.11it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 14.58it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  31%|███       | 158/517 [00:00<00:00, 1503.13it/s][A
+Loading weights:  64%|██████▍   | 330/517 [00:00<00:00, 1582.38it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 1671.13it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  5.93it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:29<00:00,  5.46s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:29<00:00,  4.23s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 39.8 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (80 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden printing press behind him']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (80 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden printing press behind him']
+usta-a 126.0 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden printing press behind him']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden printing press behind him']
+usta-b 116.9 sn
+eller-a 111.1 sn
+eller-b 107.7 sn
+paris-a 108.4 sn
+paris-b 107.9 sn
