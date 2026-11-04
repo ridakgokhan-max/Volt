@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "golge-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, dark plaster wall of an old print shop at night, shadows of several cats cast on the wall by a row of candles, some candles just blown out with thin smoke trails, no animals visible, melancholic",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 311,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "golge-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, dark plaster wall of an old print shop at night, shadows of several cats cast on the wall by a row of candles, some candles just blown out with thin smoke trails, no animals visible, melancholic",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 312,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "harita-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, antique hand-drawn map of western Europe on aged parchment, sepia ink coastlines and rivers, no labels, no text, top-down view, warm candlelight on the paper edges",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 313,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "harita-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, antique hand-drawn map of western Europe on aged parchment, sepia ink coastlines and rivers, no labels, no text, top-down view, warm candlelight on the paper edges",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 314,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kedigoz-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, extreme close-up portrait of a real black cat face, intense glowing amber eyes looking straight into the camera, vertical slit pupils, candle flame reflections in the eyes, dark medieval background, shallow depth of field",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 315,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kedigoz-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, extreme close-up portrait of a real black cat face, intense glowing amber eyes looking straight into the camera, vertical slit pupils, candle flame reflections in the eyes, dark medieval background, shallow depth of field",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 316,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
