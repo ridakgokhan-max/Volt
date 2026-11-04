@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "usta-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, stern stout 18th century Parisian master printer in a dark waistcoat and white shirt, arms crossed, looking down sternly, standing in a dim print shop, wooden printing press behind him",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 301,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "usta-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, stern stout 18th century Parisian master printer in a dark waistcoat and white shirt, arms crossed, looking down sternly, standing in a dim print shop, wooden printing press behind him",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 302,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "eller-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, extreme close-up of a young apprentice's ink-stained tired hands setting metal type on a wooden composing stick, 18th century print shop, candlelight",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 303,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "eller-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, extreme close-up of a young apprentice's ink-stained tired hands setting metal type on a wooden composing stick, 18th century print shop, candlelight",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 304,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "paris-a",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, 18th century Paris at dusk seen from above the rooftops, slate roofs, chimneys with smoke, gothic church towers, foggy orange sky, oil painting realism",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 305,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "paris-b",
+   "prompt": "cinematic film still, realistic historical drama, 35mm, dramatic chiaroscuro lighting, warm orange candlelight, deep shadows, rich textures of wood and fabric, natural anatomy, highly detailed, vertical composition, 18th century Paris at dusk seen from above the rooftops, slate roofs, chimneys with smoke, gothic church towers, foggy orange sky, oil painting realism",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, cartoon, anime, toy, plastic, 3d render, papercraft, deformed hands, extra fingers, extra limbs, blood, gore, dead animal, split screen, collage, border",
+   "seed": 306,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
