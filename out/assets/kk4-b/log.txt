@@ -1,0 +1,37 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  23%|██▎       | 120/517 [00:00<00:00, 1161.72it/s][A
+Loading weights:  46%|████▌     | 237/517 [00:00<00:00, 1094.43it/s][A
+Loading weights:  67%|██████▋   | 347/517 [00:00<00:00, 1065.96it/s][A
+Loading weights:  91%|█████████▏| 472/517 [00:00<00:00, 1128.33it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 1137.81it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:02,  2.38it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:01,  3.44it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:25<00:05,  5.32s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:  73%|███████▎  | 143/196 [00:00<00:00, 1429.68it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 1251.63it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  4.23s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  3.72s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 42.5 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (84 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['trails , no animals visible , melancholic']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (84 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['trails , no animals visible , melancholic']
+golge-a 205.5 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['trails , no animals visible , melancholic']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['trails , no animals visible , melancholic']
+golge-b 191.9 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['candlelight on the paper edges']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['candlelight on the paper edges']
+harita-a 183.4 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['candlelight on the paper edges']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['candlelight on the paper edges']
+harita-b 178.2 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['dark medieval background , shallow depth of field']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['dark medieval background , shallow depth of field']
+kedigoz-a 178.9 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['dark medieval background , shallow depth of field']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['dark medieval background , shallow depth of field']
+kedigoz-b 177.1 sn
