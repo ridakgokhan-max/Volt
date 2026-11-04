@@ -1,0 +1,48 @@
+name: Üretim - toplu derinlik haritası (gizli depoya)
+
+# uretim/<konu>/derinlik.json push edilince listedeki görsellerin derinlik haritasını çıkarır;
+# "gizli:" önekli görseller volt-istatistik'ten okunur, sonuçlar volt-istatistik/uretim/<konu>/derinlik/ altına yazılır.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "uretim/*/derinlik.json"
+
+permissions:
+  contents: read
+
+jobs:
+  derinlik:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Yer aç
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+      - name: Kur
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q transformers pillow numpy
+      - name: Konu ve gizli depo
+        id: k
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'uretim/*/derinlik.json' | head -1)
+          echo "konu=$(basename $(dirname $f))" >> $GITHUB_OUTPUT
+          echo "liste=$f" >> $GITHUB_OUTPUT
+          git clone -q --depth 1 "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+      - name: Derinlik
+        run: python scripts/derinlik_toplu.py ${{ steps.k.outputs.liste }} /tmp/gizli /tmp/gizli/uretim/${{ steps.k.outputs.konu }}/derinlik 2>&1 | grep -v Warning | tail -n 40
+      - name: Gizli depoya kaydet
+        if: always()
+        run: |
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Derinlik: ${{ steps.k.outputs.konu }}" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 7; done
