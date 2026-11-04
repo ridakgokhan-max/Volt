@@ -1,12 +1,41 @@
 {
- "etiket": "test1",
- "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi.",
+ "etiket": "tam1",
+ "birlestir": true,
+ "modeller": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi. Papa Dokuzuncu Gregorius'un Vox in Rama mektubu, Almanya'da sapkınlıkla suçlanan bir grubu anlatıyordu. Metne göre ayinde kara bir kedi heykeli canlanıp geri geri yürüyordu. Beş yüz yıl sonra, bin yedi yüz otuzların Paris'i. Bir matbaa çırağı, yıllar sonra yazdığı anısında anlatıyor: Çıraklara artık yemek, ustanın kedilerine kızarmış tavuk. Bir çırak geceler boyu kedi gibi bağırınca, usta kedilerden kurtulmalarını istedi. Çıraklar, ustanın karısının gözdesi dahil birçok kediyi öldürüp sahte bir mahkeme kurdu. Tarihçi Robert Darnton'a göre sebep, ağır çalışma koşulları ve ustaya duyulan öfkeydi. Ama tek kaynak bu anı ve bu yorum da tartışılıyor. İki olay arasında kanıtlanmış bir bağ yok. Ama ikisi de şunu sorduruyor: Korkumuzu ve öfkemizi hayvanlara mı yüklüyoruz? Sen kara kedi görünce aklından ilk ne geçiyor?",
  "varyantlar": [
-  {"ad": "A_gizemli_belgeselci", "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. İlk cümleye alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Doğal bir insan gibi nefes al, robotik olma. Sadece metni oku:"},
-  {"ad": "B_dramatik_hikayeci", "ses": "Enceladus",
-   "yonerge": "Aşağıdaki Türkçe metni, karanlık bir masal anlatır gibi, dramatik ve fısıltıya yakın bir sesle oku. Merak uyandır, kelimelerin arasında anlamlı duraklamalar yap. 'Ama' kelimesinde hafifçe sesini yükselt, sanki dinleyiciyi şaşırtacak bir gerçeği açıklıyorsun. Doğal ve duygulu ol. Sadece metni oku:"},
-  {"ad": "C_sicak_kadin_anlatici", "ses": "Sulafat",
-   "yonerge": "Aşağıdaki Türkçe metni, dinleyicisiyle sohbet eden sıcak ve meraklı bir kadın belgesel anlatıcısı gibi oku. İlk cümle merak uyandırsın, ikinci cümlede hafif bir ürperti hissedilsin, son cümlede samimi ama kendinden emin bir düzeltme yap. Doğal tonlama ve nefeslerle oku. Sadece metni oku:"}
+  {
+   "ad": "P1_acilis",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. Alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi."
+  },
+  {
+   "ad": "P2_belge",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni aynı gizemli belgesel anlatıcısı olarak, ciddi ve akıcı bir tempoyla oku. Ürpertici ayrıntıyı (heykelin canlanması) alçak sesle, merak uyandırarak anlat. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "metin": "Papa Dokuzuncu Gregorius'un Vox in Rama mektubu, Almanya'da sapkınlıkla suçlanan bir grubu anlatıyordu. Metne göre ayinde kara bir kedi heykeli canlanıp geri geri yürüyordu."
+  },
+  {
+   "ad": "P3_paris",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren bir hikâyeci gibi oku. Tempo biraz daha canlı ve akıcı olsun. 'Kızarmış tavuk' kısmında hafif bir ironi, 'kedi gibi bağırınca' kısmında hafif bir şaşkınlık hissedilsin. Öldürme cümlesini abartmadan, ağır ve saygılı bir tonda söyle. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "metin": "Beş yüz yıl sonra, bin yedi yüz otuzların Paris'i. Bir matbaa çırağı, yıllar sonra yazdığı anısında anlatıyor: Çıraklara artık yemek, ustanın kedilerine kızarmış tavuk. Bir çırak geceler boyu kedi gibi bağırınca, usta kedilerden kurtulmalarını istedi. Çıraklar, ustanın karısının gözdesi dahil birçok kediyi öldürüp sahte bir mahkeme kurdu."
+  },
+  {
+   "ad": "P4_yorum",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, düşünceli ve ölçülü bir tonla oku. İkinci cümlede dürüst bir uyarı yapıyormuş gibi, sakin ol. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "metin": "Tarihçi Robert Darnton'a göre sebep, ağır çalışma koşulları ve ustaya duyulan öfkeydi. Ama tek kaynak bu anı ve bu yorum da tartışılıyor."
+  },
+  {
+   "ad": "P5_final",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin olsun. Soru cümlesini düşündürücü bir şekilde, yavaşça sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla, gülümser gibi sor. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "metin": "İki olay arasında kanıtlanmış bir bağ yok. Ama ikisi de şunu sorduruyor: Korkumuzu ve öfkemizi hayvanlara mı yüklüyoruz? Sen kara kedi görünce aklından ilk ne geçiyor?"
+  }
  ]
 }
