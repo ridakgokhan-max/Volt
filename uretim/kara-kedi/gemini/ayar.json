@@ -1,5 +1,5 @@
 {
- "etiket": "tam1",
+ "etiket": "tam2",
  "birlestir": true,
  "modeller": [
   "gemini-3.1-flash-tts-preview",
@@ -10,31 +10,31 @@
   {
    "ad": "P1_acilis",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. Alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. Alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Tempo: ilk cümle yavaş ve gizemli olabilir, sonrası akıcı ve tempolu; duraklamalar kısa olsun. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
    "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi."
   },
   {
    "ad": "P2_belge",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı gizemli belgesel anlatıcısı olarak, ciddi ve akıcı bir tempoyla oku. Ürpertici ayrıntıyı (heykelin canlanması) alçak sesle, merak uyandırarak anlat. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni aynı gizemli belgesel anlatıcısı olarak, ciddi ve akıcı bir tempoyla oku. Ürpertici ayrıntıyı (heykelin canlanması) alçak sesle, merak uyandırarak anlat. Tempo: tempolu ve akıcı bir belgesel temposu, cümle içinde duraklama yapma. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
    "metin": "Papa Dokuzuncu Gregorius'un Vox in Rama mektubu, Almanya'da sapkınlıkla suçlanan bir grubu anlatıyordu. Metne göre ayinde kara bir kedi heykeli canlanıp geri geri yürüyordu."
   },
   {
    "ad": "P3_paris",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren bir hikâyeci gibi oku. Tempo biraz daha canlı ve akıcı olsun. 'Kızarmış tavuk' kısmında hafif bir ironi, 'kedi gibi bağırınca' kısmında hafif bir şaşkınlık hissedilsin. Öldürme cümlesini abartmadan, ağır ve saygılı bir tonda söyle. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren bir hikâyeci gibi oku. Tempo biraz daha canlı ve akıcı olsun. 'Kızarmış tavuk' kısmında hafif bir ironi, 'kedi gibi bağırınca' kısmında hafif bir şaşkınlık hissedilsin. Öldürme cümlesini abartmadan, ağır ve saygılı bir tonda söyle. Tempo: hızlı ve sürükleyici bir hikâye temposu; virgüllerde çok kısa dur, cümle aralarında uzun bekleme. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
    "metin": "Beş yüz yıl sonra, bin yedi yüz otuzların Paris'i. Bir matbaa çırağı, yıllar sonra yazdığı anısında anlatıyor: Çıraklara artık yemek, ustanın kedilerine kızarmış tavuk. Bir çırak geceler boyu kedi gibi bağırınca, usta kedilerden kurtulmalarını istedi. Çıraklar, ustanın karısının gözdesi dahil birçok kediyi öldürüp sahte bir mahkeme kurdu."
   },
   {
    "ad": "P4_yorum",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, düşünceli ve ölçülü bir tonla oku. İkinci cümlede dürüst bir uyarı yapıyormuş gibi, sakin ol. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, düşünceli ve ölçülü bir tonla oku. İkinci cümlede dürüst bir uyarı yapıyormuş gibi, sakin ol. Tempo: akıcı, orta hızda; duraklamalar kısa. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
    "metin": "Tarihçi Robert Darnton'a göre sebep, ağır çalışma koşulları ve ustaya duyulan öfkeydi. Ama tek kaynak bu anı ve bu yorum da tartışılıyor."
   },
   {
    "ad": "P5_final",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin olsun. Soru cümlesini düşündürücü bir şekilde, yavaşça sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla, gülümser gibi sor. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin olsun. Soru cümlesini düşündürücü bir şekilde, yavaşça sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla, gülümser gibi sor. Tempo: ilk iki cümle akıcı; sadece son sorudan önce kısa bir nefeslik duraklama yap. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
    "metin": "İki olay arasında kanıtlanmış bir bağ yok. Ama ikisi de şunu sorduruyor: Korkumuzu ve öfkemizi hayvanlara mı yüklüyoruz? Sen kara kedi görünce aklından ilk ne geçiyor?"
   }
  ]
