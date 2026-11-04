@@ -1,0 +1,79 @@
+name: Üretim - seslendirme (klon + Piper, gizli depoya)
+
+# uretim/<konu>/metin.txt push edilince: Kadir'in klon sesi (Chatterbox) + yedek Piper sesi üretir,
+# kelime zamanlarını çıkarır, sonuçları GİZLİ depoya (volt-istatistik/uretim/<konu>/) yazar.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "uretim/*/metin.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  ses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Yer aç
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+      - name: Kur
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts 2>&1 | tail -3
+          pip install -q piper-tts faster-whisper 2>&1 | tail -3
+      - name: Konu
+        id: k
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'uretim/*/metin.txt' | head -1)
+          echo "konu=$(basename $(dirname $f))" >> $GITHUB_OUTPUT
+      - name: Referans sesi
+        run: |
+          python scripts/ses_temizle.py hikaye/kedi/ses.m4a /tmp/temiz.wav || ffmpeg -y -loglevel error -i hikaye/kedi/ses.m4a /tmp/temiz.wav
+          ffmpeg -y -loglevel error -ss 35.1 -to 49.8 -i /tmp/temiz.wav -ac 1 -ar 24000 /tmp/ref.wav
+      - name: Piper (yedek)
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/out
+          python -m piper.download_voices tr_TR-dfki-medium --data-dir /tmp/pv 2>/dev/null || python -m piper.download_voices tr_TR-dfki-medium 2>&1 | tail -2
+          M=$(ls /tmp/pv/*.onnx 2>/dev/null | head -1); [ -n "$M" ] || M=$(ls *.onnx | head -1)
+          cat uretim/${{ steps.k.outputs.konu }}/metin.txt | python -m piper -m "$M" --length-scale 0.95 -f /tmp/out/piper.wav
+      - name: Klon ses
+        continue-on-error: true
+        run: python scripts/ses_klon.py /tmp/ref.wav uretim/${{ steps.k.outputs.konu }}/metin.txt /tmp/out/klon.wav 2>&1 | grep -vE "it/s|%\|" | tail -n 40
+      - name: Kelime zamanları
+        run: |
+          cat > /tmp/kz.py <<'PY'
+          import json, sys
+          from faster_whisper import WhisperModel
+          m = WhisperModel("large-v3", device="cpu", compute_type="int8")
+          for ad in sys.argv[1:]:
+              try:
+                  segs, _ = m.transcribe(f"/tmp/out/{ad}.wav", language="tr", word_timestamps=True)
+              except Exception as e:
+                  print(ad, e); continue
+              out = [{"w": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3)} for s in segs for w in s.words]
+              json.dump(out, open(f"/tmp/out/{ad}.kelimeler.json", "w"), ensure_ascii=False, indent=0)
+              print(ad, len(out), "kelime")
+          PY
+          python /tmp/kz.py klon piper
+      - name: Gizli depoya kaydet
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: |
+          K="${{ steps.k.outputs.konu }}"
+          git clone -q "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+          mkdir -p /tmp/gizli/uretim/$K
+          cp /tmp/out/* /tmp/gizli/uretim/$K/ 2>/dev/null || true
+          ls -la /tmp/gizli/uretim/$K
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Üretim sesi: $K" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 7; done
