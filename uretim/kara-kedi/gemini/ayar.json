@@ -1,41 +1,41 @@
 {
- "etiket": "tam2",
+ "etiket": "v3",
  "birlestir": true,
  "modeller": [
   "gemini-3.1-flash-tts-preview",
   "gemini-2.5-flash-preview-tts"
  ],
- "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi. Papa Dokuzuncu Gregorius'un Vox in Rama mektubu, Almanya'da sapkınlıkla suçlanan bir grubu anlatıyordu. Metne göre ayinde kara bir kedi heykeli canlanıp geri geri yürüyordu. Beş yüz yıl sonra, bin yedi yüz otuzların Paris'i. Bir matbaa çırağı, yıllar sonra yazdığı anısında anlatıyor: Çıraklara artık yemek, ustanın kedilerine kızarmış tavuk. Bir çırak geceler boyu kedi gibi bağırınca, usta kedilerden kurtulmalarını istedi. Çıraklar, ustanın karısının gözdesi dahil birçok kediyi öldürüp sahte bir mahkeme kurdu. Tarihçi Robert Darnton'a göre sebep, ağır çalışma koşulları ve ustaya duyulan öfkeydi. Ama tek kaynak bu anı ve bu yorum da tartışılıyor. İki olay arasında kanıtlanmış bir bağ yok. Ama ikisi de şunu sorduruyor: Korkumuzu ve öfkemizi hayvanlara mı yüklüyoruz? Sen kara kedi görünce aklından ilk ne geçiyor?",
+ "metin": "Bin iki yüz otuz üçte bir papa, kara bir kediyi şeytani bir ayinin parçası olarak anlattı. Ama kedilerin öldürülmesini emrettiği iddiası doğru değildi. Papa Dokuzuncu Gregory'nin Vox in Rama adlı belgesi, Almanya'da sapkınlıkla suçlanan bir grubun sözde ayinlerini anlatıyordu. Kara kedi de bu anlatının içindeydi. Şimdi yaklaşık beş yüz yıl ileri gidelim. Bin yedi yüz otuzların sonlarında Paris'te, bir matbaa çırağının yıllar sonra yazdığı anı, çok daha tuhaf bir olayı anlatıyordu. Anıya göre çıraklar, ustalarının sevdiği kedi de dahil birçok kediyi öldürmüştü. Tarihçi Robert Darnton bu olayı, ağır çalışma koşulları ve ustalarına duyulan öfkeyle ilişkilendirdi. İki olay arasında doğrudan bir bağlantı kanıtlanmış değil. Ama bize düşündürücü bir soru bırakıyor: İnsanlar bazen kendi korkularını hayvanlara mı yüklüyor? Sen kara bir kedi gördüğünde ne düşünüyorsun?",
  "varyantlar": [
   {
    "ad": "P1_acilis",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. Alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Tempo: ilk cümle yavaş ve gizemli olabilir, sonrası akıcı ve tempolu; duraklamalar kısa olsun. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
-   "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi."
+   "yonerge": "Aşağıdaki Türkçe metni, profesyonel ve enerjik bir tarih belgeseli anlatıcısı gibi oku; izleyiciyi ilk kelimeden yakala. İlk cümle gizemli ama tempolu olsun. 'Ama' ile başlayan cümlede kararlı bir düzeltme yap, 'doğru değildi' kısmını net vurgula. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "metin": "Bin iki yüz otuz üçte bir papa, kara bir kediyi şeytani bir ayinin parçası olarak anlattı. Ama kedilerin öldürülmesini emrettiği iddiası doğru değildi."
   },
   {
    "ad": "P2_belge",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı gizemli belgesel anlatıcısı olarak, ciddi ve akıcı bir tempoyla oku. Ürpertici ayrıntıyı (heykelin canlanması) alçak sesle, merak uyandırarak anlat. Tempo: tempolu ve akıcı bir belgesel temposu, cümle içinde duraklama yapma. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
-   "metin": "Papa Dokuzuncu Gregorius'un Vox in Rama mektubu, Almanya'da sapkınlıkla suçlanan bir grubu anlatıyordu. Metne göre ayinde kara bir kedi heykeli canlanıp geri geri yürüyordu."
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, akıcı ve canlı bir tempoyla oku. 'Kara kedi de bu anlatının içindeydi' cümlesinde hafif bir merak ve gizem hissedilsin. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "metin": "Papa Dokuzuncu Gregory'nin Vox in Rama adlı belgesi, Almanya'da sapkınlıkla suçlanan bir grubun sözde ayinlerini anlatıyordu. Kara kedi de bu anlatının içindeydi."
   },
   {
    "ad": "P3_paris",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren bir hikâyeci gibi oku. Tempo biraz daha canlı ve akıcı olsun. 'Kızarmış tavuk' kısmında hafif bir ironi, 'kedi gibi bağırınca' kısmında hafif bir şaşkınlık hissedilsin. Öldürme cümlesini abartmadan, ağır ve saygılı bir tonda söyle. Tempo: hızlı ve sürükleyici bir hikâye temposu; virgüllerde çok kısa dur, cümle aralarında uzun bekleme. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
-   "metin": "Beş yüz yıl sonra, bin yedi yüz otuzların Paris'i. Bir matbaa çırağı, yıllar sonra yazdığı anısında anlatıyor: Çıraklara artık yemek, ustanın kedilerine kızarmış tavuk. Bir çırak geceler boyu kedi gibi bağırınca, usta kedilerden kurtulmalarını istedi. Çıraklar, ustanın karısının gözdesi dahil birçok kediyi öldürüp sahte bir mahkeme kurdu."
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren sürükleyici bir hikâyeci gibi, enerjik ve akıcı oku. 'Çok daha tuhaf' kısmında merak uyandır. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "metin": "Şimdi yaklaşık beş yüz yıl ileri gidelim. Bin yedi yüz otuzların sonlarında Paris'te, bir matbaa çırağının yıllar sonra yazdığı anı, çok daha tuhaf bir olayı anlatıyordu."
   },
   {
-   "ad": "P4_yorum",
+   "ad": "P4_olay",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, düşünceli ve ölçülü bir tonla oku. İkinci cümlede dürüst bir uyarı yapıyormuş gibi, sakin ol. Tempo: akıcı, orta hızda; duraklamalar kısa. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
-   "metin": "Tarihçi Robert Darnton'a göre sebep, ağır çalışma koşulları ve ustaya duyulan öfkeydi. Ama tek kaynak bu anı ve bu yorum da tartışılıyor."
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümleyi ağır ve saygılı bir tonla, abartmadan söyle; ikinci cümlede akıcı ve açıklayıcı ol. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "metin": "Anıya göre çıraklar, ustalarının sevdiği kedi de dahil birçok kediyi öldürmüştü. Tarihçi Robert Darnton bu olayı, ağır çalışma koşulları ve ustalarına duyulan öfkeyle ilişkilendirdi."
   },
   {
    "ad": "P5_final",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin olsun. Soru cümlesini düşündürücü bir şekilde, yavaşça sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla, gülümser gibi sor. Tempo: ilk iki cümle akıcı; sadece son sorudan önce kısa bir nefeslik duraklama yap. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma. Sadece metni oku:",
-   "metin": "İki olay arasında kanıtlanmış bir bağ yok. Ama ikisi de şunu sorduruyor: Korkumuzu ve öfkemizi hayvanlara mı yüklüyoruz? Sen kara kedi görünce aklından ilk ne geçiyor?"
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin. Soruyu düşündürücü biçimde sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla sor. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "metin": "İki olay arasında doğrudan bir bağlantı kanıtlanmış değil. Ama bize düşündürücü bir soru bırakıyor: İnsanlar bazen kendi korkularını hayvanlara mı yüklüyor? Sen kara bir kedi gördüğünde ne düşünüyorsun?"
   }
  ]
 }

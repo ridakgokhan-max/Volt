@@ -24,7 +24,7 @@ import numpy as np
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f"{d}/tam.wav", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout
 audio = np.frombuffer(raw, np.float32)
 metin = open(sys.argv[2], encoding="utf-8").read() if len(sys.argv) > 2 else None
-segs, _ = m.transcribe(audio, language="tr", word_timestamps=True, initial_prompt=metin[:200] if metin else None)
+segs, _ = m.transcribe(audio, language="tr", word_timestamps=True, initial_prompt=None)
 out = [{"w": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3)} for s in segs for w in s.words]
 json.dump(out, open(f"{d}/tam.kelimeler.json", "w"), ensure_ascii=False, indent=0)
 print(len(out), "kelime;", " ".join(x["w"] for x in out))
