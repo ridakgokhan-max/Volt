@@ -1,40 +1,16 @@
 {
- "etiket": "v3",
+ "etiket": "v3p5",
  "birlestir": true,
  "modeller": [
   "gemini-3.1-flash-tts-preview",
   "gemini-2.5-flash-preview-tts"
  ],
- "metin": "Bin iki yüz otuz üçte bir papa, kara bir kediyi şeytani bir ayinin parçası olarak anlattı. Ama kedilerin öldürülmesini emrettiği iddiası doğru değildi. Papa Dokuzuncu Gregory'nin Vox in Rama adlı belgesi, Almanya'da sapkınlıkla suçlanan bir grubun sözde ayinlerini anlatıyordu. Kara kedi de bu anlatının içindeydi. Şimdi yaklaşık beş yüz yıl ileri gidelim. Bin yedi yüz otuzların sonlarında Paris'te, bir matbaa çırağının yıllar sonra yazdığı anı, çok daha tuhaf bir olayı anlatıyordu. Anıya göre çıraklar, ustalarının sevdiği kedi de dahil birçok kediyi öldürmüştü. Tarihçi Robert Darnton bu olayı, ağır çalışma koşulları ve ustalarına duyulan öfkeyle ilişkilendirdi. İki olay arasında doğrudan bir bağlantı kanıtlanmış değil. Ama bize düşündürücü bir soru bırakıyor: İnsanlar bazen kendi korkularını hayvanlara mı yüklüyor? Sen kara bir kedi gördüğünde ne düşünüyorsun?",
+ "metin": "İki olay arasında doğrudan bir bağlantı kanıtlanmış değil. Ama bize düşündürücü bir soru bırakıyor: İnsanlar bazen kendi korkularını hayvanlara mı yüklüyor? Sen kara bir kedi gördüğünde ne düşünüyorsun?",
  "varyantlar": [
-  {
-   "ad": "P1_acilis",
-   "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni, profesyonel ve enerjik bir tarih belgeseli anlatıcısı gibi oku; izleyiciyi ilk kelimeden yakala. İlk cümle gizemli ama tempolu olsun. 'Ama' ile başlayan cümlede kararlı bir düzeltme yap, 'doğru değildi' kısmını net vurgula. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
-   "metin": "Bin iki yüz otuz üçte bir papa, kara bir kediyi şeytani bir ayinin parçası olarak anlattı. Ama kedilerin öldürülmesini emrettiği iddiası doğru değildi."
-  },
-  {
-   "ad": "P2_belge",
-   "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, akıcı ve canlı bir tempoyla oku. 'Kara kedi de bu anlatının içindeydi' cümlesinde hafif bir merak ve gizem hissedilsin. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
-   "metin": "Papa Dokuzuncu Gregory'nin Vox in Rama adlı belgesi, Almanya'da sapkınlıkla suçlanan bir grubun sözde ayinlerini anlatıyordu. Kara kedi de bu anlatının içindeydi."
-  },
-  {
-   "ad": "P3_paris",
-   "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak, sahne değiştiren sürükleyici bir hikâyeci gibi, enerjik ve akıcı oku. 'Çok daha tuhaf' kısmında merak uyandır. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
-   "metin": "Şimdi yaklaşık beş yüz yıl ileri gidelim. Bin yedi yüz otuzların sonlarında Paris'te, bir matbaa çırağının yıllar sonra yazdığı anı, çok daha tuhaf bir olayı anlatıyordu."
-  },
-  {
-   "ad": "P4_olay",
-   "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümleyi ağır ve saygılı bir tonla, abartmadan söyle; ikinci cümlede akıcı ve açıklayıcı ol. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
-   "metin": "Anıya göre çıraklar, ustalarının sevdiği kedi de dahil birçok kediyi öldürmüştü. Tarihçi Robert Darnton bu olayı, ağır çalışma koşulları ve ustalarına duyulan öfkeyle ilişkilendirdi."
-  },
   {
    "ad": "P5_final",
    "ses": "Charon",
-   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin. Soruyu düşündürücü biçimde sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla sor. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Sadece metni oku:",
+   "yonerge": "Aşağıdaki Türkçe metni aynı belgesel anlatıcısı olarak oku. İlk cümle net ve sakin. Soruyu düşündürücü biçimde sor. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla sor. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi veya ifadeyi tekrarlama. Sadece metni oku:",
    "metin": "İki olay arasında doğrudan bir bağlantı kanıtlanmış değil. Ama bize düşündürücü bir soru bırakıyor: İnsanlar bazen kendi korkularını hayvanlara mı yüklüyor? Sen kara bir kedi gördüğünde ne düşünüyorsun?"
   }
  ]
