@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "s11-roof",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, teenage boy with red neckerchief crouching on a slate rooftop at night, hands cupped around his mouth, howling at the sky, huge full moon, Paris chimneys in fog, 18th century",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 41,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s12-master",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, angry stout man in white nightcap and burgundy dressing gown sitting up in a curtained bed pointing at the door, woman in blue dress hugging a grey cat beside him, single candle, 18th century bedroom",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 42,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s13-wall",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, dark plaster wall lit by a row of candles on a shelf, many cat-shaped shadows on the wall, two candles just blown out with smoke trails, no animals",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 43,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s13-cushion",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, empty red velvet cushion on a dark wooden chair, small tuft of grey fur on it, extinguished candle with a curl of smoke, cold moonlight, melancholic",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 44,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s14-trial",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of a wooden print shop table, laughing teenage apprentices in aprons around it, one wears a folded paper hat and holds up a blank sheet, an empty small stool, lantern light, 18th century",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 45,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s15-desk",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, historian's desk at night, closed plain dark hardcover book, open old manuscript, brass magnifying glass, reading glasses, warm desk lamp glow, no people",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 46,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
