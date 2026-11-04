@@ -1,10 +1,38 @@
 {
- "etiket": "test1",
+ "etiket": "test2",
  "metin": "[mysterious] Bin iki yüz otuz üç. [short pause] Bir papa, kara kediyi şeytani bir ayinin içine yazdı. [serious] Ama internetteki meşhur iddia yanlış: [emphatic] Kedilerin öldürülmesini emretmedi.",
  "metin_etiketsiz": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi.",
  "varyantlar": [
-  {"ad": "A_derin_anlatici", "ses": ["Brian", "Bill", "Adam"], "model": "eleven_v3", "stability": 0.5},
-  {"ad": "B_sicak_hikayeci", "ses": ["George", "Daniel", "Callum"], "model": "eleven_v3", "stability": 0.5},
-  {"ad": "C_kadin_anlatici", "ses": ["Alice", "Matilda", "Sarah", "Lily"], "model": "eleven_v3", "stability": 0.5}
+  {
+   "ad": "A_derin_anlatici",
+   "ses": [
+    "Brian",
+    "Bill",
+    "Adam"
+   ],
+   "model": "eleven_v3",
+   "stability": 0.5
+  },
+  {
+   "ad": "B_sicak_hikayeci",
+   "ses": [
+    "George",
+    "Daniel",
+    "Callum"
+   ],
+   "model": "eleven_v3",
+   "stability": 0.5
+  },
+  {
+   "ad": "C_kadin_anlatici",
+   "ses": [
+    "Alice",
+    "Matilda",
+    "Sarah",
+    "Lily"
+   ],
+   "model": "eleven_v3",
+   "stability": 0.5
+  }
  ]
 }
