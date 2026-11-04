@@ -1,0 +1,62 @@
+name: Üretim - ses ayar denemesi (3 varyant, gizli depoya)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "uretim/*/test/metin.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Yer aç
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+      - name: Kur
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts 2>&1 | tail -3
+          pip install -q faster-whisper 2>&1 | tail -3
+      - name: Konu
+        id: k
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'uretim/*/test/metin.txt' | head -1)
+          echo "konu=$(basename $(dirname $(dirname $f)))" >> $GITHUB_OUTPUT
+      - name: Referanslar
+        run: |
+          python scripts/ses_temizle.py hikaye/kedi/ses.m4a /tmp/temiz.wav || ffmpeg -y -loglevel error -i hikaye/kedi/ses.m4a /tmp/temiz.wav
+          ffmpeg -y -loglevel error -ss 35.1 -to 49.8 -i /tmp/temiz.wav -ac 1 -ar 24000 /tmp/ref1.wav
+          ffmpeg -y -loglevel error -ss 70.8 -to 83.9 -i /tmp/temiz.wav -ac 1 -ar 24000 /tmp/ref2.wav
+          mkdir -p /tmp/out
+      - name: A - sakin anlatıcı
+        continue-on-error: true
+        run: python scripts/ses_varyant.py /tmp/ref1.wav uretim/${{ steps.k.outputs.konu }}/test/metin.txt /tmp/out/A_sakin.wav 0.5 0.5 2 2>&1 | grep -vE "it/s|%\|" | tail -n 20
+      - name: B - dramatik belgesel
+        continue-on-error: true
+        run: python scripts/ses_varyant.py /tmp/ref1.wav uretim/${{ steps.k.outputs.konu }}/test/metin.txt /tmp/out/B_dramatik.wav 0.8 0.3 2 2>&1 | grep -vE "it/s|%\|" | tail -n 20
+      - name: C - sohbet tonu
+        continue-on-error: true
+        run: python scripts/ses_varyant.py /tmp/ref2.wav uretim/${{ steps.k.outputs.konu }}/test/metin.txt /tmp/out/C_sohbet.wav 0.65 0.4 2 2>&1 | grep -vE "it/s|%\|" | tail -n 20
+      - name: Gizli depoya kaydet
+        env:
+          GT: ${{ secrets.ISTATISTIK_TOKEN }}
+        run: |
+          K="${{ steps.k.outputs.konu }}"
+          git clone -q "https://x-access-token:${GT}@github.com/ridakgokhan-max/volt-istatistik.git" /tmp/gizli
+          mkdir -p /tmp/gizli/uretim/$K/test
+          cp /tmp/out/*.wav /tmp/gizli/uretim/$K/test/ 2>/dev/null || true
+          ls -la /tmp/gizli/uretim/$K/test
+          cd /tmp/gizli
+          git config user.name "volt-render-bot"
+          git config user.email "volt-render-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Ses ayar denemesi: $K" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 7; done
