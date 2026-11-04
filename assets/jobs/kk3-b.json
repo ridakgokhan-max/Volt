@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "s12-master-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, angry stout man in a white nightcap and burgundy dressing gown sitting up in bed pointing at the door, candle on the nightstand, 18th century bedroom",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 211,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s12-master-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, angry stout man in a white nightcap and burgundy dressing gown sitting up in bed pointing at the door, candle on the nightstand, 18th century bedroom",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 212,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s17-cat-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, giant shadow of a sitting cat cast on a plaster wall, a thin boy seen from behind in the foreground looking up at it, single candle on the floor",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 213,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s17-cat-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, giant shadow of a sitting cat cast on a plaster wall, a thin boy seen from behind in the foreground looking up at it, single candle on the floor",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 214,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s14-trial-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, teenage apprentices in aprons laughing around a wooden table in an 18th century print shop, one wears a folded paper hat, lantern light, high angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 215,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s14-trial-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, teenage apprentices in aprons laughing around a wooden table in an 18th century print shop, one wears a folded paper hat, lantern light, high angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 216,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
