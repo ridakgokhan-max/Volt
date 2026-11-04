@@ -1,0 +1,11 @@
+{"items": [
+  {"name": "s1-asteroit-11", "seed": 11, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "a huge fiery asteroid with a long glowing tail streaking across a dusky evening sky above a wide Cretaceous plain, a few long-necked dinosaurs and a horned dinosaur in the middle distance looking up at the sky, ferns and conifer trees, wide view, empty foreground, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"},
+  {"name": "s1-asteroit-27", "seed": 27, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "a huge fiery asteroid with a long glowing tail streaking across a dusky evening sky above a wide Cretaceous plain, a few long-necked dinosaurs and a horned dinosaur in the middle distance looking up at the sky, ferns and conifer trees, wide view, empty foreground, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"},
+  {"name": "s1-asteroit-42", "seed": 42, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "a huge fiery asteroid with a long glowing tail streaking across a dusky evening sky above a wide Cretaceous plain, a few long-necked dinosaurs and a horned dinosaur in the middle distance looking up at the sky, ferns and conifer trees, wide view, empty foreground, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"}
+]}
