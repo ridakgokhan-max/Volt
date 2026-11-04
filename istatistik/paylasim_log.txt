@@ -1,11 +1,5 @@
-kapsayıcı: 17891705937504259
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: IN_PROGRESS IN_PROGRESS
-durum: FINISHED FINISHED
-YAYINLANDI: https://www.instagram.com/reel/DfUC1kyjxD8/
+Traceback (most recent call last):
+  File "/home/runner/work/Volt/Volt/scripts/instagram_paylas.py", line 54, in <module>
+    aciklama = open(f"bilim/{konu}/aciklama.txt", encoding="utf-8").read().strip()
+               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'bilim/kara-kedi-2/aciklama.txt'
