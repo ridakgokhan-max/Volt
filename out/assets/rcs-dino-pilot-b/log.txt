@@ -1,0 +1,27 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  26%|██▋       | 136/517 [00:00<00:00, 1302.19it/s][A
+Loading weights:  52%|█████▏    | 267/517 [00:00<00:00, 1226.95it/s][A
+Loading weights:  75%|███████▌  | 390/517 [00:00<00:00, 1193.00it/s][A
+Loading weights:  99%|█████████▊| 510/517 [00:00<00:00, 1180.48it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 1211.27it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:02,  2.46it/s]Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  4.77it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 2855.05it/s]
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  5.14it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:30<00:08,  8.79s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:30<00:00,  6.20s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:30<00:00,  4.34s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 45.0 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (98 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (98 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+s2-krater-11 201.0 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+s2-krater-27 188.2 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['simple shapes , storybook science notebook style , palette of deep navy , teal and cool violet with small warm orange accents']
+s2-krater-42 183.1 sn
