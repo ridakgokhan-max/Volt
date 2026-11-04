@@ -1,0 +1,22 @@
+{
+ "items": [
+  {
+   "name": "c8-11",
+   "seed": 11,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "close-up of a layered rock outcrop showing pale limestone layers with one thin dark clay layer in the middle, a geologist's hammer and a magnifying glass resting on a ledge, daylight, no people, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  },
+  {
+   "name": "c8-27",
+   "seed": 27,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "close-up of a layered rock outcrop showing pale limestone layers with one thin dark clay layer in the middle, a geologist's hammer and a magnifying glass resting on a ledge, daylight, no people, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  }
+ ]
+}
