@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "s18-manuscript-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, a single old handwritten letter lying on a dark wooden desk next to a brass magnifying glass, top-down view",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 221,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s18-manuscript-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, a single old handwritten letter lying on a dark wooden desk next to a brass magnifying glass, top-down view",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 222,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s19-docs-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, two old paper documents lying side by side on a dark table, a medieval parchment with a red wax seal on the left and an aged printed page on the right",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 223,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s19-docs-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, two old paper documents lying side by side on a dark table, a medieval parchment with a red wax seal on the left and an aged printed page on the right",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 224,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s21-cat-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, close-up portrait of a black paper cat face looking straight at the camera, big glowing orange eyes, warm candle light, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 225,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s21-cat-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, close-up portrait of a black paper cat face looking straight at the camera, big glowing orange eyes, warm candle light, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 226,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
