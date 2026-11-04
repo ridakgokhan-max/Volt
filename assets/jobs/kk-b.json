@@ -1,0 +1,76 @@
+{
+ "items": [
+  {
+   "name": "s06-cellar-a",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, candle-lit medieval stone cellar, faceless hooded figures in grey robes holding candles around a stone pedestal, black cat statue with glowing orange eyes on the pedestal, high angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 31,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s06-cellar-b",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, candle-lit medieval stone cellar, faceless hooded figures in grey robes holding candles around a stone pedestal, black cat statue with glowing orange eyes on the pedestal, high angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 32,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s07-bow",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, black paper cat with tail raised standing on a stone pedestal, hooded figures in grey robes bowing low around it, silhouettes, strong candle backlight, medieval cellar",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 33,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s08-typecase",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, antique wooden printer's type case full of small metal type pieces, small window behind showing Paris rooftops and a gothic church spire at dusk, 18th century",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 34,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s09-hand",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, close-up of a middle-aged man's ink-stained hand writing with a goose feather quill in an old leather book by candlelight, 18th century",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 35,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s09-shop",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, interior of a cramped 18th century Paris print shop, heavy wooden hand printing press in the center, printed sheets drying on lines under low wooden beams, morning light",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 36,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s10-boys",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, two thin teenage apprentices in linen shirts and brown aprons sitting on straw in a cold bare attic, looking sadly at scraps on a dented tin plate, blue moonlight, 18th century Paris",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 37,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s10-cat",
+   "prompt": "3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, plump grey paper cat with pale green eyes eating roast chicken from a silver plate on a red velvet cushion, warm golden candlelight, luxurious 18th century room",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d",
+   "seed": 38,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
