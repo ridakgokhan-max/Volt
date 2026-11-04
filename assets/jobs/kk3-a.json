@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "s05-map-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of an antique parchment map of Europe on a wooden table, paper relief mountains, ink rivers, coastline, no labels",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 201,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s05-map-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of an antique parchment map of Europe on a wooden table, paper relief mountains, ink rivers, coastline, no labels",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 202,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s06-statue-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, black cat statue with glowing orange eyes on a stone pedestal in a candle-lit medieval cellar, faceless hooded figures in grey robes standing around it",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 203,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s06-statue-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, black cat statue with glowing orange eyes on a stone pedestal in a candle-lit medieval cellar, faceless hooded figures in grey robes standing around it",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 204,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s07-bow-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, small black paper cat with tail raised on a stone pedestal, several hooded monks in grey robes bowing deeply toward it, candle backlight, medieval cellar",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 205,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "s07-bow-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, small black paper cat with tail raised on a stone pedestal, several hooded monks in grey robes bowing deeply toward it, candle backlight, medieval cellar",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, dead animal, deformed, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, border, frame, duplicate",
+   "seed": 206,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
