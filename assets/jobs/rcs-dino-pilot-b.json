@@ -1,0 +1,11 @@
+{"items": [
+  {"name": "s2-krater-11", "seed": 11, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "geological cross-section illustration: on top a lush green tropical peninsula coastline with jungle and calm sea, below the ground surface a giant buried circular impact crater bowl cut through layered rock strata, the crater rim and central peak ring visible underground, wide view, no people, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, numbers, photo, 3d render"},
+  {"name": "s2-krater-27", "seed": 27, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "geological cross-section illustration: on top a lush green tropical peninsula coastline with jungle and calm sea, below the ground surface a giant buried circular impact crater bowl cut through layered rock strata, the crater rim and central peak ring visible underground, wide view, no people, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, numbers, photo, 3d render"},
+  {"name": "s2-krater-42", "seed": 42, "w": 640, "h": 1136, "no_style": true,
+   "prompt": "geological cross-section illustration: on top a lush green tropical peninsula coastline with jungle and calm sea, below the ground surface a giant buried circular impact crater bowl cut through layered rock strata, the crater rim and central peak ring visible underground, wide view, no people, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, numbers, photo, 3d render"}
+]}
