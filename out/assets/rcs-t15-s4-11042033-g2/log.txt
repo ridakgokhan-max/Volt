@@ -1,0 +1,40 @@
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:11<01:11, 11.87s/it]Loading pipeline components...:  29%|██▊       | 2/7 [00:11<00:24,  4.96s/it]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 2/517 [00:00<01:30,  5.70it/s][A
+Loading weights:  11%|█         | 56/517 [00:00<00:02, 154.27it/s][A
+Loading weights:  16%|█▋        | 85/517 [00:00<00:02, 176.05it/s][A
+Loading weights:  21%|██▏       | 111/517 [00:00<00:02, 170.07it/s][A
+Loading weights:  26%|██▌       | 135/517 [00:00<00:02, 187.26it/s][A
+Loading weights:  31%|███       | 158/517 [00:01<00:02, 158.42it/s][A
+Loading weights:  36%|███▌      | 184/517 [00:01<00:02, 149.02it/s][A
+Loading weights:  40%|████      | 208/517 [00:01<00:01, 168.31it/s][A
+Loading weights:  44%|████▍     | 228/517 [00:01<00:01, 173.39it/s][A
+Loading weights:  48%|████▊     | 248/517 [00:01<00:01, 157.99it/s][A
+Loading weights:  51%|█████▏    | 266/517 [00:01<00:01, 149.85it/s][A
+Loading weights:  57%|█████▋    | 296/517 [00:01<00:01, 164.01it/s][A
+Loading weights:  63%|██████▎   | 328/517 [00:02<00:01, 165.52it/s][A
+Loading weights:  67%|██████▋   | 346/517 [00:02<00:01, 163.87it/s][A
+Loading weights:  73%|███████▎  | 376/517 [00:02<00:00, 176.39it/s][A
+Loading weights:  76%|███████▌  | 394/517 [00:02<00:00, 159.23it/s][A
+Loading weights:  82%|████████▏ | 424/517 [00:02<00:00, 172.57it/s][A
+Loading weights:  85%|████████▌ | 442/517 [00:02<00:00, 170.27it/s][A
+Loading weights:  91%|█████████▏| 472/517 [00:02<00:00, 182.74it/s][A
+Loading weights:  95%|█████████▍| 491/517 [00:03<00:00, 164.37it/s][ALoading weights: 100%|██████████| 517/517 [00:03<00:00, 163.79it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:19<00:12,  4.17s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:   1%|          | 2/196 [00:00<00:19, 10.01it/s][A
+Loading weights:  53%|█████▎    | 104/196 [00:00<00:00, 412.67it/s][A
+Loading weights:  84%|████████▎ | 164/196 [00:00<00:00, 476.55it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 427.00it/s]
+Loading pipeline components...:  86%|████████▌ | 6/7 [00:19<00:02,  2.33s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:20<00:00,  1.84s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:20<00:00,  2.91s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 63.1 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (81 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['violet with small warm orange accents']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (81 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['violet with small warm orange accents']
+c6-11 184.1 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['violet with small warm orange accents']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['violet with small warm orange accents']
+c6-27 195.7 sn
