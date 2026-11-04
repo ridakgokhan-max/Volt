@@ -1,0 +1,76 @@
+{
+ "items": [
+  {
+   "name": "s16-press",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, two exhausted teenage apprentices operating a heavy wooden printing press at night, pulling the long lever, ink-stained hands, oil lamp, 18th century, side view",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 151,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s17-man",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, huge shadow of a stout man in a nightcap on a plaster wall, thin teenage boy in the foreground seen from behind looking up at it, single candle on the floor",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 152,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s17-cat",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, huge shadow of a sitting cat on a plaster wall, thin teenage boy in the foreground seen from behind looking up at it, single candle on the floor",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 153,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s18-manuscript",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of a single old manuscript page on a dark desk, brass magnifying glass on it, a few modern journal pages around it",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 154,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s19-docs",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, two old documents side by side on a dark background, left a medieval parchment with a red wax seal and a black cat drawing, right an 18th century printed sheet with a grey cat woodcut",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 155,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s20-alley",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, narrow old European cobblestone alley at night made of paper buildings, small black paper cat with orange eyes sitting in the middle of the street, two giant human shadows on the wall behind, paper moon",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 156,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s21-cat-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, portrait of a black paper cat looking straight at the camera, large glowing amber orange eyes, softly blurred candle flame behind, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 161,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s21-cat-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, portrait of a black paper cat looking straight at the camera, large glowing amber orange eyes, softly blurred candle flame behind, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 162,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  }
+ ]
+}
