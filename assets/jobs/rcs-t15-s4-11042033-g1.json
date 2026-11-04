@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "c5-11",
+   "seed": 11,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "a sky darkened by thick dust and ash blocking the dim sun over a Cretaceous fern forest, cold grey light, withering plants, wide view, empty foreground, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  },
+  {
+   "name": "c5-27",
+   "seed": 27,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "a sky darkened by thick dust and ash blocking the dim sun over a Cretaceous fern forest, cold grey light, withering plants, wide view, empty foreground, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  },
+  {
+   "name": "c9-11",
+   "seed": 11,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "a small sparrow perched on a sunny windowsill, and behind it on the wall a faint pencil sketch of a small feathered dinosaur in the same pose, warm morning light, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  },
+  {
+   "name": "c9-27",
+   "seed": 27,
+   "w": 640,
+   "h": 1136,
+   "no_style": true,
+   "prompt": "a small sparrow perched on a sunny windowsill, and behind it on the wall a faint pencil sketch of a small feathered dinosaur in the same pose, warm morning light, no text, 2d hand drawn scientific illustration, bold clean dark navy ink outlines, flat muted colors with soft watercolor shading, simple shapes, storybook science notebook style, palette of deep navy, teal and cool violet with small warm orange accents",
+   "neg": "solid black silhouettes, people, person, text, letters, labels, photo, 3d render"
+  }
+ ]
+}
