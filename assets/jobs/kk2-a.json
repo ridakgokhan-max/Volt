@@ -1,0 +1,67 @@
+{
+ "items": [
+  {
+   "name": "s01-eye-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, extreme close-up of a black paper cat face, huge glowing amber orange eyes with vertical slit pupils, tiny candle flame reflected in the eyes, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 111,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s01-eye-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, extreme close-up of a black paper cat face, huge glowing amber orange eyes with vertical slit pupils, tiny candle flame reflected in the eyes, dark background",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 112,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s02-ritual",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of aged parchment on a wooden desk, ink drawing of a black cat inside a circle of small hooded figures, feather quill, candlelight, medieval",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 113,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s03-desk",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, top-down view of aged blank parchment on a dark oak desk, ink drawing of a small black cat looking up, red wax seal, warm candlelight, medieval",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 114,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s04-pope-a",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, elderly medieval pope with short white beard, tall white conical papal hat, white robe, crimson mantle with gold clasp, pressing a seal into red wax at an oak desk, stone chamber, stained glass window, candlelight, low angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 121,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s04-pope-b",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, elderly medieval pope with short white beard, tall white conical papal hat, white robe, crimson mantle with gold clasp, pressing a seal into red wax at an oak desk, stone chamber, stained glass window, candlelight, low angle",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 122,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  },
+  {
+   "name": "s05-map",
+   "prompt": "single scene, 3D papercraft diorama, layered cut paper and cardboard, miniature stop-motion set, cinematic lighting, volumetric light, shallow depth of field, highly detailed, old relief map of medieval Europe made of layered torn parchment paper, paper mountains, ink rivers, no labels, warm candle glow, low angle view",
+   "neg": "text, letters, words, writing, typography, watermark, signature, logo, blood, gore, injured animal, dead animal, deformed, extra limbs, blurry, flat 2d, split screen, multiple panels, collage, grid, diptych, triptych, comic panels, frame, border, duplicate, two images",
+   "seed": 115,
+   "w": 768,
+   "h": 1344,
+   "no_style": true
+  }
+ ]
+}
