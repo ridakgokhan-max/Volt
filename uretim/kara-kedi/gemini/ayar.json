@@ -1,0 +1,12 @@
+{
+ "etiket": "test1",
+ "metin": "Bin iki yüz otuz üç. Bir papa, kara kediyi şeytani bir ayinin içine yazdı. Ama internetteki meşhur iddia yanlış: Kedilerin öldürülmesini emretmedi.",
+ "varyantlar": [
+  {"ad": "A_gizemli_belgeselci", "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni, tarihî bir sırrı anlatan sürükleyici bir belgesel anlatıcısı gibi oku. İlk cümleye alçak ve gizemli bir sesle başla, tarihten sonra kısa bir duraklama yap. 'Ama' ile başlayan cümlede ton değişsin, kararlı ve ciddi ol; 'emretmedi' kelimesini net bir vurguyla bitir. Doğal bir insan gibi nefes al, robotik olma. Sadece metni oku:"},
+  {"ad": "B_dramatik_hikayeci", "ses": "Enceladus",
+   "yonerge": "Aşağıdaki Türkçe metni, karanlık bir masal anlatır gibi, dramatik ve fısıltıya yakın bir sesle oku. Merak uyandır, kelimelerin arasında anlamlı duraklamalar yap. 'Ama' kelimesinde hafifçe sesini yükselt, sanki dinleyiciyi şaşırtacak bir gerçeği açıklıyorsun. Doğal ve duygulu ol. Sadece metni oku:"},
+  {"ad": "C_sicak_kadin_anlatici", "ses": "Sulafat",
+   "yonerge": "Aşağıdaki Türkçe metni, dinleyicisiyle sohbet eden sıcak ve meraklı bir kadın belgesel anlatıcısı gibi oku. İlk cümle merak uyandırsın, ikinci cümlede hafif bir ürperti hissedilsin, son cümlede samimi ama kendinden emin bir düzeltme yap. Doğal tonlama ve nefeslerle oku. Sadece metni oku:"}
+ ]
+}
