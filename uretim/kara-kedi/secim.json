@@ -1,0 +1,46 @@
+{
+ "s01": "s21",
+ "s04": "s04",
+ "s06": "s06",
+ "s21": "s21",
+ "dosya": {
+  "s21": "kk3-c/s21-cat-a.png",
+  "s02-ritual": "kk-a/s02-ritual.png",
+  "s03-desk": "kk-a/s03-desk.png",
+  "s04": "kk-a/s04-pope-a.png",
+  "s05-map": "kk3-a/s05-map-a.png",
+  "s06": "kk-b/s06-cellar-b.png",
+  "s07-bow": "kk3-a/s07-bow-a.png",
+  "s08-typecase": "kk-b/s08-typecase.png",
+  "s09-hand": "kk-b/s09-hand.png",
+  "s09-shop": "kk-b/s09-shop.png",
+  "s10-boys": "kk-b/s10-boys.png",
+  "s10-cat": "kk-b/s10-cat.png",
+  "s11-roof": "kk-c/s11-roof.png",
+  "s12-master": "kk3-b/s12-master-a.png",
+  "s13-wall": "kk-c/s13-wall.png",
+  "s13-cushion": "kk-c/s13-cushion.png",
+  "s14-trial": "kk3-b/s14-trial-b.png",
+  "s15-desk": "kk-c/s15-desk.png",
+  "s16-press": "kk-d/s16-press.png",
+  "s17-man": "kk-d/s17-man.png",
+  "s17-cat": "kk3-b/s17-cat-a.png",
+  "s18-manuscript": "kk3-c/s18-manuscript-b.png",
+  "s19-docs": "kk3-c/s19-docs-a.png",
+  "s20-alley": "kk-d/s20-alley.png"
+ },
+ "kirp": {
+  "s12-master": [
+   0.0,
+   0.47
+  ],
+  "s14-trial": [
+   0.47,
+   1.0
+  ],
+  "s13-cushion": [
+   0.36,
+   1.0
+  ]
+ }
+}
