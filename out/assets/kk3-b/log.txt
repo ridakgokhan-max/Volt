@@ -1,0 +1,20 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:00,  9.93it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  23%|██▎       | 120/517 [00:00<00:00, 1135.05it/s][A
+Loading weights:  50%|████▉     | 256/517 [00:00<00:00, 1237.88it/s][A
+Loading weights:  74%|███████▎  | 380/517 [00:00<00:00, 1166.83it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 1224.85it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:02,  2.15it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 3284.05it/s]
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  5.56it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  5.25s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  3.77s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 41.6 sn
+s12-master-a 197.4 sn
+s12-master-b 192.6 sn
+s17-cat-a 181.2 sn
+s17-cat-b 178.0 sn
+s14-trial-a 175.3 sn
+s14-trial-b 172.5 sn
