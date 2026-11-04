@@ -296,24 +296,23 @@ def place_sub(frame, display, u):
 
 
 # ---------------------------------------------------------------- metin / zaman
-TTS = open("/home/claude/volt/uretim/kara-kedi/metin.txt", encoding="utf-8").read().split()
+TTS = open(os.environ.get("METIN", "/home/claude/volt/uretim/kara-kedi/gemini/metin_tam.txt"), encoding="utf-8").read().split()
 
 SUBS = [  # (gösterim, tts kelime sayısı); None = altyazı yok (açılış etiketleri)
     (None, 5), (None, 9), (None, 8),
     ("PAPA IX. *GREGORIUS'UN*", 3), ("*VOX* *IN* *RAMA* MEKTUBU,", 4), ("*ALMANYA'DA* SAPKINLIKLA", 2),
-    ("SUÇLANAN BİR GRUBU ANLATIYORDU.", 4), ("METNE GÖRE AYİNDE", 3), ("BİR KARA KEDİ *HEYKELİ* *CANLANIYOR,*", 5),
-    ("*GERİ* *GERİ* YÜRÜYOR,", 3), ("MÜRİTLER ONU *ÖPÜYORDU.*", 3), ("*BEŞ* *YÜZ* *YIL* SONRA,", 4),
-    ("*1730'LARIN* *PARİS'İ.*", 5), ("BİR *MATBAA* *ÇIRAĞI,*", 3), ("*YILLAR* *SONRA* YAZDIĞI ANISINDA", 4),
-    ("ŞUNU ANLATIR:", 2), ("ÇIRAKLARA *ARTIK* *YEMEK,*", 3), ("USTANIN KEDİLERİNE *KIZARMIŞ* *TAVUK.*", 4),
-    ("BİR ÇIRAK *GECELER* *BOYU*", 4), ("USTANIN PENCERESİNDE", 2), ("*KEDİ* *GİBİ* *BAĞIRDI.*", 3),
-    ("BIKAN USTA,", 2), ("KEDİLERDEN *KURTULMALARINI* İSTEDİ.", 3), ("ÇIRAKLAR, USTANIN KARISININ", 3),
-    ("*GÖZDESİ* DAHİL", 2), ("*BİRÇOK* *KEDİYİ* ÖLDÜRDÜ;", 3), ("SONRA *SAHTE* *BİR* *MAHKEME*", 4),
-    ("KURUP *GÜLDÜLER.*", 2), ("TARİHÇİ *ROBERT* *DARNTON*", 3), ("ŞUNU SORDU:", 2), ("BU NEDEN ONLARA", 3),
-    ("*KOMİK* GELMİŞTİ?", 2), ("ONA GÖRE SEBEP,", 3), ("*AĞIR* *ÇALIŞMA* *KOŞULLARI*", 3),
-    ("VE USTAYA DUYULAN *ÖFKEYDİ.*", 4), ("KEDİ, DOKUNAMADIKLARI", 2), ("USTANIN *YERİNE* GEÇMİŞTİ.", 3),
-    ("*TEK* *KAYNAK* BU ANI;", 4), ("DARNTON'IN YORUMU DA *TARTIŞILIYOR.*", 4), ("İKİ OLAY ARASINDA", 3),
-    ("*KANITLANMIŞ* *BİR* *BAĞ* *YOK.*", 4), ("AMA İKİSİ DE ŞUNU SORDURUYOR:", 5), ("*KORKUMUZU* VE *ÖFKEMİZİ*", 3),
-    ("HAYVANLARA MI YÜKLÜYORUZ?", 3), ("SEN *KARA* *KEDİ* GÖRÜNCE", 4), ("AKLINDAN *İLK* *NE* *GEÇİYOR?*", 4),
+    ("SUÇLANAN BİR GRUBU ANLATIYORDU.", 4), ("METNE GÖRE AYİNDE", 3), ("KARA BİR KEDİ *HEYKELİ*", 4),
+    ("*CANLANIP* *GERİ* *GERİ* YÜRÜYORDU.", 4),
+    ("*BEŞ* *YÜZ* *YIL* SONRA,", 4), ("*1730'LARIN* *PARİS'İ.*", 5), ("BİR *MATBAA* *ÇIRAĞI,*", 3),
+    ("*YILLAR* *SONRA* YAZDIĞI ANISINDA ANLATIYOR:", 5), ("ÇIRAKLARA *ARTIK* *YEMEK,*", 3),
+    ("USTANIN KEDİLERİNE *KIZARMIŞ* *TAVUK.*", 4), ("BİR ÇIRAK *GECELER* *BOYU*", 4), ("*KEDİ* *GİBİ* *BAĞIRINCA,*", 3),
+    ("USTA KEDİLERDEN", 2), ("*KURTULMALARINI* İSTEDİ.", 2), ("ÇIRAKLAR, USTANIN KARISININ", 3),
+    ("*GÖZDESİ* DAHİL", 2), ("*BİRÇOK* *KEDİYİ* ÖLDÜRÜP", 3), ("*SAHTE* *BİR* *MAHKEME* KURDU.", 4),
+    ("TARİHÇİ *ROBERT* *DARNTON'A* GÖRE", 4), ("SEBEP, *AĞIR* *ÇALIŞMA* *KOŞULLARI*", 4),
+    ("VE USTAYA DUYULAN *ÖFKEYDİ.*", 4), ("AMA *TEK* *KAYNAK* BU ANI", 5), ("VE BU YORUM DA *TARTIŞILIYOR.*", 5),
+    ("İKİ OLAY ARASINDA", 3), ("*KANITLANMIŞ* *BİR* *BAĞ* *YOK.*", 4), ("AMA İKİSİ DE ŞUNU SORDURUYOR:", 5),
+    ("*KORKUMUZU* VE *ÖFKEMİZİ*", 3), ("HAYVANLARA MI YÜKLÜYORUZ?", 3), ("SEN *KARA* *KEDİ* GÖRÜNCE", 4),
+    ("AKLINDAN *İLK* *NE* *GEÇİYOR?*", 4),
 ]
 assert sum(n for _, n in SUBS) == len(TTS), (sum(n for _, n in SUBS), len(TTS))
 
@@ -377,11 +376,11 @@ def tok_index(word, after=0):
 
 # ---------------------------------------------------------------- sahneler
 SCENES = [  # id, başlangıç sözcüğü (tts), dönem
-    ("S01", None, "orta"), ("S02", "papa,", "orta"), ("S03", "Ama", "orta"), ("S04", "Dokuzuncu", "orta"),
+    ("S01", None, "orta"), ("S02", "kara", "orta"), ("S03", "Ama", "orta"), ("S04", "Dokuzuncu", "orta"),
     ("S05", "Almanya'da", "orta"), ("S06", "Metne", "orta"), ("S07", "geri", "orta"), ("S08", "Beş", "paris"),
-    ("S09", "matbaa", "paris"), ("S10", "Çıraklara", "paris"), ("S11", "geceler", "paris"), ("S12", "Bıkan", "paris"),
-    ("S13", "Çıraklar,", "paris"), ("S14", "sonra", "paris"), ("S15", "Tarihçi", "paris"), ("S16", "Ona", "paris"),
-    ("S17", "Kedi,", "paris"), ("S18", "Tek", "paris"), ("S19", "İki", "karma"), ("S20", "Ama", "karma"),
+    ("S09", "matbaa", "paris"), ("S10", "Çıraklara", "paris"), ("S11", "geceler", "paris"), ("S12", "usta", "paris"),
+    ("S13", "Çıraklar,", "paris"), ("S14", "sahte", "paris"), ("S15", "Tarihçi", "paris"), ("S16", "ağır", "paris"),
+    ("S17", "ustaya", "paris"), ("S18", "tek", "paris"), ("S19", "İki", "karma"), ("S20", "Ama", "karma"),
     ("S21", "Sen", "karma"),
 ]
 
@@ -398,14 +397,16 @@ def build_timeline(times, total):
         starts.append(max(0.0, times[i][0] - 0.12))
         last = i + 1
     # S02 "Bir papa" — 'Bir' kelimesinden başlasın
-    i = tok_index("kara")
-    starts[1] = max(0.0, times[i][0] - 0.1)
     i = tok_index("Dokuzuncu")
     starts[3] = max(0.0, times[i - 1][0] - 0.1)
     i = tok_index("matbaa")
     starts[8] = max(0.0, times[i - 1][0] - 0.1)
     i = tok_index("geceler")
     starts[10] = max(0.0, times[i - 2][0] - 0.1)
+    i = tok_index("ağır")
+    starts[15] = max(0.0, times[i - 1][0] - 0.1)
+    i = tok_index("tek")
+    starts[17] = max(0.0, times[i - 1][0] - 0.1)
     end = total + 1.0
     tl = []
     for k, (sid, w, era) in enumerate(SCENES):
@@ -725,7 +726,7 @@ def scene_frame(sc, t):
         pts = [(x, int(yl + rg.normal(0, 5))) for x in range(0, W + 30, 30)]
         cv2.polylines(f, [np.array(pts)], False, (205, 222, 236), 14, cv2.LINE_AA)
         f = place_tag(f, "KEDİ: TAVUK", W / 2 + 170, int(yl - 380), u - 0.2, 99, size=80, angle=5)
-        f = place_tag(f, "ÇIRAK: ARTIK", W / 2 - 170, int(yl + 380), u - 0.6, 99, size=80, angle=-5, bg=CREAM, fg=INK)
+        f = place_tag(f, "ÇIRAK: ARTIK", W / 2 - 170, int(yl + 130), u - 0.6, 99, size=80, angle=-5, bg=CREAM, fg=INK)
     elif sid == "S11":
         a = img("s11-roof")
         f = cam(a, lerp(0.58, 0.42, ease(p)), 0.45, 1.25)
@@ -769,9 +770,7 @@ def scene_frame(sc, t):
         mx = lerp(380, 640, ease(p))
         my = lerp(1100, 980, ease(p))
         f = magnifier(f, mx, my)
-        t_k = T("komik") - s
-        f = place_tag(f, "ROBERT DARNTON · TARİHÇİ", W / 2, 300, u - 0.2, t_k - 0.1, size=76, angle=-3, bg=CREAM, fg=INK)
-        f = place_tag(f, "NEDEN KOMİK?", W / 2, 300, u - t_k + 0.05, 99, size=120, angle=-5)
+        f = place_tag(f, "ROBERT DARNTON · TARİHÇİ", W / 2, 300, u - 0.2, 99, size=76, angle=-3, bg=CREAM, fg=INK)
     elif sid == "S16":
         a = img("s16-press")
         bump = max(0, math.sin(u * 2 * math.pi / 0.7)) ** 8
@@ -784,7 +783,7 @@ def scene_frame(sc, t):
         k = ease(clamp((u - 0.4) / max(0.6, dur - 1.0)))
         f = blend(f1, f2, k)
         fl = 0.1
-        f = place_tag(f, "USTANIN YERİNE KEDİ", W / 2, 320, u - 0.3, 99, size=92, angle=-4)
+        f = place_tag(f, "ÖFKE: USTAYA, HEDEF: KEDİ", W / 2, 320, u - 0.3, 99, size=92, angle=-4)
     elif sid == "S18":
         a = img("s18-manuscript")
         zk = 1.05 + 0.3 * ease_out(clamp(u / 0.22))
