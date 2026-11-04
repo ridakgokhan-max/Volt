@@ -1,0 +1,34 @@
+[
+ {
+  "name": "s16-press",
+  "sec": 129.4
+ },
+ {
+  "name": "s17-man",
+  "sec": 117.8
+ },
+ {
+  "name": "s17-cat",
+  "sec": 111.1
+ },
+ {
+  "name": "s18-manuscript",
+  "sec": 109.7
+ },
+ {
+  "name": "s19-docs",
+  "sec": 107.2
+ },
+ {
+  "name": "s20-alley",
+  "sec": 105.9
+ },
+ {
+  "name": "s21-cat-a",
+  "sec": 106.7
+ },
+ {
+  "name": "s21-cat-b",
+  "sec": 105.7
+ }
+]
