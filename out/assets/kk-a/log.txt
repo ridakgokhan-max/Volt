@@ -1,0 +1,40 @@
+Loading weights:  15%|█▍        | 76/517 [00:06<00:34, 12.82it/s][A
+Loading weights:  16%|█▌        | 82/517 [00:07<00:34, 12.67it/s][A
+Loading weights:  17%|█▋        | 88/517 [00:07<00:35, 11.93it/s][A
+Loading weights:  19%|█▉        | 98/517 [00:07<00:24, 16.84it/s][A
+Loading weights:  20%|██        | 104/517 [00:09<00:44,  9.35it/s][A
+Loading weights:  23%|██▎       | 120/517 [00:10<00:34, 11.55it/s][A
+Loading weights:  25%|██▌       | 130/517 [00:10<00:25, 15.19it/s][A
+Loading weights:  26%|██▋       | 136/517 [00:11<00:34, 10.98it/s][A
+Loading weights:  27%|██▋       | 139/517 [00:12<00:35, 10.72it/s][A
+Loading weights:  39%|███▊      | 200/517 [00:12<00:07, 45.11it/s][A
+Loading weights:  45%|████▍     | 232/517 [00:12<00:04, 65.83it/s][A
+Loading weights:  49%|████▊     | 251/517 [00:12<00:03, 74.06it/s][A
+Loading weights:  54%|█████▍    | 280/517 [00:12<00:02, 88.84it/s][A
+Loading weights:  60%|██████    | 312/517 [00:12<00:01, 112.66it/s][A
+Loading weights:  64%|██████▍   | 330/517 [00:13<00:01, 113.71it/s][A
+Loading weights:  70%|██████▉   | 360/517 [00:13<00:01, 135.01it/s][A
+Loading weights:  73%|███████▎  | 378/517 [00:13<00:01, 129.57it/s][A
+Loading weights:  79%|███████▉  | 410/517 [00:13<00:00, 164.57it/s][A
+Loading weights:  83%|████████▎ | 431/517 [00:13<00:00, 157.98it/s][A
+Loading weights:  88%|████████▊ | 456/517 [00:13<00:00, 161.46it/s][A
+Loading weights:  92%|█████████▏| 475/517 [00:13<00:00, 163.68it/s][A
+Loading weights:  96%|█████████▋| 498/517 [00:13<00:00, 164.77it/s][ALoading weights: 100%|██████████| 517/517 [00:14<00:00, 36.81it/s] 
+Loading pipeline components...: 100%|██████████| 7/7 [00:37<00:00,  6.55s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:37<00:00,  5.35s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 71.2 sn
+s01-eye-a 193.6 sn
+s01-eye-b 198.7 sn
+s02-ritual 193.7 sn
+s03-desk 185.6 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (82 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['glass window , candlelight , low angle']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (82 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['glass window , candlelight , low angle']
+s04-pope-a 180.4 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['glass window , candlelight , low angle']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['glass window , candlelight , low angle']
+s04-pope-b 181.1 sn
+s05-map 180.3 sn
