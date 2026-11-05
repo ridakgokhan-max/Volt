@@ -1,0 +1,47 @@
+{
+ "etiket": "v2",
+ "birlestir": true,
+ "modeller": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "metin": "Dünya'ya çarpan dev bir asteroid, gezegendeki türlerin yaklaşık yüzde yetmiş beşinin yok oluşuna yol açtı. Yaklaşık altmış altı milyon yıl önce, on ila on beş kilometre çapındaki bu gök cismi, bugünkü Meksika'nın Yukatan bölgesine çarptı. Geride yaklaşık yüz seksen kilometrelik bir krater bıraktı. Çarpışma büyük yangınları tetikledi. Atmosfere yayılan toz ve parçacıklar güneş ışığını azalttı. Dünya'nın iklimi hızla değişmeye başladı. Besin zinciri çöktü. Kuşlar dışındaki dinozorlar da dahil olmak üzere birçok canlı grubu yok oldu. Ama yaşam tamamen sona ermedi. Bugün yaşayan kuşlar, o felaketten kurtulan tüylü dinozor soylarının torunlarıdır. Yani dinozorların bir kolu hâlâ aramızda. Bu felaketin izlerini bugün Çikşulub kraterinde ve kayaçlarda hâlâ görebiliyoruz. Peki sence Dünya'yı değiştiren en büyük güç doğa mı, yoksa tesadüf mü?",
+ "varyantlar": [
+  {
+   "ad": "P1",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. İlk cümle videonun açılışı: alçak, tok, ciddi ve merak uyandıran bir belgesel tonuyla, acele etmeden ama sarkmadan oku. 'yüzde yetmiş beşinin' kısmını hafif vurgula. Sadece metni oku:",
+   "metin": "Dünya'ya çarpan dev bir asteroid, gezegendeki türlerin yaklaşık yüzde yetmiş beşinin yok oluşuna yol açtı."
+  },
+  {
+   "ad": "P2",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Bilgi veren, net ve güvenilir bir belgesel anlatıcısı gibi oku; sayıları açık ve anlaşılır söyle. Sadece metni oku:",
+   "metin": "Yaklaşık altmış altı milyon yıl önce, on ila on beş kilometre çapındaki bu gök cismi, bugünkü Meksika'nın Yukatan bölgesine çarptı. Geride yaklaşık yüz seksen kilometrelik bir krater bıraktı."
+  },
+  {
+   "ad": "P3",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Ağır ve kasvetli bir tonla, her cümleyi ayrı bir sonuç gibi oku; dramatik bağırış yapma. Sadece metni oku:",
+   "metin": "Çarpışma büyük yangınları tetikledi. Atmosfere yayılan toz ve parçacıklar güneş ışığını azalttı. Dünya'nın iklimi hızla değişmeye başladı."
+  },
+  {
+   "ad": "P4",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. İlk iki cümle hüzünlü ve ciddi; son cümle 'Ama yaşam tamamen sona ermedi' umut veren, hafifçe yükselen bir tonda. Sadece metni oku:",
+   "metin": "Besin zinciri çöktü. Kuşlar dışındaki dinozorlar da dahil olmak üzere birçok canlı grubu yok oldu. Ama yaşam tamamen sona ermedi."
+  },
+  {
+   "ad": "P5",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Şaşırtıcı bir gerçeği paylaşır gibi, sıcak ve merak dolu bir tonla oku; son cümleyi gülümseyerek söyle. Sadece metni oku:",
+   "metin": "Bugün yaşayan kuşlar, o felaketten kurtulan tüylü dinozor soylarının torunlarıdır. Yani dinozorların bir kolu hâlâ aramızda."
+  },
+  {
+   "ad": "P6",
+   "ses": "Charon",
+   "yonerge": "Aşağıdaki Türkçe metni tok, net ve doğal bir belgesel anlatıcısı olarak oku. Orta tempoda, kelimeleri anlaşılır telaffuz et. Doğal bir insan gibi nefes al, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. İlk cümle sakin ve düşündürücü. Son soruyu dinleyiciye doğrudan, samimi ve sıcak bir merakla sor. Sadece metni oku:",
+   "metin": "Bu felaketin izlerini bugün Çikşulub kraterinde ve kayaçlarda hâlâ görebiliyoruz. Peki sence Dünya'yı değiştiren en büyük güç doğa mı, yoksa tesadüf mü?"
+  }
+ ]
+}
