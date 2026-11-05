@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:   9%|▉         | 48/517 [00:00<00:01, 366.28it/s][A
+Loading weights:  16%|█▋        | 85/517 [00:00<00:01, 250.31it/s][A
+Loading weights:  22%|██▏       | 112/517 [00:00<00:02, 189.66it/s][A
+Loading weights:  26%|██▋       | 136/517 [00:00<00:02, 181.58it/s][A
+Loading weights:  30%|██▉       | 155/517 [00:00<00:02, 179.38it/s][A
+Loading weights:  36%|███▌      | 184/517 [00:00<00:02, 165.82it/s][A
+Loading weights:  42%|████▏     | 215/517 [00:01<00:01, 198.65it/s][A
+Loading weights:  46%|████▌     | 237/517 [00:01<00:01, 163.14it/s][A
+Loading weights:  51%|█████     | 264/517 [00:01<00:01, 171.31it/s][A
+Loading weights:  55%|█████▍    | 283/517 [00:01<00:01, 171.32it/s][A
+Loading weights:  58%|█████▊    | 302/517 [00:01<00:01, 173.05it/s][A
+Loading weights:  63%|██████▎   | 328/517 [00:01<00:01, 158.53it/s][A
+Loading weights:  70%|██████▉   | 360/517 [00:02<00:00, 158.62it/s][A
+Loading weights:  76%|███████▌  | 392/517 [00:02<00:00, 162.43it/s][A
+Loading weights:  79%|███████▉  | 410/517 [00:02<00:00, 148.64it/s][A
+Loading weights:  85%|████████▌ | 440/517 [00:02<00:00, 178.68it/s][A
+Loading weights:  89%|████████▉ | 460/517 [00:02<00:00, 166.21it/s][A
+Loading weights:  94%|█████████▍| 488/517 [00:02<00:00, 173.84it/s][A
+Loading weights:  98%|█████████▊| 507/517 [00:02<00:00, 173.65it/s][ALoading weights: 100%|██████████| 517/517 [00:02<00:00, 179.28it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:22<00:52, 10.41s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:   1%|          | 2/196 [00:00<00:11, 17.34it/s][A
+Loading weights:  48%|████▊     | 95/196 [00:00<00:00, 521.97it/s][A
+Loading weights:  77%|███████▋  | 151/196 [00:00<00:00, 443.83it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 463.93it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:22<00:12,  4.07s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:23<00:02,  2.24s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:23<00:00,  3.30s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 68.8 sn
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (96 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', slate blue and warm ochre palette , atmospheric depth , volumetric light , detailed , professional paleoart']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (96 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', slate blue and warm ochre palette , atmospheric depth , volumetric light , detailed , professional paleoart']
+tuylu-dinozor-5 178.9 sn
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', slate blue and warm ochre palette , atmospheric depth , volumetric light , detailed , professional paleoart']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', slate blue and warm ochre palette , atmospheric depth , volumetric light , detailed , professional paleoart']
+tuylu-dinozor-21 194.3 sn
+kus-dal-5 194.6 sn
+kus-dal-21 194.1 sn
