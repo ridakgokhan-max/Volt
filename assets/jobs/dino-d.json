@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "yangin-31",
+   "prompt": "raging wildfire, bright orange flames engulfing a dense conifer forest, burning trees, flying embers and sparks, thick black smoke, fiery red-orange glow, dramatic painterly digital illustration, scientific documentary paleoart, detailed",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person, sunset, pink sky, calm lake",
+   "seed": 31,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "yangin-47",
+   "prompt": "raging wildfire, bright orange flames engulfing a dense conifer forest, burning trees, flying embers and sparks, thick black smoke, fiery red-orange glow, dramatic painterly digital illustration, scientific documentary paleoart, detailed",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person, sunset, pink sky, calm lake",
+   "seed": 47,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "toz-52",
+   "prompt": "apocalyptic landscape covered in grey ash and dust, dark brown-grey overcast sky, tiny faint dim sun barely visible through thick haze, ash falling like snow, dead leafless trees and withered ferns, gloomy cold desaturated light, dramatic painterly digital illustration, scientific documentary paleoart, detailed",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person, sunset, pink sky, calm lake",
+   "seed": 52,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "toz-63",
+   "prompt": "apocalyptic landscape covered in grey ash and dust, dark brown-grey overcast sky, tiny faint dim sun barely visible through thick haze, ash falling like snow, dead leafless trees and withered ferns, gloomy cold desaturated light, dramatic painterly digital illustration, scientific documentary paleoart, detailed",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person, sunset, pink sky, calm lake",
+   "seed": 63,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
