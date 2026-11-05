@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "orman-yangin",
+   "prompt": "a vast late Cretaceous conifer forest burning at night after an asteroid impact, towering walls of fire and glowing embers, thick smoke columns rising into a red sky, silhouettes of tall araucaria trees, no animals, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 4,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "toz-gok",
+   "prompt": "a late Cretaceous landscape under a dark dust-filled sky, the sun a faint dim orange disc behind thick grey haze, ash falling, withered ferns and leafless trees, cold gloomy light, no animals, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 6,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kurak",
+   "prompt": "a barren late Cretaceous plain after a global catastrophe, dry cracked ground, fallen dead trees, dim grey light, empty landscape, no animals, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 8,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "orman-sabah",
+   "prompt": "a misty green forest at sunrise with golden sunbeams between tall trees, wide panoramic view, peaceful, hopeful, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 10,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
