@@ -1,0 +1,749 @@
+[
+ {
+  "aralik": [
+   0.0,
+   49.0
+  ],
+  "kelimeler": [
+   {
+    "w": "66",
+    "start": 0.0,
+    "end": 0.48,
+    "p": 1.0
+   },
+   {
+    "w": "milyon",
+    "start": 0.48,
+    "end": 0.94,
+    "p": 0.99
+   },
+   {
+    "w": "yıl",
+    "start": 0.94,
+    "end": 1.06,
+    "p": 1.0
+   },
+   {
+    "w": "önce",
+    "start": 1.06,
+    "end": 1.28,
+    "p": 1.0
+   },
+   {
+    "w": "dinozorların",
+    "start": 1.28,
+    "end": 1.9,
+    "p": 0.94
+   },
+   {
+    "w": "sonunu",
+    "start": 1.9,
+    "end": 2.24,
+    "p": 1.0
+   },
+   {
+    "w": "ne",
+    "start": 2.24,
+    "end": 2.42,
+    "p": 1.0
+   },
+   {
+    "w": "getirdi?",
+    "start": 2.42,
+    "end": 2.78,
+    "p": 1.0
+   },
+   {
+    "w": "Asıl",
+    "start": 2.96,
+    "end": 3.52,
+    "p": 0.99
+   },
+   {
+    "w": "his",
+    "start": 3.52,
+    "end": 3.66,
+    "p": 0.37
+   },
+   {
+    "w": "toprağın",
+    "start": 3.66,
+    "end": 4.08,
+    "p": 1.0
+   },
+   {
+    "w": "altında.",
+    "start": 4.08,
+    "end": 4.42,
+    "p": 1.0
+   },
+   {
+    "w": "Meksika",
+    "start": 4.58,
+    "end": 5.24,
+    "p": 1.0
+   },
+   {
+    "w": "'nın",
+    "start": 5.24,
+    "end": 5.38,
+    "p": 1.0
+   },
+   {
+    "w": "Yucatan",
+    "start": 5.38,
+    "end": 5.76,
+    "p": 0.98
+   },
+   {
+    "w": "yarımadasında",
+    "start": 5.76,
+    "end": 6.5,
+    "p": 0.8
+   },
+   {
+    "w": "toprağın",
+    "start": 6.5,
+    "end": 7.0,
+    "p": 1.0
+   },
+   {
+    "w": "altında",
+    "start": 7.0,
+    "end": 7.38,
+    "p": 1.0
+   },
+   {
+    "w": "dev",
+    "start": 7.38,
+    "end": 7.7,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 7.7,
+    "end": 7.92,
+    "p": 1.0
+   },
+   {
+    "w": "krater",
+    "start": 7.92,
+    "end": 8.24,
+    "p": 1.0
+   },
+   {
+    "w": "gömülü,",
+    "start": 8.24,
+    "end": 8.66,
+    "p": 0.99
+   },
+   {
+    "w": "Chicxulub.",
+    "start": 8.72,
+    "end": 9.3,
+    "p": 0.79
+   },
+   {
+    "w": "Onu",
+    "start": 9.4,
+    "end": 9.8,
+    "p": 0.99
+   },
+   {
+    "w": "açan",
+    "start": 9.8,
+    "end": 10.1,
+    "p": 1.0
+   },
+   {
+    "w": "asteroidin",
+    "start": 10.1,
+    "end": 10.6,
+    "p": 0.84
+   },
+   {
+    "w": "genişliği",
+    "start": 10.6,
+    "end": 11.04,
+    "p": 1.0
+   },
+   {
+    "w": "yalnızca",
+    "start": 11.04,
+    "end": 11.58,
+    "p": 1.0
+   },
+   {
+    "w": "10",
+    "start": 11.58,
+    "end": 11.82,
+    "p": 1.0
+   },
+   {
+    "w": "ila",
+    "start": 11.82,
+    "end": 12.0,
+    "p": 0.96
+   },
+   {
+    "w": "15",
+    "start": 12.0,
+    "end": 12.3,
+    "p": 1.0
+   },
+   {
+    "w": "kilometreydi.",
+    "start": 12.3,
+    "end": 13.06,
+    "p": 0.98
+   },
+   {
+    "w": "Ama",
+    "start": 13.14,
+    "end": 13.56,
+    "p": 1.0
+   },
+   {
+    "w": "çarpışma",
+    "start": 13.56,
+    "end": 14.16,
+    "p": 1.0
+   },
+   {
+    "w": "o",
+    "start": 14.16,
+    "end": 14.26,
+    "p": 1.0
+   },
+   {
+    "w": "kadar",
+    "start": 14.26,
+    "end": 14.44,
+    "p": 1.0
+   },
+   {
+    "w": "hızlıydı",
+    "start": 14.44,
+    "end": 15.0,
+    "p": 1.0
+   },
+   {
+    "w": "ki",
+    "start": 15.0,
+    "end": 15.1,
+    "p": 1.0
+   },
+   {
+    "w": "kaynağa",
+    "start": 15.1,
+    "end": 15.62,
+    "p": 0.95
+   },
+   {
+    "w": "göre",
+    "start": 15.62,
+    "end": 15.84,
+    "p": 1.0
+   },
+   {
+    "w": "150",
+    "start": 15.84,
+    "end": 16.16,
+    "p": 1.0
+   },
+   {
+    "w": "ila",
+    "start": 16.16,
+    "end": 16.56,
+    "p": 1.0
+   },
+   {
+    "w": "200",
+    "start": 16.56,
+    "end": 16.84,
+    "p": 1.0
+   },
+   {
+    "w": "kilometrelik",
+    "start": 16.84,
+    "end": 17.58,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 17.58,
+    "end": 17.68,
+    "p": 1.0
+   },
+   {
+    "w": "krater",
+    "start": 17.68,
+    "end": 18.0,
+    "p": 1.0
+   },
+   {
+    "w": "bıraktı.",
+    "start": 18.0,
+    "end": 18.48,
+    "p": 1.0
+   },
+   {
+    "w": "Araştırmalara",
+    "start": 18.74,
+    "end": 19.42,
+    "p": 1.0
+   },
+   {
+    "w": "göre",
+    "start": 19.42,
+    "end": 19.64,
+    "p": 1.0
+   },
+   {
+    "w": "ardından",
+    "start": 19.64,
+    "end": 20.12,
+    "p": 1.0
+   },
+   {
+    "w": "kalkan",
+    "start": 20.12,
+    "end": 20.54,
+    "p": 1.0
+   },
+   {
+    "w": "toz",
+    "start": 20.54,
+    "end": 20.8,
+    "p": 1.0
+   },
+   {
+    "w": "güneş",
+    "start": 20.8,
+    "end": 21.06,
+    "p": 0.99
+   },
+   {
+    "w": "ışığını",
+    "start": 21.06,
+    "end": 21.36,
+    "p": 1.0
+   },
+   {
+    "w": "kesti",
+    "start": 21.36,
+    "end": 21.74,
+    "p": 1.0
+   },
+   {
+    "w": "ve",
+    "start": 21.74,
+    "end": 22.02,
+    "p": 1.0
+   },
+   {
+    "w": "fotosentezi",
+    "start": 22.02,
+    "end": 22.68,
+    "p": 0.98
+   },
+   {
+    "w": "durduran",
+    "start": 22.68,
+    "end": 23.1,
+    "p": 1.0
+   },
+   {
+    "w": "küresel",
+    "start": 23.1,
+    "end": 23.68,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 23.68,
+    "end": 23.76,
+    "p": 1.0
+   },
+   {
+    "w": "kış",
+    "start": 23.76,
+    "end": 24.02,
+    "p": 1.0
+   },
+   {
+    "w": "başladı.",
+    "start": 24.02,
+    "end": 24.36,
+    "p": 1.0
+   },
+   {
+    "w": "Böylece",
+    "start": 24.5,
+    "end": 25.18,
+    "p": 1.0
+   },
+   {
+    "w": "66",
+    "start": 25.18,
+    "end": 25.48,
+    "p": 1.0
+   },
+   {
+    "w": "milyon",
+    "start": 25.48,
+    "end": 25.94,
+    "p": 1.0
+   },
+   {
+    "w": "yıl",
+    "start": 25.94,
+    "end": 26.06,
+    "p": 1.0
+   },
+   {
+    "w": "önce",
+    "start": 26.06,
+    "end": 26.24,
+    "p": 1.0
+   },
+   {
+    "w": "gelen",
+    "start": 26.24,
+    "end": 26.52,
+    "p": 1.0
+   },
+   {
+    "w": "bu",
+    "start": 26.52,
+    "end": 26.68,
+    "p": 1.0
+   },
+   {
+    "w": "felaket",
+    "start": 26.68,
+    "end": 27.2,
+    "p": 1.0
+   },
+   {
+    "w": "kuşlar",
+    "start": 27.2,
+    "end": 27.68,
+    "p": 0.87
+   },
+   {
+    "w": "dışındaki",
+    "start": 27.68,
+    "end": 28.12,
+    "p": 1.0
+   },
+   {
+    "w": "dinozorların",
+    "start": 28.12,
+    "end": 28.76,
+    "p": 1.0
+   },
+   {
+    "w": "sonunu",
+    "start": 28.76,
+    "end": 29.14,
+    "p": 1.0
+   },
+   {
+    "w": "getirdi.",
+    "start": 29.14,
+    "end": 29.52,
+    "p": 1.0
+   },
+   {
+    "w": "Dünyadaki",
+    "start": 29.52,
+    "end": 30.28,
+    "p": 0.92
+   },
+   {
+    "w": "türlerin",
+    "start": 30.28,
+    "end": 30.68,
+    "p": 1.0
+   },
+   {
+    "w": "yaklaşık",
+    "start": 30.68,
+    "end": 31.2,
+    "p": 0.99
+   },
+   {
+    "w": "%75",
+    "start": 31.2,
+    "end": 31.76,
+    "p": 0.92
+   },
+   {
+    "w": "'i",
+    "start": 31.76,
+    "end": 31.98,
+    "p": 1.0
+   },
+   {
+    "w": "ortadan",
+    "start": 31.98,
+    "end": 32.24,
+    "p": 1.0
+   },
+   {
+    "w": "kalktı.",
+    "start": 32.24,
+    "end": 32.68,
+    "p": 1.0
+   },
+   {
+    "w": "Bu",
+    "start": 32.72,
+    "end": 33.16,
+    "p": 1.0
+   },
+   {
+    "w": "açıklamaya",
+    "start": 33.16,
+    "end": 33.68,
+    "p": 1.0
+   },
+   {
+    "w": "Lewis",
+    "start": 33.68,
+    "end": 33.94,
+    "p": 0.57
+   },
+   {
+    "w": "ve",
+    "start": 33.94,
+    "end": 34.16,
+    "p": 1.0
+   },
+   {
+    "w": "Walter",
+    "start": 34.16,
+    "end": 34.44,
+    "p": 1.0
+   },
+   {
+    "w": "Alvarez",
+    "start": 34.44,
+    "end": 34.84,
+    "p": 0.99
+   },
+   {
+    "w": "'in",
+    "start": 34.84,
+    "end": 34.96,
+    "p": 0.99
+   },
+   {
+    "w": "adıyla",
+    "start": 34.96,
+    "end": 35.24,
+    "p": 1.0
+   },
+   {
+    "w": "Alvarez",
+    "start": 35.24,
+    "end": 35.74,
+    "p": 0.99
+   },
+   {
+    "w": "hipotezi",
+    "start": 35.74,
+    "end": 36.24,
+    "p": 0.94
+   },
+   {
+    "w": "deniyor.",
+    "start": 36.24,
+    "end": 36.5,
+    "p": 1.0
+   },
+   {
+    "w": "Peki",
+    "start": 36.6,
+    "end": 37.08,
+    "p": 1.0
+   },
+   {
+    "w": "hiç",
+    "start": 37.08,
+    "end": 37.32,
+    "p": 0.99
+   },
+   {
+    "w": "dinozor",
+    "start": 37.32,
+    "end": 37.78,
+    "p": 0.98
+   },
+   {
+    "w": "kalmadı",
+    "start": 37.78,
+    "end": 38.16,
+    "p": 1.0
+   },
+   {
+    "w": "mı?",
+    "start": 38.16,
+    "end": 38.3,
+    "p": 1.0
+   },
+   {
+    "w": "Kaldı.",
+    "start": 38.38,
+    "end": 39.0,
+    "p": 0.99
+   },
+   {
+    "w": "Bugün",
+    "start": 39.0,
+    "end": 39.4,
+    "p": 1.0
+   },
+   {
+    "w": "pencerenizin",
+    "start": 39.4,
+    "end": 40.1,
+    "p": 0.94
+   },
+   {
+    "w": "önündeki",
+    "start": 40.1,
+    "end": 40.44,
+    "p": 0.99
+   },
+   {
+    "w": "kuşlar",
+    "start": 40.44,
+    "end": 40.86,
+    "p": 1.0
+   },
+   {
+    "w": "o",
+    "start": 40.86,
+    "end": 41.12,
+    "p": 0.91
+   },
+   {
+    "w": "felaketten",
+    "start": 41.12,
+    "end": 41.62,
+    "p": 1.0
+   },
+   {
+    "w": "sağ",
+    "start": 41.62,
+    "end": 41.92,
+    "p": 1.0
+   },
+   {
+    "w": "çıkan",
+    "start": 41.92,
+    "end": 42.28,
+    "p": 1.0
+   },
+   {
+    "w": "dinozorların",
+    "start": 42.28,
+    "end": 42.8,
+    "p": 1.0
+   },
+   {
+    "w": "soyundan",
+    "start": 42.8,
+    "end": 43.26,
+    "p": 1.0
+   },
+   {
+    "w": "geliyor.",
+    "start": 43.26,
+    "end": 43.5,
+    "p": 1.0
+   },
+   {
+    "w": "Bunu",
+    "start": 43.7,
+    "end": 44.12,
+    "p": 1.0
+   },
+   {
+    "w": "bilmeyen",
+    "start": 44.12,
+    "end": 44.52,
+    "p": 1.0
+   },
+   {
+    "w": "bir",
+    "start": 44.52,
+    "end": 44.62,
+    "p": 1.0
+   },
+   {
+    "w": "arkadaşına",
+    "start": 44.62,
+    "end": 45.1,
+    "p": 1.0
+   },
+   {
+    "w": "gönder",
+    "start": 45.1,
+    "end": 45.42,
+    "p": 1.0
+   },
+   {
+    "w": "ve",
+    "start": 45.42,
+    "end": 45.72,
+    "p": 1.0
+   },
+   {
+    "w": "daha",
+    "start": 45.72,
+    "end": 45.94,
+    "p": 0.99
+   },
+   {
+    "w": "fazla",
+    "start": 45.94,
+    "end": 46.26,
+    "p": 1.0
+   },
+   {
+    "w": "bilim",
+    "start": 46.26,
+    "end": 46.54,
+    "p": 1.0
+   },
+   {
+    "w": "hikayesi",
+    "start": 46.54,
+    "end": 46.92,
+    "p": 1.0
+   },
+   {
+    "w": "için",
+    "start": 46.92,
+    "end": 47.08,
+    "p": 1.0
+   },
+   {
+    "w": "takip",
+    "start": 47.08,
+    "end": 47.52,
+    "p": 1.0
+   },
+   {
+    "w": "et.",
+    "start": 47.52,
+    "end": 47.62,
+    "p": 1.0
+   }
+  ],
+  "metin": "66 milyon yıl önce dinozorların sonunu ne getirdi? Asıl his toprağın altında. Meksika 'nın Yucatan yarımadasında toprağın altında dev bir krater gömülü, Chicxulub. Onu açan asteroidin genişliği yalnızca 10 ila 15 kilometreydi. Ama çarpışma o kadar hızlıydı ki kaynağa göre 150 ila 200 kilometrelik bir krater bıraktı. Araştırmalara göre ardından kalkan toz güneş ışığını kesti ve fotosentezi durduran küresel bir kış başladı. Böylece 66 milyon yıl önce gelen bu felaket kuşlar dışındaki dinozorların sonunu getirdi. Dünyadaki türlerin yaklaşık %75 'i ortadan kalktı. Bu açıklamaya Lewis ve Walter Alvarez 'in adıyla Alvarez hipotezi deniyor. Peki hiç dinozor kalmadı mı? Kaldı. Bugün pencerenizin önündeki kuşlar o felaketten sağ çıkan dinozorların soyundan geliyor. Bunu bilmeyen bir arkadaşına gönder ve daha fazla bilim hikayesi için takip et."
+ }
+]
