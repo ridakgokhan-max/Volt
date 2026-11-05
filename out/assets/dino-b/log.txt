@@ -1,0 +1,32 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 4356.98it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 13.72it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:00<00:00, 19.78it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:20<00:00, 19.78it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:22<00:05,  5.60s/it]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  14%|█▍        | 72/517 [00:00<00:00, 451.18it/s][A
+Loading weights:  23%|██▎       | 118/517 [00:00<00:01, 367.68it/s][A
+Loading weights:  30%|██▉       | 155/517 [00:00<00:01, 266.16it/s][A
+Loading weights:  36%|███▌      | 184/517 [00:00<00:01, 252.05it/s][A
+Loading weights:  42%|████▏     | 216/517 [00:00<00:01, 232.80it/s][A
+Loading weights:  46%|████▋     | 240/517 [00:00<00:01, 234.48it/s][A
+Loading weights:  51%|█████     | 264/517 [00:01<00:01, 190.64it/s][A
+Loading weights:  55%|█████▌    | 285/517 [00:01<00:01, 191.32it/s][A
+Loading weights:  59%|█████▉    | 305/517 [00:01<00:01, 192.93it/s][A
+Loading weights:  63%|██████▎   | 325/517 [00:01<00:01, 183.14it/s][A
+Loading weights:  67%|██████▋   | 344/517 [00:01<00:01, 160.75it/s][A
+Loading weights:  73%|███████▎  | 376/517 [00:01<00:00, 161.19it/s][A
+Loading weights:  78%|███████▊  | 402/517 [00:01<00:00, 180.69it/s][A
+Loading weights:  82%|████████▏ | 424/517 [00:02<00:00, 171.78it/s][A
+Loading weights:  85%|████████▌ | 442/517 [00:02<00:00, 165.53it/s][A
+Loading weights:  91%|█████████▏| 472/517 [00:02<00:00, 162.82it/s][A
+Loading weights:  97%|█████████▋| 500/517 [00:02<00:00, 188.69it/s][ALoading weights: 100%|██████████| 517/517 [00:02<00:00, 203.25it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:31<00:00,  6.32s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:31<00:00,  4.48s/it]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+model yüklendi 46.9 sn
+dinozor-suru-12 121.6 sn
+dinozor-suru-27 118.2 sn
+kus-yakin 118.0 sn
+kus-yakin-2 111.4 sn
