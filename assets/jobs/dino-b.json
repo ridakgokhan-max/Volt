@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "dinozor-suru-12",
+   "prompt": "a herd of Edmontosaurus hadrosaur dinosaurs walking through a lush late Cretaceous river valley with ferns and conifers at dusk, wide view, anatomically accurate, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 12,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "dinozor-suru-27",
+   "prompt": "a herd of Edmontosaurus hadrosaur dinosaurs walking through a lush late Cretaceous river valley with ferns and conifers at dusk, wide view, anatomically accurate, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 27,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kus-yakin",
+   "prompt": "close-up portrait of a modern common blackbird, head and eye in sharp detail, glossy feathers, soft warm dusk light, blurred forest background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 14,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kus-yakin-2",
+   "prompt": "close-up portrait of a modern European robin bird, head and eye in sharp detail, detailed feathers, soft warm dusk light, blurred forest background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 33,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
