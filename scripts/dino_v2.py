@@ -209,7 +209,7 @@ def scene_impact(ctx, t, dur, tl):
     sx, sy = 980 - 60 * p, 120 + 80 * p
     ax, ay = sx + (ix - sx) * p, sy + (iy - sy) * p
     size = 46 + 130 * p ** 1.5
-    heat = seg(t, t_imp - 2.6, t_imp - 0.3)
+    heat = 0.3 + 0.7 * seg(t, t_imp - 2.6, t_imp - 0.3)
     if t < t_imp:
         # kuyruk (iz)
         dx, dy = sx - ax, sy - ay
@@ -549,13 +549,17 @@ def scene_birds(ctx, t, dur, tl):
     u = t / dur
     if u < 0.58:
         v = u / 0.58
-        s = ease_io(seg(v, 0.18, 0.75))
+        s = ease_io(seg(v, 0.12, 0.62))
         img = ctx.morph(s)
         img = kenburns(img, v, 1.0, 1.06)
+        wz = seg(v, 0.84, 1.0) ** 2  # kuş havalanır: kamera hızla yaklaşır ve ormana geçer
+        if wz > 0:
+            img = kenburns(img, 1.0, 1.0, 1.0 + 1.6 * wz, cy=0.4)
+            img = cv2.blur(img, (1, 1 + int(60 * wz)))
         pil = Image.fromarray(img.clip(0, 255).astype(np.uint8))
         d = ImageDraw.Draw(pil, "RGBA")
         f = ImageFont.truetype(FONT_B, 44)
-        for lab, al in (("TÜYLÜ THEROPOD", 1 - s), ("GÜNÜMÜZ KUŞU", s)):
+        for lab, al in (("TÜYLÜ THEROPOD", np.clip(1 - 2.5 * s, 0, 1)), ("GÜNÜMÜZ KUŞU", np.clip(2.5 * s - 1.5, 0, 1))):
             if al > 0.02:
                 tw = d.textlength(lab, font=f)
                 d.rounded_rectangle([W / 2 - tw / 2 - 24, 1180, W / 2 + tw / 2 + 24, 1250], 16, fill=(250, 244, 230, int(220 * al)))
@@ -581,8 +585,8 @@ def scene_final(ctx, t, dur, tl):
         return kpg_layers(ctx, (u - 0.34) / 0.24, t)
     v = (u - 0.58) / 0.42
     img = kenburns(ctx.img["kus-yakin"], v, 1.0, 1.14, cy=0.45)
-    fade = ease(seg(v, 0.72, 1.0))
-    return img * (1 - 0.92 * fade)
+    fade = ease(seg(v, 0.62, 0.8))
+    return img * (1 - 0.6 * fade) + ctx.paper * 0.6 * fade
 
 
 def crater_map_scientific(ctx, v, t):
@@ -639,9 +643,9 @@ def kpg_layers(ctx, v, t):
     fs = ImageFont.truetype(FONT_B, 32)
     a = int(255 * seg(v, 0.15, 0.4))
     d.line([620, ky + 9, 760, ky - 90], fill=(40, 34, 30, a), width=4)
-    d.rounded_rectangle([560, ky - 190, 1020, ky - 92], 18, fill=(250, 244, 230, int(a * 0.9)))
-    d.text((580, ky - 180), "K-Pg SINIRI", font=f, fill=(170, 30, 24, a))
-    d.text((580, ky - 132), "iridyumca zengin kil katmanı", font=fs, fill=(46, 40, 36, a))
+    d.rounded_rectangle([540, ky - 190, 1000, ky - 92], 18, fill=(250, 244, 230, int(a * 0.9)))
+    d.text((560, ky - 180), "K-Pg SINIRI", font=f, fill=(170, 30, 24, a))
+    d.text((560, ky - 132), "iridyumca zengin kil", font=fs, fill=(46, 40, 36, a))
     d.text((60, ky - 70), "KRETASE", font=fs, fill=(46, 40, 36, a))
     d.text((60, ky + 34), "↓ daha eski", font=fs, fill=(46, 40, 36, int(a * 0.8)))
     d.text((60, ky - 120), "↑ PALEOJEN", font=fs, fill=(46, 40, 36, a))
@@ -674,20 +678,21 @@ def draw_brand(d):
     d.text((70 + w, 62), "BİLİM", font=f, fill=(225, 70, 50, 255), stroke_width=3, stroke_fill=(30, 30, 40, 200))
 
 
-def draw_title(img_pil, text, k, y=300):
+def draw_title(img_pil, text, k, y=300, size=56):
     """Mavi kutulu başlık etiketi (orijinal videonun kimliği): k 0..1 görünürlük."""
     if k <= 0:
         return
-    f = ImageFont.truetype(FONT_B, 56)
-    lines = wrap(text, f, 820)
+    f = ImageFont.truetype(FONT_B, size)
+    lines = wrap(text, f, 860)
     lw = max(ImageDraw.Draw(img_pil).textlength(ln, font=f) for ln in lines)
-    bw, bh = int(lw + 64), int(len(lines) * 68 + 34)
+    lh = int(size * 1.22)
+    bw, bh = int(lw + 64), int(len(lines) * lh + 34)
     box = Image.new("RGBA", (bw + 40, bh + 40), (0, 0, 0, 0))
     d = ImageDraw.Draw(box)
     d.rectangle([20, 20, 20 + bw, 20 + bh], fill=(*BLUE, 245))
     for i, ln in enumerate(lines):
         tw = d.textlength(ln, font=f)
-        d.text((20 + (bw - tw) / 2, 34 + i * 68), ln, font=f, fill=(255, 255, 255, 255))
+        d.text((20 + (bw - tw) / 2, 30 + i * lh), ln, font=f, fill=(255, 255, 255, 255))
     s = 0.85 + 0.15 * ease(min(1, k * 3))
     box = box.rotate(2, resample=Image.BICUBIC, expand=True)
     box = box.resize((int(box.width * s), int(box.height * s)), Image.BICUBIC)
@@ -712,6 +717,8 @@ def wrap(text, font, maxw):
 
 
 def tr_upper(s):
+    if "Chicxulub" in s:
+        return s.upper()
     return s.replace("i", "İ").replace("ı", "I").upper()
 
 
@@ -752,7 +759,7 @@ def draw_caption(d, words, groups, t, y=1330):
     x = W / 2 - tot / 2
     for i, x_txt, wd in zip(shown, txt, widths):
         on = i <= cur
-        col = HILITE if i == cur else (255, 255, 255)
+        col = HILITE if words[i].get("key") else (255, 255, 255)
         d.text((x, y), x_txt, font=f, fill=(*col, 255 if on else 110), stroke_width=6, stroke_fill=(20, 22, 34, 255 if on else 90))
         x += wd + sp
 
@@ -790,8 +797,10 @@ TITLES = [("DÜNYA'YI TEK BİR ÇARPIŞMA DEĞİŞTİRDİ.", 0.3, -0.6), ("66 M�
 def render(work, dst, preview=None):
     ctx = Ctx(work)
     parts = json.load(open(os.path.join(work, "parts.json")))
-    words = json.load(open(os.path.join(work, "words.json")))
     tl = build_timeline(parts)
+    words = [{"w": w["w"], "start": tl["voice"][w["part"]] + w["ls"], "end": tl["voice"][w["part"]] + w["le"],
+              "key": w.get("key", False)} for w in json.load(open(os.path.join(work, "words_local.json")))]
+    json.dump(words, open(os.path.join(work, "words_global.json"), "w"), ensure_ascii=False)
     a, b = ctx.img["tuylu-dinozor"], ctx.img["kus-dal"]
     ctx.morph = make_morph(a, b)
     groups = caption_groups(words)
@@ -817,7 +826,7 @@ def render(work, dst, preview=None):
         img = ctx.finish(img)
         if k == len(SCENES) - 1:  # finalde kâğıt da kararır
             v = lt / tl["durs"][k]
-            img = img * (1 - 0.85 * ease(seg(v, 0.82, 0.95)))
+            img = img * (1 - ease(seg(lt, tl["durs"][k] - 0.45, tl["durs"][k] - 0.05)))
         pil = Image.fromarray(img.clip(0, 255).astype(np.uint8)).convert("RGBA")
         d = ImageDraw.Draw(pil, "RGBA")
         draw_brand(d)
@@ -827,13 +836,10 @@ def render(work, dst, preview=None):
         kk = seg(v, ta, ta + 0.06) * (1 - seg(v, tb_, tb_ + 0.04))
         draw_title(pil, title, kk)
         if k == len(SCENES) - 1:
-            q = seg(v, 0.84, 0.9)
+            q = seg(v, 0.8, 0.86) * (1 - seg(lt, tl["durs"][k] - 0.45, tl["durs"][k] - 0.05))
             if q > 0:
-                fq = ImageFont.truetype(FONT_B, 92)
-                txt = "Sen ne düşünüyorsun?"
-                tw = d.textlength(txt, font=fq)
-                d.text((W / 2 - tw / 2, 880), txt, font=fq, fill=(255, 255, 255, int(255 * q)), stroke_width=5,
-                       stroke_fill=(20, 22, 34, int(255 * q)))
+                draw_title(pil, "Sen ne düşünüyorsun?", q, y=900, size=78)
+                d = ImageDraw.Draw(pil, "RGBA")
         draw_caption(d, words, groups, t)
         frame = np.asarray(pil.convert("RGB"))
         if preview:

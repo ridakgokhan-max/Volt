@@ -213,18 +213,24 @@ def build(work, dst):
     st, du = tl["starts"], tl["durs"]
     # yaklaşma: alçak gürleme
     rum = fx("cinematic_drone_dark_473725.mp3")
-    place(sfx, norm(lp(rum, 300), 0.5), 0, fade_in=1.5, fade_out=0.05, length=imp)
+    place(sfx, norm(lp(rum, 300), 0.35), 0, fade_in=1.5, fade_out=0.05, length=imp)
     place(sfx, norm(fx("low_boom_cinematic_263895.mp3"), 0.5), max(0, imp - 2.8))
     # atmosfere giriş: hava sürtünmesi
-    place(sfx, air_friction(3.0), imp - 3.0, 0.42, fade_out=0.01)
+    place(sfx, air_friction(3.0), imp - 3.0, 0.3, fade_out=0.01)
     place(sfx, norm(fx("riser_cinematic_806664.mp3"), 0.35), imp - 4.05, fade_out=0.02)
-    # çarpışma: derin patlama + gök gürültüsü + moloz
-    place(sfx, norm(fx("low_boom_cinematic_856174.mp3"), 1.0), imp)
-    place(sfx, norm(fx("impact_hit_535607.mp3"), 0.8), imp)
-    place(sfx, norm(lp(fx("thunder_486558.mp3"), 2500), 0.6), imp + 0.05, fade_out=1.0)
-    place(sfx, norm(fx("rubble_falling_462690.mp3"), 0.35), imp + 0.9, fade_in=0.3, fade_out=1.5, length=3.0)
-    # kısa sessizlik sonrası şok dalgası rüzgârı
-    place(sfx, norm(fx("wind_howl_778384.mp3"), 0.35), imp + 0.9, fade_in=0.6, fade_out=1.0, length=st[1] + 2 - imp)
+    # çarpışma: keskin vuruş + derin patlama, ardından kısa sessizlik, sonra uzak gürleme/moloz/rüzgâr
+    n = int(0.9 * SR)
+    tt = np.arange(n) / SR
+    crack = lp(rng.normal(0, 1, (n, 2)), 6000) * np.exp(-tt * 14)[:, None]
+    sub = np.sin(2 * np.pi * np.cumsum(70 * np.exp(-tt * 2.5) + 28) / SR) * np.exp(-tt * 2.2)
+    hitc = norm(crack * 0.7 + np.stack([sub, sub], 1), 1.0)
+    place(sfx, hitc, imp, 2.4, fade_out=0.25)
+    place(sfx, norm(fx("low_boom_cinematic_856174.mp3"), 2.0), imp, fade_out=0.3, length=0.75)
+    place(sfx, norm(fx("impact_hit_535607.mp3"), 0.8), imp, fade_out=0.3, length=0.7)
+    after = imp + 1.15
+    place(sfx, norm(lp(fx("thunder_486558.mp3"), 1800), 0.45), after, fade_in=0.4, fade_out=1.0)
+    place(sfx, norm(fx("rubble_falling_462690.mp3"), 0.3), after + 0.3, fade_in=0.3, fade_out=1.5, length=3.0)
+    place(sfx, norm(fx("wind_howl_778384.mp3"), 0.3), after, fade_in=0.8, fade_out=1.0, length=st[1] + 2 - after)
     # sahne 2: harita - hafif whoosh'lar
     place(sfx, norm(hp(fx("riser_cinematic_648732.mp3"), 200), 0.25), st[1] + 0.1)
     place(sfx, norm(fx("stone_impact_debris_569501.mp3"), 0.3), st[1] + du[1] * 0.62 + 0.4)
@@ -249,6 +255,11 @@ def build(work, dst):
     duck = 1 - 0.45 * np.clip(ve / (ve.max() * 0.15 + 1e-9), 0, 1)
     duck = np.convolve(duck, np.ones(int(0.2 * SR)) / int(0.2 * SR), "same")[:, None]
     mix = voice * 1.0 + mus * 0.30 * duck + sfx * 0.55 * (0.55 + 0.45 * duck)
+    a_, b_ = int((imp + 0.55) * SR), int((imp + 1.15) * SR)  # çarpışma sonrası sessizlik
+    g = np.ones((len(mix), 1))
+    g[a_:b_] = 0.06
+    g = np.convolve(g[:, 0], np.ones(int(0.06 * SR)) / int(0.06 * SR), "same")[:, None]
+    mix = mix * np.maximum(g, (np.abs(voice) > 0).any(1, keepdims=True) * 1.0)
     mix = mix[:int(total * SR)]
     tmp = dst + ".raw.wav"
     import wave
@@ -258,8 +269,13 @@ def build(work, dst):
     w.setframerate(SR)
     w.writeframes((np.clip(norm(mix, 0.9), -1, 1) * 32767).astype(np.int16).tobytes())
     w.close()
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", str(SR), dst],
-                   check=True)
+    # ses yüksekliği: limiter -> ölç -> -14 LUFS'e kazanç -> tepe limiteri (-1.5 dBTP)
+    lim = "alimiter=limit=0.6:attack=4:release=90:level=false"
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", tmp, "-af", lim + ",ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True).stderr
+    I = float(r[r.rindex("I:"):].split()[1])
+    flt = f"{lim},volume={-13.4 - I:.2f}dB,alimiter=limit=0.84:attack=2:release=60:level=false"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", flt, "-ar", str(SR), dst], check=True)
     os.remove(tmp)
 
 
