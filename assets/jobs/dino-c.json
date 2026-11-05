@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "tuylu-dinozor-5",
+   "prompt": "side view of a small feathered maniraptoran theropod dinosaur similar to Microraptor, full body standing on a mossy branch, feathered arms like wings folded, long feathered tail, clawed feet, side profile facing right, centered, plain soft light beige background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 5,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "tuylu-dinozor-21",
+   "prompt": "side view of a small feathered maniraptoran theropod dinosaur similar to Microraptor, full body standing on a mossy branch, feathered arms like wings folded, long feathered tail, clawed feet, side profile facing right, centered, plain soft light beige background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 21,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kus-dal-5",
+   "prompt": "side view of a modern songbird similar to a sparrow, full body standing on a mossy branch, wings folded, side profile facing right, centered, plain soft light beige background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 5,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  },
+  {
+   "name": "kus-dal-21",
+   "prompt": "side view of a modern songbird similar to a sparrow, full body standing on a mossy branch, wings folded, side profile facing right, centered, plain soft light beige background, cinematic scientific documentary illustration, painterly ink and watercolor, muted dusk purple, slate blue and warm ochre palette, atmospheric depth, volumetric light, detailed, professional paleoart",
+   "neg": "text, letters, watermark, signature, cartoon, childish, cute, comic, photo, 3d render, people, person",
+   "seed": 21,
+   "w": 640,
+   "h": 1136,
+   "no_style": true
+  }
+ ]
+}
