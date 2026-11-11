@@ -1,0 +1,53 @@
+{
+ "etiket": "v1",
+ "birlestir": true,
+ "modeller": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "metin": "Gizli pencere seni kimseden gizlemiyor. Bir kişi hariç. Ali'ye göre gizli sekmeyi açınca kimse onu göremez. Ece'ye göreyse hiçbir işe yaramaz. Ali bir yerde haklı: pencereyi kapattığında geçmiş, çerezler ve form bilgileri cihazdan silinir. Ama Ece de haklı: isteğin evden çıkar çıkmaz modemden, internet sağlayıcından, okul ya da iş ağından geçer. Vardığı site de IP adresini görür. Hele hesabına giriş yaptıysan, kim olduğun zaten belli. Yani ikisi de yanılıyor. Gizli pencere seni internetten gizlemez; ama işe yaramaz da değil. O bir kişi mi? Senden sonra aynı cihazı açan kişi. Bunu gizli sanan arkadaşına da gönder, işe yaramaz diyene de!",
+ "varyantlar": [
+  {
+   "ad": "P1",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Açılış cümlesi: çarpıcı, kendinden emin, izleyiciyi ilk saniyede yakalayan bir iddia gibi. 'kimseden' kelimesini vurgula. Kısa bir es ver, sonra 'Bir kişi hariç' kısmını alçak ve gizemli söyle. Sadece metni oku:",
+   "metin": "Gizli pencere seni kimseden gizlemiyor. Bir kişi hariç."
+  },
+  {
+   "ad": "P2",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. İki farklı görüşü aktarır gibi; ilk cümle kendinden emin, ikinci cümle hafif alaycı. Sadece metni oku:",
+   "metin": "Ali'ye göre gizli sekmeyi açınca kimse onu göremez. Ece'ye göreyse hiçbir işe yaramaz."
+  },
+  {
+   "ad": "P3",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Bilgi veren, net ve güvenilir; üç maddeyi tane tane say. Sadece metni oku:",
+   "metin": "Ali bir yerde haklı: pencereyi kapattığında geçmiş, çerezler ve form bilgileri cihazdan silinir."
+  },
+  {
+   "ad": "P4",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Tempolu, adım adım ilerleyen, hafif gerilimli; her durağı net ayır. Son cümleyi vurgulu söyle. Sadece metni oku:",
+   "metin": "Ama Ece de haklı: isteğin evden çıkar çıkmaz modemden, internet sağlayıcından, okul ya da iş ağından geçer. Vardığı site de IP adresini görür. Hele hesabına giriş yaptıysan, kim olduğun zaten belli."
+  },
+  {
+   "ad": "P5",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Hüküm verir gibi net; 'ikisi de yanılıyor' kısmını vurgula, sonra açıklayıcı ve sakin devam et. Sadece metni oku:",
+   "metin": "Yani ikisi de yanılıyor. Gizli pencere seni internetten gizlemez; ama işe yaramaz da değil."
+  },
+  {
+   "ad": "P6",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Soru merak uyandıran; cevap gülümseyerek, sır verir gibi. Sadece metni oku:",
+   "metin": "O bir kişi mi? Senden sonra aynı cihazı açan kişi."
+  },
+  {
+   "ad": "P7",
+   "ses": "Fenrir",
+   "yonerge": "Aşağıdaki Türkçe metni enerjik, net ve doğal bir anlatıcı olarak oku. Akıcı ve canlı bir tempoda, Instagram Reels bilim videosu gibi; kelimeleri anlaşılır telaffuz et ama yavaşlama. Doğal bir insan gibi konuş, robotik olma. Bu bir videonun parçası; başta ve sonda sessizlik bırakma, cümle aralarında uzun bekleme yapma. Metni tam yazıldığı gibi oku, hiçbir kelimeyi tekrarlama. Çok enerjik, hızlı ve davetkâr; izleyiciyi harekete geçiren bir çağrı. Sadece metni oku:",
+   "metin": "Bunu gizli sanan arkadaşına da gönder, işe yaramaz diyene de!"
+  }
+ ]
+}
