@@ -1,2 +1,2 @@
-20 Reels kaydedildi
-durum: success 2026-11-11
+22 Reels kaydedildi
+durum: success 2026-11-12
