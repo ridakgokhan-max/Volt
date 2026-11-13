@@ -1,2 +1,2 @@
 22 Reels kaydedildi
-durum: success 2026-11-12
+durum: success 2026-11-13
